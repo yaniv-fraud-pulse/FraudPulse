@@ -210,17 +210,11 @@ export default function Home() {
         <section className="relative overflow-hidden px-5 sm:px-10 text-center flex items-center justify-center" style={{ minHeight: 'calc(100vh - 84px)' }}>
           <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px]"
             style={{ background: 'radial-gradient(ellipse at 50% 0%, rgba(165,208,216,0.18) 0%, transparent 65%)' }} />
+          <div className="pointer-events-none absolute bottom-0 right-0 w-[700px] h-[600px]"
+            style={{ background: 'radial-gradient(ellipse at 80% 80%, rgba(125,107,160,0.22) 0%, transparent 70%)' }} />
 
           <div className="relative max-w-4xl mx-auto py-20">
-            {/* Badge */}
-            {/* <div className="inline-flex items-center gap-2 rounded-full px-3 py-1.5 mb-8 border anim-fadeIn delay-0"
-              style={{ background: 'rgba(165,208,216,0.08)', borderColor: 'rgba(91,168,180,0.25)' }}>
-              <span className="w-1.5 h-1.5 rounded-full bg-[#5ba8b4]"
-                style={{ boxShadow: '0 0 6px #5ba8b4', animation: 'pulse 2s ease-in-out infinite' }} />
-              <span className="text-[0.7rem] font-semibold tracking-[0.1em] uppercase text-[#4a96a3]">
-                AI-Powered Fraud Intelligence
-              </span>
-            </div> */}
+
 
             {/* Headline — each line staggers */}
             <h1 className="font-extrabold leading-[1.05] text-gray-900 mb-5 tracking-[-0.04em] text-[2.75rem] sm:text-[4rem] lg:text-[5rem]"
@@ -243,52 +237,15 @@ export default function Home() {
               <Link href="/contact/"
                 className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-[0.9375rem] font-bold text-white transition-all hover:scale-[1.03] hover:shadow-xl"
                 style={{
-                  background: 'linear-gradient(135deg, rgb(123, 160, 168) 0%, rgb(125, 107, 160) 100%)',
-                  boxShadow: '0 4px 24px rgba(123,160,168,0.4)',
+                  background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',
+                  boxShadow: '0 4px 24px rgba(91,168,180,0.4)',
                   transition: 'transform 0.2s cubic-bezier(0.22,1,0.36,1), box-shadow 0.2s cubic-bezier(0.22,1,0.36,1)',
                 }}>
                 Book a Demo
-                {/* <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg> */}
               </Link>
             </div>
-
-            {/* Trust row */}
-            {/* <div className="flex flex-wrap items-center justify-center gap-6 mt-8 text-gray-400 anim-fadeIn delay-600">
-              {[
-                { icon: '🔒', text: '14-day free trial' },
-                { icon: '💳', text: 'No credit card required' },
-                { icon: '⚡', text: 'Live in minutes' },
-              ].map((t) => (
-                <div key={t.text} className="flex items-center gap-1.5 text-[0.8125rem]">
-                  <span>{t.icon}</span><span>{t.text}</span>
-                </div>
-              ))}
-            </div> */}
           </div>
         </section>
-
-        {/* ── Stats — counting numbers ── */}
-        {/* <section className="py-12 border-y" style={{ borderColor: '#f3f4f6' }}>
-          <div className="max-w-4xl mx-auto px-5 sm:px-10">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-              {[
-                { to: 96.9, suffix: '%', label: 'Approval Rate Maintained' },
-                { to: 87,   suffix: '%', label: 'Fraud Caught by Top Rule' },
-                { to: 0,    suffix: '%', label: 'False Positives on Key Rules' },
-                { to: 99.9, suffix: '%', label: 'Platform Uptime' },
-              ].map(({ to, suffix, label }, i) => (
-                <Reveal key={label} delay={i * 75 as 0 | 75 | 150 | 225} animation="anim-fadeUp">
-                  <div className="text-[2.25rem] sm:text-[2.75rem] font-extrabold mb-0.5 tracking-[-0.03em] text-gray-900">
-                    <Counter to={to} suffix={suffix} />
-                  </div>
-                  <div className="text-[0.8rem] text-gray-400">{label}</div>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </section> */}
 
         {/* ── Core Capabilities ── */}
         <section className="py-20 sm:py-28 px-5 sm:px-10 bg-white">
