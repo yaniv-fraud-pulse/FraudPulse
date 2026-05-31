@@ -113,7 +113,7 @@ export default function Features() {
         <section className="py-16 sm:py-24 px-5 sm:px-10 bg-white">
           <div className="max-w-2xl mx-auto flex flex-col gap-16 sm:gap-24">
             {steps.map((step, index) => (
-              <Reveal key={step.number} animation="anim-fadeUp" delay={(index * 150) as 0 | 75 | 150 | 225 | 300 | 375 | 450}>
+              <Reveal key={step.number} animation="anim-fadeUp" delay={([0, 150, 300, 400] as const)[index]}>
                 <h2 className="font-extrabold text-gray-900 tracking-[-0.02em] mb-3 text-[1.375rem] sm:text-[1.625rem]">
                   {step.title}
                 </h2>
