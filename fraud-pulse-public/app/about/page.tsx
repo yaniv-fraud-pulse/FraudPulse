@@ -322,43 +322,6 @@ export default function About() {
           </div>
         </section>
 
-        {/* ── Timeline ── */}
-        <section className="py-16 sm:py-24 px-5 sm:px-10 bg-white">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <p className="text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-2 text-[#5ba8b4]">
-                Our Journey
-              </p>
-              <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] text-[1.75rem] sm:text-[2.25rem]">
-                How We Got Here
-              </h2>
-            </div>
-            <div className="max-w-[680px] mx-auto flex flex-col gap-0">
-              {milestones.map((m, i) => (
-                <Reveal key={m.year} animation="anim-slideLeft" delay={0}>
-                <div className="flex gap-6">
-                  {/* Left: year + line */}
-                  <div className="flex flex-col items-center">
-                    <div className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 border text-[0.7rem] font-mono font-bold text-[#5ba8b4]"
-                      style={{ background: 'rgba(165,208,216,0.1)', borderColor: 'rgba(91,168,180,0.3)' }}>
-                      {m.year.slice(2)}
-                    </div>
-                    {i < milestones.length - 1 && (
-                      <div className="w-px flex-1 my-1 bg-gray-200" style={{ minHeight: 32 }} />
-                    )}
-                  </div>
-                  {/* Right: content */}
-                  <div className="pb-8 pt-1.5">
-                    <span className="text-[0.75rem] font-mono font-semibold text-[#5ba8b4]">{m.year}</span>
-                    <p className="text-[0.875rem] leading-[1.7] mt-1 text-gray-500">{m.event}</p>
-                  </div>
-                </div>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* ── CTA ── */}
         <section className="py-16 sm:py-24 px-5 sm:px-10 bg-[#f8f9fa]">
           <Reveal animation="anim-scaleIn">
@@ -375,9 +338,9 @@ export default function About() {
                 className="inline-flex items-center gap-2 rounded-[10px] px-8 py-3 text-[0.9375rem] font-bold text-white transition-all hover:-translate-y-px"
                 style={{ background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)', boxShadow: '0 4px 24px rgba(91,168,180,0.35)' }}>
                 Book a Demo
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {/* <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
+                </svg> */}
               </Link>
               <a
                 href="https://www.linkedin.com/in/idan-hayon/"

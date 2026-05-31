@@ -11,7 +11,7 @@ export default function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 flex flex-col items-center px-3 sm:px-4 pt-3 sm:pt-4">
       {/* Floating navbar pill */}
       <nav
-        className="w-full max-w-7xl rounded-full border px-4 sm:px-6 py-0"
+        className="w-full max-w-7xl md:rounded-full rounded-2xl border px-4 sm:px-6 py-0"
         style={{
           background: 'linear-gradient(135deg, rgba(255,255,255,0.97) 0%, rgba(125,107,160,0.08) 100%)',
           borderColor: '#e5e7eb',
@@ -29,7 +29,7 @@ export default function Header() {
               width={180}
               height={46}
               priority
-              className="h-9 sm:h-12 w-auto"
+              className="h-8 sm:h-12 w-auto"
             />
           </Link>
 
@@ -76,10 +76,10 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile menu - Compact version */}
+        {/* Mobile menu - Ultra compact */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-2 border-t" style={{ borderColor: '#e5e7eb' }}>
-            <div className="flex flex-col">
+          <div className="md:hidden border-t" style={{ borderColor: '#e5e7eb' }}>
+            <div className="flex flex-col py-1">
               {[
                 { href: '/',          label: 'Home' },
                 { href: '/features/', label: 'How It Works' },
@@ -88,7 +88,7 @@ export default function Header() {
                 { href: '/contact/',  label: 'Sign In' },
               ].map(({ href, label }) => (
                 <Link key={href} href={href}
-                  className="px-4 py-2.5 text-sm font-medium rounded-lg transition-colors"
+                  className="px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-50"
                   style={{ color: '#374151' }}
                   onClick={() => setMobileMenuOpen(false)}>
                   {label}

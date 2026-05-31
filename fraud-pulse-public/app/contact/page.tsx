@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { Reveal } from '../components/Reveal';
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE ?? 'https://api.fraud-pulse.com';
+const API_ENDPOINT = 'https://fraudpulse-api-z67v4dmava-uc.a.run.app/api/v1/contact/demo';
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', company_website: '', enquiry: '' });
@@ -25,7 +25,7 @@ export default function Contact() {
     setSubmitting(true);
     setResult(null);
     try {
-      const res = await fetch(`${API_BASE}/contact/demo`, {
+      const res = await fetch(API_ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),

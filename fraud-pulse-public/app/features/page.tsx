@@ -85,7 +85,7 @@ export default function Features() {
           <div className="relative max-w-7xl mx-auto py-16 sm:py-24">
             <div className="max-w-[640px]">
               <Reveal animation="anim-fadeUp" delay={0}>
-                <p className="text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-4 text-[#5ba8b4]">
+                <p className="text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-4" style={{ color: 'rgb(123, 160, 168)' }}>
                   How It Works
                 </p>
               </Reveal>
@@ -93,7 +93,7 @@ export default function Features() {
                 <h1 className="font-extrabold text-gray-900 tracking-[-0.04em] leading-[1.1] mb-5 text-[2.5rem] sm:text-[3.5rem] lg:text-[4rem]">
                   From Onboarding to{' '}
                   <span style={{
-                    background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 50%, #5ba8b4 100%)',
+                    background: 'linear-gradient(135deg, rgb(123, 160, 168) 0%, rgb(125, 107, 160) 100%)',
                     WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
                   }}>
                     AI Insights in Minutes
@@ -125,7 +125,7 @@ export default function Features() {
                     <li key={detail} className="flex items-start gap-3 anim-fadeUp"
                       style={{ animationDelay: `${di * 60}ms` }}>
                       <svg className="w-4 h-4 flex-shrink-0 mt-[3px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        style={{ color: 'rgb(61,143,160)' }}>
+                        style={{ color: 'rgb(123, 160, 168)' }}>
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                       </svg>
                       <span className="text-[0.875rem] leading-[1.6] text-gray-600">{detail}</span>
@@ -142,7 +142,7 @@ export default function Features() {
           <div className="max-w-7xl mx-auto">
             <Reveal animation="anim-fadeUp">
               <div className="text-center mb-12">
-                <p className="text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-2 text-[#5ba8b4]">
+                <p className="text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-2" style={{ color: 'rgb(125, 107, 160)' }}>
                   Integrations
                 </p>
                 <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] mb-3 text-[1.75rem] sm:text-[2.25rem]">
@@ -207,9 +207,9 @@ export default function Features() {
                 className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-[0.9375rem] font-bold text-white transition-all hover:scale-[1.03]"
                 style={{ background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)', boxShadow: '0 4px 24px rgba(91,168,180,0.35)', transition: 'transform 0.2s cubic-bezier(0.22,1,0.36,1)' }}>
                 Book a Demo
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {/* <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
+                </svg> */}
               </Link>
             </div>
           </Reveal>

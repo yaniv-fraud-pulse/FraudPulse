@@ -243,14 +243,14 @@ export default function Home() {
               <Link href="/contact/"
                 className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-[0.9375rem] font-bold text-white transition-all hover:scale-[1.03] hover:shadow-xl"
                 style={{
-                  background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',
-                  boxShadow: '0 4px 24px rgba(91,168,180,0.4)',
+                  background: 'linear-gradient(135deg, rgb(123, 160, 168) 0%, rgb(125, 107, 160) 100%)',
+                  boxShadow: '0 4px 24px rgba(123,160,168,0.4)',
                   transition: 'transform 0.2s cubic-bezier(0.22,1,0.36,1), box-shadow 0.2s cubic-bezier(0.22,1,0.36,1)',
                 }}>
-                Book a Free Demo
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                Book a Demo
+                {/* <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
+                </svg> */}
               </Link>
             </div>
 
@@ -294,7 +294,7 @@ export default function Home() {
         <section className="py-20 sm:py-28 px-5 sm:px-10 bg-white">
           <div className="max-w-5xl mx-auto">
             <Reveal animation="anim-fadeUp">
-              <p className="text-center text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-3 text-[#3d8fa0]">
+              <p className="text-center text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-3" style={{ color: 'rgb(123, 160, 168)' }}>
                 Core Capabilities
               </p>
               <h2 className="text-center font-extrabold text-gray-900 text-[1.875rem] sm:text-[2.5rem] tracking-[-0.03em] mb-12 max-w-2xl mx-auto leading-tight">
@@ -418,10 +418,8 @@ export default function Home() {
                   }}
                   onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = 'scale(1.03)'; }}
                   onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = 'scale(1)'; }}>
-                  Book a Free Demo
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
+                  Book a Demo
+
                 </Link>
                 <Link href="/pricing/"
                   className="inline-flex items-center rounded-full px-8 py-3.5 text-[0.9375rem] font-semibold border"
