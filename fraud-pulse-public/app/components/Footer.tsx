@@ -8,17 +8,12 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <Link href="/" className="flex items-center gap-2.5 mb-4">
-              <Image src="/logo-light.svg" alt="FraudPulse" width={28} height={28} />
-              <span className="text-sm font-bold text-gray-900 tracking-[-0.03em]">FraudPulse</span>
+            <Link href="/" className="flex items-center mb-4">
+              <Image src="/full-logo-light.svg" alt="FraudPulse" width={140} height={32} />
             </Link>
             <p className="text-gray-500 text-sm leading-relaxed max-w-[16rem]">
               AI-powered fraud intelligence. Your personal fraud advisor.
             </p>
-            <div className="mt-4 flex items-center gap-2">
-              <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-[0_0_6px_#10b981]"></div>
-              <span className="text-xs text-gray-400">All systems operational</span>
-            </div>
           </div>
 
           {/* Product */}
@@ -69,7 +64,6 @@ export default function Footer() {
 
         <div className="pt-8 border-t flex flex-col sm:flex-row items-center justify-between gap-4" style={{ borderColor: '#e5e7eb' }}>
           <p className="text-gray-400 text-xs">© {new Date().getFullYear()} FraudPulse Inc. All rights reserved.</p>
-          <p className="text-gray-400 text-xs">Built for modern merchants, not legacy banking.</p>
         </div>
       </div>
     </footer>

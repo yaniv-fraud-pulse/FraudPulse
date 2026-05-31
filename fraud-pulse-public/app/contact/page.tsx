@@ -195,12 +195,6 @@ export default function Contact() {
                         </svg>
                         Book a 30-Minute Demo
                       </a>
-
-                      <div className="flex items-center gap-3 rounded-2xl px-5 py-3 border" style={{ borderColor: '#e5e7eb' }}>
-                        <div className="w-2 h-2 rounded-full flex-shrink-0 bg-emerald-500" style={{ boxShadow: '0 0 8px #10b981' }} />
-                        <span className="text-sm text-gray-400">All systems operational</span>
-                      </div>
-
                       <div className="text-center">
                         <p className="text-xs text-gray-400">Or email us directly at{' '}
                           <a href="mailto:hello@fraud-pulse.com" className="text-[#5ba8b4] hover:underline">hello@fraud-pulse.com</a>

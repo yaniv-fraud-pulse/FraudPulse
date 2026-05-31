@@ -172,9 +172,9 @@ export default function Pricing() {
               const cardDelay = ([0, 150, 300] as const)[pi] ?? 0;
 
               return (
-                <Reveal key={plan.name} animation="anim-scaleIn" delay={cardDelay}>
+                <Reveal key={plan.name} animation="anim-scaleIn" delay={cardDelay} className="h-full">
                 <div
-                  className="relative flex flex-col rounded-[20px] p-7 border transition-all"
+                  className="relative flex flex-col rounded-[20px] p-7 border transition-all h-full"
                   style={{
                     background: plan.popular ? 'rgba(165,208,216,0.05)' : '#ffffff',
                     borderColor: plan.popular ? '#5ba8b4' : '#e5e7eb',
