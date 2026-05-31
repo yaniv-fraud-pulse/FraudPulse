@@ -83,7 +83,7 @@ export default function Features() {
             style={{ background: 'radial-gradient(ellipse at center, rgba(165,208,216,0.15) 0%, transparent 60%)' }} />
 
           <div className="relative max-w-7xl mx-auto py-16 sm:py-24">
-            <div className="max-w-[640px]">
+            <div className="max-w-[900px] mx-auto text-center">
               <Reveal animation="anim-fadeUp" delay={0}>
                 <p className="text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-4" style={{ color: 'rgb(123, 160, 168)' }}>
                   How It Works
@@ -93,7 +93,7 @@ export default function Features() {
                 <h1 className="font-extrabold text-gray-900 tracking-[-0.04em] leading-[1.1] mb-5 text-[2.5rem] sm:text-[3.5rem] lg:text-[4rem]">
                   From Onboarding to{' '}
                   <span style={{
-                    background: 'linear-gradient(135deg, rgb(123, 160, 168) 0%, rgb(125, 107, 160) 100%)',
+                    background: 'linear-gradient(135deg, rgb(125, 107, 160) 0%, rgb(125, 107, 160) 100%)',
                     WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
                   }}>
                     AI Insights in Minutes
@@ -101,7 +101,7 @@ export default function Features() {
                 </h1>
               </Reveal>
               <Reveal animation="anim-fadeUp" delay={150}>
-                <p className="text-[1.0625rem] leading-[1.75] max-w-[520px] text-gray-500">
+                <p className="text-[1.0625rem] leading-[1.75] max-w-[520px] mx-auto text-gray-500">
                   FraudPulse combines real-time fraud monitoring with an AI Assistant that helps businesses understand chargebacks, approval loss, transaction risk, and fraud exposure from one centralized platform.
                 </p>
               </Reveal>
@@ -112,8 +112,8 @@ export default function Features() {
         {/* ── Steps ── */}
         <section className="py-16 sm:py-24 px-5 sm:px-10 bg-white">
           <div className="max-w-2xl mx-auto flex flex-col gap-16 sm:gap-24">
-            {steps.map((step) => (
-              <Reveal key={step.number} animation="anim-fadeUp" delay={0}>
+            {steps.map((step, index) => (
+              <Reveal key={step.number} animation="anim-fadeUp" delay={(index * 150) as 0 | 75 | 150 | 225 | 300 | 375 | 450}>
                 <h2 className="font-extrabold text-gray-900 tracking-[-0.02em] mb-3 text-[1.375rem] sm:text-[1.625rem]">
                   {step.title}
                 </h2>

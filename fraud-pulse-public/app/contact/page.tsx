@@ -169,10 +169,11 @@ export default function Contact() {
                   <div className="flex flex-col gap-5 flex-1">
                     <div className="space-y-5">
                       {[
-                        { n: '1', text: "We review your fraud data before the call so we're not wasting your time." },
-                        { n: '2', text: 'Live walkthrough of the AI advisor surfacing patterns from your actual transactions.' },
-                        { n: '3', text: 'A prioritized list of recommended rules specific to your business — no generics.' },
-                        { n: '4', text: '14-day free trial, no credit card required.' },
+                    
+                        { n: '1', text: 'Live walkthrough of the AI advisor surfacing patterns and recommendations.' },
+                        { n: '2', text: 'Explain How FRaudPulse can help you reduce chargebacks and increase conversions.' },
+                        { n: '3', text: 'Answer any questions you have about FraudPulse.' },
+                        { n: '4', text: 'Get a 14-day free trial, no credit card required.' },
                       ].map(({ n, text }) => (
                         <div key={n} className="flex items-start gap-3">
                           <span className="flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold"

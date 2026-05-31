@@ -288,7 +288,7 @@ export default function Pricing() {
         </section>
 
         {/* ── FAQ ── */}
-        <section className="py-20 sm:py-28 px-5 sm:px-10 bg-[#f8f9fa]">
+        <section className="py-20 sm:py-28 px-5 sm:px-10" style={{ background: 'rgba(125,107,160,0.05)' }}>
           <div className="max-w-3xl mx-auto">
             <Reveal animation="anim-fadeUp">
               <div className="text-center mb-12">
@@ -335,8 +335,8 @@ export default function Pricing() {
         <section className="py-20 sm:py-28 px-5 sm:px-10 bg-white">
           <div className="max-w-7xl mx-auto">
             <Reveal animation="anim-scaleIn">
-            <div className="relative rounded-[20px] overflow-hidden p-12 sm:p-20 text-center border bg-[#f8f9fa]"
-              style={{ borderColor: '#e5e7eb' }}>
+            <div className="relative rounded-[20px] overflow-hidden p-12 sm:p-20 text-center border"
+              style={{ background: 'rgba(125,107,160,0.09)', borderColor: '#e5e7eb' }}>
               <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-px h-16"
                 style={{ background: 'linear-gradient(to bottom, rgba(91,168,180,0.5), transparent)' }} />
               <p className="text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-4 text-[#5ba8b4]">
@@ -352,9 +352,6 @@ export default function Pricing() {
                 className="inline-flex items-center gap-2 rounded-[10px] px-8 py-3 text-[0.9375rem] font-bold text-white transition-all hover:-translate-y-px"
                 style={{ background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)', boxShadow: '0 4px 24px rgba(91,168,180,0.35)' }}>
                 Book a Demo
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
               </Link>
             </div>
             </Reveal>

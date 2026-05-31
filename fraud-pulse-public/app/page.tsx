@@ -257,7 +257,7 @@ export default function Home() {
               <h2 className="text-center font-extrabold text-gray-900 text-[1.875rem] sm:text-[2.5rem] tracking-[-0.03em] mb-12 max-w-2xl mx-auto leading-tight">
                 Everything You Need to{' '}
                 <span style={{
-                  background: 'linear-gradient(135deg, rgb(61,143,160) 0%, rgb(125,107,160) 100%)',
+                  background: 'linear-gradient(135deg, rgb(125,107,160) 0%, rgb(125,107,160) 100%)',
                   WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
                 }}>Understand and Manage Fraud</span>
               </h2>
@@ -286,8 +286,14 @@ export default function Home() {
         </section>
 
         {/* ── Tabs section ── */}
-        <section className="py-20 sm:py-28 px-5 sm:px-10" style={{ background: '#fafafa', borderTop: '1px solid #f3f4f6', borderBottom: '1px solid #f3f4f6' }}>
-          <div className="max-w-5xl mx-auto">
+        <section className="relative py-20 sm:py-28 px-5 sm:px-10 overflow-hidden" style={{ background: 'rgba(125,107,160,0.08)', borderTop: '1px solid #f3f4f6', borderBottom: '1px solid #f3f4f6' }}>
+          <div className="pointer-events-none absolute top-0 left-0 w-[900px] h-[700px]"
+            style={{ background: 'radial-gradient(ellipse at 0% 20%, rgba(125,107,160,0.25) 0%, transparent 55%)' }} />
+          <div className="pointer-events-none absolute bottom-0 right-0 w-[800px] h-[600px]"
+            style={{ background: 'radial-gradient(ellipse at 100% 80%, rgba(91,168,180,0.20) 0%, transparent 60%)' }} />
+          <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px]"
+            style={{ background: 'radial-gradient(circle at 50% 50%, rgba(125,107,160,0.10) 0%, transparent 70%)' }} />
+          <div className="relative max-w-5xl mx-auto">
 
             <Reveal animation="anim-fadeUp">
               <p className="text-center text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-3 text-[#5ba8b4]">
