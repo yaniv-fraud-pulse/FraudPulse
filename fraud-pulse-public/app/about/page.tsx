@@ -338,9 +338,6 @@ export default function About() {
                 className="inline-flex items-center gap-2 rounded-[10px] px-8 py-3 text-[0.9375rem] font-bold text-white transition-all hover:-translate-y-px"
                 style={{ background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)', boxShadow: '0 4px 24px rgba(91,168,180,0.35)' }}>
                 Book a Demo
-                {/* <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg> */}
               </Link>
               <a
                 href="https://www.linkedin.com/in/idan-hayon/"
