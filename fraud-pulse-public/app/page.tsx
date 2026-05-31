@@ -217,15 +217,13 @@ export default function Home() {
 
 
             {/* Headline — each line staggers */}
-            <h1 className="font-extrabold leading-[1.05] text-gray-900 mb-5 tracking-[-0.04em] text-[2.75rem] sm:text-[4rem] lg:text-[5rem]"
-              style={{ fontFamily: 'var(--font-dm-sans), "DM Sans", sans-serif' }}>
+            <h1 className="font-extrabold leading-[1.05] text-gray-900 mb-5 tracking-[-0.04em] text-[2.75rem] sm:text-[4rem] lg:text-[5rem]">
               <span className="block anim-fadeUp delay-75 capitalize">Increase Conversion</span>
               <span className="block anim-fadeUp delay-225 capitalize" style={{
                 lineHeight: '1.5',
                 background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',
                 WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
-                fontFamily: 'var(--font-dm-sans), "DM Sans", sans-serif',
-              }}>Reduce Chargebacks.</span>
+              }}>Reduce Chargebacks</span>
             </h1>
 
             <p className="text-[1.0625rem] leading-[1.75] mb-8 max-w-[540px] mx-auto text-gray-500 anim-fadeUp delay-300">
