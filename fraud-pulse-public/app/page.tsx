@@ -93,32 +93,87 @@ const tabs = [
     body: 'Monitor approval rates, chargeback trends, and fraud exposure from a single real-time dashboard. Filter by date range, card brand, or billing country — always know exactly where you stand.',
     bullets: ['Total volume & approval rate', 'Fraud vs non-fraud breakdown', 'Chargeback trend charts', 'Projected chargeback cohorts'],
     visual: (
-      <div className="rounded-2xl border bg-white p-5 w-full anim-float" style={{ borderColor: '#e5e7eb', boxShadow: '0 8px 32px rgba(0,0,0,0.08)' }}>
-        <div className="flex items-center justify-between mb-4">
-          <span className="text-xs font-semibold text-gray-400 uppercase tracking-widest">Live Dashboard</span>
-          <span className="text-xs text-gray-300">Last 30 days</span>
-        </div>
-        <div className="grid grid-cols-2 gap-3 mb-4">
-          {[
-            { label: 'Approval Rate', value: '96.9%', up: true },
-            { label: 'Fraud Rate', value: '0.8%', up: false },
-            { label: 'Chargebacks', value: '12', up: false },
-            { label: 'Volume', value: '$248K', up: true },
-          ].map((s, i) => (
-            <div key={s.label} className="rounded-xl px-3 pt-3 pb-2 anim-scaleIn" style={{ background: '#f8f9fa', animationDelay: `${i * 80}ms` }}>
-              <div className="text-[0.65rem] leading-5 text-gray-400 mb-1">{s.label}</div>
-              <div className="flex items-center gap-1.5">
-                <span className="text-base font-bold text-gray-900">{s.value}</span>
-                <span className={`text-[0.6rem] font-semibold ${s.up ? 'text-emerald-500' : 'text-red-400'}`}>{s.up ? '↑' : '↓'}</span>
+      <div className="rounded-2xl border bg-[#f8f9fa] p-4 w-full anim-float" style={{ borderColor: '#e5e7eb', boxShadow: '0 8px 32px rgba(0,0,0,0.08)' }}>
+        {/* Top KPI row */}
+        <div className="grid grid-cols-3 gap-2 mb-2">
+          <div className="rounded-xl bg-white p-2.5 border border-gray-100 anim-scaleIn" style={{ animationDelay: '0ms' }}>
+            <div className="flex items-center gap-1 mb-1">
+              <div className="w-4 h-4 rounded-md flex items-center justify-center" style={{ background: 'rgba(34,197,94,0.15)' }}>
+                <svg className="w-2.5 h-2.5 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
               </div>
+              <span className="text-[0.55rem] font-medium text-gray-500">Potential Savings</span>
+            </div>
+            <div className="text-sm font-bold text-emerald-600">$67,124</div>
+            <div className="text-[0.5rem] text-gray-400 mt-0.5">100% coverage</div>
+          </div>
+          <div className="rounded-xl bg-white p-2.5 border border-gray-100 anim-scaleIn" style={{ animationDelay: '80ms' }}>
+            <div className="flex items-center gap-1 mb-1">
+              <div className="w-4 h-4 rounded-md flex items-center justify-center" style={{ background: 'rgba(239,68,68,0.12)' }}>
+                <svg className="w-2.5 h-2.5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+              </div>
+              <span className="text-[0.55rem] font-medium text-gray-500">Fraud Loss</span>
+            </div>
+            <div className="text-sm font-bold text-red-500">$67,124</div>
+            <div className="text-[0.5rem] text-gray-400 mt-0.5">165 fraud CBs</div>
+          </div>
+          <div className="rounded-xl bg-white p-2.5 border border-gray-100 anim-scaleIn" style={{ animationDelay: '160ms' }}>
+            <div className="flex items-center gap-1 mb-1">
+              <div className="w-4 h-4 rounded-md flex items-center justify-center" style={{ background: 'rgba(91,168,180,0.15)' }}>
+                <svg className="w-2.5 h-2.5 text-[#5ba8b4]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" /></svg>
+              </div>
+              <span className="text-[0.55rem] font-medium text-gray-500">Actions</span>
+            </div>
+            <div className="text-sm font-bold text-[#5ba8b4]">10</div>
+            <div className="text-[0.5rem] text-[#5ba8b4] mt-0.5">Rules to implement</div>
+          </div>
+        </div>
+
+        {/* Volume metrics row */}
+        <div className="grid grid-cols-4 gap-1.5 mb-2">
+          {[
+            { label: 'Total Volume', value: '$5.8M', sub: '26,448 txns' },
+            { label: 'Total Approved', value: '$5.1M', sub: '87.4%' },
+            { label: 'Chargebacks', value: '$191K', sub: '483 CBs', accent: true },
+            { label: 'Declined', value: '$717K', sub: '3,327' },
+          ].map((m, i) => (
+            <div key={m.label} className="rounded-lg bg-white px-2 py-1.5 border border-gray-100 anim-scaleIn"
+              style={{ animationDelay: `${i * 60 + 200}ms`, borderTop: m.accent ? '2px solid #374151' : undefined }}>
+              <div className="text-[0.45rem] text-gray-400 mb-0.5 leading-tight">{m.label}</div>
+              <div className="text-[0.65rem] font-bold text-gray-900">{m.value}</div>
+              <div className="text-[0.4rem] text-gray-400">{m.sub}</div>
             </div>
           ))}
         </div>
-        <div className="flex items-end gap-1 h-12">
-          {[30, 45, 35, 60, 40, 75, 55, 80, 50, 65, 45, 70].map((h, i) => (
-            <div key={i} className="flex-1 rounded-sm bar-grow"
-              style={{ height: `${h}%`, background: i === 7 ? '#5ba8b4' : '#e5e7eb', animationDelay: `${i * 40}ms` }} />
-          ))}
+
+        {/* Charts row */}
+        <div className="grid grid-cols-2 gap-2">
+          {/* Quadrant chart */}
+          <div className="rounded-xl bg-white p-2.5 border border-gray-100 anim-fadeUp" style={{ animationDelay: '400ms' }}>
+            <div className="text-[0.5rem] font-semibold text-gray-700 mb-2 leading-tight">Fraud Rate vs False Positive</div>
+            <div className="relative h-16 border-l border-b border-gray-200">
+              <div className="absolute bottom-[45%] left-[55%] w-2 h-2 rounded-full bg-[#5ba8b4]" />
+              <div className="absolute top-1 left-1/2 -translate-x-1/2 w-2.5 h-2.5 rounded-full bg-[#7D6BA0]" />
+              <div className="absolute bottom-0 left-0 text-[0.35rem] text-gray-400">0</div>
+              <div className="absolute -left-3 top-0 text-[0.35rem] text-gray-400 -rotate-90 origin-center">FP%</div>
+            </div>
+          </div>
+          {/* Bar chart */}
+          <div className="rounded-xl bg-white p-2.5 border border-gray-100 anim-fadeUp" style={{ animationDelay: '480ms' }}>
+            <div className="text-[0.5rem] font-semibold text-gray-700 mb-2 leading-tight">Chargeback Reason Breakdown</div>
+            <div className="flex items-end gap-0.5 h-16">
+              {[
+                { h: 85, color: '#5ba8b4' },
+                { h: 80, color: '#7D6BA0' },
+                { h: 35, color: '#5ba8b4' },
+                { h: 30, color: '#7D6BA0' },
+                { h: 25, color: '#5ba8b4' },
+                { h: 20, color: '#7D6BA0' },
+              ].map((b, i) => (
+                <div key={i} className="flex-1 rounded-t-sm bar-grow"
+                  style={{ height: `${b.h}%`, background: b.color, animationDelay: `${i * 40 + 500}ms` }} />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     ),
@@ -126,7 +181,7 @@ const tabs = [
   {
     label: 'Chargebacks',
     icon: (
-      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 36 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" />
       </svg>
     ),
@@ -194,6 +249,7 @@ const tabs = [
 export default function Home() {
   const [activeTab, setActiveTab] = useState(0);
   const [tabKey, setTabKey] = useState(0);
+  const [heroStep, setHeroStep] = useState(0);
 
   function switchTab(i: number) {
     setActiveTab(i);
@@ -208,10 +264,50 @@ export default function Home() {
         setTabKey(k => k + 1);
         return next;
       });
-    }, 5000);
+    }, 7000);
 
     return () => clearInterval(interval);
   }, []);
+
+  // Auto-rotate hero steps every 4 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setHeroStep(prev => (prev + 1) % 4);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const heroSteps = [
+    {
+      step: '01',
+      title: 'Connect Your Data',
+      description: 'Connect your transaction and chargeback data via API, CSV upload, or native integrations',
+      visual: tabs[1].visual, // Dashboard
+      color: '#5ba8b4'
+    },
+    {
+      step: '02',
+      title: 'AI Analysis',
+      description: 'Our AI analyzes patterns and identifies fraud signals',
+      visual: tabs[3].visual, // Fraud Patterns
+      color: '#7D6BA0'
+    },
+    {
+      step: '03',
+      title: 'Get Actionable Insights',
+      description: 'Receive ranked recommendations with fraud capture rates',
+      visual: tabs[0].visual, // AI Actions
+      color: '#5ba8b4'
+    },
+    {
+      step: '04',
+      title: 'Save Money',
+      description: 'Reduce chargebacks and increase approval rates',
+      visual: tabs[2].visual, // Chargebacks
+      color: '#7D6BA0'
+    },
+  ];
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
@@ -226,7 +322,7 @@ export default function Home() {
           <div className="pointer-events-none absolute bottom-0 right-0 w-[700px] h-[600px]"
             style={{ background: 'radial-gradient(ellipse at 80% 80%, rgba(125,107,160,0.22) 0%, transparent 70%)' }} />
 
-          <div className="relative max-w-4xl mx-auto py-20">
+          <div className="relative max-w-6xl mx-auto py-20">
 
 
             {/* Headline — each line staggers */}
@@ -239,13 +335,13 @@ export default function Home() {
               }}>Reduce Chargebacks</span>
             </h1>
 
-            <p className="text-[1.3625rem] leading-[1.75] mb-8 max-w-[640px] mx-auto  anim-fadeUp delay-300">
+            <p className="text-[1.3625rem] leading-[1.75] mb-8 max-w-[720px] mx-auto text-gray-600 anim-fadeUp delay-300">
             FraudPulse AI agent analyzes your transactions, detects fraud patterns, and delivers ready-to-implement actions, with fraud capture and false positive rates.
             </p>
 
             {/* CTA */}
             <div className="anim-fadeUp delay-400">
-              <Link href="/contact/"
+              <Link href="/book-a-demo/"
                 className="inline-flex items-center gap-2 rounded-full px-12 py-5 text-lg font-bold text-white transition-all hover:scale-[1.03]"
                 style={{
                   background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',
@@ -253,6 +349,56 @@ export default function Home() {
                 }}>
                 Book a Demo
               </Link>
+            </div>
+
+            {/* Process Flow Animation */}
+            <div className="mt-20 anim-fadeUp delay-500">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                {/* Left: Step Info */}
+                <div className="text-left">
+                  <div className="flex gap-2 mb-6">
+                    {heroSteps.map((_, i) => (
+                      <div key={i} className="transition-all duration-300"
+                        style={{
+                          width: i === heroStep ? '32px' : '8px',
+                          height: '8px',
+                          borderRadius: '4px',
+                          background: i === heroStep ? heroSteps[heroStep].color : '#e5e7eb'
+                        }} />
+                    ))}
+                  </div>
+                  <div className="relative min-h-[200px]">
+                    {heroSteps.map((step, i) => (
+                      <div key={i} className="absolute inset-0 transition-opacity duration-500"
+                        style={{ 
+                          opacity: i === heroStep ? 1 : 0,
+                          pointerEvents: i === heroStep ? 'auto' : 'none'
+                        }}>
+                        <h3 className="text-3xl font-extrabold text-gray-900 mb-4 tracking-[-0.02em]">
+                          {step.title}
+                        </h3>
+                        <p className="text-xl text-gray-600">
+                          {step.description}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Right: Visual Demo */}
+                <div className="relative min-h-[300px] scale-125" style={{ transformOrigin: 'left center' }}>
+                  {heroSteps.map((step, i) => (
+                    <div key={i} className="absolute inset-0 transition-opacity duration-700"
+                      style={{ 
+                        opacity: i === heroStep ? 1 : 0,
+                        pointerEvents: i === heroStep ? 'auto' : 'none',
+                        transform: i === 0 ? 'scaleY(0.75)' : 'none'
+                      }}>
+                      {step.visual}
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -273,7 +419,7 @@ export default function Home() {
               {[
                 { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" /></svg>, title: 'Monitoring Dashboard', body: 'Volumes, Approval Rates and Chargebacks Breakdown - all in one live view with date-range filtering.', color: 'rgb(61,143,160)', bg: 'rgba(61,143,160,0.08)', border: 'rgba(61,143,160,0.2)', featured: false, featuredType: null },
                 { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" /></svg>, title: 'Chargeback Tracking & Insights', body: 'Track every chargeback with full context: Reason Code, Dispute Status and Pattern Severity.', color: 'rgb(125,107,160)', bg: 'rgba(125,107,160,0.08)', border: 'rgba(125,107,160,0.2)', featured: true, featuredType: null },
-                { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>, title: 'AI & Recommendations', body: 'Ranked recommended actions with fraud capture rate and false positive scores — so your team acts with confidence, not guesswork.', color: 'rgb(61,143,160)', bg: 'rgba(61,143,160,0.08)', border: 'rgba(61,143,160,0.2)', featured: false, featuredType: null },
+                { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>, title: 'Fraud Prevention Actions', body: 'Ranked recommended actions with fraud capture rate and false positive scores — so your team acts with confidence, not guesswork.', color: 'rgb(61,143,160)', bg: 'rgba(61,143,160,0.08)', border: 'rgba(61,143,160,0.2)', featured: false, featuredType: null },
                 { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" /></svg>, title: 'Fraud Pattern Detection', body: 'Run the Fraud Classifier to automatically analyze chargebacks and extract the exact rule patterns separating fraud from legitimate transactions.', color: 'rgb(125,107,160)', bg: 'rgba(125,107,160,0.08)', border: 'rgba(125,107,160,0.2)', featuredType: 'purple' },
                 { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>, title: 'Advanced Analytics', body: 'Visualize Fraud Breakdown by Dispute Reason, Risk Feature radar, Incoming Chargebacks by daily bucket, and Projected Chargeback cohorts.', color: 'rgb(61,143,160)', bg: 'rgba(61,143,160,0.08)', border: 'rgba(61,143,160,0.2)', featuredType: null },
                 { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>, title: 'Clean & Validate Your Data', body: 'Built-in Data Sanity checks validate the quality of your transaction data before analysis begins — every insight built on reliable data.', color: 'rgb(125,107,160)', bg: 'rgba(125,107,160,0.08)', border: 'rgba(125,107,160,0.2)', featuredType: 'teal' },
@@ -399,7 +545,7 @@ export default function Home() {
                 Book a walkthrough and see how FraudPulse finds patterns in your transactions and hands you a prioritized action list.
               </p>
               <div className="flex flex-wrap gap-3 justify-center">
-                <Link href="/contact/"
+                <Link href="/book-a-demo/"
                   className="inline-flex items-center gap-2 rounded-full px-10 py-4 text-[1.0625rem] font-bold text-white"
                   style={{
                     background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',

@@ -80,8 +80,8 @@ export default function Privacy() {
               <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Contact Us</h2>
               <p>
                 If you have any questions about this Privacy Policy, please contact us at{' '}
-                <a href="mailto:privacy@fraud-pulse.com" className="text-blue-600 hover:text-blue-700">
-                  privacy@fraud-pulse.com
+                <a href="mailto:support@fraud-pulse.com" className="text-blue-600 hover:text-blue-700">
+                  support@fraud-pulse.com
                 </a>
               </p>
             </section>

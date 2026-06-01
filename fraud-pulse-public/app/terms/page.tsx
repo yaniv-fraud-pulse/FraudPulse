@@ -89,8 +89,8 @@ export default function Terms() {
               <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Contact Information</h2>
               <p>
                 For questions about these Terms of Service, contact us at{' '}
-                <a href="mailto:legal@fraud-pulse.com" className="text-blue-600 hover:text-blue-700">
-                  legal@fraud-pulse.com
+                <a href="mailto:support@fraud-pulse.com" className="text-blue-600 hover:text-blue-700">
+                  support@fraud-pulse.com
                 </a>
               </p>
             </section>

@@ -10,39 +10,18 @@ const values = [
   {
     title: 'Precision Over Volume',
     description: 'We believe in surgical fraud detection that minimises false positives. Every legitimate transaction that gets blocked is revenue lost and we take that seriously.',
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-      </svg>
-    ),
   },
   {
     title: 'Radical Transparency',
     description: 'Black-box AI has no place in risk management. Every FraudPulse decision comes with a full explanation, so your team always understands why.',
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
   },
   {
     title: 'Merchant-First',
     description: 'We built FraudPulse because we saw merchants struggling with tools designed for banks. Our platform is built around the needs of modern commerce.',
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-      </svg>
-    ),
   },
   {
     title: 'Continuous Intelligence',
     description: 'Fraud never sleeps, and neither does our platform. We continuously update our models and share intelligence across our merchant community.',
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
   },
 ];
 
@@ -73,21 +52,11 @@ export default function About() {
             style={{ background: 'radial-gradient(ellipse at center, rgba(165,208,216,0.12) 0%, transparent 60%)' }} />
 
           <div className="relative max-w-7xl mx-auto py-16 sm:py-24">
-            <div className="max-w-[680px]">
-              <Reveal animation="anim-fadeUp" delay={0}>
-                <p className="text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-3 text-[#5ba8b4]">
-                  About Us
-                </p>
-              </Reveal>
-              <Reveal animation="anim-fadeUp" delay={75}>
-                <h1 className="font-extrabold text-gray-900 tracking-[-0.04em] leading-[1.1] mb-6 text-[2.5rem] sm:text-[3.75rem]">
-                  Company Story
-                </h1>
-              </Reveal>
+            <div className="max-w-[880px]">
               <Reveal animation="anim-fadeUp" delay={150}>
-              <p className="text-[1rem] leading-[1.8] text-gray-600">
+              <p className="text-[1.25rem] leading-[1.8] text-gray-600">
                 FraudPulse was co-founded by <strong className="text-gray-900">Idan Hayon</strong> and{' '}
-                <strong className="text-gray-900">Yaniv Hayun</strong> after years working inside high-scale fraud,
+                <strong className="text-gray-900">Yaniv Hayun</strong>{" "} after years working inside high-scale fraud,
                 payments, and risk systems. Idan led fraud analytics and risk operations roles at Riskified, Melio,
                 and Creednz. Yaniv built large-scale engineering and real-time data infrastructure at Upstream
                 Security and Creednz. Over time, they noticed the same problem repeated everywhere: merchants had
@@ -102,10 +71,7 @@ export default function About() {
 
         {/* ── Founders title ── */}
         <div className="py-6 text-center px-5 bg-white">
-          <p className="text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-2 text-[#5ba8b4]">
-            The Founders
-          </p>
-          <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] text-[1.75rem] sm:text-[2.25rem]">
+          <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] text-[2.75rem] sm:text-[3.25rem]">
             The People Behind{' '}
             <span style={{
               background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 50%, #5ba8b4 100%)',
@@ -250,40 +216,28 @@ export default function About() {
 
         {/* ── Mission & Approach ── */}
         <section className="py-16 sm:py-20 px-5 sm:px-10 bg-[#f8f9fa]">
-          <div className="max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
             {[
               {
                 label: 'Our Mission',
                 text: "To give every merchant access to the kind of fraud intelligence and decision support traditionally reserved for enterprise risk teams.",
-                icon: (
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                  </svg>
-                ),
               },
               {
                 label: 'Our Approach',
                 text: "We don't just show you data. We tell you what to do about it. FraudPulse's AI Actions module generates specific, ranked rules with fraud capture rates and false positive scores so your team acts with confidence.",
-                icon: (
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                  </svg>
-                ),
               },
-            ].map(({ label, text, icon }, i) => (
+            ].map(({ label, text }, i) => (
               <Reveal key={label} animation="anim-scaleIn" delay={([0, 150] as const)[i] ?? 0}>
               <div
-                className="rounded-[16px] p-8 border bg-white card-hover h-full"
-                style={{ borderColor: '#e5e7eb' }}>
-                <div className="w-10 h-10 rounded-[10px] mb-4 flex items-center justify-center border text-[#5ba8b4]"
-                  style={{ background: 'rgba(165,208,216,0.1)', borderColor: 'rgba(91,168,180,0.25)' }}>
-                  {icon}
-                </div>
-                <p className="text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-2 text-[#5ba8b4]">
+                className="rounded-[20px] p-10 sm:p-12 h-full"
+                style={{
+                  background: 'linear-gradient(135deg, #111827 0%, #1f2937 100%)',
+                  boxShadow: '0 8px 32px rgba(17,24,39,0.2)',
+                }}>
+                <p className="text-[0.8125rem] font-semibold tracking-[0.12em] uppercase mb-4 text-[#5ba8b4]">
                   {label}
                 </p>
-                <p className="text-[0.875rem] leading-[1.75] text-gray-500">{text}</p>
+                <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.75] text-white/90">{text}</p>
               </div>
               </Reveal>
             ))}
@@ -294,30 +248,34 @@ export default function About() {
         <section className="py-16 sm:py-24 px-5 sm:px-10 bg-[#f8f9fa]">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
-              <p className="text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-2 text-[#5ba8b4]">
-                Our Values
-              </p>
-              <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] text-[1.75rem] sm:text-[2.25rem]">
+              <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] text-[2.75rem] sm:text-[3.25rem]">
                 What Drives Us Every Day
               </h2>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-[860px] mx-auto">
-              {values.map(({ title, description, icon }, i) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+              {values.map(({ title, description }, i) => {
+                const isPrimary = i === 1 || i === 2;
+                const cardStyle = isPrimary
+                  ? {
+                      background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',
+                      boxShadow: '0 8px 32px rgba(91,168,180,0.25)',
+                    }
+                  : {
+                      background: 'linear-gradient(135deg, #7D6BA0 0%, #6a5890 100%)',
+                      boxShadow: '0 8px 32px rgba(125,107,160,0.25)',
+                    };
+
+                return (
                 <Reveal key={title} animation="anim-fadeUp" delay={([0, 150, 75, 225] as const)[i] ?? 0}>
                 <div
-                  className="flex items-start gap-4 rounded-[16px] p-7 border bg-white card-hover"
-                  style={{ borderColor: '#e5e7eb' }}>
-                  <div className="w-10 h-10 rounded-[10px] flex-shrink-0 flex items-center justify-center border text-[#5ba8b4]"
-                    style={{ background: 'rgba(165,208,216,0.1)', borderColor: 'rgba(91,168,180,0.25)' }}>
-                    {icon}
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-gray-900 mb-2 text-[0.9375rem]">{title}</h3>
-                    <p className="text-[0.875rem] leading-[1.75] text-gray-500">{description}</p>
-                  </div>
+                  className="rounded-[20px] p-10 sm:p-12 h-full"
+                  style={cardStyle}>
+                  <h3 className="font-bold text-white mb-3 text-[1.25rem] sm:text-[1.375rem]">{title}</h3>
+                  <p className="text-[1.0625rem] sm:text-[1.125rem] leading-[1.75] text-white/90">{description}</p>
                 </div>
                 </Reveal>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>
@@ -326,25 +284,25 @@ export default function About() {
         <section className="py-16 sm:py-24 px-5 sm:px-10 bg-[#f8f9fa]">
           <Reveal animation="anim-scaleIn">
           <div className="max-w-7xl mx-auto text-center">
-            <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] mb-3 text-[2rem] sm:text-[2.75rem]">
+            <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] mb-4 text-[2.75rem] sm:text-[3.25rem]">
               Talk Directly With the Team Behind FraudPulse
             </h2>
-            <p className="text-[0.9375rem] leading-[1.7] max-w-[440px] mx-auto mb-10 text-gray-500">
+            <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.75] max-w-[560px] mx-auto mb-12 text-gray-500">
               Book a live walkthrough with Idan and see how FraudPulse identifies fraud patterns, approval loss,
               and actionable opportunities inside your own payment data.
             </p>
-            <div className="flex flex-wrap gap-3 justify-center">
-              <Link href="/contact/"
-                className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-[0.9375rem] font-bold text-white transition-all hover:-translate-y-px"
-                style={{ background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)', boxShadow: '0 4px 24px rgba(91,168,180,0.35)' }}>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link href="/book-a-demo/"
+                className="inline-flex items-center gap-2 rounded-full px-12 py-4.5 text-[1.125rem] font-bold text-white transition-all hover:scale-[1.03]"
+                style={{ background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)', transition: 'transform 0.2s cubic-bezier(0.22,1,0.36,1)' }}>
                 Book a Demo
               </Link>
               <a
                 href="https://www.linkedin.com/in/idan-hayon/"
                 target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-[0.9375rem] font-semibold transition-all border hover:border-[#5ba8b4] hover:text-[#5ba8b4]"
+                className="inline-flex items-center gap-2 rounded-full px-12 py-4.5 text-[1.125rem] font-semibold transition-all border hover:border-[#5ba8b4] hover:text-[#5ba8b4]"
                 style={{ borderColor: '#d1d5db', color: '#6b7280' }}>
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-[#0A66C2]" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                 </svg>
                 Connect on LinkedIn

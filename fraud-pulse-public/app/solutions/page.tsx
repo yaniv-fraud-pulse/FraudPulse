@@ -66,7 +66,7 @@ const integrations = [
 
 
 
-export default function Features() {
+export default function Solutions() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
       <Header />
@@ -84,13 +84,8 @@ export default function Features() {
 
           <div className="relative max-w-7xl mx-auto py-16 sm:py-24">
             <div className="max-w-[900px] mx-auto text-center">
-              <Reveal animation="anim-fadeUp" delay={0}>
-                <p className="text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-4" style={{ color: 'rgb(123, 160, 168)' }}>
-                  How It Works
-                </p>
-              </Reveal>
               <Reveal animation="anim-fadeUp" delay={75}>
-                <h1 className="font-extrabold text-gray-900 tracking-[-0.04em] leading-[1.1] mb-5 text-[2.5rem] sm:text-[3.5rem] lg:text-[4rem]">
+                <h1 className="font-extrabold text-gray-900 tracking-[-0.04em] leading-[1.1] mb-5 text-[3rem] sm:text-[4rem] lg:text-[4.5rem]">
                   From Onboarding to{' '}
                   <span style={{
                     background: 'linear-gradient(135deg, rgb(125, 107, 160) 0%, rgb(125, 107, 160) 100%)',
@@ -101,7 +96,7 @@ export default function Features() {
                 </h1>
               </Reveal>
               <Reveal animation="anim-fadeUp" delay={150}>
-                <p className="text-[1.0625rem] leading-[1.75] max-w-[520px] mx-auto text-gray-500">
+                <p className="text-[1.5625rem] leading-[1.75] max-w-[720px] mx-auto ">
                   FraudPulse combines real-time fraud monitoring with an AI Assistant that helps businesses understand chargebacks, approval loss, transaction risk, and fraud exposure from one centralized platform.
                 </p>
               </Reveal>
@@ -111,29 +106,57 @@ export default function Features() {
 
         {/* ── Steps ── */}
         <section className="py-16 sm:py-24 px-5 sm:px-10 bg-white">
-          <div className="max-w-2xl mx-auto flex flex-col gap-16 sm:gap-24">
-            {steps.map((step, index) => (
-              <Reveal key={step.number} animation="anim-fadeUp" delay={([0, 150, 300, 400] as const)[index]}>
-                <h2 className="font-extrabold text-gray-900 tracking-[-0.02em] mb-3 text-[1.375rem] sm:text-[1.625rem]">
-                  {step.title}
-                </h2>
-                <p className="text-[0.9375rem] leading-[1.75] mb-5 text-gray-500">
-                  {step.description}
-                </p>
-                <ul className="flex flex-col gap-2.5">
-                  {step.details.map((detail, di) => (
-                    <li key={detail} className="flex items-start gap-3 anim-fadeUp"
-                      style={{ animationDelay: `${di * 60}ms` }}>
-                      <svg className="w-4 h-4 flex-shrink-0 mt-[3px]" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        style={{ color: 'rgb(123, 160, 168)' }}>
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      <span className="text-[0.875rem] leading-[1.6] text-gray-600">{detail}</span>
-                    </li>
-                  ))}
-                </ul>
+          <div className="max-w-7xl mx-auto flex flex-col gap-8 sm:gap-10">
+            {steps.map((step, index) => {
+              const stepStyles = [
+                {
+                  background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',
+                  boxShadow: '0 8px 32px rgba(91,168,180,0.25)',
+                },
+                {
+                  background: 'linear-gradient(135deg, #111827 0%, #1f2937 100%)',
+                  boxShadow: '0 8px 32px rgba(17,24,39,0.2)',
+                },
+                {
+                  background: 'linear-gradient(135deg, #7D6BA0 0%, #6a5890 100%)',
+                  boxShadow: '0 8px 32px rgba(125,107,160,0.25)',
+                },
+                {
+                  background: '#ffffff',
+                  boxShadow: '0 8px 32px rgba(0,0,0,0.08)',
+                  border: '1px solid #e5e7eb',
+                },
+              ][index];
+
+              const isLight = index === 3;
+              const slideAnimation = index % 2 === 0 ? 'anim-slideLeft-slow' : 'anim-slideRight-slow';
+
+              return (
+              <Reveal key={step.number} animation={slideAnimation} delay={([0, 150, 300, 400] as const)[index]} className="w-full">
+                <div
+                  className="rounded-2xl p-8 sm:p-10"
+                  style={stepStyles}>
+                  <h2 className={`font-extrabold tracking-[-0.02em] mb-4 text-[1.625rem] sm:text-[2rem] ${isLight ? 'text-gray-900' : 'text-white'}`}>
+                    {step.title}
+                  </h2>
+                  <p className={`text-[1.125rem] sm:text-[1.25rem] leading-[1.75] mb-6 ${isLight ? 'text-gray-600' : 'text-white/90'}`}>
+                    {step.description}
+                  </p>
+                  <ul className="flex flex-col gap-3.5">
+                    {step.details.map((detail, di) => (
+                      <li key={detail} className="flex items-start gap-3 anim-fadeUp"
+                        style={{ animationDelay: `${di * 60}ms` }}>
+                        <svg className={`w-5 h-5 flex-shrink-0 mt-[3px] ${isLight ? 'text-[#5ba8b4]' : 'text-white'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span className={`text-[1.0625rem] sm:text-[1.125rem] leading-[1.6] ${isLight ? 'text-gray-700' : 'text-white/95'}`}>{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </Reveal>
-            ))}
+              );
+            })}
           </div>
         </section>
 
@@ -142,13 +165,10 @@ export default function Features() {
           <div className="max-w-7xl mx-auto">
             <Reveal animation="anim-fadeUp">
               <div className="text-center mb-12">
-                <p className="text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-2" style={{ color: 'rgb(125, 107, 160)' }}>
-                  Integrations
-                </p>
-                <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] mb-3 text-[1.75rem] sm:text-[2.25rem]">
+                <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] mb-3 text-[2.75rem] sm:text-[3.25rem]">
                   Connect FraudPulse to Your Existing Payment Stack
                 </h2>
-                <p className="text-[0.9375rem] leading-[1.7] max-w-[480px] mx-auto text-gray-500">
+                <p className="text-[1.125rem] leading-[1.7] max-w-[580px] mx-auto">
                   Connect directly through supported integrations or simply upload CSV exports from your existing systems.
                 </p>
               </div>
@@ -177,7 +197,7 @@ export default function Features() {
             </div>
 
             <Reveal animation="anim-fadeIn" delay={300}>
-              <p className="text-center mt-8 text-[0.875rem] text-gray-400">
+              <p className="text-center mt-8 text-[1.125rem] text-gray-400">
                 Don&apos;t see your platform?{' '}
                 <Link href="/contact/" className="hover:underline text-[#5ba8b4]">
                   Contact us
@@ -194,22 +214,21 @@ export default function Features() {
         </section>
 
         {/* ── CTA ── */}
-        <section className="py-20 sm:py-28 px-5 sm:px-10 bg-[#f8f9fa]">
+        <section
+          className="py-20 sm:py-28 px-5 sm:px-10 text-white"
+          style={{ background: 'linear-gradient(135deg, #111827 0%, #1f2937 100%)' }}>
           <Reveal animation="anim-scaleIn">
             <div className="max-w-7xl mx-auto text-center">
-              <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] mb-3 text-[2rem] sm:text-[2.75rem]">
+              <h2 className="font-extrabold tracking-[-0.03em] mb-3 text-[2.75rem] sm:text-[3.25rem]">
                 See FraudPulse Working on Your Own Data
               </h2>
-              <p className="text-[0.9375rem] leading-[1.7] max-w-[420px] mx-auto mb-10 text-gray-500">
+              <p className="text-[1.25rem] leading-[1.7] max-w-[680px] mx-auto mb-10 text-gray-400">
                 Book a live walkthrough and see how FraudPulse analyzes payment data, identifies fraud patterns, and generates actionable recommendations for your business.
               </p>
-              <Link href="/contact/"
-                className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-[0.9375rem] font-bold text-white transition-all hover:scale-[1.03]"
-                style={{ background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)', boxShadow: '0 4px 24px rgba(91,168,180,0.35)', transition: 'transform 0.2s cubic-bezier(0.22,1,0.36,1)' }}>
+              <Link href="/book-a-demo/"
+                className="inline-flex items-center gap-2 rounded-full px-12 py-4.5 text-[1.125rem] font-bold text-white transition-all hover:scale-[1.03]"
+                style={{ background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)', transition: 'transform 0.2s cubic-bezier(0.22,1,0.36,1)' }}>
                 Book a Demo
-                {/* <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg> */}
               </Link>
             </div>
           </Reveal>

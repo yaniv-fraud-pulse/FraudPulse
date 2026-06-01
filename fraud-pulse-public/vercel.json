@@ -1,4 +1,16 @@
 {
   "version": 2,
-  "framework": "nextjs"
+  "framework": "nextjs",
+  "redirects": [
+    {
+      "source": "/features",
+      "destination": "/solutions",
+      "permanent": true
+    },
+    {
+      "source": "/features/",
+      "destination": "/solutions/",
+      "permanent": true
+    }
+  ]
 }

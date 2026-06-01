@@ -37,7 +37,7 @@ export default function Header() {
           <div className="hidden md:flex md:items-center md:gap-1">
             {[
               { href: '/',          label: 'Home' },
-              { href: '/features/', label: 'How It Works' },
+              { href: '/solutions/', label: 'Solutions' },
               { href: '/pricing/',  label: 'Pricing' },
               { href: '/about/',    label: 'About Us' },
             ].map(({ href, label }) => (
@@ -51,14 +51,23 @@ export default function Header() {
             ))}
           </div>
 
-          {/* Sign In only */}
-          <div className="hidden md:flex md:items-center">
+          {/* Actions */}
+          <div className="hidden md:flex md:items-center md:gap-3">
             <Link href="/contact/"
               className="px-5 py-2 text-base font-medium rounded-full border transition-all"
               style={{ color: '#111827', borderColor: 'transparent', transition: 'all 0.2s cubic-bezier(0.22,1,0.36,1)' }}
               onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'rgb(61,143,160)'; e.currentTarget.style.background = 'rgb(61,143,160)'; e.currentTarget.style.color = 'white'; }}
               onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'transparent'; e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#111827'; }}>
               Sign In
+            </Link>
+            <Link href="/book-a-demo/"
+              className="px-5 py-2 text-base font-bold rounded-full text-white transition-all hover:scale-[1.03]"
+              style={{
+                background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',
+              
+                transition: 'transform 0.2s cubic-bezier(0.22,1,0.36,1)',
+              }}>
+              Book a Demo
             </Link>
           </div>
 
@@ -81,11 +90,11 @@ export default function Header() {
           <div className="md:hidden border-t" style={{ borderColor: '#e5e7eb' }}>
             <div className="flex flex-col py-1">
               {[
-                { href: '/',          label: 'Home' },
-                { href: '/features/', label: 'How It Works' },
-                { href: '/pricing/',  label: 'Pricing' },
-                { href: '/about/',    label: 'About Us' },
-                { href: '/contact/',  label: 'Sign In' },
+                { href: '/',            label: 'Home' },
+                { href: '/solutions/',  label: 'Solutions' },
+                { href: '/pricing/',    label: 'Pricing' },
+                { href: '/about/',      label: 'About Us' },
+                { href: '/contact/',    label: 'Sign In' },
               ].map(({ href, label }) => (
                 <Link key={href} href={href}
                   className="px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-50"
@@ -94,6 +103,14 @@ export default function Header() {
                   {label}
                 </Link>
               ))}
+              <div className="px-4 py-3">
+                <Link href="/book-a-demo/"
+                  className="flex w-full items-center justify-center rounded-full px-5 py-2.5 text-sm font-bold text-white transition-all"
+                  style={{ background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)' }}
+                  onClick={() => setMobileMenuOpen(false)}>
+                  Book a Demo
+                </Link>
+              </div>
             </div>
           </div>
         )}
