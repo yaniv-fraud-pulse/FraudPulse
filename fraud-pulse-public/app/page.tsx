@@ -200,6 +200,19 @@ export default function Home() {
     setTabKey(k => k + 1);
   }
 
+  // Auto-rotate tabs every 7 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveTab(prev => {
+        const next = (prev + 1) % tabs.length;
+        setTabKey(k => k + 1);
+        return next;
+      });
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="flex flex-col min-h-screen bg-white">
       <Header />
@@ -258,8 +271,8 @@ export default function Home() {
             </Reveal>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {[
-                { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" /></svg>, title: 'Monitoring Dashboard', body: 'Monitor Total Volume, Approval Rate, Declined Transactions, Chargebacks, and Non-Fraud Chargebacks — all in one live view with date-range filtering.', color: 'rgb(61,143,160)', bg: 'rgba(61,143,160,0.08)', border: 'rgba(61,143,160,0.2)', featured: false, featuredType: null },
-                { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" /></svg>, title: 'Chargeback Tracking & Insights', body: 'Track every chargeback with full context: Reason Code, Dispute Status, Recommended Actions, Pattern Severity, Fraud Pattern, and Fraud Category.', color: 'rgb(125,107,160)', bg: 'rgba(125,107,160,0.08)', border: 'rgba(125,107,160,0.2)', featured: true, featuredType: null },
+                { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" /></svg>, title: 'Monitoring Dashboard', body: 'Volumes, Approval Rates and Chargebacks Breakdown - all in one live view with date-range filtering.', color: 'rgb(61,143,160)', bg: 'rgba(61,143,160,0.08)', border: 'rgba(61,143,160,0.2)', featured: false, featuredType: null },
+                { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" /></svg>, title: 'Chargeback Tracking & Insights', body: 'Track every chargeback with full context: Reason Code, Dispute Status and Pattern Severity.', color: 'rgb(125,107,160)', bg: 'rgba(125,107,160,0.08)', border: 'rgba(125,107,160,0.2)', featured: true, featuredType: null },
                 { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>, title: 'AI & Recommendations', body: 'Ranked recommended actions with fraud capture rate and false positive scores — so your team acts with confidence, not guesswork.', color: 'rgb(61,143,160)', bg: 'rgba(61,143,160,0.08)', border: 'rgba(61,143,160,0.2)', featured: false, featuredType: null },
                 { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" /></svg>, title: 'Fraud Pattern Detection', body: 'Run the Fraud Classifier to automatically analyze chargebacks and extract the exact rule patterns separating fraud from legitimate transactions.', color: 'rgb(125,107,160)', bg: 'rgba(125,107,160,0.08)', border: 'rgba(125,107,160,0.2)', featuredType: 'purple' },
                 { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>, title: 'Advanced Analytics', body: 'Visualize Fraud Breakdown by Dispute Reason, Risk Feature radar, Incoming Chargebacks by daily bucket, and Projected Chargeback cohorts.', color: 'rgb(61,143,160)', bg: 'rgba(61,143,160,0.08)', border: 'rgba(61,143,160,0.2)', featuredType: null },
@@ -343,27 +356,27 @@ export default function Home() {
             </Reveal>
 
             {/* Tab content */}
-            <div key={tabKey} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div key={tabKey} className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div className="anim-slideLeft delay-0">
-                <h3 className="text-[1.5rem] sm:text-[1.875rem] font-extrabold text-gray-900 tracking-[-0.02em] leading-snug mb-4">
+                <h3 className="text-[2rem] sm:text-[2.5rem] font-extrabold text-gray-900 tracking-[-0.02em] leading-snug mb-6">
                   {tabs[activeTab].title}
                 </h3>
-                <p className="text-[0.9375rem] text-gray-500 leading-[1.75] mb-6">
+                <p className="text-[1.125rem] text-gray-500 leading-[1.75] mb-8">
                   {tabs[activeTab].body}
                 </p>
-                <ul className="flex flex-col gap-2.5">
+                <ul className="flex flex-col gap-4">
                   {tabs[activeTab].bullets.map((b, i) => (
-                    <li key={b} className="flex items-center gap-2.5 anim-fadeUp"
+                    <li key={b} className="flex items-center gap-3 anim-fadeUp"
                       style={{ animationDelay: `${i * 60}ms` }}>
-                      <svg className="w-4 h-4 flex-shrink-0 text-[#5ba8b4]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-5 h-5 flex-shrink-0 text-[#5ba8b4]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
                       </svg>
-                      <span className="text-[0.9rem] text-gray-600">{b}</span>
+                      <span className="text-[1.0625rem] text-gray-600">{b}</span>
                     </li>
                   ))}
                 </ul>
               </div>
-              <div className="anim-slideRight delay-75">
+              <div className="anim-slideRight delay-75 scale-110">
                 {tabs[activeTab].visual}
               </div>
             </div>
@@ -373,8 +386,8 @@ export default function Home() {
         {/* ── CTA ── */}
         <section className="py-24 sm:py-32 px-5 sm:px-10 text-center">
           <Reveal animation="anim-scaleIn">
-            <div className="max-w-2xl mx-auto">
-              <h2 className="font-extrabold text-gray-900 text-[2rem] sm:text-[3rem] tracking-[-0.04em] leading-[1.05] mb-4">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="font-extrabold text-gray-900 text-[3rem] sm:text-[4rem] tracking-[-0.04em] leading-[1.05] mb-4">
                 See it working on
                 <br />
                 <span style={{
@@ -382,15 +395,14 @@ export default function Home() {
                   WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
                 }}>your own data.</span>
               </h2>
-              <p className="text-[1rem] leading-[1.75] max-w-[420px] mx-auto mb-8 text-gray-500">
+              <p className="text-[1.5rem] leading-[1.75] max-w-[620px] mx-auto mb-8 ">
                 Book a walkthrough and see how FraudPulse finds patterns in your transactions and hands you a prioritized action list.
               </p>
               <div className="flex flex-wrap gap-3 justify-center">
                 <Link href="/contact/"
-                  className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-[0.9375rem] font-bold text-white"
+                  className="inline-flex items-center gap-2 rounded-full px-10 py-4 text-[1.0625rem] font-bold text-white"
                   style={{
                     background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',
-                    boxShadow: '0 4px 24px rgba(91,168,180,0.4)',
                     transition: 'transform 0.2s cubic-bezier(0.22,1,0.36,1), box-shadow 0.2s cubic-bezier(0.22,1,0.36,1)',
                   }}
                   onMouseEnter={e => { (e.currentTarget as HTMLElement).style.transform = 'scale(1.03)'; }}
@@ -399,7 +411,7 @@ export default function Home() {
 
                 </Link>
                 <Link href="/pricing/"
-                  className="inline-flex items-center rounded-full px-8 py-3.5 text-[0.9375rem] font-semibold border"
+                  className="inline-flex items-center rounded-full px-10 py-4 text-[1.0625rem] font-semibold border"
                   style={{
                     borderColor: '#e5e7eb', color: '#6b7280',
                     transition: 'border-color 0.2s, color 0.2s',
