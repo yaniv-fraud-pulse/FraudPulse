@@ -226,18 +226,17 @@ export default function Home() {
               }}>Reduce Chargebacks</span>
             </h1>
 
-            <p className="text-[1.0625rem] leading-[1.75] mb-8 max-w-[540px] mx-auto text-gray-500 anim-fadeUp delay-300">
-              FraudPulse AI agents analyze your transactions, identify fraud patterns, and tell you exactly what rules to implement, With fraud capture rates and false positive scores.
+            <p className="text-[1.3625rem] leading-[1.75] mb-8 max-w-[640px] mx-auto  anim-fadeUp delay-300">
+            FraudPulse AI agent analyzes your transactions, detects fraud patterns, and delivers ready-to-implement actions, with fraud capture and false positive rates.
             </p>
 
             {/* CTA */}
             <div className="anim-fadeUp delay-400">
               <Link href="/contact/"
-                className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-[0.9375rem] font-bold text-white transition-all hover:scale-[1.03] hover:shadow-xl"
+                className="inline-flex items-center gap-2 rounded-full px-12 py-5 text-lg font-bold text-white transition-all hover:scale-[1.03]"
                 style={{
                   background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',
-                  boxShadow: '0 4px 24px rgba(91,168,180,0.4)',
-                  transition: 'transform 0.2s cubic-bezier(0.22,1,0.36,1), box-shadow 0.2s cubic-bezier(0.22,1,0.36,1)',
+                  transition: 'transform 0.2s cubic-bezier(0.22,1,0.36,1)',
                 }}>
                 Book a Demo
               </Link>
@@ -247,12 +246,9 @@ export default function Home() {
 
         {/* ── Core Capabilities ── */}
         <section className="py-20 sm:py-28 px-5 sm:px-10 bg-white">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <Reveal animation="anim-fadeUp">
-              <p className="text-center text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-3" style={{ color: 'rgb(123, 160, 168)' }}>
-                Core Capabilities
-              </p>
-              <h2 className="text-center font-extrabold text-gray-900 text-[1.875rem] sm:text-[2.5rem] tracking-[-0.03em] mb-12 max-w-2xl mx-auto leading-tight">
+              <h2 className="text-center font-extrabold text-gray-900 text-[2.7rem] sm:text-[3.1rem] tracking-[-0.03em] mb-12 max-w-3xl mx-auto leading-tight">
                 Everything You Need to{' '}
                 <span style={{
                   background: 'linear-gradient(135deg, rgb(125,107,160) 0%, rgb(125,107,160) 100%)',
@@ -262,23 +258,46 @@ export default function Home() {
             </Reveal>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {[
-                { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" /></svg>, title: 'Real-Time Dashboard', body: 'Monitor Total Volume, Approval Rate, Declined Transactions, Chargebacks, and Non-Fraud Chargebacks — all in one live view with date-range filtering.', color: 'rgb(61,143,160)', bg: 'rgba(61,143,160,0.08)', border: 'rgba(61,143,160,0.2)' },
-                { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" /></svg>, title: 'Chargeback Tracking & Insights', body: 'Track every chargeback with full context: Reason Code, Dispute Status, Recommended Actions, Pattern Severity, Fraud Pattern, and Fraud Category.', color: 'rgb(125,107,160)', bg: 'rgba(125,107,160,0.08)', border: 'rgba(125,107,160,0.2)' },
-                { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>, title: 'AI & Recommendations', body: 'Ranked recommended actions with fraud capture rate and false positive scores — so your team acts with confidence, not guesswork.', color: 'rgb(61,143,160)', bg: 'rgba(61,143,160,0.08)', border: 'rgba(61,143,160,0.2)' },
-                { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" /></svg>, title: 'Fraud Pattern Detection', body: 'Run the Fraud Classifier to automatically analyze chargebacks and extract the exact rule patterns separating fraud from legitimate transactions.', color: 'rgb(125,107,160)', bg: 'rgba(125,107,160,0.08)', border: 'rgba(125,107,160,0.2)' },
-                { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>, title: 'Advanced Analytics', body: 'Visualize Fraud Breakdown by Dispute Reason, Risk Feature radar, Incoming Chargebacks by daily bucket, and Projected Chargeback cohorts.', color: 'rgb(61,143,160)', bg: 'rgba(61,143,160,0.08)', border: 'rgba(61,143,160,0.2)' },
-                { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>, title: 'Clean & Validate Your Data', body: 'Built-in Data Sanity checks validate the quality of your transaction data before analysis begins — every insight built on reliable data.', color: 'rgb(125,107,160)', bg: 'rgba(125,107,160,0.08)', border: 'rgba(125,107,160,0.2)' },
-              ].map((cap, i) => (
+                { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" /></svg>, title: 'Monitoring Dashboard', body: 'Monitor Total Volume, Approval Rate, Declined Transactions, Chargebacks, and Non-Fraud Chargebacks — all in one live view with date-range filtering.', color: 'rgb(61,143,160)', bg: 'rgba(61,143,160,0.08)', border: 'rgba(61,143,160,0.2)', featured: false, featuredType: null },
+                { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" /></svg>, title: 'Chargeback Tracking & Insights', body: 'Track every chargeback with full context: Reason Code, Dispute Status, Recommended Actions, Pattern Severity, Fraud Pattern, and Fraud Category.', color: 'rgb(125,107,160)', bg: 'rgba(125,107,160,0.08)', border: 'rgba(125,107,160,0.2)', featured: true, featuredType: null },
+                { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>, title: 'AI & Recommendations', body: 'Ranked recommended actions with fraud capture rate and false positive scores — so your team acts with confidence, not guesswork.', color: 'rgb(61,143,160)', bg: 'rgba(61,143,160,0.08)', border: 'rgba(61,143,160,0.2)', featured: false, featuredType: null },
+                { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" /></svg>, title: 'Fraud Pattern Detection', body: 'Run the Fraud Classifier to automatically analyze chargebacks and extract the exact rule patterns separating fraud from legitimate transactions.', color: 'rgb(125,107,160)', bg: 'rgba(125,107,160,0.08)', border: 'rgba(125,107,160,0.2)', featuredType: 'purple' },
+                { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>, title: 'Advanced Analytics', body: 'Visualize Fraud Breakdown by Dispute Reason, Risk Feature radar, Incoming Chargebacks by daily bucket, and Projected Chargeback cohorts.', color: 'rgb(61,143,160)', bg: 'rgba(61,143,160,0.08)', border: 'rgba(61,143,160,0.2)', featuredType: null },
+                { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>, title: 'Clean & Validate Your Data', body: 'Built-in Data Sanity checks validate the quality of your transaction data before analysis begins — every insight built on reliable data.', color: 'rgb(125,107,160)', bg: 'rgba(125,107,160,0.08)', border: 'rgba(125,107,160,0.2)', featuredType: 'teal' },
+              ].map((cap, i) => {
+                const getBgClass = () => {
+                  if (cap.featured) return 'bg-gray-900';
+                  if (cap.featuredType === 'purple') return 'bg-[#7D6BA0]';
+                  if (cap.featuredType === 'teal') return 'bg-[#5ba8b4]';
+                  return 'bg-white';
+                };
+                const getTextColor = () => {
+                  if (cap.featured || cap.featuredType) return 'text-white';
+                  return 'text-gray-900';
+                };
+                const getBodyTextColor = () => {
+                  if (cap.featured || cap.featuredType) return 'text-white/90';
+                  return 'text-gray-600';
+                };
+                const getBorderColor = () => {
+                  if (cap.featured) return '#1f2937';
+                  if (cap.featuredType === 'purple') return '#7D6BA0';
+                  if (cap.featuredType === 'teal') return '#5ba8b4';
+                  return cap.border;
+                };
+                
+                return (
                 <Reveal key={cap.title} animation="anim-fadeUp" delay={([0, 75, 150, 0, 75, 150] as const)[i] ?? 0} className="h-full">
-                  <div className="rounded-2xl p-6 h-full flex flex-col bg-white"
-                    style={{ border: `1px solid ${cap.border}`, boxShadow: '0 2px 8px rgba(0,0,0,0.05)', transition: 'transform 0.25s cubic-bezier(0.22,1,0.36,1), box-shadow 0.25s cubic-bezier(0.22,1,0.36,1)' }}
+                  <div className={`rounded-2xl p-10 h-full flex flex-col ${getBgClass()}`}
+                    style={{ border: `1px solid ${getBorderColor()}`, boxShadow: '0 2px 8px rgba(0,0,0,0.05)', transition: 'transform 0.25s cubic-bezier(0.22,1,0.36,1), box-shadow 0.25s cubic-bezier(0.22,1,0.36,1)' }}
                     onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.transform = 'translateY(-6px)'; (e.currentTarget as HTMLDivElement).style.boxShadow = '0 16px 40px rgba(0,0,0,0.1)'; }}
                     onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.transform = 'none'; (e.currentTarget as HTMLDivElement).style.boxShadow = '0 2px 8px rgba(0,0,0,0.05)'; }}>
-                    <h3 className="font-bold text-[1.125rem] mb-3 tracking-[-0.02em] text-gray-900">{cap.title}</h3>
-                    <p className="text-[1rem] text-gray-600 ">{cap.body}</p>
+                    <h3 className={`font-bold text-[1.5rem] mb-5 tracking-[-0.02em] ${getTextColor()}`}>{cap.title}</h3>
+                    <p className={`text-[1.125rem] leading-relaxed ${getBodyTextColor()}`}>{cap.body}</p>
                   </div>
                 </Reveal>
-              ))}
+              );
+              })}
             </div>
           </div>
         </section>
@@ -294,10 +313,7 @@ export default function Home() {
           <div className="relative max-w-5xl mx-auto">
 
             <Reveal animation="anim-fadeUp">
-              <p className="text-center text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-3 text-[#5ba8b4]">
-                Platform Features
-              </p>
-              <h2 className="text-center font-extrabold text-gray-900 text-[2rem] sm:text-[2.5rem] tracking-[-0.03em] mb-10">
+              <h2 className="text-center font-extrabold text-gray-900 text-[2.7rem] sm:text-[3.1rem] tracking-[-0.03em] mb-10">
                 Everything in one platform.
               </h2>
             </Reveal>
