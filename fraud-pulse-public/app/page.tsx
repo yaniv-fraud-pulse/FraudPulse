@@ -125,7 +125,7 @@ const tabs = [
             <div className="text-[0.5rem] font-semibold text-gray-700 mb-2 leading-tight">Fraud Rate vs False Positive</div>
             <div className="relative h-16 border-l border-b border-gray-200">
               <div className="absolute bottom-[45%] left-[55%] w-2 h-2 rounded-full bg-[#5ba8b4]" />
-              <div className="absolute top-1 left-1/2 -translate-x-1/2 w-2.5 h-2.5 rounded-full bg-[#7D6BA0]" />
+              <div className="absolute bottom-1/3 left-1/5 -translate-x-1/2 w-2 h-2 rounded-full bg-[#7D6BA0]" />
               <div className="absolute bottom-0 left-0 text-[0.35rem] text-gray-400">0</div>
               <div className="absolute -left-3 top-0 text-[0.35rem] text-gray-400 -rotate-90 origin-center">FP%</div>
             </div>
@@ -340,7 +340,7 @@ export default function Home() {
                         }} />
                     ))}
                   </div>
-                  <div className="relative min-h-[200px] w-[850px]">
+                  <div className="relative min-h-[200px]">
                     {heroSteps.map((step, i) => (
                       <div key={i} className="absolute inset-0 transition-opacity duration-500"
                         style={{ 
@@ -359,7 +359,7 @@ export default function Home() {
                 </div>
 
                 {/* Right: Visual Demo */}
-                <div className="relative min-h-[300px] scale-125" style={{ transformOrigin: 'left top' }}>
+                <div className="relative min-h-[300px] scale-125 w-[550px]" style={{ transformOrigin: 'left top' }}>
                   {heroSteps.map((step, i) => (
                     <div key={i} className="absolute top-0 left-0 w-full transition-opacity duration-700"
                       style={{
