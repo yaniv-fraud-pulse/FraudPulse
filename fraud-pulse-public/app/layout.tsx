@@ -43,7 +43,7 @@ export default function RootLayout({
           gtag('config', '${GA_MEASUREMENT_ID}');
         `}
       </Script>
-      <body className="min-h-full flex flex-col bg-white pt-[84px]">{children}</body>
+      <body className="min-h-full flex flex-col bg-white pt-[84px] overflow-x-clip">{children}</body>
     </html>
   );
 }
