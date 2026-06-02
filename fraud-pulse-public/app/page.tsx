@@ -34,9 +34,9 @@ const tabs = [
     body: 'The AI Actions module generates specific fraud rules ranked by impact — each one showing estimated fraud capture rate and false positive percentage so your team acts with confidence, not guesswork.',
     bullets: ['AI Summary with risk level badge', 'Ranked rules with fraud rate & FP%', 'Key insights on blind spots', 'Full PDF report for your risk committee'],
     visual: (
-      <div className="rounded-2xl border bg-white p-5 w-full anim-float" style={{ borderColor: '#e5e7eb', boxShadow: '0 8px 32px rgba(0,0,0,0.08)' }}>
+      <div className="rounded-2xl border bg-white p-4 sm:p-5 w-full max-w-full min-w-0 anim-float overflow-hidden" style={{ borderColor: '#e5e7eb', boxShadow: '0 8px 32px rgba(0,0,0,0.08)' }}>
         <div className="flex items-center gap-2 mb-4">
-          <div className="w-2 h-2 rounded-full bg-emerald-400" style={{ boxShadow: '0 0 6px #34d399' }} />
+          <div className="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0" style={{ boxShadow: '0 0 6px #34d399' }} />
           <span className="text-xs font-semibold text-gray-400 uppercase tracking-widest">AI Recommendations</span>
         </div>
         {[
@@ -44,12 +44,16 @@ const tabs = [
           { rule: 'Flag orders from high-risk email domains', fraud: '63%', fp: '2.1%', rank: 2, delay: 200 },
           { rule: 'Review orders over $500 from high-risk countries', fraud: '41%', fp: '4.3%', rank: 3, delay: 300 },
         ].map((r) => (
-          <div key={r.rank} className="flex items-center gap-3 py-2.5 border-b last:border-0 anim-fadeUp"
+          <div key={r.rank} className="py-2.5 border-b last:border-0 anim-fadeUp"
             style={{ borderColor: '#f3f4f6', animationDelay: `${r.delay}ms` }}>
-            <span className="w-5 h-5 rounded-full flex items-center justify-center text-[0.65rem] font-bold bg-[#5ba8b4] text-white flex-shrink-0">{r.rank}</span>
-            <span className="text-xs text-gray-700 flex-1 leading-tight">{r.rule}</span>
-            <span className="text-xs font-bold text-[#5ba8b4] flex-shrink-0">{r.fraud}</span>
-            <span className="text-xs text-gray-400 flex-shrink-0">FP {r.fp}</span>
+            <div className="flex items-start gap-2 sm:gap-3">
+              <span className="w-5 h-5 rounded-full flex items-center justify-center text-[0.65rem] font-bold bg-[#5ba8b4] text-white flex-shrink-0 mt-0.5">{r.rank}</span>
+              <span className="text-xs text-gray-700 flex-1 min-w-0 leading-snug">{r.rule}</span>
+            </div>
+            <div className="flex items-center gap-3 mt-1 pl-7">
+              <span className="text-xs font-bold text-[#5ba8b4]">{r.fraud}</span>
+              <span className="text-xs text-gray-400">FP {r.fp}</span>
+            </div>
           </div>
         ))}
       </div>
@@ -66,7 +70,7 @@ const tabs = [
     body: 'Monitor approval rates, chargeback trends, and fraud exposure from a single real-time dashboard. Filter by date range, card brand, or billing country — always know exactly where you stand.',
     bullets: ['Total volume & approval rate', 'Fraud vs non-fraud breakdown', 'Chargeback trend charts', 'Projected chargeback cohorts'],
     visual: (
-      <div className="rounded-2xl border bg-[#f8f9fa] p-4 w-full anim-float" style={{ borderColor: '#e5e7eb', boxShadow: '0 8px 32px rgba(0,0,0,0.08)' }}>
+      <div className="rounded-2xl border bg-[#f8f9fa] p-4 sm:p-5 w-full max-w-full min-w-0 anim-float overflow-hidden" style={{ borderColor: '#e5e7eb', boxShadow: '0 8px 32px rgba(0,0,0,0.08)' }}>
         {/* Top KPI row */}
         <div className="grid grid-cols-3 gap-2 mb-2">
           <div className="rounded-xl bg-white p-2.5 border border-gray-100 anim-scaleIn" style={{ animationDelay: '0ms' }}>
@@ -102,7 +106,7 @@ const tabs = [
         </div>
 
         {/* Volume metrics row */}
-        <div className="grid grid-cols-4 gap-1.5 mb-2">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5 mb-2">
           {[
             { label: 'Total Volume', value: '$5.8M', sub: '26,448 txns' },
             { label: 'Total Approved', value: '$5.1M', sub: '87.4%' },
@@ -162,21 +166,23 @@ const tabs = [
     body: 'Every chargeback logged with full context — reason code, dispute status, fraud pattern, and category. Know exactly which cases need a response today.',
     bullets: ['Reason code & dispute status', 'Won / Lost / Needs Response tracking', 'Pattern severity scoring', 'Fraud category classification'],
     visual: (
-      <div className="rounded-2xl border bg-white p-5 w-full anim-float" style={{ borderColor: '#e5e7eb', boxShadow: '0 8px 32px rgba(0,0,0,0.08)' }}>
-        <div className="flex items-center gap-2 mb-4">
+      <div className="rounded-2xl border bg-white p-4 sm:p-5 w-full max-w-full min-w-0 anim-float overflow-hidden" style={{ borderColor: '#e5e7eb', boxShadow: '0 8px 32px rgba(0,0,0,0.08)' }}>
+        <div className="flex items-center gap-2 mb-4 flex-wrap">
           <span className="text-xs font-semibold text-gray-400 uppercase tracking-widest">Chargebacks</span>
-          <span className="ml-auto text-[0.65rem] font-semibold px-2 py-0.5 rounded-full bg-red-50 text-red-500">3 need response</span>
+          <span className="text-[0.65rem] font-semibold px-2 py-0.5 rounded-full bg-red-50 text-red-500 sm:ml-auto">3 need response</span>
         </div>
         {[
           { id: 'CB-1041', reason: '10.4 — Card Absent Fraud', status: 'Needs Response', color: 'text-red-500 bg-red-50', delay: 0 },
           { id: 'CB-1040', reason: '13.1 — Merchandise Not Received', status: 'Under Review', color: 'text-amber-600 bg-amber-50', delay: 100 },
           { id: 'CB-1039', reason: '10.5 — Visa Fraud Monitoring', status: 'Won', color: 'text-emerald-600 bg-emerald-50', delay: 200 },
         ].map((c) => (
-          <div key={c.id} className="flex items-center gap-3 py-2.5 border-b last:border-0 anim-fadeUp"
+          <div key={c.id} className="py-2.5 border-b last:border-0 anim-fadeUp"
             style={{ borderColor: '#f3f4f6', animationDelay: `${c.delay}ms` }}>
-            <span className="text-xs font-mono text-gray-400 flex-shrink-0">{c.id}</span>
-            <span className="text-xs text-gray-700 flex-1 leading-tight">{c.reason}</span>
-            <span className={`text-[0.65rem] font-semibold px-2 py-0.5 rounded-full flex-shrink-0 ${c.color}`}>{c.status}</span>
+            <div className="flex items-center gap-2 flex-wrap">
+              <span className="text-xs font-mono text-gray-400 flex-shrink-0">{c.id}</span>
+              <span className="text-xs text-gray-700 flex-1 min-w-0 leading-tight">{c.reason}</span>
+              <span className={`text-[0.65rem] font-semibold px-2 py-0.5 rounded-full flex-shrink-0 ${c.color}`}>{c.status}</span>
+            </div>
           </div>
         ))}
       </div>
@@ -193,7 +199,7 @@ const tabs = [
     body: 'Run the Fraud Classifier to automatically analyze chargebacks, assign categories, and surface the exact rule logic that separates fraud from legitimate transactions.',
     bullets: ['Automatic fraud categorization', 'Rule pattern extraction', 'Risk feature radar chart', 'Email & country fraud breakdown'],
     visual: (
-      <div className="rounded-2xl border bg-white p-5 w-full anim-float" style={{ borderColor: '#e5e7eb', boxShadow: '0 8px 32px rgba(0,0,0,0.08)' }}>
+      <div className="rounded-2xl border bg-white p-4 sm:p-5 w-full max-w-full min-w-0 anim-float overflow-hidden" style={{ borderColor: '#e5e7eb', boxShadow: '0 8px 32px rgba(0,0,0,0.08)' }}>
         <div className="flex items-center gap-2 mb-4">
           <span className="text-xs font-semibold text-gray-400 uppercase tracking-widest">Fraud Classifier</span>
         </div>
@@ -289,13 +295,13 @@ export default function Home() {
       <main className="flex-grow">
 
         {/* ── Hero ── */}
-        <section className="relative overflow-hidden px-5 sm:px-10 text-center flex items-center justify-center" style={{ minHeight: 'calc(100vh - 84px)' }}>
+        <section className="relative overflow-x-hidden lg:overflow-x-visible px-5 sm:px-10 text-center flex items-center justify-center" style={{ minHeight: 'calc(100vh - 84px)' }}>
           <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px]"
             style={{ background: 'radial-gradient(ellipse at 50% 0%, rgba(165,208,216,0.18) 0%, transparent 65%)' }} />
           <div className="pointer-events-none absolute bottom-0 right-0 w-[700px] h-[600px]"
             style={{ background: 'radial-gradient(ellipse at 80% 80%, rgba(125,107,160,0.22) 0%, transparent 70%)' }} />
 
-          <div className="relative max-w-6xl mx-auto py-20">
+          <div className="relative max-w-6xl mx-auto py-20 w-full">
 
 
             {/* Headline — each line staggers */}
@@ -325,11 +331,11 @@ export default function Home() {
             </div>
 
             {/* Process Flow Animation */}
-            <div className="mt-20 anim-fadeUp delay-500">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ">
+            <div className="mt-12 sm:mt-20 anim-fadeUp delay-500 w-full overflow-x-hidden lg:overflow-visible">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
                 {/* Left: Step Info */}
-                <div className="text-left">
-                  <div className="flex gap-2 mb-6" >
+                <div className="text-left w-full min-w-0">
+                  <div className="flex gap-2 mb-6 justify-center lg:justify-start">
                     {heroSteps.map((_, i) => (
                       <div key={i} className="transition-all duration-500"
                         style={{
@@ -340,17 +346,17 @@ export default function Home() {
                         }} />
                     ))}
                   </div>
-                  <div className="relative min-h-[200px]">
+                  <div className="relative min-h-[120px] sm:min-h-[160px] lg:min-h-[200px] text-center lg:text-left">
                     {heroSteps.map((step, i) => (
                       <div key={i} className="absolute inset-0 transition-opacity duration-500"
-                        style={{ 
+                        style={{
                           opacity: i === heroStep ? 1 : 0,
                           pointerEvents: i === heroStep ? 'auto' : 'none'
                         }}>
-                        <h3 className="text-3xl font-extrabold text-gray-900 mb-4 tracking-[-0.02em]">
+                        <h3 className="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-3 sm:mb-4 tracking-[-0.02em]">
                           {step.title}
                         </h3>
-                        <p className="text-xl text-gray-600">
+                        <p className="text-base sm:text-lg lg:text-xl text-gray-600">
                           {step.description}
                         </p>
                       </div>
@@ -359,7 +365,7 @@ export default function Home() {
                 </div>
 
                 {/* Right: Visual Demo */}
-                <div className="relative min-h-[300px] scale-125 w-[550px]" style={{ transformOrigin: 'left top' }}>
+                <div className="relative w-full min-w-0 min-h-[220px] sm:min-h-[260px] lg:min-h-[300px] lg:scale-[1.15] lg:origin-top-left lg:overflow-visible">
                   {heroSteps.map((step, i) => (
                     <div key={i} className="absolute top-0 left-0 w-full transition-opacity duration-700"
                       style={{
@@ -494,7 +500,7 @@ export default function Home() {
                   ))}
                 </ul>
               </div>
-              <div className="anim-slideRight delay-75 scale-110 self-start">
+              <div className="anim-slideRight delay-75 w-full min-w-0 max-w-full lg:scale-110 lg:self-start">
                 {tabs[activeTab].visual}
               </div>
             </div>
