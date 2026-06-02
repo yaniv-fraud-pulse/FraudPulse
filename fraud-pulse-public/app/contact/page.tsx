@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { Reveal } from '../components/Reveal';
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const API_ENDPOINT = 'https://fraudpulse-api-z67v4dmava-uc.a.run.app/api/v1/contact/demo';
+const API_ENDPOINT = 'https://fraudpulse-api-961740448824.us-central1.run.app/api/v1/contact/demo';
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', company_website: '', enquiry: '' });
