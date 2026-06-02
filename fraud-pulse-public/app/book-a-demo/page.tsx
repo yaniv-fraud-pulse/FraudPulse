@@ -3,7 +3,10 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Link from 'next/link';
+import Script from 'next/script';
 import { Reveal } from '../components/Reveal';
+
+const BOOK_A_DEMO_GA_ID = 'G-DJW8HBM574';
 
 const demoSteps = [
   { n: '1', text: 'Live walkthrough of the AI advisor surfacing patterns and recommendations.' },
@@ -14,6 +17,19 @@ const demoSteps = [
 
 export default function BookADemo() {
   return (
+    <>
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${BOOK_A_DEMO_GA_ID}`}
+        strategy="afterInteractive"
+      />
+      <Script id="book-a-demo-google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${BOOK_A_DEMO_GA_ID}');
+        `}
+      </Script>
     <div className="flex flex-col min-h-screen bg-white">
       <Header />
 
@@ -98,5 +114,6 @@ export default function BookADemo() {
 
       <Footer />
     </div>
+    </>
   );
 }

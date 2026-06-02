@@ -20,6 +20,7 @@ const plans = [
       { label: 'No monthly subscription',     included: true },
       { label: 'Chargeback ratio monitoring', included: true },
       { label: '2 user seats',                included: true },
+      { label: 'Payment Enrichment',          included: false },
       { label: 'Custom rules engine',         included: false },
       { label: 'API access',                  included: false },
       { label: 'Dedicated account manager',   included: false },

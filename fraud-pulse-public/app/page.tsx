@@ -21,33 +21,6 @@ function Reveal({ children, className = '', delay = 0, animation = 'anim-fadeUp'
   );
 }
 
-/* ── Animated counter ── */
-function Counter({ to, suffix = '' }: { to: number; suffix?: string }) {
-  const { ref, inView } = useInView();
-  const [val, setVal] = useState(0);
-  const started = useRef(false);
-
-  useEffect(() => {
-    if (!inView || started.current) return;
-    started.current = true;
-    const duration = 1200;
-    const step = 16;
-    const steps = duration / step;
-    let current = 0;
-    const inc = to / steps;
-    const timer = setInterval(() => {
-      current += inc;
-      if (current >= to) { setVal(to); clearInterval(timer); }
-      else setVal(Math.floor(current * 10) / 10);
-    }, step);
-  }, [inView, to]);
-
-  return (
-    <span ref={ref as React.RefObject<HTMLSpanElement>}>
-      {suffix === '%' ? `${val.toFixed(val >= 10 ? 1 : 1)}%` : val}{suffix !== '%' ? suffix : ''}
-    </span>
-  );
-}
 
 const tabs = [
   {
@@ -296,7 +269,7 @@ export default function Home() {
     {
       step: '03',
       title: 'Get Actionable Insights',
-      description: 'Receive ranked recommendations with fraud capture rates',
+      description: 'Get clear action items to prevent fraud',
       visual: tabs[0].visual, // AI Actions
       color: '#5ba8b4'
     },
@@ -336,7 +309,7 @@ export default function Home() {
             </h1>
 
             <p className="text-[1.3625rem] leading-[1.75] mb-8 max-w-[720px] mx-auto text-gray-600 anim-fadeUp delay-300">
-            FraudPulse AI agent analyzes your transactions, detects fraud patterns, and delivers ready-to-implement actions, with fraud capture and false positive rates.
+            FraudPulse AI agent analyzes your transactions, detects fraud patterns, and delivers ready-to-implement actions, with more captured fraud less false positives.
             </p>
 
             {/* CTA */}
@@ -353,12 +326,12 @@ export default function Home() {
 
             {/* Process Flow Animation */}
             <div className="mt-20 anim-fadeUp delay-500">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ">
                 {/* Left: Step Info */}
                 <div className="text-left">
-                  <div className="flex gap-2 mb-6">
+                  <div className="flex gap-2 mb-6" >
                     {heroSteps.map((_, i) => (
-                      <div key={i} className="transition-all duration-300"
+                      <div key={i} className="transition-all duration-500"
                         style={{
                           width: i === heroStep ? '32px' : '8px',
                           height: '8px',
@@ -367,7 +340,7 @@ export default function Home() {
                         }} />
                     ))}
                   </div>
-                  <div className="relative min-h-[200px]">
+                  <div className="relative min-h-[200px] w-[850px]">
                     {heroSteps.map((step, i) => (
                       <div key={i} className="absolute inset-0 transition-opacity duration-500"
                         style={{ 
@@ -386,13 +359,12 @@ export default function Home() {
                 </div>
 
                 {/* Right: Visual Demo */}
-                <div className="relative min-h-[300px] scale-125" style={{ transformOrigin: 'left center' }}>
+                <div className="relative min-h-[300px] scale-125" style={{ transformOrigin: 'left top' }}>
                   {heroSteps.map((step, i) => (
-                    <div key={i} className="absolute inset-0 transition-opacity duration-700"
-                      style={{ 
+                    <div key={i} className="absolute top-0 left-0 w-full transition-opacity duration-700"
+                      style={{
                         opacity: i === heroStep ? 1 : 0,
                         pointerEvents: i === heroStep ? 'auto' : 'none',
-                        transform: i === 0 ? 'scaleY(0.75)' : 'none'
                       }}>
                       {step.visual}
                     </div>
@@ -419,7 +391,7 @@ export default function Home() {
               {[
                 { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" /></svg>, title: 'Monitoring Dashboard', body: 'Volumes, Approval Rates and Chargebacks Breakdown - all in one live view with date-range filtering.', color: 'rgb(61,143,160)', bg: 'rgba(61,143,160,0.08)', border: 'rgba(61,143,160,0.2)', featured: false, featuredType: null },
                 { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" /></svg>, title: 'Chargeback Tracking & Insights', body: 'Track every chargeback with full context: Reason Code, Dispute Status and Pattern Severity.', color: 'rgb(125,107,160)', bg: 'rgba(125,107,160,0.08)', border: 'rgba(125,107,160,0.2)', featured: true, featuredType: null },
-                { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>, title: 'Fraud Prevention Actions', body: 'Ranked recommended actions with fraud capture rate and false positive scores — so your team acts with confidence, not guesswork.', color: 'rgb(61,143,160)', bg: 'rgba(61,143,160,0.08)', border: 'rgba(61,143,160,0.2)', featured: false, featuredType: null },
+                { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>, title: 'Fraud Prevention Actions', body: 'Clear and simple action items -Immediate improve of fraud and false positive rates, so your team could take confident and data-based decisions.', color: 'rgb(61,143,160)', bg: 'rgba(61,143,160,0.08)', border: 'rgba(61,143,160,0.2)', featured: false, featuredType: null },
                 { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" /></svg>, title: 'Fraud Pattern Detection', body: 'Run the Fraud Classifier to automatically analyze chargebacks and extract the exact rule patterns separating fraud from legitimate transactions.', color: 'rgb(125,107,160)', bg: 'rgba(125,107,160,0.08)', border: 'rgba(125,107,160,0.2)', featuredType: 'purple' },
                 { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>, title: 'Advanced Analytics', body: 'Visualize Fraud Breakdown by Dispute Reason, Risk Feature radar, Incoming Chargebacks by daily bucket, and Projected Chargeback cohorts.', color: 'rgb(61,143,160)', bg: 'rgba(61,143,160,0.08)', border: 'rgba(61,143,160,0.2)', featuredType: null },
                 { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>, title: 'Clean & Validate Your Data', body: 'Built-in Data Sanity checks validate the quality of your transaction data before analysis begins — every insight built on reliable data.', color: 'rgb(125,107,160)', bg: 'rgba(125,107,160,0.08)', border: 'rgba(125,107,160,0.2)', featuredType: 'teal' },
@@ -473,7 +445,7 @@ export default function Home() {
 
             <Reveal animation="anim-fadeUp">
               <h2 className="text-center font-extrabold text-gray-900 text-[2.7rem] sm:text-[3.1rem] tracking-[-0.03em] mb-10">
-                Everything in one platform.
+              All solutions in one place
               </h2>
             </Reveal>
 
@@ -502,7 +474,7 @@ export default function Home() {
             </Reveal>
 
             {/* Tab content */}
-            <div key={tabKey} className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div key={tabKey} className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
               <div className="anim-slideLeft delay-0">
                 <h3 className="text-[2rem] sm:text-[2.5rem] font-extrabold text-gray-900 tracking-[-0.02em] leading-snug mb-6">
                   {tabs[activeTab].title}
@@ -522,7 +494,7 @@ export default function Home() {
                   ))}
                 </ul>
               </div>
-              <div className="anim-slideRight delay-75 scale-110">
+              <div className="anim-slideRight delay-75 scale-110 self-start">
                 {tabs[activeTab].visual}
               </div>
             </div>
@@ -534,7 +506,7 @@ export default function Home() {
           <Reveal animation="anim-scaleIn">
             <div className="max-w-5xl mx-auto">
               <h2 className="font-extrabold text-gray-900 text-[3rem] sm:text-[4rem] tracking-[-0.04em] leading-[1.05] mb-4">
-                See it working on
+              See how it works on 
                 <br />
                 <span style={{
                   background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',

@@ -298,7 +298,7 @@ export default function About() {
                 Book a Demo
               </Link>
               <a
-                href="https://www.linkedin.com/in/idan-hayon/"
+                href="https://www.linkedin.com/company/fraudpulse-fraud-analytics"
                 target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full px-12 py-4.5 text-[1.125rem] font-semibold transition-all border hover:border-[#5ba8b4] hover:text-[#5ba8b4]"
                 style={{ borderColor: '#d1d5db', color: '#6b7280' }}>
