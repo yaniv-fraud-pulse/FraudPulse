@@ -53,13 +53,13 @@ export default function Header() {
 
           {/* Actions */}
           <div className="hidden md:flex md:items-center md:gap-3">
-            {/* <Link href="/contact/"
+            <Link href="https://app.fraud-pulse.com"
               className="px-5 py-2 text-base font-medium rounded-full border transition-all"
               style={{ color: '#111827', borderColor: 'transparent', transition: 'all 0.2s cubic-bezier(0.22,1,0.36,1)' }}
               onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'rgb(61,143,160)'; e.currentTarget.style.background = 'rgb(61,143,160)'; e.currentTarget.style.color = 'white'; }}
               onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'transparent'; e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#111827'; }}>
               Sign In
-            </Link> */}
+            </Link>
             <Link href="/book-a-demo/"
               className="px-5 py-2 text-base font-bold rounded-full text-white transition-all hover:scale-[1.03]"
               style={{
