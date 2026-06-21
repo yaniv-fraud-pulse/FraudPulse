@@ -32,6 +32,10 @@ export default function RootLayout({
       className={`${geistMono.variable} h-full antialiased`}
     >
       <Script
+        src="https://t.contentsquare.net/uxa/b7d43a35c59b2.js"
+        strategy="beforeInteractive"
+      />
+      <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
         strategy="afterInteractive"
       />
