@@ -36,10 +36,11 @@ export default function Header() {
           {/* Desktop nav */}
           <div className="hidden md:flex md:items-center md:gap-1">
             {[
-              { href: '/',          label: 'Home' },
-              { href: '/solutions/', label: 'Solutions' },
-              { href: '/pricing/',  label: 'Pricing' },
-              { href: '/about/',    label: 'About Us' },
+              { href: '/',               label: 'Home' },
+              { href: '/solutions/',     label: 'Solutions' },
+              { href: '/how-it-works/',  label: 'How It Works' },
+              { href: '/pricing/',       label: 'Pricing' },
+              { href: '/about/',         label: 'About Us' },
             ].map(({ href, label }) => (
               <Link key={href} href={href}
                 className="px-4 py-2 text-base font-medium rounded-lg transition-colors"
@@ -90,11 +91,12 @@ export default function Header() {
           <div className="md:hidden border-t" style={{ borderColor: '#e5e7eb' }}>
             <div className="flex flex-col py-1">
               {[
-                { href: '/',            label: 'Home' },
-                { href: '/solutions/',  label: 'Solutions' },
-                { href: '/pricing/',    label: 'Pricing' },
-                { href: '/about/',      label: 'About Us' },
-                { href: '/contact/',    label: 'Sign In' },
+                { href: '/',               label: 'Home' },
+                { href: '/solutions/',     label: 'Solutions' },
+                { href: '/how-it-works/',  label: 'How It Works' },
+                { href: '/pricing/',       label: 'Pricing' },
+                { href: '/about/',         label: 'About Us' },
+                { href: '/contact/',       label: 'Sign In' },
               ].map(({ href, label }) => (
                 <Link key={href} href={href}
                   className="px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-50"
