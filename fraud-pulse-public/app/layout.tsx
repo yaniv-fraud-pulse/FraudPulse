@@ -31,23 +31,25 @@ export default function RootLayout({
       lang="en"
       className={`${geistMono.variable} h-full antialiased`}
     >
-      <Script
-        src="https://t.contentsquare.net/uxa/b7d43a35c59b2.js"
-        strategy="beforeInteractive"
-      />
-      <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${GA_MEASUREMENT_ID}');
-        `}
-      </Script>
-      <body className="min-h-full flex flex-col bg-white pt-[84px] overflow-x-clip">{children}</body>
+      <body className="min-h-full flex flex-col bg-white pt-[84px] overflow-x-clip">
+        {children}
+        <Script
+          src="https://t.contentsquare.net/uxa/b7d43a35c59b2.js"
+          strategy="afterInteractive"
+        />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
+      </body>
     </html>
   );
 }

@@ -60,10 +60,12 @@ export default function HowItWorks() {
                   aspectRatio: '16 / 9',
                 }}
               >
+                
                 <iframe
-                  src="https://embed.app.guidde.com/playbooks/nCQR61BXRRS2S45ZaZbXMi?mode=videoOnly"
+                  src="https://embed.app.guidde.com/playbooks/nCQR61BXRRS2S45ZaZbXMi?mode=videoOnly&autoplay=true"
                   title="How FraudPulse Works"
                   allow="fullscreen"
+                 
                   allowFullScreen
                   className="w-full h-full border-0"
                 />
