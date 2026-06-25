@@ -78,8 +78,8 @@ const tabs = [
               </div>
               <span className="text-[0.55rem] font-medium text-gray-500">Potential Savings</span>
             </div>
-            <div className="text-sm font-bold text-emerald-600">$67,124</div>
-            <div className="text-[0.5rem] text-gray-400 mt-0.5">100% coverage</div>
+            <div className="text-sm font-bold text-emerald-600">$54,872</div>
+            <div className="text-[0.5rem] text-gray-400 mt-0.5">47.8% coverage</div>
           </div>
           <div className="rounded-xl bg-white p-2.5 border border-gray-100 anim-scaleIn" style={{ animationDelay: '80ms' }}>
             <div className="flex items-center gap-1 mb-1">
@@ -88,8 +88,8 @@ const tabs = [
               </div>
               <span className="text-[0.55rem] font-medium text-gray-500">Fraud Loss</span>
             </div>
-            <div className="text-sm font-bold text-red-500">$67,124</div>
-            <div className="text-[0.5rem] text-gray-400 mt-0.5">165 fraud CBs</div>
+            <div className="text-sm font-bold text-red-500">$114,699</div>
+            <div className="text-[0.5rem] text-gray-400 mt-0.5">343 fraud chargebacks</div>
           </div>
           <div className="rounded-xl bg-white p-2.5 border border-gray-100 anim-scaleIn" style={{ animationDelay: '160ms' }}>
             <div className="flex items-center gap-1 mb-1">
@@ -98,7 +98,7 @@ const tabs = [
               </div>
               <span className="text-[0.55rem] font-medium text-gray-500">Actions</span>
             </div>
-            <div className="text-sm font-bold text-[#5ba8b4]">10</div>
+            <div className="text-sm font-bold text-[#5ba8b4]">5</div>
             <div className="text-[0.5rem] text-[#5ba8b4] mt-0.5">Rules to implement</div>
           </div>
         </div>
@@ -106,10 +106,10 @@ const tabs = [
         {/* Volume metrics row */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5 mb-2">
           {[
-            { label: 'Total Volume', value: '$5.8M', sub: '26,448 txns' },
-            { label: 'Total Approved', value: '$5.1M', sub: '87.4%' },
-            { label: 'Chargebacks', value: '$191K', sub: '483 CBs', accent: true },
-            { label: 'Declined', value: '$717K', sub: '3,327' },
+            { label: 'Total Volume', value: '$27.1M', sub: '281K transactions' },
+            { label: 'Total Approved', value: '$22.05K', sub: '84.9%' },
+            { label: 'Chargebacks', value: '$464K', sub: '483 CBs', accent: true },
+            { label: 'Declined', value: '$4.09M', sub: '3,327' },
           ].map((m, i) => (
             <div key={m.label} className="rounded-lg bg-white px-2 py-1.5 border border-gray-100 anim-scaleIn"
               style={{ animationDelay: `${i * 60 + 200}ms`, borderTop: m.accent ? '2px solid #374151' : undefined }}>
