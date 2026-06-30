@@ -22,6 +22,31 @@ function Reveal({ children, className = '', delay = 0, animation = 'anim-fadeUp'
 }
 
 
+const applyActionsVisual = (
+  <div className="rounded-2xl border bg-white p-4 sm:p-5 w-full max-w-full min-w-0 anim-float overflow-hidden text-left" style={{ borderColor: '#e5e7eb', boxShadow: '0 8px 32px rgba(0,0,0,0.08)' }}>
+    <div className="flex items-center gap-2 mb-4">
+      <div className="w-2 h-2 rounded-full bg-[#5ba8b4] flex-shrink-0" style={{ boxShadow: '0 0 6px rgba(91,168,180,0.6)' }} />
+      <span className="text-xs font-semibold text-gray-400 uppercase tracking-widest">Apply in Your Stack</span>
+    </div>
+    {[
+      { name: 'Shopify Protect', slug: 'shopify', color: '95BF47', rule: 'Tighten high-risk country rules', delay: 0 },
+      { name: 'Stripe Radar', slug: 'stripe', color: '635BFF', rule: 'Block cards with prior chargebacks', delay: 100 },
+    ].map(({ name, slug, color, rule, delay }) => (
+      <div key={name} className="py-3 border-b last:border-0 anim-fadeUp" style={{ borderColor: '#f3f4f6', animationDelay: `${delay}ms` }}>
+        <div className="flex items-center gap-3 mb-2">
+          <div className="w-8 h-8 rounded-lg bg-gray-50 border border-gray-100 flex items-center justify-center flex-shrink-0">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={`https://cdn.simpleicons.org/${slug}/${color}`} alt="" width={18} height={18} className="object-contain" />
+          </div>
+          <span className="text-xs font-semibold text-gray-800">{name}</span>
+          <span className="text-[0.65rem] font-semibold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-600 ml-auto">Ready to apply</span>
+        </div>
+        <p className="text-xs text-gray-500 pl-11">{rule}</p>
+      </div>
+    ))}
+  </div>
+);
+
 const tabs = [
   {
     label: 'AI Actions',
@@ -220,6 +245,61 @@ const tabs = [
       </div>
     ),
   },
+  {
+    label: 'Shopify & Stripe',
+    icon: (
+      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
+    ),
+    title: 'Apply recommendations in Shopify Protect and Stripe Radar.',
+    body: 'FraudPulse doesn\'t replace your fraud tools — it tells you exactly how to tune Shopify Protect and Stripe Radar so you capture more fraud with fewer false positives.',
+    bullets: [
+      'Apply ranked rules in Shopify Protect',
+      'Apply ranked rules in Stripe Radar',
+      'No rip and replace — keep your existing stack',
+      'Turn insights into live fraud settings',
+    ],
+    visual: applyActionsVisual,
+  },
+];
+
+const heroSteps = [
+  {
+    step: '01',
+    title: 'Connect Your Data',
+    description: 'Connect your transaction and chargeback data via API, CSV upload, or native integrations',
+    visual: tabs[1].visual,
+    color: '#5ba8b4',
+  },
+  {
+    step: '02',
+    title: 'AI Analysis',
+    description: 'Our AI analyzes patterns and identifies fraud signals',
+    visual: tabs[3].visual,
+    color: '#7D6BA0',
+  },
+  {
+    step: '03',
+    title: 'Get Actionable Insights',
+    description: 'Get clear action items to prevent fraud',
+    visual: tabs[0].visual,
+    color: '#5ba8b4',
+  },
+  {
+    step: '04',
+    title: 'Apply in Shopify & Stripe',
+    description: 'Turn ranked recommendations into live rules in Shopify Protect and Stripe Radar',
+    visual: tabs[4].visual,
+    color: '#5ba8b4',
+  },
+  {
+    step: '05',
+    title: 'Save Money',
+    description: 'Reduce chargebacks and increase approval rates',
+    visual: tabs[2].visual,
+    color: '#7D6BA0',
+  },
 ];
 
 
@@ -249,42 +329,11 @@ export default function Home() {
   // Auto-rotate hero steps every 4 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setHeroStep(prev => (prev + 1) % 4);
+      setHeroStep(prev => (prev + 1) % heroSteps.length);
     }, 4000);
 
     return () => clearInterval(interval);
   }, []);
-
-  const heroSteps = [
-    {
-      step: '01',
-      title: 'Connect Your Data',
-      description: 'Connect your transaction and chargeback data via API, CSV upload, or native integrations',
-      visual: tabs[1].visual, // Dashboard
-      color: '#5ba8b4'
-    },
-    {
-      step: '02',
-      title: 'AI Analysis',
-      description: 'Our AI analyzes patterns and identifies fraud signals',
-      visual: tabs[3].visual, // Fraud Patterns
-      color: '#7D6BA0'
-    },
-    {
-      step: '03',
-      title: 'Get Actionable Insights',
-      description: 'Get clear action items to prevent fraud',
-      visual: tabs[0].visual, // AI Actions
-      color: '#5ba8b4'
-    },
-    {
-      step: '04',
-      title: 'Save Money',
-      description: 'Reduce chargebacks and increase approval rates',
-      visual: tabs[2].visual, // Chargebacks
-      color: '#7D6BA0'
-    },
-  ];
 
   return (
     <div className="flex flex-col min-h-screen bg-white overflow-x-clip">
@@ -378,6 +427,65 @@ export default function Home() {
             </div>
           </div>
         </section>
+                {/* ── Works with Shopify Protect & Stripe Radar ── */}
+                <section
+          className="py-20 sm:py-28 px-5 sm:px-10 text-white"
+          style={{ background: 'linear-gradient(180deg, #0a0c10 0%, #111827 50%, #0f1419 100%)' }}
+        >
+          <div className="max-w-3xl mx-auto text-center">
+            <Reveal animation="anim-fadeUp">
+              <p className="text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-5 text-[#5ba8b4]">
+                Works with your stack
+              </p>
+              <h2 className="font-extrabold tracking-[-0.03em] text-[2rem] sm:text-[2.75rem] leading-[1.15] mb-6">
+                We&apos;re not here to replace your fraud tools.
+                <br />
+                <span className="text-gray-400 font-bold text-[1.375rem] sm:text-[1.625rem]">
+                  We&apos;re here to help you run them better.
+                </span>
+              </h2>
+              <p className="text-[1.0625rem] sm:text-[1.125rem] leading-[1.75] text-gray-400 mb-8">
+                <span className="font-bold text-white">Shopify Protect</span> and{' '}
+                <span className="font-bold text-white">Stripe Radar</span> block transactions. FraudPulse tells you how to make them work even better — no rip and replace, no migration risk.
+              </p>
+            </Reveal>
+
+            <Reveal animation="anim-fadeUp" delay={150}>
+              <div className="flex flex-wrap justify-center gap-4 mb-10">
+                {[
+                  { name: 'Shopify Protect', slug: 'shopify', color: '95BF47' },
+                  { name: 'Stripe Radar', slug: 'stripe', color: '635BFF' },
+                ].map(({ name, slug, color }) => (
+                  <div
+                    key={name}
+                    className="flex items-center gap-3 rounded-[14px] px-5 py-3.5 border"
+                    style={{ background: 'rgba(255,255,255,0.04)', borderColor: 'rgba(75,85,99,0.4)' }}
+                  >
+                    <div className="w-9 h-9 rounded-[10px] bg-white/5 border border-white/10 flex items-center justify-center">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={`https://cdn.simpleicons.org/${slug}/${color}`} alt="" width={20} height={20} className="object-contain" />
+                    </div>
+                    <span className="text-[0.875rem] font-semibold text-white">{name}</span>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+
+            <Reveal animation="anim-fadeUp" delay={225}>
+              <Link
+                href="/how-it-works/"
+                className="inline-flex items-center gap-2 rounded-full px-12 py-4.5 text-[1.125rem] font-bold text-white transition-all hover:scale-[1.03]"
+                style={{
+                  background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',
+                  boxShadow: '0 4px 24px rgba(91,168,180,0.35)',
+                  transition: 'transform 0.2s cubic-bezier(0.22,1,0.36,1)',
+                }}
+              >
+                See How It Works
+              </Link>
+            </Reveal>
+          </div>
+        </section>
 
         {/* ── Core Capabilities ── */}
         <section className="py-20 sm:py-28 px-5 sm:px-10 bg-white">
@@ -436,6 +544,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+
 
         {/* ── Tabs section ── */}
         <section className="relative py-20 sm:py-28 px-5 sm:px-10 overflow-hidden" style={{ background: 'rgba(125,107,160,0.08)', borderTop: '1px solid #f3f4f6', borderBottom: '1px solid #f3f4f6' }}>

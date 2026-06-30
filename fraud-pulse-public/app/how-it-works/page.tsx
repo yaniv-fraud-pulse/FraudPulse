@@ -3,6 +3,7 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Reveal } from '../components/Reveal';
 
 export default function HowItWorks() {
@@ -13,7 +14,7 @@ export default function HowItWorks() {
       <main className="flex-grow">
 
         {/* ── Hero ── */}
-        <section className="relative overflow-hidden pt-8 pb-0 px-5 sm:px-10 bg-white">
+        <section className="relative overflow-hidden pt-8 pb-12 sm:pb-16 px-5 sm:px-10 bg-white">
           <div className="pointer-events-none absolute inset-0 opacity-[0.06]" style={{
             backgroundImage: 'linear-gradient(rgba(165,208,216,0.8) 1px,transparent 1px),linear-gradient(90deg,rgba(165,208,216,0.8) 1px,transparent 1px)',
             backgroundSize: '64px 64px',
@@ -23,11 +24,6 @@ export default function HowItWorks() {
 
           <div className="relative max-w-7xl mx-auto py-16 sm:py-24">
             <div className="max-w-[860px] mx-auto text-center">
-              <Reveal animation="anim-fadeUp" delay={0}>
-                <p className="text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-4 text-[#5ba8b4]">
-                  How It Works
-                </p>
-              </Reveal>
               <Reveal animation="anim-fadeUp" delay={75}>
                 <h1 className="font-extrabold text-gray-900 tracking-[-0.04em] leading-[1.1] mb-5 text-[3rem] sm:text-[4rem] lg:text-[4.5rem]">
                   From Data to{' '}
@@ -41,8 +37,87 @@ export default function HowItWorks() {
               </Reveal>
               <Reveal animation="anim-fadeUp" delay={150}>
                 <p className="text-[1.25rem] sm:text-[1.5rem] leading-[1.75] max-w-[680px] mx-auto text-gray-500">
-                  Watch how FraudPulse connects to your payment data, runs AI analysis, and delivers ready-to-implement fraud rules in minutes.
+                  Make the tools you already pay for work harder
                 </p>
+              </Reveal>
+
+              {/* FraudPulse → Shopify Protect & Stripe Radar */}
+              <Reveal animation="anim-fadeUp" delay={225}>
+                <div className="mt-12 sm:mt-16 max-w-xl mx-auto">
+                  <div
+                    className="mx-auto flex flex-col items-center gap-3 rounded-[16px] px-8 py-6 border w-[220px] anim-glowPulse"
+                    style={{
+                      background: 'linear-gradient(135deg, rgba(91,168,180,0.12) 0%, rgba(91,168,180,0.04) 100%)',
+                      borderColor: 'rgba(91,168,180,0.45)',
+                      boxShadow: '0 8px 32px rgba(91,168,180,0.12)',
+                    }}
+                  >
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center p-2.5 bg-white border border-[#5ba8b4]/25">
+                      <Image
+                        src="/logo-light.svg"
+                        alt="FraudPulse"
+                        width={28}
+                        height={28}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <span className="text-[0.9375rem] font-bold text-gray-900">FraudPulse</span>
+                    <span className="text-[0.7rem] text-[#5ba8b4] uppercase tracking-wider font-semibold">Insights out</span>
+                  </div>
+
+                  <svg
+                    className="w-full h-[72px] sm:h-[80px] -mt-1"
+                    viewBox="0 0 400 80"
+                    fill="none"
+                    aria-hidden
+                  >
+                    <defs>
+                      <linearGradient id="flowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stopColor="#5ba8b4" stopOpacity="0" />
+                        <stop offset="50%" stopColor="#5ba8b4" stopOpacity="1" />
+                        <stop offset="100%" stopColor="#5ba8b4" stopOpacity="0" />
+                      </linearGradient>
+                    </defs>
+                    <path className="flow-path-split" d="M200 4 L200 28 L72 76" />
+                    <path className="flow-path-split" d="M200 4 L200 28 L328 76" />
+                    <path className="flow-path-split-animated" d="M200 4 L200 28 L72 76" />
+                    <path className="flow-path-split-animated" d="M200 4 L200 28 L328 76" style={{ animationDelay: '0.9s' }} />
+                  </svg>
+
+                  <div className="grid grid-cols-2 gap-4 sm:gap-8 -mt-1">
+                    <div className="flex flex-col items-center gap-2">
+                      <svg className="w-5 h-5 text-[#5ba8b4] anim-arrowBounceDown" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                      </svg>
+                      <div
+                        className="flex flex-col items-center gap-2.5 rounded-[14px] px-4 py-5 border w-full bg-white card-hover"
+                        style={{ borderColor: '#e5e7eb', boxShadow: '0 4px 20px rgba(0,0,0,0.06)' }}
+                      >
+                        <div className="w-10 h-10 rounded-[10px] bg-gray-50 border border-gray-100 flex items-center justify-center">
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img src="https://cdn.simpleicons.org/shopify/95BF47" alt="" width={22} height={22} className="object-contain" />
+                        </div>
+                        <span className="text-[0.8125rem] sm:text-[0.875rem] font-semibold text-gray-800 text-center leading-tight">Shopify Protect</span>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-col items-center gap-2">
+                      <svg className="w-5 h-5 text-[#5ba8b4] anim-arrowBounceDown" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden style={{ animationDelay: '0.7s' }}>
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                      </svg>
+                      <div
+                        className="flex flex-col items-center gap-2.5 rounded-[14px] px-4 py-5 border w-full bg-white card-hover"
+                        style={{ borderColor: '#e5e7eb', boxShadow: '0 4px 20px rgba(0,0,0,0.06)' }}
+                      >
+                        <div className="w-10 h-10 rounded-[10px] bg-gray-50 border border-gray-100 flex items-center justify-center">
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img src="https://cdn.simpleicons.org/stripe/635BFF" alt="" width={22} height={22} className="object-contain" />
+                        </div>
+                        <span className="text-[0.8125rem] sm:text-[0.875rem] font-semibold text-gray-800 text-center leading-tight">Stripe Radar</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </Reveal>
             </div>
           </div>
@@ -51,6 +126,11 @@ export default function HowItWorks() {
         {/* ── Video embed ── */}
         <section className="py-12 sm:py-20 px-5 sm:px-10 bg-white">
           <div className="max-w-5xl mx-auto">
+          <Reveal animation="anim-fadeUp" delay={150} className="text-center mb-8">
+                <p className="text-[1.25rem] sm:text-[1.5rem] leading-[1.75] max-w-[680px] mx-auto text-gray-500">
+                  Watch how FraudPulse connects to your payment data, runs AI analysis, and delivers ready-to-implement fraud rules in minutes.
+                </p>
+              </Reveal>
             <Reveal animation="anim-scaleIn" delay={0}>
               <div
                 className="w-full rounded-[20px] overflow-hidden border"
@@ -69,6 +149,41 @@ export default function HowItWorks() {
                   allowFullScreen
                   className="w-full h-full border-0"
                 />
+              </div>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* ── Works with Shopify Protect & Stripe Radar ── */}
+        <section
+          className="py-16 sm:py-24 px-5 sm:px-10 text-white"
+          style={{ background: 'linear-gradient(180deg, #0a0c10 0%, #111827 50%, #0f1419 100%)' }}
+        >
+          <div className="max-w-3xl mx-auto space-y-12 sm:space-y-16 text-center">
+            <Reveal animation="anim-fadeUp" delay={0}>
+              <div>
+                <p className="flex items-center justify-center gap-2.5 text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-5 text-[#5ba8b4]">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#5ba8b4] shrink-0" aria-hidden />
+                  What we are
+                </p>
+                <p className="font-bold text-white text-[2.375rem] sm:text-[2.625rem] leading-[1.45] tracking-[-0.02em] mb-4">
+                  <span className="font-extrabold">Shopify Protect</span> and <span className="font-extrabold">Stripe Radar</span> block transactions.
+                </p>
+                <p className="text-[1.625rem] sm:text-[1.625rem] leading-[1.7] text-gray-400">
+                  FraudPulse tells you how to make them work even better.
+                </p>
+              </div>
+            </Reveal>
+
+            <Reveal animation="anim-fadeUp" delay={150}>
+              <div>
+                <p className="flex items-center justify-center gap-2.5 text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-5 text-gray-500">
+                  <span className="w-2.5 h-2.5 rounded-full border border-gray-500 shrink-0" aria-hidden />
+                  What we&apos;re not
+                </p>
+                <p className="font-bold text-white text-[1.375rem] sm:text-[1.625rem] leading-[1.45] tracking-[-0.02em]">
+                  We&apos;re not here to replace your fraud tools.
+                </p>
               </div>
             </Reveal>
           </div>
@@ -105,7 +220,13 @@ export default function HowItWorks() {
                 {
                   step: '04',
                   title: 'Get AI Recommendations',
-                  description: 'Receive ranked fraud rules with fraud capture rates and false positive scores so your team acts with confidence.',
+                  description: (
+                    <>
+                      Receive ranked fraud rules with fraud capture rates and false positive scores so your team acts with confidence. Apply recommendations directly in{' '}
+                      <span className="font-bold text-white">Shopify Protect</span> and{' '}
+                      <span className="font-bold text-white">Stripe Radar</span>.
+                    </>
+                  ),
                   color: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',
                 },
               ].map(({ step, title, description, color }, i) => (
