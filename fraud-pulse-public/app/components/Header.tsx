@@ -40,6 +40,7 @@ export default function Header() {
               { href: '/solutions/',     label: 'Solutions' },
               { href: '/how-it-works/',  label: 'How It Works' },
               { href: '/pricing/',       label: 'Pricing' },
+              { href: '/blog/',          label: 'Blog' },
               { href: '/about/',         label: 'About Us' },
             ].map(({ href, label }) => (
               <Link key={href} href={href}
@@ -95,6 +96,7 @@ export default function Header() {
                 { href: '/solutions/',     label: 'Solutions' },
                 { href: '/how-it-works/',  label: 'How It Works' },
                 { href: '/pricing/',       label: 'Pricing' },
+                { href: '/blog/',          label: 'Blog' },
                 { href: '/about/',         label: 'About Us' },
                 { href: '/contact/',       label: 'Sign In' },
               ].map(({ href, label }) => (

@@ -279,6 +279,77 @@ html {
   animation: barGrow 0.7s cubic-bezier(0.22,1,0.36,1) both;
 }
 
+/* ── Blog article body ── */
+.blog-body {
+  color: #374151;
+  font-size: 1.0625rem;
+  line-height: 1.8;
+}
+.blog-body p {
+  margin-bottom: 1.5em;
+}
+.blog-body h2 {
+  font-size: 1.625rem;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+  margin-top: 2.5em;
+  margin-bottom: 0.75em;
+}
+.blog-body h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  letter-spacing: -0.02em;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+.blog-body ul,
+.blog-body ol {
+  margin-bottom: 1.5em;
+  padding-left: 1.5em;
+}
+.blog-body ul li {
+  list-style-type: disc;
+  margin-bottom: 0.5em;
+  padding-left: 0.25em;
+}
+.blog-body ol li {
+  list-style-type: decimal;
+  margin-bottom: 0.5em;
+  padding-left: 0.25em;
+}
+.blog-body ul li::marker,
+.blog-body ol li::marker {
+  color: #5ba8b4;
+}
+.blog-body blockquote {
+  border-left: 3px solid #5ba8b4;
+  padding: 1rem 1.25rem;
+  margin: 2em 0;
+  background: rgba(91,168,180,0.06);
+  border-radius: 0 8px 8px 0;
+  color: #4b5563;
+  font-style: italic;
+  font-size: 1.125rem;
+}
+.blog-body strong {
+  font-weight: 700;
+  color: #111827;
+}
+.blog-body a {
+  color: #4a96a3;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(74,150,163,0.35);
+  transition: text-decoration-color 0.2s;
+}
+.blog-body a:hover {
+  text-decoration-color: #4a96a3;
+}
+
 /* Section rounded corners */
 .rounded-section {
   border-radius: 2rem;
