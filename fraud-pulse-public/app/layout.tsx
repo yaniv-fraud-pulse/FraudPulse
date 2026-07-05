@@ -11,9 +11,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "FraudPulse - AI-Powered Fraud Intelligence Platform",
-  description: "FraudPulse analyzes your transaction data, identifies fraud patterns, and generates AI-powered action items to help reduce fraud and improve approval rates.",
-  keywords: "fraud detection, AI fraud prevention, chargeback monitoring, transaction analytics, fraud intelligence",
+  title: "FraudPulse — Reduce Chargebacks & Increase Approvals in Stripe & Shopify",
+  description: "FraudPulse tells you exactly which fraud rules to change in Stripe & Shopify to reduce chargebacks and increase approvals. Get actionable fraud insights in days — not dashboards you never use.",
+  keywords: "reduce chargebacks, increase approval rate, Stripe Radar optimization, Shopify Protect optimization, fraud rule changes, chargeback reduction, false decline reduction, fraud intelligence platform",
+  openGraph: {
+    title: "FraudPulse — Reduce Chargebacks & Increase Approvals in Stripe & Shopify",
+    description: "FraudPulse tells you exactly which fraud rules to change in Stripe & Shopify to reduce chargebacks and increase approvals. Get actionable fraud insights in days.",
+    url: "https://fraudpulse.io",
+    siteName: "FraudPulse",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FraudPulse — Reduce Chargebacks & Increase Approvals in Stripe & Shopify",
+    description: "FraudPulse tells you exactly which fraud rules to change in Stripe & Shopify to reduce chargebacks and increase approvals.",
+  },
   icons: {
     icon: "/logo-light.svg",
     shortcut: "/logo-light.svg",

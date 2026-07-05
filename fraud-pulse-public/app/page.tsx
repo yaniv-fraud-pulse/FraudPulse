@@ -267,38 +267,31 @@ const tabs = [
 const heroSteps = [
   {
     step: '01',
-    title: 'Connect Your Data',
-    description: 'Connect your transaction and chargeback data via API, CSV upload, or native integrations',
+    title: 'Connect Stripe / Shopify',
+    description: 'Connect your Stripe or Shopify store in minutes — no engineering work required',
     visual: tabs[1].visual,
     color: '#5ba8b4',
   },
   {
     step: '02',
-    title: 'AI Analysis',
-    description: 'Our AI analyzes patterns and identifies fraud signals',
+    title: 'We Analyze Your Fraud Patterns',
+    description: "We analyze your fraud and transaction patterns to find what's causing chargebacks and false declines",
     visual: tabs[3].visual,
     color: '#7D6BA0',
   },
   {
     step: '03',
-    title: 'Get Actionable Insights',
-    description: 'Get clear action items to prevent fraud',
+    title: 'Receive Prioritized Rule Changes',
+    description: 'You receive a prioritized list of rule changes with estimated revenue and chargeback impact',
     visual: tabs[0].visual,
     color: '#5ba8b4',
   },
   {
     step: '04',
     title: 'Apply in Shopify & Stripe',
-    description: 'Turn ranked recommendations into live rules in Shopify Protect and Stripe Radar',
+    description: 'Implement changes directly in Shopify Protect and Stripe Radar and track your improvements',
     visual: tabs[4].visual,
     color: '#5ba8b4',
-  },
-  {
-    step: '05',
-    title: 'Save Money',
-    description: 'Reduce chargebacks and increase approval rates',
-    visual: tabs[2].visual,
-    color: '#7D6BA0',
   },
 ];
 
@@ -349,22 +342,38 @@ export default function Home() {
           <div className="relative max-w-6xl mx-auto py-20 w-full min-w-0">
 
 
-            {/* Headline — each line staggers */}
-            <h1 className="font-extrabold leading-[1.05] text-gray-900 mb-5 tracking-[-0.04em] text-[2.75rem] sm:text-[4rem] lg:text-[5rem]">
-              <span className="block anim-fadeUp delay-75 capitalize">Increase Conversion</span>
-              <span className="block anim-fadeUp delay-225 capitalize" style={{
-                lineHeight: '1.5',
+            {/* Headline */}
+            <h1 className="font-extrabold leading-[1.05] text-gray-900 mb-5 tracking-[-0.04em] text-[2.5rem] sm:text-[3.5rem] lg:text-[4.5rem]">
+              <span className="block anim-fadeUp delay-75">Stop Losing Money to</span>
+              <span className="block anim-fadeUp delay-225" style={{
+                lineHeight: '1.4',
                 background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',
                 WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
-              }}>Reduce Chargebacks</span>
+              }}>Fraud and False Declines.</span>
             </h1>
 
-            <p className="text-[1.3625rem] leading-[1.75] mb-8 max-w-[720px] mx-auto text-gray-600 anim-fadeUp delay-300">
-            FraudPulse AI agent analyzes your transactions, detects fraud patterns, and delivers ready-to-implement actions, with more captured fraud less false positives.
+            <p className="text-[1.25rem] leading-[1.75] mb-3 max-w-[760px] mx-auto text-gray-900 font-semibold anim-fadeUp delay-300">
+              FraudPulse tells you exactly which fraud rules to change in{' '}
+              <span className="inline-flex items-center gap-1.5">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="https://cdn.simpleicons.org/stripe/635BFF" alt="" width={16} height={16} className="inline-block relative -top-px" />
+                <span style={{ color: '#635BFF' }}>Stripe</span>
+              </span>
+              {' '}&amp;{' '}
+              <span className="inline-flex items-center gap-1.5">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="https://cdn.simpleicons.org/shopify/95BF47" alt="" width={16} height={16} className="inline-block relative -top-px" />
+                <span style={{ color: '#95BF47' }}>Shopify</span>
+              </span>
+              {' '}to reduce chargebacks and increase approvals.
+            </p>
+
+            <p className="text-[1.0625rem] leading-[1.75] mb-8 max-w-[620px] mx-auto text-gray-500 anim-fadeUp delay-400">
+              Get actionable fraud insights in days — not dashboards you never use.
             </p>
 
             {/* CTA */}
-            <div className="anim-fadeUp delay-400">
+            <div className="anim-fadeUp delay-500">
               <Link href="/book-a-demo/"
                 className="inline-flex items-center gap-2 rounded-full px-12 py-5 text-lg font-bold text-white transition-all hover:scale-[1.03]"
                 style={{
@@ -374,6 +383,11 @@ export default function Home() {
                 Book a Demo
               </Link>
             </div>
+
+            {/* Subheadline */}
+            <p className="mt-6 text-[1rem] leading-[1.7] max-w-[640px] mx-auto text-gray-500 anim-fadeUp delay-600">
+              We analyze your transactions, chargebacks, and customer patterns to generate clear, implementable fraud rule recommendations.
+            </p>
 
             {/* Process Flow Animation */}
             <div className="mt-12 sm:mt-20 anim-fadeUp delay-500 w-full max-w-full min-w-0 overflow-x-clip lg:overflow-visible">
@@ -438,15 +452,15 @@ export default function Home() {
                 Works with your stack
               </p>
               <h2 className="font-extrabold tracking-[-0.03em] text-[2rem] sm:text-[2.75rem] leading-[1.15] mb-6">
-                We&apos;re not here to replace your fraud tools.
+                We don&apos;t replace Stripe or Shopify.
                 <br />
                 <span className="text-gray-400 font-bold text-[1.375rem] sm:text-[1.625rem]">
-                  We&apos;re here to help you run them better.
+                  We make them work Better for you.
                 </span>
               </h2>
               <p className="text-[1.0625rem] sm:text-[1.125rem] leading-[1.75] text-gray-400 mb-8">
                 <span className="font-bold text-white">Shopify Protect</span> and{' '}
-                <span className="font-bold text-white">Stripe Radar</span> block transactions. FraudPulse tells you how to make them work even better — no rip and replace, no migration risk.
+                <span className="font-bold text-white">Stripe Radar</span> block transactions. FraudPulse analyzes your data and tells you exactly which rules to change — no rip and replace, no migration risk.
               </p>
             </Reveal>
 
@@ -491,13 +505,16 @@ export default function Home() {
         <section className="py-20 sm:py-28 px-5 sm:px-10 bg-white">
           <div className="max-w-6xl mx-auto">
             <Reveal animation="anim-fadeUp">
-              <h2 className="text-center font-extrabold text-gray-900 text-[2.7rem] sm:text-[3.1rem] tracking-[-0.03em] mb-12 max-w-3xl mx-auto leading-tight">
-                Everything You Need to{' '}
+              <h2 className="text-center font-extrabold text-gray-900 text-[2.7rem] sm:text-[3.1rem] tracking-[-0.03em] mb-4 max-w-3xl mx-auto leading-tight">
+                Reduce Chargebacks.{' '}
                 <span style={{
                   background: 'linear-gradient(135deg, rgb(125,107,160) 0%, rgb(125,107,160) 100%)',
                   WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
-                }}>Understand and Manage Fraud</span>
+                }}>Increase Approvals.</span>
               </h2>
+              <p className="text-center text-[1.0625rem] text-gray-500 max-w-2xl mx-auto mb-12 leading-relaxed">
+                Improve your <strong className="text-gray-800">Stripe</strong> and <strong className="text-gray-800">Shopify</strong> fraud settings without replacing your stack — just better rules, backed by your own data.
+              </p>
             </Reveal>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {[
@@ -559,7 +576,7 @@ export default function Home() {
 
             <Reveal animation="anim-fadeUp">
               <h2 className="text-center font-extrabold text-gray-900 text-[2.7rem] sm:text-[3.1rem] tracking-[-0.03em] mb-10">
-              All solutions in one place
+                Get actionable recommendations,<br className="hidden sm:block" /> not dashboards
               </h2>
             </Reveal>
 
@@ -620,15 +637,15 @@ export default function Home() {
           <Reveal animation="anim-scaleIn">
             <div className="max-w-5xl mx-auto">
               <h2 className="font-extrabold text-gray-900 text-[3rem] sm:text-[4rem] tracking-[-0.04em] leading-[1.05] mb-4">
-              See how it works on 
+                See it on your own
                 <br />
                 <span style={{
                   background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',
                   WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
-                }}>your own data.</span>
+                }}>Stripe & Shopify data.</span>
               </h2>
-              <p className="text-[1.5rem] leading-[1.75] max-w-[620px] mx-auto mb-8 ">
-                Book a walkthrough and see how FraudPulse finds patterns in your transactions and hands you a prioritized action list.
+              <p className="text-[1.5rem] leading-[1.75] max-w-[620px] mx-auto mb-8">
+                Book a walkthrough and see the exact fraud rule changes FraudPulse would recommend for your store.
               </p>
               <div className="flex flex-wrap gap-3 justify-center">
                 <Link href="/book-a-demo/"

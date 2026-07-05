@@ -8,59 +8,56 @@ import { Reveal } from '../components/Reveal';
 const steps = [
   {
     number: '01',
-    tag: 'AI Onboarding',
-    title: 'Onboard with the FraudPulse AI Assistant',
-    description: 'When you first log in, FraudPulse asks a few simple questions about your business, industry, transaction volume, and payment flows to better understand your risk environment. This helps tailor the analysis and recommendations to your business context from day one.',
+    tag: 'Connect',
+    title: 'Connect Stripe / Shopify',
+    description: 'Connect your Stripe or Shopify store in minutes — no engineering work required. FraudPulse imports your transaction history, chargeback records, and dispute data, then validates data quality before analysis begins.',
     details: [
-      'Conversational onboarding — no technical setup required',
-      'Industry-specific fraud model configuration',
-      'Personalized risk thresholds based on your business type',
-      'Live in minutes, not days',
+      'Connect via API, CSV upload, or native integrations',
+      'Stripe Radar & Shopify Protect supported out of the box',
+      'Automatic Data Sanity Check on all imported data',
+      'Historical data analysis from day one',
     ],
   },
   {
     number: '02',
-    tag: 'Data',
-    title: 'Connect Your Payment & Chargeback Data',
-    description: 'FraudPulse imports your transaction history, chargeback records, and dispute data, then validates the data quality before analysis begins.',
+    tag: 'Analysis',
+    title: 'We Analyze Your Fraud Patterns',
+    description: 'FraudPulse analyzes your fraud and transaction patterns to identify the root causes of chargebacks and false declines — so you know exactly what to fix.',
     details: [
-      'Connect via API, CSV upload, or native integrations',
-      'Automatic Data Sanity Check on all imported data',
-      'Historical data analysis from day one',
-      'Filter by Issuer (Card Brand) and Billing Country',
+      'Fraud vs Non-Fraud pattern breakdown',
+      'Chargeback Reason Code analysis',
+      'Approval loss root-cause identification',
+      'Risk feature radar across your transaction data',
     ],
   },
   {
     number: '03',
-    tag: 'Dashboard',
-    title: 'Monitor Your Live Dashboard',
-    description: 'Monitor approval rates, chargebacks, fraud exposure, and transaction trends from one centralized dashboard. Identify where fraud is increasing, where legitimate customers are being blocked, and how performance changes over time.',
+    tag: 'Recommendations',
+    title: 'Receive Prioritized Rule Changes',
+    description: 'You receive a ranked list of specific fraud rule changes — each with estimated chargeback reduction and false-positive impact — so your team can act with confidence.',
     details: [
-      'Fraud vs Non-Fraud Cases bar chart',
-      'Chargeback Reason Breakdown visualization',
-      'Incoming Chargebacks by Daily/Weekly bucket',
-      'Projected Chargebacks cohort analysis',
+      'AI Summary with risk level badge (Low / Medium / High)',
+      'Recommended rules with Fraud Rate, False Positive %, and Ranking',
+      'Estimated revenue and chargeback impact per rule',
+      'Full Report PDF download for your risk committee',
     ],
   },
   {
     number: '04',
-    tag: 'AI Actions',
-    title: 'Run AI Analysis & Get Action Items',
-    description: 'The AI Actions module generates specific, ranked recommendations with fraud capture rates and false positive scores — so your team can act with confidence.',
+    tag: 'Implement',
+    title: 'Apply Changes in Shopify & Stripe',
+    description: 'Implement changes directly in Shopify Protect and Stripe Radar, then track your improvements in chargebacks and approval rates over time — no rip and replace, no migration risk.',
     details: [
-      'AI Summary with risk level badge (Low / Medium / High)',
-      'Key insights on top-performing rules and blind spots',
-      'Recommended Rules with Fraud Rate, False Positive %, and Ranking',
-      'Full Report PDF download for your risk committee',
+      'Apply ranked rules in Shopify Protect',
+      'Apply ranked rules in Stripe Radar',
+      'Track chargeback and approval rate improvements',
+      'No rip and replace — improve your existing stack',
     ],
   },
 ];
 
 const integrations = [
   { name: 'Stripe',    category: 'Payment Processor', slug: 'stripe' },
-  { name: 'Braintree', category: 'Payment Processor', slug: 'braintree' },
-  { name: 'Adyen',     category: 'Payment Platform',  slug: 'adyen' },
-  { name: 'PayPal',    category: 'Payment Platform',  slug: 'paypal' },
   { name: 'Shopify',   category: 'E-Commerce Online Store',        slug: 'shopify' },
 ];
 
@@ -86,18 +83,23 @@ export default function Solutions() {
             <div className="max-w-[900px] mx-auto text-center">
               <Reveal animation="anim-fadeUp" delay={75}>
                 <h1 className="font-extrabold text-gray-900 tracking-[-0.04em] leading-[1.1] mb-5 text-[3rem] sm:text-[4rem] lg:text-[4.5rem]">
-                  From Onboarding to{' '}
+                  Stop Losing Money to{' '}
                   <span style={{
                     background: 'linear-gradient(135deg, rgb(125, 107, 160) 0%, rgb(125, 107, 160) 100%)',
                     WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
                   }}>
-                    AI Insights in Minutes
+                    Fraud &amp; False Declines
                   </span>
                 </h1>
               </Reveal>
               <Reveal animation="anim-fadeUp" delay={150}>
-                <p className="text-[1.5625rem] leading-[1.75] max-w-[720px] mx-auto ">
-                  FraudPulse combines real-time fraud monitoring with an AI Assistant that helps businesses understand chargebacks, approval loss, transaction risk, and fraud exposure from one centralized platform.
+                <p className="text-[1.25rem] leading-[1.75] max-w-[720px] mx-auto text-gray-600 font-semibold mb-3">
+                  FraudPulse tells you exactly which fraud rules to change in{' '}
+                  <strong className="text-gray-900">Stripe</strong> &amp;{' '}
+                  <strong className="text-gray-900">Shopify</strong> to reduce chargebacks and increase approvals.
+                </p>
+                <p className="text-[1.0625rem] leading-[1.75] max-w-[600px] mx-auto text-gray-500">
+                  Get actionable fraud insights in days — not dashboards you never use.
                 </p>
               </Reveal>
             </div>
@@ -166,10 +168,10 @@ export default function Solutions() {
             <Reveal animation="anim-fadeUp">
               <div className="text-center mb-12">
                 <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] mb-3 text-[2.75rem] sm:text-[3.25rem]">
-                  Connect FraudPulse to Your Existing Payment Stack
+                  Works With Your Existing Stack
                 </h2>
                 <p className="text-[1.125rem] leading-[1.7] max-w-[580px] mx-auto">
-                  Connect directly through supported integrations or simply upload CSV exports from your existing systems.
+                  Connect Stripe and Shopify directly — or upload CSV exports from any platform. No migration, no rip and replace.
                 </p>
               </div>
             </Reveal>
@@ -220,10 +222,10 @@ export default function Solutions() {
           <Reveal animation="anim-scaleIn">
             <div className="max-w-7xl mx-auto text-center">
               <h2 className="font-extrabold tracking-[-0.03em] mb-3 text-[2.75rem] sm:text-[3.25rem]">
-                See FraudPulse Working on Your Own Data
+                See It on Your Stripe &amp; Shopify Data
               </h2>
               <p className="text-[1.25rem] leading-[1.7] max-w-[680px] mx-auto mb-10 text-gray-400">
-                Book a live walkthrough and see how FraudPulse analyzes payment data, identifies fraud patterns, and generates actionable recommendations for your business.
+                Book a walkthrough and see the exact fraud rule changes FraudPulse would recommend for your store — reduce chargebacks and increase approvals without replacing your stack.
               </p>
               <Link href="/book-a-demo/"
                 className="inline-flex items-center gap-2 rounded-full px-12 py-4.5 text-[1.125rem] font-bold text-white transition-all hover:scale-[1.03]"

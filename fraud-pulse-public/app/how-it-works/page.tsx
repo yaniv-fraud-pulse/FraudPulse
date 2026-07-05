@@ -25,19 +25,22 @@ export default function HowItWorks() {
           <div className="relative max-w-7xl mx-auto py-16 sm:py-24">
             <div className="max-w-[860px] mx-auto text-center">
               <Reveal animation="anim-fadeUp" delay={75}>
-                <h1 className="font-extrabold text-gray-900 tracking-[-0.04em] leading-[1.1] mb-5 text-[3rem] sm:text-[4rem] lg:text-[4.5rem]">
-                  From Data to{' '}
+                <h1 className="font-extrabold text-gray-900 tracking-[-0.04em] leading-[1.1] mb-5 text-[2.75rem] sm:text-[3.75rem] lg:text-[4.25rem]">
+                  Exactly Which Fraud Rules to Change{' '}
                   <span style={{
                     background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',
                     WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
                   }}>
-                    Actionable Insights
+                    in Stripe &amp; Shopify
                   </span>
                 </h1>
               </Reveal>
               <Reveal animation="anim-fadeUp" delay={150}>
-                <p className="text-[1.25rem] sm:text-[1.5rem] leading-[1.75] max-w-[680px] mx-auto text-gray-500">
-                  Make the tools you already pay for work harder
+                <p className="text-[1.125rem] sm:text-[1.375rem] leading-[1.75] max-w-[680px] mx-auto text-gray-500 mb-2">
+                  Get actionable fraud insights in days — not dashboards you never use.
+                </p>
+                <p className="text-[1rem] sm:text-[1.125rem] leading-[1.75] max-w-[620px] mx-auto text-gray-400">
+                  We analyze your transactions, chargebacks, and customer patterns to generate clear, implementable rule recommendations for <strong className="text-gray-600">Shopify Protect</strong> and <strong className="text-gray-600">Stripe Radar</strong>.
                 </p>
               </Reveal>
 
@@ -164,13 +167,13 @@ export default function HowItWorks() {
               <div>
                 <p className="flex items-center justify-center gap-2.5 text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-5 text-[#5ba8b4]">
                   <span className="w-2.5 h-2.5 rounded-full bg-[#5ba8b4] shrink-0" aria-hidden />
-                  What we are
+                  Works alongside your tools
                 </p>
                 <p className="font-bold text-white text-[2.375rem] sm:text-[2.625rem] leading-[1.45] tracking-[-0.02em] mb-4">
                   <span className="font-extrabold">Shopify Protect</span> and <span className="font-extrabold">Stripe Radar</span> block transactions.
                 </p>
                 <p className="text-[1.625rem] sm:text-[1.625rem] leading-[1.7] text-gray-400">
-                  FraudPulse tells you how to make them work even better.
+                  FraudPulse tells you exactly which rules to change to make them work even better.
                 </p>
               </div>
             </Reveal>
@@ -179,10 +182,10 @@ export default function HowItWorks() {
               <div>
                 <p className="flex items-center justify-center gap-2.5 text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-5 text-gray-500">
                   <span className="w-2.5 h-2.5 rounded-full border border-gray-500 shrink-0" aria-hidden />
-                  What we&apos;re not
+                  No rip and replace
                 </p>
                 <p className="font-bold text-white text-[1.375rem] sm:text-[1.625rem] leading-[1.45] tracking-[-0.02em]">
-                  We&apos;re not here to replace your fraud tools.
+                  We improve your existing fraud stack — without replacing it.
                 </p>
               </div>
             </Reveal>
@@ -193,38 +196,45 @@ export default function HowItWorks() {
         <section className="py-16 sm:py-24 px-5 sm:px-10 bg-[#f8f9fa]">
           <div className="max-w-7xl mx-auto">
             <Reveal animation="anim-fadeUp">
-              <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] text-center mb-12 text-[2.75rem] sm:text-[3.25rem]">
-                Four Steps to Fraud Intelligence
+              <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] text-center mb-3 text-[2.75rem] sm:text-[3.25rem]">
+                How It Works
               </h2>
+              <p className="text-center text-[1.0625rem] text-gray-500 max-w-xl mx-auto mb-12">
+                From connecting your store to implementing live rule changes — in four clear steps.
+              </p>
             </Reveal>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
                 {
                   step: '01',
-                  title: 'Connect Your Data',
-                  description: 'Upload a CSV or connect via API integration with Stripe, Braintree, Adyen, PayPal, or Shopify.',
+                  title: 'Connect Stripe / Shopify',
+                  description: 'Connect your Stripe or Shopify store in minutes via API, CSV upload, or native integration. No engineering work required.',
                   color: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',
                 },
                 {
                   step: '02',
-                  title: 'AI Onboarding',
-                  description: 'Answer a few questions about your business. FraudPulse tailors its analysis to your industry and transaction profile.',
+                  title: 'We Analyze Your Fraud Patterns',
+                  description: 'FraudPulse analyzes your fraud and transaction patterns to identify the root causes of chargebacks and false declines.',
                   color: 'linear-gradient(135deg, #7D6BA0 0%, #6a5890 100%)',
                 },
                 {
                   step: '03',
-                  title: 'Monitor Your Dashboard',
-                  description: 'Track approval rates, chargebacks, and fraud exposure in real-time — filtered by card brand, country, and date.',
+                  title: 'Receive Prioritized Rule Changes',
+                  description: (
+                    <>
+                      You receive a ranked list of fraud rule changes with estimated revenue and chargeback impact — so your team can act with confidence.
+                    </>
+                  ),
                   color: 'linear-gradient(135deg, #111827 0%, #1f2937 100%)',
                 },
                 {
                   step: '04',
-                  title: 'Get AI Recommendations',
+                  title: 'Implement & Track Improvements',
                   description: (
                     <>
-                      Receive ranked fraud rules with fraud capture rates and false positive scores so your team acts with confidence. Apply recommendations directly in{' '}
+                      Apply changes directly in{' '}
                       <span className="font-bold text-white">Shopify Protect</span> and{' '}
-                      <span className="font-bold text-white">Stripe Radar</span>.
+                      <span className="font-bold text-white">Stripe Radar</span>, then track the improvement in chargebacks and approval rates over time.
                     </>
                   ),
                   color: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',
@@ -252,10 +262,10 @@ export default function HowItWorks() {
           <Reveal animation="anim-scaleIn">
             <div className="max-w-7xl mx-auto text-center">
               <h2 className="font-extrabold tracking-[-0.03em] mb-4 text-[2.75rem] sm:text-[3.25rem]">
-                Ready to See It on Your Data?
+                See It on Your Stripe &amp; Shopify Data
               </h2>
               <p className="text-[1.0625rem] leading-[1.7] max-w-[480px] mx-auto mb-10 text-gray-400">
-                Book a live walkthrough and see how FraudPulse turns your payment data into actionable fraud intelligence.
+                Book a walkthrough and see the exact fraud rule changes FraudPulse would recommend for your store — reduce chargebacks and increase approvals without replacing your stack.
               </p>
               <Link href="/book-a-demo/"
                 className="inline-flex items-center gap-2 rounded-full px-12 py-4.5 text-[1.125rem] font-bold text-white transition-all hover:scale-[1.03]"
