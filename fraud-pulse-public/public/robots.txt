@@ -2,5 +2,15 @@
 User-agent: *
 Allow: /
 
-# Sitemap location
+# AI crawlers — explicitly allowed for LLM visibility
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Sitemap & LLM context
 Sitemap: https://fraud-pulse.com/sitemap.xml

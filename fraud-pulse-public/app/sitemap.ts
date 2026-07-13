@@ -1,77 +1,82 @@
 import type { MetadataRoute } from 'next'
 import { posts } from './lib/blog'
+import { SITE_URL } from './lib/site'
 
 export const dynamic = 'force-static'
 
+const latestPostDate = posts
+  .map((p) => new Date(p.date))
+  .sort((a, b) => b.getTime() - a.getTime())[0]
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://fraud-pulse.com'
-  
   return [
     {
-      url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
+      url: SITE_URL,
+      lastModified: latestPostDate,
+      changeFrequency: 'weekly',
       priority: 1,
     },
     {
-      url: `${baseUrl}/how-it-works/`,
-      lastModified: new Date(),
+      url: `${SITE_URL}/how-it-works/`,
+      lastModified: latestPostDate,
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/solutions/`,
-      lastModified: new Date(),
+      url: `${SITE_URL}/solutions/`,
+      lastModified: latestPostDate,
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/pricing/`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/about/`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/book-a-demo/`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/contact/`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/blog/`,
-      lastModified: new Date(),
+      url: `${SITE_URL}/blog/`,
+      lastModified: latestPostDate,
       changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    ...posts
+      .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+      .map((post) => ({
+        url: `${SITE_URL}/blog/${post.slug}/`,
+        lastModified: new Date(post.date),
+        changeFrequency: 'monthly' as const,
+        priority: 0.75,
+      })),
+    {
+      url: `${SITE_URL}/pricing/`,
+      lastModified: latestPostDate,
+      changeFrequency: 'monthly',
       priority: 0.8,
     },
-    ...posts.map((post) => ({
-      url: `${baseUrl}/blog/${post.slug}/`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.7,
-    })),
     {
-      url: `${baseUrl}/privacy/`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.5,
+      url: `${SITE_URL}/book-a-demo/`,
+      lastModified: latestPostDate,
+      changeFrequency: 'monthly',
+      priority: 0.8,
     },
     {
-      url: `${baseUrl}/terms/`,
-      lastModified: new Date(),
+      url: `${SITE_URL}/about/`,
+      lastModified: latestPostDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${SITE_URL}/contact/`,
+      lastModified: latestPostDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${SITE_URL}/privacy/`,
+      lastModified: latestPostDate,
       changeFrequency: 'yearly',
-      priority: 0.5,
+      priority: 0.4,
+    },
+    {
+      url: `${SITE_URL}/terms/`,
+      lastModified: latestPostDate,
+      changeFrequency: 'yearly',
+      priority: 0.4,
     },
   ]
 }

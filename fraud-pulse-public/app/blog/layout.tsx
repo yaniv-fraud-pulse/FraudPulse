@@ -1,13 +1,17 @@
 import type { Metadata } from "next";
+import { SITE_URL } from "../lib/site";
 
 export const metadata: Metadata = {
   title: "FraudPulse Blog — Fraud Prevention Insights for Stripe & Shopify Merchants",
   description: "Expert articles on reducing chargebacks, optimizing Stripe Radar and Shopify Protect fraud rules, false decline prevention, and fraud pattern analysis for online merchants.",
   keywords: "fraud prevention blog, Stripe Radar tips, Shopify Protect tips, chargeback reduction, false decline prevention, fraud rules optimization, ecommerce fraud",
+  alternates: {
+    canonical: "/blog/",
+  },
   openGraph: {
     title: "FraudPulse Blog — Fraud Prevention Insights for Stripe & Shopify Merchants",
     description: "Expert articles on reducing chargebacks, optimizing Stripe Radar and Shopify Protect fraud rules, and preventing false declines.",
-    url: "https://fraudpulse.io/blog/",
+    url: `${SITE_URL}/blog/`,
     siteName: "FraudPulse",
     type: "website",
   },

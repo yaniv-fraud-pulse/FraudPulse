@@ -13,6 +13,295 @@ export type BlogPost = {
 
 export const posts: BlogPost[] = [
   {
+    slug: 'how-to-reduce-chargebacks-on-shopify-2026',
+    title: 'How to Reduce Chargebacks on Shopify (2026 Guide)',
+    excerpt:
+      'A practical 2026 guide for Shopify merchants: understand why chargebacks happen, tune Shopify Protect rules using your own data, and reduce disputes without increasing false declines.',
+    category: 'Guide',
+    date: 'July 13, 2026',
+    readTime: '8 min read',
+    author: 'FraudPulse Team',
+    authorRole: 'Risk',
+    image: '/blog/reduce-chargebacks-shopify.png',
+    content: `
+<p>Chargebacks are one of the most expensive problems Shopify merchants face in 2026. Every dispute costs more than the refunded order — you lose the product, shipping, payment fees, and often pay a chargeback fee on top.</p>
+
+<p>Most merchants try to solve this by tightening fraud rules across the board. That can reduce chargebacks short term, but it also increases false declines — legitimate customers blocked at checkout who would have converted.</p>
+
+<p>The better approach: understand <em>why</em> chargebacks are happening in your store, then change the specific Shopify Protect rules driving the problem.</p>
+
+<h2>Step 1: Know your chargeback rate and reason codes</h2>
+
+<p>Before changing any rules, establish a baseline:</p>
+
+<ul>
+  <li>What is your monthly chargeback rate? (chargebacks ÷ total transactions)</li>
+  <li>Which reason codes appear most often? (fraud, product not received, not as described)</li>
+  <li>Are chargebacks concentrated in certain countries, card brands, or order values?</li>
+  <li>Are disputes arriving within days of purchase or weeks later?</li>
+</ul>
+
+<p>In 2026, Visa's VAMP threshold dropped to 1.5% for excessive merchants — down from 2.2%. That means less room for error, and chargeback management is no longer optional for growing Shopify stores.</p>
+
+<h2>Step 2: Separate fraud chargebacks from service disputes</h2>
+
+<p>Not all chargebacks are fraud. Many come from:</p>
+
+<ul>
+  <li>Shipping delays or delivery failures</li>
+  <li>Unclear product descriptions or subscription billing</li>
+  <li>Customers who don't recognize the charge on their statement</li>
+</ul>
+
+<p>Fraud rules won't fix a fulfillment problem. If your top reason codes are "product not received" or "not as described," start with operations and customer communication — not Shopify Protect settings.</p>
+
+<p>If fraud-related reason codes dominate, focus on the patterns getting through your current rules.</p>
+
+<h2>Step 3: Audit what Shopify Protect is actually blocking</h2>
+
+<p>Shopify Protect blocks transactions at checkout based on risk signals — IP location, velocity, device fingerprint, order history, and more. But default settings are built for the average merchant, not your specific business.</p>
+
+<p>Common gaps we see in Shopify stores:</p>
+
+<ul>
+  <li>High-risk countries blocked too loosely — fraud from regions with elevated chargeback rates still getting through</li>
+  <li>Velocity rules that don't account for legitimate repeat buyers or B2B customers</li>
+  <li>Rules that block low-value fraud but miss high-ticket orders with mismatched billing/shipping signals</li>
+  <li>Overly aggressive rules that decline good customers — hurting conversion to prevent a small fraud volume</li>
+</ul>
+
+<p>The goal is not to block more transactions. It is to block the <em>right</em> transactions.</p>
+
+<h2>Step 4: Identify fraud patterns in your transaction data</h2>
+
+<p>Look at the orders that became chargebacks and compare them to orders that didn't. Patterns often emerge:</p>
+
+<ul>
+  <li>Same billing country with shipping to a high-risk region</li>
+  <li>Multiple orders from the same email domain in a short window</li>
+  <li>Card BINs or issuers with disproportionately high dispute rates</li>
+  <li>Orders placed at unusual hours relative to the customer's location</li>
+  <li>First-time buyers with high basket values and expedited shipping</li>
+</ul>
+
+<p>These patterns are unique to your store. Generic fraud rule templates won't capture them — your own data will.</p>
+
+<h2>Step 5: Change Shopify Protect rules based on data, not guesswork</h2>
+
+<p>Once you know which patterns drive chargebacks, make targeted rule changes:</p>
+
+<ol>
+  <li><strong>Tighten rules for confirmed fraud patterns</strong> — e.g., block or review orders matching a signal combination that appears in 80% of your fraud chargebacks</li>
+  <li><strong>Loosen rules causing false declines</strong> — if a rule blocks many legitimate orders for minimal fraud capture, adjust or remove it</li>
+  <li><strong>Prioritize by impact</strong> — start with rule changes that address the highest chargeback volume, not the easiest to implement</li>
+  <li><strong>Track results</strong> — measure chargeback rate and approval rate weekly after each change</li>
+</ol>
+
+<p>Each rule change should have an expected outcome: fewer chargebacks, maintained or improved approval rate, or both.</p>
+
+<h2>Step 6: Reduce friendly fraud and customer confusion</h2>
+
+<p>Some "fraud" chargebacks are actually customers who forgot they ordered, don't recognize your billing descriptor, or dispute before contacting support.</p>
+
+<ul>
+  <li>Use a clear billing descriptor that matches your store name</li>
+  <li>Send order confirmation and shipping emails promptly</li>
+  <li>Make refund and support contact easy to find</li>
+  <li>Respond to disputes with delivery proof when applicable</li>
+</ul>
+
+<p>These steps won't eliminate fraud chargebacks, but they reduce preventable disputes that no fraud rule can fix.</p>
+
+<h2>Step 7: Monitor continuously — fraud patterns change</h2>
+
+<p>Fraud in 2026 is more automated and adaptive than before. A rule that worked three months ago may be less effective today as fraudsters adapt.</p>
+
+<p>Review your chargeback data monthly at minimum. Look for new patterns, rising reason codes, and rules that are no longer performing. Continuous analysis beats a one-time rule overhaul.</p>
+
+<h2>How FraudPulse helps Shopify merchants</h2>
+
+<p>FraudPulse connects to your Shopify transaction and chargeback data, analyzes fraud patterns automatically, and delivers prioritized rule changes you can apply in Shopify Protect — with estimated chargeback and false-positive impact for each recommendation.</p>
+
+<p>It does not replace Shopify Protect. It tells you exactly which rules to change so your existing fraud stack works harder for you.</p>
+
+<p><strong>Want to see what rule changes FraudPulse would recommend for your Shopify store?</strong> <a href="/book-a-demo/">Book a demo</a> and we'll walk through it on your own data.</p>
+    `.trim(),
+  },
+  {
+    slug: 'how-to-audit-your-fraud-acts-in-30-minutes',
+    title: "How to audit your fraud acts in ~30 minutes. Here's how I usually approach it.",
+    excerpt:
+      'A practical 7-step framework to audit your fraud rules in about 30 minutes — map what you have, check impact, find overlap, review false positives, and identify what to remove, adjust, or rebuild.',
+    category: 'Guide',
+    date: 'July 8, 2026',
+    readTime: '5 min read',
+    author: 'FraudPulse Team',
+    authorRole: 'Risk',
+    image: 'https://media.licdn.com/dms/image/v2/D4D22AQE18G5QZA9qfA/feedshare-shrink_800/B4DZ892gdWK0Ac-/0/1783449127005?e=1785369600&v=beta&t=SGggyum7tzbTx6vUDBohI6MQ8XbiDT0V4kjO_-P8SaE',
+    content: `
+<p>Most fraud teams inherit a stack that grew over time — rules added after incidents, thresholds tweaked in spreadsheets, exceptions nobody remembers approving. A quick audit brings clarity. Here is how I usually approach it in about 30 minutes.</p>
+
+<h2>1. List your active acts</h2>
+
+<p>Don't analyse yet — just map them. Include thresholds, exceptions, and segments.</p>
+
+<p><strong>The goal here is visibility.</strong></p>
+
+<h2>2. For each act, ask one question: what problem is this solving?</h2>
+
+<ul>
+  <li>If the answer isn't clear, flag it.</li>
+  <li>If it's solving a problem that no longer exists, flag it.</li>
+</ul>
+
+<p>You'll usually find a few acts that stayed for historical reasons.</p>
+
+<h2>3. Check impact (even roughly)</h2>
+
+<ul>
+  <li>How often does this act trigger?</li>
+  <li>What % of transactions does it affect?</li>
+  <li>What % of those are actually fraud?</li>
+</ul>
+
+<p>You're looking for signals.</p>
+
+<h2>4. Look for overlap</h2>
+
+<ul>
+  <li>Multiple acts, features, or models triggering on the same behaviour</li>
+  <li>Elements that contradict each other</li>
+  <li>Models that create unnecessary complexity</li>
+</ul>
+
+<p>This is quite common in systems that evolved over time.</p>
+
+<h2>5. Review false positives</h2>
+
+<ul>
+  <li>Which parts of the decision engine block legitimate users most often?</li>
+  <li>Are there segments where the act is too strict?</li>
+</ul>
+
+<p>In many cases, this is where the biggest opportunity sits.</p>
+
+<h2>6. Check if the act is still needed</h2>
+
+<ul>
+  <li>Would removing it increase risk materially?</li>
+  <li>Or just reduce friction?</li>
+</ul>
+
+<h2>7. Look at what's missing</h2>
+
+<ul>
+  <li>Are there obvious gaps in coverage?</li>
+  <li>Signals you're not using?</li>
+  <li>Flows that aren't monitored?</li>
+</ul>
+
+<p>This step is often overlooked.</p>
+
+<h2>What you should have at the end</h2>
+
+<p>At the end of this, you should have:</p>
+
+<ul>
+  <li>A clearer understanding of what each act does</li>
+  <li>A shortlist of acts to remove, adjust, or rebuild</li>
+  <li>A better sense of where your system is over- or under-performing</li>
+</ul>
+
+<p>Want help running this audit on your Stripe or Shopify data? <a href="/book-a-demo/">Book a demo</a> and we'll walk through it together.</p>
+    `.trim(),
+  },
+  {
+    slug: 'build-vs-buy-fraud-system',
+    title: 'Should you build your own fraud system or buy a solution?',
+    excerpt:
+      'When chargebacks rise and approval rates drop, the default reaction is to find a tool. But the right answer depends on what you should control versus what you can delegate — and most teams land somewhere in between.',
+    category: 'Insights',
+    date: 'July 9, 2026',
+    readTime: '4 min read',
+    author: 'FraudPulse Team',
+    authorRole: 'Product',
+    image: 'https://media.licdn.com/dms/image/v2/D4D22AQGJlIoVpxHFSw/feedshare-image-high-res/B4DZ9C2FRzJwAU-/0/1783532901762?e=1785369600&v=beta&t=nYo_qVvTfNShgeIDjXGkG0IJnCBUNqsW8d_s9qVX7tw',
+    content: `
+<p>Most teams start with a problem — chargebacks increase, approval rates drop — and the immediate reaction is usually: let's find a tool.</p>
+
+<p>That might be the right move sometimes (not always).</p>
+
+<h2>When buying makes sense</h2>
+
+<p>Buying a solution makes sense when your problem is well-defined, you need speed over control, your team doesn't have the bandwidth to build systems, and the tool fits your business model. In those cases, a good vendor can solve a large part of the problem quickly.</p>
+
+<h2>When building makes sense</h2>
+
+<p>Building tends to make more sense when your flows are unique or complex, off-the-shelf rules don't map well to your risk, you need full control over decision logic, or you've outgrown what existing tools can offer.</p>
+
+<p>But building comes with a cost — ongoing maintenance, data quality, monitoring, and iteration.</p>
+
+<h2>Most teams land in between</h2>
+
+<p>What I've seen in practice is that most teams end up somewhere in between: a combination of a core vendor for coverage and internal logic to handle what the vendor can't.</p>
+
+<p>The decision is more about what should you control and what can you delegate.</p>
+
+<h2>Know your gaps before you commit</h2>
+
+<p>In many cases, teams commit to tools or long implementations before having a clear view of where they're exposed or what's driving the issue.</p>
+
+<p>That's part of the thinking behind what we're building with <a href="/">FraudPulse</a> — understand your data, your gaps, and what's worth solving internally vs externally, before committing to either path.</p>
+
+<p>The right decision is rarely about the tool. It's about knowing what you're solving for.</p>
+    `.trim(),
+  },
+  {
+    slug: 'why-30-90-percent-of-fraud-is-friendly-fraud',
+    title: 'Why is up to 30-90% of fraud often classified as friendly fraud?',
+    excerpt:
+      'As strange as the name sounds, friendly fraud is when a legitimate cardholder disputes a transaction they actually made. Depending on the industry, it can account for 30% to 90% of all fraud cases — and it requires a very different response.',
+    category: 'Insights',
+    date: 'June 7, 2026',
+    readTime: '4 min read',
+    author: 'FraudPulse Team',
+    authorRole: 'Product',
+    image: '/blog/friendly-fraud-classifier.png',
+    content: `
+<p>As strange as the name sounds, there's nothing particularly friendly about it.</p>
+
+<p>It usually refers to cases where a legitimate cardholder later disputes a transaction, claiming it was unauthorised or unrecognised.</p>
+
+<p>Depending on the industry, this can be anywhere between 30% to 90% of all fraud cases.</p>
+
+<p>Which makes it a very different kind of problem, because now you're not trying to detect fraud before it happens, you're trying to prove what already happened.</p>
+
+<h2>The dispute process</h2>
+
+<p>That's where the dispute process comes in — compiling evidence, pulling transaction data, device signals, behavioural patterns, delivery confirmation. All to demonstrate that the transaction was legitimate.</p>
+
+<p>The challenge is how fragmented and manual the process is. Even for teams that understand it well, it can take time, attention, and consistency to do it properly.</p>
+
+<h2>Why we built FraudPulse</h2>
+
+<p>This is one of the areas that led Yaniv Hayun and me to build FraudPulse.</p>
+
+<p>Instead of just flagging a chargeback, the idea is to go one step further.</p>
+
+<p>If something looks like friendly fraud, the system can pull the relevant data, structure it, and generate the full compelling evidence document automatically.</p>
+
+<p>Beyond that, it also tells you what to do next and answers:</p>
+
+<ul>
+  <li>What's happening?</li>
+  <li>Why it's happening?</li>
+  <li>How to reduce it going forward?</li>
+</ul>
+
+<p>The idea is to make fraud easier to deal with. If you're working with chargebacks like this and it's taking up too much time, <a href="/book-a-demo/">happy to share early access</a>.</p>
+    `.trim(),
+  },
+  {
     slug: 'fraudpulse-does-not-replace-stripe-radar-shopify-protect',
     title: "FraudPulse Doesn't Replace Stripe Radar or Shopify Protect. Here's What It Does Instead.",
     excerpt:
@@ -234,7 +523,7 @@ export const posts: BlogPost[] = [
     readTime: '3 min read',
     author: 'FraudPulse Team',
     authorRole: 'Product',
-    image: 'https://media.licdn.com/dms/image/v2/D4D05AQFY_R5UqYd13Q/videocover-low/B4DZ761S2qJQBE-/0/1782324738572?e=1783623600&v=beta&t=tyw7jEF5TANSJdN0qbtzNpvg2yhz92h5Su0-PWbIgOM',
+    image: 'https://media.licdn.com/dms/image/v2/D4D22AQHkGzx-Y9sLmg/feedshare-shrink_800/B4DZ6Rv1lOGcAc-/0/1780561698045?e=1784764800&v=beta&t=a3UcOmDPb3Ur_fGn9KQXNZXWK5cXCxpvJPLMvTRTSlc',
     content: `
 <p>The idea behind FraudPulse is to make fraud analysis usable from day one.</p>
 

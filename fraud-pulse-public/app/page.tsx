@@ -5,6 +5,9 @@ import Footer from './components/Footer';
 import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
 import { useInView } from './hooks/useInView';
+import FaqAccordion from './components/FaqAccordion';
+import { homeFaqs } from './lib/homeFaq';
+import { SITE_URL } from './lib/site';
 
 /* ── Animated section wrapper ── */
 function Reveal({ children, className = '', delay = 0, animation = 'anim-fadeUp' }: {
@@ -330,6 +333,36 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen bg-white overflow-x-clip">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: homeFaqs.map((faq) => ({
+              '@type': 'Question',
+              name: faq.q,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: faq.a,
+              },
+            })),
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: 'FraudPulse',
+            url: SITE_URL,
+            description:
+              'FraudPulse tells merchants exactly which fraud rules to change in Stripe and Shopify to reduce chargebacks and increase approvals.',
+          }),
+        }}
+      />
       <Header />
       <main className="flex-grow overflow-x-clip">
         {/* ── Hero ── */}
@@ -629,6 +662,24 @@ export default function Home() {
                 {tabs[activeTab].visual}
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* ── FAQ ── */}
+        <section className="py-20 sm:py-28 bg-[#7D6BA0]/20">
+          <div className="px-5 sm:px-10">
+            <Reveal animation="anim-fadeUp">
+              <div className="text-center mb-12">
+                <p className="text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-2 text-[#5ba8b4]">FAQ</p>
+                <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] text-[2.75rem] sm:text-[3.25rem]">
+                  Frequently Asked Questions
+                </h2>
+                <p className="mt-4 text-[1.0625rem] text-gray-500 max-w-2xl mx-auto">
+                  Common questions from merchants using Stripe and Shopify who want to reduce chargebacks without replacing their fraud stack.
+                </p>
+              </div>
+              <FaqAccordion faqs={homeFaqs} />
+            </Reveal>
           </div>
         </section>
 

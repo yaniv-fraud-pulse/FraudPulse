@@ -1,0 +1,41 @@
+# FraudPulse
+
+> FraudPulse tells merchants exactly which fraud rules to change in Stripe and Shopify to reduce chargebacks and increase approvals. It does not replace Stripe Radar or Shopify Protect — it analyzes transaction and chargeback data and delivers prioritized, implementable rule recommendations with impact estimates.
+
+## Product summary
+
+- Connect Stripe or Shopify in minutes
+- Analyze fraud and transaction patterns from your own data
+- Receive prioritized fraud rule changes with chargeback and false-positive impact estimates
+- Apply recommendations in Shopify Protect and Stripe Radar — no rip and replace
+
+## Key pages
+
+- Homepage: https://fraud-pulse.com/
+- How it works: https://fraud-pulse.com/how-it-works/
+- Solutions: https://fraud-pulse.com/solutions/
+- Pricing: https://fraud-pulse.com/pricing/
+- Book a demo: https://fraud-pulse.com/book-a-demo/
+- Blog: https://fraud-pulse.com/blog/
+
+## Common buyer questions
+
+- Does FraudPulse replace Stripe Radar or Shopify Protect? No — it improves them with data-driven rule recommendations.
+- How does FraudPulse reduce chargebacks? By identifying root causes in your transaction data and recommending specific rule changes.
+- How long to get recommendations? Most merchants get actionable insights in days.
+- Can I use it without replacing my fraud stack? Yes — no migration required.
+
+## Featured guides
+
+- How to Reduce Chargebacks on Shopify (2026): https://fraud-pulse.com/blog/how-to-reduce-chargebacks-on-shopify-2026/
+- FraudPulse Doesn't Replace Stripe Radar or Shopify Protect: https://fraud-pulse.com/blog/fraudpulse-does-not-replace-stripe-radar-shopify-protect/
+
+## Contact
+
+- Demo: https://fraud-pulse.com/book-a-demo/
+- Contact: https://fraud-pulse.com/contact/
+- Support email: support@fraud-pulse.com
+
+## Optional
+
+- Full sitemap: https://fraud-pulse.com/sitemap.xml

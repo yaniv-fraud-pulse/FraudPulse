@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Geist_Mono } from "next/font/google";
 import "./globals.css";
+import JsonLd from "./components/JsonLd";
+import { SITE_URL } from "./lib/site";
 
 const GA_MEASUREMENT_ID = "G-GL245KC3KN";
 
@@ -10,14 +12,29 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "FraudPulse",
+  url: SITE_URL,
+  logo: `${SITE_URL}/logo-light.svg`,
+  description:
+    "FraudPulse tells merchants exactly which fraud rules to change in Stripe and Shopify to reduce chargebacks and increase approvals.",
+  sameAs: [],
+};
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "FraudPulse — Reduce Chargebacks & Increase Approvals in Stripe & Shopify",
   description: "FraudPulse tells you exactly which fraud rules to change in Stripe & Shopify to reduce chargebacks and increase approvals. Get actionable fraud insights in days — not dashboards you never use.",
   keywords: "reduce chargebacks, increase approval rate, Stripe Radar optimization, Shopify Protect optimization, fraud rule changes, chargeback reduction, false decline reduction, fraud intelligence platform",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "FraudPulse — Reduce Chargebacks & Increase Approvals in Stripe & Shopify",
     description: "FraudPulse tells you exactly which fraud rules to change in Stripe & Shopify to reduce chargebacks and increase approvals. Get actionable fraud insights in days.",
-    url: "https://fraudpulse.io",
+    url: SITE_URL,
     siteName: "FraudPulse",
     type: "website",
   },
@@ -44,6 +61,7 @@ export default function RootLayout({
       className={`${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-white pt-[84px] overflow-x-clip">
+        <JsonLd data={organizationSchema} />
         {children}
         <Script
           src="https://t.contentsquare.net/uxa/b7d43a35c59b2.js"
