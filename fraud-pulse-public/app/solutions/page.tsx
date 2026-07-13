@@ -99,7 +99,7 @@ export default function Solutions() {
                   <strong className="text-gray-900">Shopify</strong> to reduce chargebacks and increase approvals.
                 </p>
                 <p className="text-[1.0625rem] leading-[1.75] max-w-[600px] mx-auto text-gray-500">
-                  Get actionable fraud insights in days — not dashboards you never use.
+                  Get actionable fraud insights in days not dashboards you never use.
                 </p>
               </Reveal>
             </div>

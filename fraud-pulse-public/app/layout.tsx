@@ -26,7 +26,7 @@ const organizationSchema = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "FraudPulse — Reduce Chargebacks & Increase Approvals in Stripe & Shopify",
-  description: "FraudPulse tells you exactly which fraud rules to change in Stripe & Shopify to reduce chargebacks and increase approvals. Get actionable fraud insights in days — not dashboards you never use.",
+  description: "FraudPulse tells you exactly which fraud rules to change in Stripe & Shopify to reduce chargebacks and increase approvals. Get actionable fraud insights in days not dashboards you never use.",
   keywords: "reduce chargebacks, increase approval rate, Stripe Radar optimization, Shopify Protect optimization, fraud rule changes, chargeback reduction, false decline reduction, fraud intelligence platform",
   alternates: {
     canonical: "/",

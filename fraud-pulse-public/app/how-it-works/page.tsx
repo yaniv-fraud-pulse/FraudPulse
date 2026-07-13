@@ -37,7 +37,7 @@ export default function HowItWorks() {
               </Reveal>
               <Reveal animation="anim-fadeUp" delay={150}>
                 <p className="text-[1.125rem] sm:text-[1.375rem] leading-[1.75] max-w-[680px] mx-auto text-gray-500 mb-2">
-                  Get actionable fraud insights in days — not dashboards you never use.
+                  Get actionable fraud insights in days not dashboards you never use.
                 </p>
                 <p className="text-[1rem] sm:text-[1.125rem] leading-[1.75] max-w-[620px] mx-auto text-gray-400">
                   We analyze your transactions, chargebacks, and customer patterns to generate clear, implementable rule recommendations for <strong className="text-gray-600">Shopify Protect</strong> and <strong className="text-gray-600">Stripe Radar</strong>.

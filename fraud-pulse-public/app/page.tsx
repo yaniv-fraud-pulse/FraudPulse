@@ -59,7 +59,7 @@ const tabs = [
       </svg>
     ),
     title: 'Get ranked actions, not just charts.',
-    body: 'The AI Actions module generates specific fraud rules ranked by impact — each one showing estimated fraud capture rate and false positive percentage so your team acts with confidence, not guesswork.',
+    body: 'The AI Actions module generates specific fraud rules ranked by impact each one showing estimated fraud capture rate and false positive percentage so your team acts with confidence, not guesswork.',
     bullets: ['AI Summary with risk level badge', 'Ranked rules with fraud rate & FP%', 'Key insights on blind spots', 'Full PDF report for your risk committee'],
     visual: (
       <div className="rounded-2xl border bg-white p-4 sm:p-5 w-full max-w-full min-w-0 anim-float overflow-hidden text-left" style={{ borderColor: '#e5e7eb', boxShadow: '0 8px 32px rgba(0,0,0,0.08)' }}>
@@ -402,7 +402,7 @@ export default function Home() {
             </p>
 
             <p className="text-[1.0625rem] leading-[1.75] mb-8 max-w-[620px] mx-auto text-gray-500 anim-fadeUp delay-400">
-              Get actionable fraud insights in days — not dashboards you never use.
+              Get actionable fraud insights in days not dashboards you never use.
             </p>
 
             {/* CTA */}
