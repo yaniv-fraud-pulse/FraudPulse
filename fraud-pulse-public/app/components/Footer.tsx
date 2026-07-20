@@ -23,6 +23,7 @@ export default function Footer() {
               {[
                 { href: '/solutions/', label: 'Solutions' },
                 { href: '/pricing/', label: 'Pricing' },
+                { href: '/webinar/', label: 'Webinar' },
               ].map(({ href, label }) => (
                 <li key={href}>
                   <Link href={href} className="text-sm text-gray-500 hover:text-gray-900 transition-colors">{label}</Link>
@@ -54,6 +55,7 @@ export default function Footer() {
               {[
                 { href: '/privacy/', label: 'Privacy Policy' },
                 { href: '/terms/', label: 'Terms of Use' },
+                { href: '/refund/', label: 'Refund Policy' },
               ].map(({ href, label }) => (
                 <li key={href}>
                   <Link href={href} className="text-sm text-gray-500 hover:text-gray-900 transition-colors">{label}</Link>

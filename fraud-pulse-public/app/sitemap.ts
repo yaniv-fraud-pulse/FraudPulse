@@ -55,6 +55,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${SITE_URL}/webinar/`,
+      lastModified: new Date('2026-08-04'),
+      changeFrequency: 'weekly',
+      priority: 0.85,
+    },
+    {
       url: `${SITE_URL}/about/`,
       lastModified: latestPostDate,
       changeFrequency: 'monthly',
@@ -75,6 +81,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${SITE_URL}/terms/`,
       lastModified: latestPostDate,
+      changeFrequency: 'yearly',
+      priority: 0.4,
+    },
+    {
+      url: `${SITE_URL}/refund/`,
+      lastModified: new Date('2026-07-20'),
       changeFrequency: 'yearly',
       priority: 0.4,
     },
