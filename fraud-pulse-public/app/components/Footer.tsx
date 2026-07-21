@@ -66,7 +66,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t flex flex-col sm:flex-row items-center justify-between gap-4" style={{ borderColor: '#e5e7eb' }}>
-          <p className="text-gray-400 text-xs">© {new Date().getFullYear()} FraudPulse Inc. All rights reserved.</p>
+          <p className="text-gray-400 text-xs">© {new Date().getFullYear()} Fraud Pulse Ltd. All rights reserved.</p>
         </div>
       </div>
     </footer>

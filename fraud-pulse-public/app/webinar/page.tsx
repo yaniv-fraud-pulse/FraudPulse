@@ -3,6 +3,7 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { Reveal } from '../components/Reveal';
 import {
@@ -143,7 +144,7 @@ export default function WebinarPage() {
 
                 <Reveal animation="anim-fadeUp" delay={225}>
                   <h2 className="font-bold text-gray-900 text-[1.25rem] mb-4 tracking-[-0.02em]">
-                    What you&apos;ll learn
+                    What we&apos;ll dig into together
                   </h2>
                   <ul className="flex flex-col gap-3 mb-10">
                     {WEBINAR.agenda.map((item) => (
@@ -168,16 +169,41 @@ export default function WebinarPage() {
                 </Reveal>
 
                 <Reveal animation="anim-fadeUp" delay={300}>
-                  <p className="text-[0.875rem] text-gray-400">
-                    Speakers:{' '}
-                    {WEBINAR.speakers.map((s, i) => (
-                      <span key={s.name}>
-                        {i > 0 && ' · '}
-                        <span className="font-semibold text-gray-600">{s.name}</span>
-                        <span className="text-gray-400">, {s.role}</span>
-                      </span>
-                    ))}
+                  <p className="text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-4 text-gray-400">
+                    Speakers
                   </p>
+                  <div className="flex flex-col gap-4">
+                    {WEBINAR.speakers.map((s) => (
+                      <div key={s.name} className="flex items-center gap-4">
+                        <div className="relative w-14 h-14 flex-shrink-0">
+                          <Image
+                            src={s.image}
+                            alt={`${s.name} — ${s.role}, FraudPulse`}
+                            fill
+                            className="rounded-full object-cover object-top"
+                            style={{
+                              border: '2px solid rgba(61,143,160,0.3)',
+                              boxShadow: '0 2px 10px rgba(61,143,160,0.12)',
+                            }}
+                          />
+                        </div>
+                        <div>
+                          <p className="font-semibold text-gray-800 text-[0.975rem] leading-tight">
+                            {s.name}
+                          </p>
+                          <p className="text-[0.8125rem] text-gray-400 mt-0.5">{s.role}</p>
+                          <a
+                            href={s.linkedIn}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 mt-1 text-[0.75rem] font-medium text-[#5ba8b4] hover:underline"
+                          >
+                            LinkedIn
+                          </a>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </Reveal>
               </div>
 

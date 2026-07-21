@@ -3,9 +3,10 @@ import { SITE_URL } from './site';
 /** Update these before launch. */
 export const WEBINAR = {
   id: 'fraudpulse-webinar-2026-08-04',
-  title: 'How to Reduce Chargebacks on Stripe & Shopify — Live Webinar',
+  title:
+    'Fraud Management Webinar for Stripe Merchants: Chargebacks, False Declines & Other Common Pain Points',
   subtitle:
-    'Join the FraudPulse team for a live session on tuning fraud rules, cutting false declines, and making Shopify Protect and Stripe Radar work harder for you.',
+    "An open conversation for online merchants using Stripe who want to compare notes on the fraud and chargeback challenges they're actually dealing with. We'll bring some starting points around common friction areas (tuning fraud rules, false declines, getting more out of Stripe Radar), but the real value is hearing what's working — and what isn't.",
   dateLabel: 'August 4, 2026',
   /** ISO start in Israel time (UTC+3) — adjust if needed */
   startsAtIso: '2026-08-04T10:00:00+03:00',
@@ -14,13 +15,18 @@ export const WEBINAR = {
   timezoneLabel: 'Israel Time (IDT, UTC+3)',
   meetUrl: 'https://meet.google.com/xxx-xxxx-xxx',
   speakers: [
-    { name: 'Idan Hayon', role: 'Co-founder & CEO' },
+    {
+      name: 'Idan Hayon',
+      role: 'Co-founder & CEO',
+      image: '/idan.jpeg',
+      linkedIn: 'https://www.linkedin.com/in/idan-hayon/',
+    },
   ],
   agenda: [
-    'Where chargebacks and false declines actually come from in Stripe & Shopify',
-    'How to audit your fraud rules in under 30 minutes',
-    'Live look at prioritized rule recommendations with impact estimates',
-    'Q&A — bring your chargeback questions',
+    'Where chargebacks and false declines are actually coming from for your store',
+    "How other merchants are approaching fraud rule audits — what's worked, what's been a waste of time",
+    "Open discussion: what's the hardest part of fraud management right now for you?",
+    'Bring your specific questions, edge cases, and chargeback headaches.',
   ],
 } as const;
 

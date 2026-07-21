@@ -16,12 +16,14 @@ export default function Terms() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">Terms of Service</h1>
           <div className="prose prose-lg text-gray-600 space-y-6">
-            <p className="text-sm text-gray-500">Last updated: May 31, 2026</p>
+            <p className="text-sm text-gray-500">Last updated: July 21, 2026</p>
             
             <section>
               <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Agreement to Terms</h2>
               <p>
-                By accessing or using FraudPulse's services, you agree to be bound by these Terms of Service. 
+                These Terms of Service (&quot;Terms&quot;) are entered into by you and{' '}
+                <strong>Fraud Pulse Ltd</strong> (&quot;Fraud Pulse&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;).
+                By accessing or using FraudPulse&apos;s services, you agree to be bound by these Terms.
                 If you do not agree to these terms, you may not use our services.
               </p>
             </section>
@@ -29,8 +31,9 @@ export default function Terms() {
             <section>
               <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Services Description</h2>
               <p>
-                FraudPulse provides AI-powered fraud detection and prevention services. Our platform analyzes 
-                transactions in real-time to identify and prevent fraudulent activities.
+                FraudPulse provides AI-powered fraud detection and prevention software. Our platform analyzes 
+                transactions in real-time to identify and prevent fraudulent activities. Certain plans may
+                also include optional advisory support, such as scheduled calls with a fraud advisor.
               </p>
             </section>
 
@@ -56,8 +59,13 @@ export default function Terms() {
             <section>
               <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Payment Terms</h2>
               <p>
-                Payment is due according to your selected billing plan. We accept major credit cards and 
-                wire transfers for Enterprise customers. Failure to pay may result in service suspension.
+                Payment is due according to your selected billing plan. Purchases are processed by
+                Paddle, who acts as the Merchant of Record. Failure to pay may result in service suspension.
+                Refunds are governed by our{' '}
+                <a href="/refund/" className="text-blue-600 hover:text-blue-700">
+                  Refund Policy
+                </a>
+                .
               </p>
             </section>
 
