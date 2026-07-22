@@ -9,9 +9,9 @@ export const WEBINAR = {
     "An open conversation for online merchants using Stripe who want to compare notes on the fraud and chargeback challenges they're actually dealing with. We'll bring some starting points around common friction areas (tuning fraud rules, false declines, getting more out of Stripe Radar), but the real value is hearing what's working — and what isn't.",
   dateLabel: 'August 4, 2026',
   /** ISO start in Israel time (UTC+3) — adjust if needed */
-  startsAtIso: '2026-08-04T10:00:00+03:00',
-  endsAtIso: '2026-08-04T11:00:00+03:00',
-  durationLabel: '45 minutes + Q&A',
+  startsAtIso: '2026-08-06T10:00:00+03:00',
+  endsAtIso: '2026-08-06T11:00:00+03:00',
+  durationLabel: '30 minutes + Q&A',
   timezoneLabel: 'Israel Time (IDT, UTC+3)',
   meetUrl: 'https://meet.google.com/xxx-xxxx-xxx',
   speakers: [
