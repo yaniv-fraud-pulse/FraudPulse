@@ -7,12 +7,10 @@ export const WEBINAR = {
     'Fraud Management Webinar for Stripe Merchants: Chargebacks, False Declines & Other Common Pain Points',
   subtitle:
     "An open conversation for online merchants using Stripe who want to compare notes on the fraud and chargeback challenges they're actually dealing with. We'll bring some starting points around common friction areas (tuning fraud rules, false declines, getting more out of Stripe Radar), but the real value is hearing what's working — and what isn't.",
-  dateLabel: 'August 4, 2026',
-  /** ISO start in Israel time (UTC+3) — adjust if needed */
-  startsAtIso: '2026-08-06T10:00:00+03:00',
-  endsAtIso: '2026-08-06T11:00:00+03:00',
+  /** Canonical start: 2:00 PM Eastern (EDT on this date). Shown in each visitor's local timezone. */
+  startsAtIso: '2026-08-06T14:00:00-04:00',
+  endsAtIso: '2026-08-06T14:30:00-04:00',
   durationLabel: '30 minutes + Q&A',
-  timezoneLabel: 'Israel Time (IDT, UTC+3)',
   meetUrl: 'https://meet.google.com/xxx-xxxx-xxx',
   speakers: [
     {
@@ -57,4 +55,44 @@ export function buildRegistrationPayload(
     consent: form.consent,
     page_url: `${SITE_URL}/webinar/`,
   };
+}
+
+export type WebinarLocalWhen = {
+  dateLabel: string;
+  timeLabel: string;
+  timezoneLabel: string;
+};
+
+/** Format webinar start in the visitor's local timezone (call from the client). */
+export function formatWebinarLocalWhen(
+  startsAtIso: string = WEBINAR.startsAtIso,
+  timeZone?: string,
+): WebinarLocalWhen {
+  const date = new Date(startsAtIso);
+  const resolvedZone =
+    timeZone ?? Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+  const dateLabel = new Intl.DateTimeFormat(undefined, {
+    timeZone: resolvedZone,
+    weekday: 'long',
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+  }).format(date);
+
+  const timeLabel = new Intl.DateTimeFormat(undefined, {
+    timeZone: resolvedZone,
+    hour: 'numeric',
+    minute: '2-digit',
+  }).format(date);
+
+  const timezoneLabel =
+    new Intl.DateTimeFormat(undefined, {
+      timeZone: resolvedZone,
+      timeZoneName: 'short',
+    })
+      .formatToParts(date)
+      .find((part) => part.type === 'timeZoneName')?.value ?? resolvedZone;
+
+  return { dateLabel, timeLabel, timezoneLabel };
 }

@@ -363,6 +363,32 @@ export default function Home() {
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'SoftwareApplication',
+            name: 'FraudPulse',
+            applicationCategory: 'BusinessApplication',
+            operatingSystem: 'Web',
+            url: SITE_URL,
+            description:
+              'Fraud intelligence for Shopify and Stripe merchants. Analyzes transactions and chargebacks, classifies fraud types, and recommends ranked Stripe Radar and Shopify Protect rule changes.',
+            offers: {
+              '@type': 'Offer',
+              url: `${SITE_URL}/pricing/`,
+              priceCurrency: 'USD',
+              availability: 'https://schema.org/InStock',
+            },
+            publisher: {
+              '@type': 'Organization',
+              name: 'FraudPulse',
+              url: SITE_URL,
+            },
+          }),
+        }}
+      />
       <Header />
       <main className="flex-grow overflow-x-clip">
         {/* ── Hero ── */}

@@ -1,17 +1,216 @@
+export type BlogFaq = {
+  q: string;
+  a: string;
+};
+
 export type BlogPost = {
   slug: string;
   title: string;
   excerpt: string;
   category: string;
   date: string;
+  /** Visible "Last updated" date; defaults to `date` when omitted. */
+  updatedAt?: string;
   readTime: string;
   author: string;
   authorRole: string;
   image?: string;
   content: string;
+  faqs?: BlogFaq[];
 };
 
 export const posts: BlogPost[] = [
+  {
+    slug: 'biggest-mistake-in-fraud-analysis-trusting-individual-indicators',
+    title: 'The biggest mistake in fraud analysis is trusting individual indicators',
+    excerpt:
+      'High amount, disposable email, new device, VPN — none of those signals mean much alone. Good fraud analysis asks whether the red flags tell a coherent fraud story.',
+    category: 'Education',
+    date: 'July 22, 2026',
+    readTime: '5 min read',
+    author: 'Idan Hayon',
+    authorRole: 'Co-Founder & CEO',
+    content: `
+<p>When people first start working in fraud, they often treat every indicator the same.</p>
+
+<ul>
+  <li>High transaction amount? Bad.</li>
+  <li>Disposable email? Bad.</li>
+  <li>New device? Bad.</li>
+  <li>VPN? Bad.</li>
+</ul>
+
+<p>It’s much more nuanced. Every one of those signals can belong to a perfectly legitimate customer, and every fraudulent transaction can sometimes look completely normal.</p>
+
+<p>A disposable email address might be suspicious, or it might belong to a privacy-conscious customer. A VPN could be someone hiding their identity, or an employee working remotely.</p>
+
+<p>A customer making five payment attempts could be testing stolen cards, or they could be struggling with their bank.</p>
+
+<p><strong>The indicator itself tells you very little.</strong></p>
+
+<p>That’s why experienced fraud analysts don’t just ask, which risk signals do we have?</p>
+
+<p>But more importantly, what’s the fraud story? Can I explain how this fraud happened? What was the fraudster trying to achieve? How did they get there? Do these signals make sense together? Or are they simply a collection of unrelated bad indicators?</p>
+
+<p>I’ve seen plenty of transactions with several suspicious signals that turned out to be completely legitimate. I’ve also seen fraudulent transactions with almost no obvious indicators at all. The difference was the ability to understand the behaviour behind it.</p>
+
+<p>Good fraud analysis is about asking whether those red flags tell a coherent story. If you can’t explain the fraud itself, there’s a good chance you’re looking at noise instead of risk.</p>
+
+<p>That’s also why fraud looks different across every industry.</p>
+
+<p>The same behaviour can be perfectly normal for one business and highly suspicious for another. Without understanding the context, it’s very easy to optimise for the wrong signals.</p>
+
+<p>Over time, I’ve found that the best fraud analysts develop a sense for fraud. The goal isn’t to find suspicious transactions. It’s to understand fraudulent behaviour.</p>
+
+<p>That’s where the decisions become much clearer.</p>
+
+<p>If you want a clearer view of how your system is behaving, <a href="/book-a-demo/">feel free to reach out</a>. Happy to take a look.</p>
+    `.trim(),
+    faqs: [
+      {
+        q: 'Are individual fraud signals enough to decline a transaction?',
+        a: 'Usually not. Signals like disposable email, VPN, or high ticket size can be legitimate. Strong decisions come from whether the signals together tell a coherent fraud story for that business.',
+      },
+      {
+        q: 'What should fraud analysts ask beyond risk scores?',
+        a: 'Ask what the fraudster was trying to achieve, how they got there, and whether the signals make sense together — or whether you are looking at unrelated noise.',
+      },
+    ],
+  },
+  {
+    slug: 'same-behaviour-fraudulent-in-one-business-legitimate-in-another',
+    title:
+      'In fraud the same behaviour can be fraudulent in one business and completely legitimate in another',
+    excerpt:
+      'A sneaker-drop “bot attack” that looked like fraud was actually top customers. Context — not raw anomalies — decides what a fraud rule should do.',
+    category: 'Education',
+    date: 'July 20, 2026',
+    readTime: '4 min read',
+    author: 'Idan Hayon',
+    authorRole: 'Co-Founder & CEO',
+    image:
+      'https://media.licdn.com/dms/image/v2/D4D22AQGpAnhG60UvTQ/feedshare-shrink_1280/B4DZ9.gjMVKsAM-/0/1784533890084?e=1786579200&v=beta&t=CPdhQfLIDbJRvdpb03nN9aTtouQTdUimRwHdHCLNX2w',
+    content: `
+<p>Early in my career, I worked with one of the world’s largest sneaker brands. They were launching a limited-edition release.</p>
+
+<p>Within minutes, the website was flooded with what looked like a textbook fraud attack — bots, disposable email addresses, suspicious IPs, customers trying to create multiple accounts, and dozens of purchase attempts happening simultaneously.</p>
+
+<p>We did what any fraud team would do. We started blocking them. About an hour later, I got a call asking, what exactly did you do?</p>
+
+<p>It turned out those weren’t fraudsters. They were some of the brand’s best customers — professional sneaker resellers.</p>
+
+<p>In that market, limited releases create enormous demand. People prepare bots, multiple accounts, and automated purchasing tools because products sell out within minutes and can often be resold for two, three, or even five times the original price.</p>
+
+<p>So what looked like suspicious behaviour was simply how that market operated.</p>
+
+<p>The challenge was understanding which unusual behaviour was legitimate. That experience changed how I think about fraud.</p>
+
+<p>Every industry has its own customer behaviour, incentives, and normal. A fraud act that works perfectly for a SaaS business might perform terribly for sneaker drops. A model trained on eCommerce transactions may fail completely in travel or gaming.</p>
+
+<p><strong>The data alone won’t tell you that. Context will.</strong></p>
+
+<p>That’s why I’ve always believed fraud analysis is about much more than finding statistical anomalies. It’s about understanding the business behind the transactions.</p>
+
+<p>If you’re seeing similar patterns, or just want a clearer view of how your system is behaving, <a href="/book-a-demo/">feel free to reach out</a>. Happy to take a look.</p>
+    `.trim(),
+    faqs: [
+      {
+        q: 'Can the same checkout behaviour be fraud in one business and fine in another?',
+        a: 'Yes. Bots, multiple accounts, and burst purchasing can be attacks in one vertical and normal customer behaviour in another — for example limited sneaker releases. Rules need business context, not just anomaly detection.',
+      },
+      {
+        q: 'Why do generic fraud models fail across industries?',
+        a: 'Each industry has different incentives and “normal” behaviour. A rule that works for SaaS can hurt sneaker drops; a model trained on eCommerce may fail in travel or gaming.',
+      },
+    ],
+  },
+  {
+    slug: 'fraud-system-might-be-your-biggest-revenue-leak',
+    title:
+      'One thing that often gets overlooked in fraud prevention is your fraud system might be your biggest revenue leak',
+    excerpt:
+      'Fraud losses are visible. Revenue lost to false positives usually is not. The biggest gains often come from removing friction that no longer helps.',
+    category: 'Education',
+    date: 'July 16, 2026',
+    readTime: '4 min read',
+    author: 'Idan Hayon',
+    authorRole: 'Co-Founder & CEO',
+    image:
+      'https://media.licdn.com/dms/image/v2/D4D22AQHAy-MXn8l_fg/feedshare-shrink_1280/B4DZ9p2_.ZJ4AM-/0/1784187453843?e=1786579200&v=beta&t=M6e3QOBJzzRjoiwrzkBTzEavGnxEakxQWzjgaKab5nk',
+    content: `
+<p>Over time, most systems get tightened. A new verification step gets added after an incident, then another one just to be safe, then stricter acts to reduce exposure.</p>
+
+<p>Before long, the system is technically safer — but the customer experience starts to suffer. The pattern is quite consistent. We focus on preventing bad transactions and only later realise we’re also blocking good ones.</p>
+
+<p>Every extra verification step comes with a cost:</p>
+
+<ul>
+  <li>more friction at checkout</li>
+  <li>more abandoned transactions</li>
+  <li>more legitimate users getting declined</li>
+</ul>
+
+<p>The issue is that fraud losses are visible, but the revenue lost from false positives usually isn’t. It shows up as lower approval rates, quieter drop-offs, and missed conversions.</p>
+
+<p>The biggest improvements I’ve seen come from understanding where those controls actually help and where they start working against you.</p>
+
+<p>We see this consistently when looking at transaction data more closely. In many cases, there are segments where the acts are too aggressive, or controls that are no longer needed. Once you identify them, removing or adjusting them can have an immediate impact.</p>
+
+<p>That’s part of the thinking behind what we’re building with FraudPulse.</p>
+
+<p>The goal is to understand what’s already in place, what’s working, and where friction is unnecessary. A good fraud system protects revenue — and that often means knowing when to remove friction, not add it.</p>
+
+<p>If you’re seeing similar patterns, or just want a clearer view of how your system is behaving, <a href="/book-a-demo/">feel free to reach out</a>. Happy to take a look.</p>
+    `.trim(),
+    faqs: [
+      {
+        q: 'How can a fraud system leak revenue?',
+        a: 'By adding verification and rules after every incident until false declines and checkout friction quietly cost more than the fraud they prevent. Fraud losses are visible; false-positive revenue loss often is not.',
+      },
+      {
+        q: 'What usually improves approval rates fastest?',
+        a: 'Finding segments where controls are too aggressive or no longer needed, then removing or adjusting them — not adding another blanket rule.',
+      },
+    ],
+  },
+  {
+    slug: 'billion-dollar-companies-with-two-person-fraud-teams',
+    title: 'I’ve worked with companies doing $1B+ in revenue with a 2-person fraud team',
+    excerpt:
+      'Fraud often stays reactive until volume and complexity break the setup. Team size matters less than clear logic, measurable signals, and structured systems.',
+    category: 'Education',
+    date: 'July 14, 2026',
+    readTime: '3 min read',
+    author: 'Idan Hayon',
+    authorRole: 'Co-Founder & CEO',
+    image:
+      'https://media.licdn.com/dms/image/v2/D4D22AQHfySUb5SOZog/feedshare-shrink_1280/B4DZ9fjuMWIYAM-/0/1784014628081?e=1786579200&v=beta&t=05QBhs5hkNMhizSohvR8uYqJp9ajnISg-Qgnbp8XT68',
+    content: `
+<p>In many businesses, fraud isn’t a priority until it becomes one.</p>
+
+<p>Things run smoothly, losses are low, and the system works well enough. So the team stays small, the setup stays basic, and fraud gets handled reactively.</p>
+
+<p>The pattern tends to change when volume increases, new markets are added, payment flows become more complex — and suddenly, the existing setup starts to break.</p>
+
+<p>What makes it challenging is that the problem shows up as more false positives, slower decisions, and less clarity on what’s actually happening. At that point, adding more people doesn’t solve it.</p>
+
+<p>The issue usually is unclear logic, fragmented data, and systems that grew without structure.</p>
+
+<p>I’ve seen small teams operate very effectively and large teams struggle with the same problems. The difference is usually not the size of the team. It’s whether the system they’re working with is clear, measurable, and built around the right signals.</p>
+
+<p><strong>Fraud doesn’t scale in a straight line — and neither should the way you manage it.</strong></p>
+    `.trim(),
+    faqs: [
+      {
+        q: 'Do high-revenue companies need large fraud teams?',
+        a: 'Not necessarily. Small teams can perform well if their fraud system is clear, measurable, and built around the right signals. Unclear logic and fragmented data hurt large teams too.',
+      },
+      {
+        q: 'When does a basic fraud setup usually break?',
+        a: 'When volume grows, new markets are added, or payment flows get more complex — often showing up as more false positives, slower decisions, and less clarity rather than a sudden need for more headcount.',
+      },
+    ],
+  },
   {
     slug: 'how-to-reduce-chargebacks-on-shopify-2026',
     title: 'How to Reduce Chargebacks on Shopify (2026 Guide)',
@@ -20,8 +219,8 @@ export const posts: BlogPost[] = [
     category: 'Guide',
     date: 'July 13, 2026',
     readTime: '8 min read',
-    author: 'FraudPulse Team',
-    authorRole: 'Risk',
+    author: 'Idan Hayon',
+    authorRole: 'Co-Founder & CEO',
     image: '/blog/reduce-chargebacks-shopify.png',
     content: `
 <p>Chargebacks are one of the most expensive problems Shopify merchants face in 2026. Every dispute costs more than the refunded order — you lose the product, shipping, payment fees, and often pay a chargeback fee on top.</p>
@@ -126,6 +325,20 @@ export const posts: BlogPost[] = [
 
 <p><strong>Want to see what rule changes FraudPulse would recommend for your Shopify store?</strong> <a href="/book-a-demo/">Book a demo</a> and we'll walk through it on your own data.</p>
     `.trim(),
+    faqs: [
+      {
+        q: 'How do I reduce chargebacks on Shopify without increasing false declines?',
+        a: 'Identify which patterns drive your fraud chargebacks, then make targeted Shopify Protect rule changes — tighten rules that catch real fraud and loosen rules that block good customers. Measure chargeback rate and approval rate after each change.',
+      },
+      {
+        q: 'Does FraudPulse replace Shopify Protect?',
+        a: 'No. FraudPulse analyzes your Shopify transaction and chargeback data and recommends which Protect rules to change. You keep Shopify Protect and tune it with your own data.',
+      },
+      {
+        q: 'What should I check before changing fraud rules?',
+        a: 'Establish your chargeback rate and top reason codes, separate fraud disputes from service issues, and audit what Shopify Protect is already blocking so you do not fix the wrong problem.',
+      },
+    ],
   },
   {
     slug: 'how-to-audit-your-fraud-acts-in-30-minutes',
@@ -135,8 +348,8 @@ export const posts: BlogPost[] = [
     category: 'Guide',
     date: 'July 8, 2026',
     readTime: '5 min read',
-    author: 'FraudPulse Team',
-    authorRole: 'Risk',
+    author: 'Idan Hayon',
+    authorRole: 'Co-Founder & CEO',
     image: 'https://media.licdn.com/dms/image/v2/D4D22AQE18G5QZA9qfA/feedshare-shrink_800/B4DZ892gdWK0Ac-/0/1783449127005?e=1785369600&v=beta&t=SGggyum7tzbTx6vUDBohI6MQ8XbiDT0V4kjO_-P8SaE',
     content: `
 <p>Most fraud teams inherit a stack that grew over time — rules added after incidents, thresholds tweaked in spreadsheets, exceptions nobody remembers approving. A quick audit brings clarity. Here is how I usually approach it in about 30 minutes.</p>
@@ -223,8 +436,8 @@ export const posts: BlogPost[] = [
     category: 'Insights',
     date: 'July 9, 2026',
     readTime: '4 min read',
-    author: 'FraudPulse Team',
-    authorRole: 'Product',
+    author: 'Idan Hayon',
+    authorRole: 'Co-Founder & CEO',
     image: 'https://media.licdn.com/dms/image/v2/D4D22AQGJlIoVpxHFSw/feedshare-image-high-res/B4DZ9C2FRzJwAU-/0/1783532901762?e=1785369600&v=beta&t=nYo_qVvTfNShgeIDjXGkG0IJnCBUNqsW8d_s9qVX7tw',
     content: `
 <p>Most teams start with a problem — chargebacks increase, approval rates drop — and the immediate reaction is usually: let's find a tool.</p>
@@ -264,8 +477,8 @@ export const posts: BlogPost[] = [
     category: 'Insights',
     date: 'June 7, 2026',
     readTime: '4 min read',
-    author: 'FraudPulse Team',
-    authorRole: 'Product',
+    author: 'Idan Hayon',
+    authorRole: 'Co-Founder & CEO',
     image: '/blog/friendly-fraud-classifier.png',
     content: `
 <p>As strange as the name sounds, there's nothing particularly friendly about it.</p>
@@ -309,8 +522,8 @@ export const posts: BlogPost[] = [
     category: 'Product',
     date: 'July 2, 2026',
     readTime: '4 min read',
-    author: 'FraudPulse Team',
-    authorRole: 'Product',
+    author: 'Idan Hayon',
+    authorRole: 'Co-Founder & CEO',
     image: 'https://media.licdn.com/dms/image/v2/D4D22AQH839gc-3EIww/feedshare-shrink_800/B4DZ8c4uGsI8Ac-/0/1782896059072?e=1784764800&v=beta&t=IidfUObfiWoPSIqZX2HyqsBIdB3OfZKQ-xYqOebbBkY',
     content: `
 <p>One of the biggest misconceptions we hear is that FraudPulse replaces fraud consoles such as Stripe Radar or Shopify Protect.</p>
@@ -347,6 +560,20 @@ export const posts: BlogPost[] = [
 
 <p><strong>P.S.</strong> If you're running Shopify Protect or Stripe Radar and want to know what they're missing, <a href="/book-a-demo/">we'd love to show you</a>.</p>
     `.trim(),
+    faqs: [
+      {
+        q: 'Does FraudPulse replace Stripe Radar or Shopify Protect?',
+        a: 'No. FraudPulse sits on top of your existing fraud stack. Stripe Radar and Shopify Protect still make real-time checkout decisions; FraudPulse analyzes outcomes and recommends which rules to change next.',
+      },
+      {
+        q: 'What does FraudPulse do that Radar and Protect do not?',
+        a: 'After checkout decisions are made, merchants still need to know why chargebacks rose, which patterns are getting through, and which rules create false positives. FraudPulse turns that data into prioritized, implementable rule recommendations with impact estimates.',
+      },
+      {
+        q: 'Do I need to migrate off my payment processor fraud tools?',
+        a: 'No. Keep Stripe Radar, Shopify Protect, or your PSP fraud console. FraudPulse helps you get more value from the tools you already use.',
+      },
+    ],
   },
   {
     slug: 'visa-vamp-threshold-reduction-2026',
@@ -356,8 +583,8 @@ export const posts: BlogPost[] = [
     category: 'News',
     date: 'June 30, 2026',
     readTime: '4 min read',
-    author: 'FraudPulse Team',
-    authorRole: 'Risk',
+    author: 'Idan Hayon',
+    authorRole: 'Co-Founder & CEO',
     image: 'https://media.licdn.com/dms/image/v2/D4D22AQHXFbMKNLSCsw/feedshare-shrink_800/B4DZ8UIWJwK0Ac-/0/1782749160306?e=1784764800&v=beta&t=Tk_q8RT1M-6CFizSD7YIlyxn5GXzA0NcZybZZiDA1aM',
     content: `
 <p>One of the biggest fraud-related changes this year was a threshold. On April 1st, Visa reduced the VAMP excessive merchant threshold from 2.20% to 1.50%.</p>
@@ -412,8 +639,8 @@ export const posts: BlogPost[] = [
     category: 'Education',
     date: 'May 30, 2026',
     readTime: '5 min read',
-    author: 'FraudPulse Team',
-    authorRole: 'Risk',
+    author: 'Idan Hayon',
+    authorRole: 'Co-Founder & CEO',
     image: 'https://media.licdn.com/dms/image/v2/D4D22AQHXyJcO0P1qiw/feedshare-shrink_800/B4DZ5lr9b1KgAc-/0/1779822483433?e=1784764800&v=beta&t=l8SH47XWgRiARGhRh6jv1QEddQnIPYn66flFWVZetwU',
     content: `
 <p>One of the most underestimated problems in fraud prevention is false positives.</p>
@@ -472,8 +699,8 @@ export const posts: BlogPost[] = [
     category: 'Education',
     date: 'June 1, 2026',
     readTime: '5 min read',
-    author: 'FraudPulse Team',
-    authorRole: 'Risk',
+    author: 'Idan Hayon',
+    authorRole: 'Co-Founder & CEO',
     image: 'https://media.licdn.com/dms/image/v2/D4D22AQESt2xzYhmoEA/feedshare-shrink_800/B4DZ6CNmwcKEAc-/0/1780301065476?e=1784764800&v=beta&t=EdLyBh_BSW_jN8IzYAjW87-XNC_OkiqQqA4KuveI6lk',
     content: `
 <p>One of the most common mistakes I see in eCommerce fraud prevention is overfitting.</p>
@@ -521,8 +748,8 @@ export const posts: BlogPost[] = [
     category: 'Product',
     date: 'June 25, 2026',
     readTime: '3 min read',
-    author: 'FraudPulse Team',
-    authorRole: 'Product',
+    author: 'Idan Hayon',
+    authorRole: 'Co-Founder & CEO',
     image: 'https://media.licdn.com/dms/image/v2/D4D22AQHkGzx-Y9sLmg/feedshare-shrink_800/B4DZ6Rv1lOGcAc-/0/1780561698045?e=1784764800&v=beta&t=a3UcOmDPb3Ur_fGn9KQXNZXWK5cXCxpvJPLMvTRTSlc',
     content: `
 <p>The idea behind FraudPulse is to make fraud analysis usable from day one.</p>
@@ -579,8 +806,8 @@ export const posts: BlogPost[] = [
     category: 'Product',
     date: 'June 2, 2026',
     readTime: '5 min read',
-    author: 'FraudPulse Team',
-    authorRole: 'Founders',
+    author: 'Idan Hayon',
+    authorRole: 'Co-Founder & CEO',
     image: 'https://media.licdn.com/dms/image/v2/D4D22AQHkGzx-Y9sLmg/feedshare-shrink_800/B4DZ6Rv1lOGcAc-/0/1780561698045?e=1784764800&v=beta&t=a3UcOmDPb3Ur_fGn9KQXNZXWK5cXCxpvJPLMvTRTSlc',
     content: `
 <p>After 12 years of working in fintech, across fraud, risk, and data, one thing has become very clear: the problem is rarely the system itself. It's how it's understood.</p>
@@ -631,8 +858,8 @@ export const posts: BlogPost[] = [
     category: 'Education',
     date: 'June 16, 2026',
     readTime: '5 min read',
-    author: 'FraudPulse Team',
-    authorRole: 'Risk',
+    author: 'Idan Hayon',
+    authorRole: 'Co-Founder & CEO',
     image: 'https://media.licdn.com/dms/image/v2/D4D22AQHSxSR1E2JcQw/feedshare-shrink_800/B4DZ7P53aBKAAc-/0/1781604513745?e=1784764800&v=beta&t=MTauqmv98okadHmfBVejJSH9SxM1xjJxo_6ZQykRX7I',
     content: `
 <p>Fraud losses are up 25%, deepfake attempts have increased by 94%, and sophisticated fraud has grown by 180%. 2026 is becoming about <em>better fraud</em>.</p>

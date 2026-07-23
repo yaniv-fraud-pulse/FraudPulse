@@ -1,11 +1,13 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import type { Metadata } from 'next';
+import { pageMetadata } from '../lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Refund Policy | FraudPulse',
   description: 'FraudPulse refund policy — 30-day money-back guarantee.',
-};
+  path: '/refund/',
+});
 
 export default function Refund() {
   return (

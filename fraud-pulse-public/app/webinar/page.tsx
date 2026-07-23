@@ -4,12 +4,14 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Reveal } from '../components/Reveal';
 import {
   WEBINAR,
   WEBINAR_API_ENDPOINT,
   buildRegistrationPayload,
+  formatWebinarLocalWhen,
+  type WebinarLocalWhen,
 } from '../lib/webinar';
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -26,6 +28,11 @@ export default function WebinarPage() {
   const [consentError, setConsentError] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [result, setResult] = useState<'success' | 'error' | null>(null);
+  const [localWhen, setLocalWhen] = useState<WebinarLocalWhen | null>(null);
+
+  useEffect(() => {
+    setLocalWhen(formatWebinarLocalWhen());
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
@@ -123,8 +130,16 @@ export default function WebinarPage() {
                 <Reveal animation="anim-fadeUp" delay={150}>
                   <div className="flex flex-col gap-3 mb-10">
                     {[
-                      { label: 'Date', value: WEBINAR.dateLabel },
-                      { label: 'Time', value: `10:00 AM · ${WEBINAR.timezoneLabel}` },
+                      {
+                        label: 'Date',
+                        value: localWhen?.dateLabel ?? 'August 6, 2026',
+                      },
+                      {
+                        label: 'Time',
+                        value: localWhen
+                          ? `${localWhen.timeLabel} · ${localWhen.timezoneLabel}`
+                          : '2:00 PM · EDT',
+                      },
                       { label: 'Duration', value: WEBINAR.durationLabel },
                       { label: 'Format', value: 'Google Meet (link sent by email)' },
                     ].map(({ label, value }) => (
@@ -244,7 +259,8 @@ export default function WebinarPage() {
                       <p className="text-xl font-bold text-gray-900">You&apos;re registered!</p>
                       <p className="text-base text-gray-500 max-w-sm leading-relaxed">
                         Check your inbox for the confirmation email and Google Meet invite. See you on{' '}
-                        {WEBINAR.dateLabel}.
+                        {localWhen?.dateLabel ?? 'August 6, 2026'}
+                        {localWhen ? ` at ${localWhen.timeLabel} (${localWhen.timezoneLabel})` : ''}.
                       </p>
                       <button
                         type="button"

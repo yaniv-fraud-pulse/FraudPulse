@@ -11,6 +11,12 @@
       "source": "/features/",
       "destination": "/solutions/",
       "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "fraud-pulse.com" }],
+      "destination": "https://www.fraud-pulse.com/:path*",
+      "permanent": true
     }
   ]
 }

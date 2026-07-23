@@ -1,11 +1,13 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import type { Metadata } from 'next';
+import { pageMetadata } from '../lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Terms of Service | FraudPulse',
   description: 'FraudPulse terms of service and usage agreement.',
-};
+  path: '/terms/',
+});
 
 export default function Terms() {
   return (

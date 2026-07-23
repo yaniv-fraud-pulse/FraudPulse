@@ -1,18 +1,64 @@
+import type { Metadata } from 'next';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import JsonLd from '../../components/JsonLd';
 import Link from 'next/link';
 import { Reveal } from '../../components/Reveal';
 import { getPost, posts } from '../../lib/blog';
+import { SITE_URL } from '../../lib/site';
 
 export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const post = getPost(slug);
+  if (!post) return {};
+
+  const path = `/blog/${post.slug}/`;
+  const url = `${SITE_URL}${path}`;
+
+  return {
+    title: `${post.title} | FraudPulse`,
+    description: post.excerpt,
+    alternates: {
+      canonical: path,
+    },
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url,
+      siteName: 'FraudPulse',
+      type: 'article',
+      publishedTime: new Date(post.date).toISOString(),
+      modifiedTime: new Date(post.updatedAt ?? post.date).toISOString(),
+      authors: [post.author],
+      ...(post.image ? { images: [{ url: post.image }] } : {}),
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+    },
+  };
 }
 
 const categoryColors: Record<string, { bg: string; text: string }> = {
   Product:   { bg: 'rgba(91,168,180,0.12)',   text: '#4a96a3' },
   Education: { bg: 'rgba(125,107,160,0.12)',  text: '#7D6BA0' },
   News:      { bg: 'rgba(34,197,94,0.1)',     text: '#16a34a' },
+  Guide:     { bg: 'rgba(91,168,180,0.12)',   text: '#4a96a3' },
 };
+
+function toIsoDate(label: string): string {
+  const d = new Date(label);
+  return Number.isNaN(d.getTime()) ? label : d.toISOString();
+}
 
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -24,9 +70,57 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
   const cat = categoryColors[post.category] ?? categoryColors.Product;
   const related = posts.filter((p) => p.slug !== slug).slice(0, 2);
+  const updatedAt = post.updatedAt ?? post.date;
+  const postUrl = `${SITE_URL}/blog/${post.slug}/`;
+
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: toIsoDate(post.date),
+    dateModified: toIsoDate(updatedAt),
+    author: {
+      '@type': 'Person',
+      name: post.author,
+      jobTitle: post.authorRole,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'FraudPulse',
+      url: SITE_URL,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SITE_URL}/logo-light.svg`,
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': postUrl,
+    },
+    url: postUrl,
+    ...(post.image ? { image: post.image.startsWith('http') ? post.image : `${SITE_URL}${post.image}` } : {}),
+  };
+
+  const faqSchema = post.faqs?.length
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: post.faqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.q,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.a,
+          },
+        })),
+      }
+    : null;
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
+      <JsonLd data={articleSchema} />
+      {faqSchema ? <JsonLd data={faqSchema} /> : null}
       <Header />
 
       <main className="flex-grow">
@@ -62,7 +156,17 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                 >
                   {post.category}
                 </span>
-                <span className="text-[0.8125rem] text-gray-400">{post.date}</span>
+                <span className="text-[0.8125rem] text-gray-400">
+                  Published {post.date}
+                </span>
+                {updatedAt !== post.date && (
+                  <>
+                    <span className="text-[0.8125rem] text-gray-400">·</span>
+                    <span className="text-[0.8125rem] text-gray-400">
+                      Last updated {updatedAt}
+                    </span>
+                  </>
+                )}
                 <span className="text-[0.8125rem] text-gray-400">·</span>
                 <span className="text-[0.8125rem] text-gray-400">{post.readTime}</span>
               </div>
@@ -89,7 +193,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                   className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-[0.75rem] text-white shrink-0"
                   style={{ background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)' }}
                 >
-                  FP
+                  IH
                 </div>
                 <div>
                   <p className="text-[0.875rem] font-semibold text-gray-800">{post.author}</p>
@@ -124,6 +228,22 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
           </Reveal>
+
+          {post.faqs && post.faqs.length > 0 && (
+            <div className="max-w-3xl mx-auto mt-16 pt-12 border-t" style={{ borderColor: '#e5e7eb' }}>
+              <h2 className="font-bold text-gray-900 text-[1.5rem] mb-8 tracking-[-0.02em]">
+                Frequently asked questions
+              </h2>
+              <div className="flex flex-col gap-6">
+                {post.faqs.map((faq) => (
+                  <div key={faq.q}>
+                    <h3 className="font-semibold text-gray-900 text-[1.0625rem] mb-2">{faq.q}</h3>
+                    <p className="text-[1.0625rem] leading-[1.75] text-gray-600">{faq.a}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </section>
 
         {/* ── Related posts ── */}

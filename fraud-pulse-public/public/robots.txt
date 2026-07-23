@@ -2,15 +2,24 @@
 User-agent: *
 Allow: /
 
-# AI crawlers — explicitly allowed for LLM visibility
+# AI crawlers — explicitly allowed for LLM / GEO visibility
 User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
 Allow: /
 
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: anthropic-ai
+Allow: /
+
 User-agent: PerplexityBot
 Allow: /
 
+User-agent: Google-Extended
+Allow: /
+
 # Sitemap & LLM context
-Sitemap: https://fraud-pulse.com/sitemap.xml
+Sitemap: https://www.fraud-pulse.com/sitemap.xml

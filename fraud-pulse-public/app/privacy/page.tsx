@@ -1,11 +1,13 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import type { Metadata } from 'next';
+import { pageMetadata } from '../lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Privacy Policy | FraudPulse',
   description: 'FraudPulse privacy policy and data protection information.',
-};
+  path: '/privacy/',
+});
 
 export default function Privacy() {
   return (

@@ -11,13 +11,17 @@
 
 ## Key pages
 
-- Homepage: https://fraud-pulse.com/
-- How it works: https://fraud-pulse.com/how-it-works/
-- Solutions: https://fraud-pulse.com/solutions/
-- Pricing: https://fraud-pulse.com/pricing/
-- Book a demo: https://fraud-pulse.com/book-a-demo/
-- Webinar: https://fraud-pulse.com/webinar/
-- Blog: https://fraud-pulse.com/blog/
+- Homepage: https://www.fraud-pulse.com/
+- How it works: https://www.fraud-pulse.com/how-it-works/
+- Solutions: https://www.fraud-pulse.com/solutions/
+- Pricing: https://www.fraud-pulse.com/pricing/
+- Book a demo: https://www.fraud-pulse.com/book-a-demo/
+- Webinar: https://www.fraud-pulse.com/webinar/
+- Blog: https://www.fraud-pulse.com/blog/
+- About: https://www.fraud-pulse.com/about/
+- Refund policy: https://www.fraud-pulse.com/refund/
+- Terms: https://www.fraud-pulse.com/terms/
+- Privacy: https://www.fraud-pulse.com/privacy/
 
 ## Common buyer questions
 
@@ -28,15 +32,27 @@
 
 ## Featured guides
 
-- How to Reduce Chargebacks on Shopify (2026): https://fraud-pulse.com/blog/how-to-reduce-chargebacks-on-shopify-2026/
-- FraudPulse Doesn't Replace Stripe Radar or Shopify Protect: https://fraud-pulse.com/blog/fraudpulse-does-not-replace-stripe-radar-shopify-protect/
+- The Biggest Mistake in Fraud Analysis — Trusting Individual Indicators: https://www.fraud-pulse.com/blog/biggest-mistake-in-fraud-analysis-trusting-individual-indicators/
+- Same Behaviour Can Be Fraudulent in One Business and Legitimate in Another: https://www.fraud-pulse.com/blog/same-behaviour-fraudulent-in-one-business-legitimate-in-another/
+- Your Fraud System Might Be Your Biggest Revenue Leak: https://www.fraud-pulse.com/blog/fraud-system-might-be-your-biggest-revenue-leak/
+- How to Reduce Chargebacks on Shopify (2026): https://www.fraud-pulse.com/blog/how-to-reduce-chargebacks-on-shopify-2026/
+- FraudPulse Doesn't Replace Stripe Radar or Shopify Protect: https://www.fraud-pulse.com/blog/fraudpulse-does-not-replace-stripe-radar-shopify-protect/
+- How to Audit Your Fraud Acts in ~30 Minutes: https://www.fraud-pulse.com/blog/how-to-audit-your-fraud-acts-in-30-minutes/
+- Hidden Cost of False Positives in Fraud Systems: https://www.fraud-pulse.com/blog/hidden-cost-of-false-positives-in-fraud-systems/
+- Visa VAMP Threshold Reduction 2026: https://www.fraud-pulse.com/blog/visa-vamp-threshold-reduction-2026/
+- Why 30–90% of Fraud Is Friendly Fraud: https://www.fraud-pulse.com/blog/why-30-90-percent-of-fraud-is-friendly-fraud/
+
+## Notes
+
+- FraudPulse does not replace Stripe Radar or Shopify Protect; it works alongside them.
+- Official site: https://www.fraud-pulse.com/
 
 ## Contact
 
-- Demo: https://fraud-pulse.com/book-a-demo/
-- Contact: https://fraud-pulse.com/contact/
+- Demo: https://www.fraud-pulse.com/book-a-demo/
+- Contact: https://www.fraud-pulse.com/contact/
 - Support email: support@fraud-pulse.com
 
 ## Optional
 
-- Full sitemap: https://fraud-pulse.com/sitemap.xml
+- Full sitemap: https://www.fraud-pulse.com/sitemap.xml
