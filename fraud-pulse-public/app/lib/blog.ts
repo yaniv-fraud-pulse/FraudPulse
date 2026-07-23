@@ -524,7 +524,7 @@ export const posts: BlogPost[] = [
     readTime: '4 min read',
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
-    image: 'https://media.licdn.com/dms/image/v2/D4D22AQH839gc-3EIww/feedshare-shrink_800/B4DZ8c4uGsI8Ac-/0/1782896059072?e=1784764800&v=beta&t=IidfUObfiWoPSIqZX2HyqsBIdB3OfZKQ-xYqOebbBkY',
+    image: 'https://media.licdn.com/dms/image/v2/D4D22AQH839gc-3EIww/feedshare-shrink_800/B4DZ8c4uGsI8Ac-/0/1782896059072?e=1786579200&v=beta&t=fFZMkeHDNA13gTO-tRfDYyo6LMsCSMxzlAvIhTsa_eE',
     content: `
 <p>One of the biggest misconceptions we hear is that FraudPulse replaces fraud consoles such as Stripe Radar or Shopify Protect.</p>
 
@@ -585,7 +585,7 @@ export const posts: BlogPost[] = [
     readTime: '4 min read',
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
-    image: 'https://media.licdn.com/dms/image/v2/D4D22AQHXFbMKNLSCsw/feedshare-shrink_800/B4DZ8UIWJwK0Ac-/0/1782749160306?e=1784764800&v=beta&t=Tk_q8RT1M-6CFizSD7YIlyxn5GXzA0NcZybZZiDA1aM',
+    image: 'https://media.licdn.com/dms/image/v2/D4D22AQHXFbMKNLSCsw/feedshare-image-high-res/B4DZ8UIWJwK0AU-/0/1782749160306?e=1786579200&v=beta&t=TQ5f2mdqPrL4y-MLxwapo8q5fOu8N67lBvHmAnNipko',
     content: `
 <p>One of the biggest fraud-related changes this year was a threshold. On April 1st, Visa reduced the VAMP excessive merchant threshold from 2.20% to 1.50%.</p>
 
@@ -641,7 +641,7 @@ export const posts: BlogPost[] = [
     readTime: '5 min read',
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
-    image: 'https://media.licdn.com/dms/image/v2/D4D22AQHXyJcO0P1qiw/feedshare-shrink_800/B4DZ5lr9b1KgAc-/0/1779822483433?e=1784764800&v=beta&t=l8SH47XWgRiARGhRh6jv1QEddQnIPYn66flFWVZetwU',
+    image: 'https://media.licdn.com/dms/image/v2/D4D22AQHXyJcO0P1qiw/feedshare-shrink_800/B4DZ5lr9b1KgAc-/0/1779822483433?e=1786579200&v=beta&t=3b-Vj74fX9vaSMmnSkmEFlqCJt5DpFDBbIUb7L6A7Fw',
     content: `
 <p>One of the most underestimated problems in fraud prevention is false positives.</p>
 
@@ -701,7 +701,7 @@ export const posts: BlogPost[] = [
     readTime: '5 min read',
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
-    image: 'https://media.licdn.com/dms/image/v2/D4D22AQESt2xzYhmoEA/feedshare-shrink_800/B4DZ6CNmwcKEAc-/0/1780301065476?e=1784764800&v=beta&t=EdLyBh_BSW_jN8IzYAjW87-XNC_OkiqQqA4KuveI6lk',
+    image: 'https://media.licdn.com/dms/image/v2/D4D22AQESt2xzYhmoEA/feedshare-image-high-res/B4DZ6CNmwcKEAU-/0/1780301065476?e=1786579200&v=beta&t=2R3Q1wpQyJBxLhnsHue3U6mRQGpd0jAc4LySHDlKElI',
     content: `
 <p>One of the most common mistakes I see in eCommerce fraud prevention is overfitting.</p>
 
@@ -750,7 +750,7 @@ export const posts: BlogPost[] = [
     readTime: '3 min read',
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
-    image: 'https://media.licdn.com/dms/image/v2/D4D22AQHkGzx-Y9sLmg/feedshare-shrink_800/B4DZ6Rv1lOGcAc-/0/1780561698045?e=1784764800&v=beta&t=a3UcOmDPb3Ur_fGn9KQXNZXWK5cXCxpvJPLMvTRTSlc',
+    image: '/blog/dashboard.png',
     content: `
 <p>The idea behind FraudPulse is to make fraud analysis usable from day one.</p>
 
@@ -808,7 +808,7 @@ export const posts: BlogPost[] = [
     readTime: '5 min read',
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
-    image: 'https://media.licdn.com/dms/image/v2/D4D22AQHkGzx-Y9sLmg/feedshare-shrink_800/B4DZ6Rv1lOGcAc-/0/1780561698045?e=1784764800&v=beta&t=a3UcOmDPb3Ur_fGn9KQXNZXWK5cXCxpvJPLMvTRTSlc',
+    image: 'https://media.licdn.com/dms/image/v2/D4D22AQHkGzx-Y9sLmg/feedshare-image-high-res/B4DZ6Rv1lOGcAU-/0/1780561698045?e=1786579200&v=beta&t=3KlNbcM_MXOA7UDjavPAKfbyz5xrbYWekcM9c9R9yZc',
     content: `
 <p>After 12 years of working in fintech, across fraud, risk, and data, one thing has become very clear: the problem is rarely the system itself. It's how it's understood.</p>
 
@@ -860,7 +860,7 @@ export const posts: BlogPost[] = [
     readTime: '5 min read',
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
-    image: 'https://media.licdn.com/dms/image/v2/D4D22AQHSxSR1E2JcQw/feedshare-shrink_800/B4DZ7P53aBKAAc-/0/1781604513745?e=1784764800&v=beta&t=MTauqmv98okadHmfBVejJSH9SxM1xjJxo_6ZQykRX7I',
+    image: 'https://media.licdn.com/dms/image/v2/D4D22AQHSxSR1E2JcQw/feedshare-image-high-res/B4DZ7P53aBKAAU-/0/1781604513745?e=1786579200&v=beta&t=Kra_W0r1o0XGPW4dbD0XUX5SQMtoX0dYsZtYRDfe6DQ',
     content: `
 <p>Fraud losses are up 25%, deepfake attempts have increased by 94%, and sophisticated fraud has grown by 180%. 2026 is becoming about <em>better fraud</em>.</p>
 
