@@ -153,21 +153,12 @@ export default function WebinarPage() {
               <Reveal animation="anim-scaleIn" delay={150}>
                 <div
                   id="register"
-                  className="rounded-2xl p-8 sm:p-10 bg-white border sticky top-28"
+                  className="rounded-2xl bg-white border sticky top-28"
                   style={{
                     borderColor: '#e5e7eb',
                     boxShadow: '0 8px 40px rgba(0,0,0,0.08)',
                   }}
                 >
-                  <div className="mb-7">
-                    <h2 className="text-[1.5rem] sm:text-[1.75rem] font-bold text-gray-900 tracking-[-0.03em]">
-                      Reserve your seat
-                    </h2>
-                    <p className="text-base text-gray-400 mt-2">
-                      Free to join · Confirmation + Meet link by email
-                    </p>
-                  </div>
-
                   <Script src={WEBINAR.hubspot.scriptSrc} strategy="lazyOnload" />
                   <div
                     className="hs-form-frame"
