@@ -2,91 +2,18 @@
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import Link from 'next/link';
 import Image from 'next/image';
+import Script from 'next/script';
 import { useEffect, useState } from 'react';
 import { Reveal } from '../components/Reveal';
-import {
-  WEBINAR,
-  WEBINAR_API_ENDPOINT,
-  buildRegistrationPayload,
-  formatWebinarLocalWhen,
-  type WebinarLocalWhen,
-} from '../lib/webinar';
-
-const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+import { WEBINAR, formatWebinarLocalWhen, type WebinarLocalWhen } from '../lib/webinar';
 
 export default function WebinarPage() {
-  const [form, setForm] = useState({
-    name: '',
-    email: '',
-    company: '',
-    job_title: '',
-    consent: false,
-  });
-  const [emailError, setEmailError] = useState('');
-  const [consentError, setConsentError] = useState('');
-  const [submitting, setSubmitting] = useState(false);
-  const [result, setResult] = useState<'success' | 'error' | null>(null);
   const [localWhen, setLocalWhen] = useState<WebinarLocalWhen | null>(null);
 
   useEffect(() => {
     setLocalWhen(formatWebinarLocalWhen());
   }, []);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value, type, checked } = e.target;
-    setForm((prev) => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value,
-    }));
-    if (name === 'email') setEmailError('');
-    if (name === 'consent') setConsentError('');
-  };
-
-  const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    if (!EMAIL_REGEX.test(form.email)) {
-      setEmailError('Please enter a valid email address');
-      return;
-    }
-    if (!form.consent) {
-      setConsentError('Please accept to continue.');
-      return;
-    }
-
-    setSubmitting(true);
-    setResult(null);
-    try {
-      const payload = buildRegistrationPayload(form);
-      const res = await fetch(WEBINAR_API_ENDPOINT, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      });
-      if (!res.ok) throw new Error('Failed');
-      setResult('success');
-      setForm({ name: '', email: '', company: '', job_title: '', consent: false });
-      setEmailError('');
-      setConsentError('');
-    } catch {
-      setResult('error');
-    } finally {
-      setSubmitting(false);
-    }
-  };
-
-  const inputClass =
-    'w-full h-14 rounded-xl px-4 text-base text-gray-900 outline-none transition-all bg-white';
-  const inputStyle = { border: '1px solid #e5e7eb' };
-  const onFocus = (e: React.FocusEvent<HTMLInputElement>) => {
-    e.currentTarget.style.borderColor = '#5ba8b4';
-    e.currentTarget.style.boxShadow = '0 0 0 3px rgba(91,168,180,0.1)';
-  };
-  const onBlur = (e: React.FocusEvent<HTMLInputElement>) => {
-    e.currentTarget.style.borderColor = '#e5e7eb';
-    e.currentTarget.style.boxShadow = 'none';
-  };
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
@@ -222,7 +149,7 @@ export default function WebinarPage() {
                 </Reveal>
               </div>
 
-              {/* Right: form */}
+              {/* Right: HubSpot form */}
               <Reveal animation="anim-scaleIn" delay={150}>
                 <div
                   id="register"
@@ -232,188 +159,22 @@ export default function WebinarPage() {
                     boxShadow: '0 8px 40px rgba(0,0,0,0.08)',
                   }}
                 >
-                  {result === 'success' ? (
-                    <div className="flex flex-col items-center justify-center text-center gap-4 py-10">
-                      <div
-                        className="w-14 h-14 rounded-full flex items-center justify-center"
-                        style={{
-                          background: 'rgba(91,168,180,0.1)',
-                          border: '1px solid rgba(91,168,180,0.25)',
-                        }}
-                      >
-                        <svg
-                          className="w-7 h-7"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          style={{ color: '#5ba8b4' }}
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                      </div>
-                      <p className="text-xl font-bold text-gray-900">You&apos;re registered!</p>
-                      <p className="text-base text-gray-500 max-w-sm leading-relaxed">
-                        Check your inbox for the confirmation email and Google Meet invite. See you on{' '}
-                        {localWhen?.dateLabel ?? 'August 6, 2026'}
-                        {localWhen ? ` at ${localWhen.timeLabel} (${localWhen.timezoneLabel})` : ''}.
-                      </p>
-                      <button
-                        type="button"
-                        onClick={() => setResult(null)}
-                        className="text-base text-[#5ba8b4] hover:underline mt-2"
-                      >
-                        Register another person
-                      </button>
-                    </div>
-                  ) : (
-                    <>
-                      <div className="mb-7">
-                        <h2 className="text-[1.5rem] sm:text-[1.75rem] font-bold text-gray-900 tracking-[-0.03em]">
-                          Reserve your seat
-                        </h2>
-                        <p className="text-base text-gray-400 mt-2">
-                          Free to join · Confirmation + Meet link by email
-                        </p>
-                      </div>
+                  <div className="mb-7">
+                    <h2 className="text-[1.5rem] sm:text-[1.75rem] font-bold text-gray-900 tracking-[-0.03em]">
+                      Reserve your seat
+                    </h2>
+                    <p className="text-base text-gray-400 mt-2">
+                      Free to join · Confirmation + Meet link by email
+                    </p>
+                  </div>
 
-                      <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-                        <div>
-                          <label
-                            htmlFor="name"
-                            className="block text-sm font-semibold uppercase tracking-wider mb-2 text-gray-400"
-                          >
-                            Full Name *
-                          </label>
-                          <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            required
-                            value={form.name}
-                            onChange={handleChange}
-                            placeholder="Jane Smith"
-                            className={inputClass}
-                            style={inputStyle}
-                            onFocus={onFocus}
-                            onBlur={onBlur}
-                          />
-                        </div>
-                        <div>
-                          <label
-                            htmlFor="email"
-                            className="block text-sm font-semibold uppercase tracking-wider mb-2 text-gray-400"
-                          >
-                            Work Email *
-                          </label>
-                          <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            required
-                            value={form.email}
-                            onChange={handleChange}
-                            placeholder="jane@company.com"
-                            className={inputClass}
-                            style={inputStyle}
-                            onFocus={onFocus}
-                            onBlur={onBlur}
-                          />
-                          {emailError && (
-                            <p className="text-sm text-red-500 mt-1">{emailError}</p>
-                          )}
-                        </div>
-                        <div>
-                          <label
-                            htmlFor="company"
-                            className="block text-sm font-semibold uppercase tracking-wider mb-2 text-gray-400"
-                          >
-                            Company *
-                          </label>
-                          <input
-                            type="text"
-                            id="company"
-                            name="company"
-                            required
-                            value={form.company}
-                            onChange={handleChange}
-                            placeholder="Acme Inc."
-                            className={inputClass}
-                            style={inputStyle}
-                            onFocus={onFocus}
-                            onBlur={onBlur}
-                          />
-                        </div>
-                        <div>
-                          <label
-                            htmlFor="job_title"
-                            className="block text-sm font-semibold uppercase tracking-wider mb-2 text-gray-400"
-                          >
-                            Job Title
-                          </label>
-                          <input
-                            type="text"
-                            id="job_title"
-                            name="job_title"
-                            value={form.job_title}
-                            onChange={handleChange}
-                            placeholder="Head of Risk"
-                            className={inputClass}
-                            style={inputStyle}
-                            onFocus={onFocus}
-                            onBlur={onBlur}
-                          />
-                        </div>
-
-                        <label className="flex items-start gap-3 cursor-pointer">
-                          <input
-                            type="checkbox"
-                            name="consent"
-                            checked={form.consent}
-                            onChange={handleChange}
-                            className="mt-1 w-4 h-4 rounded accent-[#5ba8b4]"
-                          />
-                          <span className="text-[0.875rem] leading-[1.55] text-gray-500">
-                            I agree to receive the webinar invite and related FraudPulse emails. See
-                            our{' '}
-                            <Link href="/privacy/" className="text-[#5ba8b4] hover:underline">
-                              Privacy Policy
-                            </Link>
-                            .
-                          </span>
-                        </label>
-                        {consentError && (
-                          <p className="text-sm text-red-500 -mt-2">{consentError}</p>
-                        )}
-
-                        {result === 'error' && (
-                          <p className="text-base text-red-500">
-                            Something went wrong. Please try again or{' '}
-                            <Link href="/contact/" className="underline">
-                              contact us
-                            </Link>
-                            .
-                          </p>
-                        )}
-
-                        <button
-                          type="submit"
-                          disabled={submitting}
-                          className="inline-flex h-14 w-full items-center justify-center rounded-[10px] text-base sm:text-lg font-bold transition-all hover:-translate-y-px text-white disabled:opacity-60"
-                          style={{
-                            background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',
-                            boxShadow: '0 4px 20px rgba(91,168,180,0.3)',
-                          }}
-                        >
-                          {submitting ? 'Registering…' : 'Register for free'}
-                        </button>
-                      </form>
-                    </>
-                  )}
+                  <Script src={WEBINAR.hubspot.scriptSrc} strategy="lazyOnload" />
+                  <div
+                    className="hs-form-frame"
+                    data-region={WEBINAR.hubspot.region}
+                    data-form-id={WEBINAR.hubspot.formId}
+                    data-portal-id={WEBINAR.hubspot.portalId}
+                  />
                 </div>
               </Reveal>
             </div>

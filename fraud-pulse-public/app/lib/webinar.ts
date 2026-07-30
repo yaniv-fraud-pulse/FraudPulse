@@ -1,5 +1,3 @@
-import { SITE_URL } from './site';
-
 /** Update these before launch. */
 export const WEBINAR = {
   id: 'fraudpulse-webinar-2026-08-04',
@@ -11,7 +9,13 @@ export const WEBINAR = {
   startsAtIso: '2026-08-06T14:00:00-04:00',
   endsAtIso: '2026-08-06T14:30:00-04:00',
   durationLabel: '30 minutes + Q&A',
-  meetUrl: 'https://meet.google.com/xxx-xxxx-xxx',
+  meetUrl: 'https://meet.google.com/wrk-xocs-etz',
+  hubspot: {
+    portalId: '246448181',
+    formId: '2a819781-1590-46b2-aa13-fe6ce46ca1d7',
+    region: 'na2',
+    scriptSrc: 'https://js-na2.hsforms.net/forms/embed/246448181.js',
+  },
   speakers: [
     {
       name: 'Idan Hayon',
@@ -27,35 +31,6 @@ export const WEBINAR = {
     'Bring your specific questions, edge cases, and chargeback headaches.',
   ],
 } as const;
-
-export const WEBINAR_API_ENDPOINT =
-  'https://fraudpulse-api-961740448824.us-central1.run.app/api/v1/webinar/register';
-
-export type WebinarRegistrationPayload = {
-  webinar_id: string;
-  name: string;
-  email: string;
-  company: string;
-  job_title?: string;
-  consent: boolean;
-  page_url: string;
-};
-
-export function buildRegistrationPayload(
-  form: Omit<WebinarRegistrationPayload, 'webinar_id' | 'page_url' | 'consent'> & {
-    consent: boolean;
-  },
-): WebinarRegistrationPayload {
-  return {
-    webinar_id: WEBINAR.id,
-    name: form.name.trim(),
-    email: form.email.trim().toLowerCase(),
-    company: form.company.trim(),
-    job_title: form.job_title?.trim() || undefined,
-    consent: form.consent,
-    page_url: `${SITE_URL}/webinar/`,
-  };
-}
 
 export type WebinarLocalWhen = {
   dateLabel: string;
