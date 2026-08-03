@@ -21,6 +21,186 @@ export type BlogPost = {
 
 export const posts: BlogPost[] = [
   {
+    slug: 'biggest-revenue-leak-might-be-false-positives',
+    title:
+      'The biggest revenue leak in your business might not be fraud. It might be false positives.',
+    excerpt:
+      'Most merchants know exactly how much fraud they lost last month. Very few know how much revenue they lost by declining legitimate customers — the hidden cost of fraud prevention.',
+    category: 'Education',
+    date: 'July 31, 2026',
+    readTime: '5 min read',
+    author: 'Idan Hayon',
+    authorRole: 'Co-Founder & CEO',
+    image:
+      'https://media.licdn.com/dms/image/v2/D5622AQHZllHg7Uw3ow/feedshare-shrink_800/B56Z.u0GPzK0Ag-/0/1785344320800?e=1787184000&v=beta&t=nm8DNqlAIgOdeFEkw89sVaEBH7TseerDV3HMB1M5jy8',
+    content: `
+<p>Most merchants can tell you exactly how much fraud they lost last month. Very few can tell you how much revenue they lost by declining legitimate customers.</p>
+
+<p>That’s the hidden cost of fraud prevention.</p>
+
+<p>Every fraud act is a balance between catching more fraud and approving more legitimate customers. Push too far in one direction, and you’ll stop more fraud.</p>
+
+<p>Push too far in the other, and you’ll lose good customers.</p>
+
+<p>Every fraud act is really a question of precision.</p>
+
+<ul>
+  <li>How aggressively do you want to detect potential fraud?</li>
+  <li>How many legitimate customers are you willing to inconvenience in the process?</li>
+</ul>
+
+<p>The reason is that fraud losses are visible. Chargebacks show up in reports, disputes get tracked, and losses are measurable.</p>
+
+<p><strong>False positives are not.</strong></p>
+
+<p>You don’t see the customer who failed verification once and left, got declined and bought somewhere else, abandoned checkout after extra friction, and never came back after a bad payment experience. That revenue rarely appears as lost, so it gets ignored.</p>
+
+<p>Over time, it’s easy to optimise for the metric you can see.</p>
+
+<p>So after every fraud incident, another rule gets added, another threshold gets tightened, and the system becomes a little more aggressive. Fraud might go down — but so can conversions, revenue, and customer lifetime value.</p>
+
+<p>The best fraud strategies aim to make the best decisions. That means asking questions…</p>
+
+<ul>
+  <li>Which fraud rules are preventing fraud?</li>
+  <li>Which ones are blocking good customers?</li>
+  <li>What’s the commercial impact of every decision we’re making?</li>
+</ul>
+
+<p>Because those costs are spread across marketing, support, product, and commercial teams, they’re rarely traced back to the fraud decision that caused them.</p>
+
+<p>The irony is that the fraud system is succeeding.</p>
+
+<p>It’s blocking exactly the transactions it was trained or configured to block. The question is whether those are the right decisions for the business.</p>
+
+<p>The best fraud strategies treat every decision as a balance between risk and customer experience. Preventing fraud is important — but protecting good customers is just as important.</p>
+
+<p>If you’re looking to reduce fraud without sacrificing legitimate customers or revenue, we’re hosting a free webinar where I’ll share the frameworks I’ve used over the past decade to help merchants build more effective fraud strategies.</p>
+
+<p><a href="/webinar/">Grab your spot here</a>.</p>
+
+<p><strong>P.S.</strong> What’s costing your business more — fraud or false positives?</p>
+    `.trim(),
+    faqs: [
+      {
+        q: 'What is a false positive in fraud prevention?',
+        a: 'A false positive is a legitimate customer incorrectly flagged or declined as fraud — through a hard decline, extra verification, or friction that causes them to abandon checkout.',
+      },
+      {
+        q: 'Why are false positives harder to measure than fraud losses?',
+        a: 'Fraud shows up as chargebacks and disputes. False-positive losses are quiet: declined buyers who shop elsewhere, abandoned checkouts, and lower lifetime value that rarely appear as a single “lost revenue” line item.',
+      },
+      {
+        q: 'How should merchants balance fraud prevention and approvals?',
+        a: 'Treat every rule as a precision decision: ask which controls stop real fraud, which block good customers, and what the commercial impact is — not only whether fraud volume went down.',
+      },
+    ],
+  },
+  {
+    slug: 'balancing-fraud-prevention-with-customer-experience',
+    title:
+      '85% of e-commerce professionals say balancing fraud prevention with customer experience is one of their biggest challenges.',
+    excerpt:
+      'The real problem isn’t only the balance — it’s that most merchants can’t tell whether they’re getting it right. Chargebacks and block rates are visible; which rules help vs hurt usually isn’t.',
+    category: 'Education',
+    date: 'July 29, 2026',
+    readTime: '4 min read',
+    author: 'Idan Hayon',
+    authorRole: 'Co-Founder & CEO',
+    image:
+      'https://media.licdn.com/dms/image/v2/D4D22AQGJJ4UlJ5QIAg/feedshare-shrink_800/B4DZ.nY2QbI8Ag-/0/1785219736944?e=1787184000&v=beta&t=_nOKC2H_Cxu5iH0Li_2DEXe8NaNE9deyY1vf2inK1bQ',
+    content: `
+<p>85% of e-commerce professionals say balancing fraud prevention with customer experience is one of their biggest challenges.</p>
+
+<p>I don’t think that’s the problem. The bigger problem is that most online merchants don’t know whether they’re getting that balance right in the first place.</p>
+
+<p>They know how many chargebacks they received, how many orders were blocked, and they might even know their fraud rate. But ask questions like…</p>
+
+<ul>
+  <li>Which fraud acts are preventing fraud?</li>
+  <li>Which ones are blocking legitimate customers?</li>
+  <li>How much revenue are false positives costing us?</li>
+  <li>Has fraud changed, or has our strategy stopped keeping up?</li>
+</ul>
+
+<p>Most businesses don’t have an answer.</p>
+
+<p>So a fraud attack appears, a new act gets added, chargebacks increase, and another act gets added. A few months later, the fraud console is full of acts that nobody wants to touch because nobody knows what they’ll break. That’s just a collection of reactions.</p>
+
+<p>The best fraud teams measure how well they’re balancing fraud, customer experience, and revenue. Stopping fraud is only half the job. The other half is making sure you’re not stopping your best customers.</p>
+
+<p>If you want a clearer view of how your rules are performing — and where false positives may be costing you — <a href="/book-a-demo/">book a walkthrough</a> or <a href="/webinar/">join our free webinar</a>.</p>
+    `.trim(),
+    faqs: [
+      {
+        q: 'Why is balancing fraud prevention and customer experience so hard?',
+        a: 'Because most merchants can see chargebacks and block rates, but not which specific rules stop fraud versus which ones decline good customers — so they can’t tell if the balance is actually working.',
+      },
+      {
+        q: 'What happens when fraud rules only get added after incidents?',
+        a: 'The console fills with reactive acts that nobody wants to change, because nobody knows what removing them will break. Over time you get a pile of reactions instead of a measurable strategy.',
+      },
+      {
+        q: 'What do the best fraud teams measure beyond fraud rate?',
+        a: 'How well they balance fraud, customer experience, and revenue — including false-positive cost and whether rules still match how fraud and customers behave today.',
+      },
+    ],
+  },
+  {
+    slug: 'social-media-scams-2-1-billion-authorized-payments',
+    title: 'Consumers lost $2.1 billion to scams that started on social media last year.',
+    excerpt:
+      'Meta Facebook accounted for more reported scam losses than any other social platform — but by the time payment hits a bank or PSP, the scam often already looks like a normal authorized transaction.',
+    category: 'News',
+    date: 'July 28, 2026',
+    readTime: '4 min read',
+    author: 'Idan Hayon',
+    authorRole: 'Co-Founder & CEO',
+    image:
+      'https://media.licdn.com/dms/image/v2/D4D22AQHbA-Vz8RnivQ/feedshare-image-high-res/B4DZ.AHKEOHEAY-/0/1784560788214?e=1787184000&v=beta&t=JGEnoaZ69tPbujNQAMAUQwBRizcONudpMsqP-avXfTc',
+    content: `
+<p>Consumers lost $2.1 billion to scams that started on social media last year.</p>
+
+<p>Meta Facebook accounted for more reported scam losses than any other social media platform.</p>
+
+<p>The interesting part is where the scam ends.</p>
+
+<p>By the time the payment reaches a bank, PSP, or fraud system, the fraud has often already happened. The victim has spent days or even weeks building trust with the fraudster. They’ve been persuaded, manipulated, and convinced the payment is legitimate.</p>
+
+<p>From the payment provider’s perspective, everything can look perfectly normal.</p>
+
+<p>The customer initiates the payment, the device is recognised, authentication succeeds, and the credentials are valid. The transaction itself isn’t necessarily suspicious.</p>
+
+<p>That’s why scam prevention is becoming fundamentally different from traditional fraud prevention.</p>
+
+<p>Historically, fraud systems focused on identifying unauthorised activity. Today, one of the biggest challenges is identifying authorised payments that should never have happened.</p>
+
+<p><strong>That’s a much harder problem.</strong></p>
+
+<p>Social media platforms, banks, payment providers, and fraud vendors each see a different part of the customer journey. The challenge is connecting those signals before the money leaves the account.</p>
+
+<p>As scams become more sophisticated and fraudsters operate at greater scale, reacting after the payment is no longer enough. The focus has to move upstream.</p>
+
+<p>From simply analysing the transaction to understanding the behaviour that led to it.</p>
+
+<p>If you want to understand how fraud and dispute patterns show up in your own payment data — not only after the chargeback — <a href="/book-a-demo/">book a FraudPulse walkthrough</a>.</p>
+    `.trim(),
+    faqs: [
+      {
+        q: 'Why are social media scams hard for payment fraud systems to catch?',
+        a: 'By the time money moves, the victim often believes the payment is legitimate. Device, credentials, and authentication can all look normal — so the transaction looks authorized, not stolen-card fraud.',
+      },
+      {
+        q: 'How is scam prevention different from traditional fraud prevention?',
+        a: 'Traditional systems focus on unauthorized activity. Scam prevention increasingly means spotting authorized payments that should never have happened — a harder problem that needs upstream journey context, not only the final transaction.',
+      },
+      {
+        q: 'What does “moving upstream” mean for scam defense?',
+        a: 'Connecting signals across social platforms, banks, PSPs, and fraud tools before funds leave the account — understanding the behaviour that led to the payment, not only reacting after it clears.',
+      },
+    ],
+  },
+  {
     slug: 'biggest-mistake-in-fraud-analysis-trusting-individual-indicators',
     title: 'The biggest mistake in fraud analysis is trusting individual indicators',
     excerpt:
@@ -350,7 +530,7 @@ export const posts: BlogPost[] = [
     readTime: '5 min read',
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
-    image: 'https://media.licdn.com/dms/image/v2/D4D22AQE18G5QZA9qfA/feedshare-shrink_800/B4DZ892gdWK0Ac-/0/1783449127005?e=1785369600&v=beta&t=SGggyum7tzbTx6vUDBohI6MQ8XbiDT0V4kjO_-P8SaE',
+    image: 'https://media.licdn.com/dms/image/v2/D4D22AQE18G5QZA9qfA/feedshare-shrink_1280/B4DZ892gdWK0AM-/0/1783449127006?e=1787184000&v=beta&t=35IZj2vN7wER3P87q_B77GQj9w5Bk74NPWjdqWAUJWM',
     content: `
 <p>Most fraud teams inherit a stack that grew over time — rules added after incidents, thresholds tweaked in spreadsheets, exceptions nobody remembers approving. A quick audit brings clarity. Here is how I usually approach it in about 30 minutes.</p>
 
@@ -438,7 +618,7 @@ export const posts: BlogPost[] = [
     readTime: '4 min read',
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
-    image: 'https://media.licdn.com/dms/image/v2/D4D22AQGJlIoVpxHFSw/feedshare-image-high-res/B4DZ9C2FRzJwAU-/0/1783532901762?e=1785369600&v=beta&t=nYo_qVvTfNShgeIDjXGkG0IJnCBUNqsW8d_s9qVX7tw',
+    image: 'https://media.licdn.com/dms/image/v2/D4D22AQGJlIoVpxHFSw/feedshare-image-high-res/B4DZ9C2FRzJwAU-/0/1783532901762?e=1787184000&v=beta&t=33TZP_gRqovDt5u7Y8U2jhYM_jtTXmMQtIWYl2St-Xk',
     content: `
 <p>Most teams start with a problem — chargebacks increase, approval rates drop — and the immediate reaction is usually: let's find a tool.</p>
 

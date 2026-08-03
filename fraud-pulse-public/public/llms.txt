@@ -32,6 +32,9 @@
 
 ## Featured guides
 
+- Biggest Revenue Leak Might Be False Positives: https://www.fraud-pulse.com/blog/biggest-revenue-leak-might-be-false-positives/
+- Balancing Fraud Prevention with Customer Experience: https://www.fraud-pulse.com/blog/balancing-fraud-prevention-with-customer-experience/
+- Social Media Scams & Authorized Payments ($2.1B): https://www.fraud-pulse.com/blog/social-media-scams-2-1-billion-authorized-payments/
 - The Biggest Mistake in Fraud Analysis — Trusting Individual Indicators: https://www.fraud-pulse.com/blog/biggest-mistake-in-fraud-analysis-trusting-individual-indicators/
 - Same Behaviour Can Be Fraudulent in One Business and Legitimate in Another: https://www.fraud-pulse.com/blog/same-behaviour-fraudulent-in-one-business-legitimate-in-another/
 - Your Fraud System Might Be Your Biggest Revenue Leak: https://www.fraud-pulse.com/blog/fraud-system-might-be-your-biggest-revenue-leak/
