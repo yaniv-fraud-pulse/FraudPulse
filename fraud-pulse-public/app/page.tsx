@@ -359,7 +359,7 @@ export default function Home() {
             name: 'FraudPulse',
             url: SITE_URL,
             description:
-              'FraudPulse tells merchants exactly which fraud rules to change in Stripe and Shopify to reduce chargebacks and increase approvals.',
+              'FraudPulse tells merchants exactly which fraud rules to change in Payment Gateway to reduce chargebacks and increase approvals.',
           }),
         }}
       />
@@ -412,19 +412,8 @@ export default function Home() {
             </h1>
 
             <p className="text-[1.25rem] leading-[1.75] mb-3 max-w-[760px] mx-auto text-gray-900 font-semibold anim-fadeUp delay-300">
-              FraudPulse tells you exactly which fraud rules to change in{' '}
-              <span className="inline-flex items-center gap-1.5">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="https://cdn.simpleicons.org/stripe/635BFF" alt="" width={16} height={16} className="inline-block relative -top-px" />
-                <span style={{ color: '#635BFF' }}>Stripe</span>
-              </span>
-              {' '}&amp;{' '}
-              <span className="inline-flex items-center gap-1.5">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="https://cdn.simpleicons.org/shopify/95BF47" alt="" width={16} height={16} className="inline-block relative -top-px" />
-                <span style={{ color: '#95BF47' }}>Shopify</span>
-              </span>
-              {' '}to reduce chargebacks and increase approvals.
+              FraudPulse tells you exactly which fraud rules to change in Your Payment Gateway
+             to reduce chargebacks and increase approvals.
             </p>
 
             <p className="text-[1.0625rem] leading-[1.75] mb-8 max-w-[620px] mx-auto text-gray-500 anim-fadeUp delay-400">

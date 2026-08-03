@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import { SITE_URL } from "../lib/site";
 
 export const metadata: Metadata = {
-  title: "How FraudPulse Works — Exactly Which Fraud Rules to Change in Stripe & Shopify",
+  title: "How FraudPulse Works — Exactly Which Fraud Rules to Change in Payment Gateway",
   description: "FraudPulse connects to Stripe and Shopify, analyzes your fraud and transaction patterns, and delivers prioritized rule changes with estimated chargeback and revenue impact. Implement in days, not months.",
   keywords: "how FraudPulse works, Stripe Radar rules, Shopify Protect rules, fraud rule recommendations, reduce chargebacks Stripe, reduce chargebacks Shopify, fraud pattern analysis, chargeback root cause",
   alternates: {
     canonical: "/how-it-works/",
   },
   openGraph: {
-    title: "How FraudPulse Works — Exactly Which Fraud Rules to Change in Stripe & Shopify",
+    title: "How FraudPulse Works — Exactly Which Fraud Rules to Change in Payment Gateway",
     description: "Connect Stripe or Shopify → analyze fraud patterns → receive prioritized rule changes → implement and track improvements. No rip and replace.",
     url: `${SITE_URL}/how-it-works/`,
     siteName: "FraudPulse",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "How FraudPulse Works — Fraud Rule Changes for Stripe & Shopify",
+    title: "How FraudPulse Works — Fraud Rule Changes for Payment Gateway",
     description: "Connect Stripe or Shopify → analyze fraud patterns → receive prioritized rule changes → implement and track improvements.",
   },
 };

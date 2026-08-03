@@ -94,9 +94,7 @@ export default function Solutions() {
               </Reveal>
               <Reveal animation="anim-fadeUp" delay={150}>
                 <p className="text-[1.25rem] leading-[1.75] max-w-[720px] mx-auto text-gray-600 font-semibold mb-3">
-                  FraudPulse tells you exactly which fraud rules to change in{' '}
-                  <strong className="text-gray-900">Stripe</strong> &amp;{' '}
-                  <strong className="text-gray-900">Shopify</strong> to reduce chargebacks and increase approvals.
+                    FraudPulse tells you exactly which fraud rules to change in Your Payment Gateway to reduce chargebacks and increase approvals.
                 </p>
                 <p className="text-[1.0625rem] leading-[1.75] max-w-[600px] mx-auto text-gray-500">
                   Get actionable fraud insights in days not dashboards you never use.

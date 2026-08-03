@@ -25,15 +25,15 @@ const organizationSchema = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "FraudPulse — Reduce Chargebacks & Increase Approvals in Stripe & Shopify",
-  description: "FraudPulse tells you exactly which fraud rules to change in Stripe & Shopify to reduce chargebacks and increase approvals. Get actionable fraud insights in days not dashboards you never use.",
+  title: "FraudPulse — Reduce Chargebacks & Increase Approvals in Payment Gateway",
+  description: "FraudPulse tells you exactly which fraud rules to change in Payment Gateway to reduce chargebacks and increase approvals. Get actionable fraud insights in days not dashboards you never use.",
   keywords: "reduce chargebacks, increase approval rate, Stripe Radar optimization, Shopify Protect optimization, fraud rule changes, chargeback reduction, false decline reduction, fraud intelligence platform",
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "FraudPulse — Reduce Chargebacks & Increase Approvals in Stripe & Shopify",
-    description: "FraudPulse tells you exactly which fraud rules to change in Stripe & Shopify to reduce chargebacks and increase approvals. Get actionable fraud insights in days.",
+    description: "FraudPulse tells you exactly which fraud rules to change in Payment Gateway to reduce chargebacks and increase approvals. Get actionable fraud insights in days.",
     url: SITE_URL,
     siteName: "FraudPulse",
     type: "website",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "FraudPulse — Reduce Chargebacks & Increase Approvals in Stripe & Shopify",
-    description: "FraudPulse tells you exactly which fraud rules to change in Stripe & Shopify to reduce chargebacks and increase approvals.",
+    description: "FraudPulse tells you exactly which fraud rules to change in Payment Gateway to reduce chargebacks and increase approvals.",
   },
   icons: {
     icon: "/logo-light.svg",

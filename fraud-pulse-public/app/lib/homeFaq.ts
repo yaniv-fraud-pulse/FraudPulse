@@ -7,7 +7,7 @@ export type FaqItem = {
 export const homeFaqs: FaqItem[] = [
   {
     q: 'Does FraudPulse replace Stripe Radar or Shopify Protect?',
-    a: 'No. FraudPulse does not replace Stripe Radar, Shopify Protect, or any payment processor fraud console. It sits on top of your existing stack, analyzes your transaction and chargeback data, and tells you exactly which fraud rules to change in Stripe and Shopify to reduce chargebacks and increase approvals.',
+    a: 'No. FraudPulse does not replace Stripe Radar, Shopify Protect, or any payment processor fraud console. It sits on top of your existing stack, analyzes your transaction and chargeback data, and tells you exactly which fraud rules to change in Payment Gateway to reduce chargebacks and increase approvals.',
   },
   {
     q: 'How does FraudPulse reduce chargebacks?',
