@@ -5,8 +5,14 @@ import Footer from '../components/Footer';
 import Link from 'next/link';
 import Script from 'next/script';
 import { Reveal } from '../components/Reveal';
+import { captureEvent } from '../components/PostHogProvider';
+import { CAL_DEMO_THANKS_PATH, CAL_DEMO_URL } from '../lib/posthog';
+import { SITE_URL } from '../lib/site';
 
 const BOOK_A_DEMO_GA_ID = 'G-DJW8HBM574';
+
+/** Must also be set in Cal.com event → Redirect on booking (see POSTHOG_PLAN.md). */
+const CAL_BOOKING_HREF = CAL_DEMO_URL;
 
 const demoSteps = [
   { n: '1', text: 'Live walkthrough of the AI advisor surfacing patterns and recommendations.' },
@@ -88,9 +94,15 @@ export default function BookADemo() {
 
                   <div className="mt-auto pt-8 flex flex-col gap-4">
                     <a
-                      href="https://cal.com/yaniv-hayun/30min"
+                      href={CAL_BOOKING_HREF}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={() =>
+                        captureEvent('demo_cta_clicked', {
+                          page: '/book-a-demo/',
+                          destination: CAL_BOOKING_HREF,
+                        })
+                      }
                       className="inline-flex h-14 w-full items-center justify-center gap-2 rounded-[10px] text-base sm:text-lg font-bold transition-all hover:-translate-y-px text-white"
                       style={{ background: 'linear-gradient(135deg, #7d6ba0 0%, #6455a0 100%)', boxShadow: '0 4px 20px rgba(125,107,160,0.3)' }}>
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -98,6 +110,11 @@ export default function BookADemo() {
                       </svg>
                       Book a 30-Minute Demo
                     </a>
+                    {/* Cal.com success redirect target (configure in Cal dashboard): */}
+                    <p className="sr-only">
+                      After booking, redirect to {SITE_URL}
+                      {CAL_DEMO_THANKS_PATH}
+                    </p>
                     <div className="text-center">
                       <p className="text-sm sm:text-base text-gray-400">Prefer to send a message instead?{' '}
                         <Link href="/contact/" className="text-[#5ba8b4] hover:underline">Contact us</Link>

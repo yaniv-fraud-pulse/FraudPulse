@@ -3,6 +3,7 @@ import Script from "next/script";
 import { Geist_Mono } from "next/font/google";
 import "./globals.css";
 import JsonLd from "./components/JsonLd";
+import PostHogProvider from "./components/PostHogProvider";
 import { SITE_URL } from "./lib/site";
 
 const GA_MEASUREMENT_ID = "G-GL245KC3KN";
@@ -61,24 +62,26 @@ export default function RootLayout({
       className={`${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-white pt-[84px] overflow-x-clip">
-        <JsonLd data={organizationSchema} />
-        {children}
-        <Script
-          src="https://t.contentsquare.net/uxa/b7d43a35c59b2.js"
-          strategy="afterInteractive"
-        />
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_MEASUREMENT_ID}');
-          `}
-        </Script>
+        <PostHogProvider>
+          <JsonLd data={organizationSchema} />
+          {children}
+          <Script
+            src="https://t.contentsquare.net/uxa/b7d43a35c59b2.js"
+            strategy="afterInteractive"
+          />
+          <Script
+            src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+            strategy="afterInteractive"
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${GA_MEASUREMENT_ID}');
+            `}
+          </Script>
+        </PostHogProvider>
       </body>
     </html>
   );

@@ -3,8 +3,9 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Reveal } from '../components/Reveal';
+import { captureEvent } from '../components/PostHogProvider';
 
 const plans = [
   {
@@ -97,6 +98,13 @@ const faqs = [
 export default function Pricing() {
   const [annual, setAnnual] = useState(true);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  useEffect(() => {
+    captureEvent('pricing_page_viewed', {
+      page: '/pricing/',
+      referrer: typeof document !== 'undefined' ? document.referrer || undefined : undefined,
+    });
+  }, []);
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
