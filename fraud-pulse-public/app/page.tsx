@@ -414,7 +414,7 @@ export default function Home() {
             </h1>
 
             <p className="text-[1.25rem] leading-[1.75] mb-3 max-w-[760px] mx-auto text-gray-900 font-semibold anim-fadeUp delay-300">
-              Connect your transaction data — we recommend the rules and actions that reduce chargebacks and friendly fraud.
+              We analyze your transaction data and deliver concrete actions and rules to reduce chargebacks and friendly fraud.
             </p>
 
             <p className="text-[1.0625rem] leading-[1.75] mb-8 max-w-[620px] mx-auto text-gray-500 anim-fadeUp delay-400">

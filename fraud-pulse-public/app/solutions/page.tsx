@@ -135,7 +135,7 @@ export default function Solutions() {
               </Reveal>
               <Reveal animation="anim-fadeUp" delay={150}>
                 <p className="text-[1.25rem] leading-[1.75] max-w-[720px] mx-auto text-gray-600 font-semibold mb-3">
-                    Connect your transaction data — FraudPulse recommends the rules and actions that reduce chargebacks and friendly fraud.
+                    We analyze your transaction data and deliver concrete actions and rules to reduce chargebacks and friendly fraud.
                 </p>
                 <p className="text-[1.0625rem] leading-[1.75] max-w-[600px] mx-auto text-gray-500 mb-4">
                   Get actionable fraud insights in days — not analytics reports you never act on. Merchants connect Shopify, Stripe, PayPal, or Adyen, then get ranked rule changes with estimated chargeback impact and clearer false-positive tradeoffs, <strong>without replacing the fraud prevention tools they already run.</strong> 

@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "FraudPulse — Reduce Chargebacks & Friendly Fraud with Smarter Rules",
-    description: "Connect your transaction data — get rules and actions that reduce chargebacks and friendly fraud.",
+    description: "We analyze your transaction data and deliver concrete actions and rules to reduce chargebacks and friendly fraud.",
   },
   icons: {
     icon: "/logo-light.svg",
