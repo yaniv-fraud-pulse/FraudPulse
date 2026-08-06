@@ -1,13 +1,13 @@
 # FraudPulse
 
-> FraudPulse tells merchants exactly which fraud rules to change in Payment Gateway to reduce chargebacks and increase approvals. It does not replace Stripe Radar or Shopify Protect — it analyzes transaction and chargeback data and delivers prioritized, implementable rule recommendations with impact estimates.
+> FraudPulse connects to your transaction data and recommends rules and actions that reduce chargebacks and friendly fraud. It analyzes transactions and disputes from Shopify, Stripe, PayPal, and Adyen and delivers prioritized, implementable recommendations with impact estimates — without replacing your fraud prevention tools.
 
 ## Product summary
 
-- Connect Stripe or Shopify in minutes
-- Analyze fraud and transaction patterns from your own data
-- Receive prioritized fraud rule changes with chargeback and false-positive impact estimates
-- Apply recommendations to Your Payment Gateway — no rip and replace
+- Connect transaction data from Shopify, Stripe, PayPal, or Adyen
+- Analyze fraud, chargeback, and friendly-fraud patterns from your own data
+- Receive prioritized rule changes and actions with chargeback and false-positive impact estimates
+- Apply recommendations in your existing payment / fraud prevention tools — without replacing them
 
 ## Key pages
 
@@ -25,10 +25,11 @@
 
 ## Common buyer questions
 
-- Does FraudPulse replace Stripe Radar or Shopify Protect? No — it improves them with data-driven rule recommendations.
-- How does FraudPulse reduce chargebacks? By identifying root causes in your transaction data and recommending specific rule changes.
+- What does FraudPulse do? Connects to transaction data and recommends rules/actions to reduce chargebacks and friendly fraud.
+- Which platforms? Shopify, Stripe, PayPal, and Adyen (plus CSV where needed).
 - How long to get recommendations? Most merchants get actionable insights in days.
-- Can I use it without replacing my fraud stack? Yes — no migration required.
+- Do I need to replace my fraud prevention tools? No — FraudPulse works alongside them; no migration required.
+- How is FraudPulse different from analytics & reporting? Analytics shows what happened; FraudPulse recommends which rules and actions to change next.
 
 ## Featured guides
 
@@ -39,7 +40,7 @@
 - Same Behaviour Can Be Fraudulent in One Business and Legitimate in Another: https://www.fraud-pulse.com/blog/same-behaviour-fraudulent-in-one-business-legitimate-in-another/
 - Your Fraud System Might Be Your Biggest Revenue Leak: https://www.fraud-pulse.com/blog/fraud-system-might-be-your-biggest-revenue-leak/
 - How to Reduce Chargebacks on Shopify (2026): https://www.fraud-pulse.com/blog/how-to-reduce-chargebacks-on-shopify-2026/
-- FraudPulse Doesn't Replace Stripe Radar or Shopify Protect: https://www.fraud-pulse.com/blog/fraudpulse-does-not-replace-stripe-radar-shopify-protect/
+- FraudPulse Doesn't Replace Your Fraud Console: https://www.fraud-pulse.com/blog/fraudpulse-does-not-replace-stripe-radar-shopify-protect/
 - How to Audit Your Fraud Acts in ~30 Minutes: https://www.fraud-pulse.com/blog/how-to-audit-your-fraud-acts-in-30-minutes/
 - Hidden Cost of False Positives in Fraud Systems: https://www.fraud-pulse.com/blog/hidden-cost-of-false-positives-in-fraud-systems/
 - Visa VAMP Threshold Reduction 2026: https://www.fraud-pulse.com/blog/visa-vamp-threshold-reduction-2026/
@@ -47,7 +48,7 @@
 
 ## Notes
 
-- FraudPulse does not replace Stripe Radar or Shopify Protect; it works alongside them.
+- FraudPulse is not limited to Stripe Radar or Shopify Protect; it works with transaction data from major commerce and payment platforms.
 - Official site: https://www.fraud-pulse.com/
 
 ## Contact

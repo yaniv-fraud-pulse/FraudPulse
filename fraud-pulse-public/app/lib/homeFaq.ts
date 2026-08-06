@@ -6,27 +6,27 @@ export type FaqItem = {
 /** Buyer questions phrased the way merchants actually search and ask. */
 export const homeFaqs: FaqItem[] = [
   {
-    q: 'Does FraudPulse replace Stripe Radar or Shopify Protect?',
-    a: 'No. FraudPulse does not replace Stripe Radar, Shopify Protect, or any payment processor fraud console. It sits on top of your existing stack, analyzes your transaction and chargeback data, and tells you exactly which fraud rules to change in Payment Gateway to reduce chargebacks and increase approvals.',
+    q: 'What does FraudPulse do?',
+    a: 'FraudPulse connects to your transaction data, analyzes chargebacks and friendly fraud patterns, and recommends specific rules and actions you can apply in your payment stack. The goal is fewer chargebacks and less friendly fraud — without guessing which settings to change.',
   },
   {
-    q: 'How does FraudPulse reduce chargebacks?',
-    a: 'FraudPulse analyzes your transactions, chargebacks, and customer patterns to identify the root causes of disputes and fraud that is getting through your current rules. You receive prioritized, implementable fraud rule recommendations — each with estimated chargeback and false-positive impact — so you can fix what is actually driving chargebacks instead of guessing.',
+    q: 'Which platforms can FraudPulse connect to?',
+    a: 'FraudPulse takes transaction data from Shopify, Stripe, PayPal, and Adyen — plus CSV uploads when you need a flexible import path. Recommendations are written so your team can implement rule changes in the tools you already use.',
+  },
+  {
+    q: 'How does FraudPulse reduce chargebacks and friendly fraud?',
+    a: 'FraudPulse analyzes your transactions, chargebacks, and customer patterns to find what is actually driving disputes — including friendly fraud. You receive prioritized, implementable rule recommendations with estimated chargeback and false-positive impact so you fix the real causes instead of tightening rules blindly.',
   },
   {
     q: 'How long does it take to get fraud rule recommendations?',
-    a: 'Most merchants get actionable fraud insights in days, not months. After you connect Stripe or Shopify, FraudPulse analyzes your fraud and transaction patterns and delivers a prioritized list of rule changes you can apply directly in Shopify Protect and Stripe Radar.',
+    a: 'Most merchants get actionable fraud insights in days, not months. After you connect transaction data from Shopify, Stripe, PayPal, or Adyen, FraudPulse analyzes your patterns and delivers a prioritized list of rule changes and actions your team can apply.',
   },
   {
-    q: 'Can I improve Stripe and Shopify fraud settings without replacing my stack?',
-    a: 'Yes. FraudPulse is built for merchants who want to get more from the fraud tools they already use. There is no rip and replace, no migration risk, and no need to switch payment processors — you keep Stripe Radar and Shopify Protect and tune them using data-driven recommendations.',
+    q: 'Do I need to replace my payment or fraud tools?',
+    a: 'No. FraudPulse is not a fraud prevention tool that replaces checkout decisioning. It sits on top of your existing stack: connect the data you already have, get ranked rule recommendations, and keep processing payments where you already process them.',
   },
   {
-    q: 'How do I reduce chargebacks on Shopify in 2026?',
-    a: 'Start by understanding which fraud patterns and order signals are driving chargebacks in your Shopify store, then adjust Shopify Protect rules based on your own data — not generic defaults. FraudPulse connects to your Shopify data, surfaces the patterns behind chargebacks, and recommends specific rule changes to reduce disputes while limiting false declines.',
-  },
-  {
-    q: 'What is the difference between FraudPulse and a fraud dashboard?',
-    a: 'Most fraud dashboards show you what happened. FraudPulse tells you what to do next. Instead of charts you rarely act on, you get clear, ranked fraud rule changes with impact estimates — actionable recommendations you can implement in Stripe and Shopify, not another dashboard to monitor.',
+    q: 'What is the difference between FraudPulse and analytics & reporting?',
+    a: 'Analytics and reporting tools show you what happened. FraudPulse tells you what to do next. Instead of charts you rarely act on, you get clear, ranked rule changes and actions with impact estimates — recommendations you can implement, not another report to monitor.',
   },
 ];

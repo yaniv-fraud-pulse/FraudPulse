@@ -20,29 +20,29 @@ const organizationSchema = {
   url: SITE_URL,
   logo: `${SITE_URL}/logo-light.svg`,
   description:
-    "FraudPulse tells merchants exactly which fraud rules to change in Stripe and Shopify to reduce chargebacks and increase approvals.",
+    "FraudPulse connects to your transaction data and recommends rules and actions that reduce chargebacks and friendly fraud.",
   sameAs: [],
 };
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "FraudPulse — Reduce Chargebacks & Increase Approvals in Payment Gateway",
-  description: "FraudPulse tells you exactly which fraud rules to change in Payment Gateway to reduce chargebacks and increase approvals. Get actionable fraud insights in days not dashboards you never use.",
-  keywords: "reduce chargebacks, increase approval rate, Stripe Radar optimization, Shopify Protect optimization, fraud rule changes, chargeback reduction, false decline reduction, fraud intelligence platform",
+  title: "FraudPulse — Reduce Chargebacks & Friendly Fraud with Smarter Rules",
+  description: "FraudPulse connects to your transaction data from Shopify, Stripe, PayPal, and Adyen — then recommends rules and actions that reduce chargebacks and friendly fraud. Actionable insights in days, not analytics reports you never act on.",
+  keywords: "reduce chargebacks, friendly fraud, fraud rule recommendations, Shopify fraud, Stripe fraud, PayPal fraud, Adyen fraud, false decline reduction, fraud intelligence platform",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "FraudPulse — Reduce Chargebacks & Increase Approvals in Stripe & Shopify",
-    description: "FraudPulse tells you exactly which fraud rules to change in Payment Gateway to reduce chargebacks and increase approvals. Get actionable fraud insights in days.",
+    title: "FraudPulse — Reduce Chargebacks & Friendly Fraud with Smarter Rules",
+    description: "Connect transaction data from Shopify, Stripe, PayPal, or Adyen. Get ranked rules and actions that reduce chargebacks and friendly fraud.",
     url: SITE_URL,
     siteName: "FraudPulse",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "FraudPulse — Reduce Chargebacks & Increase Approvals in Stripe & Shopify",
-    description: "FraudPulse tells you exactly which fraud rules to change in Payment Gateway to reduce chargebacks and increase approvals.",
+    title: "FraudPulse — Reduce Chargebacks & Friendly Fraud with Smarter Rules",
+    description: "Connect your transaction data — get rules and actions that reduce chargebacks and friendly fraud.",
   },
   icons: {
     icon: "/logo-light.svg",

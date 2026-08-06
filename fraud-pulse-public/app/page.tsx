@@ -29,11 +29,13 @@ const applyActionsVisual = (
   <div className="rounded-2xl border bg-white p-4 sm:p-5 w-full max-w-full min-w-0 anim-float overflow-hidden text-left" style={{ borderColor: '#e5e7eb', boxShadow: '0 8px 32px rgba(0,0,0,0.08)' }}>
     <div className="flex items-center gap-2 mb-4">
       <div className="w-2 h-2 rounded-full bg-[#5ba8b4] flex-shrink-0" style={{ boxShadow: '0 0 6px rgba(91,168,180,0.6)' }} />
-      <span className="text-xs font-semibold text-gray-400 uppercase tracking-widest">Apply in Your Stack</span>
+      <span className="text-xs font-semibold text-gray-400 uppercase tracking-widest">Recommended rules</span>
     </div>
     {[
-      { name: 'Shopify Protect', slug: 'shopify', color: '95BF47', rule: 'Tighten high-risk country rules', delay: 0 },
-      { name: 'Stripe Radar', slug: 'stripe', color: '635BFF', rule: 'Block cards with prior chargebacks', delay: 100 },
+      { name: 'Shopify', slug: 'shopify', color: '95BF47', rule: 'Tighten high-risk country rules', delay: 0 },
+      { name: 'Stripe', slug: 'stripe', color: '635BFF', rule: 'Block cards with prior chargebacks', delay: 80 },
+      { name: 'PayPal', slug: 'paypal', color: '00457C', rule: 'Review mismatched billing / shipping', delay: 160 },
+      { name: 'Adyen', slug: 'adyen', color: '0ABF53', rule: 'Flag velocity spikes on high AOV', delay: 240 },
     ].map(({ name, slug, color, rule, delay }) => (
       <div key={name} className="py-3 border-b last:border-0 anim-fadeUp" style={{ borderColor: '#f3f4f6', animationDelay: `${delay}ms` }}>
         <div className="flex items-center gap-3 mb-2">
@@ -248,54 +250,54 @@ const tabs = [
       </div>
     ),
   },
-  {
-    label: 'Shopify & Stripe',
-    icon: (
-      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-      </svg>
-    ),
-    title: 'Apply recommendations in Shopify Protect and Stripe Radar.',
-    body: 'FraudPulse doesn\'t replace your fraud tools — it tells you exactly how to tune Shopify Protect and Stripe Radar so you capture more fraud with fewer false positives.',
-    bullets: [
-      'Apply ranked rules in Shopify Protect',
-      'Apply ranked rules in Stripe Radar',
-      'No rip and replace — keep your existing stack',
-      'Turn insights into live fraud settings',
-    ],
-    visual: applyActionsVisual,
-  },
+  // {
+  //   label: 'Your Stack',
+  //   icon: (
+  //     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  //       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+  //     </svg>
+  //   ),
+  //   title: 'Turn recommendations into rules in your existing stack.',
+  //   body: 'FraudPulse doesn\'t replace your payment tools — it uses transaction data from Shopify, Stripe, PayPal, and Adyen to tell you which rules and actions will reduce chargebacks and friendly fraud.',
+  //   bullets: [
+  //     'Connect Shopify, Stripe, PayPal, or Adyen',
+  //     'Get ranked rules and actions with impact estimates',
+  //     'Apply changes where you already manage risk',
+  //     'Works alongside fraud prevention tools — keep your existing stack',
+  //   ],
+  //   visual: applyActionsVisual,
+  // },
 ];
 
 const heroSteps = [
   {
     step: '01',
-    title: 'Connect Stripe / Shopify',
-    description: 'Connect your Stripe or Shopify store in minutes — no engineering work required',
+    title: 'Connect Your Transaction Data',
+    description: 'Connect Shopify, Stripe, PayPal, or Adyen in minutes — no engineering work required',
     visual: tabs[1].visual,
     color: '#5ba8b4',
   },
   {
     step: '02',
     title: 'We Analyze Your Fraud Patterns',
-    description: "We analyze your fraud and transaction patterns to find what's causing chargebacks and false declines",
+    description: "We analyze your transactions, chargebacks, and friendly fraud patterns to find what's driving disputes",
     visual: tabs[3].visual,
     color: '#7D6BA0',
   },
   {
     step: '03',
     title: 'Receive Prioritized Rule Changes',
-    description: 'You receive a prioritized list of rule changes with estimated revenue and chargeback impact',
+    description: 'You receive a prioritized list of rules and actions with estimated revenue and chargeback impact',
     visual: tabs[0].visual,
     color: '#5ba8b4',
   },
-  {
-    step: '04',
-    title: 'Apply in Shopify & Stripe',
-    description: 'Implement changes directly in Shopify Protect and Stripe Radar and track your improvements',
-    visual: tabs[4].visual,
-    color: '#5ba8b4',
-  },
+  // {
+  //   step: '04',
+  //   title: 'Apply Rules & Track Results',
+  //   description: 'Implement recommended rules in your payment stack and track chargebacks and approvals over time',
+  //   visual: tabs[4].visual,
+  //   color: '#5ba8b4',
+  // },
 ];
 
 
@@ -359,7 +361,7 @@ export default function Home() {
             name: 'FraudPulse',
             url: SITE_URL,
             description:
-              'FraudPulse tells merchants exactly which fraud rules to change in Payment Gateway to reduce chargebacks and increase approvals.',
+              'FraudPulse connects to your transaction data and recommends rules and actions that reduce chargebacks and friendly fraud.',
           }),
         }}
       />
@@ -374,7 +376,7 @@ export default function Home() {
             operatingSystem: 'Web',
             url: SITE_URL,
             description:
-              'Fraud intelligence for Shopify and Stripe merchants. Analyzes transactions and chargebacks, classifies fraud types, and recommends ranked Stripe Radar and Shopify Protect rule changes.',
+              'Fraud intelligence for online merchants. Connects to Shopify, Stripe, PayPal, and Adyen transaction data, analyzes chargebacks and friendly fraud, and recommends ranked rules and actions.',
             offers: {
               '@type': 'Offer',
               url: `${SITE_URL}/pricing/`,
@@ -412,12 +414,11 @@ export default function Home() {
             </h1>
 
             <p className="text-[1.25rem] leading-[1.75] mb-3 max-w-[760px] mx-auto text-gray-900 font-semibold anim-fadeUp delay-300">
-              FraudPulse tells you exactly which fraud rules to change in Your Payment Gateway
-             to reduce chargebacks and increase approvals.
+              Connect your transaction data — we recommend the rules and actions that reduce chargebacks and friendly fraud.
             </p>
 
             <p className="text-[1.0625rem] leading-[1.75] mb-8 max-w-[620px] mx-auto text-gray-500 anim-fadeUp delay-400">
-              Get actionable fraud insights in days not dashboards you never use.
+              Get actionable fraud insights in days — not analytics reports you never act on.
             </p>
 
             {/* CTA */}
@@ -434,7 +435,7 @@ export default function Home() {
 
             {/* Subheadline */}
             <p className="mt-6 text-[1rem] leading-[1.7] max-w-[640px] mx-auto text-gray-500 anim-fadeUp delay-600">
-              We analyze your transactions, chargebacks, and customer patterns to generate clear, implementable fraud rule recommendations.
+              Works with Shopify, Stripe, PayPal, and Adyen — we analyze your transactions and disputes, then suggest the rules to change.
             </p>
 
             {/* Process Flow Animation */}
@@ -489,7 +490,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-                {/* ── Works with Shopify Protect & Stripe Radar ── */}
+                {/* ── Connects to your transaction data ── */}
                 <section
           className="py-20 sm:py-28 px-5 sm:px-10 text-white"
           style={{ background: 'linear-gradient(180deg, #0a0c10 0%, #111827 50%, #0f1419 100%)' }}
@@ -500,23 +501,27 @@ export default function Home() {
                 Works with your stack
               </p>
               <h2 className="font-extrabold tracking-[-0.03em] text-[2rem] sm:text-[2.75rem] leading-[1.15] mb-6">
-                We don&apos;t replace Stripe or Shopify.
+                We don&apos;t replace your payment tools.
                 <br />
                 <span className="text-gray-400 font-bold text-[1.375rem] sm:text-[1.625rem]">
-                  We make them work Better for you.
+                  We use your transaction data to tell you what to change.
                 </span>
               </h2>
               <p className="text-[1.0625rem] sm:text-[1.125rem] leading-[1.75] text-gray-400 mb-8">
-                <span className="font-bold text-white">Shopify Protect</span> and{' '}
-                <span className="font-bold text-white">Stripe Radar</span> block transactions. FraudPulse analyzes your data and tells you exactly which rules to change — no rip and replace, no migration risk.
+                Connect <span className="font-bold text-white">Shopify</span>,{' '}
+                <span className="font-bold text-white">Stripe</span>,{' '}
+                <span className="font-bold text-white">PayPal</span>, or{' '}
+                <span className="font-bold text-white">Adyen</span>. FraudPulse analyzes your transactions and disputes, then recommends rules and actions that reduce chargebacks and friendly fraud — without replacing your fraud prevention tools.
               </p>
             </Reveal>
 
             <Reveal animation="anim-fadeUp" delay={150}>
               <div className="flex flex-wrap justify-center gap-4 mb-10">
                 {[
-                  { name: 'Shopify Protect', slug: 'shopify', color: '95BF47' },
-                  { name: 'Stripe Radar', slug: 'stripe', color: '635BFF' },
+                  { name: 'Shopify', slug: 'shopify', color: '95BF47' },
+                  { name: 'Stripe', slug: 'stripe', color: '635BFF' },
+                  { name: 'PayPal', slug: 'paypal', color: '00457C' },
+                  { name: 'Adyen', slug: 'adyen', color: '0ABF53' },
                 ].map(({ name, slug, color }) => (
                   <div
                     key={name}
@@ -561,7 +566,7 @@ export default function Home() {
                 }}>Increase Approvals.</span>
               </h2>
               <p className="text-center text-[1.0625rem] text-gray-500 max-w-2xl mx-auto mb-12 leading-relaxed">
-                Improve your <strong className="text-gray-800">Stripe</strong> and <strong className="text-gray-800">Shopify</strong> fraud settings without replacing your stack — just better rules, backed by your own data.
+                Connect transaction data from <strong className="text-gray-800">Shopify</strong>, <strong className="text-gray-800">Stripe</strong>, <strong className="text-gray-800">PayPal</strong>, or <strong className="text-gray-800">Adyen</strong> — then get better rules to cut chargebacks and friendly fraud, without replacing your fraud prevention tools.
               </p>
             </Reveal>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -624,7 +629,7 @@ export default function Home() {
 
             <Reveal animation="anim-fadeUp">
               <h2 className="text-center font-extrabold text-gray-900 text-[2.7rem] sm:text-[3.1rem] tracking-[-0.03em] mb-10">
-                Get actionable recommendations,<br className="hidden sm:block" /> not dashboards
+                Get actionable recommendations,<br className="hidden sm:block" /> not just analytics
               </h2>
             </Reveal>
 
@@ -690,7 +695,7 @@ export default function Home() {
                   Frequently Asked Questions
                 </h2>
                 <p className="mt-4 text-[1.0625rem] text-gray-500 max-w-2xl mx-auto">
-                  Common questions from merchants using Stripe and Shopify who want to reduce chargebacks without replacing their fraud stack.
+                  Common questions from merchants who want to reduce chargebacks and friendly fraud using their own transaction data.
                 </p>
               </div>
               <FaqAccordion faqs={homeFaqs} />
@@ -708,10 +713,10 @@ export default function Home() {
                 <span style={{
                   background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',
                   WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
-                }}>Stripe & Shopify data.</span>
+                }}>transaction data.</span>
               </h2>
               <p className="text-[1.5rem] leading-[1.75] max-w-[620px] mx-auto mb-8">
-                Book a walkthrough and see the exact fraud rule changes FraudPulse would recommend for your store.
+                Book a walkthrough and see the exact rules and actions FraudPulse would recommend to reduce chargebacks and friendly fraud.
               </p>
               <div className="flex flex-wrap gap-3 justify-center">
                 <Link href="/book-a-demo/"

@@ -2,23 +2,23 @@ import type { Metadata } from "next";
 import { SITE_URL } from "../lib/site";
 
 export const metadata: Metadata = {
-  title: "How FraudPulse Works — Exactly Which Fraud Rules to Change in Payment Gateway",
-  description: "FraudPulse connects to Stripe and Shopify, analyzes your fraud and transaction patterns, and delivers prioritized rule changes with estimated chargeback and revenue impact. Implement in days, not months.",
-  keywords: "how FraudPulse works, Stripe Radar rules, Shopify Protect rules, fraud rule recommendations, reduce chargebacks Stripe, reduce chargebacks Shopify, fraud pattern analysis, chargeback root cause",
+  title: "How FraudPulse Works — Transaction Data to Chargeback-Reducing Rules",
+  description: "FraudPulse connects to Shopify, Stripe, PayPal, or Adyen, analyzes your chargebacks and friendly fraud patterns, and delivers prioritized rules and actions with estimated impact. Implement in days, not months.",
+  keywords: "how FraudPulse works, fraud rule recommendations, reduce chargebacks, friendly fraud, Shopify Stripe PayPal Adyen, fraud pattern analysis, chargeback root cause",
   alternates: {
     canonical: "/how-it-works/",
   },
   openGraph: {
-    title: "How FraudPulse Works — Exactly Which Fraud Rules to Change in Payment Gateway",
-    description: "Connect Stripe or Shopify → analyze fraud patterns → receive prioritized rule changes → implement and track improvements. No rip and replace.",
+    title: "How FraudPulse Works — Transaction Data to Chargeback-Reducing Rules",
+    description: "Connect transaction data → analyze fraud patterns → receive prioritized rules and actions → implement and track improvements — without replacing your fraud prevention tools.",
     url: `${SITE_URL}/how-it-works/`,
     siteName: "FraudPulse",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "How FraudPulse Works — Fraud Rule Changes for Payment Gateway",
-    description: "Connect Stripe or Shopify → analyze fraud patterns → receive prioritized rule changes → implement and track improvements.",
+    title: "How FraudPulse Works — Rules That Reduce Chargebacks",
+    description: "Connect Shopify, Stripe, PayPal, or Adyen → analyze fraud patterns → receive prioritized rules and actions.",
   },
 };
 

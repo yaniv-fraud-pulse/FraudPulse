@@ -4,7 +4,7 @@ import { pageMetadata } from '../lib/seo';
 export const metadata: Metadata = pageMetadata({
   title: 'Book a Demo | FraudPulse',
   description:
-    'Book a live FraudPulse walkthrough and see fraud rule recommendations on your Stripe or Shopify data.',
+    'Book a live FraudPulse walkthrough and see fraud rule recommendations on your Shopify, Stripe, PayPal, or Adyen transaction data.',
   path: '/book-a-demo/',
 });
 

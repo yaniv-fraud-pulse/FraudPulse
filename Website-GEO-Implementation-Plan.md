@@ -91,7 +91,7 @@ Homepage (and key solution pages) should include a visible FAQ answering real bu
 - How long until rule recommendations?
 - Can I improve Stripe/Shopify fraud settings without replacing my stack?
 - How do I reduce chargebacks on Shopify?
-- FraudPulse vs a fraud dashboard?
+- FraudPulse vs analytics & reporting?
 
 Use clear, factual answers (no fluff). Align copy with product truth: **works alongside Radar/Protect; classifies chargebacks; ranked rule changes with estimated impact.**
 

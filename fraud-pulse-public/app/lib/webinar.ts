@@ -2,9 +2,9 @@
 export const WEBINAR = {
   id: 'fraudpulse-webinar-2026-08-04',
   title:
-    'Fraud Management Webinar for Stripe Merchants: Chargebacks, False Declines & Other Common Pain Points',
+    'Fraud Management Webinar: Chargebacks, Friendly Fraud & Rules That Actually Help',
   subtitle:
-    "An open conversation for online merchants using Stripe who want to compare notes on the fraud and chargeback challenges they're actually dealing with. We'll bring some starting points around common friction areas (tuning fraud rules, false declines, getting more out of Stripe Radar), but the real value is hearing what's working — and what isn't.",
+    "An open conversation for online merchants who want to compare notes on the fraud and chargeback challenges they're actually dealing with. We'll bring some starting points around common friction areas (tuning fraud rules from transaction data, false declines, reducing friendly fraud), but the real value is hearing what's working — and what isn't.",
   /** Canonical start: 2:00 PM Eastern (EDT on this date). Shown in each visitor's local timezone. */
   startsAtIso: '2026-08-06T14:00:00-04:00',
   endsAtIso: '2026-08-06T14:30:00-04:00',

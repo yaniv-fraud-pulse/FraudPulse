@@ -5,6 +5,11 @@ import Footer from '../components/Footer';
 import Link from 'next/link';
 import { Reveal } from '../components/Reveal';
 import { posts } from '../lib/blog';
+import FaqAccordion from '../components/FaqAccordion';
+import JsonLd from '../components/JsonLd';
+import { PageUpdated } from '../components/GeoBits';
+import { PAGE_LAST_UPDATED, faqPageJsonLd } from '../lib/geo';
+import { blogIndexFaqs } from '../lib/pageFaqs';
 
 const sortedPosts = [...posts].sort(
   (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
@@ -19,6 +24,7 @@ const categoryColors: Record<string, { bg: string; text: string }> = {
 export default function Blog() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
+      <JsonLd data={faqPageJsonLd(blogIndexFaqs)} />
       <Header />
 
       <main className="flex-grow">
@@ -50,9 +56,10 @@ export default function Blog() {
               </h1>
             </Reveal>
             <Reveal animation="anim-fadeUp" delay={150}>
-              <p className="text-[1.25rem] sm:text-[1.375rem] leading-[1.75] max-w-[600px] mx-auto text-gray-500">
+              <p className="text-[1.25rem] sm:text-[1.375rem] leading-[1.75] max-w-[600px] mx-auto text-gray-500 mb-4">
                 Practical guides, product updates, and deep-dives on fraud prevention for modern merchants.
               </p>
+              <PageUpdated date={PAGE_LAST_UPDATED.blog} />
             </Reveal>
           </div>
         </section>
@@ -133,6 +140,23 @@ export default function Blog() {
                 );
               })}
             </div>
+          </div>
+        </section>
+
+        {/* ── FAQ ── */}
+        <section className="py-16 sm:py-24 px-5 sm:px-10 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <Reveal animation="anim-fadeUp">
+              <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] text-center mb-3 text-[2.5rem] sm:text-[3rem]">
+                Blog FAQ
+              </h2>
+              <p className="text-center text-[1.0625rem] text-gray-500 max-w-xl mx-auto mb-10">
+                What you will find in FraudPulse guides on chargebacks, friendly fraud, and false positives.
+              </p>
+            </Reveal>
+            <Reveal animation="anim-fadeUp" delay={75}>
+              <FaqAccordion faqs={blogIndexFaqs} />
+            </Reveal>
           </div>
         </section>
 

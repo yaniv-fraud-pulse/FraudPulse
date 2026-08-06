@@ -6,6 +6,10 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { Reveal } from '../components/Reveal';
 import { captureEvent } from '../components/PostHogProvider';
+import FaqAccordion from '../components/FaqAccordion';
+import JsonLd from '../components/JsonLd';
+import { PageUpdated } from '../components/GeoBits';
+import { PAGE_LAST_UPDATED, faqPageJsonLd } from '../lib/geo';
 
 const plans = [
   {
@@ -43,7 +47,7 @@ const plans = [
       { label: 'Chargeback ratio monitoring',                included: true },
       { label: '5 user seats',                              included: true },
       { label: 'Custom rules engine (Up to 10 rules)',       included: true },
-      { label: 'Full API access (Shopify, Stripe and more)', included: true },
+      { label: 'Full API access (Shopify, Stripe, PayPal, Adyen)', included: true },
       { label: 'Dedicated account manager',                  included: false },
     ],
   },
@@ -71,33 +75,42 @@ const plans = [
 const faqs = [
   {
     q: 'Is there a free trial?',
-    a: 'Yes — every plan starts with a 14-day free trial, no credit card required. You get full access to all features on your chosen plan so you can verify value before committing.',
+    a: 'Yes. Every FraudPulse plan includes a 14-day free trial with no credit card required. You get full access to the features on your chosen plan so you can connect transaction data from Shopify, Stripe, PayPal, or Adyen, review ranked fraud rule recommendations, and confirm value before you commit to paid billing.',
   },
   {
     q: 'How is transaction volume counted?',
-    a: 'A transaction is any payment event ingested into FraudPulse — authorisations, captures, refunds, and chargebacks each count as one transaction. Only transactions processed within the billing period count toward your monthly limit.',
+    a: 'A transaction is any payment event FraudPulse ingests — authorisations, captures, refunds, and chargebacks each count as one. Only events processed in the current billing period count toward your monthly limit, so historical backfills used for analysis do not silently consume your plan capacity.',
   },
   {
     q: 'Can I change plans at any time?',
-    a: 'Absolutely. You can upgrade or downgrade at any time from your account settings. Upgrades take effect immediately and are prorated; downgrades take effect at the start of the next billing cycle.',
+    a: 'Yes. You can upgrade or downgrade from account settings whenever your volume or team needs change. Upgrades take effect immediately and are prorated for the rest of the cycle; downgrades apply at the start of the next billing period so you keep access you already paid for.',
   },
   {
     q: 'What happens if I exceed my transaction limit?',
-    a: "We'll notify you when you reach 80% and 100% of your limit. You won't be cut off — overages are billed at a small per-transaction rate until you upgrade. You can set a hard cap in settings if you prefer.",
+    a: 'We notify you at about 80% and 100% of your monthly transaction limit. Service is not cut off by default — overages bill at a small per-transaction rate until you upgrade. If you prefer a hard stop, you can set a cap in settings so volume cannot exceed the ceiling you choose.',
   },
   {
     q: 'Do you offer discounts for annual billing?',
-    a: 'Yes. Paying annually saves you 20% compared to month-to-month billing — equivalent to getting more than 2 months free.',
+    a: 'Yes. Paying annually on Professional saves about 20% versus month-to-month pricing — more than two months of value across the year. Annual billing is optional; you can stay monthly if you want flexibility while you validate FraudPulse on your own chargeback and approval metrics.',
   },
   {
     q: 'What integrations are included?',
-    a: 'All plans include native integrations with Stripe, Braintree, Adyen, PayPal, and Shopify. Professional and Enterprise plans also include webhook delivery and full REST API access. Custom integrations are available on Enterprise.',
+    a: 'Plans support connecting transaction data from Shopify, Stripe, PayPal, and Adyen. Professional and Enterprise add fuller API access and webhooks; Enterprise can include custom integrations when your stack needs a dedicated connector.',
   },
+];
+
+const planCompareRows = [
+  { feature: 'AI advisor recommendations', payg: 'Yes', pro: 'Yes', ent: 'Yes' },
+  { feature: 'Monthly fraud advisor meeting', payg: '—', pro: '1 hour', ent: 'Custom' },
+  { feature: 'Monthly transaction allowance', payg: 'Up to 20K', pro: 'Up to 50K', ent: 'Unlimited' },
+  { feature: 'Custom rules engine', payg: '—', pro: 'Up to 10 rules', ent: 'Yes + ML models' },
+  { feature: 'API / webhooks', payg: '—', pro: 'Full API', ent: 'API + webhooks' },
+  { feature: 'Dedicated account manager', payg: '—', pro: '—', ent: 'Yes + SLA' },
+  { feature: 'Starting price', payg: '$0.01 / txn', pro: '$159–$199 / mo', ent: 'Custom' },
 ];
 
 export default function Pricing() {
   const [annual, setAnnual] = useState(true);
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useEffect(() => {
     captureEvent('pricing_page_viewed', {
@@ -108,6 +121,7 @@ export default function Pricing() {
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
+      <JsonLd data={faqPageJsonLd(faqs)} />
       <Header />
 
       <main className="flex-grow">
@@ -134,9 +148,15 @@ export default function Pricing() {
               </h1>
             </Reveal>
             <Reveal animation="anim-fadeUp" delay={150}>
-              <p className="text-[1.5rem] leading-[1.75] max-w-[680px] mx-auto mb-8 text-gray-500">
+              <p className="text-[1.5rem] leading-[1.75] max-w-[680px] mx-auto mb-3 text-gray-500">
                 No hidden fees. No per-seat surprises. Choose the plan that fits your transaction volume and grow with confidence.
               </p>
+              <p className="text-[1rem] leading-[1.7] max-w-[640px] mx-auto mb-4 text-gray-400">
+                Pay-as-you-go starts at $0.01 per transaction (up to 20K/month). Professional is $199/month or $159/month billed annually (20% savings). Every plan includes a 14-day free trial.
+              </p>
+              <div className="mb-8 flex justify-center">
+                <PageUpdated date={PAGE_LAST_UPDATED.pricing} />
+              </div>
             </Reveal>
 
             {/* Billing toggle */}
@@ -283,6 +303,44 @@ export default function Pricing() {
           </div>
         </section>
 
+        {/* ── Plan comparison ── */}
+        <section className="pb-16 sm:pb-24 px-5 sm:px-10 bg-white">
+          <div className="max-w-5xl mx-auto">
+            <Reveal animation="anim-fadeUp">
+              <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] text-center mb-3 text-[2.5rem] sm:text-[3rem]">
+                Compare plans
+              </h2>
+              <p className="text-center text-[1.0625rem] text-gray-500 max-w-2xl mx-auto mb-10">
+                Side-by-side features for Pay as you go, Professional, and Enterprise.
+              </p>
+            </Reveal>
+            <Reveal animation="anim-fadeUp" delay={75}>
+              <div className="overflow-x-auto rounded-[16px] border" style={{ borderColor: '#e5e7eb' }}>
+                <table className="w-full min-w-[640px] text-left text-[0.9375rem]">
+                  <thead>
+                    <tr className="bg-[#f8f9fa] border-b" style={{ borderColor: '#e5e7eb' }}>
+                      <th className="px-4 py-3.5 font-semibold text-gray-700">Feature</th>
+                      <th className="px-4 py-3.5 font-semibold text-gray-700">Pay as you go</th>
+                      <th className="px-4 py-3.5 font-semibold text-[#4a96a3]">Professional</th>
+                      <th className="px-4 py-3.5 font-semibold text-gray-700">Enterprise</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {planCompareRows.map((row) => (
+                      <tr key={row.feature} className="border-b last:border-b-0" style={{ borderColor: '#f3f4f6' }}>
+                        <td className="px-4 py-3.5 font-medium text-gray-800">{row.feature}</td>
+                        <td className="px-4 py-3.5 text-gray-500">{row.payg}</td>
+                        <td className="px-4 py-3.5 font-semibold text-gray-900">{row.pro}</td>
+                        <td className="px-4 py-3.5 text-gray-500">{row.ent}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </Reveal>
+          </div>
+        </section>
+
         {/* ── FAQ ── */}
         <section className="py-20 sm:py-28 bg-[#7D6BA0]/20">
           <div className="px-5 sm:px-10">
@@ -291,32 +349,11 @@ export default function Pricing() {
                 <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] text-[2.75rem] sm:text-[3.25rem]">
                   Frequently Asked Questions
                 </h2>
+                <p className="text-[1.0625rem] text-gray-600 max-w-xl mx-auto mt-3">
+                  Clear answers on trials, transaction limits, billing, and integrations — written so you can cite them when comparing fraud tools.
+                </p>
               </div>
-              <div className="flex flex-col gap-3 w-full sm:w-[60%] mx-auto">
-                {faqs.map((faq, i) => (
-                  <div
-                    key={i}
-                    className={`rounded-[14px] overflow-hidden border bg-gray-900 transition-colors ${openFaq === i ? 'border-[#5ba8b4]' : 'border-gray-800'}`}>
-                    <button
-                      onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                      className="w-full flex items-center justify-between gap-4 px-6 py-4 text-left"
-                    >
-                      <span className="font-semibold text-[1.125rem] text-white">{faq.q}</span>
-                      <svg
-                        className="w-4.5 h-4.5 flex-shrink-0 text-gray-400 transition-transform"
-                        style={{ transform: openFaq === i ? 'rotate(45deg)' : 'none' }}
-                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                      </svg>
-                    </button>
-                    {openFaq === i && (
-                      <div className="px-6 pb-5">
-                        <p className="text-[1.25rem] leading-[1.75] text-gray-400">{faq.a}</p>
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
+              <FaqAccordion faqs={faqs} />
             </Reveal>
           </div>
         </section>
