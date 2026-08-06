@@ -395,7 +395,7 @@ export const posts: BlogPost[] = [
     slug: 'how-to-reduce-chargebacks-on-shopify-2026',
     title: 'How to Reduce Chargebacks on Shopify (2026 Guide)',
     excerpt:
-      'A practical 2026 guide for Shopify merchants: understand why chargebacks happen, tune fraud rules using your own transaction data, and reduce disputes without increasing false declines.',
+      'A practical 2026 guide for Shopify merchants: understand why chargebacks happen, tune Shopify Protect rules using your own data, and reduce disputes without increasing false declines.',
     category: 'Guide',
     date: 'July 13, 2026',
     readTime: '8 min read',
@@ -407,7 +407,7 @@ export const posts: BlogPost[] = [
 
 <p>Most merchants try to solve this by tightening fraud rules across the board. That can reduce chargebacks short term, but it also increases false declines — legitimate customers blocked at checkout who would have converted.</p>
 
-<p>The better approach: understand <em>why</em> chargebacks are happening in your store, then change the specific Shopify fraud rules driving the problem.</p>
+<p>The better approach: understand <em>why</em> chargebacks are happening in your store, then change the specific Shopify Protect rules driving the problem.</p>
 
 <h2>Step 1: Know your chargeback rate and reason codes</h2>
 
@@ -432,13 +432,13 @@ export const posts: BlogPost[] = [
   <li>Customers who don't recognize the charge on their statement</li>
 </ul>
 
-<p>Fraud rules won't fix a fulfillment problem. If your top reason codes are "product not received" or "not as described," start with operations and customer communication — not fraud settings alone.</p>
+<p>Fraud rules won't fix a fulfillment problem. If your top reason codes are "product not received" or "not as described," start with operations and customer communication — not Shopify Protect settings.</p>
 
 <p>If fraud-related reason codes dominate, focus on the patterns getting through your current rules.</p>
 
-<h2>Step 3: Audit what your Shopify fraud rules are actually blocking</h2>
+<h2>Step 3: Audit what Shopify Protect is actually blocking</h2>
 
-<p>Shopify fraud tools block transactions at checkout based on risk signals — IP location, velocity, device fingerprint, order history, and more. But default settings are built for the average merchant, not your specific business.</p>
+<p>Shopify Protect blocks transactions at checkout based on risk signals — IP location, velocity, device fingerprint, order history, and more. But default settings are built for the average merchant, not your specific business.</p>
 
 <p>Common gaps we see in Shopify stores:</p>
 
@@ -465,7 +465,7 @@ export const posts: BlogPost[] = [
 
 <p>These patterns are unique to your store. Generic fraud rule templates won't capture them — your own data will.</p>
 
-<h2>Step 5: Change Shopify fraud rules based on data, not guesswork</h2>
+<h2>Step 5: Change Shopify Protect rules based on data, not guesswork</h2>
 
 <p>Once you know which patterns drive chargebacks, make targeted rule changes:</p>
 
@@ -499,24 +499,24 @@ export const posts: BlogPost[] = [
 
 <h2>How FraudPulse helps Shopify merchants</h2>
 
-<p>FraudPulse connects to your Shopify transaction and chargeback data, analyzes fraud and friendly fraud patterns automatically, and delivers prioritized rules and actions — with estimated chargeback and false-positive impact for each recommendation.</p>
+<p>FraudPulse connects to your Shopify transaction and chargeback data, analyzes fraud patterns automatically, and delivers prioritized rule changes you can apply in Shopify Protect — with estimated chargeback and false-positive impact for each recommendation.</p>
 
-<p>It does not replace your Shopify fraud tools. It tells you exactly which rules to change so your existing stack works harder for you.</p>
+<p>It does not replace Shopify Protect. It tells you exactly which rules to change so your existing fraud stack works harder for you.</p>
 
 <p><strong>Want to see what rule changes FraudPulse would recommend for your Shopify store?</strong> <a href="/book-a-demo/">Book a demo</a> and we'll walk through it on your own data.</p>
     `.trim(),
     faqs: [
       {
         q: 'How do I reduce chargebacks on Shopify without increasing false declines?',
-        a: 'Identify which patterns drive your fraud chargebacks, then make targeted rule changes — tighten rules that catch real fraud and loosen rules that block good customers. Measure chargeback rate and approval rate after each change.',
+        a: 'Identify which patterns drive your fraud chargebacks, then make targeted Shopify Protect rule changes — tighten rules that catch real fraud and loosen rules that block good customers. Measure chargeback rate and approval rate after each change.',
       },
       {
-        q: 'Does FraudPulse replace Shopify fraud tools?',
-        a: 'No. FraudPulse analyzes your Shopify transaction and chargeback data and recommends which rules and actions to change. You keep your Shopify stack and tune it with your own data.',
+        q: 'Does FraudPulse replace Shopify Protect?',
+        a: 'No. FraudPulse analyzes your Shopify transaction and chargeback data and recommends which Protect rules to change. You keep Shopify Protect and tune it with your own data.',
       },
       {
         q: 'What should I check before changing fraud rules?',
-        a: 'Establish your chargeback rate and top reason codes, separate fraud disputes from service issues, and audit what your Shopify fraud rules are already blocking so you do not fix the wrong problem.',
+        a: 'Establish your chargeback rate and top reason codes, separate fraud disputes from service issues, and audit what Shopify Protect is already blocking so you do not fix the wrong problem.',
       },
     ],
   },
@@ -605,7 +605,7 @@ export const posts: BlogPost[] = [
   <li>A better sense of where your system is over- or under-performing</li>
 </ul>
 
-<p>Want help running this audit on your Shopify, Stripe, PayPal, or Adyen data? <a href="/book-a-demo/">Book a demo</a> and we'll walk through it together.</p>
+<p>Want help running this audit on your Stripe or Shopify data? <a href="/book-a-demo/">Book a demo</a> and we'll walk through it together.</p>
     `.trim(),
   },
   {
@@ -696,9 +696,9 @@ export const posts: BlogPost[] = [
   },
   {
     slug: 'fraudpulse-does-not-replace-stripe-radar-shopify-protect',
-    title: "FraudPulse Doesn't Replace Your Fraud Console. Here's What It Does Instead.",
+    title: "FraudPulse Doesn't Replace Stripe Radar or Shopify Protect. Here's What It Does Instead.",
     excerpt:
-      "FraudPulse is not another checkout blocker. It connects to your transaction data and recommends rules and actions that reduce chargebacks and friendly fraud — here's why that distinction matters.",
+      "One of the biggest misconceptions we hear is that FraudPulse replaces fraud consoles such as Stripe Radar or Shopify Protect. It doesn't — and here's why that distinction matters.",
     category: 'Product',
     date: 'July 2, 2026',
     readTime: '4 min read',
@@ -706,11 +706,11 @@ export const posts: BlogPost[] = [
     authorRole: 'Co-Founder & CEO',
     image: 'https://media.licdn.com/dms/image/v2/D4D22AQH839gc-3EIww/feedshare-shrink_800/B4DZ8c4uGsI8Ac-/0/1782896059072?e=1786579200&v=beta&t=fFZMkeHDNA13gTO-tRfDYyo6LMsCSMxzlAvIhTsa_eE',
     content: `
-<p>One of the biggest misconceptions we hear is that FraudPulse replaces your payment processor's fraud console or risk tools.</p>
+<p>One of the biggest misconceptions we hear is that FraudPulse replaces fraud consoles such as Stripe Radar or Shopify Protect.</p>
 
-<p>It doesn't. In fact, we'd encourage merchants to keep using the checkout decisioning they already have — whether that lives in Shopify, Stripe, PayPal, Adyen, or another PSP.</p>
+<p>It doesn't. In fact, we'd encourage merchants to actively use their payment processor's built-in risk tools — whether that's Stripe Radar, Shopify Protect, or another PSP's fraud console.</p>
 
-<p><strong>Those tools are excellent at what they were designed to do.</strong></p>
+<p><strong>They are excellent at what they were designed to do.</strong></p>
 
 <p>Making real-time decisions at checkout — should this payment be approved? Should it be declined? Should additional verification be required? That's exactly the job of a fraud prevention engine.</p>
 
@@ -720,38 +720,38 @@ export const posts: BlogPost[] = [
 
 <ul>
   <li>Why did chargebacks increase last month?</li>
-  <li>How much of that is friendly fraud versus true fraud?</li>
   <li>Which fraud patterns are getting through?</li>
-  <li>Which rules are working — and which create unnecessary false positives?</li>
+  <li>Which rules are working?</li>
+  <li>Which ones are creating unnecessary false positives?</li>
   <li>What should we change next?</li>
 </ul>
 
-<p><strong>That's where FraudPulse comes in. We sit on top of your transaction data — not in place of your payment stack.</strong></p>
+<p><strong>That's where FraudPulse comes in. We sit on top of your fraud stack.</strong></p>
 
 <h2>How FraudPulse works with your existing tools</h2>
 
-<p>FraudPulse connects to transaction data from platforms like Shopify, Stripe, PayPal, and Adyen, analyzes what's happening across your transactions, chargebacks, and friendly fraud, and turns that into AI-generated action items.</p>
+<p>FraudPulse connects to the data your payment processor and fraud tools already generate, analyzes what's happening across your transactions and chargebacks, and turns that into AI-generated action items.</p>
 
 <p>Practical recommendations you can implement — each showing the expected fraud capture rate and the potential impact on false positives.</p>
 
 <blockquote>This rule could capture another 18% of fraud with an estimated false positive rate of 0.2%. This fraud pattern has increased over the last 30 days. Here's what we recommend changing.</blockquote>
 
-<p>That's why we see FraudPulse as the layer that helps merchants <em>understand</em> whether their fraud strategy is working. Our goal is to help you create better rules from the data you already have.</p>
+<p>That's why we see FraudPulse as the layer that helps merchants <em>understand</em> whether their fraud strategy is working. Our goal is to help you get more value from your existing systems.</p>
 
-<p><strong>P.S.</strong> If you want to see which rules would reduce chargebacks and friendly fraud on your own data, <a href="/book-a-demo/">we'd love to show you</a>.</p>
+<p><strong>P.S.</strong> If you're running Shopify Protect or Stripe Radar and want to know what they're missing, <a href="/book-a-demo/">we'd love to show you</a>.</p>
     `.trim(),
     faqs: [
       {
-        q: 'Does FraudPulse replace my payment processor fraud tools?',
-        a: 'No. FraudPulse sits on top of your transaction data. Your existing stack still makes real-time checkout decisions; FraudPulse analyzes outcomes and recommends which rules and actions to change next.',
+        q: 'Does FraudPulse replace Stripe Radar or Shopify Protect?',
+        a: 'No. FraudPulse sits on top of your existing fraud stack. Stripe Radar and Shopify Protect still make real-time checkout decisions; FraudPulse analyzes outcomes and recommends which rules to change next.',
       },
       {
-        q: 'What does FraudPulse do that a fraud console does not?',
-        a: 'After checkout decisions are made, merchants still need to know why chargebacks rose, how much is friendly fraud, which patterns are getting through, and which rules create false positives. FraudPulse turns that data into prioritized, implementable recommendations with impact estimates.',
+        q: 'What does FraudPulse do that Radar and Protect do not?',
+        a: 'After checkout decisions are made, merchants still need to know why chargebacks rose, which patterns are getting through, and which rules create false positives. FraudPulse turns that data into prioritized, implementable rule recommendations with impact estimates.',
       },
       {
-        q: 'Which platforms can I connect?',
-        a: 'FraudPulse connects to transaction data from Shopify, Stripe, PayPal, and Adyen. You keep processing payments where you already process them — FraudPulse helps you turn that data into better rules.',
+        q: 'Do I need to migrate off my payment processor fraud tools?',
+        a: 'No. Keep Stripe Radar, Shopify Protect, or your PSP fraud console. FraudPulse helps you get more value from the tools you already use.',
       },
     ],
   },
