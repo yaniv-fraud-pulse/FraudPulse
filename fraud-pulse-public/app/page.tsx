@@ -61,7 +61,7 @@ const tabs = [
     ),
     title: 'Get ranked actions, not just charts.',
     body: 'The AI Actions module generates specific fraud rules ranked by impact each one showing estimated fraud capture rate and false positive percentage so your team acts with confidence, not guesswork.',
-    bullets: ['AI Summary with risk level badge', 'Ranked rules with fraud rate & FP%', 'Key insights on blind spots', 'Full PDF report for your risk committee'],
+    bullets: ['AI Summary with risk level badge', 'Designated rules with fraud rate & FP%', 'Key insights on blind spots', 'Full PDF report for your risk committee'],
     visual: (
       <div className="rounded-2xl border bg-white p-4 sm:p-5 w-full max-w-full min-w-0 anim-float overflow-hidden text-left" style={{ borderColor: '#e5e7eb', boxShadow: '0 8px 32px rgba(0,0,0,0.08)' }}>
         <div className="flex items-center gap-2 mb-4">
@@ -413,7 +413,7 @@ export default function Home() {
             </h1>
 
             <p className="text-[1.25rem] leading-[1.75] mb-3 max-w-[760px] mx-auto text-gray-900 font-semibold anim-fadeUp delay-300">
-              We analyze your transaction data and deliver concrete actions and rules to reduce chargebacks and fraud.
+              We analyze your transaction data and deliver concrete actions and rules to reduce chargebacks and false positive.
             </p>
 
             <p className="text-[1.0625rem] leading-[1.75] mb-8 max-w-[620px] mx-auto text-gray-500 anim-fadeUp delay-400">

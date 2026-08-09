@@ -75,7 +75,7 @@ const steps = [
     description: 'You receive a ranked list of specific fraud rules and actions — each with estimated chargeback reduction and false-positive impact — so your team can act with confidence.',
     details: [
       'AI Summary with risk level badge (Low / Medium / High)',
-      'Recommended rules with Fraud Rate, False Positive %, and Ranking',
+      'Designated rules with Fraud Rate, False Positive %, and Ranking',
       'Estimated revenue and chargeback impact per rule',
       'Full Report PDF download for your risk committee',
     ],
@@ -134,7 +134,7 @@ export default function Solutions() {
               </Reveal>
               <Reveal animation="anim-fadeUp" delay={150}>
                 <p className="text-[1.25rem] leading-[1.75] max-w-[720px] mx-auto text-gray-600 font-semibold mb-3">
-                    We analyze your transaction data and deliver concrete actions and rules to reduce chargebacks and fraud.
+                    We analyze your transaction data and deliver concrete actions and rules to reduce chargebacks and false positive.
                 </p>
                 <p className="text-[1.0625rem] leading-[1.75] max-w-[600px] mx-auto text-gray-500 mb-4">
                   Get actionable fraud insights in days — not analytics reports you never act on. Merchants connect Shopify, Stripe, or Adyen, then get ranked rule changes with estimated chargeback impact and clearer false-positive tradeoffs, <strong>without replacing the fraud prevention tools they already run.</strong> 
