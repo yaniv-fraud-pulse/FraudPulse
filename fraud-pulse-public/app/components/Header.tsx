@@ -36,7 +36,6 @@ export default function Header() {
           {/* Desktop nav */}
           <div className="hidden md:flex md:items-center md:gap-1">
             {[
-              { href: '/',               label: 'Home' },
               { href: '/solutions/',     label: 'Solutions' },
               { href: '/how-it-works/',  label: 'How It Works' },
               { href: '/pricing/',       label: 'Pricing' },
@@ -92,7 +91,6 @@ export default function Header() {
           <div className="md:hidden border-t" style={{ borderColor: '#e5e7eb' }}>
             <div className="flex flex-col py-1">
               {[
-                { href: '/',               label: 'Home' },
                 { href: '/solutions/',     label: 'Solutions' },
                 { href: '/how-it-works/',  label: 'How It Works' },
                 { href: '/pricing/',       label: 'Pricing' },

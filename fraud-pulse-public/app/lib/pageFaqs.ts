@@ -3,7 +3,7 @@ import type { FaqItem } from './homeFaq';
 export const howItWorksFaqs: FaqItem[] = [
   {
     q: 'How does FraudPulse use my transaction data?',
-    a: 'FraudPulse connects to transaction data from Shopify, Stripe, PayPal, or Adyen, then analyzes chargebacks, friendly fraud, and false declines. You get ranked rule changes and actions to apply in your existing payment stack — not a replacement for the tools that approve or decline at checkout.',
+    a: 'FraudPulse connects to transaction data from Shopify, Stripe, or Adyen, then analyzes chargebacks, friendly fraud, and false declines. You get ranked rule changes and actions to apply in your existing payment stack — not a replacement for the tools that approve or decline at checkout.',
   },
   {
     q: 'How long until I get fraud rule recommendations?',
@@ -30,7 +30,7 @@ export const solutionsFaqs: FaqItem[] = [
   },
   {
     q: 'What payment stacks does FraudPulse support?',
-    a: 'FraudPulse connects to transaction data from Shopify, Stripe, PayPal, and Adyen. Merchants on other platforms can upload CSV exports. Custom integrations are available when your stack needs a dedicated connector.',
+    a: 'FraudPulse connects to transaction data from Shopify, Stripe, and Adyen. Merchants on other platforms can upload CSV exports. Custom integrations are available when your stack needs a dedicated connector.',
   },
   {
     q: 'How is FraudPulse different from hiring more fraud analysts?',
@@ -49,7 +49,7 @@ export const blogIndexFaqs: FaqItem[] = [
   },
   {
     q: 'Are FraudPulse blog posts only for Stripe and Shopify merchants?',
-    a: 'No. Many examples use Shopify or Stripe because those stacks are common, but the core ideas — connecting transaction data, measuring false positives, auditing rules, and reducing chargebacks and friendly fraud — apply across ecommerce payment stacks including PayPal and Adyen.',
+    a: 'No. Many examples use Shopify or Stripe because those stacks are common, but the core ideas — connecting transaction data, measuring false positives, auditing rules, and reducing chargebacks and friendly fraud — apply across ecommerce payment stacks including Adyen.',
   },
   {
     q: 'How often is the FraudPulse blog updated?',

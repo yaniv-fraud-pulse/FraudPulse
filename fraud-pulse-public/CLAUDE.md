@@ -10,7 +10,7 @@ This project uses **Next.js 16.2.6 with React 19** (see `AGENTS.md` above). APIs
 
 ## What this is
 
-The **public marketing site** for FraudPulse (`fraud-pulse-public`). FraudPulse connects to transaction data (Shopify, Stripe, PayPal, Adyen) and recommends rules/actions that reduce chargebacks and friendly fraud. The **product app is a separate codebase** — see `POSTHOG_PLAN.md` "Phase B". Note: the git root is one level up (`../`), where planning `.md` files live; run all `npm` commands from this directory.
+The **public marketing site** for FraudPulse (`fraud-pulse-public`). FraudPulse connects to transaction data (Shopify, Stripe, Adyen) and recommends rules/actions that reduce chargebacks and friendly fraud. The **product app is a separate codebase** — see `POSTHOG_PLAN.md` "Phase B". Note: the git root is one level up (`../`), where planning `.md` files live; run all `npm` commands from this directory.
 
 ## Commands
 

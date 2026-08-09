@@ -11,7 +11,7 @@ export const homeFaqs: FaqItem[] = [
   },
   {
     q: 'Which platforms can FraudPulse connect to?',
-    a: 'FraudPulse takes transaction data from Shopify, Stripe, PayPal, and Adyen — plus CSV uploads when you need a flexible import path. Recommendations are written so your team can implement rule changes in the tools you already use.',
+    a: 'FraudPulse takes transaction data from Shopify, Stripe, and Adyen — plus CSV uploads when you need a flexible import path. Recommendations are written so your team can implement rule changes in the tools you already use.',
   },
   {
     q: 'How does FraudPulse reduce chargebacks and friendly fraud?',
@@ -19,7 +19,7 @@ export const homeFaqs: FaqItem[] = [
   },
   {
     q: 'How long does it take to get fraud rule recommendations?',
-    a: 'Most merchants get actionable fraud insights in days, not months. After you connect transaction data from Shopify, Stripe, PayPal, or Adyen, FraudPulse analyzes your patterns and delivers a prioritized list of rule changes and actions your team can apply.',
+    a: 'Most merchants get actionable fraud insights in days, not months. After you connect transaction data from Shopify, Stripe, or Adyen, FraudPulse analyzes your patterns and delivers a prioritized list of rule changes and actions your team can apply.',
   },
   {
     q: 'Do I need to replace my payment or fraud tools?',

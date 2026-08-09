@@ -46,7 +46,7 @@ export default function HowItWorks() {
                   Get actionable fraud insights in days — not analytics reports you never act on.
                 </p>
                 <p className="text-[1rem] sm:text-[1.125rem] leading-[1.75] max-w-[620px] mx-auto text-gray-400 mb-4">
-                  Connect data from <strong className="text-gray-600">Shopify</strong>, <strong className="text-gray-600">Stripe</strong>, <strong className="text-gray-600">PayPal</strong>, or <strong className="text-gray-600">Adyen</strong>. We analyze transactions, chargebacks, and friendly fraud — then recommend the rules and actions to change.
+                  Connect data from <strong className="text-gray-600">Shopify</strong>, <strong className="text-gray-600">Stripe</strong>, or <strong className="text-gray-600">Adyen</strong>. We analyze transactions, chargebacks, and friendly fraud — then recommend the rules and actions to change.
                 </p>
                 <PageUpdated date={PAGE_LAST_UPDATED.howItWorks} />
               </Reveal>
@@ -57,11 +57,10 @@ export default function HowItWorks() {
                   <p className="text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-4 text-[#5ba8b4]">
                     Transaction data in
                   </p>
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-2">
+                  <div className="grid grid-cols-3 gap-3 mb-2">
                     {[
                       { name: 'Shopify', slug: 'shopify', color: '95BF47' },
                       { name: 'Stripe', slug: 'stripe', color: '635BFF' },
-                      { name: 'PayPal', slug: 'paypal', color: '00457C' },
                       { name: 'Adyen', slug: 'adyen', color: '0ABF53' },
                     ].map(({ name, slug, color }) => (
                       <div
@@ -168,7 +167,7 @@ export default function HowItWorks() {
                   Works with your stack
                 </p>
                 <p className="font-bold text-white text-[1.375rem] sm:text-[1.625rem] leading-[1.45] tracking-[-0.02em]">
-                  Keep Shopify, Stripe, PayPal, or Adyen — and your fraud prevention tools. We help you use the data better.
+                  Keep Shopify, Stripe, or Adyen — and your fraud prevention tools. We help you use the data better.
                 </p>
               </div>
             </Reveal>
@@ -191,7 +190,7 @@ export default function HowItWorks() {
                 {
                   step: '01',
                   title: 'Connect Transaction Data',
-                  description: 'Connect Shopify, Stripe, PayPal, or Adyen in minutes via API, CSV upload, or native integration. No engineering work required.',
+                  description: 'Connect Shopify, Stripe, or Adyen in minutes via API, CSV upload, or native integration. No engineering work required.',
                   color: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',
                 },
                 {

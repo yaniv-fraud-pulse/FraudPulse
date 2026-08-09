@@ -1,10 +1,10 @@
 # FraudPulse
 
-> FraudPulse connects to your transaction data and recommends rules and actions that reduce chargebacks and friendly fraud. It analyzes transactions and disputes from Shopify, Stripe, PayPal, and Adyen and delivers prioritized, implementable recommendations with impact estimates — without replacing your fraud prevention tools.
+> FraudPulse connects to your transaction data and recommends rules and actions that reduce chargebacks and friendly fraud. It analyzes transactions and disputes from Shopify, Stripe, and Adyen and delivers prioritized, implementable recommendations with impact estimates — without replacing your fraud prevention tools.
 
 ## Product summary
 
-- Connect transaction data from Shopify, Stripe, PayPal, or Adyen
+- Connect transaction data from Shopify, Stripe, or Adyen
 - Analyze fraud, chargeback, and friendly-fraud patterns from your own data
 - Receive prioritized rule changes and actions with chargeback and false-positive impact estimates
 - Apply recommendations in your existing payment / fraud prevention tools — without replacing them
@@ -26,7 +26,7 @@
 ## Common buyer questions
 
 - What does FraudPulse do? Connects to transaction data and recommends rules/actions to reduce chargebacks and friendly fraud.
-- Which platforms? Shopify, Stripe, PayPal, and Adyen (plus CSV where needed).
+- Which platforms? Shopify, Stripe, and Adyen (plus CSV where needed).
 - How long to get recommendations? Most merchants get actionable insights in days.
 - Do I need to replace my fraud prevention tools? No — FraudPulse works alongside them; no migration required.
 - How is FraudPulse different from analytics & reporting? Analytics shows what happened; FraudPulse recommends which rules and actions to change next.

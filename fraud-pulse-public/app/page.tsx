@@ -34,8 +34,7 @@ const applyActionsVisual = (
     {[
       { name: 'Shopify', slug: 'shopify', color: '95BF47', rule: 'Tighten high-risk country rules', delay: 0 },
       { name: 'Stripe', slug: 'stripe', color: '635BFF', rule: 'Block cards with prior chargebacks', delay: 80 },
-      { name: 'PayPal', slug: 'paypal', color: '00457C', rule: 'Review mismatched billing / shipping', delay: 160 },
-      { name: 'Adyen', slug: 'adyen', color: '0ABF53', rule: 'Flag velocity spikes on high AOV', delay: 240 },
+      { name: 'Adyen', slug: 'adyen', color: '0ABF53', rule: 'Flag velocity spikes on high AOV', delay: 160 },
     ].map(({ name, slug, color, rule, delay }) => (
       <div key={name} className="py-3 border-b last:border-0 anim-fadeUp" style={{ borderColor: '#f3f4f6', animationDelay: `${delay}ms` }}>
         <div className="flex items-center gap-3 mb-2">
@@ -258,9 +257,9 @@ const tabs = [
   //     </svg>
   //   ),
   //   title: 'Turn recommendations into rules in your existing stack.',
-  //   body: 'FraudPulse doesn\'t replace your payment tools — it uses transaction data from Shopify, Stripe, PayPal, and Adyen to tell you which rules and actions will reduce chargebacks and friendly fraud.',
+  //   body: 'FraudPulse doesn\'t replace your payment tools — it uses transaction data from Shopify, Stripe, and Adyen to tell you which rules and actions will reduce chargebacks and friendly fraud.',
   //   bullets: [
-  //     'Connect Shopify, Stripe, PayPal, or Adyen',
+  //     'Connect Shopify, Stripe, or Adyen',
   //     'Get ranked rules and actions with impact estimates',
   //     'Apply changes where you already manage risk',
   //     'Works alongside fraud prevention tools — keep your existing stack',
@@ -273,7 +272,7 @@ const heroSteps = [
   {
     step: '01',
     title: 'Connect Your Transaction Data',
-    description: 'Connect Shopify, Stripe, PayPal, or Adyen in minutes — no engineering work required',
+    description: 'Connect Shopify, Stripe, or Adyen in minutes — no engineering work required',
     visual: tabs[1].visual,
     color: '#5ba8b4',
   },
@@ -376,7 +375,7 @@ export default function Home() {
             operatingSystem: 'Web',
             url: SITE_URL,
             description:
-              'Fraud intelligence for online merchants. Connects to Shopify, Stripe, PayPal, and Adyen transaction data, analyzes chargebacks and friendly fraud, and recommends ranked rules and actions.',
+              'Fraud intelligence for online merchants. Connects to Shopify, Stripe, and Adyen transaction data, analyzes chargebacks and friendly fraud, and recommends ranked rules and actions.',
             offers: {
               '@type': 'Offer',
               url: `${SITE_URL}/pricing/`,
@@ -414,7 +413,7 @@ export default function Home() {
             </h1>
 
             <p className="text-[1.25rem] leading-[1.75] mb-3 max-w-[760px] mx-auto text-gray-900 font-semibold anim-fadeUp delay-300">
-              We analyze your transaction data and deliver concrete actions and rules to reduce chargebacks and friendly fraud.
+              We analyze your transaction data and deliver concrete actions and rules to reduce chargebacks and fraud.
             </p>
 
             <p className="text-[1.0625rem] leading-[1.75] mb-8 max-w-[620px] mx-auto text-gray-500 anim-fadeUp delay-400">
@@ -435,7 +434,7 @@ export default function Home() {
 
             {/* Subheadline */}
             <p className="mt-6 text-[1rem] leading-[1.7] max-w-[640px] mx-auto text-gray-500 anim-fadeUp delay-600">
-              Works with Shopify, Stripe, PayPal, and Adyen — we analyze your transactions and disputes, then suggest the rules to change.
+              Works with Shopify, Stripe, and Adyen — we analyze your transactions and disputes, then suggest the rules to change.
             </p>
 
             {/* Process Flow Animation */}
@@ -509,8 +508,7 @@ export default function Home() {
               </h2>
               <p className="text-[1.0625rem] sm:text-[1.125rem] leading-[1.75] text-gray-400 mb-8">
                 Connect <span className="font-bold text-white">Shopify</span>,{' '}
-                <span className="font-bold text-white">Stripe</span>,{' '}
-                <span className="font-bold text-white">PayPal</span>, or{' '}
+                <span className="font-bold text-white">Stripe</span>, or{' '}
                 <span className="font-bold text-white">Adyen</span>. FraudPulse analyzes your transactions and disputes, then recommends rules and actions that reduce chargebacks and friendly fraud — without replacing your fraud prevention tools.
               </p>
             </Reveal>
@@ -520,7 +518,6 @@ export default function Home() {
                 {[
                   { name: 'Shopify', slug: 'shopify', color: '95BF47' },
                   { name: 'Stripe', slug: 'stripe', color: '635BFF' },
-                  { name: 'PayPal', slug: 'paypal', color: '00457C' },
                   { name: 'Adyen', slug: 'adyen', color: '0ABF53' },
                 ].map(({ name, slug, color }) => (
                   <div
@@ -566,7 +563,7 @@ export default function Home() {
                 }}>Increase Approvals.</span>
               </h2>
               <p className="text-center text-[1.0625rem] text-gray-500 max-w-2xl mx-auto mb-12 leading-relaxed">
-                Connect transaction data from <strong className="text-gray-800">Shopify</strong>, <strong className="text-gray-800">Stripe</strong>, <strong className="text-gray-800">PayPal</strong>, or <strong className="text-gray-800">Adyen</strong> — then get better rules to cut chargebacks and friendly fraud, without replacing your fraud prevention tools.
+                Connect transaction data from <strong className="text-gray-800">Shopify</strong>, <strong className="text-gray-800">Stripe</strong>, or <strong className="text-gray-800">Adyen</strong> — then get better rules to cut chargebacks and friendly fraud, without replacing your fraud prevention tools.
               </p>
             </Reveal>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">

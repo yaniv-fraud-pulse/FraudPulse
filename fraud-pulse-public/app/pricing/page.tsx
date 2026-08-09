@@ -47,7 +47,7 @@ const plans = [
       { label: 'Chargeback ratio monitoring',                included: true },
       { label: '5 user seats',                              included: true },
       { label: 'Custom rules engine (Up to 10 rules)',       included: true },
-      { label: 'Full API access (Shopify, Stripe, PayPal, Adyen)', included: true },
+      { label: 'Full API access (Shopify, Stripe, and Adyen)', included: true },
       { label: 'Dedicated account manager',                  included: false },
     ],
   },
@@ -75,7 +75,7 @@ const plans = [
 const faqs = [
   {
     q: 'Is there a free trial?',
-    a: 'Yes. Every FraudPulse plan includes a 14-day free trial with no credit card required. You get full access to the features on your chosen plan so you can connect transaction data from Shopify, Stripe, PayPal, or Adyen, review ranked fraud rule recommendations, and confirm value before you commit to paid billing.',
+    a: 'Yes. Every FraudPulse plan includes a 14-day free trial with no credit card required. You get full access to the features on your chosen plan so you can connect transaction data from Shopify, Stripe, or Adyen, review ranked fraud rule recommendations, and confirm value before you commit to paid billing.',
   },
   {
     q: 'How is transaction volume counted?',
@@ -95,7 +95,7 @@ const faqs = [
   },
   {
     q: 'What integrations are included?',
-    a: 'Plans support connecting transaction data from Shopify, Stripe, PayPal, and Adyen. Professional and Enterprise add fuller API access and webhooks; Enterprise can include custom integrations when your stack needs a dedicated connector.',
+    a: 'Plans support connecting transaction data from Shopify, Stripe, and Adyen. Professional and Enterprise add fuller API access and webhooks; Enterprise can include custom integrations when your stack needs a dedicated connector.',
   },
 ];
 

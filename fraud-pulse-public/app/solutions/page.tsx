@@ -48,10 +48,10 @@ const steps = [
     number: '01',
     tag: 'Connect',
     title: 'Connect Your Transaction Data',
-    description: 'Connect Shopify, Stripe, PayPal, or Adyen in minutes — no engineering work required. FraudPulse imports your transaction history, chargeback records, and dispute data, then validates data quality before analysis begins.',
+    description: 'Connect Shopify, Stripe, or Adyen in minutes — no engineering work required. FraudPulse imports your transaction history, chargeback records, and dispute data, then validates data quality before analysis begins.',
     details: [
       'Connect via API, CSV upload, or native integrations',
-      'Shopify, Stripe, PayPal, and Adyen supported',
+      'Shopify, Stripe, and Adyen supported',
       'Automatic Data Sanity Check on all imported data',
       'Historical data analysis from day one',
     ],
@@ -97,7 +97,6 @@ const steps = [
 const integrations = [
   { name: 'Shopify', category: 'E-Commerce', slug: 'shopify' },
   { name: 'Stripe', category: 'Payments', slug: 'stripe' },
-  { name: 'PayPal', category: 'Payments', slug: 'paypal' },
   { name: 'Adyen', category: 'Payments', slug: 'adyen' },
 ];
 
@@ -135,10 +134,10 @@ export default function Solutions() {
               </Reveal>
               <Reveal animation="anim-fadeUp" delay={150}>
                 <p className="text-[1.25rem] leading-[1.75] max-w-[720px] mx-auto text-gray-600 font-semibold mb-3">
-                    We analyze your transaction data and deliver concrete actions and rules to reduce chargebacks and friendly fraud.
+                    We analyze your transaction data and deliver concrete actions and rules to reduce chargebacks and fraud.
                 </p>
                 <p className="text-[1.0625rem] leading-[1.75] max-w-[600px] mx-auto text-gray-500 mb-4">
-                  Get actionable fraud insights in days — not analytics reports you never act on. Merchants connect Shopify, Stripe, PayPal, or Adyen, then get ranked rule changes with estimated chargeback impact and clearer false-positive tradeoffs, <strong>without replacing the fraud prevention tools they already run.</strong> 
+                  Get actionable fraud insights in days — not analytics reports you never act on. Merchants connect Shopify, Stripe, or Adyen, then get ranked rule changes with estimated chargeback impact and clearer false-positive tradeoffs, <strong>without replacing the fraud prevention tools they already run.</strong> 
                 </p>
               </Reveal>
             </div>
@@ -210,7 +209,7 @@ export default function Solutions() {
                   Works With Your Existing Stack
                 </h2>
                 <p className="text-[1.125rem] leading-[1.7] max-w-[580px] mx-auto">
-                  Connect Shopify, Stripe, PayPal, or Adyen — or upload CSV exports from any platform. No migration, and no need to replace your fraud prevention tools.
+                  Connect Shopify, Stripe, or Adyen — or upload CSV exports from any platform. No migration, and no need to replace your fraud prevention tools.
                 </p>
               </div>
             </Reveal>
