@@ -21,6 +21,135 @@ export type BlogPost = {
 
 export const posts: BlogPost[] = [
   {
+    slug: 'nacha-ach-fraud-responsibility-june-2026',
+    title:
+      'The Biggest Fraud-Related Change This Year Is a Change in Responsibility',
+    excerpt:
+      'From June 20th, every organisation that originates ACH payments must have documented, risk-based processes to identify potential fraudulent payments — covering 35.2 billion ACH payments worth $93 trillion in 2025.',
+    category: 'News',
+    date: 'August 14, 2026',
+    readTime: '4 min read',
+    author: 'Idan Hayon',
+    authorRole: 'Co-Founder & CEO',
+    image:
+      'https://media.licdn.com/dms/image/v2/D4D22AQEllSXR2pEavw/feedshare-image-high-res/B4DZ_oiik6J4AU-/0/1786312796856?e=1788393600&v=beta&t=xFVcmnOK8hhBWdb2cY7_oHD1kWyFcRx07BTbFAQyk7U',
+    content: `
+<p>The biggest fraud-related change this year is a change in responsibility.</p>
+
+<p>From June 20th, every organisation that originates ACH payments must have documented, risk-based processes to identify potential fraudulent payments.</p>
+
+<p>We are talking about <strong>35.2 billion ACH payments worth $93 trillion</strong> that were processed in 2025.</p>
+
+<p>Historically, fraud prevention has often been viewed as the responsibility of banks and payment providers. The new <strong>Nacha Rules</strong> make it clear that businesses originating payments also have responsibility for preventing fraud before payments enter the network.</p>
+
+<p>That's an important change in mindset.</p>
+
+<h2>From response to prevention</h2>
+
+<p>Good fraud prevention is no longer just about responding when something goes wrong. It's about demonstrating that you have processes to detect suspicious activity before money leaves the account.</p>
+
+<p>The interesting part is that Nacha deliberately requires organisations to build controls appropriate to their own level of risk. That means understanding:</p>
+
+<ul>
+  <li>Where payment instructions originate</li>
+  <li>How payment changes are verified</li>
+  <li>Who can approve payments</li>
+  <li>What unusual behaviour should trigger additional review</li>
+  <li>How fraud incidents are investigated and improved upon</li>
+</ul>
+
+<h2>The biggest takeaway</h2>
+
+<p>To me, that's the biggest takeaway. Compliance is becoming less about ticking boxes and more about demonstrating that fraud risk is actively managed.</p>
+
+<p>If you're working through how to document and operationalise risk-based controls on your payment flows, <a href="/book-a-demo/">we're happy to walk through it</a>.</p>
+
+<p><em>Originally shared on <a href="https://www.linkedin.com/feed/update/urn:li:activity:7493901772894298113/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</em></p>
+    `.trim(),
+    faqs: [
+      {
+        q: 'What changed in Nacha ACH fraud rules in June 2026?',
+        a: 'From June 20th, organisations that originate ACH payments must have documented, risk-based processes to identify potential fraudulent payments before those payments enter the network — shifting more fraud prevention responsibility onto originating businesses.',
+      },
+      {
+        q: 'Why does ACH fraud responsibility matter now?',
+        a: 'ACH volume is enormous — about 35.2 billion payments worth $93 trillion in 2025. When originating businesses must prove they manage fraud risk before money moves, reactive controls after an incident are no longer enough.',
+      },
+      {
+        q: 'What should businesses document under the new Nacha expectations?',
+        a: 'Controls should match your risk level and typically cover where payment instructions originate, how payment changes are verified, who can approve payments, what unusual behaviour triggers review, and how fraud incidents are investigated and improved.',
+      },
+    ],
+  },
+  {
+    slug: 'ai-is-changing-the-speed-of-fraud-evolution',
+    title: 'AI Is Changing the Speed at Which Fraud Evolves',
+    excerpt:
+      'Visa detected around $1 billion in scam transactions in H2 2025. AI-enabled scams drove nearly 20% higher losses year over year. The real shift isn’t just more fraud — it’s how fast fraud adapts.',
+    category: 'Education',
+    date: 'August 12, 2026',
+    readTime: '4 min read',
+    author: 'Idan Hayon',
+    authorRole: 'Co-Founder & CEO',
+    image:
+      'https://media.licdn.com/dms/image/v2/D5622AQFgVmsqnRZIBw/feedshare-shrink_800/B56Z_bQzYeHUAg-/0/1786090043682?e=1788393600&v=beta&t=O2avn3e0n2eZldg_voWWEOZzqzzEMhX4sUaey1ENfZE',
+    content: `
+<p>Visa detected around <strong>$1 billion in scam transactions</strong> in the second half of 2025 alone. Scams are now the largest category of consumer payment fraud.</p>
+
+<p>Another report found that AI-enabled scams increased losses by almost <strong>20% year over year</strong>, reaching $14.3 billion globally.</p>
+
+<p>The obvious conclusion is that AI is making fraud worse.</p>
+
+<p>I think there's a more interesting conclusion.</p>
+
+<h2>AI is changing the speed of fraud evolution</h2>
+
+<p>Fraudsters have always adapted. The difference is that adaptation used to take time. A new fraud act gets implemented, fraudsters test it, they find a weakness, and adjust their behaviour.</p>
+
+<p>Today, that entire cycle happens much faster. They can generate phishing campaigns at scale, create convincing fake identities, test hundreds of variations, learn from the results, and launch the next attack almost immediately.</p>
+
+<p>The challenge for merchants is that fraud is becoming more adaptive. That changes how fraud systems need to operate.</p>
+
+<ul>
+  <li>A fraud strategy that gets reviewed every few months isn't enough</li>
+  <li>Fraud acts can't be written once and forgotten</li>
+  <li>Models can't be treated as permanent solutions</li>
+</ul>
+
+<p>The question becomes: <strong>can our fraud strategy evolve as quickly as the fraud itself?</strong></p>
+
+<p>That means continuously reviewing fraud patterns. Understanding which behaviours have changed, removing outdated acts, and focusing on signals that are harder to manipulate than individual data points.</p>
+
+<h2>The fundamentals still matter</h2>
+
+<p>The fundamentals of good fraud management remain the same:</p>
+
+<ol>
+  <li>Understand the behaviour</li>
+  <li>Ignore the noise</li>
+  <li>Build systems that evolve as quickly as the threats they're designed to stop</li>
+</ol>
+
+<p>If you want to see how FraudPulse turns shifting transaction patterns into ranked rules and actions, <a href="/book-a-demo/">book a walkthrough</a>.</p>
+
+<p><em>Originally shared on <a href="https://www.linkedin.com/feed/update/urn:li:activity:7493177017924980736/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</em></p>
+    `.trim(),
+    faqs: [
+      {
+        q: 'How much scam fraud did Visa detect in late 2025?',
+        a: 'Visa detected around $1 billion in scam transactions in the second half of 2025 alone, and scams are now the largest category of consumer payment fraud.',
+      },
+      {
+        q: 'How is AI changing payment fraud?',
+        a: 'AI is not only increasing scam losses — it is speeding up the fraud cycle. Attackers can generate campaigns, fake identities, and test variations at scale, then adapt almost immediately after seeing what works.',
+      },
+      {
+        q: 'What should merchants change in their fraud strategy?',
+        a: 'Review fraud patterns continuously, remove outdated acts, avoid treating models as permanent solutions, and focus on signals that are harder to manipulate than single data points so controls can evolve as fast as the threats.',
+      },
+    ],
+  },
+  {
     slug: 'biggest-revenue-leak-might-be-false-positives',
     title:
       'The biggest revenue leak in your business might not be fraud. It might be false positives.',
@@ -255,6 +384,10 @@ export const posts: BlogPost[] = [
         q: 'What should fraud analysts ask beyond risk scores?',
         a: 'Ask what the fraudster was trying to achieve, how they got there, and whether the signals make sense together — or whether you are looking at unrelated noise.',
       },
+      {
+        q: 'Why does industry context matter for fraud signals?',
+        a: 'The same behaviour can be normal in one business and suspicious in another. Without understanding the business behind the transactions, teams often optimise for the wrong signals and block good customers.',
+      },
     ],
   },
   {
@@ -269,7 +402,7 @@ export const posts: BlogPost[] = [
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
     image:
-      'https://media.licdn.com/dms/image/v2/D4D22AQGpAnhG60UvTQ/feedshare-shrink_1280/B4DZ9.gjMVKsAM-/0/1784533890084?e=1786579200&v=beta&t=CPdhQfLIDbJRvdpb03nN9aTtouQTdUimRwHdHCLNX2w',
+      'https://media.licdn.com/dms/image/v2/D4D22AQGpAnhG60UvTQ/feedshare-shrink_800/B4DZ9.gjMVKsAc-/0/1784533890083?e=1788393600&v=beta&t=4hcOE0GiLxdfUQLDnJyVlc_YAD2g08awq_6ajmUgUio',
     content: `
 <p>Early in my career, I worked with one of the world’s largest sneaker brands. They were launching a limited-edition release.</p>
 
@@ -302,6 +435,10 @@ export const posts: BlogPost[] = [
         q: 'Why do generic fraud models fail across industries?',
         a: 'Each industry has different incentives and “normal” behaviour. A rule that works for SaaS can hurt sneaker drops; a model trained on eCommerce may fail in travel or gaming.',
       },
+      {
+        q: 'What should you do before blocking “bot-like” behaviour?',
+        a: 'Confirm whether the behaviour matches how your best customers actually buy. In high-demand markets, automation and multiple accounts can be legitimate demand — blocking them without context can hurt revenue.',
+      },
     ],
   },
   {
@@ -316,7 +453,7 @@ export const posts: BlogPost[] = [
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
     image:
-      'https://media.licdn.com/dms/image/v2/D4D22AQHAy-MXn8l_fg/feedshare-shrink_1280/B4DZ9p2_.ZJ4AM-/0/1784187453843?e=1786579200&v=beta&t=M6e3QOBJzzRjoiwrzkBTzEavGnxEakxQWzjgaKab5nk',
+      'https://media.licdn.com/dms/image/v2/D4D22AQHAy-MXn8l_fg/feedshare-shrink_800/B4DZ9p2_.ZJ4Ac-/0/1784187453843?e=1788393600&v=beta&t=qdLPZEFku9v48H1GMYocCYi_s6YP175basazBKHkq8Q',
     content: `
 <p>Over time, most systems get tightened. A new verification step gets added after an incident, then another one just to be safe, then stricter acts to reduce exposure.</p>
 
@@ -351,6 +488,10 @@ export const posts: BlogPost[] = [
         q: 'What usually improves approval rates fastest?',
         a: 'Finding segments where controls are too aggressive or no longer needed, then removing or adjusting them — not adding another blanket rule.',
       },
+      {
+        q: 'Why do teams keep adding friction after fraud incidents?',
+        a: 'Each incident pushes another verification step or stricter act “just to be safe.” Over time the system looks safer on paper while checkout abandonment and false declines quietly grow.',
+      },
     ],
   },
   {
@@ -364,7 +505,7 @@ export const posts: BlogPost[] = [
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
     image:
-      'https://media.licdn.com/dms/image/v2/D4D22AQHfySUb5SOZog/feedshare-shrink_1280/B4DZ9fjuMWIYAM-/0/1784014628081?e=1786579200&v=beta&t=05QBhs5hkNMhizSohvR8uYqJp9ajnISg-Qgnbp8XT68',
+      'https://media.licdn.com/dms/image/v2/D4D22AQHfySUb5SOZog/feedshare-shrink_800/B4DZ9fjuMWIYAc-/0/1784014628081?e=1788393600&v=beta&t=EhoICe0WYGenefeAqfUJh9QIS9pZYtpRtITxyzIuN9E',
     content: `
 <p>In many businesses, fraud isn’t a priority until it becomes one.</p>
 
@@ -388,6 +529,10 @@ export const posts: BlogPost[] = [
       {
         q: 'When does a basic fraud setup usually break?',
         a: 'When volume grows, new markets are added, or payment flows get more complex — often showing up as more false positives, slower decisions, and less clarity rather than a sudden need for more headcount.',
+      },
+      {
+        q: 'What matters more than fraud team size?',
+        a: 'Whether the system is clear, measurable, and built around the right signals. Unclear logic and fragmented data limit both small and large teams; adding people alone rarely fixes that.',
       },
     ],
   },
@@ -607,6 +752,20 @@ export const posts: BlogPost[] = [
 
 <p>Want help running this audit on your Stripe or Shopify data? <a href="/book-a-demo/">Book a demo</a> and we'll walk through it together.</p>
     `.trim(),
+    faqs: [
+      {
+        q: 'How long does a fraud rule audit take?',
+        a: 'A practical first-pass audit of your active fraud acts can take about 30 minutes: list what you have, ask what problem each act solves, check rough impact, look for overlap and false positives, then decide what to remove, adjust, or rebuild.',
+      },
+      {
+        q: 'What should I look for when auditing fraud acts?',
+        a: 'Flag acts that no longer solve a clear problem, rules that overlap or contradict each other, segments with high false positives, and coverage gaps where important flows or signals are not monitored.',
+      },
+      {
+        q: 'What should I have after a fraud act audit?',
+        a: 'A clearer understanding of what each act does, a shortlist of acts to remove, adjust, or rebuild, and a better sense of where the system is over-blocking good customers or under-covering real risk.',
+      },
+    ],
   },
   {
     slug: 'build-vs-buy-fraud-system',
@@ -648,6 +807,20 @@ export const posts: BlogPost[] = [
 
 <p>The right decision is rarely about the tool. It's about knowing what you're solving for.</p>
     `.trim(),
+    faqs: [
+      {
+        q: 'When should a merchant buy a fraud solution?',
+        a: 'Buying makes sense when the problem is well-defined, you need speed over deep control, your team lacks bandwidth to build systems, and a vendor tool fits your business model well enough to cover a large part of the risk quickly.',
+      },
+      {
+        q: 'When does building an internal fraud system make sense?',
+        a: 'Building tends to fit when your flows are unique or complex, off-the-shelf rules do not map to your risk, you need full control over decision logic, or you have outgrown what existing tools can offer — knowing maintenance and monitoring costs will continue.',
+      },
+      {
+        q: 'What do most fraud teams actually do: build or buy?',
+        a: 'Most teams land in between — a core vendor for coverage plus internal logic for what the vendor cannot handle. The real decision is what you should control versus what you can safely delegate, after you understand your gaps.',
+      },
+    ],
   },
   {
     slug: 'why-30-90-percent-of-fraud-is-friendly-fraud',
@@ -693,6 +866,20 @@ export const posts: BlogPost[] = [
 
 <p>The idea is to make fraud easier to deal with. If you're working with chargebacks like this and it's taking up too much time, <a href="/book-a-demo/">happy to share early access</a>.</p>
     `.trim(),
+    faqs: [
+      {
+        q: 'What is friendly fraud?',
+        a: 'Friendly fraud is when a legitimate cardholder disputes a transaction they actually made — often claiming it was unauthorised or unrecognised. It is not “friendly” operationally; it still costs merchants fees, product, and time.',
+      },
+      {
+        q: 'Why can friendly fraud be 30–90% of fraud cases?',
+        a: 'Depending on the industry, a large share of disputes come from cardholders who authorised the purchase but later do not recognise it, regret it, or dispute instead of contacting support. That mix varies heavily by vertical and customer experience.',
+      },
+      {
+        q: 'How is friendly fraud different from true fraud to manage?',
+        a: 'True fraud is often about stopping unauthorised activity before money moves. Friendly fraud is frequently about proving what already happened — evidence, delivery confirmation, and clearer descriptors — plus reducing the behaviours that trigger preventable disputes.',
+      },
+    ],
   },
   {
     slug: 'fraudpulse-does-not-replace-stripe-radar-shopify-protect',
@@ -704,7 +891,7 @@ export const posts: BlogPost[] = [
     readTime: '4 min read',
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
-    image: 'https://media.licdn.com/dms/image/v2/D4D22AQH839gc-3EIww/feedshare-shrink_800/B4DZ8c4uGsI8Ac-/0/1782896059072?e=1786579200&v=beta&t=fFZMkeHDNA13gTO-tRfDYyo6LMsCSMxzlAvIhTsa_eE',
+    image: '',
     content: `
 <p>One of the biggest misconceptions we hear is that FraudPulse replaces fraud consoles such as Stripe Radar or Shopify Protect.</p>
 
@@ -765,7 +952,7 @@ export const posts: BlogPost[] = [
     readTime: '4 min read',
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
-    image: 'https://media.licdn.com/dms/image/v2/D4D22AQHXFbMKNLSCsw/feedshare-image-high-res/B4DZ8UIWJwK0AU-/0/1782749160306?e=1786579200&v=beta&t=TQ5f2mdqPrL4y-MLxwapo8q5fOu8N67lBvHmAnNipko',
+    image: '',
     content: `
 <p>One of the biggest fraud-related changes this year was a threshold. On April 1st, Visa reduced the VAMP excessive merchant threshold from 2.20% to 1.50%.</p>
 
@@ -810,6 +997,20 @@ export const posts: BlogPost[] = [
 
 <p><strong>That may end up being the most important part of the entire update.</strong></p>
     `.trim(),
+    faqs: [
+      {
+        q: 'What is the Visa VAMP excessive merchant threshold in 2026?',
+        a: 'On April 1st, Visa reduced the VAMP excessive merchant threshold from 2.20% to 1.50% — a 32% reduction overnight. That shrinks how much room merchants have before elevated dispute and fraud rates become a serious program risk.',
+      },
+      {
+        q: 'Did fraud itself increase when Visa lowered the VAMP threshold?',
+        a: 'No. Fraud and chargebacks did not suddenly jump by 32%. The tolerance for them decreased, so merchants who felt safe under the old threshold may now sit much closer to risk territory without any change in attack volume.',
+      },
+      {
+        q: 'How should merchants respond to a tighter VAMP threshold?',
+        a: 'Move from reactive rule-adding after spikes to proactive monitoring: where disputes originate, which patterns are evolving, where false positives hurt revenue, and which operational issues create unnecessary chargebacks before the buffer disappears.',
+      },
+    ],
   },
   {
     slug: 'hidden-cost-of-false-positives-in-fraud-systems',
@@ -821,7 +1022,7 @@ export const posts: BlogPost[] = [
     readTime: '5 min read',
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
-    image: 'https://media.licdn.com/dms/image/v2/D4D22AQHXyJcO0P1qiw/feedshare-shrink_800/B4DZ5lr9b1KgAc-/0/1779822483433?e=1786579200&v=beta&t=3b-Vj74fX9vaSMmnSkmEFlqCJt5DpFDBbIUb7L6A7Fw',
+    image: '',
     content: `
 <p>One of the most underestimated problems in fraud prevention is false positives.</p>
 
@@ -870,6 +1071,20 @@ export const posts: BlogPost[] = [
 
 <p>That balance is the real challenge.</p>
     `.trim(),
+    faqs: [
+      {
+        q: 'What is a false positive in a fraud system?',
+        a: 'A false positive is a legitimate customer blocked, declined, or slowed by extra friction when the transaction was not fraud. The loss shows up as abandoned checkouts, lost lifetime value, and support load — not as a single fraud line item.',
+      },
+      {
+        q: 'Why are false positives often more expensive than fraud?',
+        a: 'Fraud losses are visible in chargebacks and reports. False-positive losses are quiet: declined buyers shop elsewhere and rarely appear as “lost revenue,” so teams keep tightening rules until the hidden conversion cost exceeds the fraud they prevent.',
+      },
+      {
+        q: 'What should good fraud systems optimise for?',
+        a: 'Not maximum blocks. Good systems maximise good approvals while keeping fraud at an acceptable level — knowing which signals matter, which rules create noise, and where friction adds security versus only hurting conversion.',
+      },
+    ],
   },
   {
     slug: 'overfitting-the-most-common-fraud-prevention-mistake',
@@ -881,7 +1096,7 @@ export const posts: BlogPost[] = [
     readTime: '5 min read',
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
-    image: 'https://media.licdn.com/dms/image/v2/D4D22AQESt2xzYhmoEA/feedshare-image-high-res/B4DZ6CNmwcKEAU-/0/1780301065476?e=1786579200&v=beta&t=2R3Q1wpQyJBxLhnsHue3U6mRQGpd0jAc4LySHDlKElI',
+    image: '',
     content: `
 <p>One of the most common mistakes I see in eCommerce fraud prevention is overfitting.</p>
 
@@ -919,6 +1134,20 @@ export const posts: BlogPost[] = [
 
 <p>Fraud prevention is not really about catching one attack. It's about building systems that continue working after the fraudster changes tactics.</p>
     `.trim(),
+    faqs: [
+      {
+        q: 'What is overfitting in fraud prevention?',
+        a: 'Overfitting is building rules or models that are too tightly tied to one exact attack pattern — specific amounts, products, or domains — so the control works once, then fails when the fraudster changes a small detail.',
+      },
+      {
+        q: 'Why do overly specific fraud rules fail quickly?',
+        a: 'Signals like a single price point or email domain are easy for fraudsters to replace. When the attack shifts slightly, the exact pattern disappears from detection while the underlying behaviour continues.',
+      },
+      {
+        q: 'What should fraud teams focus on instead of exact attack fingerprints?',
+        a: 'Focus on underlying behaviour and structural signals that are harder to manipulate quickly — the parts of the pattern that are repeatable and hard to swap — so controls stay effective after tactics change.',
+      },
+    ],
   },
   {
     slug: 'fraudpulse-features-walkthrough',
@@ -977,6 +1206,20 @@ export const posts: BlogPost[] = [
 
 <p>If you want to see how it looks on your own data, <a href="/book-a-demo/">feel free to reach out</a>.</p>
     `.trim(),
+    faqs: [
+      {
+        q: 'How do you get started with FraudPulse?',
+        a: 'Onboarding asks a few business-context questions, then you connect payment data via integration or CSV upload. Analysis runs automatically so you can see exposure and recommended actions without a complex technical setup.',
+      },
+      {
+        q: 'What do you see after connecting transaction data?',
+        a: 'A clear view of what is happening across transactions, how much fraud and exposure you have, and exact actions you can implement — structured so you can share the findings with your team or manager.',
+      },
+      {
+        q: 'Do I need engineering work to try FraudPulse?',
+        a: 'Not necessarily. You can integrate with a payment provider or upload a CSV if you want to avoid integration work. The goal is usable fraud analysis from day one without heavy technical barriers.',
+      },
+    ],
   },
   {
     slug: 'why-we-built-fraudpulse',
@@ -988,7 +1231,7 @@ export const posts: BlogPost[] = [
     readTime: '5 min read',
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
-    image: 'https://media.licdn.com/dms/image/v2/D4D22AQHkGzx-Y9sLmg/feedshare-image-high-res/B4DZ6Rv1lOGcAU-/0/1780561698045?e=1786579200&v=beta&t=3KlNbcM_MXOA7UDjavPAKfbyz5xrbYWekcM9c9R9yZc',
+    image: '',
     content: `
 <p>After 12 years of working in fintech, across fraud, risk, and data, one thing has become very clear: the problem is rarely the system itself. It's how it's understood.</p>
 
@@ -1029,6 +1272,20 @@ export const posts: BlogPost[] = [
 
 <p>If this is something you're dealing with, <a href="/book-a-demo/">we'd love to show you what FraudPulse can do on your data</a>.</p>
     `.trim(),
+    faqs: [
+      {
+        q: 'Why was FraudPulse built?',
+        a: 'After years across fraud, risk, and data at companies like Riskified, Melio, and Creednz, the founders saw the same gap: merchants either lacked expertise to manage fraud well in-house or bought complex tools that did not match their needs — with little clear direction either way.',
+      },
+      {
+        q: 'What problem does FraudPulse solve that tools alone do not?',
+        a: 'The problem is rarely a lack of data or tools. It is a lack of clear, usable direction — where you are exposed, which rules to adjust, whether you need another vendor, and what impact to expect from each change.',
+      },
+      {
+        q: 'Who is FraudPulse for?',
+        a: 'Teams in ecommerce, fintech, and payments where fraud is owned by someone already managing risk, payments, or product — not necessarily a large dedicated fraud department — who need actionable recommendations from their own data.',
+      },
+    ],
   },
   {
     slug: 'fraud-trends-2026-deepfakes-ai-automation',
@@ -1040,7 +1297,7 @@ export const posts: BlogPost[] = [
     readTime: '5 min read',
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
-    image: 'https://media.licdn.com/dms/image/v2/D4D22AQHSxSR1E2JcQw/feedshare-image-high-res/B4DZ7P53aBKAAU-/0/1781604513745?e=1786579200&v=beta&t=Kra_W0r1o0XGPW4dbD0XUX5SQMtoX0dYsZtYRDfe6DQ',
+    image: '',
     content: `
 <p>Fraud losses are up 25%, deepfake attempts have increased by 94%, and sophisticated fraud has grown by 180%. 2026 is becoming about <em>better fraud</em>.</p>
 
@@ -1082,6 +1339,20 @@ export const posts: BlogPost[] = [
 
 <p>Static rules can't keep up with dynamic fraud. The merchants that manage it best will be the ones investing in continuous analysis — understanding which patterns are evolving in their specific transaction data, not just applying industry-wide defaults.</p>
     `.trim(),
+    faqs: [
+      {
+        q: 'What fraud trends matter most in 2026?',
+        a: 'Higher sophistication, operational deepfakes, fraud-as-a-service automation, machine-driven AI agents, and synthetic identities that behave consistently enough to pass early checks — together making fraud harder to spot with static playbooks.',
+      },
+      {
+        q: 'How big is the deepfake fraud problem?',
+        a: 'Deepfake attempts have risen sharply, and AI-driven deepfakes now sit behind roughly 11% of fraud worldwide. They are used in onboarding, social engineering, and impersonation — often paired with real personal data for credibility.',
+      },
+      {
+        q: 'How should merchants respond to more adaptive 2026 fraud?',
+        a: 'Invest in continuous analysis of your own transaction patterns rather than only industry-wide defaults. Static rules struggle when attacks adapt in real time; merchants that keep reviewing evolving behaviours stay ahead longer.',
+      },
+    ],
   },
 ];
 

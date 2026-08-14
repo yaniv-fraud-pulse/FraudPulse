@@ -33,6 +33,8 @@
 
 ## Featured guides
 
+- Nacha ACH Fraud Responsibility (June 2026): https://www.fraud-pulse.com/blog/nacha-ach-fraud-responsibility-june-2026/
+- AI Is Changing the Speed of Fraud Evolution: https://www.fraud-pulse.com/blog/ai-is-changing-the-speed-of-fraud-evolution/
 - Biggest Revenue Leak Might Be False Positives: https://www.fraud-pulse.com/blog/biggest-revenue-leak-might-be-false-positives/
 - Balancing Fraud Prevention with Customer Experience: https://www.fraud-pulse.com/blog/balancing-fraud-prevention-with-customer-experience/
 - Social Media Scams & Authorized Payments ($2.1B): https://www.fraud-pulse.com/blog/social-media-scams-2-1-billion-authorized-payments/
