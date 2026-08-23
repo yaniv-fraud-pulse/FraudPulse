@@ -33,8 +33,11 @@
 
 ## Featured guides
 
+- False Positives Are One of the Biggest Hidden Costs in Risk Management: https://www.fraud-pulse.com/blog/false-positives-biggest-hidden-cost-in-risk-management/
+- Fraud Analysis Is Not Just a Data Problem: https://www.fraud-pulse.com/blog/fraud-analysis-is-not-just-a-data-problem/
 - Nacha ACH Fraud Responsibility (June 2026): https://www.fraud-pulse.com/blog/nacha-ach-fraud-responsibility-june-2026/
 - AI Is Changing the Speed of Fraud Evolution: https://www.fraud-pulse.com/blog/ai-is-changing-the-speed-of-fraud-evolution/
+- Fraud Acts Must Evolve — Or They Become Ineffective: https://www.fraud-pulse.com/blog/fraud-acts-must-evolve-or-become-ineffective/
 - Biggest Revenue Leak Might Be False Positives: https://www.fraud-pulse.com/blog/biggest-revenue-leak-might-be-false-positives/
 - Balancing Fraud Prevention with Customer Experience: https://www.fraud-pulse.com/blog/balancing-fraud-prevention-with-customer-experience/
 - Social Media Scams & Authorized Payments ($2.1B): https://www.fraud-pulse.com/blog/social-media-scams-2-1-billion-authorized-payments/

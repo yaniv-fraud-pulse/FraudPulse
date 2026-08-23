@@ -20,9 +20,21 @@
   </url>
   <url>
     <loc>https://www.fraud-pulse.com/blog/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.fraud-pulse.com/blog/false-positives-biggest-hidden-cost-in-risk-management/</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.fraud-pulse.com/blog/fraud-analysis-is-not-just-a-data-problem/</loc>
+    <lastmod>2026-08-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
   </url>
   <url>
     <loc>https://www.fraud-pulse.com/blog/nacha-ach-fraud-responsibility-june-2026/</loc>
@@ -33,6 +45,12 @@
   <url>
     <loc>https://www.fraud-pulse.com/blog/ai-is-changing-the-speed-of-fraud-evolution/</loc>
     <lastmod>2026-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.fraud-pulse.com/blog/fraud-acts-must-evolve-or-become-ineffective/</loc>
+    <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>

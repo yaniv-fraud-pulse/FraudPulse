@@ -38,10 +38,9 @@ export async function generateMetadata({
       publishedTime: new Date(post.date).toISOString(),
       modifiedTime: new Date(post.updatedAt ?? post.date).toISOString(),
       authors: [post.author],
-      ...(post.image ? { images: [{ url: post.image }] } : {}),
     },
     twitter: {
-      card: 'summary_large_image',
+      card: 'summary',
       title: post.title,
       description: post.excerpt,
     },
@@ -99,7 +98,6 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
       '@id': postUrl,
     },
     url: postUrl,
-    ...(post.image ? { image: post.image.startsWith('http') ? post.image : `${SITE_URL}${post.image}` } : {}),
   };
 
   const faqSchema = post.faqs?.length
@@ -203,22 +201,6 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             </Reveal>
           </div>
         </section>
-
-        {/* ── Featured image ── */}
-        {post.image && (
-          <section className="px-5 sm:px-10 bg-white pt-10">
-            <Reveal animation="anim-scaleIn" delay={0}>
-              <div className="max-w-3xl mx-auto rounded-[20px] overflow-hidden border" style={{ borderColor: '#e5e7eb', boxShadow: '0 8px 40px rgba(0,0,0,0.10)' }}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={post.image}
-                  alt={post.title}
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-            </Reveal>
-          </section>
-        )}
 
         {/* ── Article body ── */}
         <section className="py-10 pb-20 px-5 sm:px-10 bg-white">

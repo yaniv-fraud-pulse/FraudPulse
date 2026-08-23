@@ -78,22 +78,10 @@ export default function Blog() {
                       className="group flex flex-col h-full rounded-[20px] bg-white border overflow-hidden card-hover"
                       style={{ borderColor: '#e5e7eb', boxShadow: '0 2px 12px rgba(0,0,0,0.06)' }}
                     >
-                      {/* Featured image or coloured bar */}
-                      {post.image ? (
-                        <div className="h-44 w-full overflow-hidden shrink-0 bg-gray-100">
-                          {/* eslint-disable-next-line @next/next/no-img-element */}
-                          <img
-                            src={post.image}
-                            alt={post.title}
-                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-                          />
-                        </div>
-                      ) : (
-                        <div
-                          className="h-1.5 w-full shrink-0"
-                          style={{ background: 'linear-gradient(90deg, #5ba8b4 0%, #7D6BA0 100%)' }}
-                        />
-                      )}
+                      <div
+                        className="h-1.5 w-full shrink-0"
+                        style={{ background: 'linear-gradient(90deg, #5ba8b4 0%, #7D6BA0 100%)' }}
+                      />
 
                       <div className="flex flex-col flex-grow p-7 sm:p-8">
                         {/* Category + read time */}
