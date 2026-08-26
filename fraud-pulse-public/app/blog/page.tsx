@@ -59,7 +59,7 @@ export default function Blog() {
               <p className="text-[1.25rem] sm:text-[1.375rem] leading-[1.75] max-w-[600px] mx-auto text-gray-500 mb-4">
                 Practical guides, product updates, and deep-dives on fraud prevention for modern merchants.
               </p>
-              <PageUpdated date={PAGE_LAST_UPDATED.blog} />
+              <PageUpdated date={PAGE_LAST_UPDATED.blog} visible={false} />
             </Reveal>
           </div>
         </section>

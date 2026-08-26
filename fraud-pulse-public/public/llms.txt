@@ -15,6 +15,8 @@
 - How it works: https://www.fraud-pulse.com/how-it-works/
 - Solutions: https://www.fraud-pulse.com/solutions/
 - Pricing: https://www.fraud-pulse.com/pricing/
+- Pricing (machine-readable markdown): https://www.fraud-pulse.com/pricing.md
+- Pricing (machine-readable plain text): https://www.fraud-pulse.com/pricing.txt
 - Book a demo: https://www.fraud-pulse.com/book-a-demo/
 - Webinar: https://www.fraud-pulse.com/webinar/
 - Blog: https://www.fraud-pulse.com/blog/

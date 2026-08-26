@@ -48,7 +48,7 @@ export default function HowItWorks() {
                 <p className="text-[1rem] sm:text-[1.125rem] leading-[1.75] max-w-[620px] mx-auto text-gray-400 mb-4">
                   Connect data from <strong className="text-gray-600">Shopify</strong>, <strong className="text-gray-600">Stripe</strong>, or <strong className="text-gray-600">Adyen</strong>. We analyze transactions, chargebacks, and friendly fraud — then recommend the rules and actions to change.
                 </p>
-                <PageUpdated date={PAGE_LAST_UPDATED.howItWorks} />
+                <PageUpdated date={PAGE_LAST_UPDATED.howItWorks} visible={false} />
               </Reveal>
 
               {/* Data sources → FraudPulse → recommended rules */}
@@ -105,6 +105,15 @@ export default function HowItWorks() {
                 </div>
               </Reveal>
             </div>
+          </div>
+        </section>
+
+        {/* ── Cite-friendly stats ── */}
+        <section className="py-10 sm:py-14 px-5 sm:px-10 bg-white border-t border-gray-100">
+          <div className="max-w-4xl mx-auto">
+            <Reveal animation="anim-fadeUp">
+              <GeoStatStrip stats={GEO_STATS} />
+            </Reveal>
           </div>
         </section>
 

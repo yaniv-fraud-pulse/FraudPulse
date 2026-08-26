@@ -151,12 +151,10 @@ export default function Pricing() {
               <p className="text-[1.5rem] leading-[1.75] max-w-[680px] mx-auto mb-3 text-gray-500">
                 No hidden fees. No per-seat surprises. Choose the plan that fits your transaction volume and grow with confidence.
               </p>
-              <p className="text-[1rem] leading-[1.7] max-w-[640px] mx-auto mb-4 text-gray-400">
+              <p className="text-[1rem] leading-[1.7] max-w-[640px] mx-auto mb-8 text-gray-400">
                 Pay-as-you-go starts at $0.01 per transaction (up to 20K/month). Professional is $199/month or $159/month billed annually (20% savings). Every plan includes a 14-day free trial.
               </p>
-              <div className="mb-8 flex justify-center">
-                <PageUpdated date={PAGE_LAST_UPDATED.pricing} />
-              </div>
+              <PageUpdated date={PAGE_LAST_UPDATED.pricing} visible={false} />
             </Reveal>
 
             {/* Billing toggle */}

@@ -1,9 +1,10 @@
 import type { FaqItem } from './homeFaq';
 
-/** Visible “Last updated” dates — bump when page copy materially changes. */
+/** “Last updated” dates — bump when page copy materially changes. */
 export const PAGE_LAST_UPDATED = {
-  howItWorks: 'August 6, 2026',
-  solutions: 'August 6, 2026',
+  home: 'August 26, 2026',
+  howItWorks: 'August 26, 2026',
+  solutions: 'August 26, 2026',
   pricing: 'August 6, 2026',
   blog: 'August 21, 2026',
 } as const;
@@ -26,19 +27,19 @@ export function faqPageJsonLd(faqs: FaqItem[]) {
 /** Cite-friendly product / industry stats used on marketing pages. */
 export const GEO_STATS = [
   {
-    value: 'Days',
-    label: 'Time to first rule recommendations after connecting your transaction data',
+    value: '< 30 min',
+    label: 'Get your data analyzed — no code needed',
   },
   {
     value: '14 days',
-    label: 'Free trial on every plan — full access, no credit card required',
+    label: 'Free trial on every plan — no credit card required',
   },
   {
-    value: '1.5%',
-    label: 'Visa VAMP excessive-merchant threshold merchants must stay under in 2026',
+    value: '15%–50%',
+    label: 'Savings on simple rule setup with our AI fraud agent',
   },
   {
-    value: '20%',
-    label: 'Savings vs monthly when you pay annually on Professional',
+    value: '0',
+    label: 'Changes to your current tools — we boost them, not replace them',
   },
 ] as const;

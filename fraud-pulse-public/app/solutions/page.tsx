@@ -139,8 +139,19 @@ export default function Solutions() {
                 <p className="text-[1.0625rem] leading-[1.75] max-w-[600px] mx-auto text-gray-500 mb-4">
                   Get actionable fraud insights in days — not analytics reports you never act on. Merchants connect Shopify, Stripe, or Adyen, then get ranked rule changes with estimated chargeback impact and clearer false-positive tradeoffs, <strong>without replacing the fraud prevention tools they already run.</strong> 
                 </p>
+                {/* AI/GEO freshness — in DOM for agents, hidden from visual UI */}
+                <PageUpdated date={PAGE_LAST_UPDATED.solutions} visible={false} />
               </Reveal>
             </div>
+          </div>
+        </section>
+
+        {/* ── Cite-friendly stats ── */}
+        <section className="py-10 sm:py-14 px-5 sm:px-10 bg-white border-t border-gray-100">
+          <div className="max-w-4xl mx-auto">
+            <Reveal animation="anim-fadeUp">
+              <GeoStatStrip stats={GEO_STATS} />
+            </Reveal>
           </div>
         </section>
 

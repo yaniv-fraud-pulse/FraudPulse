@@ -32,9 +32,20 @@ export default function GeoStatStrip({
   );
 }
 
-export function PageUpdated({ date }: { date: string }) {
+/**
+ * Freshness signal for GEO / AI crawlers.
+ * Use `visible={false}` when the date should stay in the DOM (and JSON-parseable
+ * HTML) but not show on the page for humans.
+ */
+export function PageUpdated({
+  date,
+  visible = true,
+}: {
+  date: string;
+  visible?: boolean;
+}) {
   return (
-    <p className="text-[0.8125rem] text-gray-400">
+    <p className={visible ? 'text-[0.8125rem] text-gray-400' : 'sr-only'}>
       <time dateTime={toIsoDate(date)}>Last updated {date}</time>
     </p>
   );

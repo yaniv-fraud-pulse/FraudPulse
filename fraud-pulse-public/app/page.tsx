@@ -6,7 +6,9 @@ import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
 import { useInView } from './hooks/useInView';
 import FaqAccordion from './components/FaqAccordion';
+import { PageUpdated } from './components/GeoBits';
 import { homeFaqs } from './lib/homeFaq';
+import { PAGE_LAST_UPDATED } from './lib/geo';
 import { SITE_URL } from './lib/site';
 
 /* ── Animated section wrapper ── */
@@ -361,6 +363,7 @@ export default function Home() {
             url: SITE_URL,
             description:
               'FraudPulse connects to your transaction data and recommends rules and actions that reduce chargebacks and friendly fraud.',
+            dateModified: '2026-08-26',
           }),
         }}
       />
@@ -376,6 +379,7 @@ export default function Home() {
             url: SITE_URL,
             description:
               'Fraud intelligence for online merchants. Connects to Shopify, Stripe, and Adyen transaction data, analyzes chargebacks and friendly fraud, and recommends ranked rules and actions.',
+            dateModified: '2026-08-26',
             offers: {
               '@type': 'Offer',
               url: `${SITE_URL}/pricing/`,
@@ -392,6 +396,9 @@ export default function Home() {
       />
       <Header />
       <main className="flex-grow overflow-x-clip">
+        {/* AI/GEO freshness — in DOM for agents, hidden from visual UI */}
+        <PageUpdated date={PAGE_LAST_UPDATED.home} visible={false} />
+
         {/* ── Hero ── */}
         <section className="relative overflow-x-clip lg:overflow-x-visible px-5 sm:px-10 text-center flex items-center justify-center" style={{ minHeight: 'calc(100vh - 84px)' }}>
           <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[900px] h-[500px]"
