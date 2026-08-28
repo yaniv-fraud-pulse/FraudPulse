@@ -4,44 +4,9 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Link from 'next/link';
 import { Reveal } from '../components/Reveal';
-import FaqAccordion from '../components/FaqAccordion';
-import JsonLd from '../components/JsonLd';
 import GeoStatStrip, { PageUpdated } from '../components/GeoBits';
-import { GEO_STATS, PAGE_LAST_UPDATED, faqPageJsonLd } from '../lib/geo';
-import { solutionsFaqs } from '../lib/pageFaqs';
-
-const comparisonRows = [
-  {
-    capability: 'Shows what happened in fraud data',
-    analytics: 'Yes',
-    fraudPrevention: 'Sometimes',
-    fraudPulse: 'Yes',
-  },
-  {
-    capability: 'Ranks specific rules & actions from your data',
-    analytics: 'No',
-    fraudPrevention: 'Vendor-specific',
-    fraudPulse: 'Yes',
-  },
-  {
-    capability: 'Estimates chargeback vs false-positive impact',
-    analytics: 'Rarely',
-    fraudPrevention: 'Limited',
-    fraudPulse: 'Yes',
-  },
-  {
-    capability: 'Works alongside your existing tools',
-    analytics: 'N/A',
-    fraudPrevention: 'No — usually replaces decisioning',
-    fraudPulse: 'Yes',
-  },
-  {
-    capability: 'Time to actionable recommendations',
-    analytics: 'Weeks of analysis',
-    fraudPrevention: 'Months of migration',
-    fraudPulse: 'Days',
-  },
-];
+import ToolComparisonTable from '../components/ToolComparisonTable';
+import { GEO_STATS, PAGE_LAST_UPDATED } from '../lib/geo';
 
 const steps = [
   {
@@ -105,7 +70,6 @@ const integrations = [
 export default function Solutions() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
-      <JsonLd data={faqPageJsonLd(solutionsFaqs)} />
       <Header />
 
       <main className="flex-grow">
@@ -264,52 +228,35 @@ export default function Solutions() {
           <div className="max-w-5xl mx-auto">
             <Reveal animation="anim-fadeUp">
               <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] text-center mb-3 text-[2.5rem] sm:text-[3rem]">
-                FraudPulse vs analytics vs fraud prevention tools
+                FraudPulse vs Radar, Protect, and full platforms
               </h2>
               <p className="text-center text-[1.0625rem] text-gray-500 max-w-2xl mx-auto mb-10">
-                A quick comparison of what each approach gives a fraud team working from real transaction data.
+                Honest comparison: enforcement tools, guarantee platforms, recovery apps, and the rule-advisor layer.
               </p>
             </Reveal>
             <Reveal animation="anim-fadeUp" delay={75}>
-              <div className="overflow-x-auto rounded-[16px] border" style={{ borderColor: '#e5e7eb' }}>
-                <table className="w-full min-w-[640px] text-left text-[0.9375rem]">
-                  <thead>
-                    <tr className="bg-[#f8f9fa] border-b" style={{ borderColor: '#e5e7eb' }}>
-                      <th className="px-4 py-3.5 font-semibold text-gray-700">Capability</th>
-                      <th className="px-4 py-3.5 font-semibold text-gray-700">Analytics &amp; reporting</th>
-                      <th className="px-4 py-3.5 font-semibold text-gray-700">Fraud prevention tools</th>
-                      <th className="px-4 py-3.5 font-semibold text-[#4a96a3]">FraudPulse</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {comparisonRows.map((row) => (
-                      <tr key={row.capability} className="border-b last:border-b-0" style={{ borderColor: '#f3f4f6' }}>
-                        <td className="px-4 py-3.5 font-medium text-gray-800">{row.capability}</td>
-                        <td className="px-4 py-3.5 text-gray-500">{row.analytics}</td>
-                        <td className="px-4 py-3.5 text-gray-500">{row.fraudPrevention}</td>
-                        <td className="px-4 py-3.5 font-semibold text-gray-900">{row.fraudPulse}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
+              <ToolComparisonTable />
             </Reveal>
           </div>
         </section>
 
-        {/* ── FAQ ── */}
+        {/* ── More questions ── */}
         <section className="py-16 sm:py-24 px-5 sm:px-10 bg-[#f8f9fa]">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-3xl mx-auto text-center">
             <Reveal animation="anim-fadeUp">
-              <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] text-center mb-3 text-[2.5rem] sm:text-[3rem]">
-                Frequently asked questions
+              <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] mb-3 text-[2.5rem] sm:text-[3rem]">
+                Questions?
               </h2>
-              <p className="text-center text-[1.0625rem] text-gray-500 max-w-xl mx-auto mb-10">
-                Common questions about using FraudPulse to reduce chargebacks and friendly fraud.
+              <p className="text-[1.0625rem] text-gray-500 max-w-xl mx-auto mb-8">
+                Answers on Radar, Shopify Protect, chargebacks, false declines, and Signifyd alternatives.
               </p>
-            </Reveal>
-            <Reveal animation="anim-fadeUp" delay={75}>
-              <FaqAccordion faqs={solutionsFaqs} />
+              <Link
+                href="/faq/"
+                className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-[1.0625rem] font-semibold border bg-white transition-colors"
+                style={{ borderColor: '#e5e7eb', color: '#4a96a3' }}
+              >
+                View FAQ
+              </Link>
             </Reveal>
           </div>
         </section>

@@ -23,6 +23,7 @@ export default function Footer() {
               {[
                 { href: '/solutions/', label: 'Solutions' },
                 { href: '/pricing/', label: 'Pricing' },
+                { href: '/faq/', label: 'FAQ' },
                 { href: '/webinar/', label: 'Webinar' },
               ].map(({ href, label }) => (
                 <li key={href}>

@@ -100,25 +100,9 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     url: postUrl,
   };
 
-  const faqSchema = post.faqs?.length
-    ? {
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: post.faqs.map((faq) => ({
-          '@type': 'Question',
-          name: faq.q,
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: faq.a,
-          },
-        })),
-      }
-    : null;
-
   return (
     <div className="flex flex-col min-h-screen bg-white">
       <JsonLd data={articleSchema} />
-      {faqSchema ? <JsonLd data={faqSchema} /> : null}
       <Header />
 
       <main className="flex-grow">
@@ -155,13 +139,13 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                   {post.category}
                 </span>
                 <span className="text-[0.8125rem] text-gray-400">
-                  Published {post.date}
+                  <time dateTime={toIsoDate(post.date).slice(0, 10)}>Published {post.date}</time>
                 </span>
                 {updatedAt !== post.date && (
                   <>
                     <span className="text-[0.8125rem] text-gray-400">·</span>
                     <span className="text-[0.8125rem] text-gray-400">
-                      Last updated {updatedAt}
+                      <time dateTime={toIsoDate(updatedAt).slice(0, 10)}>Last updated {updatedAt}</time>
                     </span>
                   </>
                 )}
@@ -211,21 +195,17 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
             />
           </Reveal>
 
-          {post.faqs && post.faqs.length > 0 && (
-            <div className="max-w-3xl mx-auto mt-16 pt-12 border-t" style={{ borderColor: '#e5e7eb' }}>
-              <h2 className="font-bold text-gray-900 text-[1.5rem] mb-8 tracking-[-0.02em]">
-                Frequently asked questions
-              </h2>
-              <div className="flex flex-col gap-6">
-                {post.faqs.map((faq) => (
-                  <div key={faq.q}>
-                    <h3 className="font-semibold text-gray-900 text-[1.0625rem] mb-2">{faq.q}</h3>
-                    <p className="text-[1.0625rem] leading-[1.75] text-gray-600">{faq.a}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
+          <div className="max-w-3xl mx-auto mt-12 pt-8 border-t text-center" style={{ borderColor: '#e5e7eb' }}>
+            <p className="text-[1rem] text-gray-500 mb-4">
+              More buyer questions on Radar, Protect, chargebacks, and Signifyd alternatives.
+            </p>
+            <Link
+              href="/faq/"
+              className="inline-flex items-center gap-2 text-[1rem] font-semibold text-[#4a96a3] hover:underline"
+            >
+              View FAQ
+            </Link>
+          </div>
         </section>
 
         {/* ── Related posts ── */}

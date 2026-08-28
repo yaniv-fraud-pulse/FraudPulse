@@ -5,11 +5,8 @@ import Footer from '../components/Footer';
 import Link from 'next/link';
 import { Reveal } from '../components/Reveal';
 import { posts } from '../lib/blog';
-import FaqAccordion from '../components/FaqAccordion';
-import JsonLd from '../components/JsonLd';
 import { PageUpdated } from '../components/GeoBits';
-import { PAGE_LAST_UPDATED, faqPageJsonLd } from '../lib/geo';
-import { blogIndexFaqs } from '../lib/pageFaqs';
+import { PAGE_LAST_UPDATED } from '../lib/geo';
 
 const sortedPosts = [...posts].sort(
   (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
@@ -24,7 +21,6 @@ const categoryColors: Record<string, { bg: string; text: string }> = {
 export default function Blog() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
-      <JsonLd data={faqPageJsonLd(blogIndexFaqs)} />
       <Header />
 
       <main className="flex-grow">
@@ -111,7 +107,9 @@ export default function Blog() {
                         <div className="flex items-center justify-between mt-auto pt-5 border-t" style={{ borderColor: '#f3f4f6' }}>
                           <div>
                             <p className="text-[0.8125rem] font-semibold text-gray-800">{post.author}</p>
-                            <p className="text-[0.75rem] text-gray-400">{post.date}</p>
+                            <p className="text-[0.75rem] text-gray-400">
+                              <time dateTime={new Date(post.date).toISOString().slice(0, 10)}>{post.date}</time>
+                            </p>
                           </div>
                           <span
                             className="inline-flex items-center gap-1 text-[0.8125rem] font-semibold text-[#5ba8b4] group-hover:gap-2 transition-all"
@@ -131,19 +129,23 @@ export default function Blog() {
           </div>
         </section>
 
-        {/* ── FAQ ── */}
+        {/* ── More questions ── */}
         <section className="py-16 sm:py-24 px-5 sm:px-10 bg-white">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-3xl mx-auto text-center">
             <Reveal animation="anim-fadeUp">
-              <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] text-center mb-3 text-[2.5rem] sm:text-[3rem]">
-                Blog FAQ
+              <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] mb-3 text-[2.5rem] sm:text-[3rem]">
+                Questions?
               </h2>
-              <p className="text-center text-[1.0625rem] text-gray-500 max-w-xl mx-auto mb-10">
-                What you will find in FraudPulse guides on chargebacks, friendly fraud, and false positives.
+              <p className="text-[1.0625rem] text-gray-500 max-w-xl mx-auto mb-8">
+                Product and buyer questions live on the FAQ page — Radar, Protect, chargebacks, and more.
               </p>
-            </Reveal>
-            <Reveal animation="anim-fadeUp" delay={75}>
-              <FaqAccordion faqs={blogIndexFaqs} />
+              <Link
+                href="/faq/"
+                className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-[1.0625rem] font-semibold border transition-colors"
+                style={{ borderColor: '#e5e7eb', color: '#4a96a3' }}
+              >
+                View FAQ
+              </Link>
             </Reveal>
           </div>
         </section>

@@ -35,13 +35,14 @@ export default function Header() {
 
           {/* Desktop nav */}
           <div className="hidden md:flex md:items-center md:gap-1">
-            {[
-              { href: '/solutions/',     label: 'Solutions' },
-              { href: '/how-it-works/',  label: 'How It Works' },
-              { href: '/pricing/',       label: 'Pricing' },
-              { href: '/blog/',          label: 'Blog' },
-              { href: '/about/',         label: 'About Us' },
-            ].map(({ href, label }) => (
+              {[
+                { href: '/solutions/',     label: 'Solutions' },
+                { href: '/how-it-works/',  label: 'How It Works' },
+                { href: '/pricing/',       label: 'Pricing' },
+                { href: '/blog/',          label: 'Blog' },
+                { href: '/faq/',           label: 'FAQ' },
+                { href: '/about/',         label: 'About Us' },
+              ].map(({ href, label }) => (
               <Link key={href} href={href}
                 className="px-4 py-2 text-base font-medium rounded-lg transition-colors"
                 style={{ color: '#111827' }}
@@ -95,6 +96,7 @@ export default function Header() {
                 { href: '/how-it-works/',  label: 'How It Works' },
                 { href: '/pricing/',       label: 'Pricing' },
                 { href: '/blog/',          label: 'Blog' },
+                { href: '/faq/',           label: 'FAQ' },
                 { href: '/about/',         label: 'About Us' },
                 { href: '/contact/',       label: 'Sign In' },
               ].map(({ href, label }) => (

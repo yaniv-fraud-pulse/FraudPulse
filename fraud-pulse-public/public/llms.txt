@@ -17,13 +17,17 @@
 - Pricing: https://www.fraud-pulse.com/pricing/
 - Pricing (machine-readable markdown): https://www.fraud-pulse.com/pricing.md
 - Pricing (machine-readable plain text): https://www.fraud-pulse.com/pricing.txt
+- FAQ: https://www.fraud-pulse.com/faq/
 - Book a demo: https://www.fraud-pulse.com/book-a-demo/
 - Webinar: https://www.fraud-pulse.com/webinar/
 - Blog: https://www.fraud-pulse.com/blog/
 - About: https://www.fraud-pulse.com/about/
+- Contact: https://www.fraud-pulse.com/contact/
 - Refund policy: https://www.fraud-pulse.com/refund/
 - Terms: https://www.fraud-pulse.com/terms/
 - Privacy: https://www.fraud-pulse.com/privacy/
+- Sitemap: https://www.fraud-pulse.com/sitemap.xml
+- This file: https://www.fraud-pulse.com/llms.txt
 
 ## Common buyer questions
 
@@ -32,30 +36,47 @@
 - How long to get recommendations? Most merchants get actionable insights in days.
 - Do I need to replace my fraud prevention tools? No — FraudPulse works alongside them; no migration required.
 - How is FraudPulse different from analytics & reporting? Analytics shows what happened; FraudPulse recommends which rules and actions to change next.
+- Full FAQ: https://www.fraud-pulse.com/faq/
 
-## Featured guides
+## All blog guides (32)
 
+- Best Tools to Optimize Stripe Radar Rules: https://www.fraud-pulse.com/blog/optimize-stripe-radar-rules/
+- Stripe Radar Is Blocking Legitimate Customers — What Should I Do?: https://www.fraud-pulse.com/blog/stripe-radar-blocking-legitimate-customers/
+- How to Reduce False Declines in Stripe: https://www.fraud-pulse.com/blog/how-to-reduce-false-declines-in-stripe/
+- How to Stop Card Testing Attacks on Shopify: https://www.fraud-pulse.com/blog/how-to-stop-card-testing-attacks-on-shopify/
+- Best Fraud Prevention Tools for Shopify in 2026: https://www.fraud-pulse.com/blog/best-fraud-prevention-tools-for-shopify-2026/
+- Chargeback Prevention vs Representment — Which Do I Need?: https://www.fraud-pulse.com/blog/chargeback-prevention-vs-representment/
+- Signifyd vs Stripe Radar for DTC Brands: https://www.fraud-pulse.com/blog/signifyd-vs-stripe-radar-for-dtc/
+- What Should I Do If Stripe Warns My Dispute Rate Is Too High?: https://www.fraud-pulse.com/blog/stripe-dispute-rate-too-high/
+- How to Pass a Stripe Account Review After Chargebacks: https://www.fraud-pulse.com/blog/stripe-account-review-after-chargebacks/
 - False Positives Are One of the Biggest Hidden Costs in Risk Management: https://www.fraud-pulse.com/blog/false-positives-biggest-hidden-cost-in-risk-management/
 - Fraud Analysis Is Not Just a Data Problem: https://www.fraud-pulse.com/blog/fraud-analysis-is-not-just-a-data-problem/
-- Nacha ACH Fraud Responsibility (June 2026): https://www.fraud-pulse.com/blog/nacha-ach-fraud-responsibility-june-2026/
-- AI Is Changing the Speed of Fraud Evolution: https://www.fraud-pulse.com/blog/ai-is-changing-the-speed-of-fraud-evolution/
+- The Biggest Fraud-Related Change This Year Is a Change in Responsibility: https://www.fraud-pulse.com/blog/nacha-ach-fraud-responsibility-june-2026/
+- AI Is Changing the Speed at Which Fraud Evolves: https://www.fraud-pulse.com/blog/ai-is-changing-the-speed-of-fraud-evolution/
 - Fraud Acts Must Evolve — Or They Become Ineffective: https://www.fraud-pulse.com/blog/fraud-acts-must-evolve-or-become-ineffective/
-- Biggest Revenue Leak Might Be False Positives: https://www.fraud-pulse.com/blog/biggest-revenue-leak-might-be-false-positives/
-- Balancing Fraud Prevention with Customer Experience: https://www.fraud-pulse.com/blog/balancing-fraud-prevention-with-customer-experience/
-- Social Media Scams & Authorized Payments ($2.1B): https://www.fraud-pulse.com/blog/social-media-scams-2-1-billion-authorized-payments/
-- The Biggest Mistake in Fraud Analysis — Trusting Individual Indicators: https://www.fraud-pulse.com/blog/biggest-mistake-in-fraud-analysis-trusting-individual-indicators/
-- Same Behaviour Can Be Fraudulent in One Business and Legitimate in Another: https://www.fraud-pulse.com/blog/same-behaviour-fraudulent-in-one-business-legitimate-in-another/
-- Your Fraud System Might Be Your Biggest Revenue Leak: https://www.fraud-pulse.com/blog/fraud-system-might-be-your-biggest-revenue-leak/
-- How to Reduce Chargebacks on Shopify (2026): https://www.fraud-pulse.com/blog/how-to-reduce-chargebacks-on-shopify-2026/
-- FraudPulse Doesn't Replace Your Fraud Console: https://www.fraud-pulse.com/blog/fraudpulse-does-not-replace-stripe-radar-shopify-protect/
-- How to Audit Your Fraud Acts in ~30 Minutes: https://www.fraud-pulse.com/blog/how-to-audit-your-fraud-acts-in-30-minutes/
-- Hidden Cost of False Positives in Fraud Systems: https://www.fraud-pulse.com/blog/hidden-cost-of-false-positives-in-fraud-systems/
-- Visa VAMP Threshold Reduction 2026: https://www.fraud-pulse.com/blog/visa-vamp-threshold-reduction-2026/
-- Why 30–90% of Fraud Is Friendly Fraud: https://www.fraud-pulse.com/blog/why-30-90-percent-of-fraud-is-friendly-fraud/
+- The biggest revenue leak in your business might not be fraud. It might be false positives.: https://www.fraud-pulse.com/blog/biggest-revenue-leak-might-be-false-positives/
+- 85% of e-commerce professionals say balancing fraud prevention with customer experience is one of their biggest challenges.: https://www.fraud-pulse.com/blog/balancing-fraud-prevention-with-customer-experience/
+- Consumers lost $2.1 billion to scams that started on social media last year.: https://www.fraud-pulse.com/blog/social-media-scams-2-1-billion-authorized-payments/
+- The biggest mistake in fraud analysis is trusting individual indicators: https://www.fraud-pulse.com/blog/biggest-mistake-in-fraud-analysis-trusting-individual-indicators/
+- In fraud the same behaviour can be fraudulent in one business and completely legitimate in another: https://www.fraud-pulse.com/blog/same-behaviour-fraudulent-in-one-business-legitimate-in-another/
+- One thing that often gets overlooked in fraud prevention is your fraud system might be your biggest revenue leak: https://www.fraud-pulse.com/blog/fraud-system-might-be-your-biggest-revenue-leak/
+- I’ve worked with companies doing $1B+ in revenue with a 2-person fraud team: https://www.fraud-pulse.com/blog/billion-dollar-companies-with-two-person-fraud-teams/
+- How to Reduce Chargebacks on Shopify (2026 Guide): https://www.fraud-pulse.com/blog/how-to-reduce-chargebacks-on-shopify-2026/
+- Should you build your own fraud system or buy a solution?: https://www.fraud-pulse.com/blog/build-vs-buy-fraud-system/
+- How to audit your fraud acts in ~30 minutes. Here's how I usually approach it.: https://www.fraud-pulse.com/blog/how-to-audit-your-fraud-acts-in-30-minutes/
+- FraudPulse Doesn't Replace Stripe Radar or Shopify Protect. Here's What It Does Instead.: https://www.fraud-pulse.com/blog/fraudpulse-does-not-replace-stripe-radar-shopify-protect/
+- Visa Reduced the Excessive Merchant Threshold from 2.2% to 1.5% Overnight: https://www.fraud-pulse.com/blog/visa-vamp-threshold-reduction-2026/
+- Demonstrating FraudPulse: From Data to Actionable Fraud Insights in Minutes: https://www.fraud-pulse.com/blog/fraudpulse-features-walkthrough/
+- Fraud Trends 2026: Deepfakes, AI Agents, and the Sophistication Shift: https://www.fraud-pulse.com/blog/fraud-trends-2026-deepfakes-ai-automation/
+- Why is up to 30-90% of fraud often classified as friendly fraud?: https://www.fraud-pulse.com/blog/why-30-90-percent-of-fraud-is-friendly-fraud/
+- After 12 Years in Fintech, Here's Why We Built FraudPulse: https://www.fraud-pulse.com/blog/why-we-built-fraudpulse/
+- Overfitting: The Most Common Mistake in eCommerce Fraud Prevention: https://www.fraud-pulse.com/blog/overfitting-the-most-common-fraud-prevention-mistake/
+- The Hidden Cost of False Positives in Fraud Systems is Often Larger Than the Fraud Itself: https://www.fraud-pulse.com/blog/hidden-cost-of-false-positives-in-fraud-systems/
 
 ## Notes
 
-- FraudPulse is not limited to Stripe Radar or Shopify Protect; it works with transaction data from major commerce and payment platforms.
+- FraudPulse does not replace Stripe Radar or Shopify Protect; it works alongside them.
+- FraudPulse is not a chargeback representment / recovery product.
 - Official site: https://www.fraud-pulse.com/
 
 ## Contact
@@ -63,7 +84,3 @@
 - Demo: https://www.fraud-pulse.com/book-a-demo/
 - Contact: https://www.fraud-pulse.com/contact/
 - Support email: support@fraud-pulse.com
-
-## Optional
-
-- Full sitemap: https://www.fraud-pulse.com/sitemap.xml

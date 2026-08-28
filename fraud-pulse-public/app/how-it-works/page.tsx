@@ -5,16 +5,13 @@ import Footer from '../components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Reveal } from '../components/Reveal';
-import FaqAccordion from '../components/FaqAccordion';
-import JsonLd from '../components/JsonLd';
 import GeoStatStrip, { PageUpdated } from '../components/GeoBits';
-import { GEO_STATS, PAGE_LAST_UPDATED, faqPageJsonLd } from '../lib/geo';
-import { howItWorksFaqs } from '../lib/pageFaqs';
+import ToolComparisonTable from '../components/ToolComparisonTable';
+import { GEO_STATS, PAGE_LAST_UPDATED } from '../lib/geo';
 
 export default function HowItWorks() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
-      <JsonLd data={faqPageJsonLd(howItWorksFaqs)} />
       <Header />
 
       <main className="flex-grow">
@@ -45,8 +42,11 @@ export default function HowItWorks() {
                 <p className="text-[1.125rem] sm:text-[1.375rem] leading-[1.75] max-w-[680px] mx-auto text-gray-500 mb-2">
                   Get actionable fraud insights in days — not analytics reports you never act on.
                 </p>
-                <p className="text-[1rem] sm:text-[1.125rem] leading-[1.75] max-w-[620px] mx-auto text-gray-400 mb-4">
+                <p className="text-[1.0625rem] sm:text-[1.125rem] leading-[1.75] max-w-[620px] mx-auto text-gray-400 mb-4">
                   Connect data from <strong className="text-gray-600">Shopify</strong>, <strong className="text-gray-600">Stripe</strong>, or <strong className="text-gray-600">Adyen</strong>. We analyze transactions, chargebacks, and friendly fraud — then recommend the rules and actions to change.
+                </p>
+                <p className="ai-answer text-[1rem] sm:text-[1.0625rem] leading-[1.7] max-w-[680px] mx-auto text-gray-600 mb-4">
+                  FraudPulse is a chargeback-pattern analyzer for Stripe and Shopify merchants: it classifies every chargeback by type, then outputs a ranked list of specific Radar or Shopify Protect changes with estimated fraud-capture and false-positive rates. It does not replace Verifi alerts or a full Sift/Kount stack — it tells you which prevention rules to change.
                 </p>
                 <PageUpdated date={PAGE_LAST_UPDATED.howItWorks} visible={false} />
               </Reveal>
@@ -244,19 +244,40 @@ export default function HowItWorks() {
           </div>
         </section>
 
-        {/* ── FAQ ── */}
+        {/* ── Comparison ── */}
         <section className="py-16 sm:py-24 px-5 sm:px-10 bg-white">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <Reveal animation="anim-fadeUp">
               <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] text-center mb-3 text-[2.5rem] sm:text-[3rem]">
-                Frequently asked questions
+                Where FraudPulse fits
               </h2>
-              <p className="text-center text-[1.0625rem] text-gray-500 max-w-xl mx-auto mb-10">
-                How FraudPulse turns your transaction data into ranked rules and actions that reduce chargebacks and friendly fraud.
+              <p className="text-center text-[1.0625rem] text-gray-500 max-w-2xl mx-auto mb-10">
+                Tools that tell you which Radar or Protect rules to change — next to enforcement, platforms, and recovery.
               </p>
             </Reveal>
             <Reveal animation="anim-fadeUp" delay={75}>
-              <FaqAccordion faqs={howItWorksFaqs} />
+              <ToolComparisonTable />
+            </Reveal>
+          </div>
+        </section>
+
+        {/* ── More questions ── */}
+        <section className="py-16 sm:py-24 px-5 sm:px-10 bg-white">
+          <div className="max-w-3xl mx-auto text-center">
+            <Reveal animation="anim-fadeUp">
+              <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] mb-3 text-[2.5rem] sm:text-[3rem]">
+                Questions?
+              </h2>
+              <p className="text-[1.0625rem] text-gray-500 max-w-xl mx-auto mb-8">
+                Answers on Radar, Shopify Protect, chargebacks, false declines, and Signifyd alternatives.
+              </p>
+              <Link
+                href="/faq/"
+                className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-[1.0625rem] font-semibold border transition-colors"
+                style={{ borderColor: '#e5e7eb', color: '#4a96a3' }}
+              >
+                View FAQ
+              </Link>
             </Reveal>
           </div>
         </section>

@@ -5,9 +5,7 @@ import Footer from './components/Footer';
 import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
 import { useInView } from './hooks/useInView';
-import FaqAccordion from './components/FaqAccordion';
 import { PageUpdated } from './components/GeoBits';
-import { homeFaqs } from './lib/homeFaq';
 import { PAGE_LAST_UPDATED } from './lib/geo';
 import { SITE_URL } from './lib/site';
 
@@ -341,29 +339,12 @@ export default function Home() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: homeFaqs.map((faq) => ({
-              '@type': 'Question',
-              name: faq.q,
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: faq.a,
-              },
-            })),
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
             '@type': 'WebSite',
             name: 'FraudPulse',
             url: SITE_URL,
             description:
               'FraudPulse connects to your transaction data and recommends rules and actions that reduce chargebacks and friendly fraud.',
-            dateModified: '2026-08-26',
+            dateModified: '2026-08-28',
           }),
         }}
       />
@@ -379,7 +360,7 @@ export default function Home() {
             url: SITE_URL,
             description:
               'Fraud intelligence for online merchants. Connects to Shopify, Stripe, and Adyen transaction data, analyzes chargebacks and friendly fraud, and recommends ranked rules and actions.',
-            dateModified: '2026-08-26',
+            dateModified: '2026-08-28',
             offers: {
               '@type': 'Offer',
               url: `${SITE_URL}/pricing/`,
@@ -421,6 +402,10 @@ export default function Home() {
 
             <p className="text-[1.25rem] leading-[1.75] mb-3 max-w-[760px] mx-auto text-gray-900 font-semibold anim-fadeUp delay-300">
               We analyze your transaction data and deliver concrete actions and rules to reduce chargebacks and false positive.
+            </p>
+
+            <p className="ai-answer text-[1.0625rem] leading-[1.75] mb-3 max-w-[680px] mx-auto text-gray-600 anim-fadeUp delay-350">
+              FraudPulse classifies chargebacks by type and ranks specific Stripe Radar or Shopify Protect rule changes with estimated fraud-capture and false-positive rates — so you know which rules to change without replacing the stack you already run.
             </p>
 
             <p className="text-[1.0625rem] leading-[1.75] mb-8 max-w-[620px] mx-auto text-gray-500 anim-fadeUp delay-400">
@@ -689,20 +674,26 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── FAQ ── */}
+        {/* ── FAQ link ── */}
         <section className="py-20 sm:py-28 bg-[#7D6BA0]/20">
           <div className="px-5 sm:px-10">
             <Reveal animation="anim-fadeUp">
-              <div className="text-center mb-12">
+              <div className="text-center max-w-2xl mx-auto">
                 <p className="text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-2 text-[#5ba8b4]">FAQ</p>
-                <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] text-[2.75rem] sm:text-[3.25rem]">
-                  Frequently Asked Questions
+                <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] text-[2.75rem] sm:text-[3.25rem] mb-4">
+                  Common questions, answered
                 </h2>
-                <p className="mt-4 text-[1.0625rem] text-gray-500 max-w-2xl mx-auto">
-                  Common questions from merchants who want to reduce chargebacks and friendly fraud using their own transaction data.
+                <p className="text-[1.0625rem] text-gray-500 mb-8">
+                  Does FraudPulse replace Radar or Protect? How do we reduce chargebacks and false declines? Alternatives to Signifyd for small shops?
                 </p>
+                <Link
+                  href="/faq/"
+                  className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-[1.0625rem] font-semibold bg-white border transition-colors"
+                  style={{ borderColor: '#e5e7eb', color: '#4a96a3' }}
+                >
+                  View FAQ
+                </Link>
               </div>
-              <FaqAccordion faqs={homeFaqs} />
             </Reveal>
           </div>
         </section>
