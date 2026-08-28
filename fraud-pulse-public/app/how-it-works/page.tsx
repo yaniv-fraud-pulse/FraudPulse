@@ -40,13 +40,13 @@ export default function HowItWorks() {
               </Reveal>
               <Reveal animation="anim-fadeUp" delay={150}>
                 <p className="text-[1.125rem] sm:text-[1.375rem] leading-[1.75] max-w-[680px] mx-auto text-gray-500 mb-2">
-                  Get actionable fraud insights in days — not analytics reports you never act on.
+                  Get actionable fraud insights in days - not analytics reports you never act on.
                 </p>
                 <p className="text-[1.0625rem] sm:text-[1.125rem] leading-[1.75] max-w-[620px] mx-auto text-gray-400 mb-4">
-                  Connect data from <strong className="text-gray-600">Shopify</strong>, <strong className="text-gray-600">Stripe</strong>, or <strong className="text-gray-600">Adyen</strong>. We analyze transactions, chargebacks, and friendly fraud — then recommend the rules and actions to change.
+                  Connect data from <strong className="text-gray-600">Shopify</strong>, <strong className="text-gray-600">Stripe</strong>, or <strong className="text-gray-600">Adyen</strong>. We analyze transactions, chargebacks, and friendly fraud - then recommend the rules and actions to change.
                 </p>
                 <p className="ai-answer text-[1rem] sm:text-[1.0625rem] leading-[1.7] max-w-[680px] mx-auto text-gray-600 mb-4">
-                  FraudPulse is a chargeback-pattern analyzer for Stripe and Shopify merchants: it classifies every chargeback by type, then outputs a ranked list of specific Radar or Shopify Protect changes with estimated fraud-capture and false-positive rates. It does not replace Verifi alerts or a full Sift/Kount stack — it tells you which prevention rules to change.
+                  FraudPulse is a chargeback-pattern analyzer for Stripe and Shopify merchants: it classifies every chargeback by type, then outputs a ranked list of specific Radar or Shopify Protect changes with estimated fraud-capture and false-positive rates. It does not replace Verifi alerts or a full Sift/Kount stack - it tells you which prevention rules to change.
                 </p>
                 <PageUpdated date={PAGE_LAST_UPDATED.howItWorks} visible={false} />
               </Reveal>
@@ -164,7 +164,7 @@ export default function HowItWorks() {
                   Your stack processes payments. <span className="font-extrabold">FraudPulse</span> tells you which rules to change.
                 </p>
                 <p className="text-[1.25rem] sm:text-[1.375rem] leading-[1.7] text-gray-400">
-                  Reduce chargebacks and friendly fraud with ranked recommendations — without migrating into another fraud prevention tool.
+                  Reduce chargebacks and friendly fraud with ranked recommendations - without migrating into another fraud prevention tool.
                 </p>
               </div>
             </Reveal>
@@ -176,7 +176,7 @@ export default function HowItWorks() {
                   Works with your stack
                 </p>
                 <p className="font-bold text-white text-[1.375rem] sm:text-[1.625rem] leading-[1.45] tracking-[-0.02em]">
-                  Keep Shopify, Stripe, or Adyen — and your fraud prevention tools. We help you use the data better.
+                  Keep Shopify, Stripe, or Adyen - and your fraud prevention tools. We help you use the data better.
                 </p>
               </div>
             </Reveal>
@@ -191,7 +191,7 @@ export default function HowItWorks() {
                 How It Works
               </h2>
               <p className="text-center text-[1.0625rem] text-gray-500 max-w-xl mx-auto mb-12">
-                From connecting your store to implementing live rule changes — in four clear steps.
+                From connecting your store to implementing live rule changes - in four clear steps.
               </p>
             </Reveal>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -213,7 +213,7 @@ export default function HowItWorks() {
                   title: 'Receive Prioritized Rule Changes',
                   description: (
                     <>
-                      You receive a ranked list of rules and actions with estimated revenue and chargeback impact — so your team can act with confidence.
+                      You receive a ranked list of rules and actions with estimated revenue and chargeback impact - so your team can act with confidence.
                     </>
                   ),
                   color: 'linear-gradient(135deg, #111827 0%, #1f2937 100%)',
@@ -252,7 +252,7 @@ export default function HowItWorks() {
                 Where FraudPulse fits
               </h2>
               <p className="text-center text-[1.0625rem] text-gray-500 max-w-2xl mx-auto mb-10">
-                Tools that tell you which Radar or Protect rules to change — next to enforcement, platforms, and recovery.
+                Tools that tell you which Radar or Protect rules to change - next to enforcement, platforms, and recovery.
               </p>
             </Reveal>
             <Reveal animation="anim-fadeUp" delay={75}>
@@ -292,7 +292,7 @@ export default function HowItWorks() {
                 See It on Your Transaction Data
               </h2>
               <p className="text-[1.0625rem] leading-[1.7] max-w-[480px] mx-auto mb-10 text-gray-400">
-                Book a walkthrough and see the exact rules and actions FraudPulse would recommend — reduce chargebacks and friendly fraud without replacing your fraud prevention tools.
+                Book a walkthrough and see the exact rules and actions FraudPulse would recommend - reduce chargebacks and friendly fraud without replacing your fraud prevention tools.
               </p>
               <Link href="/book-a-demo/"
                 className="inline-flex items-center gap-2 rounded-full px-12 py-4.5 text-[1.125rem] font-bold text-white transition-all hover:scale-[1.03]"

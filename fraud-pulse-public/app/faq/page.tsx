@@ -41,7 +41,7 @@ export default function FaqPage() {
             </Reveal>
             <Reveal animation="anim-fadeUp" delay={150}>
               <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.75] text-gray-500 max-w-[640px] mx-auto">
-                How FraudPulse works alongside Stripe Radar and Shopify Protect — ranked rule changes,
+                How FraudPulse works alongside Stripe Radar and Shopify Protect - ranked rule changes,
                 chargebacks, false declines, and when a full platform is the better buy.
               </p>
             </Reveal>

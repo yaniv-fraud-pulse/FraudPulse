@@ -1,13 +1,13 @@
 # FraudPulse
 
-> FraudPulse connects to your transaction data and recommends rules and actions that reduce chargebacks and friendly fraud. It analyzes transactions and disputes from Shopify, Stripe, and Adyen and delivers prioritized, implementable recommendations with impact estimates — without replacing your fraud prevention tools.
+> FraudPulse connects to your transaction data and recommends rules and actions that reduce chargebacks and friendly fraud. It analyzes transactions and disputes from Shopify, Stripe, and Adyen and delivers prioritized, implementable recommendations with impact estimates - without replacing your fraud prevention tools.
 
 ## Product summary
 
 - Connect transaction data from Shopify, Stripe, or Adyen
 - Analyze fraud, chargeback, and friendly-fraud patterns from your own data
 - Receive prioritized rule changes and actions with chargeback and false-positive impact estimates
-- Apply recommendations in your existing payment / fraud prevention tools — without replacing them
+- Apply recommendations in your existing payment / fraud prevention tools - without replacing them
 
 ## Key pages
 
@@ -34,18 +34,18 @@
 - What does FraudPulse do? Connects to transaction data and recommends rules/actions to reduce chargebacks and friendly fraud.
 - Which platforms? Shopify, Stripe, and Adyen (plus CSV where needed).
 - How long to get recommendations? Most merchants get actionable insights in days.
-- Do I need to replace my fraud prevention tools? No — FraudPulse works alongside them; no migration required.
+- Do I need to replace my fraud prevention tools? No - FraudPulse works alongside them; no migration required.
 - How is FraudPulse different from analytics & reporting? Analytics shows what happened; FraudPulse recommends which rules and actions to change next.
 - Full FAQ: https://www.fraud-pulse.com/faq/
 
 ## All blog guides (32)
 
 - Best Tools to Optimize Stripe Radar Rules: https://www.fraud-pulse.com/blog/optimize-stripe-radar-rules/
-- Stripe Radar Is Blocking Legitimate Customers — What Should I Do?: https://www.fraud-pulse.com/blog/stripe-radar-blocking-legitimate-customers/
+- Stripe Radar Is Blocking Legitimate Customers - What Should I Do?: https://www.fraud-pulse.com/blog/stripe-radar-blocking-legitimate-customers/
 - How to Reduce False Declines in Stripe: https://www.fraud-pulse.com/blog/how-to-reduce-false-declines-in-stripe/
 - How to Stop Card Testing Attacks on Shopify: https://www.fraud-pulse.com/blog/how-to-stop-card-testing-attacks-on-shopify/
 - Best Fraud Prevention Tools for Shopify in 2026: https://www.fraud-pulse.com/blog/best-fraud-prevention-tools-for-shopify-2026/
-- Chargeback Prevention vs Representment — Which Do I Need?: https://www.fraud-pulse.com/blog/chargeback-prevention-vs-representment/
+- Chargeback Prevention vs Representment - Which Do I Need?: https://www.fraud-pulse.com/blog/chargeback-prevention-vs-representment/
 - Signifyd vs Stripe Radar for DTC Brands: https://www.fraud-pulse.com/blog/signifyd-vs-stripe-radar-for-dtc/
 - What Should I Do If Stripe Warns My Dispute Rate Is Too High?: https://www.fraud-pulse.com/blog/stripe-dispute-rate-too-high/
 - How to Pass a Stripe Account Review After Chargebacks: https://www.fraud-pulse.com/blog/stripe-account-review-after-chargebacks/
@@ -53,7 +53,7 @@
 - Fraud Analysis Is Not Just a Data Problem: https://www.fraud-pulse.com/blog/fraud-analysis-is-not-just-a-data-problem/
 - The Biggest Fraud-Related Change This Year Is a Change in Responsibility: https://www.fraud-pulse.com/blog/nacha-ach-fraud-responsibility-june-2026/
 - AI Is Changing the Speed at Which Fraud Evolves: https://www.fraud-pulse.com/blog/ai-is-changing-the-speed-of-fraud-evolution/
-- Fraud Acts Must Evolve — Or They Become Ineffective: https://www.fraud-pulse.com/blog/fraud-acts-must-evolve-or-become-ineffective/
+- Fraud Acts Must Evolve - Or They Become Ineffective: https://www.fraud-pulse.com/blog/fraud-acts-must-evolve-or-become-ineffective/
 - The biggest revenue leak in your business might not be fraud. It might be false positives.: https://www.fraud-pulse.com/blog/biggest-revenue-leak-might-be-false-positives/
 - 85% of e-commerce professionals say balancing fraud prevention with customer experience is one of their biggest challenges.: https://www.fraud-pulse.com/blog/balancing-fraud-prevention-with-customer-experience/
 - Consumers lost $2.1 billion to scams that started on social media last year.: https://www.fraud-pulse.com/blog/social-media-scams-2-1-billion-authorized-payments/

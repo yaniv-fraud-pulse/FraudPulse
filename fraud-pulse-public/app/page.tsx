@@ -94,7 +94,7 @@ const tabs = [
       </svg>
     ),
     title: 'Everything live, in one view.',
-    body: 'Monitor approval rates, chargeback trends, and fraud exposure from a single real-time dashboard. Filter by date range, card brand, or billing country — always know exactly where you stand.',
+    body: 'Monitor approval rates, chargeback trends, and fraud exposure from a single real-time dashboard. Filter by date range, card brand, or billing country - always know exactly where you stand.',
     bullets: ['Total volume & approval rate', 'Fraud vs non-fraud breakdown', 'Chargeback trend charts', 'Projected chargeback cohorts'],
     visual: (
       <div className="rounded-2xl border bg-[#f8f9fa] p-4 sm:p-5 w-full max-w-full min-w-0 anim-float overflow-hidden text-left" style={{ borderColor: '#e5e7eb', boxShadow: '0 8px 32px rgba(0,0,0,0.08)' }}>
@@ -190,7 +190,7 @@ const tabs = [
       </svg>
     ),
     title: 'Track every dispute, never miss a response.',
-    body: 'Every chargeback logged with full context — reason code, dispute status, fraud pattern, and category. Know exactly which cases need a response today.',
+    body: 'Every chargeback logged with full context - reason code, dispute status, fraud pattern, and category. Know exactly which cases need a response today.',
     bullets: ['Reason code & dispute status', 'Won / Lost / Needs Response tracking', 'Pattern severity scoring', 'Fraud category classification'],
     visual: (
       <div className="rounded-2xl border bg-white p-4 sm:p-5 w-full max-w-full min-w-0 anim-float overflow-hidden text-left" style={{ borderColor: '#e5e7eb', boxShadow: '0 8px 32px rgba(0,0,0,0.08)' }}>
@@ -257,12 +257,12 @@ const tabs = [
   //     </svg>
   //   ),
   //   title: 'Turn recommendations into rules in your existing stack.',
-  //   body: 'FraudPulse doesn\'t replace your payment tools — it uses transaction data from Shopify, Stripe, and Adyen to tell you which rules and actions will reduce chargebacks and friendly fraud.',
+  //   body: 'FraudPulse doesn\'t replace your payment tools - it uses transaction data from Shopify, Stripe, and Adyen to tell you which rules and actions will reduce chargebacks and friendly fraud.',
   //   bullets: [
   //     'Connect Shopify, Stripe, or Adyen',
   //     'Get ranked rules and actions with impact estimates',
   //     'Apply changes where you already manage risk',
-  //     'Works alongside fraud prevention tools — keep your existing stack',
+  //     'Works alongside fraud prevention tools - keep your existing stack',
   //   ],
   //   visual: applyActionsVisual,
   // },
@@ -272,7 +272,7 @@ const heroSteps = [
   {
     step: '01',
     title: 'Connect Your Transaction Data',
-    description: 'Connect Shopify, Stripe, or Adyen in minutes — no engineering work required',
+    description: 'Connect Shopify, Stripe, or Adyen in minutes - no engineering work required',
     visual: tabs[1].visual,
     color: '#5ba8b4',
   },
@@ -377,7 +377,7 @@ export default function Home() {
       />
       <Header />
       <main className="flex-grow overflow-x-clip">
-        {/* AI/GEO freshness — in DOM for agents, hidden from visual UI */}
+        {/* AI/GEO freshness - in DOM for agents, hidden from visual UI */}
         <PageUpdated date={PAGE_LAST_UPDATED.home} visible={false} />
 
         {/* ── Hero ── */}
@@ -405,11 +405,11 @@ export default function Home() {
             </p>
 
             <p className="ai-answer text-[1.0625rem] leading-[1.75] mb-3 max-w-[680px] mx-auto text-gray-600 anim-fadeUp delay-350">
-              FraudPulse classifies chargebacks by type and ranks specific Stripe Radar or Shopify Protect rule changes with estimated fraud-capture and false-positive rates — so you know which rules to change without replacing the stack you already run.
+              FraudPulse classifies chargebacks by type and ranks specific Stripe Radar or Shopify Protect rule changes with estimated fraud-capture and false-positive rates - so you know which rules to change without replacing the stack you already run.
             </p>
 
             <p className="text-[1.0625rem] leading-[1.75] mb-8 max-w-[620px] mx-auto text-gray-500 anim-fadeUp delay-400">
-              Get actionable fraud insights in days — not analytics reports you never act on.
+              Get actionable fraud insights in days - not analytics reports you never act on.
             </p>
 
             {/* CTA */}
@@ -426,7 +426,7 @@ export default function Home() {
 
             {/* Subheadline */}
             <p className="mt-6 text-[1rem] leading-[1.7] max-w-[640px] mx-auto text-gray-500 anim-fadeUp delay-600">
-              Works with Shopify, Stripe, and Adyen — we analyze your transactions and disputes, then suggest the rules to change.
+              Works with Shopify, Stripe, and Adyen - we analyze your transactions and disputes, then suggest the rules to change.
             </p>
 
             {/* Process Flow Animation */}
@@ -501,7 +501,7 @@ export default function Home() {
               <p className="text-[1.0625rem] sm:text-[1.125rem] leading-[1.75] text-gray-400 mb-8">
                 Connect <span className="font-bold text-white">Shopify</span>,{' '}
                 <span className="font-bold text-white">Stripe</span>, or{' '}
-                <span className="font-bold text-white">Adyen</span>. FraudPulse analyzes your transactions and disputes, then recommends rules and actions that reduce chargebacks and friendly fraud — without replacing your fraud prevention tools.
+                <span className="font-bold text-white">Adyen</span>. FraudPulse analyzes your transactions and disputes, then recommends rules and actions that reduce chargebacks and friendly fraud - without replacing your fraud prevention tools.
               </p>
             </Reveal>
 
@@ -555,7 +555,7 @@ export default function Home() {
                 }}>Increase Approvals.</span>
               </h2>
               <p className="text-center text-[1.0625rem] text-gray-500 max-w-2xl mx-auto mb-12 leading-relaxed">
-                Connect transaction data from <strong className="text-gray-800">Shopify</strong>, <strong className="text-gray-800">Stripe</strong>, or <strong className="text-gray-800">Adyen</strong> — then get better rules to cut chargebacks and friendly fraud, without replacing your fraud prevention tools.
+                Connect transaction data from <strong className="text-gray-800">Shopify</strong>, <strong className="text-gray-800">Stripe</strong>, or <strong className="text-gray-800">Adyen</strong> - then get better rules to cut chargebacks and friendly fraud, without replacing your fraud prevention tools.
               </p>
             </Reveal>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -565,7 +565,7 @@ export default function Home() {
                 { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>, title: 'Fraud Prevention Actions', body: 'Clear and simple action items -Immediate improve of fraud and false positive rates, so your team could take confident and data-based decisions.', color: 'rgb(61,143,160)', bg: 'rgba(61,143,160,0.08)', border: 'rgba(61,143,160,0.2)', featured: false, featuredType: null },
                 { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" /></svg>, title: 'Fraud Pattern Detection', body: 'Run the Fraud Classifier to automatically analyze chargebacks and extract the exact rule patterns separating fraud from legitimate transactions.', color: 'rgb(125,107,160)', bg: 'rgba(125,107,160,0.08)', border: 'rgba(125,107,160,0.2)', featuredType: 'purple' },
                 { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>, title: 'Advanced Analytics', body: 'Visualize Fraud Breakdown by Dispute Reason, Risk Feature radar, Incoming Chargebacks by daily bucket, and Projected Chargeback cohorts.', color: 'rgb(61,143,160)', bg: 'rgba(61,143,160,0.08)', border: 'rgba(61,143,160,0.2)', featuredType: null },
-                { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>, title: 'Clean & Validate Your Data', body: 'Built-in Data Sanity checks validate the quality of your transaction data before analysis begins — every insight built on reliable data.', color: 'rgb(125,107,160)', bg: 'rgba(125,107,160,0.08)', border: 'rgba(125,107,160,0.2)', featuredType: 'teal' },
+                { icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>, title: 'Clean & Validate Your Data', body: 'Built-in Data Sanity checks validate the quality of your transaction data before analysis begins - every insight built on reliable data.', color: 'rgb(125,107,160)', bg: 'rgba(125,107,160,0.08)', border: 'rgba(125,107,160,0.2)', featuredType: 'teal' },
               ].map((cap, i) => {
                 const getBgClass = () => {
                   if (cap.featured) return 'bg-gray-900';

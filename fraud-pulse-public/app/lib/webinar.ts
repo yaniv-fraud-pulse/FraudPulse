@@ -4,7 +4,7 @@ export const WEBINAR = {
   title:
     'Fraud Management Webinar: Chargebacks, Friendly Fraud & Rules That Actually Help',
   subtitle:
-    "An open conversation for online merchants who want to compare notes on the fraud and chargeback challenges they're actually dealing with. We'll bring some starting points around common friction areas (tuning fraud rules from transaction data, false declines, reducing friendly fraud), but the real value is hearing what's working — and what isn't.",
+    "An open conversation for online merchants who want to compare notes on the fraud and chargeback challenges they're actually dealing with. We'll bring some starting points around common friction areas (tuning fraud rules from transaction data, false declines, reducing friendly fraud), but the real value is hearing what's working - and what isn't.",
   /** Canonical start: 2:00 PM Eastern (EDT on this date). Shown in each visitor's local timezone. */
   startsAtIso: '2026-08-06T14:00:00-04:00',
   endsAtIso: '2026-08-06T14:30:00-04:00',
@@ -26,7 +26,7 @@ export const WEBINAR = {
   ],
   agenda: [
     'Where chargebacks and false declines are actually coming from for your store',
-    "How other merchants are approaching fraud rule audits — what's worked, what's been a waste of time",
+    "How other merchants are approaching fraud rule audits - what's worked, what's been a waste of time",
     "Open discussion: what's the hardest part of fraud management right now for you?",
     'Bring your specific questions, edge cases, and chargeback headaches.',
   ],

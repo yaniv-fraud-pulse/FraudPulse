@@ -26,14 +26,14 @@ const organizationSchema = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "FraudPulse — Reduce Chargebacks & Friendly Fraud with Smarter Rules",
-  description: "FraudPulse connects to your transaction data from Shopify, Stripe, and Adyen — then recommends rules and actions that reduce chargebacks and friendly fraud. Actionable insights in days, not analytics reports you never act on.",
+  title: "FraudPulse - Reduce Chargebacks & Friendly Fraud with Smarter Rules",
+  description: "FraudPulse connects to your transaction data from Shopify, Stripe, and Adyen - then recommends rules and actions that reduce chargebacks and friendly fraud. Actionable insights in days, not analytics reports you never act on.",
   keywords: "reduce chargebacks, friendly fraud, fraud rule recommendations, Shopify fraud, Stripe fraud, Adyen fraud, false decline reduction, fraud intelligence platform",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "FraudPulse — Reduce Chargebacks & Friendly Fraud with Smarter Rules",
+    title: "FraudPulse - Reduce Chargebacks & Friendly Fraud with Smarter Rules",
     description: "Connect transaction data from Shopify, Stripe, or Adyen. Get ranked rules and actions that reduce chargebacks and fraud.",
     url: SITE_URL,
     siteName: "FraudPulse",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "FraudPulse — Reduce Chargebacks & Friendly Fraud with Smarter Rules",
+    title: "FraudPulse - Reduce Chargebacks & Friendly Fraud with Smarter Rules",
     description: "We analyze your transaction data and deliver concrete actions and rules to reduce chargebacks and false positive.",
   },
   icons: {

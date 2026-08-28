@@ -13,7 +13,7 @@ const steps = [
     number: '01',
     tag: 'Connect',
     title: 'Connect Your Transaction Data',
-    description: 'Connect Shopify, Stripe, or Adyen in minutes — no engineering work required. FraudPulse imports your transaction history, chargeback records, and dispute data, then validates data quality before analysis begins.',
+    description: 'Connect Shopify, Stripe, or Adyen in minutes - no engineering work required. FraudPulse imports your transaction history, chargeback records, and dispute data, then validates data quality before analysis begins.',
     details: [
       'Connect via API, CSV upload, or native integrations',
       'Shopify, Stripe, and Adyen supported',
@@ -25,7 +25,7 @@ const steps = [
     number: '02',
     tag: 'Analysis',
     title: 'We Analyze Your Fraud Patterns',
-    description: 'FraudPulse analyzes your fraud and transaction patterns to identify the root causes of chargebacks, friendly fraud, and false declines — so you know exactly what to fix.',
+    description: 'FraudPulse analyzes your fraud and transaction patterns to identify the root causes of chargebacks, friendly fraud, and false declines - so you know exactly what to fix.',
     details: [
       'Fraud vs Non-Fraud pattern breakdown',
       'Chargeback & friendly fraud reason analysis',
@@ -37,7 +37,7 @@ const steps = [
     number: '03',
     tag: 'Recommendations',
     title: 'Receive Prioritized Rule Changes',
-    description: 'You receive a ranked list of specific fraud rules and actions — each with estimated chargeback reduction and false-positive impact — so your team can act with confidence.',
+    description: 'You receive a ranked list of specific fraud rules and actions - each with estimated chargeback reduction and false-positive impact - so your team can act with confidence.',
     details: [
       'AI Summary with risk level badge (Low / Medium / High)',
       'Designated rules with Fraud Rate, False Positive %, and Ranking',
@@ -49,12 +49,12 @@ const steps = [
     number: '04',
     tag: 'Implement',
     title: 'Apply Rules & Track Results',
-    description: 'Implement recommended rules in your existing payment stack, then track improvements in chargebacks, friendly fraud, and approval rates — without replacing your fraud prevention tools.',
+    description: 'Implement recommended rules in your existing payment stack, then track improvements in chargebacks, friendly fraud, and approval rates - without replacing your fraud prevention tools.',
     details: [
       'Apply ranked rules where you already manage risk',
       'Clear actions tied to chargeback and friendly fraud patterns',
       'Track chargeback and approval rate improvements',
-      'Works alongside fraud prevention tools — improve your existing stack',
+      'Works alongside fraud prevention tools - improve your existing stack',
     ],
   },
 ];
@@ -101,9 +101,9 @@ export default function Solutions() {
                     We analyze your transaction data and deliver concrete actions and rules to reduce chargebacks and false positive.
                 </p>
                 <p className="text-[1.0625rem] leading-[1.75] max-w-[600px] mx-auto text-gray-500 mb-4">
-                  Get actionable fraud insights in days — not analytics reports you never act on. Merchants connect Shopify, Stripe, or Adyen, then get ranked rule changes with estimated chargeback impact and clearer false-positive tradeoffs, <strong>without replacing the fraud prevention tools they already run.</strong> 
+                  Get actionable fraud insights in days - not analytics reports you never act on. Merchants connect Shopify, Stripe, or Adyen, then get ranked rule changes with estimated chargeback impact and clearer false-positive tradeoffs, <strong>without replacing the fraud prevention tools they already run.</strong> 
                 </p>
-                {/* AI/GEO freshness — in DOM for agents, hidden from visual UI */}
+                {/* AI/GEO freshness - in DOM for agents, hidden from visual UI */}
                 <PageUpdated date={PAGE_LAST_UPDATED.solutions} visible={false} />
               </Reveal>
             </div>
@@ -184,7 +184,7 @@ export default function Solutions() {
                   Works With Your Existing Stack
                 </h2>
                 <p className="text-[1.125rem] leading-[1.7] max-w-[580px] mx-auto">
-                  Connect Shopify, Stripe, or Adyen — or upload CSV exports from any platform. No migration, and no need to replace your fraud prevention tools.
+                  Connect Shopify, Stripe, or Adyen - or upload CSV exports from any platform. No migration, and no need to replace your fraud prevention tools.
                 </p>
               </div>
             </Reveal>
@@ -217,7 +217,7 @@ export default function Solutions() {
                 <Link href="/contact/" className="hover:underline text-[#5ba8b4]">
                   Contact us
                 </Link>
-                {' '}— we build custom integrations.
+                {' '}- we build custom integrations.
               </p>
             </Reveal>
           </div>
@@ -271,7 +271,7 @@ export default function Solutions() {
                 See It on Your Transaction Data
               </h2>
               <p className="text-[1.25rem] leading-[1.7] max-w-[680px] mx-auto mb-10 text-gray-400">
-                Book a walkthrough and see the exact rules and actions FraudPulse would recommend — reduce chargebacks and friendly fraud without replacing your fraud prevention tools.
+                Book a walkthrough and see the exact rules and actions FraudPulse would recommend - reduce chargebacks and friendly fraud without replacing your fraud prevention tools.
               </p>
               <Link href="/book-a-demo/"
                 className="inline-flex items-center gap-2 rounded-full px-12 py-4.5 text-[1.125rem] font-bold text-white transition-all hover:scale-[1.03]"

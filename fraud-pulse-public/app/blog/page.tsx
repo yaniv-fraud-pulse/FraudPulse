@@ -137,7 +137,7 @@ export default function Blog() {
                 Questions?
               </h2>
               <p className="text-[1.0625rem] text-gray-500 max-w-xl mx-auto mb-8">
-                Product and buyer questions live on the FAQ page — Radar, Protect, chargebacks, and more.
+                Product and buyer questions live on the FAQ page - Radar, Protect, chargebacks, and more.
               </p>
               <Link
                 href="/faq/"

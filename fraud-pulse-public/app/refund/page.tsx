@@ -5,7 +5,7 @@ import { pageMetadata } from '../lib/seo';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Refund Policy | FraudPulse',
-  description: 'FraudPulse refund policy — 30-day money-back guarantee.',
+  description: 'FraudPulse refund policy - 30-day money-back guarantee.',
   path: '/refund/',
 });
 

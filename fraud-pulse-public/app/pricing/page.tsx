@@ -17,7 +17,7 @@ const plans = [
     priceLabel: '$0.01',
     priceSuffix: '/transaction',
     priceNote: 'Up to 20K transactions / month',
-    tagline: 'Usage-based pricing for growing merchants — no monthly commitment, pay only for what you process.',
+    tagline: 'Usage-based pricing for growing merchants - no monthly commitment, pay only for what you process.',
     cta: 'Book A Demo',
     popular: false,
     features: [
@@ -79,7 +79,7 @@ const faqs = [
   },
   {
     q: 'How is transaction volume counted?',
-    a: 'A transaction is any payment event FraudPulse ingests — authorisations, captures, refunds, and chargebacks each count as one. Only events processed in the current billing period count toward your monthly limit, so historical backfills used for analysis do not silently consume your plan capacity.',
+    a: 'A transaction is any payment event FraudPulse ingests - authorisations, captures, refunds, and chargebacks each count as one. Only events processed in the current billing period count toward your monthly limit, so historical backfills used for analysis do not silently consume your plan capacity.',
   },
   {
     q: 'Can I change plans at any time?',
@@ -87,11 +87,11 @@ const faqs = [
   },
   {
     q: 'What happens if I exceed my transaction limit?',
-    a: 'We notify you at about 80% and 100% of your monthly transaction limit. Service is not cut off by default — overages bill at a small per-transaction rate until you upgrade. If you prefer a hard stop, you can set a cap in settings so volume cannot exceed the ceiling you choose.',
+    a: 'We notify you at about 80% and 100% of your monthly transaction limit. Service is not cut off by default - overages bill at a small per-transaction rate until you upgrade. If you prefer a hard stop, you can set a cap in settings so volume cannot exceed the ceiling you choose.',
   },
   {
     q: 'Do you offer discounts for annual billing?',
-    a: 'Yes. Paying annually on Professional saves about 20% versus month-to-month pricing — more than two months of value across the year. Annual billing is optional; you can stay monthly if you want flexibility while you validate FraudPulse on your own chargeback and approval metrics.',
+    a: 'Yes. Paying annually on Professional saves about 20% versus month-to-month pricing - more than two months of value across the year. Annual billing is optional; you can stay monthly if you want flexibility while you validate FraudPulse on your own chargeback and approval metrics.',
   },
   {
     q: 'What integrations are included?',
@@ -101,11 +101,11 @@ const faqs = [
 
 const planCompareRows = [
   { feature: 'AI advisor recommendations', payg: 'Yes', pro: 'Yes', ent: 'Yes' },
-  { feature: 'Monthly fraud advisor meeting', payg: '—', pro: '1 hour', ent: 'Custom' },
+  { feature: 'Monthly fraud advisor meeting', payg: '-', pro: '1 hour', ent: 'Custom' },
   { feature: 'Monthly transaction allowance', payg: 'Up to 20K', pro: 'Up to 50K', ent: 'Unlimited' },
-  { feature: 'Custom rules engine', payg: '—', pro: 'Up to 10 rules', ent: 'Yes + ML models' },
-  { feature: 'API / webhooks', payg: '—', pro: 'Full API', ent: 'API + webhooks' },
-  { feature: 'Dedicated account manager', payg: '—', pro: '—', ent: 'Yes + SLA' },
+  { feature: 'Custom rules engine', payg: '-', pro: 'Up to 10 rules', ent: 'Yes + ML models' },
+  { feature: 'API / webhooks', payg: '-', pro: 'Full API', ent: 'API + webhooks' },
+  { feature: 'Dedicated account manager', payg: '-', pro: '-', ent: 'Yes + SLA' },
   { feature: 'Starting price', payg: '$0.01 / txn', pro: '$159–$199 / mo', ent: 'Custom' },
 ];
 
@@ -348,7 +348,7 @@ export default function Pricing() {
                   Frequently Asked Questions
                 </h2>
                 <p className="text-[1.0625rem] text-gray-600 max-w-xl mx-auto mt-3">
-                  Clear answers on trials, transaction limits, billing, and integrations — written so you can cite them when comparing fraud tools.
+                  Clear answers on trials, transaction limits, billing, and integrations - written so you can cite them when comparing fraud tools.
                 </p>
               </div>
               <FaqAccordion faqs={faqs} />

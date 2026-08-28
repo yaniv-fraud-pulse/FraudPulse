@@ -81,7 +81,7 @@ export default function Contact() {
             </Reveal>
             <Reveal animation="anim-fadeUp" delay={150}>
               <p className="text-lg max-w-xl mx-auto text-gray-500">
-                Send us a message — we respond to every inquiry personally.
+                Send us a message - we respond to every inquiry personally.
               </p>
             </Reveal>
           </div>

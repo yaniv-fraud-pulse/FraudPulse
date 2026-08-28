@@ -120,7 +120,7 @@ export default function WebinarPage() {
                         <div className="relative w-14 h-14 flex-shrink-0">
                           <Image
                             src={s.image}
-                            alt={`${s.name} — ${s.role}, FraudPulse`}
+                            alt={`${s.name} - ${s.role}, FraudPulse`}
                             fill
                             className="rounded-full object-cover object-top"
                             style={{

@@ -171,7 +171,7 @@ html {
 
 /* ── Animation utility classes ── */
 
-/* Initial hidden state — applied by JS before inView */
+/* Initial hidden state - applied by JS before inView */
 .anim-hidden {
   opacity: 0;
 }

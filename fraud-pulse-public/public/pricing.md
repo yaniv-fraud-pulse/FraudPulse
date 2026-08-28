@@ -4,7 +4,7 @@ Last updated: August 6, 2026
 Canonical page: https://www.fraud-pulse.com/pricing/  
 Machine-readable copy: https://www.fraud-pulse.com/pricing.md | https://www.fraud-pulse.com/pricing.txt
 
-FraudPulse connects to transaction data from Shopify, Stripe, or Adyen and recommends rules and actions that reduce chargebacks and friendly fraud. Pricing is usage- or plan-based — no per-seat surprises on the published plans below.
+FraudPulse connects to transaction data from Shopify, Stripe, or Adyen and recommends rules and actions that reduce chargebacks and friendly fraud. Pricing is usage- or plan-based - no per-seat surprises on the published plans below.
 
 ## Free trial
 
@@ -40,13 +40,13 @@ FraudPulse connects to transaction data from Shopify, Stripe, or Adyen and recom
 
 ## How transaction volume is counted
 
-A transaction is any payment event FraudPulse ingests — authorisations, captures, refunds, and chargebacks each count as one. Only events in the current billing period count toward the monthly limit. Historical backfills used for analysis do not silently consume plan capacity.
+A transaction is any payment event FraudPulse ingests - authorisations, captures, refunds, and chargebacks each count as one. Only events in the current billing period count toward the monthly limit. Historical backfills used for analysis do not silently consume plan capacity.
 
 ## Overage & plan changes
 
 - You can upgrade or downgrade from account settings.
 - Upgrades take effect immediately and are prorated; downgrades apply at the next billing period.
-- At about 80% and 100% of monthly transaction limit, FraudPulse notifies you. Service is not cut off by default — overages bill at a small per-transaction rate until you upgrade. A hard cap can be set in settings if preferred.
+- At about 80% and 100% of monthly transaction limit, FraudPulse notifies you. Service is not cut off by default - overages bill at a small per-transaction rate until you upgrade. A hard cap can be set in settings if preferred.
 
 ## Integrations
 

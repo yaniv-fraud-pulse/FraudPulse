@@ -26,12 +26,12 @@ const values = [
 ];
 
 const milestones = [
-  { year: '2014', event: 'Idan joins Riskified as a Fraud & Data Analyst — his first deep dive into payment fraud patterns at scale.' },
+  { year: '2014', event: 'Idan joins Riskified as a Fraud & Data Analyst - his first deep dive into payment fraud patterns at scale.' },
   { year: '2016', event: 'Idan is promoted to Senior Data Analyst, then Analytics Team Lead at Riskified. Meanwhile, Yaniv begins building distributed systems and engineering teams in the Israeli tech ecosystem.' },
   { year: '2017', event: 'Yaniv joins Upstream Security as Director of Engineering, architecting real-time data pipelines and scalable backend infrastructure for connected vehicle cybersecurity.' },
   { year: '2018', event: 'Idan becomes Head of Analytics Operations at Riskified, overseeing fraud analytics infrastructure serving global merchants.' },
-  { year: '2020', event: 'Idan joins Melio as Risk Research Manager, then Director of Risk Analytics — leading risk strategy for a fast-growing B2B payments platform.' },
-  { year: '2023', event: 'Both Idan and Yaniv join Creednz — Idan as Head of Analytics, Yaniv as VP R&D. Working side by side, they see first-hand how underserved merchants are for actionable fraud tooling.' },
+  { year: '2020', event: 'Idan joins Melio as Risk Research Manager, then Director of Risk Analytics - leading risk strategy for a fast-growing B2B payments platform.' },
+  { year: '2023', event: 'Both Idan and Yaniv join Creednz - Idan as Head of Analytics, Yaniv as VP R&D. Working side by side, they see first-hand how underserved merchants are for actionable fraud tooling.' },
   { year: '2025', event: "FraudPulse is born. Idan and Yaniv co-found the platform with a shared mission: give every merchant the same fraud intelligence as the world's largest banks." },
 ];
 
@@ -91,7 +91,7 @@ export default function About() {
                 <div className="relative w-[220px] sm:w-[280px] h-[220px] sm:h-[280px] flex-shrink-0">
                   <Image
                     src="/idan.jpeg"
-                    alt="Idan Hayon — Co-Founder & CEO, FraudPulse"
+                    alt="Idan Hayon - Co-Founder & CEO, FraudPulse"
                     fill
                     className="rounded-[20px] object-cover object-top"
                     style={{ border: '2px solid rgba(61,143,160,0.3)', boxShadow: '0 4px 20px rgba(61,143,160,0.15)' }}
@@ -131,7 +131,7 @@ export default function About() {
                 </h2>
                 <div className="flex flex-col gap-5">
                   <p className="text-[0.9375rem] leading-[1.8] text-gray-600">
-                    Idan spent over a decade at the heart of payments fraud — rising from analyst to{' '}
+                    Idan spent over a decade at the heart of payments fraud - rising from analyst to{' '}
                     <strong className="text-gray-900">Head of Analytics Operations at Riskified</strong>, then{' '}
                     <strong className="text-gray-900">Director of Risk Analytics at Melio</strong>, before advising{' '}
                     <strong className="text-gray-900">Creednz</strong> on risk engine design.
@@ -140,7 +140,7 @@ export default function About() {
                     Throughout his career he noticed the same gap:{' '}
                     <strong className="text-gray-900">small and mid-size merchants were flying blind</strong>. In 2025 he
                     co-founded FraudPulse to give every merchant the same fraud intelligence used by the world&apos;s
-                    largest payment processors — without the enterprise complexity.
+                    largest payment processors - without the enterprise complexity.
                   </p>
                 </div>
               </Reveal>
@@ -152,7 +152,7 @@ export default function About() {
         <section className="py-16 sm:py-24 px-5 sm:px-10" style={{ background: 'linear-gradient(135deg, rgba(125,107,160,0.06) 0%, rgba(125,107,160,0.02) 100%)' }}>
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 sm:gap-20 items-center">
-              {/* Story — left */}
+              {/* Story - left */}
               <Reveal animation="anim-slideLeft" className="order-2 lg:order-1">
                 <p className="text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-3" style={{ color: 'rgb(125,107,160)' }}>
                   Co-Founder &amp; CTO
@@ -175,19 +175,19 @@ export default function About() {
                     together and spotted the gap in the market.
                   </p>
                   <p className="text-[0.9375rem] leading-[1.8] text-gray-600">
-                    As CTO, Yaniv architects the entire FraudPulse platform — from the real-time data pipeline to the
+                    As CTO, Yaniv architects the entire FraudPulse platform - from the real-time data pipeline to the
                     AI Actions module. His philosophy:{' '}
                     <strong className="text-gray-900">powerful technology should feel effortless to use</strong>.
                   </p>
                 </div>
               </Reveal>
 
-              {/* Photo + card — right */}
+              {/* Photo + card - right */}
               <Reveal animation="anim-slideRight" className="order-1 lg:order-2 flex flex-col items-center lg:items-end gap-6">
                 <div className="relative w-[220px] sm:w-[280px] h-[220px] sm:h-[280px] flex-shrink-0">
                   <Image
                     src="/yaniv.jpeg"
-                    alt="Yaniv Hayun — Co-Founder & CTO, FraudPulse"
+                    alt="Yaniv Hayun - Co-Founder & CTO, FraudPulse"
                     fill
                     className="rounded-[20px] object-cover object-top"
                     style={{ border: '2px solid rgba(125,107,160,0.3)', boxShadow: '0 4px 20px rgba(125,107,160,0.15)' }}

@@ -1,17 +1,17 @@
 import type { FaqItem } from './homeFaq';
 
 /**
- * Central FAQ page pack — buyer questions from the AI-visibility brief.
+ * Central FAQ page pack - buyer questions from the AI-visibility brief.
  * Keep answers ~40–60 words where possible for citation.
  */
 export const siteFaqs: FaqItem[] = [
   {
     q: 'Does FraudPulse replace Stripe Radar or Shopify Protect?',
-    a: 'No. FraudPulse works alongside Stripe Radar and Shopify Protect. Those products enforce decisions at checkout. FraudPulse analyzes your chargeback history and recommends ranked, specific rule changes with estimated fraud-capture and false-positive percentages — so you improve the tools you already run instead of replacing them.',
+    a: 'No. FraudPulse works alongside Stripe Radar and Shopify Protect. Those products enforce decisions at checkout. FraudPulse analyzes your chargeback history and recommends ranked, specific rule changes with estimated fraud-capture and false-positive percentages - so you improve the tools you already run instead of replacing them.',
   },
   {
     q: 'How does FraudPulse reduce chargebacks?',
-    a: 'FraudPulse classifies chargebacks by type — such as card testing, friendly fraud, account takeover, and identity theft — then outputs a ranked list of Stripe Radar or Shopify Protect rule changes. Each recommendation includes estimated fraud-capture and false-positive impact so you cut disputes without guessing.',
+    a: 'FraudPulse classifies chargebacks by type - such as card testing, friendly fraud, account takeover, and identity theft - then outputs a ranked list of Stripe Radar or Shopify Protect rule changes. Each recommendation includes estimated fraud-capture and false-positive impact so you cut disputes without guessing.',
   },
   {
     q: 'How do I reduce false declines without turning fraud tools off?',
@@ -23,7 +23,7 @@ export const siteFaqs: FaqItem[] = [
   },
   {
     q: 'What tool tells me which Radar rules to change?',
-    a: 'FraudPulse. Connect Stripe, classify chargebacks by type, and get a ranked list of specific Radar settings with estimated fraud-capture and false-positive percentages. Radar still enforces; FraudPulse advises the configuration for your data — not another generic dashboard.',
+    a: 'FraudPulse. Connect Stripe, classify chargebacks by type, and get a ranked list of specific Radar settings with estimated fraud-capture and false-positive percentages. Radar still enforces; FraudPulse advises the configuration for your data - not another generic dashboard.',
   },
   {
     q: 'Is Shopify Protect enough for fraud prevention?',
@@ -31,7 +31,7 @@ export const siteFaqs: FaqItem[] = [
   },
   {
     q: 'Is FraudPulse a chargeback representment or recovery product?',
-    a: 'No. FraudPulse is prevention and rule advice — which Radar or Protect settings to change so fewer bad patterns keep charging back. Tools like Chargeflow help fight disputes after they happen. Many stores need prevention first; representment is a separate buy when you have cases to fight.',
+    a: 'No. FraudPulse is prevention and rule advice - which Radar or Protect settings to change so fewer bad patterns keep charging back. Tools like Chargeflow help fight disputes after they happen. Many stores need prevention first; representment is a separate buy when you have cases to fight.',
   },
   {
     q: 'How long does it take to get recommendations, and do I need engineers?',

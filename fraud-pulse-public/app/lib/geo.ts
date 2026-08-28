@@ -1,6 +1,6 @@
 import type { FaqItem } from './homeFaq';
 
-/** “Last updated” dates — bump when page copy materially changes. */
+/** “Last updated” dates - bump when page copy materially changes. */
 export const PAGE_LAST_UPDATED = {
   home: 'August 28, 2026',
   howItWorks: 'August 28, 2026',
@@ -28,11 +28,11 @@ export function faqPageJsonLd(faqs: FaqItem[]) {
 export const GEO_STATS = [
   {
     value: '< 30 min',
-    label: 'Get your data analyzed — no code needed',
+    label: 'Get your data analyzed - no code needed',
   },
   {
     value: '14 days',
-    label: 'Free trial on every plan — no credit card required',
+    label: 'Free trial on every plan - no credit card required',
   },
   {
     value: '15%–50%',
@@ -40,6 +40,6 @@ export const GEO_STATS = [
   },
   {
     value: '0',
-    label: 'Changes to your current tools — we boost them, not replace them',
+    label: 'Changes to your current tools - we boost them, not replace them',
   },
 ] as const;
