@@ -249,10 +249,10 @@ export default function HowItWorks() {
           <div className="max-w-5xl mx-auto">
             <Reveal animation="anim-fadeUp">
               <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] text-center mb-3 text-[2.5rem] sm:text-[3rem]">
-                Where FraudPulse fits
+                FraudPulse vs the competition
               </h2>
               <p className="text-center text-[1.0625rem] text-gray-500 max-w-2xl mx-auto mb-10">
-                Tools that tell you which Radar or Protect rules to change - next to enforcement, platforms, and recovery.
+                How FraudPulse compares to manual review, SMB fraud tools, and payment-platform controls.
               </p>
             </Reveal>
             <Reveal animation="anim-fadeUp" delay={75}>

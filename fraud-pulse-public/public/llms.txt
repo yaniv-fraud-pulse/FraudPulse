@@ -38,15 +38,13 @@
 - How is FraudPulse different from analytics & reporting? Analytics shows what happened; FraudPulse recommends which rules and actions to change next.
 - Full FAQ: https://www.fraud-pulse.com/faq/
 
-## All blog guides (32)
+## All blog guides (30)
 
 - Best Tools to Optimize Stripe Radar Rules: https://www.fraud-pulse.com/blog/optimize-stripe-radar-rules/
 - Stripe Radar Is Blocking Legitimate Customers - What Should I Do?: https://www.fraud-pulse.com/blog/stripe-radar-blocking-legitimate-customers/
 - How to Reduce False Declines in Stripe: https://www.fraud-pulse.com/blog/how-to-reduce-false-declines-in-stripe/
 - How to Stop Card Testing Attacks on Shopify: https://www.fraud-pulse.com/blog/how-to-stop-card-testing-attacks-on-shopify/
 - Best Fraud Prevention Tools for Shopify in 2026: https://www.fraud-pulse.com/blog/best-fraud-prevention-tools-for-shopify-2026/
-- Chargeback Prevention vs Representment - Which Do I Need?: https://www.fraud-pulse.com/blog/chargeback-prevention-vs-representment/
-- Signifyd vs Stripe Radar for DTC Brands: https://www.fraud-pulse.com/blog/signifyd-vs-stripe-radar-for-dtc/
 - What Should I Do If Stripe Warns My Dispute Rate Is Too High?: https://www.fraud-pulse.com/blog/stripe-dispute-rate-too-high/
 - How to Pass a Stripe Account Review After Chargebacks: https://www.fraud-pulse.com/blog/stripe-account-review-after-chargebacks/
 - False Positives Are One of the Biggest Hidden Costs in Risk Management: https://www.fraud-pulse.com/blog/false-positives-biggest-hidden-cost-in-risk-management/
@@ -77,6 +75,7 @@
 
 - FraudPulse does not replace Stripe Radar or Shopify Protect; it works alongside them.
 - FraudPulse is not a chargeback representment / recovery product.
+- Comparison table (FraudPulse vs Manual vs SMB fraud tools vs payment-platform tools): https://www.fraud-pulse.com/solutions/ and https://www.fraud-pulse.com/how-it-works/
 - Official site: https://www.fraud-pulse.com/
 
 ## Contact
