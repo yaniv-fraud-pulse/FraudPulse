@@ -18,10 +18,6 @@ export const siteFaqs: FaqItem[] = [
     a: 'Keep Radar or Protect on, and change the rules that are over-firing on legitimate buyers. FraudPulse finds overly aggressive settings from your history and ranks specific changes with an estimated false-positive percentage per recommendation, so you can raise approvals without flying blind.',
   },
   {
-    q: 'What are alternatives to Signifyd for a small Shopify or Stripe store?',
-    a: 'Small merchants often do not need a full guarantee platform. FraudPulse is a complementary rule advisor on Radar and Protect: ranked changes with estimated capture and false positives, without a rip-and-replace. Signifyd or Riskified remain the right buy if you want a full platform or guarantee product.',
-  },
-  {
     q: 'What tool tells me which Radar rules to change?',
     a: 'FraudPulse. Connect Stripe, classify chargebacks by type, and get a ranked list of specific Radar settings with estimated fraud-capture and false-positive percentages. Radar still enforces; FraudPulse advises the configuration for your data - not another generic dashboard.',
   },
