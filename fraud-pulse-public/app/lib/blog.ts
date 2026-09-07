@@ -20,6 +20,193 @@ export type BlogPost = {
 
 export const posts: BlogPost[] = [
   {
+    slug: 'device-fingerprinting-is-not-enough',
+    title: 'A Common Mistake in Fraud Prevention: Relying Too Heavily on Device Fingerprinting',
+    excerpt:
+      'Device fingerprinting is one of the most valuable fraud signals - but when it becomes the decision instead of one input, false positives creep in. Why the strongest systems combine device intelligence with behaviour and context.',
+    category: 'Education',
+    date: 'August 31, 2026',
+    readTime: '4 min read',
+    author: 'Idan Hayon',
+    authorRole: 'Co-Founder & CEO',
+    content: `
+<p class="ai-answer">Device fingerprinting is one of the most valuable signals in fraud prevention - it helps spot returning devices, account takeovers, and multi-account abuse without adding friction. The mistake is treating it as the decision instead of one input. Devices change, fraudsters spoof them, and the same signal can mean a remote worker or an attacker. Strong systems combine device intelligence with behaviour, payment history, and transaction context.</p>
+
+<p>A common mistake I see in fraud prevention is relying too heavily on device fingerprinting.</p>
+
+<p>Device fingerprinting is one of the most valuable signals available. It helps identify returning devices, detect account takeovers, uncover multi-account abuse, and recognise suspicious behaviour without adding friction for legitimate customers.</p>
+
+<p>The problem starts when it becomes the decision instead of one input into the decision.</p>
+
+<h2>No single fraud signal is perfect</h2>
+
+<p>We need to understand that no fraud signal is perfect. Devices change, people upgrade phones, install operating system updates, switch browsers, work from different locations, use corporate VPNs, travel, or replace their laptops.</p>
+
+<p>At the same time, fraudsters have become much better at hiding their own devices through emulators, anti-fingerprinting tools, residential proxies, and device spoofing.</p>
+
+<p>So the same device signal can sometimes mean two completely different things: a legitimate customer working remotely, or a fraudster trying to hide their identity. If device fingerprinting is carrying too much weight, both situations can end up producing the same outcome. That's where false positives begin to creep in.</p>
+
+<h2>Combine device intelligence with context</h2>
+
+<p>The strongest fraud systems combine device intelligence with behavioural data, payment history, transaction context, account activity, and hundreds of other indicators before making a decision. That's because fraud is about understanding risky behaviour.</p>
+
+<p>Device fingerprinting is incredibly powerful. If you're relying on it as the primary defence against fraud, it might be worth asking:</p>
+
+<ul>
+  <li>What happens when that signal is wrong?</li>
+  <li>What other context is influencing the decision?</li>
+  <li>Are we measuring how many good customers we're blocking because of it?</li>
+</ul>
+
+<p>The best fraud decisions rarely come from one signal. They come from connecting all of them.</p>
+
+<p>If you want ranked rule changes from your full transaction context - not a single signal - <a href="/book-a-demo/">book a demo</a>. Also see <a href="/how-it-works/">how it works</a>, <a href="/pricing/">pricing</a>, and the <a href="/faq/">FAQ</a>.</p>
+
+<p><em>Originally shared on <a href="https://www.linkedin.com/feed/update/urn:li:activity:7500062422821687296/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</em></p>
+    `.trim(),
+    faqs: [
+      {
+        q: 'Why is relying only on device fingerprinting a mistake?',
+        a: 'Fingerprinting is valuable, but devices change and fraudsters spoof them with emulators, proxies, and anti-fingerprinting tools. The same signal can mean a legitimate remote worker or an attacker. When fingerprinting carries too much weight, both cases can get the same outcome - and false positives climb.',
+      },
+      {
+        q: 'What should fraud systems combine with device fingerprinting?',
+        a: 'Behavioural data, payment history, transaction context, account activity, and other indicators before deciding. Fraud is about risky behaviour, not one device attribute. Connecting signals reduces the chance that a single noisy fingerprint blocks a good customer or misses a spoofed attack.',
+      },
+      {
+        q: 'How do I know if device fingerprinting is overweighted in my stack?',
+        a: 'Ask what happens when the signal is wrong, what other context influences the decision, and whether you measure how many good customers you block because of it. If declines track fingerprint mismatches more than chargeback patterns, the control is likely too dominant and needs balancing with broader context.',
+      },
+    ],
+  },
+  {
+    slug: 'dont-confuse-the-fraud-pattern-with-the-problem',
+    title: 'The Easiest Fraud Act to Build Is Often the Easiest One for Fraudsters to Bypass',
+    excerpt:
+      'Fraud teams often solve the pattern. Fraudsters solve the act. Why tying controls to today’s exact attack - product, vendor, amount - leaves you one small change away from being obsolete.',
+    category: 'Education',
+    date: 'August 28, 2026',
+    readTime: '5 min read',
+    author: 'Idan Hayon',
+    authorRole: 'Co-Founder & CEO',
+    content: `
+<p class="ai-answer">One of the biggest mistakes in fraud prevention is confusing the pattern with the problem. Teams spot an attack, lock onto shared traits - product, vendor, amount - and build a narrow act. Fraudsters then change one detail and slip through. The pattern helps you understand the attack; the real question is the core behaviour that makes it fraudulent, and which signals stay useful after the details change.</p>
+
+<p>The easiest fraud act to build is often the easiest one for fraudsters to bypass.</p>
+
+<p>One of the biggest mistakes in fraud prevention is confusing the pattern with the problem. Fraud teams often solve the pattern. Fraudsters solve the act.</p>
+
+<p>I've seen this repeatedly throughout my career, particularly in e-commerce, where fraud patterns can evolve incredibly quickly.</p>
+
+<h2>How over-specific acts fail</h2>
+
+<p>A fraud team identifies an attack. They analyse the transactions, find the common characteristics, and build an act to stop it. Maybe every fraudulent transaction involves the same product, maybe they're all coming through one vendor, or maybe the transaction values sit within a particular range.</p>
+
+<p>So you block that product, vendor, or amount. Problem solved - except the fraudster learns too. Once they realise their transactions are being blocked, they don't necessarily abandon the merchant. They change the product, adjust the amount, switch the account, device, or payment method, and find another route through the system - or they move to another merchant that hasn't adapted yet.</p>
+
+<p>This is why one of the biggest mistakes fraud teams can make is building controls that are too closely tied to the exact pattern they're seeing today.</p>
+
+<h2>Ask about behaviour, not just fingerprints of the attack</h2>
+
+<p>The specific pattern is useful for understanding an attack, but the more important question is: what is the core behaviour that makes this fraudulent?</p>
+
+<ul>
+  <li>Don't just ask how to block transactions buying Product X. Ask why fraudsters are targeting Product X in the first place.</li>
+  <li>Don't just block a specific transaction amount. Understand what behaviour separates those fraudulent transactions from legitimate ones.</li>
+  <li>Don't keep adding increasingly specific acts every time the attack changes. Look for signals that remain relevant even when fraudsters change the details.</li>
+</ul>
+
+<p>In simple terms, fraud prevention is an evolutionary race. You change one thing, and the fraudsters respond. You learn from their response, and the cycle starts again. The fraud teams that stay ahead are the ones that understand the underlying behaviour well enough that a small change from the fraudster doesn't make their entire defence obsolete.</p>
+
+<p>Related reading: <a href="/blog/overfitting-the-most-common-fraud-prevention-mistake/">overfitting in fraud prevention</a>, <a href="/how-it-works/">how it works</a>, <a href="/pricing/">pricing</a>, and the <a href="/faq/">FAQ</a>.</p>
+
+<p><strong>Want rules ranked from your chargeback behaviour - not yesterday's exact pattern?</strong> <a href="/book-a-demo/">Book a Demo</a>.</p>
+
+<p><em>Originally shared on <a href="https://www.linkedin.com/feed/update/urn:li:activity:7498975182645067776/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</em></p>
+    `.trim(),
+    faqs: [
+      {
+        q: 'What does it mean to confuse the fraud pattern with the problem?',
+        a: 'It means building acts that match today’s exact attack fingerprint - a product, vendor, or amount band - instead of the underlying behaviour. Fraudsters then change one detail and bypass the control. The pattern is useful for diagnosis; lasting defence needs signals that still matter after those details change.',
+      },
+      {
+        q: 'Why are the easiest fraud acts often the easiest to bypass?',
+        a: 'They are usually narrow and obvious: block this SKU, this amount, this vendor. Fraudsters learn quickly, switch product or payment method, and continue. Acts that are cheap to write but tightly tied to surface traits become obsolete as soon as the attacker adapts.',
+      },
+      {
+        q: 'What should fraud teams focus on instead of exact attack fingerprints?',
+        a: 'Ask what core behaviour makes the activity fraudulent, and which signals stay relevant when fraudsters change details. Prefer structural, harder-to-swap indicators over one-off pattern locks, and keep updating controls as the evolutionary race continues.',
+      },
+    ],
+  },
+  {
+    slug: 'fraud-prevention-is-not-a-one-time-setup',
+    title: 'Fraud Prevention Is Not a One-Time Setup',
+    excerpt:
+      'Fraud changes constantly - patterns, attacks, customer behaviour, and tech. Shopify’s 2026 research shows rising AI-driven fraud and huge false-decline costs. Why merchants need multiple KPIs, not a single fraud rate.',
+    category: 'Education',
+    date: 'August 27, 2026',
+    readTime: '5 min read',
+    author: 'Idan Hayon',
+    authorRole: 'Co-Founder & CEO',
+    content: `
+<p class="ai-answer">Treating fraud prevention as a one-time setup is one of the biggest mistakes in ecommerce. Fraud patterns, attacks, and customer behaviour keep changing. Shopify’s 2026 guidance notes rising online and AI-driven fraud, while false declines can wipe out huge legitimate revenue. A lower fraud rate alone is not success - you need chargebacks, false declines, approvals, and friction moving together.</p>
+
+<p>One of the biggest mistakes in ecommerce fraud management is treating fraud prevention as a one-time setup. The truth is that fraud changes constantly.</p>
+
+<p>The patterns, the attack methods, the customer behaviour, and the technology change. If your fraud strategy doesn't keep up, performance starts to drift.</p>
+
+<h2>What Shopify’s 2026 fraud research highlights</h2>
+
+<p>Shopify's 2026 fraud guidance makes a point that <strong>74%</strong> of respondents said online fraud had increased over the previous year, while <strong>75%</strong> specifically reported more AI-driven fraud attacks. At the same time, <strong>85%</strong> said fraud was hurting revenue.</p>
+
+<p>That matters because most merchants are trying to solve two problems at once: stop more fraud, and avoid blocking good customers. The balance between those two things is where fraud management becomes difficult.</p>
+
+<p>Shopify research shows that <strong>47%</strong> of businesses estimate up to <strong>5%</strong> of legitimate orders are falsely declined, representing roughly <strong>$50 billion</strong> in legitimate revenue turned away every year.</p>
+
+<p>So a lower fraud rate doesn't automatically mean the system is working better. You could tighten your thresholds, add more acts, and increase authentication across checkout. Fraud might fall - but approval rates could fall too.</p>
+
+<h2>Stop managing fraud with a single KPI</h2>
+
+<p>That's why merchants need to stop looking at fraud prevention as a single KPI. You need to understand:</p>
+
+<ul>
+  <li>Chargeback rate</li>
+  <li>False decline rate</li>
+  <li>Approval rate</li>
+  <li>Manual review volume</li>
+  <li>Chargeback representment performance</li>
+  <li>Customer friction</li>
+</ul>
+
+<p>Most importantly, how those metrics move together.</p>
+
+<p>Shopify says its machine-learning-based pre-authorization model helped increase payment success rates by <strong>26 basis points</strong>, equivalent to <strong>$471 million</strong> in recovered annual revenue, while also reducing fraud chargebacks by <strong>20%</strong>. That's the outcome fraud teams should be aiming for: improving approval rates while maintaining control over fraud.</p>
+
+<p>Because zero fraud is easy if you're willing to decline everything suspicious. The real challenge is building a system that knows when to approve, when to review, and when to block. Good fraud management is about managing risk well enough that the business can keep growing.</p>
+
+<p>Related: <a href="/blog/balancing-fraud-prevention-with-customer-experience/">balancing fraud prevention with CX</a>, <a href="/how-it-works/">how it works</a>, <a href="/pricing/">pricing</a>, and the <a href="/faq/">FAQ</a>.</p>
+
+<p><strong>Want continuous rule recommendations as fraud shifts?</strong> <a href="/book-a-demo/">Book a Demo</a>.</p>
+
+<p><em>Originally shared on <a href="https://www.linkedin.com/feed/update/urn:li:activity:7497525694751756288/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</em></p>
+    `.trim(),
+    faqs: [
+      {
+        q: 'Why is fraud prevention not a one-time setup?',
+        a: 'Fraud patterns, attack methods, customer behaviour, and technology keep changing. A strategy that is not reviewed drifts: acts go stale, false positives rise, and new attacks slip through. Continuous measurement and rule updates matter more than a single launch configuration.',
+      },
+      {
+        q: 'Why is a lower fraud rate not enough on its own?',
+        a: 'You can cut fraud by tightening thresholds and adding friction, but approval rates and false declines may get worse. Shopify research cites large legitimate revenue lost to false declines. Track chargebacks, false declines, approvals, review volume, and friction together - not fraud rate in isolation.',
+      },
+      {
+        q: 'What outcome should fraud teams aim for?',
+        a: 'Improve approval rates while keeping fraud under control - knowing when to approve, review, or block. Shopify has reported models that raised payment success while reducing fraud chargebacks. Zero fraud by declining everything suspicious is easy; sustainable growth needs balanced risk decisions.',
+      },
+    ],
+  },
+  {
     slug: 'optimize-stripe-radar-rules',
     title: 'Best Tools to Optimize Stripe Radar Rules',
     excerpt:

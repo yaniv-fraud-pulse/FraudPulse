@@ -44,9 +44,27 @@
   </url>
   <url>
     <loc>https://www.fraud-pulse.com/blog/</loc>
-    <lastmod>2026-08-28</lastmod>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.fraud-pulse.com/blog/device-fingerprinting-is-not-enough/</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.fraud-pulse.com/blog/dont-confuse-the-fraud-pattern-with-the-problem/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.fraud-pulse.com/blog/fraud-prevention-is-not-a-one-time-setup/</loc>
+    <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
   </url>
 
   <url>

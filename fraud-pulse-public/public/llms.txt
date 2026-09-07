@@ -38,8 +38,11 @@
 - How is FraudPulse different from analytics & reporting? Analytics shows what happened; FraudPulse recommends which rules and actions to change next.
 - Full FAQ: https://www.fraud-pulse.com/faq/
 
-## All blog guides (30)
+## All blog guides (33)
 
+- A Common Mistake in Fraud Prevention: Relying Too Heavily on Device Fingerprinting: https://www.fraud-pulse.com/blog/device-fingerprinting-is-not-enough/
+- The Easiest Fraud Act to Build Is Often the Easiest One for Fraudsters to Bypass: https://www.fraud-pulse.com/blog/dont-confuse-the-fraud-pattern-with-the-problem/
+- Fraud Prevention Is Not a One-Time Setup: https://www.fraud-pulse.com/blog/fraud-prevention-is-not-a-one-time-setup/
 - Best Tools to Optimize Stripe Radar Rules: https://www.fraud-pulse.com/blog/optimize-stripe-radar-rules/
 - Stripe Radar Is Blocking Legitimate Customers - What Should I Do?: https://www.fraud-pulse.com/blog/stripe-radar-blocking-legitimate-customers/
 - How to Reduce False Declines in Stripe: https://www.fraud-pulse.com/blog/how-to-reduce-false-declines-in-stripe/

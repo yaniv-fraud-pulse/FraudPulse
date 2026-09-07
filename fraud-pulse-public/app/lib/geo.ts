@@ -6,7 +6,7 @@ export const PAGE_LAST_UPDATED = {
   howItWorks: 'August 28, 2026',
   solutions: 'August 28, 2026',
   pricing: 'August 6, 2026',
-  blog: 'August 28, 2026',
+  blog: 'August 31, 2026',
 } as const;
 
 export function faqPageJsonLd(faqs: FaqItem[]) {
