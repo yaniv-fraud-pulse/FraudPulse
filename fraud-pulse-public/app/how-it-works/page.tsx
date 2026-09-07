@@ -136,10 +136,10 @@ export default function HowItWorks() {
               >
                 
                 <iframe
-                  src="https://embed.app.guidde.com/playbooks/nCQR61BXRRS2S45ZaZbXMi?mode=videoOnly&autoplay=true"
+                  src="https://www.youtube-nocookie.com/embed/7R01645JR1I?si=Ka8mJ3Q1LI0SGj54&autoplay=1&mute=1&playsinline=1&rel=0&modestbranding=1&iv_load_policy=3&cc_load_policy=0&controls=1"
                   title="How FraudPulse Works"
-                  allow="fullscreen"
-                 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
                   allowFullScreen
                   className="w-full h-full border-0"
                 />
