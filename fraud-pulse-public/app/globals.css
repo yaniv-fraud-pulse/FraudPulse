@@ -350,6 +350,48 @@ html {
   text-decoration-color: #4a96a3;
 }
 
+/* Compact external link preview (e.g. Reddit) */
+.blog-body a.link-preview {
+  display: block;
+  margin-top: 2.5em;
+  padding: 1rem 1.15rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fafafa;
+  text-decoration: none;
+  color: inherit;
+  font-weight: 400;
+  transition: border-color 0.2s, background 0.2s;
+}
+.blog-body a.link-preview:hover {
+  border-color: #d1d5db;
+  background: #f3f4f6;
+  text-decoration: none;
+}
+.blog-body .link-preview-source {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  margin-bottom: 0.35em;
+}
+.blog-body .link-preview-title {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.35;
+  margin-bottom: 0.35em;
+}
+.blog-body .link-preview-desc {
+  display: block;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: #6b7280;
+}
+
 /* Section rounded corners */
 .rounded-section {
   border-radius: 2rem;

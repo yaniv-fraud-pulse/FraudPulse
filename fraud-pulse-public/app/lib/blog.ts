@@ -259,44 +259,81 @@ export const posts: BlogPost[] = [
     slug: 'stripe-radar-blocking-legitimate-customers',
     title: 'Stripe Radar Is Blocking Legitimate Customers - What Should I Do?',
     excerpt:
-      'If Radar is declining good buyers, the fix is usually rule tuning - not ripping Radar out. How to loosen over-aggressive rules with data-backed false-positive estimates.',
+      'The common Radar challenge is not only fraud getting through - it is legitimate customers being blocked. Why lowering thresholds blindly can raise fraud, and which questions to ask before you change an action.',
     category: 'Guide',
     date: 'August 28, 2026',
+    updatedAt: 'September 9, 2026',
     readTime: '5 min read',
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
     content: `
-<p class="ai-answer">If Stripe Radar is blocking legitimate customers, the fix is usually <strong>rule tuning</strong>, not ripping Radar out. FraudPulse analyzes your chargebacks by type and outputs a ranked list of specific Stripe Radar rule changes. Each recommendation includes estimated fraud-capture and false-positive percentages, so you can loosen the rules that kill good orders without guessing.</p>
+<p class="ai-answer">If Stripe Radar is blocking legitimate customers, the answer is to understand <strong>why</strong> good customers are being caught - not to blindly lower risk thresholds or remove the action responsible. Both moves can raise approvals and fraud. Measure which actions drive declines, false-positive rate, and segment impact before you change anything.</p>
 
-<p>Aggressive Radar settings often follow a chargeback spike. The short-term win is fewer disputes; the long-term cost is false declines - real customers who never come back. Turning Radar off is the wrong move. You need to know which rules are over-firing relative to the fraud you actually see.</p>
+<p>One of the most common challenges I see with merchants using Stripe Radar isn't fraud getting through. It's legitimate customers being blocked.</p>
 
-<h2>What to do instead of disabling Radar</h2>
+<p>I've seen this problem with merchants using Radar quite a few times.</p>
+
+<p>A legitimate payment gets blocked. The immediate reaction is usually one of two things:</p>
+
+<ol>
+  <li>Lower the risk threshold</li>
+  <li>Remove or loosen the action responsible</li>
+</ol>
+
+<p>Both might increase approvals - but they might also increase fraud. That's the problem with looking at the decline rather than the decision behind it.</p>
+
+<h2>Radar is powerful - but it doesn't know your business</h2>
+
+<p>Stripe Radar is a powerful fraud prevention tool. It combines machine learning with signals such as customer and payment history, device information, and transaction characteristics to assess risk.</p>
+
+<p>Radar doesn't know your business as well as you do.</p>
+
+<p>It doesn't inherently know that a high-value first order is perfectly normal for your customer base, or that international customers make up a large percentage of your legitimate revenue, or that a particular behaviour looks unusual globally but is completely normal for your merchant.</p>
+
+<h2>Your own actions can create the same problem</h2>
+
+<p>For example, a legitimate customer might ship an order somewhere other than their billing address, make an unusually large first purchase, purchase internationally, retry after an unsuccessful payment, or trigger a velocity or risk rule despite otherwise legitimate behaviour.</p>
+
+<p>Individually, these can be useful fraud signals. But a useful fraud signal isn't automatically a good reason to decline a transaction.</p>
+
+<h2>Questions to ask when Radar blocks too many good customers</h2>
+
+<p>If Radar is blocking too many legitimate customers, I would start by asking:</p>
 
 <ul>
-  <li>Keep Radar as the enforcement layer at checkout.</li>
-  <li>Review which rules drive declines vs which patterns show up in chargebacks.</li>
-  <li>Loosen or refine rules with a high false-positive cost and low fraud capture.</li>
-  <li>Tighten only where your classified history shows real leakage.</li>
+  <li>Which actions are generating the most declines?</li>
+  <li>What percentage of those declines are false positives?</li>
+  <li>Which customer segments are disproportionately affected?</li>
+  <li>What happens if we adjust that action or threshold?</li>
+  <li>How much additional fraud would we expect to capture or allow as a result?</li>
 </ul>
 
-<p>FraudPulse uses your chargeback history to find rules that are too aggressive, then ranks specific Radar changes with an estimated false-positive percentage. That is prevention and configuration advice - not a chargeback recovery app like Chargeflow, which helps after a dispute is filed.</p>
+<p>Sometimes the right answer is changing an action. Sometimes it's moving borderline transactions from block to review or introducing additional verification. Sometimes it's combining several signals instead of making a decision based too heavily on one. Sometimes the existing rule is doing exactly what it should.</p>
 
-<p>For the broader CX trade-off, read <a href="/blog/balancing-fraud-prevention-with-customer-experience/">balancing fraud prevention with customer experience</a>. Also see <a href="/how-it-works/">how it works</a>, <a href="/pricing/">pricing</a>, and the <a href="/faq/">FAQ</a>.</p>
+<p>The important part is measuring the trade-off before changing it - because neither "Radar blocked it" nor "Radar scored it as risky" tells you whether that was the right decision for your business.</p>
 
-<p><strong>Ready to raise approvals without flying blind?</strong> <a href="/book-a-demo/">Book a Demo</a>.</p>
+<p>Your fraud tool provides the infrastructure. Your fraud strategy determines how effectively you use it.</p>
+
+<p>If you want help measuring which Radar actions drive false positives on your data, see <a href="/how-it-works/">how it works</a>, <a href="/pricing/">pricing</a>, and the <a href="/faq/">FAQ</a> - or <a href="/book-a-demo/">book a demo</a>.</p>
+
+<a class="link-preview" href="https://www.reddit.com/r/stripe/comments/1iqbp0y/is_blocking_legit_payments_for_stripe_a_normal/" target="_blank" rel="noopener noreferrer">
+  <span class="link-preview-source">Reddit · r/stripe</span>
+  <span class="link-preview-title">Is blocking legit payments for Stripe a normal thing nowadays?</span>
+  <span class="link-preview-desc">I have been using Stripe for 2 months now and once I started running ads for my store this week I have received 8 high risk payments which got blocked from Stripe. I don't know why this is happening.</span>
+</a>
     `.trim(),
     faqs: [
       {
-        q: 'How does FraudPulse help when Radar blocks real buyers?',
-        a: 'It uses your chargeback history to find rules that are too aggressive, then ranks specific Radar changes with an estimated false-positive percentage so you can raise approvals without flying blind. You keep Stripe Radar for enforcement and change the settings that are hurting legitimate customers more than they stop fraud.',
+        q: 'What should I do if Stripe Radar is blocking legitimate customers?',
+        a: 'Start by understanding why good customers are caught - which actions drive declines, false-positive rate, and which segments are hurt - before lowering thresholds or removing rules. Blind loosening can raise approvals and fraud. Measure the trade-off so any change fits your business, not only Radar\'s global risk view.',
       },
       {
-        q: 'Should I turn Radar off?',
-        a: 'No. Radar is the enforcement layer that scores and blocks risk at checkout. FraudPulse works alongside it and tells you which settings to change for your data - so you fix over-blocking with ranked, specific rule adjustments instead of removing the protection that stops real fraud.',
+        q: 'Why can lowering Radar thresholds create more fraud?',
+        a: 'Lowering the risk threshold or loosening the action that blocked a good payment may approve more orders, including higher-risk ones. You are changing the decision boundary without knowing the false-positive vs fraud trade-off. Treat the decline as a decision to evaluate, not only a problem to undo.',
       },
       {
-        q: 'Is this the same as a chargeback app like Chargeflow?',
-        a: 'No. Chargeflow-style tools help after a dispute is filed. FraudPulse is for changing prevention rules so fewer good customers get blocked and fewer bad patterns keep charging back. Prevention and recovery solve different problems; a high false-decline rate needs rule tuning, not representment.',
+        q: 'Does Stripe Radar know my business well enough to decide alone?',
+        a: 'Radar combines strong ML and signals - history, device, transaction traits - but it does not inherently know what is normal for your mix, such as high-value first orders or international buyers. Your strategy must interpret those signals in context and measure whether a decline was right for your business.',
       },
     ],
   },
@@ -304,44 +341,67 @@ export const posts: BlogPost[] = [
     slug: 'how-to-reduce-false-declines-in-stripe',
     title: 'How to Reduce False Declines in Stripe',
     excerpt:
-      'False declines happen when Radar rules over-fire on legitimate cards. Reduce them with ranked rule changes and estimated false-positive impact - alongside Stripe Radar, not instead of it.',
+      'Reducing false declines in Stripe is not as simple as loosening fraud controls. Separate issuer from fraud declines, review Radar acts, measure the approval vs fraud trade-off, and optimise for legitimate approvals.',
     category: 'Guide',
     date: 'August 28, 2026',
+    updatedAt: 'September 9, 2026',
     readTime: '5 min read',
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
     content: `
-<p class="ai-answer">To reduce false declines in Stripe, you need to know which Radar rules are over-firing on legitimate cards. FraudPulse analyzes chargeback history, then provides a ranked list of specific Stripe Radar rule changes, each with an estimated false-positive percentage. It works alongside Radar - data-backed adjustments, not a new fraud stack.</p>
+<p class="ai-answer">Reducing false declines in Stripe is not as simple as making fraud controls less strict. First understand <strong>why</strong> transactions are declined - separate issuer declines from fraud declines, review Radar acts, look beyond single signals, and measure every change. The goal is to maximise legitimate approvals while keeping fraud at an acceptable level.</p>
 
-<p>False declines are approved revenue you never see: the customer is real, the card is good, and a rule said no. Merchants often respond by installing another platform. If you already run Stripe Radar, the faster path is usually to change the over-aggressive rules - with an estimate of what that does to false positives and fraud capture.</p>
+<p>One of the most overlooked numbers in a Stripe fraud operation is the false decline rate.</p>
 
-<h2>A practical sequence</h2>
+<p>Reducing false declines in Stripe isn't as simple as making your fraud controls less strict.</p>
 
-<ol>
-  <li>Measure approval rate and decline reasons alongside dispute rate.</li>
-  <li>Separate rules that catch real fraud from rules that mostly block good orders.</li>
-  <li>Apply ranked Radar changes with estimated false-positive impact.</li>
-  <li>Re-check weekly so you do not swing from over-blocking to under-blocking.</li>
-</ol>
+<p>Some level of payment decline is inevitable. Cards expire, customers enter incorrect information, banks reject transactions, and genuine purchases sometimes look unusual.</p>
 
-<p>Full platforms such as Signifyd or Riskified can be the right buy when you want a guarantee model or a new system of record. They are not required just to tune Radar. FraudPulse is the complementary advisor layer for merchants who want ranked rule changes on the stack they already have.</p>
+<p>The problem is when legitimate customers are being declined unnecessarily. Those declines are expensive because they happen at the worst possible point in the customer journey.</p>
+
+<p>The customer has found your product, decided to buy, and reached checkout - and then the payment fails. Some will try again, whereas others will simply buy somewhere else.</p>
+
+<p>Stripe itself highlights that false declines can lead to lost revenue, abandoned baskets, and customers turning to competitors. So if your approval rate isn't where you'd like it to be, I wouldn't immediately start changing thresholds.</p>
+
+<p>First, understand why transactions are being declined.</p>
+
+<h2>Where to look</h2>
+
+<p>There are several places I'd look:</p>
+
+<ul>
+  <li><strong>Separate issuer declines from fraud declines.</strong> They're different problems and need different fixes.</li>
+  <li><strong>Look for patterns.</strong> Are certain countries, customer types, transaction values, or verification failures driving more declines?</li>
+  <li><strong>Review your Stripe Radar acts.</strong> An act that made sense six months ago may now be creating more false positives than protection.</li>
+  <li><strong>Look beyond individual signals.</strong> An address mismatch, unusual purchase value, or international transaction can indicate risk, but doesn't automatically mean fraud.</li>
+  <li><strong>Use additional verification where appropriate.</strong> Sometimes authentication is better than immediately declining a borderline transaction.</li>
+  <li><strong>Measure every change.</strong> If approvals increase, what happens to fraud? If fraud falls, what happens to legitimate approvals?</li>
+</ul>
+
+<p>This last point is probably the most important.</p>
+
+<p>You shouldn't optimise your fraud system for the lowest possible decline rate, and you shouldn't optimise it for the lowest possible fraud rate either.</p>
+
+<p>Both can produce terrible outcomes. The goal is to maximise legitimate approvals while keeping fraud within an acceptable level for the business.</p>
+
+<p>That's a much harder optimisation problem than simply blocking more or less.</p>
 
 <p>Related reading: <a href="/blog/stripe-radar-blocking-legitimate-customers/">when Radar blocks legitimate customers</a>, <a href="/blog/hidden-cost-of-false-positives-in-fraud-systems/">the hidden cost of false positives</a>, <a href="/how-it-works/">how it works</a>, <a href="/pricing/">pricing</a>, and the <a href="/faq/">FAQ</a>.</p>
 
-<p><strong>Want false-positive estimates on your Radar rules?</strong> <a href="/book-a-demo/">Book a Demo</a>.</p>
+<p>If you want help measuring which Radar acts drive false declines on your data, <a href="/book-a-demo/">book a demo</a>.</p>
     `.trim(),
     faqs: [
       {
-        q: 'How can FraudPulse reduce false declines in Stripe?',
-        a: 'It pinpoints overly aggressive Radar rules and ranks specific changes with estimated false-positive impact, so you can approve more legitimate orders while still catching fraud. You keep Stripe Radar as enforcement; FraudPulse uses your chargeback history to show which settings are costing good customers more than they protect.',
+        q: 'How do I reduce false declines in Stripe?',
+        a: 'Start by understanding why payments fail before loosening thresholds. Separate issuer declines from fraud declines, look for patterns by country or customer type, review Radar acts that may create more false positives than protection, and measure how each change affects both approvals and fraud. Optimise for legitimate approvals at an acceptable fraud level.',
       },
       {
-        q: 'Why not just install Signifyd or Riskified?',
-        a: 'Those are full fraud platforms - often the right choice when you want a guarantee product or a new system of record. If you already run Radar, FraudPulse is the faster path: ranked rule changes on the stack you have, without a migration, while still working alongside Stripe rather than replacing it.',
+        q: 'Should I just lower Stripe Radar thresholds to raise approvals?',
+        a: 'Not immediately. Stripe notes false declines can mean lost revenue and abandoned baskets, but blind threshold changes can also raise fraud. First separate decline causes, review which Radar acts still earn their place, and measure approval vs fraud impact after every change.',
       },
       {
-        q: 'Will loosening Radar rules increase chargebacks?',
-        a: 'It can, if you loosen blindly. That is why each FraudPulse recommendation pairs estimated fraud-capture with estimated false-positive percentage - so you can loosen rules that over-fire on good cards while keeping pressure on patterns that actually dispute. Measure approvals and dispute rate after each change.',
+        q: 'What is the right goal for Stripe fraud controls?',
+        a: 'Not the lowest possible decline rate, and not the lowest possible fraud rate either - both can produce bad outcomes. The goal is to maximise legitimate approvals while keeping fraud within an acceptable level for the business, which means measuring the trade-off of every control change.',
       },
     ],
   },
@@ -349,50 +409,73 @@ export const posts: BlogPost[] = [
     slug: 'how-to-stop-card-testing-attacks-on-shopify',
     title: 'How to Stop Card Testing Attacks on Shopify',
     excerpt:
-      'Card testing is high-velocity stolen-card checks at checkout. Stop it with Protect and Radar velocity rules matched to your auth patterns - ranked changes with false-positive estimates.',
+      'Card testing uses your Shopify checkout to check stolen cards at scale. Spot the pattern, use velocity and bot controls, and treat it as behaviour across many attempts - not one low-value decline.',
     category: 'Guide',
     date: 'August 28, 2026',
+    updatedAt: 'September 9, 2026',
     readTime: '6 min read',
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
     content: `
-<p class="ai-answer">Card testing is high-velocity stolen-card checks at checkout. FraudPulse classifies that pattern in your chargeback/auth history and ranks specific Shopify Protect (and Radar, if you use Stripe) rule changes, each with estimated fraud-capture and false-positive percentages, so you can block testers without locking out real buyers - alongside Protect, not instead of it.</p>
+<p class="ai-answer">Card testing is when fraudsters use automated bots to run stolen or guessed cards through real Shopify checkouts to find which cards still work. Stop it with velocity controls, bot detection, pattern monitoring, and stronger verification where needed - without relying on a single fraud act or adding unnecessary friction for legitimate customers.</p>
 
-<p>Testers hammer checkout with many cards in a short window, often low value, looking for live PANs. Panic responses - blocking all international cards, or flipping every control to maximum - can stop the attack and also wipe conversion. The durable fix is velocity and rule changes matched to <em>your</em> auth and dispute patterns.</p>
+<p>One of the easiest ways for fraudsters to test stolen cards is to use someone else's checkout.</p>
 
-<h2>What to do when card testing hits my checkout</h2>
+<p>For Shopify merchants, that can mean suddenly seeing hundreds of small payment attempts that have nothing to do with customers actually trying to buy your products.</p>
 
-<p>In the first hour: check Shopify and Stripe fraud views, tighten obvious velocity and CVC-related controls carefully, and avoid nuking entire regions without a false-positive estimate. Then use classified history to rank durable Protect (and Radar) changes so you are not stuck in emergency mode.</p>
+<p>This is card testing. Fraudsters have a list of stolen or guessed card details, but they don't necessarily know which cards still work.</p>
+
+<p>So they use automated bots to run those cards through real Ecommerce checkouts. A successful authorization gives them the information they wanted - this card is live.</p>
+
+<p>Your product was never really the target. Your checkout was the testing environment.</p>
+
+<h2>What the pattern usually looks like</h2>
+
+<p>The pattern is usually fairly recognisable: a sudden spike in payment attempts, lots of low-value transactions, an unusually high decline rate, multiple cards being attempted in a short period, and repeated or unusual checkout behaviour.</p>
+
+<p>But what merchants sometimes misunderstand is that if all those transactions are being declined, the attack isn't necessarily harmless. A sustained attack can create large volumes of failed authorizations and distort your payment data.</p>
+
+<p>It can also affect authorization performance and contribute to the enumeration activity card networks monitor.</p>
+
+<h2>How to stop it</h2>
+
+<p>So how do you stop it?</p>
+
+<p>I wouldn't rely on one fraud act. Card testing is automated behaviour, so you need to make it difficult to test cards at scale while avoiding unnecessary friction for legitimate customers.</p>
+
+<p>A few places I'd look:</p>
 
 <ul>
-  <li>Confirm it is testing (velocity, auth failures, repeated BIN/email patterns) vs a one-off fraud spike.</li>
-  <li>Keep Shopify Protect on - it is enforcement; you still need the right settings for your mix.</li>
-  <li>Prefer targeted velocity and signal rules over blanket declines.</li>
-  <li>Watch false positives: every FraudPulse recommendation includes an estimated false-positive percentage.</li>
+  <li><strong>Velocity controls.</strong> Detect unusually high numbers of payment attempts over short periods.</li>
+  <li><strong>Bot detection.</strong> Look for automated checkout behaviour.</li>
+  <li><strong>Transaction patterns.</strong> Repeated low-value amounts, multiple cards, and rapid-fire attempts.</li>
+  <li><strong>Additional verification.</strong> Use stronger authentication where the risk warrants it.</li>
+  <li><strong>Your lowest-value products.</strong> Card testers often target cheap products.</li>
+  <li><strong>Monitoring.</strong> A card-testing attack should be something you identify quickly.</li>
 </ul>
 
-<h2>Stripe Radar velocity rules (if checkout runs on Stripe)</h2>
+<p>If you're actively being attacked, involve your payment provider early. The important point is that card testing isn't really an individual-transaction problem.</p>
 
-<p>When Shopify checkout is paid through Stripe, Radar velocity rules are often the right lever for testing: repeated attempts, card/email/IP clustering, and short-window thresholds. FraudPulse can rank specific Radar changes alongside Protect recommendations when both are connected - still advisory, not a Radar replacement.</p>
+<p>One $2 payment attempt might look completely unremarkable. Thousands of similar attempts over a short period tell a very different story.</p>
 
-<p>You do not always need Signifyd or another full platform immediately. If Protect and Radar are already on, start by changing the rules that match your testing pattern. Platforms remain a separate buy when you want a guarantee stack.</p>
+<p>Good fraud systems understand the behaviour - not just an individual transaction that looks unremarkable on its own.</p>
 
 <p>See also <a href="/blog/how-to-reduce-chargebacks-on-shopify-2026/">how to reduce chargebacks on Shopify</a>, <a href="/how-it-works/">how it works</a>, <a href="/pricing/">pricing</a>, and the <a href="/faq/">FAQ</a>.</p>
 
-<p><strong>Need ranked rules for a live testing wave?</strong> <a href="/book-a-demo/">Book a Demo</a>.</p>
+<p>If you want help spotting testing patterns and ranking Protect or Radar changes on your data, <a href="/book-a-demo/">book a demo</a>.</p>
     `.trim(),
     faqs: [
       {
-        q: 'Will tighter rules also block real customers?',
-        a: 'They can - which is why every FraudPulse recommendation includes an estimated false-positive percentage so you can see the trade-off before you ship the rule. The goal is to block high-velocity testing patterns without a panic lock that declines legitimate international or first-time buyers.',
+        q: 'What is card testing on Shopify?',
+        a: 'Fraudsters use automated bots to run stolen or guessed cards through real Ecommerce checkouts to learn which cards still work. Your product is rarely the target - your checkout is the testing environment. Typical signs include spikes in small attempts, high declines, and many cards tried in a short window.',
       },
       {
-        q: 'Do I need Signifyd to stop card testing?',
-        a: 'Some brands use a full platform, and that can be the right long-term buy. If you already have Shopify Protect and/or Stripe Radar, start by changing the rules that match your testing pattern. FraudPulse ranks those Protect and Radar changes from your classified history without replacing the tools you already run.',
+        q: 'Are declined card-testing attempts harmless?',
+        a: 'Not necessarily. Even when most attempts fail, a sustained attack can create large volumes of failed authorizations, distort payment data, affect authorization performance, and contribute to enumeration activity that card networks monitor. Treat volume and velocity as the signal, not only successful charges.',
       },
       {
-        q: 'What do I do in the first hour of an attack?',
-        a: 'Check Stripe and Shopify fraud views, tighten obvious velocity and CVC-related rules carefully, and do not nuke all international cards without a false-positive estimate. Then use classified history - FraudPulse ranks durable Protect or Radar changes - so emergency toggles become a measured configuration you can keep.',
+        q: 'How do I stop card testing without blocking real customers?',
+        a: 'Do not rely on one fraud act. Use velocity controls, bot detection, pattern checks on low-value rapid attempts, stronger verification where risk warrants it, and fast monitoring - especially on cheap products. Involve your payment provider early if you are actively under attack.',
       },
     ],
   },
@@ -464,42 +547,65 @@ export const posts: BlogPost[] = [
     slug: 'stripe-dispute-rate-too-high',
     title: 'What Should I Do If Stripe Warns My Dispute Rate Is Too High?',
     excerpt:
-      'A high Stripe dispute-rate warning is a prevention problem: classify why disputes happen, then change Radar rules. Recovery apps help after chargebacks - they do not rank which rules to change.',
+      'Dispute rate and dispute activity measure different things. If Stripe warns your disputes are too high, understand upstream causes, trajectory, and prevention - winning disputes does not remove them from the count.',
     category: 'Guide',
     date: 'August 28, 2026',
+    updatedAt: 'September 9, 2026',
     readTime: '5 min read',
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
     content: `
-<p class="ai-answer">If Stripe warns that your dispute rate is too high, treat it as a <strong>prevention</strong> problem: classify why disputes happen, then change Radar rules that stop the pattern. FraudPulse ranks specific Radar changes with estimated fraud-capture and false-positive percentages. Dispute-recovery apps help <em>after</em> a chargeback; they do not tell you which Radar rule to change.</p>
+<p class="ai-answer">If Stripe warns you about disputes, understand the difference between <strong>dispute rate</strong> (tied to when the payment happened) and <strong>dispute activity</strong> (when disputes arrive). Winning a dispute recovers revenue but does not remove it from these numbers. Focus on what creates disputes upstream and stop preventable ones.</p>
 
-<p>Stripe’s warning is a signal that your rate - not only individual case outcomes - needs to come down. Fighting more chargebacks can help some cases; it does not replace lowering how many disputes are filed. Follow Stripe’s official guidance for monitoring and thresholds, and focus your ops on the mix driving the rate.</p>
+<p>One of the most important numbers to understand if Stripe warns you about your disputes is your dispute activity.</p>
 
-<h2>A prevention-first response</h2>
+<p>Dispute rate and dispute activity sound interchangeable, but they're measuring different things. Dispute rate attributes disputes back to when the original payment happened. Dispute activity looks at disputes based on when they arrive.</p>
 
-<ol>
-  <li>Break down disputes by type and reason - fraud, friendly fraud, fulfillment, unrecognized charges.</li>
-  <li>Keep Radar on; identify which rules fail to stop the leaking patterns.</li>
-  <li>Apply ranked Radar changes with estimated capture and false-positive impact.</li>
-  <li>Fix descriptors, shipping, and support where service disputes dominate.</li>
-</ol>
+<p>That difference can create two very different pictures of the same business.</p>
 
-<p>FraudPulse will not talk to Stripe for you in an account review. We help you change prevention rules using your data. For review-specific guidance, see <a href="/blog/stripe-account-review-after-chargebacks/">how to pass a Stripe account review after chargebacks</a>. Also read <a href="/how-it-works/">how it works</a>, <a href="/pricing/">pricing</a>, and the <a href="/faq/">FAQ</a>.</p>
+<p>Imagine you process 1,000 payments this month and receive 10 disputes. Only three of those disputes relate to payments made this month. The other seven come from older transactions.</p>
 
-<p><strong>Want ranked Radar changes aimed at your dispute mix?</strong> <a href="/book-a-demo/">Book a Demo</a>.</p>
+<p>Your dispute rate for this month's payments could be 0.3%. Your dispute activity could be 1%.</p>
+
+<p>We are talking about the same business, period, but very different indications of risk. This matters because if you're trying to understand what's causing the problem, your dispute rate can help you trace disputes back to the transactions that generated them.</p>
+
+<p>If you're trying to understand your current exposure, you need to pay attention to dispute activity - and there's another important distinction merchants sometimes miss.</p>
+
+<p>Winning a dispute doesn't make it disappear from these numbers. Once the dispute has been filed, it's counted. Winning it can recover the revenue, but it doesn't undo the dispute itself.</p>
+
+<h2>What to look at when Stripe warns you</h2>
+
+<p>If Stripe warns you that your dispute activity is becoming too high, you need to understand what's creating the disputes upstream. I'd start by looking at:</p>
+
+<ul>
+  <li>Which products or services generate the most disputes</li>
+  <li>Whether particular customer cohorts or geographies stand out</li>
+  <li>How much is genuine fraud vs customer confusion</li>
+  <li>Whether billing descriptors and subscription terms are clear</li>
+  <li>Whether fulfilment or delivery issues are contributing</li>
+  <li>Which fraudulent transactions are getting through your controls</li>
+</ul>
+
+<p>More importantly, I'd look at the trajectory. A business with relatively low dispute activity that's climbing quickly can have a very different risk profile from one that's been stable for months.</p>
+
+<p>The biggest takeaway for me is prevention. If your dispute activity is becoming a problem, the objective is to stop as many preventable disputes as possible from happening in the first place.</p>
+
+<p>For review-specific guidance, see <a href="/blog/stripe-account-review-after-chargebacks/">how to pass a Stripe account review after chargebacks</a>. Also read <a href="/how-it-works/">how it works</a>, <a href="/pricing/">pricing</a>, and the <a href="/faq/">FAQ</a>.</p>
+
+<p>If you want help classifying what's driving disputes on your data, <a href="/book-a-demo/">book a demo</a>.</p>
     `.trim(),
     faqs: [
       {
-        q: 'Will FraudPulse talk to Stripe for me in an account review?',
-        a: 'No. We help you change prevention rules using your chargeback and transaction data. Follow Stripe’s official review process and Support channels. FraudPulse ranks specific Radar changes with estimated fraud-capture and false-positive percentages so you can reduce the patterns driving a high dispute rate.',
+        q: 'What is the difference between Stripe dispute rate and dispute activity?',
+        a: 'Dispute rate attributes disputes to when the original payment happened. Dispute activity looks at disputes based on when they arrive. The same month can show a low dispute rate and higher dispute activity if most filings relate to older transactions - two different risk pictures of the same business.',
       },
       {
-        q: 'Should I only fight chargebacks (Chargeflow)?',
-        a: 'Recovery can help individual cases after they file. A high dispute rate needs fewer disputes going forward - that is rule and process work. Use representment if you need it for case volume, but do not skip prevention; FraudPulse focuses on which Radar rules to change, not representment.',
+        q: 'Does winning a Stripe dispute remove it from dispute rate or activity?',
+        a: 'No. Once a dispute is filed, it is counted. Winning can recover the revenue, but it does not undo the dispute itself. That is why a high warning is mainly a prevention problem: stop preventable disputes upstream, not only fight cases after they file.',
       },
       {
-        q: 'Does FraudPulse replace Stripe Radar when my rate is high?',
-        a: 'No. Radar remains the enforcement layer. FraudPulse works alongside Stripe, classifies why disputes happen, and ranks specific Radar rule changes so you can lower the rate without ripping out the tools Stripe already expects you to use at checkout.',
+        q: 'What should I do if Stripe warns my dispute activity is too high?',
+        a: 'Look at what creates disputes upstream - products, cohorts, geographies, fraud vs confusion, descriptors, fulfilment, and control gaps - and watch the trajectory, not only the level. The goal is to stop as many preventable disputes as possible from happening in the first place.',
       },
     ],
   },
@@ -507,44 +613,68 @@ export const posts: BlogPost[] = [
     slug: 'stripe-account-review-after-chargebacks',
     title: 'How to Pass a Stripe Account Review After Chargebacks',
     excerpt:
-      'A Stripe account review is Stripe’s process - not an app you install. Show you understand the dispute mix and have tightened the right Radar rules. FraudPulse does not get accounts out of review.',
+      'Winning chargebacks and addressing why your account is under review are different problems. What Stripe needs to see is cause, failed controls, what you changed, and how you monitor improvement.',
     category: 'Guide',
     date: 'August 28, 2026',
+    updatedAt: 'September 9, 2026',
     readTime: '5 min read',
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
     content: `
-<p class="ai-answer">A Stripe account review after chargebacks is Stripe’s process, not a product you install. What you <em>can</em> do is show you understand the dispute mix and have tightened the right Radar rules. FraudPulse classifies chargebacks and ranks specific Radar changes with estimated capture and false-positive rates so you can reduce the pattern that triggered review - not replace Stripe Support.</p>
+<p class="ai-answer">Passing a Stripe account review after chargebacks is less about winning individual disputes and more about proving you understand the <strong>underlying problem</strong>: what caused the spike, where controls failed, what you changed, and how you monitor improvement. Representment protects revenue; prevention protects the account.</p>
 
-<p>FraudPulse does <strong>not</strong> get accounts out of review. Stripe decides. Our job is prevention: help you change the rules that match the chargebacks that put the account under scrutiny - so the underlying rate improves while you follow Stripe’s process.</p>
+<p>One of the biggest mistakes merchants make after a spike in chargebacks is focusing on the chargebacks themselves.</p>
 
-<h2>What merchants can control during review</h2>
+<p>The most misunderstood part of a Stripe account review is what you need to prove.</p>
+
+<p>Most merchants spend a lot of time thinking about the chargebacks that triggered the review, and less time thinking about what those chargebacks say about the underlying business.</p>
+
+<p>The reason is that individual disputes feel like the immediate problem.</p>
+
+<p>You can see the disputed transaction, investigate what happened, submit evidence, and potentially recover the revenue. So naturally, the focus becomes winning them.</p>
+
+<p>But winning chargebacks and addressing the reason your account is being reviewed are two different things. Once a dispute happens, it contributes to the activity associated with your account regardless of whether you eventually win or lose it.</p>
+
+<p>That means a merchant could successfully defend a large percentage of its disputes and still have a chargeback problem. This is where account reviews become much more about prevention than representment.</p>
+
+<h2>What Stripe needs to understand</h2>
+
+<p>Stripe needs to understand whether the activity that caused concern is likely to continue. A sudden increase in fraudulent transactions might point to weaknesses in your fraud controls. A spike in product-not-received disputes might point to fulfilment.</p>
+
+<p>Subscription disputes could indicate problems with renewal or cancellation communication. Unrecognised transactions might be caused by something as simple as an unclear statement descriptor.</p>
+
+<p>From the merchant's perspective, these are all chargebacks. From a risk perspective, they are very different problems.</p>
+
+<h2>What a strong review response shows</h2>
+
+<p>The difficult part is that passing an account review means demonstrating that you understand:</p>
 
 <ul>
-  <li>Respond to Stripe with accurate information and timelines they request.</li>
-  <li>Document the dispute mix (types, reason codes, ops issues vs fraud).</li>
-  <li>Tighten the right Radar rules - not every rule at maximum.</li>
-  <li>Separate recovery of old cases from prevention of new ones.</li>
+  <li>What caused the increase</li>
+  <li>Which transactions or customers were affected</li>
+  <li>Where the existing controls failed</li>
+  <li>What you've changed since</li>
+  <li>How you're monitoring whether those changes work</li>
 </ul>
 
-<p>A chargeback-fighting app alone is not enough. Fighting cases does not replace lowering the rate. Do both only if you still need recovery; start with why the chargebacks exist. For rate warnings specifically, see <a href="/blog/stripe-dispute-rate-too-high/">what to do if Stripe warns your dispute rate is too high</a>.</p>
+<p>The strongest response is being able to show: this caused the problem → we identified it → we fixed it → here's how we know it's improving.</p>
 
-<p>Learn more on <a href="/how-it-works/">how it works</a>, <a href="/pricing/">pricing</a>, and the <a href="/faq/">FAQ</a>.</p>
+<p>Winning existing chargebacks protects your revenue. Preventing the conditions that created them is what protects your account.</p>
 
-<p><strong>Need ranked Radar changes while you work through Stripe’s process?</strong> <a href="/book-a-demo/">Book a Demo</a>.</p>
+<p>For dispute-rate warnings specifically, see <a href="/blog/stripe-dispute-rate-too-high/">what to do if Stripe warns your dispute rate is too high</a>. If you want help classifying the mix and ranking prevention changes on your data, see <a href="/how-it-works/">how it works</a>, <a href="/pricing/">pricing</a>, and the <a href="/faq/">FAQ</a> - or <a href="/book-a-demo/">book a demo</a>.</p>
     `.trim(),
     faqs: [
       {
-        q: 'Does FraudPulse get accounts out of review?',
-        a: 'No. Stripe decides account reviews. FraudPulse helps you change prevention rules using your chargeback history - classifying types and ranking specific Radar changes with estimated capture and false-positive rates - so you can reduce the pattern that triggered review. It does not replace Stripe Support or legal advice.',
+        q: 'Is winning chargebacks enough to pass a Stripe account review?',
+        a: 'Usually not. A dispute still counts toward account activity whether you win or lose it. Review risk is about whether the underlying problem continues. You need to show cause, failed controls, what you changed, and how you monitor improvement - prevention matters more than representment for protecting the account.',
       },
       {
-        q: 'Is a chargeback-fighting app enough?',
-        a: 'Fighting cases does not replace lowering the dispute rate. Representment can help individual disputes; review risk is driven by the ongoing mix. Start with why chargebacks exist and which Radar rules should change. Use recovery in parallel only if you still need to fight volume.',
+        q: 'What does Stripe need to see in an account review after chargebacks?',
+        a: 'That you understand whether the concerning activity is likely to continue: what caused the spike, which customers were affected, where controls failed, what you changed, and how you track improvement. Different dispute types point to different root causes - fraud controls, fulfilment, billing communication, or statement descriptors.',
       },
       {
-        q: 'How does FraudPulse help during a review?',
-        a: 'By turning your history into ranked, specific Radar rule recommendations with estimated fraud-capture and false-positive percentages. You keep Radar as enforcement, connect in minutes with no engineering, and show a concrete prevention plan while you follow Stripe’s official review process.',
+        q: 'Does FraudPulse get Stripe accounts out of review?',
+        a: 'No. Stripe decides account reviews. FraudPulse helps with prevention - classifying chargeback types and ranking rule or action changes so you can show a concrete fix-and-monitor plan while you follow Stripe Support. It does not replace Stripe’s process or legal advice.',
       },
     ],
   },

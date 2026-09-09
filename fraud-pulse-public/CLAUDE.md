@@ -15,7 +15,7 @@ The **public marketing site** for FraudPulse (`fraud-pulse-public`). FraudPulse 
 ## Commands
 
 ```bash
-npm run dev      # local dev server (http://localhost:3000)
+npm run dev      # local dev server (http://localhost:3001)
 npm run build    # static export → out/ (this is what deploys)
 npm run lint     # eslint (next core-web-vitals + typescript configs)
 npm start        # serve a production build
