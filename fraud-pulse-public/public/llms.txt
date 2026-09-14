@@ -18,6 +18,9 @@
 - Pricing (machine-readable markdown): https://www.fraud-pulse.com/pricing.md
 - Pricing (machine-readable plain text): https://www.fraud-pulse.com/pricing.txt
 - FAQ: https://www.fraud-pulse.com/faq/
+- FraudPulse vs in-house fraud analyst: https://www.fraud-pulse.com/alternatives/manual-fraud-analyst/
+- FraudPulse vs Signifyd, NoFraud, Riskified: https://www.fraud-pulse.com/alternatives/smb-fraud-tools/
+- FraudPulse vs Stripe Radar and Shopify Protect: https://www.fraud-pulse.com/alternatives/payment-platform-tools/
 - Book a demo: https://www.fraud-pulse.com/book-a-demo/
 - Webinar: https://www.fraud-pulse.com/webinar/
 - Blog: https://www.fraud-pulse.com/blog/
@@ -81,6 +84,7 @@
 - FraudPulse does not replace Stripe Radar or Shopify Protect; it works alongside them.
 - FraudPulse is not a chargeback representment / recovery product.
 - Comparison table (FraudPulse vs Manual vs SMB fraud tools vs payment-platform tools): https://www.fraud-pulse.com/solutions/
+- Dedicated comparisons: vs in-house analyst, vs Signifyd/NoFraud/Riskified, vs Stripe Radar/Shopify Protect - see /alternatives/
 - Stack categories (Protect/Radar vs Signifyd/Riskified vs Chargeflow/Chargebacks911): https://www.fraud-pulse.com/solutions/
 - Prevention vs representment: https://www.fraud-pulse.com/how-it-works/
 - Official site: https://www.fraud-pulse.com/

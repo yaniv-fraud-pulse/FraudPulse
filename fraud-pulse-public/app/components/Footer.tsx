@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="border-t bg-[#f8f9fa]" style={{ borderColor: '#e5e7eb' }}>
       <div className="max-w-7xl mx-auto px-5 sm:px-10 py-14">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center mb-4">
@@ -25,6 +25,22 @@ export default function Footer() {
                 { href: '/pricing/', label: 'Pricing' },
                 { href: '/faq/', label: 'FAQ' },
                 { href: '/webinar/', label: 'Webinar' },
+              ].map(({ href, label }) => (
+                <li key={href}>
+                  <Link href={href} className="text-sm text-gray-500 hover:text-gray-900 transition-colors">{label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Compare */}
+          <div>
+            <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">Compare</h4>
+            <ul className="space-y-3">
+              {[
+                { href: '/alternatives/manual-fraud-analyst/', label: 'Vs. In-House Analyst' },
+                { href: '/alternatives/smb-fraud-tools/', label: 'Vs. Signifyd & NoFraud' },
+                { href: '/alternatives/payment-platform-tools/', label: 'Vs. Stripe Radar and Shopify Protect' },
               ].map(({ href, label }) => (
                 <li key={href}>
                   <Link href={href} className="text-sm text-gray-500 hover:text-gray-900 transition-colors">{label}</Link>
