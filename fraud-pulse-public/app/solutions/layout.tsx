@@ -3,7 +3,7 @@ import { SITE_URL } from "../lib/site";
 
 export const metadata: Metadata = {
   title: "FraudPulse Solutions - Connect Transaction Data, Get Ranked Fraud Rules",
-  description: "See how FraudPulse connects to Shopify, Stripe, and Adyen, analyzes your fraud patterns, and delivers ranked rules and actions - reduce chargebacks and friendly fraud without replacing your fraud prevention tools.",
+  description: "See how FraudPulse connects to Shopify, Stripe, and Adyen, analyzes your fraud patterns, and delivers ranked rules - including how it compares to Shopify Protect, Signifyd, and Chargeflow without replacing them.",
   keywords: "fraud rule recommendations, chargeback reduction, friendly fraud, Shopify Stripe Adyen, false decline reduction, fraud intelligence",
   alternates: {
     canonical: "/solutions/",

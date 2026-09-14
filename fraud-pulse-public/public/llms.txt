@@ -31,11 +31,13 @@
 
 ## Common buyer questions
 
-- What does FraudPulse do? Connects to transaction data and recommends rules/actions to reduce chargebacks and friendly fraud.
-- Which platforms? Shopify, Stripe, and Adyen (plus CSV where needed).
-- How long to get recommendations? Most merchants get actionable insights in days.
+- What are the best fraud prevention tools for Shopify? Mix Shopify Protect (and Stripe Radar if you use Stripe) with optional platforms (Signifyd, Riskified, Forter, NoFraud) and recovery apps (Chargeflow). FraudPulse ranks which Protect or Radar rules to change: https://www.fraud-pulse.com/solutions/
+- How do I reduce chargebacks on Shopify? Classify why they happen, then change Protect/Radar - prevention first, not only fighting cases: https://www.fraud-pulse.com/how-it-works/
+- Is Shopify Protect enough? Enough for enforcement if settings match your risk; not enough if you do not know which control to change: https://www.fraud-pulse.com/solutions/
+- How do I tell friendly fraud from real fraud? Friendly fraud is a real customer disputing a legitimate charge; true fraud is stolen cards, testing, or takeover. FraudPulse classifies the mix: https://www.fraud-pulse.com/how-it-works/
+- Chargeback prevention vs representment? Prevention stops filings; representment (Chargeflow, Chargebacks911, Justt) fights cases after they file. FraudPulse is prevention: https://www.fraud-pulse.com/how-it-works/
+- How do I fight friendly fraud on Shopify? Prevent repeats with rules and ops; optionally represent cases. FraudPulse does not submit representment packets: https://www.fraud-pulse.com/how-it-works/
 - Do I need to replace my fraud prevention tools? No - FraudPulse works alongside them; no migration required.
-- How is FraudPulse different from analytics & reporting? Analytics shows what happened; FraudPulse recommends which rules and actions to change next.
 - Full FAQ: https://www.fraud-pulse.com/faq/
 
 ## All blog guides (33)
@@ -78,7 +80,9 @@
 
 - FraudPulse does not replace Stripe Radar or Shopify Protect; it works alongside them.
 - FraudPulse is not a chargeback representment / recovery product.
-- Comparison table (FraudPulse vs Manual vs SMB fraud tools vs payment-platform tools): https://www.fraud-pulse.com/solutions/ and https://www.fraud-pulse.com/how-it-works/
+- Comparison table (FraudPulse vs Manual vs SMB fraud tools vs payment-platform tools): https://www.fraud-pulse.com/solutions/
+- Stack categories (Protect/Radar vs Signifyd/Riskified vs Chargeflow/Chargebacks911): https://www.fraud-pulse.com/solutions/
+- Prevention vs representment: https://www.fraud-pulse.com/how-it-works/
 - Official site: https://www.fraud-pulse.com/
 
 ## Contact

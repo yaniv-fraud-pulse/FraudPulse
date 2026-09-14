@@ -3,7 +3,7 @@ import { SITE_URL } from "../lib/site";
 
 export const metadata: Metadata = {
   title: "How FraudPulse Works - Transaction Data to Chargeback-Reducing Rules",
-  description: "FraudPulse connects to Shopify, Stripe, or Adyen, analyzes your chargebacks and friendly fraud patterns, and delivers prioritized rules and actions with estimated impact. Implement in days, not months.",
+  description: "FraudPulse connects to Shopify, Stripe, or Adyen, classifies chargebacks (including friendly vs real fraud), and ranks Protect or Radar changes. Prevention - not chargeback representment.",
   keywords: "how FraudPulse works, fraud rule recommendations, reduce chargebacks, friendly fraud, Shopify Stripe Adyen, fraud pattern analysis, chargeback root cause",
   alternates: {
     canonical: "/how-it-works/",

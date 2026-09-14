@@ -5,6 +5,7 @@ import JsonLd from '../../components/JsonLd';
 import Link from 'next/link';
 import { Reveal } from '../../components/Reveal';
 import { getPost, posts } from '../../lib/blog';
+import { faqPageJsonLd } from '../../lib/geo';
 import { SITE_URL } from '../../lib/site';
 
 export function generateStaticParams() {
@@ -103,6 +104,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   return (
     <div className="flex flex-col min-h-screen bg-white">
       <JsonLd data={articleSchema} />
+      {post.faqs && post.faqs.length > 0 && <JsonLd data={faqPageJsonLd(post.faqs)} />}
       <Header />
 
       <main className="flex-grow">
@@ -194,6 +196,22 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
           </Reveal>
+
+          {post.faqs && post.faqs.length > 0 && (
+            <div className="max-w-3xl mx-auto mt-12 pt-8 border-t" style={{ borderColor: '#e5e7eb' }}>
+              <h2 className="font-bold text-gray-900 text-[1.5rem] mb-6 tracking-[-0.02em]">
+                FAQ
+              </h2>
+              <dl className="flex flex-col gap-6">
+                {post.faqs.map((faq) => (
+                  <div key={faq.q}>
+                    <dt className="font-semibold text-[1.0625rem] text-gray-900 mb-2">{faq.q}</dt>
+                    <dd className="text-[1.0625rem] leading-[1.75] text-gray-600">{faq.a}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          )}
 
           <div className="max-w-3xl mx-auto mt-12 pt-8 border-t text-center" style={{ borderColor: '#e5e7eb' }}>
             <p className="text-[1rem] text-gray-500 mb-4">

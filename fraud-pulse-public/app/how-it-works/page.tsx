@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Reveal } from '../components/Reveal';
 import GeoStatStrip, { PageUpdated } from '../components/GeoBits';
-import ToolComparisonTable from '../components/ToolComparisonTable';
+import PreventionVsRepresentmentTable from '../components/PreventionVsRepresentmentTable';
 import { GEO_STATS, PAGE_LAST_UPDATED } from '../lib/geo';
 
 export default function HowItWorks() {
@@ -46,7 +46,7 @@ export default function HowItWorks() {
                   Connect data from <strong className="text-gray-600">Shopify</strong>, <strong className="text-gray-600">Stripe</strong>, or <strong className="text-gray-600">Adyen</strong>. We analyze transactions, chargebacks, and friendly fraud - then recommend the rules and actions to change.
                 </p>
                 <p className="ai-answer text-[1rem] sm:text-[1.0625rem] leading-[1.7] max-w-[680px] mx-auto text-gray-600 mb-4">
-                  FraudPulse is a chargeback-pattern analyzer for Stripe and Shopify merchants: it classifies every chargeback by type, then outputs a ranked list of specific Radar or Shopify Protect changes with estimated fraud-capture and false-positive rates. It does not replace Verifi alerts or a full Sift/Kount stack - it tells you which prevention rules to change.
+                  To reduce chargebacks on Shopify, classify why they happen, then change Protect (and Radar if you use Stripe) to match those types. FraudPulse classifies every chargeback and outputs a ranked list of specific rule changes with estimated fraud-capture and false-positive rates. Fighting cases after they file does not replace prevention - and FraudPulse is not a Chargeflow or Chargebacks911 replacement.
                 </p>
                 <PageUpdated date={PAGE_LAST_UPDATED.howItWorks} visible={false} />
               </Reveal>
@@ -244,19 +244,47 @@ export default function HowItWorks() {
           </div>
         </section>
 
-        {/* ── Comparison ── */}
+        {/* ── Prevention vs representment (unique to this page) ── */}
         <section className="py-16 sm:py-24 px-5 sm:px-10 bg-white">
           <div className="max-w-5xl mx-auto">
             <Reveal animation="anim-fadeUp">
               <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] text-center mb-3 text-[2.5rem] sm:text-[3rem]">
-                FraudPulse vs the competition
+                Prevention vs representment
               </h2>
               <p className="text-center text-[1.0625rem] text-gray-500 max-w-2xl mx-auto mb-10">
-                How FraudPulse compares to manual review, SMB fraud tools, and payment-platform controls.
+                Chargeback prevention and chargeback representment solve different jobs. Pick the one that matches the problem - or use both.
               </p>
             </Reveal>
             <Reveal animation="anim-fadeUp" delay={75}>
-              <ToolComparisonTable />
+              <PreventionVsRepresentmentTable />
+            </Reveal>
+            <Reveal animation="anim-fadeUp" delay={150}>
+              <h3 className="font-bold text-gray-900 text-[1.25rem] sm:text-[1.375rem] mt-12 mb-3 tracking-[-0.02em]">
+                Friendly fraud vs real fraud on Shopify
+              </h3>
+              <p className="ai-answer text-[1.0625rem] leading-[1.7] text-gray-600 mb-6">
+                Friendly fraud is a real customer disputing a legitimate charge. True fraud is stolen cards, testing, or takeover. Shopify reason codes help, but mixed queues need classification. FraudPulse classifies chargebacks by type so Protect or Radar changes match the mix. Recovery tools fight the case after it files.
+              </p>
+              <h3 className="font-bold text-gray-900 text-[1.25rem] sm:text-[1.375rem] mb-3 tracking-[-0.02em]">
+                How to fight friendly fraud
+              </h3>
+              <p className="ai-answer text-[1.0625rem] leading-[1.7] text-gray-600 mb-6">
+                Fight friendly fraud by preventing repeats - clearer descriptors, delivery evidence, and rules - then optionally representing individual cases. FraudPulse ranks prevention rule changes from classified chargebacks. It does not submit representment packets. Feature comparison vs manual review and SMB tools lives on{' '}
+                <Link href="/solutions/" className="font-semibold text-[#4a96a3] hover:underline">
+                  Solutions
+                </Link>
+                .
+              </p>
+              <p className="text-[0.9375rem] text-gray-500">
+                Guides:{' '}
+                <Link href="/blog/how-to-reduce-chargebacks-on-shopify-2026/" className="font-semibold text-[#4a96a3] hover:underline">
+                  reduce chargebacks on Shopify
+                </Link>
+                {' · '}
+                <Link href="/blog/why-30-90-percent-of-fraud-is-friendly-fraud/" className="font-semibold text-[#4a96a3] hover:underline">
+                  friendly fraud vs real fraud
+                </Link>
+              </p>
             </Reveal>
           </div>
         </section>

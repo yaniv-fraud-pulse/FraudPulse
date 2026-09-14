@@ -82,6 +82,43 @@ export const COMPARISON_FEATURES: ComparisonFeature[] = [
 export const TOOL_COMPARISON_FOOTNOTE =
   'FraudPulse works alongside your stack - it does not replace Stripe Radar, Shopify Protect, or a full guarantee platform when that is the buy you need.';
 
+/** One category table for AI/buyer queries - keep this on /solutions only to avoid duplicate content. */
+export const STACK_CATEGORIES = [
+  {
+    category: 'Payment platform tools',
+    examples: 'Shopify Protect, Stripe Radar',
+    job: 'Score and block risk at checkout',
+    fraudPulse: 'Ranks which settings to change for your mix',
+  },
+  {
+    category: 'Full fraud platforms',
+    examples: 'Signifyd, Riskified, Forter, NoFraud, ClearSale, Sift, Kount, SEON, FraudLabs Pro',
+    job: 'Guarantee, full scoring, or managed review',
+    fraudPulse: 'Complements the stack you already have - not a replacement',
+  },
+  {
+    category: 'Chargeback recovery',
+    examples: 'Chargeflow, Chargebacks911, Midigator, Justt, Ethoca, Verifi',
+    job: 'Fight disputes after they file (representment)',
+    fraudPulse: 'Prevention and rule advice - not representment',
+  },
+] as const;
+
+export const PREVENTION_VS_REPRESENTMENT = [
+  {
+    need: 'Chargeback prevention',
+    does: 'Stop disputes from being filed',
+    tools: 'Shopify Protect, Stripe Radar, Signifyd, Riskified, NoFraud, Sift',
+    fraudPulse: 'Core job: classify the mix and rank rule changes',
+  },
+  {
+    need: 'Chargeback representment',
+    does: 'Fight cases after they file',
+    tools: 'Chargeflow, Chargebacks911, Midigator, Justt, Ethoca, Verifi',
+    fraudPulse: 'Not in scope',
+  },
+] as const;
+
 const VALUE_LABEL: Record<ComparisonValue, string> = {
   yes: 'Yes',
   no: 'No',

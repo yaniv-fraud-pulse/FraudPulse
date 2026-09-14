@@ -17,7 +17,7 @@ export default function FaqPage() {
       <Header />
 
       <main className="flex-grow">
-        <PageUpdated date="August 28, 2026" visible={false} />
+        <PageUpdated date="September 14, 2026" visible={false} />
 
         <section className="relative overflow-hidden pt-8 pb-12 sm:pb-16 px-5 sm:px-10 bg-white">
           <div
@@ -42,7 +42,7 @@ export default function FaqPage() {
             <Reveal animation="anim-fadeUp" delay={150}>
               <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.75] text-gray-500 max-w-[640px] mx-auto">
                 How FraudPulse works alongside Stripe Radar and Shopify Protect - ranked rule changes,
-                chargebacks, false declines, and when a full platform is the better buy.
+                chargebacks, friendly vs real fraud, and prevention vs representment.
               </p>
             </Reveal>
           </div>
