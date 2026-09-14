@@ -119,23 +119,24 @@ export const PREVENTION_VS_REPRESENTMENT = [
   },
 ] as const;
 
-const VALUE_LABEL: Record<ComparisonValue, string> = {
-  yes: 'Yes',
-  no: 'No',
-  partial: 'Partial',
+const VALUE_HTML: Record<ComparisonValue, string> = {
+  yes: '<span class="mark-yes" aria-label="Yes">✓</span>',
+  no: '<span class="mark-no" aria-label="No">✕</span>',
+  partial: '<span class="mark-partial" aria-label="Partial">~</span>',
 };
 
-/** HTML table for blog posts (mobile-scrollable wrapper expected in page CSS). */
+/** HTML table for blog posts (styled via .blog-body .compare-table). */
 export function toolComparisonTableHtml(): string {
   const head = `
-<table>
+<div class="compare-table-wrap">
+<table class="compare-table">
   <thead>
     <tr>
       <th></th>
-      <th>FraudPulse</th>
-      <th>Manual<br/><span style="font-weight:400;font-size:0.85em">In-house team or founder</span></th>
-      <th>SMB Fraud Prevention<br/><span style="font-weight:400;font-size:0.85em">NoFraud · ClearSale</span></th>
-      <th>Payment Platform Tools<br/><span style="font-weight:400;font-size:0.85em">Stripe Radar · Shopify Protect</span></th>
+      <th class="col-fp">FraudPulse</th>
+      <th>Manual<br/><span class="th-sub">In-house team or founder</span></th>
+      <th>SMB Fraud Prevention<br/><span class="th-sub">NoFraud · ClearSale</span></th>
+      <th>Payment Platform Tools<br/><span class="th-sub">Stripe Radar · Shopify Protect</span></th>
     </tr>
   </thead>
   <tbody>
@@ -144,16 +145,17 @@ export function toolComparisonTableHtml(): string {
   const body = COMPARISON_FEATURES.map(
     (row) => `
     <tr>
-      <td><strong>${row.feature}</strong></td>
-      <td>${VALUE_LABEL[row.fraudPulse]}</td>
-      <td>${VALUE_LABEL[row.manual]}</td>
-      <td>${VALUE_LABEL[row.smb]}</td>
-      <td>${VALUE_LABEL[row.platform]}</td>
+      <td>${row.feature}</td>
+      <td class="col-fp">${VALUE_HTML[row.fraudPulse]}</td>
+      <td>${VALUE_HTML[row.manual]}</td>
+      <td>${VALUE_HTML[row.smb]}</td>
+      <td>${VALUE_HTML[row.platform]}</td>
     </tr>`
   ).join('');
 
   return `${head}${body}
   </tbody>
 </table>
-<p><em>${TOOL_COMPARISON_FOOTNOTE}</em></p>`;
+</div>
+<p class="compare-table-note">${TOOL_COMPARISON_FOOTNOTE}</p>`;
 }

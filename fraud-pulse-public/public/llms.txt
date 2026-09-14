@@ -18,6 +18,7 @@
 - Pricing (machine-readable markdown): https://www.fraud-pulse.com/pricing.md
 - Pricing (machine-readable plain text): https://www.fraud-pulse.com/pricing.txt
 - FAQ: https://www.fraud-pulse.com/faq/
+- Category Hub - Best Fraud Prevention Tools: https://www.fraud-pulse.com/blog/best-fraud-prevention-tools-for-shopify-2026/
 - FraudPulse vs in-house fraud analyst: https://www.fraud-pulse.com/alternatives/manual-fraud-analyst/
 - FraudPulse vs Signifyd, NoFraud, Riskified: https://www.fraud-pulse.com/alternatives/smb-fraud-tools/
 - FraudPulse vs Stripe Radar and Shopify Protect: https://www.fraud-pulse.com/alternatives/payment-platform-tools/
@@ -34,7 +35,7 @@
 
 ## Common buyer questions
 
-- What are the best fraud prevention tools for Shopify? Mix Shopify Protect (and Stripe Radar if you use Stripe) with optional platforms (Signifyd, Riskified, Forter, NoFraud) and recovery apps (Chargeflow). FraudPulse ranks which Protect or Radar rules to change: https://www.fraud-pulse.com/solutions/
+- What are the best fraud prevention tools for Shopify? Mix Shopify Protect (and Stripe Radar if you use Stripe) with optional platforms (Signifyd, Riskified, Forter, NoFraud) and recovery apps (Chargeflow). FraudPulse ranks which Protect or Radar rules to change: https://www.fraud-pulse.com/blog/best-fraud-prevention-tools-for-shopify-2026/
 - How do I reduce chargebacks on Shopify? Classify why they happen, then change Protect/Radar - prevention first, not only fighting cases: https://www.fraud-pulse.com/how-it-works/
 - Is Shopify Protect enough? Enough for enforcement if settings match your risk; not enough if you do not know which control to change: https://www.fraud-pulse.com/solutions/
 - How do I tell friendly fraud from real fraud? Friendly fraud is a real customer disputing a legitimate charge; true fraud is stolen cards, testing, or takeover. FraudPulse classifies the mix: https://www.fraud-pulse.com/how-it-works/
@@ -43,7 +44,7 @@
 - Do I need to replace my fraud prevention tools? No - FraudPulse works alongside them; no migration required.
 - Full FAQ: https://www.fraud-pulse.com/faq/
 
-## All blog guides (33)
+## All blog guides (32)
 
 - A Common Mistake in Fraud Prevention: Relying Too Heavily on Device Fingerprinting: https://www.fraud-pulse.com/blog/device-fingerprinting-is-not-enough/
 - The Easiest Fraud Act to Build Is Often the Easiest One for Fraudsters to Bypass: https://www.fraud-pulse.com/blog/dont-confuse-the-fraud-pattern-with-the-problem/
@@ -52,7 +53,6 @@
 - Stripe Radar Is Blocking Legitimate Customers - What Should I Do?: https://www.fraud-pulse.com/blog/stripe-radar-blocking-legitimate-customers/
 - How to Reduce False Declines in Stripe: https://www.fraud-pulse.com/blog/how-to-reduce-false-declines-in-stripe/
 - How to Stop Card Testing Attacks on Shopify: https://www.fraud-pulse.com/blog/how-to-stop-card-testing-attacks-on-shopify/
-- Best Fraud Prevention Tools for Shopify in 2026: https://www.fraud-pulse.com/blog/best-fraud-prevention-tools-for-shopify-2026/
 - What Should I Do If Stripe Warns My Dispute Rate Is Too High?: https://www.fraud-pulse.com/blog/stripe-dispute-rate-too-high/
 - How to Pass a Stripe Account Review After Chargebacks: https://www.fraud-pulse.com/blog/stripe-account-review-after-chargebacks/
 - False Positives Are One of the Biggest Hidden Costs in Risk Management: https://www.fraud-pulse.com/blog/false-positives-biggest-hidden-cost-in-risk-management/
@@ -84,7 +84,7 @@
 - FraudPulse does not replace Stripe Radar or Shopify Protect; it works alongside them.
 - FraudPulse is not a chargeback representment / recovery product.
 - Comparison table (FraudPulse vs Manual vs SMB fraud tools vs payment-platform tools): https://www.fraud-pulse.com/solutions/
-- Dedicated comparisons: vs in-house analyst, vs Signifyd/NoFraud/Riskified, vs Stripe Radar/Shopify Protect - see /alternatives/
+- Dedicated comparisons: vs in-house analyst, vs Signifyd/NoFraud/Riskified, vs Stripe Radar/Shopify Protect - see /alternatives/, and the master comparison hub at /blog/best-fraud-prevention-tools-for-shopify-2026/
 - Stack categories (Protect/Radar vs Signifyd/Riskified vs Chargeflow/Chargebacks911): https://www.fraud-pulse.com/solutions/
 - Prevention vs representment: https://www.fraud-pulse.com/how-it-works/
 - Official site: https://www.fraud-pulse.com/
