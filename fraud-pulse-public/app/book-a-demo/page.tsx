@@ -6,13 +6,13 @@ import Link from 'next/link';
 import Script from 'next/script';
 import { Reveal } from '../components/Reveal';
 import { captureEvent } from '../components/PostHogProvider';
-import { CAL_DEMO_THANKS_PATH, CAL_DEMO_URL } from '../lib/posthog';
+import { CAL_DEMO_THANKS_PATH, CALENDLY_DEMO_URL } from '../lib/posthog';
 import { SITE_URL } from '../lib/site';
 
 const BOOK_A_DEMO_GA_ID = 'G-DJW8HBM574';
 
-/** Must also be set in Cal.com event → Redirect on booking (see POSTHOG_PLAN.md). */
-const CAL_BOOKING_HREF = CAL_DEMO_URL;
+/** Must also be set in Calendly event → Redirect after booking (see POSTHOG_PLAN.md). */
+const CALENDLY_BOOKING_HREF = CALENDLY_DEMO_URL;
 
 const demoSteps = [
   { n: '1', text: 'Live walkthrough of the AI advisor surfacing patterns and recommendations.' },
@@ -64,7 +64,7 @@ export default function BookADemo() {
             </Reveal>
             <Reveal animation="anim-fadeUp" delay={150}>
               <p className="text-lg max-w-xl mx-auto text-gray-500">
-                Book a 30-minute live walkthrough with the FraudPulse team
+                Book a 30-minute live walkthrough with Idan Hayon, Co-Founder &amp; CEO
                 <span className="block font-bold text-gray-900 mt-1">{" "}No prep required.</span>
               </p>
             </Reveal>
@@ -94,13 +94,13 @@ export default function BookADemo() {
 
                   <div className="mt-auto pt-8 flex flex-col gap-4">
                     <a
-                      href={CAL_BOOKING_HREF}
+                      href={CALENDLY_BOOKING_HREF}
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() =>
                         captureEvent('demo_cta_clicked', {
                           page: '/book-a-demo/',
-                          destination: CAL_BOOKING_HREF,
+                          destination: CALENDLY_BOOKING_HREF,
                         })
                       }
                       className="inline-flex h-14 w-full items-center justify-center gap-2 rounded-[10px] text-base sm:text-lg font-bold transition-all hover:-translate-y-px text-white"
@@ -110,7 +110,7 @@ export default function BookADemo() {
                       </svg>
                       Book a 30-Minute Demo
                     </a>
-                    {/* Cal.com success redirect target (configure in Cal dashboard): */}
+                    {/* Calendly confirmation redirect (configure in Calendly): */}
                     <p className="sr-only">
                       After booking, redirect to {SITE_URL}
                       {CAL_DEMO_THANKS_PATH}

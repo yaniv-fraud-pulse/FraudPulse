@@ -46,7 +46,7 @@ Canonical host is `https://www.fraud-pulse.com` (defined once in `app/lib/site.t
 - `app/lib/posthog.ts` — config constants; `isPostHogEnabled` gates everything on `POSTHOG_PROJECT_TOKEN` being present. The token is public by design (like a GA measurement ID) and inlined at build.
 - `app/lib/posthogClient.ts` — idempotent `ensurePostHog()` init and `captureEvent()`. On `*.fraud-pulse.com` it sets a cross-subdomain cookie so the marketing site and product app share one person profile.
 - `app/components/PostHogProvider.tsx` — wraps the app in `layout.tsx`; manually fires `$pageview` on SPA route changes (`capture_pageview: false` in init). **Import `captureEvent` from this component**, not from `posthogClient`, when using it in pages.
-- Tracked events: `$pageview`, `pricing_page_viewed`, `demo_booked`, `demo_cta_clicked`. See `POSTHOG_PLAN.md` for the full plan and the required Cal.com redirect (`demo_booked` fires on `/book-a-demo/thanks/`).
+- Tracked events: `$pageview`, `pricing_page_viewed`, `demo_booked`, `demo_cta_clicked`. See `POSTHOG_PLAN.md` for the full plan and the required Calendly redirect (`demo_booked` fires on `/book-a-demo/thanks/`).
 
 `layout.tsx` also loads Google Analytics (`G-GL245KC3KN`) and Contentsquare via `next/script`.
 

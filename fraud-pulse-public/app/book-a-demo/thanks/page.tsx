@@ -18,6 +18,7 @@ function DemoBookedTracker() {
     fired.current = true;
 
     const email =
+      searchParams.get('invitee_email') ||
       searchParams.get('email') ||
       searchParams.get('booker_email') ||
       undefined;
@@ -29,13 +30,20 @@ function DemoBookedTracker() {
       .join(' ')
       .trim();
     const name =
-      searchParams.get('attendeeName') || composedName || undefined;
-    const uid = searchParams.get('uid') || undefined;
-    const title = searchParams.get('title') || undefined;
+      searchParams.get('invitee_full_name') ||
+      searchParams.get('attendeeName') ||
+      composedName ||
+      undefined;
+    const uid =
+      searchParams.get('invitee_uuid') || searchParams.get('uid') || undefined;
+    const title =
+      searchParams.get('event_type_name') ||
+      searchParams.get('title') ||
+      undefined;
 
     captureEvent('demo_booked', {
       page: '/book-a-demo/thanks/',
-      source: 'cal.com',
+      source: 'calendly',
       email: email || undefined,
       name: name || undefined,
       booking_uid: uid || undefined,

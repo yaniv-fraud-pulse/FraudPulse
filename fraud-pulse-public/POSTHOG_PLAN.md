@@ -12,11 +12,11 @@
 | Site: `$pageview` (incl. SPA nav + UTMs) | ✅ Done |
 | Site: `pricing_page_viewed` | ✅ Done |
 | Site: `demo_booked` on `/book-a-demo/thanks/` | ✅ Done |
-| Site: `demo_cta_clicked` (outbound Cal link) | ✅ Done (extra intent signal) |
+| Site: `demo_cta_clicked` (outbound Calendly link) | ✅ Done (extra intent signal) |
 | Env name `POSTHOG_PROJECT_TOKEN` | ✅ Done |
 | Cross-subdomain cookie `*.fraud-pulse.com` | ✅ Done |
 | **Vercel env vars** | ⚠️ **You must add** (see below) |
-| **Cal.com success redirect** | ⚠️ **You must configure** (see below) |
+| **Calendly confirmation redirect** | ⚠️ **You must configure** (see below) |
 | App Phase B (`identify`, signup, data connect) | ⚠️ App not in this repo — use `app/lib/posthogAppPhaseB.ts` |
 
 ---
@@ -36,13 +36,14 @@ Local: copy `.env.example` → `.env.local` and set the same vars.
 
 ---
 
-## ⚠️ Cal.com — required for `demo_booked`
+## ⚠️ Calendly — required for `demo_booked`
 
-Event: `https://cal.com/yaniv-hayun/30min`
+Event: `https://calendly.com/idan-apis-solutions/30min` (Idan Hayon, CEO)
 
-1. Enable **Redirect on booking**
-2. Success URL: `https://www.fraud-pulse.com/book-a-demo/thanks/`
-3. Keep **Forward parameters** on
+1. Open the event in Calendly → **Confirmation page**
+2. Choose **Redirect to an external site**
+3. Redirect URL: `https://www.fraud-pulse.com/book-a-demo/thanks/`
+4. Turn on **Pass event details to your redirect URL**
 
 ---
 
@@ -52,7 +53,7 @@ Event: `https://cal.com/yaniv-hayun/30min`
 |---|--------|--------|------|
 | 1 | `$pageview` | Site + app | Every page / route |
 | 2 | `pricing_page_viewed` | Site | `/pricing/` |
-| 3 | `demo_booked` | Site | `/book-a-demo/thanks/` after Cal redirect |
+| 3 | `demo_booked` | Site | `/book-a-demo/thanks/` after Calendly redirect |
 | 4 | `user_signed_up` | App | First auth / signup |
 | 5 | `data_connected` | App | First Stripe/Shopify (or PSP) connect |
 
