@@ -3,7 +3,8 @@
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Link from 'next/link';
-import { useState, useRef, useEffect } from 'react';
+import { TrackedLink } from './components/TrackedCta';
+import { useState, useEffect } from 'react';
 import { useInView } from './hooks/useInView';
 import { PageUpdated } from './components/GeoBits';
 import { PAGE_LAST_UPDATED } from './lib/geo';
@@ -414,14 +415,14 @@ export default function Home() {
 
             {/* CTA */}
             <div className="anim-fadeUp delay-500">
-              <Link href="/book-a-demo/"
+              <TrackedLink event="demo_cta_clicked" href="/book-a-demo/"
                 className="inline-flex items-center gap-2 rounded-full px-12 py-5 text-lg font-bold text-white transition-all hover:scale-[1.03]"
                 style={{
                   background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',
                   transition: 'transform 0.2s cubic-bezier(0.22,1,0.36,1)',
                 }}>
                 Book a Demo
-              </Link>
+              </TrackedLink>
             </div>
 
             {/* Subheadline */}
@@ -714,7 +715,7 @@ export default function Home() {
                 Book a walkthrough and see the exact rules and actions FraudPulse would recommend to reduce chargebacks and friendly fraud.
               </p>
               <div className="flex flex-wrap gap-3 justify-center">
-                <Link href="/book-a-demo/"
+                <TrackedLink event="demo_cta_clicked" href="/book-a-demo/"
                   className="inline-flex items-center gap-2 rounded-full px-10 py-4 text-[1.0625rem] font-bold text-white"
                   style={{
                     background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',
@@ -724,7 +725,7 @@ export default function Home() {
                   onMouseLeave={e => { (e.currentTarget as HTMLElement).style.transform = 'scale(1)'; }}>
                   Book a Demo
 
-                </Link>
+                </TrackedLink>
                 <Link href="/pricing/"
                   className="inline-flex items-center rounded-full px-10 py-4 text-[1.0625rem] font-semibold border"
                   style={{

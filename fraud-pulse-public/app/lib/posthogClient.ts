@@ -56,10 +56,14 @@ export function captureEvent(
   properties?: Record<string, string | number | boolean | undefined | null>,
 ) {
   if (!ensurePostHog()) return;
-  posthog.capture(event, {
-    ...getUtmProperties(),
-    ...properties,
-  });
+  posthog.capture(
+    event,
+    {
+      ...getUtmProperties(),
+      ...properties,
+    },
+    { send_instantly: true },
+  );
 }
 
 export { posthog };

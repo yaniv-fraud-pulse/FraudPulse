@@ -8,6 +8,7 @@ import { Reveal } from '../../components/Reveal';
 import { PageUpdated } from '../../components/GeoBits';
 import { faqPageJsonLd } from '../../lib/geo';
 import { pageMetadata } from '../../lib/seo';
+import { TrackedLink } from '../../components/TrackedCta';
 import { alternativePages, getAlternative } from '../../lib/alternatives';
 
 export function generateStaticParams() {
@@ -222,7 +223,8 @@ export default async function AlternativePage({
             <p className="text-[1.0625rem] leading-[1.7] max-w-[520px] mx-auto mb-10 text-gray-400">
               Connect Shopify, Stripe, or Adyen and get ranked rule changes - without replacing the tools you already run.
             </p>
-            <Link
+            <TrackedLink
+              event="demo_cta_clicked"
               href="/book-a-demo/"
               className="inline-flex items-center justify-center rounded-full px-12 py-4.5 text-[1.125rem] font-bold text-white hover:scale-[1.03]"
               style={{
@@ -231,7 +233,7 @@ export default async function AlternativePage({
               }}
             >
               Book a Demo
-            </Link>
+            </TrackedLink>
           </div>
         </section>
       </main>

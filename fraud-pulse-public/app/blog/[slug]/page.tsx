@@ -4,6 +4,7 @@ import Footer from '../../components/Footer';
 import JsonLd from '../../components/JsonLd';
 import Link from 'next/link';
 import { Reveal } from '../../components/Reveal';
+import { TrackedLink } from '../../components/TrackedCta';
 import { getPost, posts } from '../../lib/blog';
 import { faqPageJsonLd } from '../../lib/geo';
 import { SITE_URL } from '../../lib/site';
@@ -284,7 +285,8 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               <p className="text-[1.0625rem] leading-[1.7] max-w-[480px] mx-auto mb-10 text-gray-400">
                 Book a live walkthrough and see how FraudPulse turns your payment data into actionable fraud intelligence.
               </p>
-              <Link
+              <TrackedLink
+                event="demo_cta_clicked"
                 href="/book-a-demo/"
                 className="inline-flex items-center gap-2 rounded-full px-12 py-4.5 text-[1.125rem] font-bold text-white hover:scale-[1.03]"
                 style={{
@@ -294,7 +296,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                 }}
               >
                 Book a Demo
-              </Link>
+              </TrackedLink>
             </div>
           </Reveal>
         </section>

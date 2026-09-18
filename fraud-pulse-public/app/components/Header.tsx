@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
+import { TrackedAnchor } from './TrackedCta';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -62,14 +63,17 @@ export default function Header() {
               onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'transparent'; e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#111827'; }}>
               Sign In
             </a>
-            <a href="https://app.fraud-pulse.com"
+            <TrackedAnchor
+              event="signup_cta_clicked"
+              href="https://app.fraud-pulse.com"
               className="px-5 py-2 text-base font-bold rounded-full text-white transition-all hover:scale-[1.03]"
               style={{
                 background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',
                 transition: 'transform 0.2s cubic-bezier(0.22,1,0.36,1)',
-              }}>
+              }}
+            >
               Sign Up
-            </a>
+            </TrackedAnchor>
           </div>
 
           {/* Mobile button */}
@@ -112,12 +116,15 @@ export default function Header() {
                 Sign In
               </a>
               <div className="px-4 py-3">
-                <a href="https://app.fraud-pulse.com"
+                <TrackedAnchor
+                  event="signup_cta_clicked"
+                  href="https://app.fraud-pulse.com"
                   className="flex w-full items-center justify-center rounded-full px-5 py-2.5 text-sm font-bold text-white transition-all"
                   style={{ background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)' }}
-                  onClick={() => setMobileMenuOpen(false)}>
+                  onClick={() => setMobileMenuOpen(false)}
+                >
                   Sign Up
-                </a>
+                </TrackedAnchor>
               </div>
             </div>
           </div>

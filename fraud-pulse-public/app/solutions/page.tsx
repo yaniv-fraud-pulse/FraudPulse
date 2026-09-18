@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Link from 'next/link';
 import { Reveal } from '../components/Reveal';
+import { TrackedLink } from '../components/TrackedCta';
 import GeoStatStrip, { PageUpdated } from '../components/GeoBits';
 import ToolComparisonTable from '../components/ToolComparisonTable';
 import StackCategoryTable from '../components/StackCategoryTable';
@@ -303,11 +304,11 @@ export default function Solutions() {
               <p className="text-[1.25rem] leading-[1.7] max-w-[680px] mx-auto mb-10 text-gray-400">
                 Book a walkthrough and see the exact rules and actions FraudPulse would recommend - reduce chargebacks and friendly fraud without replacing your fraud prevention tools.
               </p>
-              <Link href="/book-a-demo/"
+              <TrackedLink event="demo_cta_clicked" href="/book-a-demo/"
                 className="inline-flex items-center gap-2 rounded-full px-12 py-4.5 text-[1.125rem] font-bold text-white transition-all hover:scale-[1.03]"
                 style={{ background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)', transition: 'transform 0.2s cubic-bezier(0.22,1,0.36,1)' }}>
                 Book a Demo
-              </Link>
+              </TrackedLink>
             </div>
           </Reveal>
         </section>

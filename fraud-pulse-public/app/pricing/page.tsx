@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { Reveal } from '../components/Reveal';
 import { captureEvent } from '../components/PostHogProvider';
+import { TrackedLink } from '../components/TrackedCta';
 import FaqAccordion from '../components/FaqAccordion';
 import JsonLd from '../components/JsonLd';
 import { PageUpdated } from '../components/GeoBits';
@@ -286,7 +287,8 @@ export default function Pricing() {
                   </div>
 
                   {/* CTA */}
-                  <Link href={plan.cta === 'Contact Sales' ? '/contact/' : '/book-a-demo/'}
+                  {plan.cta === 'Contact Sales' ? (
+                  <Link href="/contact/"
                     className={`block w-full text-center rounded-[10px] py-3 text-[0.9375rem] font-bold transition-all ${
                       plan.popular
                         ? 'text-white shadow-[0_4px_20px_rgba(91,168,180,0.3)] [background:linear-gradient(135deg,#5ba8b4_0%,#4a96a3_100%)]'
@@ -294,6 +296,16 @@ export default function Pricing() {
                     }`}>
                     {plan.cta}
                   </Link>
+                  ) : (
+                  <TrackedLink event="demo_cta_clicked" href="/book-a-demo/"
+                    className={`block w-full text-center rounded-[10px] py-3 text-[0.9375rem] font-bold transition-all ${
+                      plan.popular
+                        ? 'text-white shadow-[0_4px_20px_rgba(91,168,180,0.3)] [background:linear-gradient(135deg,#5ba8b4_0%,#4a96a3_100%)]'
+                        : 'border border-[#d1d5db] text-gray-500 bg-transparent group-hover:border-white/30 group-hover:text-white group-hover:bg-white/10'
+                    }`}>
+                    {plan.cta}
+                  </TrackedLink>
+                  )}
                 </div>
                 </Reveal>
               );
@@ -370,11 +382,11 @@ export default function Pricing() {
               <p className="text-[1.25rem] leading-[1.7] max-w-[680px] mx-auto mb-10 text-gray-500">
                 14 days free, no credit card required. See FraudPulse working on your own data before you commit.
               </p>
-              <Link href="/book-a-demo/"
+              <TrackedLink event="demo_cta_clicked" href="/book-a-demo/"
                 className="inline-flex items-center gap-2 rounded-full px-12 py-4.5 text-[1.125rem] font-bold text-white transition-all hover:scale-[1.03]"
                 style={{ background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)', transition: 'transform 0.2s cubic-bezier(0.22,1,0.36,1)' }}>
                 Book a Demo
-              </Link>
+              </TrackedLink>
             </div>
             </Reveal>
           </div>

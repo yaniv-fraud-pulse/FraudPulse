@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Link from 'next/link';
 import { Reveal } from '../components/Reveal';
+import { TrackedLink } from '../components/TrackedCta';
 import { posts } from '../lib/blog';
 import { PageUpdated } from '../components/GeoBits';
 import { PAGE_LAST_UPDATED } from '../lib/geo';
@@ -163,7 +164,8 @@ export default function Blog() {
               <p className="text-[1.0625rem] leading-[1.7] max-w-[480px] mx-auto mb-10 text-gray-400">
                 Book a live walkthrough and see how FraudPulse turns your payment data into ready-to-apply fraud rules.
               </p>
-              <Link
+              <TrackedLink
+                event="demo_cta_clicked"
                 href="/book-a-demo/"
                 className="inline-flex items-center gap-2 rounded-full px-12 py-4.5 text-[1.125rem] font-bold text-white hover:scale-[1.03]"
                 style={{
@@ -173,7 +175,7 @@ export default function Blog() {
                 }}
               >
                 Book a Demo
-              </Link>
+              </TrackedLink>
             </div>
           </Reveal>
         </section>

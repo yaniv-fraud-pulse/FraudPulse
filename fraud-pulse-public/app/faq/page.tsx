@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Link from 'next/link';
 import { Reveal } from '../components/Reveal';
+import { TrackedLink } from '../components/TrackedCta';
 import FaqAccordion from '../components/FaqAccordion';
 import JsonLd from '../components/JsonLd';
 import { PageUpdated } from '../components/GeoBits';
@@ -56,9 +57,9 @@ export default function FaqPage() {
             <Reveal animation="anim-fadeUp" delay={75}>
               <p className="mt-12 text-center text-[1rem] text-gray-500">
                 Still figuring out which rules to change?{' '}
-                <Link href="/book-a-demo/" className="font-semibold text-[#4a96a3] hover:underline">
+                <TrackedLink event="demo_cta_clicked" href="/book-a-demo/" className="font-semibold text-[#4a96a3] hover:underline">
                   Book a demo
-                </Link>{' '}
+                </TrackedLink>{' '}
                 or read{' '}
                 <Link href="/how-it-works/" className="font-semibold text-[#4a96a3] hover:underline">
                   how it works

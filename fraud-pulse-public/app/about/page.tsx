@@ -2,9 +2,9 @@
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import Link from 'next/link';
 import Image from 'next/image';
 import { Reveal } from '../components/Reveal';
+import { TrackedLink } from '../components/TrackedCta';
 
 const values = [
   {
@@ -292,11 +292,11 @@ export default function About() {
               and actionable opportunities inside your own payment data.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Link href="/book-a-demo/"
+              <TrackedLink event="demo_cta_clicked" href="/book-a-demo/"
                 className="inline-flex items-center gap-2 rounded-full px-12 py-4.5 text-[1.125rem] font-bold text-white transition-all hover:scale-[1.03]"
                 style={{ background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)', transition: 'transform 0.2s cubic-bezier(0.22,1,0.36,1)' }}>
                 Book a Demo
-              </Link>
+              </TrackedLink>
               <a
                 href="https://www.linkedin.com/company/fraudpulse-fraud-analytics"
                 target="_blank" rel="noopener noreferrer"
