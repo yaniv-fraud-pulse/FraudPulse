@@ -8,6 +8,7 @@ import { TrackedLink } from '../../components/TrackedCta';
 import { getPost, posts } from '../../lib/blog';
 import { faqPageJsonLd } from '../../lib/geo';
 import { SITE_URL } from '../../lib/site';
+import { SOCIAL_IMAGE } from '../../lib/seo';
 
 export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));
@@ -40,11 +41,13 @@ export async function generateMetadata({
       publishedTime: new Date(post.date).toISOString(),
       modifiedTime: new Date(post.updatedAt ?? post.date).toISOString(),
       authors: [post.author],
+      images: [SOCIAL_IMAGE],
     },
     twitter: {
-      card: 'summary',
+      card: 'summary_large_image',
       title: post.title,
       description: post.excerpt,
+      images: [SOCIAL_IMAGE.url],
     },
   };
 }

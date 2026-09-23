@@ -5,6 +5,7 @@ import "./globals.css";
 import JsonLd from "./components/JsonLd";
 import PostHogProvider from "./components/PostHogProvider";
 import { SITE_URL } from "./lib/site";
+import { SOCIAL_IMAGE } from "./lib/seo";
 
 const GA_MEASUREMENT_ID = "G-GL245KC3KN";
 
@@ -18,7 +19,7 @@ const organizationSchema = {
   "@type": "Organization",
   name: "FraudPulse",
   url: SITE_URL,
-  logo: `${SITE_URL}/logo-light.svg`,
+  logo: `${SITE_URL}/icon-512.png`,
   description:
     "FraudPulse connects to your transaction data and recommends rules and actions that reduce chargebacks and friendly fraud.",
   sameAs: [],
@@ -38,16 +39,21 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: "FraudPulse",
     type: "website",
+    images: [SOCIAL_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
     title: "FraudPulse - Reduce Chargebacks & Friendly Fraud with Smarter Rules",
     description: "We analyze your transaction data and deliver concrete actions and rules to reduce chargebacks and false positive.",
+    images: [SOCIAL_IMAGE.url],
   },
   icons: {
-    icon: "/logo-light.svg",
-    shortcut: "/logo-light.svg",
-    apple: "/logo-light.svg",
+    icon: [
+      { url: "/icon-512.png", type: "image/png", sizes: "512x512" },
+      { url: "/logo-light.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/icon-512.png",
+    apple: "/apple-touch-icon.png",
   },
 };
 

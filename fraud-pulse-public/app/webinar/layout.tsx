@@ -1,26 +1,12 @@
 import type { Metadata } from 'next';
-import { SITE_URL } from '../lib/site';
+import { pageMetadata } from '../lib/seo';
 import { WEBINAR } from '../lib/webinar';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: `${WEBINAR.title} | FraudPulse`,
   description: WEBINAR.subtitle,
-  alternates: {
-    canonical: '/webinar/',
-  },
-  openGraph: {
-    title: WEBINAR.title,
-    description: WEBINAR.subtitle,
-    url: `${SITE_URL}/webinar/`,
-    siteName: 'FraudPulse',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: WEBINAR.title,
-    description: WEBINAR.subtitle,
-  },
-};
+  path: '/webinar/',
+});
 
 export default function WebinarLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;

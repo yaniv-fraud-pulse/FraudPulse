@@ -2,6 +2,12 @@
 User-agent: *
 Allow: /
 
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
 # AI crawlers - explicitly allowed for LLM / GEO visibility
 User-agent: GPTBot
 Allow: /
