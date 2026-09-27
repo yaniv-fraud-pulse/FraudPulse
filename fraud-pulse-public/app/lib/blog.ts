@@ -22,6 +22,315 @@ export type BlogPost = {
 
 export const posts: BlogPost[] = [
   {
+    slug: 'declining-more-transactions-loses-good-customers',
+    title: 'Declining More Transactions Reduces Fraud - and Loses Good Customers',
+    excerpt:
+      'The easiest way to reduce fraud is to decline more. It is also one of the easiest ways to lose good customers. Why VPN, new customers, and other signals are context - not automatic decline reasons.',
+    category: 'Education',
+    date: 'September 20, 2026',
+    readTime: '5 min read',
+    author: 'Idan Hayon',
+    authorRole: 'Co-Founder & CEO',
+    content: `
+<p class="ai-answer">One of the easiest ways to reduce fraud is to decline more transactions. It is also one of the easiest ways to lose good customers. Tight thresholds let more fraud through when they are too loose, and catch legitimate buyers when they are too aggressive. The second outcome is harder to see. Individual signals - VPN, a new high-value customer, mismatched addresses - are context, not a decision. Precision comes from what the signals mean together, plus your risk appetite and the commercial impact of each decline.</p>
+
+<p>One of the easiest ways to reduce fraud is to decline more transactions. It's also one of the easiest ways to lose good customers.</p>
+
+<p>This is the trade-off at the centre of almost every fraud system. Set your risk thresholds too loosely and more fraud gets through. Set them too aggressively and legitimate customers get caught alongside the fraudsters.</p>
+
+<p>The problem is that the second outcome is much harder to see. According to Ravelin Technology, false positives cost online merchants an estimated $443 billion every year, while more than 40% of customers will abandon their cart if their payment method is declined. 25% of customers who experience a false decline will go to a competitor.</p>
+
+<h2>A fraud signal is not a decision</h2>
+
+<p>That's why merchants need to be very careful about what they interpret as a fraud signal. Take VPN usage. A transaction coming through a VPN might look suspicious because fraudsters use them to disguise their location. But legitimate customers use VPNs every day too. If VPN equals decline, you might reduce some fraud. You'll also inevitably block good customers.</p>
+
+<p>The same applies to countless signals:</p>
+
+<ul>
+  <li>A new customer making a high-value purchase</li>
+  <li>A different billing and delivery address</li>
+  <li>Multiple cards being used by the same customer</li>
+  <li>An unusual location or device</li>
+  <li>A sudden change in purchasing behaviour</li>
+</ul>
+
+<p>None of these signals independently tells you that someone is a fraudster. They're context.</p>
+
+<h2>Ask what the signals mean together</h2>
+
+<p>This is where an overreliance on rigid acts becomes dangerous. The better question is: what do all the signals together tell me about this transaction?</p>
+
+<p>A VPN combined with a long-standing account, familiar device, and normal purchasing behaviour tells a very different story from a VPN combined with multiple new accounts, several payment cards, and unusual transaction velocity.</p>
+
+<p>Fraud prevention is ultimately a precision problem. You want to catch as much fraud as possible without creating so broad a definition of suspicious that good customers continually get caught inside it.</p>
+
+<p>That requires understanding your risk appetite, regularly reassessing thresholds and, most importantly, understanding the commercial impact of the decisions your fraud system makes. A lower fraud rate isn't automatically evidence of a better fraud strategy. Sometimes you've simply become better at declining customers.</p>
+
+<p>Related: <a href="/blog/biggest-mistake-in-fraud-analysis-trusting-individual-indicators/">trusting individual indicators</a>, <a href="/blog/how-to-reduce-false-declines-in-stripe/">how to reduce false declines in Stripe</a>, <a href="/how-it-works/">how it works</a>, and the <a href="/faq/">FAQ</a>.</p>
+
+<p>If you want ranked rule changes from your full transaction context - not one signal - <a href="/book-a-demo/">book a demo</a>.</p>
+
+<p><em>Originally shared on <a href="https://www.linkedin.com/feed/update/urn:li:activity:7505860786943053825/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</em></p>
+    `.trim(),
+    faqs: [
+      {
+        q: 'Why does declining more transactions lose good customers?',
+        a: 'Aggressive thresholds catch fraudsters and legitimate buyers together. False positives are harder to see than chargebacks: Ravelin estimates they cost merchants about $443 billion a year, more than 40% of customers abandon after a declined payment, and 25% of those who hit a false decline go to a competitor. A lower fraud rate can just mean you got better at saying no.',
+      },
+      {
+        q: 'Is VPN usage a reason to decline a payment?',
+        a: 'Not on its own. Fraudsters use VPNs to hide location, but legitimate customers use them every day for work, travel, and privacy. VPN plus a long-standing account, familiar device, and normal buying behaviour is a different story from VPN plus new accounts, multiple cards, and unusual velocity. Treat it as context, not an automatic block.',
+      },
+      {
+        q: 'What should merchants measure besides fraud rate?',
+        a: 'Risk appetite, how often thresholds are reassessed, and the commercial impact of declines - including false positives, cart abandonment, and customers who switch after a decline. Precision means catching as much fraud as possible without defining "suspicious" so broadly that good customers keep getting caught inside it.',
+      },
+    ],
+  },
+  {
+    slug: 'agentic-commerce-and-the-end-of-checkout-pages',
+    title: 'If Checkout Pages Go Away, Fraud Systems Have to Change What They Ask',
+    excerpt:
+      "Stripe's president says even a less ambitious version of agentic commerce could end checkout pages as we know them. Legitimate machine behaviour may look like today's bots - and many checkout signals may disappear.",
+    category: 'Education',
+    date: 'September 19, 2026',
+    readTime: '5 min read',
+    author: 'Idan Hayon',
+    authorRole: 'Co-Founder & CEO',
+    content: `
+<p class="ai-answer">Stripe's president, William Gaybrick, has said that even a less ambitious version of agentic commerce could mean the end of checkout pages as we know them. If an AI agent completes the purchase, behaviour that once looked automated - and therefore suspicious - may be a legitimate order. Fraud systems will still need to know whether the payment method is legitimate, valid, and authorised by the cardholder. The harder question becomes whether the machine acting for the customer can be trusted, and which signals survive if the checkout page disappears.</p>
+
+<p>Stripe's president says checkout pages will go away as AI commerce expands.</p>
+
+<p>William Gaybrick said that even a less ambitious version of agentic commerce could mean the end of checkout pages as we know them. This might be one of the biggest changes coming to ecommerce.</p>
+
+<p>Instead of a customer finding a product, moving through checkout, and manually entering their information, an AI agent could increasingly complete that process on their behalf.</p>
+
+<h2>Legitimate purchases may look automated</h2>
+
+<p>This creates a very interesting problem. For years, fraud systems have been built around determining whether a transaction looks like legitimate human behaviour. Typing patterns, mouse movements, session flows, IP addresses, and other behavioural signals can all contribute to understanding whether the person behind a transaction looks legitimate.</p>
+
+<p>What happens when the legitimate customer isn't the one navigating the purchase? The behaviour that might historically have looked automated - and therefore suspicious - could represent a completely legitimate purchase. That means one of the questions fraud systems ask may need to be: is this legitimate machine behaviour?</p>
+
+<h2>Checkout data may disappear with the checkout page</h2>
+
+<p>There's another challenge here too. If the checkout page disappears, the data we currently collect during checkout could disappear with it. Signals that have historically been useful for risk evaluation may no longer exist in the same form.</p>
+
+<p>Fraud systems will need to understand:</p>
+
+<ul>
+  <li>Which existing signals remain useful</li>
+  <li>Which behavioural signals lose relevance</li>
+  <li>What new signals can establish whether an agent is legitimate</li>
+  <li>How to distinguish authorised agents from malicious automation</li>
+  <li>How to compensate for data that disappears with the traditional checkout journey</li>
+</ul>
+
+<p>One fundamental question doesn't change. Whether a human completes the checkout or an AI agent does it for them, we still need to understand whether the payment method is legitimate, valid, and authorised by the cardholder.</p>
+
+<p>The future of fraud detection may be less about asking whether there's a human behind the transaction, and more about whether the machine acting for them can be trusted.</p>
+
+<p>Related: <a href="/blog/fraud-trends-2026-deepfakes-ai-automation/">fraud trends 2026</a>, <a href="/how-it-works/">how it works</a>, <a href="/pricing/">pricing</a>, and the <a href="/faq/">FAQ</a>.</p>
+
+<p>If you want ranked rule changes from the transaction and chargeback data you already have - <a href="/book-a-demo/">book a demo</a>.</p>
+
+<p><em>Originally shared on <a href="https://www.linkedin.com/feed/update/urn:li:activity:7505136024554115072/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</em></p>
+    `.trim(),
+    faqs: [
+      {
+        q: 'What is agentic commerce and why would checkout pages go away?',
+        a: 'Agentic commerce is when an AI agent finds a product and completes the purchase on the customer\'s behalf instead of a person walking through a checkout form. Stripe president William Gaybrick has said even a less ambitious version of that shift could end checkout pages as we know them - which also changes the data fraud systems collect today.',
+      },
+      {
+        q: 'Why do agent purchases break today\'s fraud signals?',
+        a: 'Most stacks assume a human at checkout: typing, mouse movement, session flow, and similar behaviour. A legitimate agent can look like the automation those systems were built to block. If the checkout page itself disappears, many of those signals disappear too, so teams need to ask which signals still work and how to tell an authorised agent from malicious bots.',
+      },
+      {
+        q: 'What fraud question still matters if an AI agent pays?',
+        a: 'Whether the payment method is legitimate, valid, and authorised by the cardholder. That does not change if a human or an agent completes checkout. What changes is trusting the machine that acts for the customer, and compensating for checkout data that may no longer exist in the same form.',
+      },
+    ],
+  },
+  {
+    slug: 'every-decline-is-not-a-win',
+    title: 'One of the Biggest Mistakes in Fraud Prevention Is Assuming Every Decline Is a Win',
+    excerpt:
+      'Fraud teams measure what they stop. Much less time is spent measuring legitimate revenue stopped alongside it. Aite-Novarica puts false declines at $443 billion versus about $48 billion in card fraud losses.',
+    category: 'Education',
+    date: 'September 13, 2026',
+    readTime: '5 min read',
+    author: 'Idan Hayon',
+    authorRole: 'Co-Founder & CEO',
+    content: `
+<p class="ai-answer">One of the biggest mistakes in fraud prevention is treating every decline as a win. Teams measure fraud they stop. They spend much less time measuring legitimate revenue they stop with it. Aite-Novarica estimates false declines cost merchants $443 billion a year versus about $48 billion in actual card fraud losses, and some estimates say 60-65% of declined transactions may be legitimate customers. Fraud losses are visible. False declines are quiet - and they take the order, the acquisition cost, and often the customer.</p>
+
+<p>One of the biggest mistakes in fraud prevention is assuming that every decline is a win.</p>
+
+<p>Most fraud teams spend a lot of time measuring how much fraud they stop. Much less time is spent measuring how much legitimate revenue gets stopped alongside it.</p>
+
+<p>Research by Aite-Novarica estimates that false declines cost merchants $443 billion globally every year, compared with around $48 billion in actual credit card fraud losses. Another estimate suggests 60-65% of declined transactions may come from legitimate customers.</p>
+
+<h2>Fraud losses are visible. False declines are quiet.</h2>
+
+<p>The reason this problem gets overlooked is fraud losses are visible. Chargebacks appear in reports, disputes are tracked, and fraud rates sit on dashboards. False declines are quieter.</p>
+
+<p>You don't necessarily see the repeat customer whose $250 order was declined because they shipped it to their office. You don't see the first-time customer who placed an unusually large order and triggered an act. You don't see the customer whose first card failed, tried another, got flagged for velocity, and decided to shop somewhere else.</p>
+
+<p>They just disappear, and the cost isn't limited to the transaction itself. You've potentially lost the revenue, wasted the customer acquisition cost, damaged the customer's lifetime value, and sent someone who was ready to buy directly to a competitor.</p>
+
+<h2>Lower fraud can be the wrong incentive</h2>
+
+<p>This is why optimising purely for lower fraud can create the wrong incentives. A fraud team can tighten thresholds, introduce more acts, and bring the fraud rate down. On paper, the system looks better. Commercially, it might be performing worse.</p>
+
+<p>The difficult part is that improving authorization rates requires understanding:</p>
+
+<ul>
+  <li>Which declines are preventing fraud?</li>
+  <li>Which signals are predictive versus simply correlated with risk?</li>
+  <li>Which customers deserve additional verification rather than an automatic decline?</li>
+  <li>Where can thresholds differ by customer, transaction, or segment?</li>
+  <li>How much additional fraud could you accept in exchange for more legitimate revenue?</li>
+</ul>
+
+<p>Good fraud systems maximise legitimate approvals while keeping fraud within an acceptable level. Sometimes the transaction you decline is a good customer you just lost.</p>
+
+<p>Related: <a href="/blog/hidden-cost-of-false-positives-in-fraud-systems/">the hidden cost of false positives</a>, <a href="/blog/how-to-reduce-false-declines-in-stripe/">how to reduce false declines in Stripe</a>, <a href="/how-it-works/">how it works</a>, and the <a href="/faq/">FAQ</a>.</p>
+
+<p>If you want to see which rules may be blocking good customers in your Stripe or Shopify data - <a href="/book-a-demo/">book a demo</a>.</p>
+
+<p><em>Originally shared on <a href="https://www.linkedin.com/feed/update/urn:li:activity:7503686238386823168/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</em></p>
+    `.trim(),
+    faqs: [
+      {
+        q: 'Why is treating every fraud decline as a win a mistake?',
+        a: 'A decline only helps if it stopped fraud. Many declines stop legitimate customers instead. Aite-Novarica estimates false declines cost about $443 billion a year versus around $48 billion in card fraud losses, and some estimates say 60-65% of declined transactions may be good customers. Tightening for a lower fraud rate can look better on a dashboard and worse in revenue.',
+      },
+      {
+        q: 'Why are false declines harder to see than fraud losses?',
+        a: 'Chargebacks, disputes, and fraud rates show up in reports. False declines do not: the office-shipped order, the large first purchase, or the customer who tried a second card and got velocity-flagged. They disappear, taking the order, the acquisition cost, lifetime value, and often a customer who then buys from a competitor.',
+      },
+      {
+        q: 'What should teams ask before tightening fraud thresholds?',
+        a: 'Which declines actually prevent fraud, which signals predict risk versus merely correlate with it, who should get extra verification instead of an automatic decline, where thresholds should differ by customer or segment, and how much extra fraud you would accept for more legitimate approvals. Good systems maximise good approvals while keeping fraud acceptable.',
+      },
+    ],
+  },
+  {
+    slug: 'right-amount-of-friction-in-fraud-prevention',
+    title: 'Fraud Prevention Is About the Right Amount of Friction in the Right Place',
+    excerpt:
+      'The goal is not minimum friction or maximum security. It is matching checks to context. A first-time buyer and a 50th-order customer should not get the same treatment.',
+    category: 'Education',
+    date: 'September 12, 2026',
+    readTime: '4 min read',
+    author: 'Idan Hayon',
+    authorRole: 'Co-Founder & CEO',
+    content: `
+<p class="ai-answer">The goal of fraud prevention is not minimum friction, and it is not maximum security. It is putting the right amount of friction in the right place. A first-time buyer and a loyal customer on their 50th order do not carry the same context. Adyen has reported that 50% of businesses are seeing more false declines, while static controls can block up to 10% of legitimate customers. Extra verification on a trusted, normal-looking order is often revenue walking out the door.</p>
+
+<p>The goal of fraud prevention isn't minimum friction, and it isn't maximum security. It's putting the right amount of friction in the right place.</p>
+
+<p>Most systems treat every transaction the same. A first-time buyer goes through the same checks as a loyal customer placing their 50th order. Those two transactions don't carry the same context.</p>
+
+<p>The repeat customer has a history. You know how they normally pay, what they buy, where they shop from, and how their account typically behaves. Adding another verification step might reduce risk, but it also creates friction, and that cost adds up.</p>
+
+<h2>Static controls block good customers</h2>
+
+<p>Adyen's latest fraud report found that 50% of businesses are seeing an increase in false declines, while static controls can block up to 10% of legitimate customers. That's revenue walking out the door in an attempt to protect revenue.</p>
+
+<p>The answer isn't removing controls but applying those controls with more precision. A transaction with multiple risk signals might justify extra verification. A trusted customer behaving exactly as they usually do probably doesn't need the same treatment.</p>
+
+<h2>Trade-offs get cheaper with context</h2>
+
+<p>Fraud prevention will always involve trade-offs between risk, friction, and growth. The better you understand the context around each transaction, the less often legitimate customers have to pay the price for that trade-off.</p>
+
+<p>Related: <a href="/blog/balancing-fraud-prevention-with-customer-experience/">balancing fraud prevention with customer experience</a>, <a href="/blog/declining-more-transactions-loses-good-customers/">declining more transactions loses good customers</a>, <a href="/how-it-works/">how it works</a>, and the <a href="/faq/">FAQ</a>.</p>
+
+<p>If you want ranked rule changes that use your transaction context - not the same check for every order - <a href="/book-a-demo/">book a demo</a>.</p>
+
+<p><em>Originally shared on <a href="https://www.linkedin.com/feed/update/urn:li:activity:7502599185007980545/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</em></p>
+    `.trim(),
+    faqs: [
+      {
+        q: 'Should every checkout get the same fraud checks?',
+        a: 'No. A first-time buyer and a loyal customer on their 50th order do not carry the same context. Repeat buyers have payment, product, and behaviour history. Adding the same extra verification to both can cut some risk, but it also adds friction where you already have reason to trust the customer.',
+      },
+      {
+        q: 'What do static fraud controls cost merchants?',
+        a: 'Adyen has reported that 50% of businesses are seeing more false declines, and static controls can block up to 10% of legitimate customers. That is revenue leaving in an attempt to protect revenue. The fix is not removing controls. It is applying them with more precision.',
+      },
+      {
+        q: 'When is extra checkout friction justified?',
+        a: 'When multiple risk signals show up on a transaction that lacks a trusted history. A known customer behaving exactly as they usually do probably does not need the same step. Fraud prevention will always trade risk, friction, and growth. Better context means good customers pay that price less often.',
+      },
+    ],
+  },
+  {
+    slug: 'mastercard-72-hour-scam-merchant-monitoring',
+    title: 'Mastercard\'s 72-Hour Scam Clock Changes How Fast Merchants Must Explain Unusual Patterns',
+    excerpt:
+      'Mastercard now expects suspected scam merchants to be investigated on a 72-hour clock. Visa tightened VAMP earlier. Together they shrink both the margin for error and the time you have to explain it.',
+    category: 'News',
+    date: 'August 25, 2026',
+    readTime: '5 min read',
+    author: 'Idan Hayon',
+    authorRole: 'Co-Founder & CEO',
+    content: `
+<p class="ai-answer">Mastercard introduced a 72-hour clock for investigating suspected scam merchants. If scam activity is confirmed, the merchant must be stopped from accepting Mastercard transactions in three days. The interesting implication is for legitimate businesses: a sharp drop in authorization rates, refund and chargeback spikes, or issuer scam reports can trigger scrutiny. Promotions, new channels, subscription issues, and confusing billing descriptors can look the same. Visa's VAMP changes reduced the margin for error. Mastercard's changes reduce the time available to understand it.</p>
+
+<p>One of the biggest changes in fraud monitoring this year is how quickly payment providers will be expected to react.</p>
+
+<p>Mastercard introduced a 72-hour clock for investigating suspected scam merchants. If scam activity is confirmed, the merchant must be stopped from accepting Mastercard transactions in three days.</p>
+
+<p>At first glance, this looks like another compliance change aimed at obvious scam merchants. The more interesting implication is what it means for legitimate online businesses.</p>
+
+<h2>Legitimate patterns can look like warning signals</h2>
+
+<p>A sharp drop in authorization approval rates can trigger scrutiny. For newer merchants, more than 5% of purchases resulting in refunds and chargebacks combined over a rolling 30-day period can become a warning signal. Issuer reports of scams or manipulation can also trigger investigation.</p>
+
+<p>The problem is that legitimate businesses can generate unusual patterns too. A successful promotion suddenly changes transaction volumes. A new acquisition channel brings a different customer profile. A subscription issue creates a spike in refunds. A confusing billing descriptor generates disputes. Approval rates suddenly fall.</p>
+
+<p>None of these necessarily mean the merchant is fraudulent. But under a faster monitoring environment, merchants have much less time to understand what's happening and explain it.</p>
+
+<h2>Networks are looking across signals together</h2>
+
+<p>Historically, many businesses have treated these metrics separately. Fraud sits with the fraud team, refunds are a customer service problem, authorization rates are a payments metric, and customer complaints are handled by support. Increasingly, payment networks are looking across those signals together.</p>
+
+<p>That's why the biggest takeaway from Mastercard's changes is visibility. Merchants need to understand:</p>
+
+<ul>
+  <li>What is causing sudden changes in authorization rates?</li>
+  <li>Where refunds and chargebacks are originating?</li>
+  <li>Whether customers recognise their billing descriptors?</li>
+  <li>Which acquisition channels are creating higher-risk behaviour?</li>
+  <li>Whether unusual patterns are fraud, operational issues, or normal changes in customer behaviour?</li>
+  <li>What evidence they have available if their processor starts asking questions?</li>
+</ul>
+
+<p>Visa's VAMP changes earlier this year reduced the margin for error. Mastercard's latest changes reduce the time available to understand the error. Fraud management is moving away from reviewing what happened last month. The merchants best prepared are the ones who can understand what's happening right now and explain why.</p>
+
+<p>Related: <a href="/blog/visa-vamp-threshold-reduction-2026/">Visa's VAMP threshold reduction</a>, <a href="/blog/stripe-dispute-rate-too-high/">what to do if Stripe warns your dispute rate is too high</a>, <a href="/how-it-works/">how it works</a>, and the <a href="/faq/">FAQ</a>.</p>
+
+<p>If you want chargebacks classified by type so you can explain the mix - not only the rate - <a href="/book-a-demo/">book a demo</a>.</p>
+
+<p><em>Originally shared on <a href="https://www.linkedin.com/feed/update/urn:li:activity:7493339543472111616/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</em></p>
+    `.trim(),
+    faqs: [
+      {
+        q: 'What is Mastercard\'s 72-hour scam merchant rule?',
+        a: 'Mastercard introduced a 72-hour clock for investigating suspected scam merchants. If scam activity is confirmed, the merchant must be stopped from accepting Mastercard transactions in three days. The rule is aimed at scam merchants, but legitimate businesses can also trigger faster scrutiny when authorization, refund, or chargeback patterns look unusual.',
+      },
+      {
+        q: 'Can a legitimate promotion trigger payment-network scrutiny?',
+        a: 'Yes. A successful promotion, a new acquisition channel, a subscription refund spike, or a confusing billing descriptor can change volumes, approval rates, and disputes without the merchant being a scam. Under a 72-hour investigation clock, you have less time to show that the pattern is operational or commercial - not fraud.',
+      },
+      {
+        q: 'How do Mastercard\'s changes relate to Visa VAMP?',
+        a: 'Visa\'s VAMP threshold cut reduced the margin for error. Mastercard\'s 72-hour clock reduces the time available to understand an unusual pattern. Together they push merchants to watch authorization, refunds, chargebacks, descriptors, and channels as one picture - and to have evidence ready if the processor asks questions this week, not last month.',
+      },
+    ],
+  },
+  {
     slug: 'device-fingerprinting-is-not-enough',
     title: 'A Common Mistake in Fraud Prevention: Relying Too Heavily on Device Fingerprinting',
     excerpt:

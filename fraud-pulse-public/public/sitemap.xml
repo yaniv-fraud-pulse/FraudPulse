@@ -62,9 +62,39 @@
   </url>
   <url>
     <loc>https://www.fraud-pulse.com/blog/</loc>
-    <lastmod>2026-08-31</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.fraud-pulse.com/blog/declining-more-transactions-loses-good-customers/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.fraud-pulse.com/blog/agentic-commerce-and-the-end-of-checkout-pages/</loc>
+    <lastmod>2026-09-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.fraud-pulse.com/blog/every-decline-is-not-a-win/</loc>
+    <lastmod>2026-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.fraud-pulse.com/blog/right-amount-of-friction-in-fraud-prevention/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.fraud-pulse.com/blog/mastercard-72-hour-scam-merchant-monitoring/</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
   </url>
   <url>
     <loc>https://www.fraud-pulse.com/blog/device-fingerprinting-is-not-enough/</loc>
@@ -315,7 +345,7 @@
   </url>
   <url>
     <loc>https://www.fraud-pulse.com/llms.txt</loc>
-    <lastmod>2026-08-28</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

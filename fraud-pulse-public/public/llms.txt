@@ -44,8 +44,13 @@
 - Do I need to replace my fraud prevention tools? No - FraudPulse works alongside them; no migration required.
 - Full FAQ: https://www.fraud-pulse.com/faq/
 
-## All blog guides (32)
+## All blog guides (37)
 
+- Declining More Transactions Reduces Fraud - and Loses Good Customers: https://www.fraud-pulse.com/blog/declining-more-transactions-loses-good-customers/
+- If Checkout Pages Go Away, Fraud Systems Have to Change What They Ask: https://www.fraud-pulse.com/blog/agentic-commerce-and-the-end-of-checkout-pages/
+- One of the Biggest Mistakes in Fraud Prevention Is Assuming Every Decline Is a Win: https://www.fraud-pulse.com/blog/every-decline-is-not-a-win/
+- Fraud Prevention Is About the Right Amount of Friction in the Right Place: https://www.fraud-pulse.com/blog/right-amount-of-friction-in-fraud-prevention/
+- Mastercard's 72-Hour Scam Clock Changes How Fast Merchants Must Explain Unusual Patterns: https://www.fraud-pulse.com/blog/mastercard-72-hour-scam-merchant-monitoring/
 - A Common Mistake in Fraud Prevention: Relying Too Heavily on Device Fingerprinting: https://www.fraud-pulse.com/blog/device-fingerprinting-is-not-enough/
 - The Easiest Fraud Act to Build Is Often the Easiest One for Fraudsters to Bypass: https://www.fraud-pulse.com/blog/dont-confuse-the-fraud-pattern-with-the-problem/
 - Fraud Prevention Is Not a One-Time Setup: https://www.fraud-pulse.com/blog/fraud-prevention-is-not-a-one-time-setup/
