@@ -40,7 +40,7 @@ export default function Footer() {
               {[
                 { href: '/alternatives/manual-fraud-analyst/', label: 'Vs. In-House Analyst' },
                 { href: '/alternatives/smb-fraud-tools/', label: 'Vs. Signifyd & NoFraud' },
-                { href: '/alternatives/payment-platform-tools/', label: 'Vs. Stripe Radar and Shopify Protect' },
+                { href: '/alternatives/payment-platform-tools/', label: 'Vs. Radar, Protect, Flow, Blockify' },
               ].map(({ href, label }) => (
                 <li key={href}>
                   <Link href={href} className="text-sm text-gray-500 hover:text-gray-900 transition-colors">{label}</Link>

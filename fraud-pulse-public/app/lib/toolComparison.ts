@@ -1,5 +1,13 @@
 /** Shared feature comparison - FraudPulse vs common alternatives. */
 
+/** Built-in / Shopify-native enforcement FraudPulse configures alongside, not instead of. */
+export const PLATFORM_RULE_TOOLS =
+  'Stripe Radar, Shopify Protect, Shopify Flow, and Blockify';
+export const PLATFORM_RULE_TOOLS_SHORT = 'Radar, Protect, Flow, and Blockify';
+export const PLATFORM_RULE_TOOLS_TABLE =
+  'Stripe Radar · Shopify Protect · Flow · Blockify';
+
+
 export type ComparisonValue = 'yes' | 'no' | 'partial';
 
 export type ComparisonFeature = {
@@ -22,7 +30,7 @@ export const COMPARISON_COLUMNS = [
   {
     key: 'platform',
     label: 'Payment Platform Tools',
-    sub: 'Stripe Radar · Shopify Protect',
+    sub: PLATFORM_RULE_TOOLS_TABLE,
     highlight: false,
   },
 ] as const;
@@ -80,14 +88,14 @@ export const COMPARISON_FEATURES: ComparisonFeature[] = [
 ];
 
 export const TOOL_COMPARISON_FOOTNOTE =
-  'FraudPulse works alongside your stack - it does not replace Stripe Radar, Shopify Protect, or a full guarantee platform when that is the buy you need.';
+  `FraudPulse works alongside your stack - it does not replace ${PLATFORM_RULE_TOOLS}. It also does not replace a full guarantee platform when that is the buy you need.`;
 
 /** One category table for AI/buyer queries - keep this on /solutions only to avoid duplicate content. */
 export const STACK_CATEGORIES = [
   {
     category: 'Payment platform tools',
-    examples: 'Shopify Protect, Stripe Radar',
-    job: 'Score and block risk at checkout',
+    examples: PLATFORM_RULE_TOOLS,
+    job: 'Score, block, or automate risk at checkout',
     fraudPulse: 'Ranks which settings to change for your mix',
   },
   {
@@ -108,7 +116,7 @@ export const PREVENTION_VS_REPRESENTMENT = [
   {
     need: 'Chargeback prevention',
     does: 'Stop disputes from being filed',
-    tools: 'Shopify Protect, Stripe Radar, Signifyd, Riskified, NoFraud, Sift',
+    tools: `${PLATFORM_RULE_TOOLS}, Signifyd, Riskified, NoFraud, Sift`,
     fraudPulse: 'Core job: classify the mix and rank rule changes',
   },
   {
@@ -136,7 +144,7 @@ export function toolComparisonTableHtml(): string {
       <th class="col-fp">FraudPulse</th>
       <th>Manual<br/><span class="th-sub">In-house team or founder</span></th>
       <th>SMB Fraud Prevention<br/><span class="th-sub">NoFraud · ClearSale</span></th>
-      <th>Payment Platform Tools<br/><span class="th-sub">Stripe Radar · Shopify Protect</span></th>
+      <th>Payment Platform Tools<br/><span class="th-sub">${PLATFORM_RULE_TOOLS_TABLE}</span></th>
     </tr>
   </thead>
   <tbody>

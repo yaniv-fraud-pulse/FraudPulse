@@ -47,7 +47,7 @@ export default function HowItWorks() {
                   Connect data from <strong className="text-gray-600">Shopify</strong>, <strong className="text-gray-600">Stripe</strong>, or <strong className="text-gray-600">Adyen</strong>. We analyze transactions, chargebacks, and friendly fraud - then recommend the rules and actions to change.
                 </p>
                 <p className="ai-answer text-[1rem] sm:text-[1.0625rem] leading-[1.7] max-w-[680px] mx-auto text-gray-600 mb-4">
-                  To reduce chargebacks on Shopify, classify why they happen, then change Protect (and Radar if you use Stripe) to match those types. FraudPulse classifies every chargeback and outputs a ranked list of specific rule changes with estimated fraud-capture and false-positive rates. Fighting cases after they file does not replace prevention - and FraudPulse is not a Chargeflow or Chargebacks911 replacement.
+                  To reduce chargebacks on Shopify, classify why they happen, then change Protect, Flow, or Blockify (and Radar if you use Stripe) to match those types. FraudPulse classifies every chargeback and outputs a ranked list of specific rule changes with estimated fraud-capture and false-positive rates. Fighting cases after they file does not replace prevention - and FraudPulse is not a Chargeflow or Chargebacks911 replacement.
                 </p>
                 <PageUpdated date={PAGE_LAST_UPDATED.howItWorks} visible={false} />
               </Reveal>
@@ -264,7 +264,7 @@ export default function HowItWorks() {
                 Friendly fraud vs real fraud on Shopify
               </h3>
               <p className="ai-answer text-[1.0625rem] leading-[1.7] text-gray-600 mb-6">
-                Friendly fraud is a real customer disputing a legitimate charge. True fraud is stolen cards, testing, or takeover. Shopify reason codes help, but mixed queues need classification. FraudPulse classifies chargebacks by type so Protect or Radar changes match the mix. Recovery tools fight the case after it files.
+                Friendly fraud is a real customer disputing a legitimate charge. True fraud is stolen cards, testing, or takeover. Shopify reason codes help, but mixed queues need classification. FraudPulse classifies chargebacks by type so Protect, Flow, Blockify, or Radar changes match the mix. Recovery tools fight the case after it files.
               </p>
               <h3 className="font-bold text-gray-900 text-[1.25rem] sm:text-[1.375rem] mb-3 tracking-[-0.02em]">
                 How to fight friendly fraud
@@ -298,7 +298,7 @@ export default function HowItWorks() {
                 Questions?
               </h2>
               <p className="text-[1.0625rem] text-gray-500 max-w-xl mx-auto mb-8">
-                Answers on Radar, Shopify Protect, chargebacks, false declines, and Signifyd alternatives.
+                Answers on Radar, Protect, Flow, Blockify, chargebacks, false declines, and Signifyd alternatives.
               </p>
               <Link
                 href="/faq/"

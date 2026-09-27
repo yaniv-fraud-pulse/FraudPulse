@@ -2,6 +2,7 @@
 
 import {
   COMPARISON_FEATURES,
+  PLATFORM_RULE_TOOLS_TABLE,
   TOOL_COMPARISON_FOOTNOTE,
   type ComparisonValue,
 } from '../lib/toolComparison';
@@ -68,7 +69,7 @@ export default function ToolComparisonTable({
               <th className="px-3 sm:px-4 py-3.5 text-center font-semibold text-gray-700">
                 Payment Platform Tools
                 <span className="block text-[0.7rem] font-normal text-gray-400 mt-0.5">
-                  Stripe Radar · Shopify Protect
+                  {PLATFORM_RULE_TOOLS_TABLE}
                 </span>
               </th>
             </tr>

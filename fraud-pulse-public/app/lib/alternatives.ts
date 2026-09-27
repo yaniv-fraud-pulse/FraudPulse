@@ -33,12 +33,12 @@ export const alternativePages: AlternativePage[] = [
     title: "Don't hire a fraud analyst.",
     titleAccent: 'Automate your fraud intelligence.',
     excerpt:
-      'A full-time fraud analyst often costs $80k+ per year, works business hours, and still guesses which rules to change. FraudPulse analyzes your chargebacks and ranks the Radar or Protect changes to make - without a new hire.',
+      'A full-time fraud analyst often costs $80k+ per year, works business hours, and still guesses which rules to change. FraudPulse analyzes your chargebacks and ranks the Radar, Protect, Flow, or Blockify changes to make - without a new hire.',
     answer:
       'Hiring a full-time fraud analyst typically costs $80k+ per year plus benefits, and coverage is limited to human hours. FraudPulse is a subscription intelligence layer: connect Shopify, Stripe, or Adyen, get ranked rule changes with estimated impact, and keep your existing stack. It does not replace every ops task, but it removes the need to hire just to know which rules to change.',
     seoTitle: 'FraudPulse vs In-House Fraud Analyst',
     seoDescription:
-      'Compare FraudPulse to hiring a fraud analyst. $80k+ salary vs a subscription that ranks Stripe Radar and Shopify Protect rule changes from your chargeback data.',
+      'Compare FraudPulse to hiring a fraud analyst. $80k+ salary vs a subscription that ranks Stripe Radar, Shopify Protect, Shopify Flow, and Blockify rule changes from your chargeback data.',
     keywords:
       'FraudPulse vs fraud analyst, in-house fraud team, hire fraud analyst, automated fraud intelligence, SMB fraud ops',
     competitorLabel: 'In-house fraud analyst',
@@ -160,11 +160,11 @@ export const alternativePages: AlternativePage[] = [
       },
       {
         q: 'Does FraudPulse replace Signifyd, NoFraud, or Riskified?',
-        a: 'No. Those are full fraud platforms. FraudPulse works alongside Shopify Protect and Stripe Radar: classify chargebacks, rank specific rule changes, keep your current checkout. If you need a guarantee or a new system of record, a platform is still the right category.',
+        a: 'No. Those are full fraud platforms. FraudPulse works alongside Shopify Protect, Shopify Flow, Blockify, and Stripe Radar: classify chargebacks, rank specific rule changes, keep your current checkout. If you need a guarantee or a new system of record, a platform is still the right category.',
       },
       {
         q: 'Will FraudPulse take over my checkout?',
-        a: 'No. It does not sit in the approval path or charge a cut of sales. You connect transaction data, receive ranked Protect or Radar recommendations, and apply the changes yourself. Checkout stays on Shopify, Stripe, or Adyen.',
+        a: 'No. It does not sit in the approval path or charge a cut of sales. You connect transaction data, receive ranked Protect, Flow, Blockify, or Radar recommendations, and apply the changes yourself. Checkout stays on Shopify, Stripe, or Adyen.',
       },
     ],
     relatedHref: '/blog/best-fraud-prevention-tools-for-shopify-2026/',
@@ -173,18 +173,18 @@ export const alternativePages: AlternativePage[] = [
   {
     slug: 'payment-platform-tools',
     kicker: 'Compare',
-    title: 'Make Stripe Radar and Shopify Protect',
+    title: 'Make Radar, Protect, Flow, and Blockify',
     titleAccent: 'smarter.',
     excerpt:
-      'Radar and Protect are strong enforcement layers, but they are generic. They do not tell you which rules to change for your chargeback mix. FraudPulse is the brain: it analyzes your disputes and ranks store-specific settings.',
+      'Radar, Protect, Flow, and Blockify are strong enforcement layers, but they are generic. They do not tell you which rules to change for your chargeback mix. FraudPulse is the brain: it analyzes your disputes and ranks store-specific settings.',
     answer:
-      'Stripe Radar and Shopify Protect score and block risk at checkout. They are the engine. They are not automatically tuned to your store as fraud shifts. FraudPulse classifies your chargebacks and outputs ranked Radar or Protect changes with estimated fraud-capture and false-positive rates. Keep Radar and Protect on. Use FraudPulse to configure them for your data.',
-    seoTitle: 'FraudPulse vs Stripe Radar and Shopify Protect',
+      'Stripe Radar, Shopify Protect, Shopify Flow, and Blockify score, block, or automate risk at checkout. They are the engine. They are not automatically tuned to your store as fraud shifts. FraudPulse classifies your chargebacks and outputs ranked Radar, Protect, Flow, or Blockify changes with estimated fraud-capture and false-positive rates. Keep those tools on. Use FraudPulse to configure them for your data.',
+    seoTitle: 'FraudPulse vs Stripe Radar, Shopify Protect, Flow, and Blockify',
     seoDescription:
-      'Stripe Radar and Shopify Protect enforce at checkout. FraudPulse ranks which rules to change for your store so you cut chargebacks and false declines without replacing them.',
+      'Stripe Radar, Shopify Protect, Shopify Flow, and Blockify enforce or automate at checkout. FraudPulse ranks which rules to change for your store so you cut chargebacks and false declines without replacing them.',
     keywords:
-      'FraudPulse vs Stripe Radar, Shopify Protect alternative, optimize Radar rules, Shopify Protect not enough, Radar configuration',
-    competitorLabel: 'Stripe Radar / Shopify Protect',
+      'FraudPulse vs Stripe Radar, Shopify Protect alternative, Shopify Flow fraud, Blockify rules, optimize Radar rules, Shopify Protect not enough, Radar configuration',
+    competitorLabel: 'Radar / Protect / Flow / Blockify',
     tableCaption: 'Built-in enforcement vs store-specific optimization',
     rows: [
       {
@@ -205,40 +205,40 @@ export const alternativePages: AlternativePage[] = [
       {
         label: 'Replacement',
         competitor: 'Keep these on - they are the enforcement layer',
-        fraudPulse: 'Works alongside Radar and Protect - not a replacement',
+        fraudPulse: 'Works alongside Radar, Protect, Flow, and Blockify - not a replacement',
       },
     ],
     points: [
       {
         title: 'Radar is the engine. FraudPulse is navigation.',
-        body: 'The engine moves the car. Navigation tells you where to turn. Stripe Radar and Shopify Protect stay in the checkout path. FraudPulse reads your chargebacks, names the patterns, and tells you which settings to change so the engine is pointed at your actual risk.',
+        body: 'The engine moves the car. Navigation tells you where to turn. Stripe Radar, Shopify Protect, Shopify Flow, and Blockify stay in the checkout path. FraudPulse reads your chargebacks, names the patterns, and tells you which settings or workflows to change so the engine is pointed at your actual risk.',
       },
       {
         title: 'Generic rules miss your mix',
-        body: 'Protect and Radar do not inherently know that high-value first orders or international buyers are normal for you. Blind threshold changes can raise approvals and fraud. FraudPulse measures the trade-off against your history before you loosen or tighten an act.',
+        body: 'Protect, Flow, Blockify, and Radar do not inherently know that high-value first orders or international buyers are normal for you. Blind threshold changes can raise approvals and fraud. FraudPulse measures the trade-off against your history before you loosen or tighten an act.',
       },
       {
         title: 'Same stack, better configuration',
-        body: 'You do not migrate processors or rip out Radar. Connect data, get a ranked list, apply changes where you already manage risk. That is why FraudPulse is complementary intelligence - not another fraud console.',
+        body: 'You do not migrate processors or rip out Radar, Protect, Flow, or Blockify. Connect data, get a ranked list, apply changes where you already manage risk. That is why FraudPulse is complementary intelligence - not another fraud console.',
       },
     ],
     diagram: [
-      { from: 'Stripe Radar / Shopify Protect', to: 'Enforcement at checkout', note: 'Engine' },
+      { from: 'Radar / Protect / Flow / Blockify', to: 'Enforcement at checkout', note: 'Engine' },
       { from: 'Your chargebacks & orders', to: 'FraudPulse analysis', note: 'Brain' },
-      { from: 'Ranked rule changes', to: 'You apply in Radar or Protect', note: 'Navigation' },
+      { from: 'Ranked rule changes', to: 'You apply in Radar, Protect, Flow, or Blockify', note: 'Navigation' },
     ],
     faqs: [
       {
-        q: 'Does FraudPulse replace Stripe Radar or Shopify Protect?',
-        a: 'No. Radar and Protect remain the enforcement layer that scores and blocks at checkout. FraudPulse analyzes chargeback history and ranks specific rule changes with estimated fraud-capture and false-positive percentages so you improve the tools you already run.',
+        q: 'Does FraudPulse replace Stripe Radar, Shopify Protect, Shopify Flow, or Blockify?',
+        a: 'No. Radar, Protect, Flow, and Blockify remain the enforcement layer that scores, blocks, or automates at checkout. FraudPulse analyzes chargeback history and ranks specific rule changes with estimated fraud-capture and false-positive percentages so you improve the tools you already run.',
       },
       {
-        q: 'Why is Shopify Protect or Radar not enough on its own?',
-        a: 'They are enough for enforcement if default settings already match your risk. They are not enough if chargebacks or false declines keep rising and you do not know which control to change. FraudPulse sits alongside them and ranks settings for your mix.',
+        q: 'Why is Shopify Protect, Flow, Blockify, or Radar not enough on its own?',
+        a: 'They are enough for enforcement if default settings already match your risk. They are not enough if chargebacks or false declines keep rising and you do not know which control to change. FraudPulse sits alongside them and ranks settings or workflows for your mix.',
       },
       {
-        q: 'How does FraudPulse make Radar and Protect smarter?',
-        a: 'It classifies why disputes happen on your account, then outputs a ranked list of Radar or Protect changes with estimated impact. You keep the engine; you stop guessing the configuration. Connect Shopify, Stripe, or Adyen in minutes with no engineering.',
+        q: 'How does FraudPulse make Radar, Protect, Flow, and Blockify smarter?',
+        a: 'It classifies why disputes happen on your account, then outputs a ranked list of Radar, Protect, Flow, or Blockify changes with estimated impact. You keep the engine; you stop guessing the configuration. Connect Shopify, Stripe, or Adyen in minutes with no engineering.',
       },
     ],
     relatedHref: '/blog/fraudpulse-does-not-replace-stripe-radar-shopify-protect/',

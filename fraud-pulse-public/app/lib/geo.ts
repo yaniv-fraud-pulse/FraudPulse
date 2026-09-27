@@ -2,9 +2,9 @@ import type { FaqItem } from './homeFaq';
 
 /** “Last updated” dates - bump when page copy materially changes. */
 export const PAGE_LAST_UPDATED = {
-  home: 'August 28, 2026',
-  howItWorks: 'September 14, 2026',
-  solutions: 'September 14, 2026',
+  home: 'September 27, 2026',
+  howItWorks: 'September 27, 2026',
+  solutions: 'September 27, 2026',
   pricing: 'August 6, 2026',
   blog: 'September 20, 2026',
 } as const;
