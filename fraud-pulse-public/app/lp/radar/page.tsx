@@ -51,15 +51,15 @@ export default function RadarFacebookLanding() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
       <header className="sticky top-0 z-50 border-b bg-white/95 backdrop-blur-md" style={{ borderColor: '#e5e7eb' }}>
-        <div className="max-w-5xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+        <div className="max-w-5xl mx-auto px-5 sm:px-8 h-20 sm:h-24 flex items-center justify-between">
           <Link href="/" className="flex items-center">
             <Image
               src="/full-logo-light.svg"
               alt="FraudPulse"
-              width={160}
-              height={40}
+              width={240}
+              height={62}
               priority
-              className="h-8 w-auto"
+              className="h-12 sm:h-16 w-auto"
             />
           </Link>
           <a
