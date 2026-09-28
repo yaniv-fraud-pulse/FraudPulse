@@ -44,6 +44,7 @@ export function getUtmProperties(): Record<string, string> {
     'utm_campaign',
     'utm_term',
     'utm_content',
+    'fbclid',
   ]) {
     const value = params.get(key);
     if (value) utm[key] = value;
