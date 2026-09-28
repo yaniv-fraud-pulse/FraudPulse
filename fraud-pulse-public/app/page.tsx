@@ -378,8 +378,6 @@ export default function Home() {
       />
       <Header />
       <main className="flex-grow overflow-x-clip">
-        {/* AI/GEO freshness - in DOM for agents, hidden from visual UI */}
-        <PageUpdated date={PAGE_LAST_UPDATED.home} visible={false} />
 
         {/* ── Hero ── */}
         <section className="relative overflow-x-clip lg:overflow-x-visible px-5 sm:px-10 text-center flex items-center justify-center" style={{ minHeight: 'calc(100vh - 84px)' }}>
@@ -408,6 +406,9 @@ export default function Home() {
             <p className="ai-answer text-[1.0625rem] leading-[1.75] mb-3 max-w-[680px] mx-auto text-gray-600 anim-fadeUp delay-350">
               FraudPulse classifies chargebacks by type and ranks specific Stripe Radar, Shopify Protect, Shopify Flow, or Blockify rule changes with estimated fraud-capture and false-positive rates - so you know which rules to change without replacing the stack you already run.
             </p>
+            <div className="mb-3 anim-fadeUp delay-350">
+              <PageUpdated date={PAGE_LAST_UPDATED.home} />
+            </div>
 
             <p className="text-[1.0625rem] leading-[1.75] mb-8 max-w-[620px] mx-auto text-gray-500 anim-fadeUp delay-400">
               Get actionable fraud insights in days - not analytics reports you never act on.

@@ -155,7 +155,7 @@ export default function Pricing() {
               <p className="text-[1rem] leading-[1.7] max-w-[640px] mx-auto mb-8 text-gray-400">
                 Pay-as-you-go starts at $0.01 per transaction (up to 20K/month). Professional is $199/month or $159/month billed annually (20% savings). Every plan includes a 14-day free trial.
               </p>
-              <PageUpdated date={PAGE_LAST_UPDATED.pricing} visible={false} />
+              <PageUpdated date={PAGE_LAST_UPDATED.pricing} />
             </Reveal>
 
             {/* Billing toggle */}

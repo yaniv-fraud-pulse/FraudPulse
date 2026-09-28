@@ -8,7 +8,16 @@ export const PAGE_LAST_UPDATED = {
   stack: 'September 28, 2026',
   pricing: 'August 6, 2026',
   blog: 'September 28, 2026',
+  faq: 'September 28, 2026',
 } as const;
+
+/** Honest last-updated labels for /alternatives/[slug]/ - bump only when that page’s copy changes. */
+export const ALTERNATIVE_LAST_UPDATED: Record<string, string> = {
+  'manual-fraud-analyst': 'September 27, 2026',
+  nofraud: 'September 28, 2026',
+  'smb-fraud-tools': 'September 27, 2026',
+  'payment-platform-tools': 'September 28, 2026',
+};
 
 export function faqPageJsonLd(faqs: FaqItem[]) {
   return {

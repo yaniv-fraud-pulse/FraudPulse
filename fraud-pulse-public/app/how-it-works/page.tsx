@@ -49,7 +49,7 @@ export default function HowItWorks() {
                 <p className="ai-answer text-[1rem] sm:text-[1.0625rem] leading-[1.7] max-w-[680px] mx-auto text-gray-600 mb-4">
                   To reduce chargebacks on Shopify, classify why they happen, then change Protect, Flow, or Blockify (and Radar if you use Stripe) to match those types. FraudPulse classifies every chargeback and outputs a ranked list of specific rule changes with estimated fraud-capture and false-positive rates. Fighting cases after they file does not replace prevention - and FraudPulse is not a Chargeflow or Chargebacks911 replacement.
                 </p>
-                <PageUpdated date={PAGE_LAST_UPDATED.howItWorks} visible={false} />
+                <PageUpdated date={PAGE_LAST_UPDATED.howItWorks} />
               </Reveal>
 
               {/* Data sources → FraudPulse → recommended rules */}

@@ -22,74 +22,6 @@ export type BlogPost = {
 
 export const posts: BlogPost[] = [
   {
-    slug: 'biggest-mistake-after-chargeback-spike',
-    title: 'One of the Biggest Mistakes After a Chargeback Spike Is Focusing on the Chargebacks',
-    excerpt:
-      'Winning disputes and passing a Stripe account review are different jobs. A dispute still counts whether you win or lose it. Prevention protects the account; representment protects revenue.',
-    category: 'Education',
-    date: 'September 28, 2026',
-    readTime: '4 min read',
-    author: 'Idan Hayon',
-    authorRole: 'Co-Founder & CEO',
-    content: `
-<p class="ai-answer">One of the biggest mistakes merchants make after a spike in chargebacks is focusing on the chargebacks themselves. Winning disputes recovers revenue, but a dispute still counts toward Stripe account activity whether you win or lose it. Passing a review means showing what caused the increase, where controls failed, what you changed, and how you monitor improvement. Prevention protects the account. Representment protects revenue.</p>
-
-<p>One of the biggest mistakes merchants make after a spike in chargebacks is focusing on the chargebacks themselves.</p>
-
-<p>The most misunderstood part of a Stripe account review is what you need to prove. Most merchants spend a lot of time thinking about the chargebacks that triggered the review, and less time thinking about what those chargebacks say about the underlying business.</p>
-
-<p>The reason is that individual disputes feel like the immediate problem. You can see the disputed transaction, investigate what happened, submit evidence, and potentially recover the revenue. So naturally, the focus becomes winning them.</p>
-
-<p>But winning chargebacks and addressing the reason your account is being reviewed are two different things. Once a dispute happens, it contributes to the activity associated with your account regardless of whether you eventually win or lose it.</p>
-
-<p>That means a merchant could successfully defend a large percentage of its disputes and still have a chargeback problem. This is where account reviews become much more about prevention than representment.</p>
-
-<h2>From the merchant's view they are all chargebacks. From a risk view they are not.</h2>
-
-<p>Stripe needs to understand whether the activity that caused concern is likely to continue. A sudden increase in fraudulent transactions might point to weaknesses in your fraud controls. A spike in product-not-received disputes might point to fulfilment. Subscription disputes could indicate problems with renewal or cancellation communication. Unrecognised transactions might be caused by something as simple as an unclear statement descriptor.</p>
-
-<p>From the merchant's perspective, these are all chargebacks. From a risk perspective, they are very different problems.</p>
-
-<h2>What a strong account-review response shows</h2>
-
-<p>The difficult part is that passing an account review is demonstrating that you understand:</p>
-
-<ul>
-  <li>What caused the increase</li>
-  <li>Which transactions or customers were affected</li>
-  <li>Where the existing controls failed</li>
-  <li>What you've changed since</li>
-  <li>How you're monitoring whether those changes work</li>
-</ul>
-
-<p>The strongest response is being able to show: this caused the problem, we identified it, we fixed it, here's how we know it's improving.</p>
-
-<p>Winning existing chargebacks protects your revenue. Preventing the conditions that created them is what protects your account.</p>
-
-<p>Related: <a href="/blog/stripe-account-review-after-chargebacks/">how to pass a Stripe account review after chargebacks</a>, <a href="/blog/stripe-dispute-rate-too-high/">what to do if Stripe warns your dispute rate is too high</a>, <a href="/how-it-works/">prevention vs representment</a>, and the <a href="/faq/">FAQ</a>.</p>
-
-<p>P.S. Idan is hosting a free Stripe Radar webinar on 10 October covering action performance, false positives, fraud capture, and when to tighten, change, or remove an action. <a href="https://lnkd.in/dr7uuyFH" target="_blank" rel="noopener noreferrer">Register here</a>.</p>
-
-<p>If you want help classifying why disputes spiked and ranking Radar, Protect, Flow, or Blockify changes - not fighting cases after they file - <a href="/book-a-demo/">book a demo</a>.</p>
-
-<p><em>Originally shared on <a href="https://www.linkedin.com/feed/update/urn:li:activity:7510209543017123840/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</em></p>
-    `.trim(),
-    faqs: [
-      {
-        q: 'Why is focusing on winning chargebacks a mistake after a spike?',
-        a: 'A dispute still counts toward Stripe account activity whether you win or lose it. Winning cases recovers revenue. A review is about whether the underlying problem continues. You need to show cause, failed controls, what you changed, and how you monitor improvement - prevention, not only representment.',
-      },
-      {
-        q: 'What does Stripe need to see in an account review?',
-        a: 'That you understand whether the concerning activity is likely to continue: what caused the increase, which customers were affected, where controls failed, what you changed, and how you track improvement. Fraud, product-not-received, subscription, and unrecognised disputes point to different root causes.',
-      },
-      {
-        q: 'Does winning most disputes mean the chargeback problem is solved?',
-        a: 'No. You can defend a large share of cases and still have a chargeback problem. Representment protects revenue on filed disputes. Passing review and keeping the account healthy depends on stopping the conditions that created those disputes.',
-      },
-    ],
-  },
-  {
     slug: 'declining-more-transactions-loses-good-customers',
     title: 'Declining More Transactions Reduces Fraud - and Loses Good Customers',
     excerpt:
@@ -985,7 +917,7 @@ ${toolComparisonTableHtml()}
       'Winning chargebacks and addressing why your account is under review are different problems. What Stripe needs to see is cause, failed controls, what you changed, and how you monitor improvement.',
     category: 'Guide',
     date: 'August 28, 2026',
-    updatedAt: 'September 9, 2026',
+    updatedAt: 'September 28, 2026',
     readTime: '5 min read',
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
@@ -1030,7 +962,11 @@ ${toolComparisonTableHtml()}
 
 <p>Winning existing chargebacks protects your revenue. Preventing the conditions that created them is what protects your account.</p>
 
-<p>For dispute-rate warnings specifically, see <a href="/blog/stripe-dispute-rate-too-high/">what to do if Stripe warns your dispute rate is too high</a>. For the LinkedIn version of this argument, see <a href="/blog/biggest-mistake-after-chargeback-spike/">the biggest mistake after a chargeback spike</a>. If you want help classifying the mix and ranking prevention changes on your data, see <a href="/how-it-works/">how it works</a>, <a href="/pricing/">pricing</a>, and the <a href="/faq/">FAQ</a> - or <a href="/book-a-demo/">book a demo</a>.</p>
+<p>For dispute-rate warnings specifically, see <a href="/blog/stripe-dispute-rate-too-high/">what to do if Stripe warns your dispute rate is too high</a>. If you want help classifying the mix and ranking prevention changes on your data, see <a href="/how-it-works/">how it works</a>, <a href="/pricing/">pricing</a>, and the <a href="/faq/">FAQ</a> - or <a href="/book-a-demo/">book a demo</a>.</p>
+
+<p>P.S. Idan is hosting a free Stripe Radar webinar on 10 October covering action performance, false positives, fraud capture, and when to tighten, change, or remove an action. <a href="https://lnkd.in/dr7uuyFH" target="_blank" rel="noopener noreferrer">Register here</a>.</p>
+
+<p><em>Originally shared on <a href="https://www.linkedin.com/feed/update/urn:li:activity:7510209543017123840/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</em></p>
     `.trim(),
     faqs: [
       {
@@ -1338,80 +1274,6 @@ ${toolComparisonTableHtml()}
     ],
   },
   {
-    slug: 'biggest-revenue-leak-might-be-false-positives',
-    title:
-      'The biggest revenue leak in your business might not be fraud. It might be false positives.',
-    excerpt:
-      'Most merchants know exactly how much fraud they lost last month. Very few know how much revenue they lost by declining legitimate customers - the hidden cost of fraud prevention.',
-    category: 'Education',
-    date: 'July 31, 2026',
-    readTime: '5 min read',
-    author: 'Idan Hayon',
-    authorRole: 'Co-Founder & CEO',
-    content: `
-<p>Most merchants can tell you exactly how much fraud they lost last month. Very few can tell you how much revenue they lost by declining legitimate customers.</p>
-
-<p>That’s the hidden cost of fraud prevention.</p>
-
-<p>Every fraud act is a balance between catching more fraud and approving more legitimate customers. Push too far in one direction, and you’ll stop more fraud.</p>
-
-<p>Push too far in the other, and you’ll lose good customers.</p>
-
-<p>Every fraud act is really a question of precision.</p>
-
-<ul>
-  <li>How aggressively do you want to detect potential fraud?</li>
-  <li>How many legitimate customers are you willing to inconvenience in the process?</li>
-</ul>
-
-<p>The reason is that fraud losses are visible. Chargebacks show up in reports, disputes get tracked, and losses are measurable.</p>
-
-<p><strong>False positives are not.</strong></p>
-
-<p>You don’t see the customer who failed verification once and left, got declined and bought somewhere else, abandoned checkout after extra friction, and never came back after a bad payment experience. That revenue rarely appears as lost, so it gets ignored.</p>
-
-<p>Over time, it’s easy to optimise for the metric you can see.</p>
-
-<p>So after every fraud incident, another rule gets added, another threshold gets tightened, and the system becomes a little more aggressive. Fraud might go down - but so can conversions, revenue, and customer lifetime value.</p>
-
-<p>The best fraud strategies aim to make the best decisions. That means asking questions…</p>
-
-<ul>
-  <li>Which fraud rules are preventing fraud?</li>
-  <li>Which ones are blocking good customers?</li>
-  <li>What’s the commercial impact of every decision we’re making?</li>
-</ul>
-
-<p>Because those costs are spread across marketing, support, product, and commercial teams, they’re rarely traced back to the fraud decision that caused them.</p>
-
-<p>The irony is that the fraud system is succeeding.</p>
-
-<p>It’s blocking exactly the transactions it was trained or configured to block. The question is whether those are the right decisions for the business.</p>
-
-<p>The best fraud strategies treat every decision as a balance between risk and customer experience. Preventing fraud is important - but protecting good customers is just as important.</p>
-
-<p>If you’re looking to reduce fraud without sacrificing legitimate customers or revenue, we’re hosting a free webinar where I’ll share the frameworks I’ve used over the past decade to help merchants build more effective fraud strategies.</p>
-
-<p><a href="/webinar/">Grab your spot here</a>.</p>
-
-<p><strong>P.S.</strong> What’s costing your business more - fraud or false positives?</p>
-    `.trim(),
-    faqs: [
-      {
-        q: 'What is a false positive in fraud prevention?',
-        a: 'A false positive is a legitimate customer incorrectly flagged or declined as fraud - through a hard decline, extra verification, or friction that causes them to abandon checkout. Unlike chargebacks, that loss rarely shows up as a single report line, so teams often underestimate how much revenue false positives quietly remove from conversion and lifetime value.',
-      },
-      {
-        q: 'Why are false positives harder to measure than fraud losses?',
-        a: 'Fraud shows up as chargebacks and disputes that finance and risk teams already track. False-positive losses are quiet: declined buyers who shop elsewhere, abandoned checkouts after friction, and lower lifetime value that rarely appear as a single “lost revenue” line item. Because the cost is fragmented across teams, it is easy to keep tightening rules without seeing the commercial damage.',
-      },
-      {
-        q: 'How should merchants balance fraud prevention and approvals?',
-        a: 'Treat every rule as a precision decision: ask which controls stop real fraud, which block good customers, and what the commercial impact is - not only whether fraud volume went down. The strongest strategies measure approval rates and false-positive cost alongside chargebacks so risk decisions protect revenue instead of only reducing visible disputes.',
-      },
-    ],
-  },
-  {
     slug: 'balancing-fraud-prevention-with-customer-experience',
     title:
       '85% of e-commerce professionals say balancing fraud prevention with customer experience is one of their biggest challenges.',
@@ -1620,57 +1482,6 @@ ${toolComparisonTableHtml()}
       {
         q: 'What should you do before blocking “bot-like” behaviour?',
         a: 'Confirm whether the behaviour matches how your best customers actually buy. In high-demand markets, automation and multiple accounts can be legitimate demand rather than an attack. Blocking without that context can remove top customers and revenue while creating a false sense that the fraud system is performing well.',
-      },
-    ],
-  },
-  {
-    slug: 'fraud-system-might-be-your-biggest-revenue-leak',
-    title:
-      'One thing that often gets overlooked in fraud prevention is your fraud system might be your biggest revenue leak',
-    excerpt:
-      'Fraud losses are visible. Revenue lost to false positives usually is not. The biggest gains often come from removing friction that no longer helps.',
-    category: 'Education',
-    date: 'July 16, 2026',
-    readTime: '4 min read',
-    author: 'Idan Hayon',
-    authorRole: 'Co-Founder & CEO',
-    content: `
-<p>Over time, most systems get tightened. A new verification step gets added after an incident, then another one just to be safe, then stricter acts to reduce exposure.</p>
-
-<p>Before long, the system is technically safer - but the customer experience starts to suffer. The pattern is quite consistent. We focus on preventing bad transactions and only later realise we’re also blocking good ones.</p>
-
-<p>Every extra verification step comes with a cost:</p>
-
-<ul>
-  <li>more friction at checkout</li>
-  <li>more abandoned transactions</li>
-  <li>more legitimate users getting declined</li>
-</ul>
-
-<p>The issue is that fraud losses are visible, but the revenue lost from false positives usually isn’t. It shows up as lower approval rates, quieter drop-offs, and missed conversions.</p>
-
-<p>The biggest improvements I’ve seen come from understanding where those controls actually help and where they start working against you.</p>
-
-<p>We see this consistently when looking at transaction data more closely. In many cases, there are segments where the acts are too aggressive, or controls that are no longer needed. Once you identify them, removing or adjusting them can have an immediate impact.</p>
-
-<p>That’s part of the thinking behind what we’re building with FraudPulse.</p>
-
-<p>The goal is to understand what’s already in place, what’s working, and where friction is unnecessary. A good fraud system protects revenue - and that often means knowing when to remove friction, not add it.</p>
-
-<p>If you’re seeing similar patterns, or just want a clearer view of how your system is behaving, <a href="/book-a-demo/">feel free to reach out</a>. Happy to take a look.</p>
-    `.trim(),
-    faqs: [
-      {
-        q: 'How can a fraud system leak revenue?',
-        a: 'By adding verification and rules after every incident until false declines and checkout friction quietly cost more than the fraud they prevent. Fraud losses are visible in chargebacks, but false-positive revenue loss shows up as lower approval rates, abandoned checkouts, and missed conversions that rarely get attributed back to the fraud decision.',
-      },
-      {
-        q: 'What usually improves approval rates fastest?',
-        a: 'Finding segments where controls are too aggressive or no longer needed, then removing or adjusting them - not adding another blanket rule. The biggest gains often come from understanding where friction still helps and where it only blocks good customers, then retiring outdated acts that no longer match current risk.',
-      },
-      {
-        q: 'Why do teams keep adding friction after fraud incidents?',
-        a: 'Each incident pushes another verification step or stricter act “just to be safe.” Over time the system looks safer on paper while checkout abandonment and false declines quietly grow. Because fraud losses are measured and conversion damage is not, the default reaction stays additive instead of diagnostic.',
       },
     ],
   },
@@ -2220,10 +2031,13 @@ ${toolComparisonTableHtml()}
       'Most fraud teams track fraud that gets through. Almost no one tracks legitimate customers who got blocked, declined, or abandoned checkout after unnecessary friction - and that cost is often bigger.',
     category: 'Education',
     date: 'May 30, 2026',
+    updatedAt: 'September 28, 2026',
     readTime: '5 min read',
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
     content: `
+<p class="ai-answer">The hidden cost of false positives is often larger than the fraud itself. Fraud losses show up as chargebacks. False positives do not: declined buyers shop elsewhere, abandon checkout after extra friction, and rarely appear as lost revenue. Teams keep tightening rules until conversion damage exceeds the fraud they prevent. Good systems maximise good approvals while keeping fraud acceptable, which often means removing friction that no longer helps.</p>
+
 <p>One of the most underestimated problems in fraud prevention is false positives.</p>
 
 <p>Most fraud teams spend a lot of time thinking about fraud that gets through the system. Much less time is spent thinking about legitimate customers that get blocked by it.</p>
@@ -2269,7 +2083,13 @@ ${toolComparisonTableHtml()}
 
 <p>Good fraud systems are not the systems that block the most fraud. They're the systems that <strong>maximise good approvals while keeping fraud at an acceptable level</strong>.</p>
 
+<p>The irony is that the fraud system is often succeeding. It is blocking exactly the transactions it was configured to block. The question is whether those are the right decisions for the business. The biggest improvements usually come from finding segments where controls are too aggressive or no longer needed, then removing or adjusting them.</p>
+
 <p>That balance is the real challenge.</p>
+
+<p>Related: <a href="/blog/how-to-reduce-false-declines-in-stripe/">how to reduce false declines in Stripe</a>, <a href="/blog/every-decline-is-not-a-win/">why every decline is not a win</a>, <a href="/webinar/">Stripe Radar webinar</a>, and the <a href="/faq/">FAQ</a>.</p>
+
+<p>If you want to see which rules may be blocking good customers in your Stripe or Shopify data, <a href="/book-a-demo/">book a demo</a>.</p>
     `.trim(),
     faqs: [
       {

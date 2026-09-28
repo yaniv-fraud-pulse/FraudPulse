@@ -68,8 +68,6 @@ export default function StackPage() {
       <Header />
 
       <main className="flex-grow">
-        <PageUpdated date={PAGE_LAST_UPDATED.stack} visible={false} />
-
         <section className="relative overflow-hidden pt-8 pb-12 sm:pb-16 px-5 sm:px-10 bg-white">
           <div
             className="pointer-events-none absolute inset-0 opacity-[0.06]"
@@ -94,9 +92,10 @@ export default function StackPage() {
               <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.75] text-gray-500 mb-4">
                 Keep the tools that enforce or automate at checkout. FraudPulse is the AI analyst that ranks which rules to change for your chargeback mix.
               </p>
-              <p className="ai-answer text-[1rem] sm:text-[1.0625rem] leading-[1.7] text-gray-600">
+              <p className="ai-answer text-[1rem] sm:text-[1.0625rem] leading-[1.7] text-gray-600 mb-4">
                 {STACK_ANSWER}
               </p>
+              <PageUpdated date={PAGE_LAST_UPDATED.stack} />
             </Reveal>
           </div>
         </section>

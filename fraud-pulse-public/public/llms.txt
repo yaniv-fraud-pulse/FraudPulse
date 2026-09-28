@@ -49,9 +49,8 @@
 - Do I need to replace my fraud prevention tools? No - FraudPulse works alongside them; no migration required.
 - Full FAQ: https://www.fraud-pulse.com/faq/
 
-## All blog guides (38)
+## All blog guides (36)
 
-- One of the Biggest Mistakes After a Chargeback Spike Is Focusing on the Chargebacks: https://www.fraud-pulse.com/blog/biggest-mistake-after-chargeback-spike/
 - Declining More Transactions Reduces Fraud - and Loses Good Customers: https://www.fraud-pulse.com/blog/declining-more-transactions-loses-good-customers/
 - If Checkout Pages Go Away, Fraud Systems Have to Change What They Ask: https://www.fraud-pulse.com/blog/agentic-commerce-and-the-end-of-checkout-pages/
 - One of the Biggest Mistakes in Fraud Prevention Is Assuming Every Decline Is a Win: https://www.fraud-pulse.com/blog/every-decline-is-not-a-win/
@@ -71,12 +70,10 @@
 - The Biggest Fraud-Related Change This Year Is a Change in Responsibility: https://www.fraud-pulse.com/blog/nacha-ach-fraud-responsibility-june-2026/
 - AI Is Changing the Speed at Which Fraud Evolves: https://www.fraud-pulse.com/blog/ai-is-changing-the-speed-of-fraud-evolution/
 - Fraud Acts Must Evolve - Or They Become Ineffective: https://www.fraud-pulse.com/blog/fraud-acts-must-evolve-or-become-ineffective/
-- The biggest revenue leak in your business might not be fraud. It might be false positives.: https://www.fraud-pulse.com/blog/biggest-revenue-leak-might-be-false-positives/
 - 85% of e-commerce professionals say balancing fraud prevention with customer experience is one of their biggest challenges.: https://www.fraud-pulse.com/blog/balancing-fraud-prevention-with-customer-experience/
 - Consumers lost $2.1 billion to scams that started on social media last year.: https://www.fraud-pulse.com/blog/social-media-scams-2-1-billion-authorized-payments/
 - The biggest mistake in fraud analysis is trusting individual indicators: https://www.fraud-pulse.com/blog/biggest-mistake-in-fraud-analysis-trusting-individual-indicators/
 - In fraud the same behaviour can be fraudulent in one business and completely legitimate in another: https://www.fraud-pulse.com/blog/same-behaviour-fraudulent-in-one-business-legitimate-in-another/
-- One thing that often gets overlooked in fraud prevention is your fraud system might be your biggest revenue leak: https://www.fraud-pulse.com/blog/fraud-system-might-be-your-biggest-revenue-leak/
 - I’ve worked with companies doing $1B+ in revenue with a 2-person fraud team: https://www.fraud-pulse.com/blog/billion-dollar-companies-with-two-person-fraud-teams/
 - How to Reduce Chargebacks on Shopify (2026 Guide): https://www.fraud-pulse.com/blog/how-to-reduce-chargebacks-on-shopify-2026/
 - Should you build your own fraud system or buy a solution?: https://www.fraud-pulse.com/blog/build-vs-buy-fraud-system/

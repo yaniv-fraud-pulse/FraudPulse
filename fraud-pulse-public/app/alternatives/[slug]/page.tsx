@@ -6,7 +6,7 @@ import Footer from '../../components/Footer';
 import JsonLd from '../../components/JsonLd';
 import { Reveal } from '../../components/Reveal';
 import { PageUpdated } from '../../components/GeoBits';
-import { faqPageJsonLd } from '../../lib/geo';
+import { ALTERNATIVE_LAST_UPDATED, faqPageJsonLd } from '../../lib/geo';
 import { pageMetadata } from '../../lib/seo';
 import { TrackedLink } from '../../components/TrackedCta';
 import { alternativePages, getAlternative } from '../../lib/alternatives';
@@ -48,8 +48,6 @@ export default async function AlternativePage({
       <Header />
 
       <main className="flex-grow">
-        <PageUpdated date="September 28, 2026" visible={false} />
-
         <section className="relative overflow-hidden pt-8 pb-12 sm:pb-16 px-5 sm:px-10 bg-white">
           <div
             className="pointer-events-none absolute inset-0 opacity-[0.06]"
@@ -84,9 +82,12 @@ export default async function AlternativePage({
               <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.75] text-gray-500 mb-4">
                 {page.excerpt}
               </p>
-              <p className="ai-answer text-[1rem] sm:text-[1.0625rem] leading-[1.7] text-gray-600">
+              <p className="ai-answer text-[1rem] sm:text-[1.0625rem] leading-[1.7] text-gray-600 mb-4">
                 {page.answer}
               </p>
+              <PageUpdated
+                date={ALTERNATIVE_LAST_UPDATED[page.slug] ?? 'September 27, 2026'}
+              />
             </Reveal>
           </div>
         </section>

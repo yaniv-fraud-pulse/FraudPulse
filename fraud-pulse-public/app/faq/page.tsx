@@ -8,7 +8,7 @@ import { TrackedLink } from '../components/TrackedCta';
 import FaqAccordion from '../components/FaqAccordion';
 import JsonLd from '../components/JsonLd';
 import { PageUpdated } from '../components/GeoBits';
-import { faqPageJsonLd } from '../lib/geo';
+import { faqPageJsonLd, PAGE_LAST_UPDATED } from '../lib/geo';
 import { siteFaqs } from '../lib/siteFaqs';
 
 export default function FaqPage() {
@@ -18,8 +18,6 @@ export default function FaqPage() {
       <Header />
 
       <main className="flex-grow">
-        <PageUpdated date="September 28, 2026" visible={false} />
-
         <section className="relative overflow-hidden pt-8 pb-12 sm:pb-16 px-5 sm:px-10 bg-white">
           <div
             className="pointer-events-none absolute inset-0 opacity-[0.06]"
@@ -41,10 +39,11 @@ export default function FaqPage() {
               </h1>
             </Reveal>
             <Reveal animation="anim-fadeUp" delay={150}>
-              <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.75] text-gray-500 max-w-[640px] mx-auto">
+              <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.75] text-gray-500 max-w-[640px] mx-auto mb-4">
                 How FraudPulse works alongside Stripe Radar, Shopify Protect, Shopify Flow, and Blockify - ranked rule changes,
                 chargebacks, friendly vs real fraud, and prevention vs representment.
               </p>
+              <PageUpdated date={PAGE_LAST_UPDATED.faq} />
             </Reveal>
           </div>
         </section>

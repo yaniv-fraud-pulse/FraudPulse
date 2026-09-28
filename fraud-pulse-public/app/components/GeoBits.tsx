@@ -33,9 +33,8 @@ export default function GeoStatStrip({
 }
 
 /**
- * Freshness signal for GEO / AI crawlers.
- * Use `visible={false}` when the date should stay in the DOM (and JSON-parseable
- * HTML) but not show on the page for humans.
+ * Visible freshness signal for GEO / AI crawlers and humans.
+ * Bump the date only when page copy actually changes.
  */
 export function PageUpdated({
   date,

@@ -13,6 +13,36 @@
       "permanent": true
     },
     {
+      "source": "/blog/biggest-mistake-after-chargeback-spike",
+      "destination": "/blog/stripe-account-review-after-chargebacks/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/biggest-mistake-after-chargeback-spike/",
+      "destination": "/blog/stripe-account-review-after-chargebacks/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/biggest-revenue-leak-might-be-false-positives",
+      "destination": "/blog/hidden-cost-of-false-positives-in-fraud-systems/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/biggest-revenue-leak-might-be-false-positives/",
+      "destination": "/blog/hidden-cost-of-false-positives-in-fraud-systems/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/fraud-system-might-be-your-biggest-revenue-leak",
+      "destination": "/blog/hidden-cost-of-false-positives-in-fraud-systems/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/fraud-system-might-be-your-biggest-revenue-leak/",
+      "destination": "/blog/hidden-cost-of-false-positives-in-fraud-systems/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "fraud-pulse.com" }],
       "destination": "https://www.fraud-pulse.com/:path*",

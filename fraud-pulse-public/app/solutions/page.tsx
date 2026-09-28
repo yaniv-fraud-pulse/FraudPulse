@@ -127,8 +127,7 @@ export default function Solutions() {
                 <p className="ai-answer text-[1rem] sm:text-[1.0625rem] leading-[1.7] max-w-[720px] mx-auto text-gray-600 mb-4">
                   {SOLUTIONS_ANSWER}
                 </p>
-                {/* AI/GEO freshness - in DOM for agents, hidden from visual UI */}
-                <PageUpdated date={PAGE_LAST_UPDATED.solutions} visible={false} />
+                <PageUpdated date={PAGE_LAST_UPDATED.solutions} />
               </Reveal>
             </div>
           </div>
