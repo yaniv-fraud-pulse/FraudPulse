@@ -171,6 +171,80 @@ export const alternativePages: AlternativePage[] = [
     relatedLabel: 'Best fraud prevention tools for Shopify',
   },
   {
+    slug: 'nofraud',
+    kicker: 'Compare',
+    title: 'The AI analyst next to',
+    titleAccent: 'NoFraud and SMB tools.',
+    excerpt:
+      'NoFraud, FraudLabs Pro, ClearSale, SEON, and Subuno score, review, or guarantee orders. FraudPulse is the AI analyst: it ranks which Radar, Protect, Flow, or Blockify rules to change on the stack you already run.',
+    answer:
+      'NoFraud, FraudLabs Pro, ClearSale, SEON, and Subuno score, review, or guarantee orders. FraudPulse is the AI analyst: it classifies chargebacks and ranks Radar, Protect, Flow, or Blockify changes without taking over checkout. Keep a review product if that is the buy. Use FraudPulse when you need which rules to change.',
+    seoTitle: 'FraudPulse vs NoFraud, FraudLabs Pro, ClearSale, SEON, and Subuno',
+    seoDescription:
+      'FraudPulse vs NoFraud and SMB fraud tools. Those products score or review orders. FraudPulse is the AI analyst that ranks Radar, Protect, Flow, and Blockify rule changes without replacing them.',
+    keywords:
+      'FraudPulse vs NoFraud, NoFraud alternative, FraudLabs Pro alternative, ClearSale alternative, SEON alternative, Subuno alternative, SMB fraud tools, AI fraud analyst',
+    competitorLabel: 'NoFraud, FraudLabs Pro, ClearSale, SEON, Subuno',
+    tableCaption: 'SMB fraud tools vs the AI analyst',
+    rows: [
+      {
+        label: 'Role',
+        competitor: 'Score, review, or guarantee orders at checkout',
+        fraudPulse: 'AI analyst: classify chargebacks and rank the next rule changes',
+      },
+      {
+        label: 'Checkout',
+        competitor: 'Often sits in the approval or review path',
+        fraudPulse: 'Does not take over checkout - you keep Radar, Protect, Flow, or Blockify',
+      },
+      {
+        label: 'Output',
+        competitor: 'Approve, review, or decline decisions',
+        fraudPulse: 'Ranked, specific rule or workflow changes with estimated capture and false-positive impact',
+      },
+      {
+        label: 'Pricing model',
+        competitor: 'Often per-order, review, or guarantee fees (confirm on each vendor site)',
+        fraudPulse: 'Published plans: $0.01/transaction or $199/mo Professional - not a cut of order value',
+      },
+      {
+        label: 'When to buy',
+        competitor: 'You want a review queue, extra scoring, or a guarantee product',
+        fraudPulse: 'You already have enforcement and need to know which settings to change',
+      },
+    ],
+    points: [
+      {
+        title: 'FraudPulse is not a NoFraud clone',
+        body: 'NoFraud and peers in this set - FraudLabs Pro, ClearSale, SEON, Subuno - are built to score or review orders. That can be the right buy. FraudPulse does a different job: it reads your chargeback mix and tells you which Radar, Protect, Flow, or Blockify rules to change. You keep control of checkout.',
+      },
+      {
+        title: 'Do not mix this set with Signifyd or Riskified',
+        body: 'Signifyd and Riskified are usually full platforms or guarantee contracts for a different buyer. This page is the SMB tool set. For that mid-market platform comparison, see FraudPulse vs Signifyd, NoFraud, and Riskified as a separate category - and use this page when the question is NoFraud, FraudLabs Pro, ClearSale, SEON, or Subuno.',
+      },
+      {
+        title: 'No invented competitor prices',
+        body: 'We do not invent NoFraud, FraudLabs Pro, ClearSale, SEON, or Subuno fees. Their sites list per-order, review, or guarantee pricing. FraudPulse publishes a per-transaction rate and a Professional subscription so cost is not a tax on every sale. Confirm peer pricing on their sites.',
+      },
+    ],
+    faqs: [
+      {
+        q: 'Does FraudPulse replace NoFraud?',
+        a: 'No. NoFraud scores or reviews orders. FraudPulse is the AI analyst alongside your stack: classify chargebacks, rank specific Radar, Protect, Flow, or Blockify changes, keep checkout. If you need a review queue or guarantee, NoFraud or a peer in this set can still be the right product.',
+      },
+      {
+        q: 'How is FraudPulse different from FraudLabs Pro, ClearSale, SEON, or Subuno?',
+        a: 'Those tools typically add screening, device or identity signals, or managed review. FraudPulse does not become your decision engine. It tells you which rules to change in tools you already run, with estimated fraud-capture and false-positive impact, after you connect Shopify, Stripe, or Adyen data.',
+      },
+      {
+        q: 'Should I pick NoFraud or FraudPulse?',
+        a: 'Pick NoFraud (or a peer) if you want another scoring or review layer at checkout. Pick FraudPulse if Radar, Protect, Flow, or Blockify already enforces and you need ranked, store-specific rule changes. Many merchants keep the enforcement tool and add FraudPulse as the analyst. It is not representment.',
+      },
+    ],
+    relatedHref: '/stack/',
+    relatedLabel: 'Using FraudPulse with Radar, Protect, Flow, Blockify, and Adyen',
+  },
+  {
     slug: 'payment-platform-tools',
     kicker: 'Compare',
     title: 'Make Radar, Protect, Flow, and Blockify',
@@ -241,8 +315,8 @@ export const alternativePages: AlternativePage[] = [
         a: 'It classifies why disputes happen on your account, then outputs a ranked list of Radar, Protect, Flow, or Blockify changes with estimated impact. You keep the engine; you stop guessing the configuration. Connect Shopify, Stripe, or Adyen in minutes with no engineering.',
       },
     ],
-    relatedHref: '/blog/fraudpulse-does-not-replace-stripe-radar-shopify-protect/',
-    relatedLabel: 'Why FraudPulse does not replace Radar or Protect',
+    relatedHref: '/stack/',
+    relatedLabel: 'Using FraudPulse with Radar, Protect, Flow, Blockify, and Adyen',
   },
 ];
 

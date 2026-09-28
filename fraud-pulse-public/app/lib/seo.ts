@@ -1,12 +1,13 @@
 import type { Metadata } from 'next';
 import { SITE_URL } from './site';
 
-/** Raster social image. X/LinkedIn ignore SVG logos. */
+/** Raster social image. X ignores SVG and often fails on transparent PNGs. */
 export const SOCIAL_IMAGE = {
-  url: '/og-image.png',
+  url: `${SITE_URL}/og-image.jpg`,
   width: 1200,
   height: 630,
   alt: 'FraudPulse - ranked fraud rules from your transaction data',
+  type: 'image/jpeg',
 } as const;
 
 type PageSeoInput = {
@@ -47,7 +48,14 @@ export function pageMetadata({
       card: 'summary_large_image',
       title,
       description,
-      images: [SOCIAL_IMAGE.url],
+      images: [
+        {
+          url: SOCIAL_IMAGE.url,
+          alt: SOCIAL_IMAGE.alt,
+          width: SOCIAL_IMAGE.width,
+          height: SOCIAL_IMAGE.height,
+        },
+      ],
     },
   };
 }

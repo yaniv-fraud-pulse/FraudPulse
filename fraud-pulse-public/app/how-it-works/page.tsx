@@ -177,7 +177,11 @@ export default function HowItWorks() {
                   Works with your stack
                 </p>
                 <p className="font-bold text-white text-[1.375rem] sm:text-[1.625rem] leading-[1.45] tracking-[-0.02em]">
-                  Keep Shopify, Stripe, or Adyen - and your fraud prevention tools. We help you use the data better.
+                  Keep Shopify, Stripe, or Adyen - and Radar, Protect, Flow, or Blockify. We help you use the data better.{' '}
+                  <Link href="/stack/" className="text-[#5ba8b4] hover:underline">
+                    See the stack page
+                  </Link>
+                  .
                 </p>
               </div>
             </Reveal>

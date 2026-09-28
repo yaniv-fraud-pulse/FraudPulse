@@ -22,6 +22,7 @@ export default function Footer() {
             <ul className="space-y-3">
               {[
                 { href: '/solutions/', label: 'Solutions' },
+                { href: '/stack/', label: 'Stack' },
                 { href: '/pricing/', label: 'Pricing' },
                 { href: '/faq/', label: 'FAQ' },
                 { href: '/webinar/', label: 'Webinar' },
@@ -39,7 +40,8 @@ export default function Footer() {
             <ul className="space-y-3">
               {[
                 { href: '/alternatives/manual-fraud-analyst/', label: 'Vs. In-House Analyst' },
-                { href: '/alternatives/smb-fraud-tools/', label: 'Vs. Signifyd & NoFraud' },
+                { href: '/alternatives/nofraud/', label: 'Vs. NoFraud & SMB Tools' },
+                { href: '/alternatives/smb-fraud-tools/', label: 'Vs. Signifyd & Riskified' },
                 { href: '/alternatives/payment-platform-tools/', label: 'Vs. Radar, Protect, Flow, Blockify' },
               ].map(({ href, label }) => (
                 <li key={href}>

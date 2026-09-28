@@ -46,6 +46,10 @@ export const siteFaqs: FaqItem[] = [
     a: 'Prevention stops disputes from being filed. Representment fights cases after they file - Chargeflow, Chargebacks911, Midigator, Justt, Ethoca, and Verifi sit in that category. Many stores need both, but a high dispute rate is a prevention problem first. FraudPulse is prevention and rule advice, not representment.',
   },
   {
+    q: 'Does FraudPulse replace NoFraud, FraudLabs Pro, ClearSale, SEON, or Subuno?',
+    a: 'No. Those SMB tools score, review, or guarantee orders. FraudPulse is the AI analyst: classify chargebacks, rank Radar, Protect, Flow, or Blockify changes, keep checkout. Keep a review or guarantee product if that is the buy. Use FraudPulse when you already enforce and need which rules to change.',
+  },
+  {
     q: 'How long does it take to get recommendations, and do I need engineers?',
     a: 'Most merchants connect in minutes with no engineering, then get actionable rule recommendations in days. FraudPulse analyzes transaction and chargeback data from Shopify, Stripe, or Adyen and returns ranked changes your risk or payments team can apply in the stack you already use.',
   },

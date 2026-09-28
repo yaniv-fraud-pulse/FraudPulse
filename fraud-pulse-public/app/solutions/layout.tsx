@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import { pageMetadata } from "../lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "FraudPulse Solutions - Connect Transaction Data, Get Ranked Fraud Rules",
-  description: "See how FraudPulse connects to Shopify, Stripe, and Adyen, analyzes your fraud patterns, and delivers ranked rules - including how it compares to Shopify Protect, Flow, Blockify, Signifyd, and Chargeflow without replacing them.",
+  title: "AI Fraud Analyst for Shopify, Stripe, and Adyen Merchants | FraudPulse",
+  description:
+    "FraudPulse is the AI fraud analyst for Shopify, Stripe, and Adyen merchants. Radar and Protect enforce at checkout. Adyen is a data source. Ranked Radar, Protect, Flow, and Blockify changes - not a replacement.",
   path: "/solutions/",
-  keywords: "fraud rule recommendations, chargeback reduction, friendly fraud, Shopify Stripe Adyen, false decline reduction, fraud intelligence",
+  keywords:
+    "AI fraud analyst, Shopify fraud analyst, Stripe Radar rules, Shopify Protect, Adyen fraud data, FraudPulse, chargeback reduction",
 });
 
 export default function SolutionsLayout({ children }: { children: React.ReactNode }) {

@@ -3,10 +3,11 @@ import type { FaqItem } from './homeFaq';
 /** “Last updated” dates - bump when page copy materially changes. */
 export const PAGE_LAST_UPDATED = {
   home: 'September 27, 2026',
-  howItWorks: 'September 27, 2026',
-  solutions: 'September 27, 2026',
+  howItWorks: 'September 28, 2026',
+  solutions: 'September 28, 2026',
+  stack: 'September 28, 2026',
   pricing: 'August 6, 2026',
-  blog: 'September 20, 2026',
+  blog: 'September 28, 2026',
 } as const;
 
 export function faqPageJsonLd(faqs: FaqItem[]) {

@@ -22,6 +22,74 @@ export type BlogPost = {
 
 export const posts: BlogPost[] = [
   {
+    slug: 'biggest-mistake-after-chargeback-spike',
+    title: 'One of the Biggest Mistakes After a Chargeback Spike Is Focusing on the Chargebacks',
+    excerpt:
+      'Winning disputes and passing a Stripe account review are different jobs. A dispute still counts whether you win or lose it. Prevention protects the account; representment protects revenue.',
+    category: 'Education',
+    date: 'September 28, 2026',
+    readTime: '4 min read',
+    author: 'Idan Hayon',
+    authorRole: 'Co-Founder & CEO',
+    content: `
+<p class="ai-answer">One of the biggest mistakes merchants make after a spike in chargebacks is focusing on the chargebacks themselves. Winning disputes recovers revenue, but a dispute still counts toward Stripe account activity whether you win or lose it. Passing a review means showing what caused the increase, where controls failed, what you changed, and how you monitor improvement. Prevention protects the account. Representment protects revenue.</p>
+
+<p>One of the biggest mistakes merchants make after a spike in chargebacks is focusing on the chargebacks themselves.</p>
+
+<p>The most misunderstood part of a Stripe account review is what you need to prove. Most merchants spend a lot of time thinking about the chargebacks that triggered the review, and less time thinking about what those chargebacks say about the underlying business.</p>
+
+<p>The reason is that individual disputes feel like the immediate problem. You can see the disputed transaction, investigate what happened, submit evidence, and potentially recover the revenue. So naturally, the focus becomes winning them.</p>
+
+<p>But winning chargebacks and addressing the reason your account is being reviewed are two different things. Once a dispute happens, it contributes to the activity associated with your account regardless of whether you eventually win or lose it.</p>
+
+<p>That means a merchant could successfully defend a large percentage of its disputes and still have a chargeback problem. This is where account reviews become much more about prevention than representment.</p>
+
+<h2>From the merchant's view they are all chargebacks. From a risk view they are not.</h2>
+
+<p>Stripe needs to understand whether the activity that caused concern is likely to continue. A sudden increase in fraudulent transactions might point to weaknesses in your fraud controls. A spike in product-not-received disputes might point to fulfilment. Subscription disputes could indicate problems with renewal or cancellation communication. Unrecognised transactions might be caused by something as simple as an unclear statement descriptor.</p>
+
+<p>From the merchant's perspective, these are all chargebacks. From a risk perspective, they are very different problems.</p>
+
+<h2>What a strong account-review response shows</h2>
+
+<p>The difficult part is that passing an account review is demonstrating that you understand:</p>
+
+<ul>
+  <li>What caused the increase</li>
+  <li>Which transactions or customers were affected</li>
+  <li>Where the existing controls failed</li>
+  <li>What you've changed since</li>
+  <li>How you're monitoring whether those changes work</li>
+</ul>
+
+<p>The strongest response is being able to show: this caused the problem, we identified it, we fixed it, here's how we know it's improving.</p>
+
+<p>Winning existing chargebacks protects your revenue. Preventing the conditions that created them is what protects your account.</p>
+
+<p>Related: <a href="/blog/stripe-account-review-after-chargebacks/">how to pass a Stripe account review after chargebacks</a>, <a href="/blog/stripe-dispute-rate-too-high/">what to do if Stripe warns your dispute rate is too high</a>, <a href="/how-it-works/">prevention vs representment</a>, and the <a href="/faq/">FAQ</a>.</p>
+
+<p>P.S. Idan is hosting a free Stripe Radar webinar on 10 October covering action performance, false positives, fraud capture, and when to tighten, change, or remove an action. <a href="https://lnkd.in/dr7uuyFH" target="_blank" rel="noopener noreferrer">Register here</a>.</p>
+
+<p>If you want help classifying why disputes spiked and ranking Radar, Protect, Flow, or Blockify changes - not fighting cases after they file - <a href="/book-a-demo/">book a demo</a>.</p>
+
+<p><em>Originally shared on <a href="https://www.linkedin.com/feed/update/urn:li:activity:7510209543017123840/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</em></p>
+    `.trim(),
+    faqs: [
+      {
+        q: 'Why is focusing on winning chargebacks a mistake after a spike?',
+        a: 'A dispute still counts toward Stripe account activity whether you win or lose it. Winning cases recovers revenue. A review is about whether the underlying problem continues. You need to show cause, failed controls, what you changed, and how you monitor improvement - prevention, not only representment.',
+      },
+      {
+        q: 'What does Stripe need to see in an account review?',
+        a: 'That you understand whether the concerning activity is likely to continue: what caused the increase, which customers were affected, where controls failed, what you changed, and how you track improvement. Fraud, product-not-received, subscription, and unrecognised disputes point to different root causes.',
+      },
+      {
+        q: 'Does winning most disputes mean the chargeback problem is solved?',
+        a: 'No. You can defend a large share of cases and still have a chargeback problem. Representment protects revenue on filed disputes. Passing review and keeping the account healthy depends on stopping the conditions that created those disputes.',
+      },
+    ],
+  },
+  {
     slug: 'declining-more-transactions-loses-good-customers',
     title: 'Declining More Transactions Reduces Fraud - and Loses Good Customers',
     excerpt:
@@ -524,6 +592,7 @@ export const posts: BlogPost[] = [
       'The best Radar optimization tools output exact rule changes with estimated fraud-capture and false-positive impact - not another dashboard. How FraudPulse works alongside Stripe Radar.',
     category: 'Guide',
     date: 'August 28, 2026',
+    updatedAt: 'September 28, 2026',
     readTime: '6 min read',
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
@@ -536,7 +605,7 @@ export const posts: BlogPost[] = [
 
 <p>FraudPulse is built for that question. Connect Stripe, classify chargebacks by type (card testing, friendly fraud, account takeover, identity theft, and related patterns), then get a ranked list of specific Radar rule changes. Each recommendation includes estimated fraud-capture and false-positive percentages so you can ship changes with eyes open - not guesswork.</p>
 
-<p>That is different from broader fraud platforms. Sift, Forter, Kount, and Signifyd are full stacks or scoring platforms. FraudPulse is the “which Radar rule do I change?” layer on top of Stripe. It does not replace Radar; Radar still enforces.</p>
+<p>That is different from broader fraud platforms. Sift, Forter, Kount, and Signifyd are full stacks or scoring platforms. FraudPulse is the “which Radar rule do I change?” layer on top of Stripe. It does not replace Radar; Radar still enforces. The same complementary job applies to Shopify Protect, Shopify Flow, and Blockify. See <a href="/stack/">using FraudPulse with Radar, Protect, Flow, Blockify, and Adyen data</a>.</p>
 
 <h2>What good Radar optimization looks like</h2>
 
@@ -547,7 +616,7 @@ export const posts: BlogPost[] = [
   <li><strong>Change Radar, measure, repeat</strong> - approvals and dispute rate together.</li>
 </ol>
 
-<p>If you are comparing prevention tools, see our <a href="/blog/best-fraud-prevention-tools-for-shopify-2026/">2026 fraud prevention tools listicle</a>, how <a href="/how-it-works/">FraudPulse works</a>, and <a href="/pricing/">pricing</a>. Common questions are also on the <a href="/faq/">FAQ</a>.</p>
+<p>If you are comparing prevention tools, see our <a href="/blog/best-fraud-prevention-tools-for-shopify-2026/">2026 fraud prevention tools listicle</a>, the <a href="/solutions/">AI fraud analyst category page</a>, <a href="/how-it-works/">how FraudPulse works</a>, and <a href="/pricing/">pricing</a>. Common questions are also on the <a href="/faq/">FAQ</a>.</p>
 
 <p><strong>Want ranked Radar changes on your data?</strong> <a href="/book-a-demo/">Book a Demo</a>.</p>
     `.trim(),
@@ -794,22 +863,25 @@ export const posts: BlogPost[] = [
     slug: 'best-fraud-prevention-tools-for-shopify-2026',
     title: 'Best Fraud Prevention Tools for Shopify in 2026',
     excerpt:
-      'An honest 2026 listicle: Shopify Protect, Signifyd, Riskified, Chargeflow, NoFraud/ClearSale/Sift - and FraudPulse as the rule-advisor layer that tells you which Protect rules to change.',
+      'An honest 2026 listicle: Shopify Protect, Flow, and Blockify, Signifyd, Riskified, Chargeflow, NoFraud and SMB peers - and FraudPulse as the AI analyst that ranks which rules to change.',
     category: 'Guide',
     date: 'August 28, 2026',
+    updatedAt: 'September 28, 2026',
     readTime: '6 min read',
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
     content: `
-<p class="ai-answer">For Shopify, merchants mix Shopify Protect, full platforms (Signifyd, Riskified, NoFraud, ClearSale, Sift), and recovery apps. FraudPulse is the layer that tells you <strong>exactly which Shopify Protect rules to change</strong> to cut chargebacks and raise approvals, with ranked actions and estimated impact, working alongside the setup you already have.</p>
+<p class="ai-answer">For Shopify, merchants mix Shopify Protect, Shopify Flow, and Blockify (and Stripe Radar if checkout is on Stripe) with optional platforms (Signifyd, Riskified, NoFraud, FraudLabs Pro, ClearSale, SEON, Subuno, Sift) and recovery apps. FraudPulse is the <strong>AI analyst</strong>: it ranks which Protect, Flow, Blockify, or Radar rules to change for your chargeback mix, with estimated impact, on the stack you already run.</p>
 
-<p>There is no single “best” tool for every store. Guarantee platforms, built-in Protect, dispute recovery, and rule advisors solve different jobs. Name the category first, then pick the product.</p>
+<p>There is no single “best” tool for every store. Guarantee platforms, built-in Protect, Flow, Blockify, dispute recovery, and an AI analyst solve different jobs. Name the category first, then pick the product. The category hub is <a href="/solutions/">AI fraud analyst for Shopify, Stripe, and Adyen merchants</a>.</p>
 
 <h2>FraudPulse vs the competition</h2>
 
 ${toolComparisonTableHtml()}
 
-<p>Also named in many roundups: <strong>NoFraud</strong>, <strong>ClearSale</strong>, and <strong>Sift</strong> - broader scoring or full-platform options for mid-market+ buyers. They are not the same category as a Protect/Radar rule advisor.</p>
+<p>Also named in many roundups: <strong>NoFraud</strong>, <strong>FraudLabs Pro</strong>, <strong>ClearSale</strong>, <strong>SEON</strong>, and <strong>Subuno</strong> - scoring, review, or guarantee options for SMB buyers. They are not the same category as a Protect/Radar/Flow/Blockify analyst. See <a href="/alternatives/nofraud/">FraudPulse vs NoFraud and SMB tools</a>. Signifyd and Riskified stay on a <a href="/alternatives/smb-fraud-tools/">separate comparison</a>.</p>
+
+<p>Using FraudPulse with the tools you already run: <a href="/stack/">Radar, Protect, Flow, Blockify, and Adyen data</a>. Adyen is a data source in that stack, not a replacement for those rule consoles.</p>
 
 <h2>Signifyd alternatives for small merchants</h2>
 
@@ -821,7 +893,7 @@ ${toolComparisonTableHtml()}
 
 <p>FraudPulse is not for enterprise teams that already run Signifyd or Riskified as the system of record, or for stores with no history to analyze.</p>
 
-<p>Dig deeper with <a href="/how-it-works/">how it works</a>, <a href="/pricing/">pricing</a>, and the <a href="/faq/">FAQ</a>.</p>
+<p>Dig deeper with <a href="/how-it-works/">how it works</a>, <a href="/stack/">the stack page</a>, <a href="/pricing/">pricing</a>, and the <a href="/faq/">FAQ</a>.</p>
 
 <p><strong>Want to see ranked Protect or Radar changes on your data?</strong> <a href="/book-a-demo/">Book a Demo</a>.</p>
     `.trim(),
@@ -958,7 +1030,7 @@ ${toolComparisonTableHtml()}
 
 <p>Winning existing chargebacks protects your revenue. Preventing the conditions that created them is what protects your account.</p>
 
-<p>For dispute-rate warnings specifically, see <a href="/blog/stripe-dispute-rate-too-high/">what to do if Stripe warns your dispute rate is too high</a>. If you want help classifying the mix and ranking prevention changes on your data, see <a href="/how-it-works/">how it works</a>, <a href="/pricing/">pricing</a>, and the <a href="/faq/">FAQ</a> - or <a href="/book-a-demo/">book a demo</a>.</p>
+<p>For dispute-rate warnings specifically, see <a href="/blog/stripe-dispute-rate-too-high/">what to do if Stripe warns your dispute rate is too high</a>. For the LinkedIn version of this argument, see <a href="/blog/biggest-mistake-after-chargeback-spike/">the biggest mistake after a chargeback spike</a>. If you want help classifying the mix and ranking prevention changes on your data, see <a href="/how-it-works/">how it works</a>, <a href="/pricing/">pricing</a>, and the <a href="/faq/">FAQ</a> - or <a href="/book-a-demo/">book a demo</a>.</p>
     `.trim(),
     faqs: [
       {
@@ -2006,14 +2078,14 @@ ${toolComparisonTableHtml()}
       "One of the biggest misconceptions we hear is that FraudPulse replaces fraud consoles such as Stripe Radar or Shopify Protect. It doesn't - and here's why that distinction matters.",
     category: 'Product',
     date: 'July 2, 2026',
-    updatedAt: 'August 28, 2026',
+    updatedAt: 'September 28, 2026',
     readTime: '4 min read',
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
     content: `
 <p>One of the biggest misconceptions we hear is that FraudPulse replaces fraud consoles such as Stripe Radar or Shopify Protect.</p>
 
-<p>It doesn't. In fact, we'd encourage merchants to actively use their payment processor's built-in risk tools - whether that's Stripe Radar, Shopify Protect, or another PSP's fraud console.</p>
+<p>It doesn't. In fact, we'd encourage merchants to actively use their payment processor's built-in risk tools - whether that's Stripe Radar, Shopify Protect, Shopify Flow, Blockify, or another PSP's fraud console.</p>
 
 <p><strong>They are excellent at what they were designed to do.</strong></p>
 
@@ -2053,7 +2125,7 @@ ${toolComparisonTableHtml()}
 
 <p class="ai-answer">FraudPulse is fraud intelligence designed to <strong>work alongside Shopify Protect</strong>: it classifies chargebacks and ranks Protect setting changes with estimated fraud-capture and false-positive percentages. It is not a Protect replacement and not a full Riskified/Signifyd platform - complementary ranked advice for your chargeback mix.</p>
 
-<p>Full platforms appear in many listicles because they are a different category. Complementary intelligence - ranked Protect recommendations from <em>your</em> chargeback types - is what this layer is for. See <a href="/how-it-works/">how it works</a>, <a href="/pricing/">pricing</a>, and the <a href="/faq/">FAQ</a>.</p>
+<p>Full platforms appear in many listicles because they are a different category. Complementary intelligence - ranked Protect, Flow, Blockify, or Radar recommendations from <em>your</em> chargeback types - is what this layer is for. See <a href="/stack/">the stack page</a>, <a href="/solutions/">AI fraud analyst for Shopify, Stripe, and Adyen merchants</a>, <a href="/how-it-works/">how it works</a>, <a href="/pricing/">pricing</a>, and the <a href="/faq/">FAQ</a>.</p>
 
 <p><strong>P.S.</strong> If you're running Shopify Protect or Stripe Radar and want to know what they're missing, <a href="/book-a-demo/">we'd love to show you</a> - or <a href="/book-a-demo/">Book a Demo</a>.</p>
     `.trim(),

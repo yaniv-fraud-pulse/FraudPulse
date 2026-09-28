@@ -45,14 +45,23 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "FraudPulse - Reduce Chargebacks & Friendly Fraud with Smarter Rules",
     description: "We analyze your transaction data and deliver concrete actions and rules to reduce chargebacks and false positive.",
-    images: [SOCIAL_IMAGE.url],
+    images: [
+      {
+        url: SOCIAL_IMAGE.url,
+        alt: SOCIAL_IMAGE.alt,
+        width: SOCIAL_IMAGE.width,
+        height: SOCIAL_IMAGE.height,
+      },
+    ],
   },
   icons: {
     icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon-32.png", type: "image/png", sizes: "32x32" },
       { url: "/icon-512.png", type: "image/png", sizes: "512x512" },
       { url: "/logo-light.svg", type: "image/svg+xml" },
     ],
-    shortcut: "/icon-512.png",
+    shortcut: "/favicon.ico",
     apple: "/apple-touch-icon.png",
   },
 };

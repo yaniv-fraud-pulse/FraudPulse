@@ -18,7 +18,7 @@ export default function FaqPage() {
       <Header />
 
       <main className="flex-grow">
-        <PageUpdated date="September 27, 2026" visible={false} />
+        <PageUpdated date="September 28, 2026" visible={false} />
 
         <section className="relative overflow-hidden pt-8 pb-12 sm:pb-16 px-5 sm:px-10 bg-white">
           <div

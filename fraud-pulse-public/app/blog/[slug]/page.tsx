@@ -47,7 +47,14 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: post.title,
       description: post.excerpt,
-      images: [SOCIAL_IMAGE.url],
+      images: [
+        {
+          url: SOCIAL_IMAGE.url,
+          alt: SOCIAL_IMAGE.alt,
+          width: SOCIAL_IMAGE.width,
+          height: SOCIAL_IMAGE.height,
+        },
+      ],
     },
   };
 }

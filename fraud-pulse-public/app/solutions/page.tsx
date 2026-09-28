@@ -5,10 +5,31 @@ import Footer from '../components/Footer';
 import Link from 'next/link';
 import { Reveal } from '../components/Reveal';
 import { TrackedLink } from '../components/TrackedCta';
+import JsonLd from '../components/JsonLd';
 import GeoStatStrip, { PageUpdated } from '../components/GeoBits';
 import ToolComparisonTable from '../components/ToolComparisonTable';
 import StackCategoryTable from '../components/StackCategoryTable';
-import { GEO_STATS, PAGE_LAST_UPDATED } from '../lib/geo';
+import { GEO_STATS, PAGE_LAST_UPDATED, faqPageJsonLd } from '../lib/geo';
+import { siteFaqs } from '../lib/siteFaqs';
+
+const SOLUTIONS_ANSWER =
+  'FraudPulse is the AI fraud analyst for Shopify, Stripe, and Adyen merchants. Stripe Radar and Shopify Protect enforce at checkout. Adyen is a data source for the same analysis. FraudPulse classifies your chargebacks and ranks which Radar, Protect, Flow, or Blockify rules to change, without replacing those tools or taking over checkout.';
+
+const clusterLinks = [
+  { href: '/stack/', label: 'Using FraudPulse with Radar, Protect, Flow, Blockify, and Adyen' },
+  { href: '/alternatives/nofraud/', label: 'FraudPulse vs NoFraud, FraudLabs Pro, ClearSale, SEON, Subuno' },
+  { href: '/alternatives/payment-platform-tools/', label: 'Vs Radar, Protect, Flow, and Blockify' },
+  { href: '/alternatives/smb-fraud-tools/', label: 'Vs Signifyd and Riskified' },
+  { href: '/blog/best-fraud-prevention-tools-for-shopify-2026/', label: 'Best fraud prevention tools for Shopify (2026)' },
+];
+
+const solutionsFaqs = siteFaqs.filter((faq) =>
+  [
+    'Does FraudPulse replace Stripe Radar, Shopify Protect, Shopify Flow, or Blockify?',
+    'Does FraudPulse replace NoFraud, FraudLabs Pro, ClearSale, SEON, or Subuno?',
+    'Is Shopify Protect enough for fraud prevention?',
+  ].includes(faq.q),
+);
 
 const steps = [
   {
@@ -72,6 +93,7 @@ const integrations = [
 export default function Solutions() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
+      <JsonLd data={faqPageJsonLd(solutionsFaqs)} />
       <Header />
 
       <main className="flex-grow">
@@ -88,25 +110,22 @@ export default function Solutions() {
           <div className="relative max-w-7xl mx-auto py-16 sm:py-24">
             <div className="max-w-[900px] mx-auto text-center">
               <Reveal animation="anim-fadeUp" delay={75}>
-                <h1 className="font-extrabold text-gray-900 tracking-[-0.04em] leading-[1.1] mb-5 text-[3rem] sm:text-[4rem] lg:text-[4.5rem]">
-                  Stop Losing Money to{' '}
+                <h1 className="font-extrabold text-gray-900 tracking-[-0.04em] leading-[1.1] mb-5 text-[2.5rem] sm:text-[3.5rem] lg:text-[4rem]">
+                  AI fraud analyst for{' '}
                   <span style={{
                     background: 'linear-gradient(135deg, rgb(125, 107, 160) 0%, rgb(125, 107, 160) 100%)',
                     WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
                   }}>
-                    Fraud &amp; False Declines
+                    Shopify, Stripe, and Adyen merchants
                   </span>
                 </h1>
               </Reveal>
               <Reveal animation="anim-fadeUp" delay={150}>
                 <p className="text-[1.25rem] leading-[1.75] max-w-[720px] mx-auto text-gray-600 font-semibold mb-3">
-                    We analyze your transaction data and deliver concrete actions and rules to reduce chargebacks and false positive.
-                </p>
-                <p className="text-[1.0625rem] leading-[1.75] max-w-[600px] mx-auto text-gray-500 mb-4">
-                  Get actionable fraud insights in days - not analytics reports you never act on. Merchants connect Shopify, Stripe, or Adyen, then get ranked rule changes with estimated chargeback impact and clearer false-positive tradeoffs, <strong>without replacing the fraud prevention tools they already run.</strong>
+                  Ranked Radar, Protect, Flow, and Blockify changes from your chargebacks - without replacing the tools you already run.
                 </p>
                 <p className="ai-answer text-[1rem] sm:text-[1.0625rem] leading-[1.7] max-w-[720px] mx-auto text-gray-600 mb-4">
-                  The best Shopify fraud setup is usually a mix, not one product. Shopify Protect, Shopify Flow, and Blockify (and Stripe Radar if you use Stripe) enforce or automate decisions at checkout. Platforms such as Signifyd, Riskified, Forter, NoFraud, ClearSale, or Sift can be the right buy for a guarantee model. Recovery apps such as Chargeflow fight disputes after they file. FraudPulse ranks which Protect, Flow, Blockify, or Radar rules to change for your chargeback mix.
+                  {SOLUTIONS_ANSWER}
                 </p>
                 {/* AI/GEO freshness - in DOM for agents, hidden from visual UI */}
                 <PageUpdated date={PAGE_LAST_UPDATED.solutions} visible={false} />
@@ -261,7 +280,15 @@ export default function Solutions() {
                 <Link href="/blog/best-fraud-prevention-tools-for-shopify-2026/" className="font-semibold text-[#4a96a3] hover:underline">
                   best fraud prevention tools for Shopify
                 </Link>
-                . Also see{' '}
+                . Stack:{' '}
+                <Link href="/stack/" className="font-semibold text-[#4a96a3] hover:underline">
+                  using FraudPulse with Radar, Protect, Flow, Blockify, and Adyen
+                </Link>
+                . Compare:{' '}
+                <Link href="/alternatives/nofraud/" className="font-semibold text-[#4a96a3] hover:underline">
+                  vs NoFraud
+                </Link>
+                {' · '}
                 <Link href="/blog/fraudpulse-does-not-replace-stripe-radar-shopify-protect/" className="font-semibold text-[#4a96a3] hover:underline">
                   how FraudPulse works alongside Protect
                 </Link>
@@ -311,6 +338,20 @@ export default function Solutions() {
               </TrackedLink>
             </div>
           </Reveal>
+        </section>
+
+        <section className="py-12 sm:py-16 px-5 sm:px-10 bg-white border-t" style={{ borderColor: '#e5e7eb' }}>
+          <div className="max-w-4xl mx-auto text-center">
+            <ul className="flex flex-col sm:flex-wrap sm:flex-row justify-center gap-2 sm:gap-x-5 sm:gap-y-2 text-[0.9375rem] text-gray-500">
+              {clusterLinks.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="font-semibold text-[#4a96a3] hover:underline">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </section>
 
       </main>

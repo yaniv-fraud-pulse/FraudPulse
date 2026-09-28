@@ -24,7 +24,7 @@ export const COMPARISON_COLUMNS = [
   {
     key: 'smb',
     label: 'SMB Fraud Prevention',
-    sub: 'NoFraud · ClearSale',
+    sub: 'NoFraud · FraudLabs Pro · ClearSale',
     highlight: false,
   },
   {
