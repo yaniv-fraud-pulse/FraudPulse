@@ -52,13 +52,13 @@ export default function HowItWorks() {
                 <PageUpdated date={PAGE_LAST_UPDATED.howItWorks} />
               </Reveal>
 
-              {/* Data sources → FraudPulse → recommended rules */}
+              {/* Data sources → FraudPulse → rule consoles */}
               <Reveal animation="anim-fadeUp" delay={225}>
-                <div className="mt-12 sm:mt-16 max-w-2xl mx-auto">
+                <div className="mt-12 sm:mt-16 max-w-3xl mx-auto">
                   <p className="text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-4 text-[#5ba8b4]">
                     Transaction data in
                   </p>
-                  <div className="grid grid-cols-3 gap-3 mb-2">
+                  <div className="grid grid-cols-3 gap-3 mb-2 max-w-2xl mx-auto">
                     {[
                       { name: 'Shopify', slug: 'shopify', color: '95BF47' },
                       { name: 'Stripe', slug: 'stripe', color: '635BFF' },
@@ -78,7 +78,7 @@ export default function HowItWorks() {
                     ))}
                   </div>
 
-                  <svg className="w-full h-[56px] my-1" viewBox="0 0 400 56" fill="none" aria-hidden>
+                  <svg className="w-full max-w-2xl mx-auto h-[56px] my-1" viewBox="0 0 400 56" fill="none" aria-hidden>
                     <path className="flow-path-split" d="M200 4 L200 52" />
                     <path className="flow-path-split-animated" d="M200 4 L200 52" />
                   </svg>
@@ -102,6 +102,63 @@ export default function HowItWorks() {
                     </div>
                     <span className="text-[0.9375rem] font-bold text-gray-900">FraudPulse</span>
                     <span className="text-[0.7rem] text-[#5ba8b4] uppercase tracking-wider font-semibold">Rules &amp; actions out</span>
+                  </div>
+
+                  <div className="flex justify-center h-7" aria-hidden>
+                    <div className="flow-connector-vertical flow-connector-vertical-delay h-full" />
+                  </div>
+
+                  <div className="grid grid-cols-4 gap-3">
+                    {[
+                      { name: 'Shopify Flow', logo: '/logos/shopify-flow.webp', fit: 'cover' as const },
+                      { name: 'Adyen RevenueProtect', logo: '/logos/adyen-revenueprotect.webp', fit: 'cover' as const },
+                      { name: 'Stripe Radar', logo: '/logos/stripe-radar.png', fit: 'contain' as const },
+                      { name: 'Blockify', logo: '/logos/blockify.png', fit: 'contain' as const },
+                    ].map(({ name, logo, fit }, i) => (
+                      <div key={name} className="flex flex-col items-center min-w-0">
+                        <div className="relative w-full h-8 mb-1" aria-hidden>
+                          {i < 3 && (
+                            <div
+                              className="absolute top-0 left-1/2 h-[2px] overflow-hidden rounded-full"
+                              style={{
+                                width: 'calc(100% + 0.75rem)',
+                                background: 'linear-gradient(90deg, rgba(91,168,180,0.55), rgba(91,168,180,0.2))',
+                              }}
+                            >
+                              <span
+                                className="absolute inset-y-0 left-0 w-2/5"
+                                style={{
+                                  background: 'linear-gradient(90deg, transparent, #5ba8b4, transparent)',
+                                  animation: 'flowDot 2.2s ease-in-out 0.9s infinite',
+                                }}
+                              />
+                            </div>
+                          )}
+                          <div className="flow-connector-vertical flow-connector-vertical-delay absolute top-0 left-1/2 -translate-x-1/2 h-full" />
+                        </div>
+                        <div
+                          className="flex w-full flex-col items-center gap-2 rounded-[14px] px-2 sm:px-3 py-4 border bg-white card-hover"
+                          style={{ borderColor: '#e5e7eb', boxShadow: '0 4px 20px rgba(0,0,0,0.06)' }}
+                        >
+                          <div
+                            className={
+                              name === 'Stripe Radar'
+                                ? 'relative w-[5.25rem] sm:w-24 h-12 rounded-[10px] overflow-hidden border border-gray-100 bg-[#0A2540]'
+                                : 'relative w-12 h-12 rounded-[10px] overflow-hidden border border-gray-100 bg-gray-50'
+                            }
+                          >
+                            <Image
+                              src={logo}
+                              alt={`${name} logo`}
+                              fill
+                              className={fit === 'cover' ? 'object-cover' : 'object-contain'}
+                              sizes={name === 'Stripe Radar' ? '96px' : '48px'}
+                            />
+                          </div>
+                          <span className="text-[0.7rem] sm:text-[0.8125rem] font-semibold text-gray-800 text-center leading-tight">{name}</span>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </Reveal>

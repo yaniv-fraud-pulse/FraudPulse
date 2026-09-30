@@ -235,12 +235,15 @@ html {
   stroke-linecap: round;
 }
 .flow-path-split-animated {
-  stroke: url(#flowGradient);
+  stroke: #5ba8b4;
   stroke-width: 2;
   fill: none;
   stroke-linecap: round;
   stroke-dasharray: 8 12;
   animation: flowPathDash 1.8s linear infinite;
+}
+.flow-path-split-out {
+  animation-delay: 0.9s;
 }
 @keyframes flowPathDash {
   to { stroke-dashoffset: -40; }
