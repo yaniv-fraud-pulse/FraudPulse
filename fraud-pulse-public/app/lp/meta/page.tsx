@@ -44,7 +44,7 @@ export default function MetaLongLanding() {
           </Reveal>
           <Reveal animation="anim-fadeUp" delay={150}>
             <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.75] text-gray-500 mb-8">
-              You are probably losing money... in both directions.
+              You are probably losing money - in both directions.
             </p>
           </Reveal>
           <Reveal animation="anim-fadeUp" delay={225}>
