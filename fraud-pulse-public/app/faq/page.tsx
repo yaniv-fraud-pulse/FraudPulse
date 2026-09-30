@@ -40,7 +40,7 @@ export default function FaqPage() {
             </Reveal>
             <Reveal animation="anim-fadeUp" delay={150}>
               <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.75] text-gray-500 max-w-[640px] mx-auto mb-4">
-                How FraudPulse works alongside Stripe Radar, Shopify Protect, Shopify Flow, and Blockify - ranked rule changes,
+                How FraudPulse works alongside Stripe Radar, Shopify Flow, Blockify, and Adyen RevenueProtect - ranked rule changes,
                 chargebacks, friendly vs real fraud, and prevention vs representment.
               </p>
               <PageUpdated date={PAGE_LAST_UPDATED.faq} />

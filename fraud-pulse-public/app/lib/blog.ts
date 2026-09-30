@@ -524,7 +524,7 @@ export const posts: BlogPost[] = [
       'The best Radar optimization tools output exact rule changes with estimated fraud-capture and false-positive impact - not another dashboard. How FraudPulse works alongside Stripe Radar.',
     category: 'Guide',
     date: 'August 28, 2026',
-    updatedAt: 'September 28, 2026',
+    updatedAt: 'September 30, 2026',
     readTime: '6 min read',
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
@@ -537,7 +537,7 @@ export const posts: BlogPost[] = [
 
 <p>FraudPulse is built for that question. Connect Stripe, classify chargebacks by type (card testing, friendly fraud, account takeover, identity theft, and related patterns), then get a ranked list of specific Radar rule changes. Each recommendation includes estimated fraud-capture and false-positive percentages so you can ship changes with eyes open - not guesswork.</p>
 
-<p>That is different from broader fraud platforms. Sift, Forter, Kount, and Signifyd are full stacks or scoring platforms. FraudPulse is the “which Radar rule do I change?” layer on top of Stripe. It does not replace Radar; Radar still enforces. The same complementary job applies to Shopify Protect, Shopify Flow, and Blockify. See <a href="/stack/">using FraudPulse with Radar, Protect, Flow, Blockify, and Adyen data</a>.</p>
+<p>That is different from broader fraud platforms. Sift, Forter, Kount, and Signifyd are full stacks or scoring platforms. FraudPulse is the “which Radar rule do I change?” layer on top of Stripe. It does not replace Radar; Radar still enforces. The same complementary job applies to Shopify Flow and Blockify. See <a href="/stack/">using FraudPulse with Radar, Flow, Blockify, and RevenueProtect</a>.</p>
 
 <h2>What good Radar optimization looks like</h2>
 
@@ -724,7 +724,7 @@ export const posts: BlogPost[] = [
       'Card testing uses your Shopify checkout to check stolen cards at scale. Spot the pattern, use velocity and bot controls, and treat it as behaviour across many attempts - not one low-value decline.',
     category: 'Guide',
     date: 'August 28, 2026',
-    updatedAt: 'September 9, 2026',
+    updatedAt: 'September 30, 2026',
     readTime: '6 min read',
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
@@ -774,7 +774,7 @@ export const posts: BlogPost[] = [
 
 <p>See also <a href="/blog/how-to-reduce-chargebacks-on-shopify-2026/">how to reduce chargebacks on Shopify</a>, <a href="/how-it-works/">how it works</a>, <a href="/pricing/">pricing</a>, and the <a href="/faq/">FAQ</a>.</p>
 
-<p>If you want help spotting testing patterns and ranking Protect or Radar changes on your data, <a href="/book-a-demo/">book a demo</a>.</p>
+<p>If you want help spotting testing patterns and ranking Radar, Flow, Blockify, or RevenueProtect changes on your data, <a href="/book-a-demo/">book a demo</a>.</p>
     `.trim(),
     faqs: [
       {
@@ -795,29 +795,29 @@ export const posts: BlogPost[] = [
     slug: 'best-fraud-prevention-tools-for-shopify-2026',
     title: 'Best Fraud Prevention Tools for Shopify in 2026',
     excerpt:
-      'An honest 2026 listicle: Shopify Protect, Flow, and Blockify, Signifyd, Riskified, Chargeflow, NoFraud and SMB peers - and FraudPulse as the AI analyst that ranks which rules to change.',
+      'An honest 2026 listicle: Shopify Flow and Blockify, Signifyd, Riskified, Chargeflow, NoFraud and SMB peers - and FraudPulse as the AI analyst that ranks which rules to change.',
     category: 'Guide',
     date: 'August 28, 2026',
-    updatedAt: 'September 28, 2026',
+    updatedAt: 'September 30, 2026',
     readTime: '6 min read',
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
     content: `
-<p class="ai-answer">For Shopify, merchants mix Shopify Protect, Shopify Flow, and Blockify (and Stripe Radar if checkout is on Stripe) with optional platforms (Signifyd, Riskified, NoFraud, FraudLabs Pro, ClearSale, SEON, Subuno, Sift) and recovery apps. FraudPulse is the <strong>AI analyst</strong>: it ranks which Protect, Flow, Blockify, or Radar rules to change for your chargeback mix, with estimated impact, on the stack you already run.</p>
+<p class="ai-answer">For Shopify, merchants mix Shopify Flow and Blockify (and Stripe Radar if checkout is on Stripe) with optional platforms (Signifyd, Riskified, NoFraud, FraudLabs Pro, ClearSale, SEON, Subuno, Sift) and recovery apps. FraudPulse is the <strong>AI analyst</strong>: it ranks which Radar, Flow, Blockify, or RevenueProtect rules to change for your chargeback mix, with estimated impact, on the stack you already run.</p>
 
-<p>There is no single “best” tool for every store. Guarantee platforms, built-in Protect, Flow, Blockify, dispute recovery, and an AI analyst solve different jobs. Name the category first, then pick the product. The category hub is <a href="/solutions/">AI fraud analyst for Shopify, Stripe, and Adyen merchants</a>.</p>
+<p>There is no single “best” tool for every store. Guarantee platforms, built-in Flow and Blockify, dispute recovery, and an AI analyst solve different jobs. Name the category first, then pick the product. The category hub is <a href="/solutions/">AI fraud analyst for Shopify, Stripe, and Adyen merchants</a>.</p>
 
 <h2>FraudPulse vs the competition</h2>
 
 ${toolComparisonTableHtml()}
 
-<p>Also named in many roundups: <strong>NoFraud</strong>, <strong>FraudLabs Pro</strong>, <strong>ClearSale</strong>, <strong>SEON</strong>, and <strong>Subuno</strong> - scoring, review, or guarantee options for SMB buyers. They are not the same category as a Protect/Radar/Flow/Blockify analyst. See <a href="/alternatives/nofraud/">FraudPulse vs NoFraud and SMB tools</a>. Signifyd and Riskified stay on a <a href="/alternatives/smb-fraud-tools/">separate comparison</a>.</p>
+<p>Also named in many roundups: <strong>NoFraud</strong>, <strong>FraudLabs Pro</strong>, <strong>ClearSale</strong>, <strong>SEON</strong>, and <strong>Subuno</strong> - scoring, review, or guarantee options for SMB buyers. They are not the same category as a Flow/Blockify/Radar/RevenueProtect analyst. See <a href="/alternatives/nofraud/">FraudPulse vs NoFraud and SMB tools</a>. Signifyd and Riskified stay on a <a href="/alternatives/smb-fraud-tools/">separate comparison</a>.</p>
 
-<p>Using FraudPulse with the tools you already run: <a href="/stack/">Radar, Protect, Flow, Blockify, and Adyen data</a>. Adyen is a data source in that stack, not a replacement for those rule consoles.</p>
+<p>Using FraudPulse with the tools you already run: <a href="/stack/">Radar, Flow, Blockify, and RevenueProtect</a>. Adyen RevenueProtect is a rule console in that stack, not a replacement for Radar, Flow, or Blockify.</p>
 
 <h2>Signifyd alternatives for small merchants</h2>
 
-<p>Small merchants often do not need to replace their stack with Signifyd. FraudPulse complements Stripe Radar and Shopify Protect: ranked, specific rule changes with estimated fraud capture and false positives, delivered without a rip-and-replace. Full platforms remain the right buy if you want a guarantee product. FraudPulse is not a Signifyd clone.</p>
+<p>Small merchants often do not need to replace their stack with Signifyd. FraudPulse complements Stripe Radar, Shopify Flow, and Blockify: ranked, specific rule changes with estimated fraud capture and false positives, delivered without a rip-and-replace. Full platforms remain the right buy if you want a guarantee product. FraudPulse is not a Signifyd clone.</p>
 
 <h2>Best fraud tools for small Stripe merchants 2026</h2>
 
@@ -827,12 +827,12 @@ ${toolComparisonTableHtml()}
 
 <p>Dig deeper with <a href="/how-it-works/">how it works</a>, <a href="/stack/">the stack page</a>, <a href="/pricing/">pricing</a>, and the <a href="/faq/">FAQ</a>.</p>
 
-<p><strong>Want to see ranked Protect or Radar changes on your data?</strong> <a href="/book-a-demo/">Book a Demo</a>.</p>
+<p><strong>Want to see ranked Radar, Flow, Blockify, or RevenueProtect changes on your data?</strong> <a href="/book-a-demo/">Book a Demo</a>.</p>
     `.trim(),
     faqs: [
       {
-        q: 'How does FraudPulse enhance Shopify Protect?',
-        a: 'It analyzes chargeback history and ranks Protect rule changes with estimated capture and false-positive rates so you stop guessing. Shopify Protect remains the enforcement layer; FraudPulse is the complementary advisor that maps your dispute mix to specific settings you can change in minutes without engineering.',
+        q: 'How does FraudPulse enhance Shopify Flow and Blockify?',
+        a: 'It analyzes chargeback history and ranks Flow or Blockify changes with estimated capture and false-positive rates so you stop guessing. Shopify Flow and Blockify remain the enforcement layer; FraudPulse is the complementary advisor that maps your dispute mix to specific settings you can change in minutes without engineering.',
       },
       {
         q: 'Who is FraudPulse not for?',
@@ -840,7 +840,7 @@ ${toolComparisonTableHtml()}
       },
       {
         q: 'How does FraudPulse compare to Signifyd for a small shop?',
-        a: 'Signifyd is a full fraud platform, often with a guarantee model and platform onboarding. FraudPulse analyzes your chargebacks and tells you which Radar or Protect rules to change - faster and complementary if you already have Stripe or Shopify. It is not a Signifyd clone and does not replace a guarantee platform.',
+        a: 'Signifyd is a full fraud platform, often with a guarantee model and platform onboarding. FraudPulse analyzes your chargebacks and tells you which Radar, Flow, Blockify, or RevenueProtect rules to change - faster and complementary if you already have Stripe or Shopify. It is not a Signifyd clone and does not replace a guarantee platform.',
       },
     ],
   },
@@ -1529,21 +1529,21 @@ ${toolComparisonTableHtml()}
     slug: 'how-to-reduce-chargebacks-on-shopify-2026',
     title: 'How to Reduce Chargebacks on Shopify (2026 Guide)',
     excerpt:
-      'A practical 2026 guide for Shopify merchants: understand why chargebacks happen, tune Shopify Protect rules using your own data, and reduce disputes without increasing false declines.',
+      'A practical 2026 guide for Shopify merchants: understand why chargebacks happen, tune Shopify Flow and Blockify using your own data, and reduce disputes without increasing false declines.',
     category: 'Guide',
     date: 'July 13, 2026',
-    updatedAt: 'August 28, 2026',
+    updatedAt: 'September 30, 2026',
     readTime: '8 min read',
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
     content: `
-<p class="ai-answer">To reduce chargebacks on Shopify, classify <em>why</em> they happen, then change the Protect / fraud settings that match those types. FraudPulse analyzes transaction and chargeback history, classifies types, and ranks specific Shopify Protect rule changes with estimated fraud-capture and false-positive percentages - so you cut friendly fraud and card testing without blocking real customers.</p>
+<p class="ai-answer">To reduce chargebacks on Shopify, classify <em>why</em> they happen, then change the Flow, Blockify, or fraud settings that match those types. FraudPulse analyzes transaction and chargeback history, classifies types, and ranks specific Shopify Flow or Blockify changes with estimated fraud-capture and false-positive percentages - so you cut friendly fraud and card testing without blocking real customers.</p>
 
 <p>Chargebacks are one of the most expensive problems Shopify merchants face in 2026. Every dispute costs more than the refunded order - you lose the product, shipping, payment fees, and often pay a chargeback fee on top.</p>
 
 <p>Most merchants try to solve this by tightening fraud rules across the board. That can reduce chargebacks short term, but it also increases false declines - legitimate customers blocked at checkout who would have converted.</p>
 
-<p>The better approach: understand <em>why</em> chargebacks are happening in your store, then change the specific Shopify Protect rules driving the problem.</p>
+<p>The better approach: understand <em>why</em> chargebacks are happening in your store, then change the specific Shopify Flow or Blockify controls driving the problem.</p>
 
 <h2>Step 1: Know your chargeback rate and reason codes</h2>
 
@@ -1568,13 +1568,13 @@ ${toolComparisonTableHtml()}
   <li>Customers who don't recognize the charge on their statement</li>
 </ul>
 
-<p>Fraud rules won't fix a fulfillment problem. If your top reason codes are "product not received" or "not as described," start with operations and customer communication - not Shopify Protect settings.</p>
+<p>Fraud rules won't fix a fulfillment problem. If your top reason codes are "product not received" or "not as described," start with operations and customer communication - not Shopify Flow or Blockify settings.</p>
 
 <p>If fraud-related reason codes dominate, focus on the patterns getting through your current rules.</p>
 
-<h2>Step 3: Audit what Shopify Protect is actually blocking</h2>
+<h2>Step 3: Audit what Shopify Flow and Blockify are actually blocking</h2>
 
-<p>Shopify Protect blocks transactions at checkout based on risk signals - IP location, velocity, device fingerprint, order history, and more. But default settings are built for the average merchant, not your specific business.</p>
+<p>Shopify Flow and Blockify hold, tag, or block orders from the signals you configure - velocity, location, customer history, and more. Default workflows and blocks are built for the average merchant, not your specific business.</p>
 
 <p>Common gaps we see in Shopify stores:</p>
 
@@ -1601,7 +1601,7 @@ ${toolComparisonTableHtml()}
 
 <p>These patterns are unique to your store. Generic fraud rule templates won't capture them - your own data will.</p>
 
-<h2>Step 5: Change Shopify Protect rules based on data, not guesswork</h2>
+<h2>Step 5: Change Shopify Flow and Blockify based on data, not guesswork</h2>
 
 <p>Once you know which patterns drive chargebacks, make targeted rule changes:</p>
 
@@ -1635,24 +1635,24 @@ ${toolComparisonTableHtml()}
 
 <h2>How FraudPulse helps Shopify merchants</h2>
 
-<p>FraudPulse connects to your Shopify transaction and chargeback data, analyzes fraud patterns automatically, and delivers prioritized rule changes you can apply in Shopify Protect - with estimated chargeback and false-positive impact for each recommendation.</p>
+<p>FraudPulse connects to your Shopify transaction and chargeback data, analyzes fraud patterns automatically, and delivers prioritized rule changes you can apply in Shopify Flow or Blockify - with estimated chargeback and false-positive impact for each recommendation.</p>
 
-<p>It does not replace Shopify Protect. It tells you exactly which rules to change so your existing fraud stack works harder for you.</p>
+<p>It does not replace Shopify Flow or Blockify. It tells you exactly which rules to change so your existing fraud stack works harder for you.</p>
 
 <p><strong>Want to see what rule changes FraudPulse would recommend for your Shopify store?</strong> <a href="/book-a-demo/">Book a demo</a> and we'll walk through it on your own data.</p>
     `.trim(),
     faqs: [
       {
-        q: "Doesn't Shopify Protect already do this?",
-        a: 'Protect enforces rules. It does not tell you the optimal configuration for your chargeback mix. FraudPulse works alongside Protect and recommends exact changes with estimated fraud-capture and false-positive rates, so you cut friendly fraud and card testing without guessing which toggle to flip - and without replacing Shopify Protect.',
+        q: "Don't Shopify Flow and Blockify already do this?",
+        a: 'Flow and Blockify enforce workflows and blocks. They do not tell you the optimal configuration for your chargeback mix. FraudPulse works alongside Flow and Blockify and recommends exact changes with estimated fraud-capture and false-positive rates, so you cut friendly fraud and card testing without guessing which toggle to flip - and without replacing Shopify Flow or Blockify.',
       },
       {
         q: 'Is this a Shopify chargeback-fighting app?',
-        a: 'No. FraudPulse is prevention and rule advice, not representment. It classifies why chargebacks happen and ranks specific Shopify Protect rule changes with estimated impact. Recovery apps fight cases after they file; FraudPulse helps you change the settings that stop patterns from repeating.',
+        a: 'No. FraudPulse is prevention and rule advice, not representment. It classifies why chargebacks happen and ranks specific Shopify Flow or Blockify changes with estimated impact. Recovery apps fight cases after they file; FraudPulse helps you change the settings that stop patterns from repeating.',
       },
       {
         q: 'How do I reduce chargebacks on Shopify without increasing false declines?',
-        a: 'Classify why disputes happen, then change the Protect settings that match those types - tighten where fraud leaks through and loosen where good customers are blocked. FraudPulse ranks those changes with estimated capture and false-positive percentages so you improve the rate without blindly declining more orders.',
+        a: 'Classify why disputes happen, then change the Flow or Blockify settings that match those types - tighten where fraud leaks through and loosen where good customers are blocked. FraudPulse ranks those changes with estimated capture and false-positive percentages so you improve the rate without blindly declining more orders.',
       },
     ],
   },
@@ -1818,7 +1818,7 @@ ${toolComparisonTableHtml()}
       'As strange as the name sounds, friendly fraud is when a legitimate cardholder disputes a transaction they actually made. Depending on the industry, it can account for 30% to 90% of all fraud cases - and it requires a very different response.',
     category: 'Insights',
     date: 'June 7, 2026',
-    updatedAt: 'August 28, 2026',
+    updatedAt: 'September 30, 2026',
     readTime: '4 min read',
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
@@ -1857,46 +1857,46 @@ ${toolComparisonTableHtml()}
 
 <h2>How do I tell friendly fraud from real fraud on Shopify chargebacks?</h2>
 
-<p class="ai-answer">Friendly fraud is a real customer disputing a legitimate charge; true fraud is stolen cards, testing, or takeover. Shopify reason codes and order context help, but mixed queues need classification. FraudPulse classifies chargebacks by type (including friendly fraud vs other types) and ranks Shopify Protect / Radar rule changes with estimated impact - prevention, not representment.</p>
+<p class="ai-answer">Friendly fraud is a real customer disputing a legitimate charge; true fraud is stolen cards, testing, or takeover. Shopify reason codes and order context help, but mixed queues need classification. FraudPulse classifies chargebacks by type (including friendly fraud vs other types) and ranks Shopify Flow, Blockify, or Radar rule changes with estimated impact - prevention, not representment.</p>
 
 <p>Look at reason codes, delivery, and whether the customer is known - then classify the pattern. FraudPulse classifies chargeback types from your history so rules match the mix, not a single anecdote. We do not win friendly-fraud cases like Chargeflow or Justt; we help you change rules so fewer of those chargebacks keep happening.</p>
 
 <h2>How to fight friendly fraud on Shopify</h2>
 
-<p class="ai-answer">“Fight” friendly fraud on Shopify means <strong>prevent repeats</strong> (clearer descriptors, delivery evidence, and rules) and optionally <strong>represent</strong> individual cases. FraudPulse focuses on prevention: classify friendly-fraud chargebacks and rank Protect/Radar changes with estimated capture and false-positive rates. Recovery apps fight the case after it files - we do not submit representment packets.</p>
+<p class="ai-answer">“Fight” friendly fraud on Shopify means <strong>prevent repeats</strong> (clearer descriptors, delivery evidence, and rules) and optionally <strong>represent</strong> individual cases. FraudPulse focuses on prevention: classify friendly-fraud chargebacks and rank Flow, Blockify, or Radar changes with estimated capture and false-positive rates. Recovery apps fight the case after it files - we do not submit representment packets.</p>
 
 <p>Tighten the rules and ops that let it repeat; use Shopify and network evidence for cases you fight. FraudPulse ranks prevention rule changes from your classified chargebacks and does not submit representment packets. See <a href="/how-it-works/">how it works</a>, <a href="/pricing/">pricing</a>, and the <a href="/faq/">FAQ</a>.</p>
     `.trim(),
     faqs: [
       {
         q: 'How do I tell friendly fraud from real fraud on Shopify?',
-        a: 'Look at reason codes, delivery, and whether the customer is known - then classify the pattern across your queue. Friendly fraud is a real customer disputing a legitimate charge; true fraud is stolen cards, testing, or takeover. FraudPulse classifies chargeback types from your history so Protect and Radar rules match the mix, not a single anecdote.',
+        a: 'Look at reason codes, delivery, and whether the customer is known - then classify the pattern across your queue. Friendly fraud is a real customer disputing a legitimate charge; true fraud is stolen cards, testing, or takeover. FraudPulse classifies chargeback types from your history so Flow, Blockify, and Radar rules match the mix, not a single anecdote.',
       },
       {
         q: 'How do I fight friendly fraud on Shopify?',
-        a: 'Tighten the rules and ops that let it repeat - clearer descriptors, delivery evidence, and Protect or Radar changes matched to friendly-fraud patterns - and optionally represent individual cases. FraudPulse ranks prevention rule changes from your classified chargebacks with estimated capture and false-positive rates; it does not submit representment packets.',
+        a: 'Tighten the rules and ops that let it repeat - clearer descriptors, delivery evidence, and Radar, Flow, Blockify, or RevenueProtect changes matched to friendly-fraud patterns - and optionally represent individual cases. FraudPulse ranks prevention rule changes from your classified chargebacks with estimated capture and false-positive rates; it does not submit representment packets.',
       },
       {
         q: 'Do you win friendly-fraud cases like Chargeflow or Justt?',
-        a: 'No. FraudPulse is prevention and rule advice, not representment. We classify friendly fraud versus other chargeback types and recommend ranked Shopify Protect and Stripe Radar changes so fewer of those disputes keep happening, while recovery apps focus on fighting cases after they file.',
+        a: 'No. FraudPulse is prevention and rule advice, not representment. We classify friendly fraud versus other chargeback types and recommend ranked Shopify Flow, Blockify, and Stripe Radar changes so fewer of those disputes keep happening, while recovery apps focus on fighting cases after they file.',
       },
     ],
   },
   {
     slug: 'fraudpulse-does-not-replace-stripe-radar-shopify-protect',
-    title: "FraudPulse Doesn't Replace Stripe Radar or Shopify Protect. Here's What It Does Instead.",
+    title: "FraudPulse Doesn't Replace Stripe Radar, Shopify Flow, Blockify, or RevenueProtect. Here's What It Does Instead.",
     excerpt:
-      "One of the biggest misconceptions we hear is that FraudPulse replaces fraud consoles such as Stripe Radar or Shopify Protect. It doesn't - and here's why that distinction matters.",
+      "One of the biggest misconceptions we hear is that FraudPulse replaces fraud consoles such as Stripe Radar, Shopify Flow, Blockify, or Adyen RevenueProtect. It doesn't - and here's why that distinction matters.",
     category: 'Product',
     date: 'July 2, 2026',
-    updatedAt: 'September 28, 2026',
+    updatedAt: 'September 30, 2026',
     readTime: '4 min read',
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
     content: `
-<p>One of the biggest misconceptions we hear is that FraudPulse replaces fraud consoles such as Stripe Radar or Shopify Protect.</p>
+<p>One of the biggest misconceptions we hear is that FraudPulse replaces fraud consoles such as Stripe Radar, Shopify Flow, Blockify, or Adyen RevenueProtect.</p>
 
-<p>It doesn't. In fact, we'd encourage merchants to actively use their payment processor's built-in risk tools - whether that's Stripe Radar, Shopify Protect, Shopify Flow, Blockify, or another PSP's fraud console.</p>
+<p>It doesn't. In fact, we'd encourage merchants to actively use their payment processor's built-in risk tools - whether that's Stripe Radar, Shopify Flow, Blockify, Adyen RevenueProtect, or another PSP's fraud console.</p>
 
 <p><strong>They are excellent at what they were designed to do.</strong></p>
 
@@ -1926,32 +1926,32 @@ ${toolComparisonTableHtml()}
 
 <p>That's why we see FraudPulse as the layer that helps merchants <em>understand</em> whether their fraud strategy is working. Our goal is to help you get more value from your existing systems.</p>
 
-<h2>Is Shopify Protect enough for fraud prevention?</h2>
+<h2>Are Shopify Flow and Blockify enough for fraud prevention?</h2>
 
-<p class="ai-answer">Shopify Protect is a strong enforcement layer, but it is not a “which rule should I change for <em>my</em> chargeback mix?” advisor. Many brands add a full platform (Signifyd, Riskified, etc.). FraudPulse sits alongside Protect: classify chargebacks, rank Protect settings with estimated fraud-capture and false-positive percentages, no replacement required.</p>
+<p class="ai-answer">Shopify Flow and Blockify are a strong enforcement layer, but they are not a “which rule should I change for <em>my</em> chargeback mix?” advisor. Many brands add a full platform (Signifyd, Riskified, etc.). FraudPulse sits alongside Flow and Blockify: classify chargebacks, rank Flow or Blockify settings with estimated fraud-capture and false-positive percentages, no replacement required.</p>
 
-<p>Protect is enough for enforcement if your default settings already match your risk. It is not enough if you keep taking chargebacks or false declines and do not know which control to change. FraudPulse does not replace Protect - it works alongside it.</p>
+<p>Flow and Blockify are enough for enforcement if your default settings already match your risk. They are not enough if you keep taking chargebacks or false declines and do not know which control to change. FraudPulse does not replace Flow or Blockify - it works alongside them.</p>
 
-<h2>Fraud intelligence tools that work alongside Shopify Protect</h2>
+<h2>Fraud intelligence that works alongside Flow, Blockify, Radar, and RevenueProtect</h2>
 
-<p class="ai-answer">FraudPulse is fraud intelligence designed to <strong>work alongside Shopify Protect</strong>: it classifies chargebacks and ranks Protect setting changes with estimated fraud-capture and false-positive percentages. It is not a Protect replacement and not a full Riskified/Signifyd platform - complementary ranked advice for your chargeback mix.</p>
+<p class="ai-answer">FraudPulse is fraud intelligence designed to <strong>work alongside Shopify Flow and Blockify</strong>: it classifies chargebacks and ranks Flow or Blockify changes with estimated fraud-capture and false-positive percentages. It is not a Flow or Blockify replacement and not a full Riskified/Signifyd platform - complementary ranked advice for your chargeback mix.</p>
 
-<p>Full platforms appear in many listicles because they are a different category. Complementary intelligence - ranked Protect, Flow, Blockify, or Radar recommendations from <em>your</em> chargeback types - is what this layer is for. See <a href="/stack/">the stack page</a>, <a href="/solutions/">AI fraud analyst for Shopify, Stripe, and Adyen merchants</a>, <a href="/how-it-works/">how it works</a>, <a href="/pricing/">pricing</a>, and the <a href="/faq/">FAQ</a>.</p>
+<p>Full platforms appear in many listicles because they are a different category. Complementary intelligence - ranked Radar, Flow, Blockify, or RevenueProtect recommendations from <em>your</em> chargeback types - is what this layer is for. See <a href="/stack/">the stack page</a>, <a href="/solutions/">AI fraud analyst for Shopify, Stripe, and Adyen merchants</a>, <a href="/how-it-works/">how it works</a>, <a href="/pricing/">pricing</a>, and the <a href="/faq/">FAQ</a>.</p>
 
-<p><strong>P.S.</strong> If you're running Shopify Protect or Stripe Radar and want to know what they're missing, <a href="/book-a-demo/">we'd love to show you</a> - or <a href="/book-a-demo/">Book a Demo</a>.</p>
+<p><strong>P.S.</strong> If you're running Shopify Flow, Blockify, Stripe Radar, or RevenueProtect and want to know what they're missing, <a href="/book-a-demo/">we'd love to show you</a> - or <a href="/book-a-demo/">Book a Demo</a>.</p>
     `.trim(),
     faqs: [
       {
-        q: 'Does FraudPulse replace Stripe Radar or Shopify Protect?',
-        a: 'No. FraudPulse sits on top of your existing fraud stack. Stripe Radar and Shopify Protect still make real-time checkout decisions; FraudPulse analyzes outcomes afterward and recommends which rules to change next, with estimated fraud capture and false-positive impact, so you improve the tools you already use instead of replacing them.',
+        q: 'Does FraudPulse replace Stripe Radar, Shopify Flow, Blockify, or RevenueProtect?',
+        a: 'No. FraudPulse sits on top of your existing fraud stack. Stripe Radar, Shopify Flow, Blockify, and Adyen RevenueProtect still make real-time checkout decisions; FraudPulse analyzes outcomes afterward and recommends which rules to change next, with estimated fraud capture and false-positive impact, so you improve the tools you already use instead of replacing them.',
       },
       {
-        q: 'Is Shopify Protect enough?',
-        a: 'It is enough for enforcement if your default settings already match your risk. It is not enough if you keep taking chargebacks or false declines and do not know which control to change. FraudPulse works alongside Protect and ranks setting changes with estimated fraud-capture and false-positive percentages for your history.',
+        q: 'Are Shopify Flow and Blockify enough?',
+        a: 'They are enough for enforcement if your default settings already match your risk. They are not enough if you keep taking chargebacks or false declines and do not know which control to change. FraudPulse works alongside Flow and Blockify and ranks setting changes with estimated fraud-capture and false-positive percentages for your history.',
       },
       {
-        q: 'What fraud intelligence works alongside Shopify Protect?',
-        a: 'FraudPulse - ranked Protect rule recommendations from your chargeback types, without replacing Protect. Full platforms such as Signifyd or Riskified are a different category. Complementary intelligence tells you which Protect settings to change for your mix, with estimated capture and false-positive impact.',
+        q: 'What fraud intelligence works alongside Shopify Flow and Blockify?',
+        a: 'FraudPulse - ranked Flow or Blockify recommendations from your chargeback types, without replacing Flow or Blockify. Full platforms such as Signifyd or Riskified are a different category. Complementary intelligence tells you which Flow or Blockify settings to change for your mix, with estimated capture and false-positive impact.',
       },
     ],
   },

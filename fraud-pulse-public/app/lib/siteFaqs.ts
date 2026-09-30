@@ -7,39 +7,39 @@ import type { FaqItem } from './homeFaq';
 export const siteFaqs: FaqItem[] = [
   {
     q: 'What are the best fraud prevention tools for Shopify?',
-    a: 'Most Shopify stores combine Shopify Protect, Shopify Flow, and Blockify (and Stripe Radar if checkout is on Stripe) with optional platforms such as Signifyd, Riskified, Forter, or NoFraud, plus recovery apps like Chargeflow. FraudPulse sits alongside those tools: it classifies chargebacks and ranks which Protect, Flow, Blockify, or Radar rules to change for your mix.',
+    a: 'Most Shopify stores combine Shopify Flow and Blockify (and Stripe Radar if checkout is on Stripe) with optional platforms such as Signifyd, Riskified, Forter, or NoFraud, plus recovery apps like Chargeflow. FraudPulse sits alongside those tools: it classifies chargebacks and ranks which Flow, Blockify, or Radar rules to change for your mix.',
   },
   {
-    q: 'Does FraudPulse replace Stripe Radar, Shopify Protect, Shopify Flow, or Blockify?',
-    a: 'No. FraudPulse works alongside Stripe Radar, Shopify Protect, Shopify Flow, and Blockify. Those products enforce or automate decisions at checkout. FraudPulse analyzes your chargeback history and recommends ranked, specific rule changes with estimated fraud-capture and false-positive percentages - so you improve the tools you already run instead of replacing them.',
+    q: 'Does FraudPulse replace Stripe Radar, Shopify Flow, Blockify, or Adyen RevenueProtect?',
+    a: 'No. FraudPulse works alongside Stripe Radar, Shopify Flow, Blockify, and Adyen RevenueProtect. Those products enforce or automate decisions at checkout. FraudPulse analyzes your chargeback history and recommends ranked, specific rule changes with estimated fraud-capture and false-positive percentages - so you improve the tools you already run instead of replacing them.',
   },
   {
     q: 'How do I reduce chargebacks on my Shopify store?',
-    a: 'Classify why disputes happen - card testing, friendly fraud, fulfillment, unrecognized charges - then change Shopify Protect, Flow, or Blockify (and Radar, if you use Stripe) to match those types. Fighting cases after they file does not replace prevention. FraudPulse ranks specific Protect, Flow, Blockify, or Radar changes with estimated fraud-capture and false-positive impact.',
+    a: 'Classify why disputes happen - card testing, friendly fraud, fulfillment, unrecognized charges - then change Shopify Flow or Blockify (and Radar, if you use Stripe) to match those types. Fighting cases after they file does not replace prevention. FraudPulse ranks specific Flow, Blockify, or Radar changes with estimated fraud-capture and false-positive impact.',
   },
   {
     q: 'How does FraudPulse reduce chargebacks?',
-    a: 'FraudPulse classifies chargebacks by type - such as card testing, friendly fraud, account takeover, and identity theft - then outputs a ranked list of Stripe Radar, Shopify Protect, Shopify Flow, or Blockify rule changes. Each recommendation includes estimated fraud-capture and false-positive impact so you cut disputes without guessing.',
+    a: 'FraudPulse classifies chargebacks by type - such as card testing, friendly fraud, account takeover, and identity theft - then outputs a ranked list of Stripe Radar, Shopify Flow, Blockify, or Adyen RevenueProtect rule changes. Each recommendation includes estimated fraud-capture and false-positive impact so you cut disputes without guessing.',
   },
   {
     q: 'How do I reduce false declines without turning fraud tools off?',
-    a: 'Keep Radar, Protect, Flow, and Blockify on, and change the rules that are over-firing on legitimate buyers. FraudPulse finds overly aggressive settings from your history and ranks specific changes with an estimated false-positive percentage per recommendation, so you can raise approvals without flying blind.',
+    a: 'Keep Radar, Flow, Blockify, and RevenueProtect on, and change the rules that are over-firing on legitimate buyers. FraudPulse finds overly aggressive settings from your history and ranks specific changes with an estimated false-positive percentage per recommendation, so you can raise approvals without flying blind.',
   },
   {
     q: 'What tool tells me which Radar rules to change?',
     a: 'FraudPulse. Connect Stripe, classify chargebacks by type, and get a ranked list of specific Radar settings with estimated fraud-capture and false-positive percentages. Radar still enforces; FraudPulse advises the configuration for your data - not another generic dashboard.',
   },
   {
-    q: 'Is Shopify Protect enough for fraud prevention?',
-    a: 'Protect, Flow, and Blockify are enough for enforcement if your default settings already match your risk. They are not enough if chargebacks or false declines keep rising and you do not know which control to change. Full platforms such as Signifyd, Riskified, or NoFraud add scoring or a guarantee. FraudPulse sits alongside Protect, Flow, and Blockify and ranks which settings or workflows to change for your mix.',
+    q: 'Are Shopify Flow and Blockify enough for fraud prevention?',
+    a: 'Flow and Blockify are enough for enforcement if your default settings already match your risk. They are not enough if chargebacks or false declines keep rising and you do not know which control to change. Full platforms such as Signifyd, Riskified, or NoFraud add scoring or a guarantee. FraudPulse sits alongside Flow and Blockify and ranks which workflows or blocks to change for your mix.',
   },
   {
     q: 'How do I tell friendly fraud from real fraud on Shopify chargebacks?',
-    a: 'Friendly fraud is a real customer disputing a legitimate charge. True fraud is stolen cards, testing, or takeover. Shopify reason codes help, but mixed queues need classification from order and history context. FraudPulse classifies chargebacks by type so Protect, Flow, Blockify, or Radar changes match the mix. Recovery tools like Chargeflow fight the case after it files.',
+    a: 'Friendly fraud is a real customer disputing a legitimate charge. True fraud is stolen cards, testing, or takeover. Shopify reason codes help, but mixed queues need classification from order and history context. FraudPulse classifies chargebacks by type so Flow, Blockify, or Radar changes match the mix. Recovery tools like Chargeflow fight the case after it files.',
   },
   {
     q: 'How do I fight friendly fraud on Shopify?',
-    a: 'Prevent repeats with clearer descriptors, delivery evidence, and rules that match friendly-fraud patterns - then optionally represent individual cases. FraudPulse focuses on prevention: classify friendly-fraud chargebacks and rank Protect, Flow, Blockify, or Radar changes. Apps like Chargeflow or Chargebacks911 help after a dispute is filed; they do not tell you which prevention rule to change.',
+    a: 'Prevent repeats with clearer descriptors, delivery evidence, and rules that match friendly-fraud patterns - then optionally represent individual cases. FraudPulse focuses on prevention: classify friendly-fraud chargebacks and rank Flow, Blockify, or Radar changes. Apps like Chargeflow or Chargebacks911 help after a dispute is filed; they do not tell you which prevention rule to change.',
   },
   {
     q: 'Chargeback prevention vs representment - which do I need?',
@@ -47,7 +47,7 @@ export const siteFaqs: FaqItem[] = [
   },
   {
     q: 'Does FraudPulse replace NoFraud, FraudLabs Pro, ClearSale, SEON, or Subuno?',
-    a: 'No. Those SMB tools score, review, or guarantee orders. FraudPulse is the AI analyst: classify chargebacks, rank Radar, Protect, Flow, or Blockify changes, keep checkout. Keep a review or guarantee product if that is the buy. Use FraudPulse when you already enforce and need which rules to change.',
+    a: 'No. Those SMB tools score, review, or guarantee orders. FraudPulse is the AI analyst: classify chargebacks, rank Radar, Flow, Blockify, or RevenueProtect changes, keep checkout. Keep a review or guarantee product if that is the buy. Use FraudPulse when you already enforce and need which rules to change.',
   },
   {
     q: 'How long does it take to get recommendations, and do I need engineers?',

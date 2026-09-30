@@ -1,11 +1,11 @@
 /** Shared feature comparison - FraudPulse vs common alternatives. */
 
-/** Built-in / Shopify-native enforcement FraudPulse configures alongside, not instead of. */
+/** Rule consoles FraudPulse configures alongside, not instead of. */
 export const PLATFORM_RULE_TOOLS =
-  'Stripe Radar, Shopify Protect, Shopify Flow, and Blockify';
-export const PLATFORM_RULE_TOOLS_SHORT = 'Radar, Protect, Flow, and Blockify';
+  'Stripe Radar, Shopify Flow, Blockify, and Adyen RevenueProtect';
+export const PLATFORM_RULE_TOOLS_SHORT = 'Radar, Flow, Blockify, and RevenueProtect';
 export const PLATFORM_RULE_TOOLS_TABLE =
-  'Stripe Radar · Shopify Protect · Flow · Blockify';
+  'Stripe Radar · Flow · Blockify · RevenueProtect';
 
 
 export type ComparisonValue = 'yes' | 'no' | 'partial';

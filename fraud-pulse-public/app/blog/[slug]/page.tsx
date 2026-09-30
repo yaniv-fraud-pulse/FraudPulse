@@ -226,7 +226,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
           <div className="max-w-3xl mx-auto mt-12 pt-8 border-t text-center" style={{ borderColor: '#e5e7eb' }}>
             <p className="text-[1rem] text-gray-500 mb-4">
-              More buyer questions on Radar, Protect, chargebacks, and Signifyd alternatives.
+              More buyer questions on Radar, Flow, Blockify, chargebacks, and Signifyd alternatives.
             </p>
             <Link
               href="/faq/"

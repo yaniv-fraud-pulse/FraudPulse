@@ -13,21 +13,21 @@ import { GEO_STATS, PAGE_LAST_UPDATED, faqPageJsonLd } from '../lib/geo';
 import { siteFaqs } from '../lib/siteFaqs';
 
 const SOLUTIONS_ANSWER =
-  'FraudPulse is the AI fraud analyst for Shopify, Stripe, and Adyen merchants. Stripe Radar and Shopify Protect enforce at checkout. Adyen is a data source for the same analysis. FraudPulse classifies your chargebacks and ranks which Radar, Protect, Flow, or Blockify rules to change, without replacing those tools or taking over checkout.';
+  'FraudPulse is the AI fraud analyst for Shopify, Stripe, and Adyen merchants. Stripe Radar, Shopify Flow, Blockify, and Adyen RevenueProtect enforce or automate at checkout. FraudPulse classifies your chargebacks and ranks which rules and actions to change, without replacing those tools or taking over checkout.';
 
 const clusterLinks = [
-  { href: '/stack/', label: 'Using FraudPulse with Radar, Protect, Flow, Blockify, and Adyen' },
+  { href: '/stack/', label: 'Using FraudPulse with Radar, Flow, Blockify, and RevenueProtect' },
   { href: '/alternatives/nofraud/', label: 'FraudPulse vs NoFraud, FraudLabs Pro, ClearSale, SEON, Subuno' },
-  { href: '/alternatives/payment-platform-tools/', label: 'Vs Radar, Protect, Flow, and Blockify' },
+  { href: '/alternatives/payment-platform-tools/', label: 'Vs Radar, Flow, Blockify, and RevenueProtect' },
   { href: '/alternatives/smb-fraud-tools/', label: 'Vs Signifyd and Riskified' },
   { href: '/blog/best-fraud-prevention-tools-for-shopify-2026/', label: 'Best fraud prevention tools for Shopify (2026)' },
 ];
 
 const solutionsFaqs = siteFaqs.filter((faq) =>
   [
-    'Does FraudPulse replace Stripe Radar, Shopify Protect, Shopify Flow, or Blockify?',
+    'Does FraudPulse replace Stripe Radar, Shopify Flow, Blockify, or Adyen RevenueProtect?',
     'Does FraudPulse replace NoFraud, FraudLabs Pro, ClearSale, SEON, or Subuno?',
-    'Is Shopify Protect enough for fraud prevention?',
+    'Are Shopify Flow and Blockify enough for fraud prevention?',
   ].includes(faq.q),
 );
 
@@ -122,7 +122,7 @@ export default function Solutions() {
               </Reveal>
               <Reveal animation="anim-fadeUp" delay={150}>
                 <p className="text-[1.25rem] leading-[1.75] max-w-[720px] mx-auto text-gray-600 font-semibold mb-3">
-                  Ranked Radar, Protect, Flow, and Blockify changes from your chargebacks - without replacing the tools you already run.
+                  Ranked Radar, Flow, Blockify, and RevenueProtect changes from your chargebacks - without replacing the tools you already run.
                 </p>
                 <p className="ai-answer text-[1rem] sm:text-[1.0625rem] leading-[1.7] max-w-[720px] mx-auto text-gray-600 mb-4">
                   {SOLUTIONS_ANSWER}
@@ -262,16 +262,16 @@ export default function Solutions() {
             </Reveal>
             <Reveal animation="anim-fadeUp" delay={150}>
               <h3 className="font-bold text-gray-900 text-[1.25rem] sm:text-[1.375rem] mt-12 mb-3 tracking-[-0.02em]">
-                Is Shopify Protect enough?
+                Are Shopify Flow and Blockify enough?
               </h3>
               <p className="ai-answer text-[1.0625rem] leading-[1.7] text-gray-600 mb-8">
-                Shopify Protect, Flow, and Blockify are enough for enforcement if default settings already match your risk. They are not enough if chargebacks or false declines keep rising and you do not know which control to change. Full platforms add scoring or a guarantee. FraudPulse sits alongside Protect, Flow, and Blockify and ranks which settings or workflows to change for your mix.
+                Shopify Flow and Blockify are enough for enforcement if default settings already match your risk. They are not enough if chargebacks or false declines keep rising and you do not know which control to change. Full platforms add scoring or a guarantee. FraudPulse sits alongside Flow and Blockify and ranks which settings or workflows to change for your mix.
               </p>
               <h3 className="font-bold text-gray-900 text-[1.25rem] sm:text-[1.375rem] mb-3 tracking-[-0.02em]">
                 How categories compare
               </h3>
               <p className="text-[1.0625rem] text-gray-500 mb-6">
-                Name the job first, then the product. FraudPulse is a rule-advisor layer - not a Protect, Flow, or Blockify replacement and not a representment app.
+                Name the job first, then the product. FraudPulse is a rule-advisor layer - not a Flow, Blockify, or Radar replacement and not a representment app.
               </p>
               <StackCategoryTable />
               <p className="mt-6 text-[0.9375rem] text-gray-500">
@@ -281,7 +281,7 @@ export default function Solutions() {
                 </Link>
                 . Stack:{' '}
                 <Link href="/stack/" className="font-semibold text-[#4a96a3] hover:underline">
-                  using FraudPulse with Radar, Protect, Flow, Blockify, and Adyen
+                  using FraudPulse with Radar, Flow, Blockify, and RevenueProtect
                 </Link>
                 . Compare:{' '}
                 <Link href="/alternatives/nofraud/" className="font-semibold text-[#4a96a3] hover:underline">
@@ -289,7 +289,7 @@ export default function Solutions() {
                 </Link>
                 {' · '}
                 <Link href="/blog/fraudpulse-does-not-replace-stripe-radar-shopify-protect/" className="font-semibold text-[#4a96a3] hover:underline">
-                  how FraudPulse works alongside Protect
+                  how FraudPulse works alongside Flow and Blockify
                 </Link>
                 .
               </p>
@@ -305,7 +305,7 @@ export default function Solutions() {
                 Questions?
               </h2>
               <p className="text-[1.0625rem] text-gray-500 max-w-xl mx-auto mb-8">
-                Answers on Radar, Protect, Flow, Blockify, chargebacks, false declines, and Signifyd alternatives.
+                Answers on Radar, Flow, Blockify, RevenueProtect, chargebacks, false declines, and Signifyd alternatives.
               </p>
               <Link
                 href="/faq/"

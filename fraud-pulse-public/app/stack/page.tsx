@@ -11,20 +11,14 @@ import { faqPageJsonLd, PAGE_LAST_UPDATED } from '../lib/geo';
 import type { FaqItem } from '../lib/homeFaq';
 
 const STACK_ANSWER =
-  'FraudPulse sits on Stripe Radar, Shopify Protect, Shopify Flow, and Blockify. Those tools enforce or automate at checkout. Adyen is a data source: connect Adyen transactions and disputes, then apply ranked recommendations in the tools you already run. FraudPulse does not replace Radar, Protect, Flow, or Blockify, and it is not Adyen RevenueProtect.';
+  'FraudPulse sits on Stripe Radar, Shopify Flow, Blockify, and Adyen RevenueProtect. Those tools enforce or automate at checkout. Connect Shopify, Stripe, or Adyen data; FraudPulse classifies your chargebacks and ranks specific rules and actions to change. It does not replace Radar, Flow, Blockify, or RevenueProtect.';
 
 const layers = [
   {
     kicker: 'Enforcement',
     name: 'Stripe Radar',
     role: 'Scores and blocks risk at Stripe checkout. Keep it on.',
-    output: 'FraudPulse ranks specific Radar rule changes from your chargeback mix, with estimated fraud-capture and false-positive impact.',
-  },
-  {
-    kicker: 'Enforcement',
-    name: 'Shopify Protect',
-    role: 'Shopify’s built-in checkout risk layer. Keep it on.',
-    output: 'FraudPulse ranks Protect settings that match your dispute types so you stop guessing thresholds.',
+    output: 'FraudPulse ranks specific Radar rule and action changes from your chargeback mix, with estimated fraud-capture and false-positive impact.',
   },
   {
     kicker: 'Automation',
@@ -39,25 +33,25 @@ const layers = [
     output: 'FraudPulse ranks Blockify changes against your history so blocks match real risk instead of a generic list.',
   },
   {
-    kicker: 'Data source',
-    name: 'Adyen',
-    role: 'Transaction and dispute data you connect. Adyen is not the rule console we configure in this product.',
-    output: 'FraudPulse analyzes Adyen history the same way as Shopify or Stripe, then you apply ranked changes in Radar, Protect, Flow, or Blockify - not Adyen RevenueProtect.',
+    kicker: 'Enforcement',
+    name: 'Adyen RevenueProtect',
+    role: 'Adyen risk rules and actions at checkout. Keep it on.',
+    output: 'FraudPulse ranks specific RevenueProtect rule and action changes from your Adyen chargeback mix, with estimated fraud-capture and false-positive impact.',
   },
 ];
 
 const stackFaqs: FaqItem[] = [
   {
-    q: 'Does FraudPulse replace Stripe Radar, Shopify Protect, Shopify Flow, or Blockify?',
-    a: 'No. Those products remain the enforcement or automation layer at checkout. FraudPulse is the AI analyst: it classifies chargebacks and ranks specific rule or workflow changes with estimated impact. You keep Radar, Protect, Flow, and Blockify.',
+    q: 'Does FraudPulse replace Stripe Radar, Shopify Flow, Blockify, or Adyen RevenueProtect?',
+    a: 'No. Those products remain the enforcement or automation layer at checkout. FraudPulse is the AI analyst: it classifies chargebacks and ranks specific rule or workflow changes with estimated impact. You keep Radar, Flow, Blockify, and RevenueProtect.',
   },
   {
-    q: 'How does Adyen fit if FraudPulse is not Adyen RevenueProtect?',
-    a: 'Adyen is a data source. Connect Adyen transactions and disputes, get the same ranked analysis, then apply changes in the tools you already run - Radar, Protect, Flow, or Blockify. We do not claim native Adyen risk-rule output.',
+    q: 'Does FraudPulse create rules for Adyen RevenueProtect?',
+    a: 'Yes. Connect Adyen transactions and disputes, get ranked analysis, then apply rule and action changes in RevenueProtect. Shopify and Stripe merchants get the same job in Flow, Blockify, or Radar.',
   },
   {
     q: 'What do I change after I connect data?',
-    a: 'You get a ranked list of Radar, Protect, Flow, or Blockify changes tied to your chargeback types, each with estimated fraud-capture and false-positive impact. FraudPulse does not sit in the approval path and is not representment.',
+    a: 'You get a ranked list of Radar, Flow, Blockify, or RevenueProtect changes tied to your chargeback types, each with estimated fraud-capture and false-positive impact. FraudPulse does not sit in the approval path and is not representment.',
   },
 ];
 
@@ -85,12 +79,12 @@ export default function StackPage() {
             </Reveal>
             <Reveal animation="anim-fadeUp" delay={75}>
               <h1 className="font-extrabold text-gray-900 tracking-[-0.04em] leading-[1.1] mb-5 text-[2.5rem] sm:text-[3.5rem]">
-                Using FraudPulse with Radar, Protect, Flow, Blockify, and Adyen
+                Using FraudPulse with Radar, Flow, Blockify, and RevenueProtect
               </h1>
             </Reveal>
             <Reveal animation="anim-fadeUp" delay={150}>
               <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.75] text-gray-500 mb-4">
-                Keep the tools that enforce or automate at checkout. FraudPulse is the AI analyst that ranks which rules to change for your chargeback mix.
+                Keep the tools that enforce or automate at checkout. FraudPulse is the AI analyst that ranks which rules and actions to change for your chargeback mix.
               </p>
               <p className="ai-answer text-[1rem] sm:text-[1.0625rem] leading-[1.7] text-gray-600 mb-4">
                 {STACK_ANSWER}
@@ -109,7 +103,7 @@ export default function StackPage() {
             </Reveal>
             <div className="flex flex-col gap-4">
               {layers.map((layer, i) => (
-                <Reveal key={layer.name} animation="anim-fadeUp" delay={([0, 75, 150, 225, 300] as const)[i] ?? 0}>
+                <Reveal key={layer.name} animation="anim-fadeUp" delay={([0, 75, 150, 225] as const)[i] ?? 0}>
                   <div
                     className="rounded-[16px] border bg-white p-6 sm:p-8"
                     style={{ borderColor: '#e5e7eb', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }}
@@ -147,7 +141,7 @@ export default function StackPage() {
               </Link>
               {' · '}
               <Link href="/alternatives/payment-platform-tools/" className="font-semibold text-[#4a96a3] hover:underline">
-                vs Radar, Protect, Flow, and Blockify
+                vs Radar, Flow, Blockify, and RevenueProtect
               </Link>
               {' · '}
               <Link href="/alternatives/nofraud/" className="font-semibold text-[#4a96a3] hover:underline">
@@ -155,7 +149,7 @@ export default function StackPage() {
               </Link>
               {' · '}
               <Link href="/blog/fraudpulse-does-not-replace-stripe-radar-shopify-protect/" className="font-semibold text-[#4a96a3] hover:underline">
-                why we do not replace Radar or Protect
+                why we do not replace Radar, Flow, Blockify, or RevenueProtect
               </Link>
             </p>
           </div>
@@ -170,7 +164,7 @@ export default function StackPage() {
               See ranked changes on your data
             </h2>
             <p className="text-[1.0625rem] leading-[1.7] max-w-[520px] mx-auto mb-10 text-gray-400">
-              Connect Shopify, Stripe, or Adyen. Keep Radar, Protect, Flow, and Blockify. Get the next rule changes ranked for your mix.
+              Connect Shopify, Stripe, or Adyen. Keep Radar, Flow, Blockify, and RevenueProtect. Get the next rule and action changes ranked for your mix.
             </p>
             <TrackedLink
               event="demo_cta_clicked"
