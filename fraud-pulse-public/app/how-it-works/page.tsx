@@ -111,9 +111,9 @@ export default function HowItWorks() {
                   <div className="grid grid-cols-4 gap-3">
                     {[
                       { name: 'Shopify Flow', logo: '/logos/shopify-flow.webp', fit: 'cover' as const },
-                      { name: 'Adyen RevenueProtect', logo: '/logos/adyen-revenueprotect.webp', fit: 'cover' as const },
+                      { name: 'Blockify', logo: '/logos/blockify.webp', fit: 'cover' as const },
                       { name: 'Stripe Radar', logo: '/logos/stripe-radar.png', fit: 'contain' as const },
-                      { name: 'Blockify', logo: '/logos/blockify.png', fit: 'contain' as const },
+                      { name: 'Adyen RevenueProtect', logo: '/logos/adyen-revenueprotect.png', fit: 'contain' as const },
                     ].map(({ name, logo, fit }, i) => (
                       <div key={name} className="flex flex-col items-center min-w-0">
                         <div className="relative w-full h-8 mb-1" aria-hidden>
