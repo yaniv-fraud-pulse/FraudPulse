@@ -56,7 +56,7 @@ export default function Header() {
 
           {/* Actions */}
           <div className="hidden md:flex md:items-center md:gap-3">
-            <a href="https://app.fraud-pulse.com"
+            <a href="https://app.fraud-pulse.com/login"
               className="px-5 py-2 text-base font-medium rounded-full border transition-all"
               style={{ color: '#111827', borderColor: 'transparent', transition: 'all 0.2s cubic-bezier(0.22,1,0.36,1)' }}
               onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'rgb(61,143,160)'; e.currentTarget.style.background = 'rgb(61,143,160)'; e.currentTarget.style.color = 'white'; }}
@@ -65,7 +65,7 @@ export default function Header() {
             </a>
             <TrackedAnchor
               event="signup_cta_clicked"
-              href="https://app.fraud-pulse.com"
+              href="https://app.fraud-pulse.com/signup"
               className="px-5 py-2 text-base font-bold rounded-full text-white transition-all hover:scale-[1.03]"
               style={{
                 background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',
@@ -109,7 +109,7 @@ export default function Header() {
                   {label}
                 </Link>
               ))}
-              <a href="https://app.fraud-pulse.com"
+              <a href="https://app.fraud-pulse.com/login"
                 className="px-4 py-2 text-sm font-medium transition-colors hover:bg-gray-50"
                 style={{ color: '#374151' }}
                 onClick={() => setMobileMenuOpen(false)}>
@@ -118,7 +118,7 @@ export default function Header() {
               <div className="px-4 py-3">
                 <TrackedAnchor
                   event="signup_cta_clicked"
-                  href="https://app.fraud-pulse.com"
+                  href="https://app.fraud-pulse.com/signup"
                   className="flex w-full items-center justify-center rounded-full px-5 py-2.5 text-sm font-bold text-white transition-all"
                   style={{ background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)' }}
                   onClick={() => setMobileMenuOpen(false)}

@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { TrackedAnchor } from '../../components/TrackedCta';
 import { trackMetaEvent } from '../../lib/metaPixel';
 
-export const SIGNUP_URL = 'https://app.fraud-pulse.com';
+export const SIGNUP_URL = 'https://app.fraud-pulse.com/signup';
 
 const ctaStyle = {
   background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',
