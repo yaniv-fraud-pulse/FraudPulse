@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { Reveal } from '../components/Reveal';
 import { captureEvent } from '../components/PostHogProvider';
-import { TrackedLink } from '../components/TrackedCta';
+import { TrackedAnchor, TrackedLink } from '../components/TrackedCta';
 import FaqAccordion from '../components/FaqAccordion';
 import JsonLd from '../components/JsonLd';
 import { PageUpdated } from '../components/GeoBits';
@@ -19,7 +19,7 @@ const plans = [
     priceSuffix: '/transaction',
     priceNote: 'Up to 20K transactions / month',
     tagline: 'Usage-based pricing for growing merchants - no monthly commitment, pay only for what you process.',
-    cta: 'Book A Demo',
+    cta: 'Start Free Trial',
     popular: false,
     features: [
       { label: 'AI advisor recommendations',  included: true },
@@ -38,7 +38,7 @@ const plans = [
     annualPrice: 159,
     annualSaving: 480,
     tagline: 'For established merchants who need AI-powered insights and full platform access.',
-    cta: 'Book A Demo',
+    cta: 'Start Free Trial',
     popular: true,
     features: [
       { label: 'AI advisor recommendations',                 included: true },
@@ -297,14 +297,17 @@ export default function Pricing() {
                     {plan.cta}
                   </Link>
                   ) : (
-                  <TrackedLink event="demo_cta_clicked" href="/book-a-demo/"
+                  <TrackedAnchor
+                    event="signup_cta_clicked"
+                    href="https://app.fraud-pulse.com/signup"
                     className={`block w-full text-center rounded-[10px] py-3 text-[0.9375rem] font-bold transition-all ${
                       plan.popular
                         ? 'text-white shadow-[0_4px_20px_rgba(91,168,180,0.3)] [background:linear-gradient(135deg,#5ba8b4_0%,#4a96a3_100%)]'
                         : 'border border-[#d1d5db] text-gray-500 bg-transparent group-hover:border-white/30 group-hover:text-white group-hover:bg-white/10'
-                    }`}>
+                    }`}
+                  >
                     {plan.cta}
-                  </TrackedLink>
+                  </TrackedAnchor>
                   )}
                 </div>
                 </Reveal>
