@@ -281,6 +281,11 @@ export const alternativePages: AlternativePage[] = [
         competitor: 'Keep these on - they are the enforcement layer',
         fraudPulse: 'Works alongside Radar, Flow, Blockify, and RevenueProtect - not a replacement',
       },
+      {
+        label: 'Added cost',
+        competitor: 'Already in the stack you run',
+        fraudPulse: 'From $0.01 per transaction, or $199/mo Professional ($159/mo billed annually); 14-day free trial',
+      },
     ],
     points: [
       {

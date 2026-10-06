@@ -1,9 +1,8 @@
 /** Shared feature comparison - FraudPulse vs common alternatives. */
 
 /** Rule consoles FraudPulse configures alongside, not instead of. */
-export const PLATFORM_RULE_TOOLS =
+const PLATFORM_RULE_TOOLS =
   'Stripe Radar, Shopify Flow, Blockify, and Adyen RevenueProtect';
-export const PLATFORM_RULE_TOOLS_SHORT = 'Radar, Flow, Blockify, and RevenueProtect';
 export const PLATFORM_RULE_TOOLS_TABLE =
   'Stripe Radar · Flow · Blockify · RevenueProtect';
 
@@ -17,23 +16,6 @@ export type ComparisonFeature = {
   smb: ComparisonValue;
   platform: ComparisonValue;
 };
-
-export const COMPARISON_COLUMNS = [
-  { key: 'fraudPulse', label: 'FraudPulse', sub: null, highlight: true },
-  { key: 'manual', label: 'Manual', sub: 'In-house team or founder', highlight: false },
-  {
-    key: 'smb',
-    label: 'SMB Fraud Prevention',
-    sub: 'NoFraud · FraudLabs Pro · ClearSale',
-    highlight: false,
-  },
-  {
-    key: 'platform',
-    label: 'Payment Platform Tools',
-    sub: PLATFORM_RULE_TOOLS_TABLE,
-    highlight: false,
-  },
-] as const;
 
 export const COMPARISON_FEATURES: ComparisonFeature[] = [
   {

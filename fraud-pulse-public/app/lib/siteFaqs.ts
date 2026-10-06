@@ -1,4 +1,5 @@
 import type { FaqItem } from './homeFaq';
+import { PRICING_FACT } from './geo';
 
 /**
  * Central FAQ page pack - buyer questions from the AI-visibility brief.
@@ -53,4 +54,24 @@ export const siteFaqs: FaqItem[] = [
     q: 'How long does it take to get recommendations, and do I need engineers?',
     a: 'Most merchants connect in minutes with no engineering, then get actionable rule recommendations in days. FraudPulse analyzes transaction and chargeback data from Shopify, Stripe, or Adyen and returns ranked changes your risk or payments team can apply in the stack you already use.',
   },
+  {
+    q: 'How much does FraudPulse cost?',
+    a: PRICING_FACT,
+  },
 ];
+
+/** Reuse live /faq/ wording on other pages so answers never drift. */
+export function pickSiteFaqs(questions: string[]): FaqItem[] {
+  return questions.map((q) => {
+    const faq = siteFaqs.find((f) => f.q === q);
+    if (!faq) throw new Error(`Unknown site FAQ: ${q}`);
+    return faq;
+  });
+}
+
+export const FAQ_REPLACE_STACK = 'Does FraudPulse replace Stripe Radar, Shopify Flow, Blockify, or Adyen RevenueProtect?';
+export const FAQ_FLOW_BLOCKIFY_ENOUGH = 'Are Shopify Flow and Blockify enough for fraud prevention?';
+export const FAQ_HOW_REDUCE_CHARGEBACKS = 'How does FraudPulse reduce chargebacks?';
+export const FAQ_FALSE_DECLINES = 'How do I reduce false declines without turning fraud tools off?';
+export const FAQ_PREVENTION_VS_REPRESENTMENT = 'Chargeback prevention vs representment - which do I need?';
+export const FAQ_TIME_TO_VALUE = 'How long does it take to get recommendations, and do I need engineers?';

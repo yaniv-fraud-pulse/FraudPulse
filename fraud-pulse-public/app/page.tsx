@@ -6,9 +6,26 @@ import Link from 'next/link';
 import { TrackedLink } from './components/TrackedCta';
 import { useState, useEffect } from 'react';
 import { useInView } from './hooks/useInView';
-import { PageUpdated } from './components/GeoBits';
-import { PAGE_LAST_UPDATED } from './lib/geo';
+import JsonLd from './components/JsonLd';
+import FaqAccordion from './components/FaqAccordion';
+import { faqPageJsonLd } from './lib/geo';
+import {
+  FAQ_FALSE_DECLINES,
+  FAQ_FLOW_BLOCKIFY_ENOUGH,
+  FAQ_HOW_REDUCE_CHARGEBACKS,
+  FAQ_REPLACE_STACK,
+  FAQ_TIME_TO_VALUE,
+  pickSiteFaqs,
+} from './lib/siteFaqs';
 import { SITE_URL } from './lib/site';
+
+const homeFaqs = pickSiteFaqs([
+  FAQ_REPLACE_STACK,
+  FAQ_FLOW_BLOCKIFY_ENOUGH,
+  FAQ_HOW_REDUCE_CHARGEBACKS,
+  FAQ_FALSE_DECLINES,
+  FAQ_TIME_TO_VALUE,
+]);
 
 /* ── Animated section wrapper ── */
 function Reveal({ children, className = '', delay = 0, animation = 'anim-fadeUp' }: {
@@ -24,33 +41,6 @@ function Reveal({ children, className = '', delay = 0, animation = 'anim-fadeUp'
     </div>
   );
 }
-
-
-const applyActionsVisual = (
-  <div className="rounded-2xl border bg-white p-4 sm:p-5 w-full max-w-full min-w-0 anim-float overflow-hidden text-left" style={{ borderColor: '#e5e7eb', boxShadow: '0 8px 32px rgba(0,0,0,0.08)' }}>
-    <div className="flex items-center gap-2 mb-4">
-      <div className="w-2 h-2 rounded-full bg-[#5ba8b4] flex-shrink-0" style={{ boxShadow: '0 0 6px rgba(91,168,180,0.6)' }} />
-      <span className="text-xs font-semibold text-gray-400 uppercase tracking-widest">Recommended rules</span>
-    </div>
-    {[
-      { name: 'Shopify', slug: 'shopify', color: '95BF47', rule: 'Tighten high-risk country rules', delay: 0 },
-      { name: 'Stripe', slug: 'stripe', color: '635BFF', rule: 'Block cards with prior chargebacks', delay: 80 },
-      { name: 'Adyen', slug: 'adyen', color: '0ABF53', rule: 'Flag velocity spikes on high AOV', delay: 160 },
-    ].map(({ name, slug, color, rule, delay }) => (
-      <div key={name} className="py-3 border-b last:border-0 anim-fadeUp" style={{ borderColor: '#f3f4f6', animationDelay: `${delay}ms` }}>
-        <div className="flex items-center gap-3 mb-2">
-          <div className="w-8 h-8 rounded-lg bg-gray-50 border border-gray-100 flex items-center justify-center flex-shrink-0">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={`https://cdn.simpleicons.org/${slug}/${color}`} alt="" width={18} height={18} className="object-contain" />
-          </div>
-          <span className="text-xs font-semibold text-gray-800">{name}</span>
-          <span className="text-[0.65rem] font-semibold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-600 ml-auto">Ready to apply</span>
-        </div>
-        <p className="text-xs text-gray-500 pl-11">{rule}</p>
-      </div>
-    ))}
-  </div>
-);
 
 const tabs = [
   {
@@ -250,23 +240,6 @@ const tabs = [
       </div>
     ),
   },
-  // {
-  //   label: 'Your Stack',
-  //   icon: (
-  //     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-  //       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-  //     </svg>
-  //   ),
-  //   title: 'Turn recommendations into rules in your existing stack.',
-  //   body: 'FraudPulse doesn\'t replace your payment tools - it uses transaction data from Shopify, Stripe, and Adyen to tell you which rules and actions will reduce chargebacks and friendly fraud.',
-  //   bullets: [
-  //     'Connect Shopify, Stripe, or Adyen',
-  //     'Get ranked rules and actions with impact estimates',
-  //     'Apply changes where you already manage risk',
-  //     'Works alongside fraud prevention tools - keep your existing stack',
-  //   ],
-  //   visual: applyActionsVisual,
-  // },
 ];
 
 const heroSteps = [
@@ -345,7 +318,6 @@ export default function Home() {
             url: SITE_URL,
             description:
               'FraudPulse connects to your transaction data and recommends rules and actions that reduce chargebacks and friendly fraud.',
-            dateModified: '2026-08-28',
           }),
         }}
       />
@@ -361,7 +333,6 @@ export default function Home() {
             url: SITE_URL,
             description:
               'Fraud intelligence for online merchants. Connects to Shopify, Stripe, and Adyen transaction data, analyzes chargebacks and friendly fraud, and recommends ranked rules and actions.',
-            dateModified: '2026-08-28',
             offers: {
               '@type': 'Offer',
               url: `${SITE_URL}/pricing/`,
@@ -376,59 +347,50 @@ export default function Home() {
           }),
         }}
       />
+      <JsonLd data={faqPageJsonLd(homeFaqs)} />
       <Header />
       <main className="flex-grow overflow-x-clip">
 
         {/* ── Hero ── */}
         <section className="relative overflow-x-clip lg:overflow-x-visible px-5 sm:px-10 text-center flex items-center justify-center" style={{ minHeight: 'calc(100vh - 84px)' }}>
-          <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[900px] h-[500px]"
-            style={{ background: 'radial-gradient(ellipse at 50% 0%, rgba(165,208,216,0.18) 0%, transparent 65%)' }} />
-          <div className="pointer-events-none absolute bottom-0 right-0 w-full max-w-[700px] h-[600px]"
-            style={{ background: 'radial-gradient(ellipse at 80% 80%, rgba(125,107,160,0.22) 0%, transparent 70%)' }} />
+          <div className="pointer-events-none absolute inset-x-0 -top-[84px] bottom-0 overflow-hidden" aria-hidden>
+            <div className="hero-aurora w-[220px] h-[200px] sm:w-[520px] sm:h-[420px] -top-20 sm:-top-32 -left-16 sm:left-[8%]" style={{ background: 'rgba(91,168,180,0.45)' }} />
+            <div className="hero-aurora w-[200px] h-[180px] sm:w-[480px] sm:h-[380px] -top-16 sm:-top-24 -right-16 sm:right-[6%]" style={{ background: 'rgba(125,107,160,0.38)', animationDelay: '-9s' }} />
+            <div className="absolute inset-0 hero-dot-grid" />
+            <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-white" />
+          </div>
 
-          <div className="relative max-w-6xl mx-auto py-20 w-full min-w-0">
+          <div className="relative max-w-6xl mx-auto pt-16 pb-20 sm:pt-20 w-full min-w-0">
 
+            <p className="mb-7 sm:mb-9 flex flex-col sm:flex-row items-center justify-center gap-1.5 sm:gap-3.5 font-semibold leading-[1.15] tracking-[-0.025em] text-[1.25rem] sm:text-[1.5rem] lg:text-[1.75rem] anim-fadeUp"
+              style={{ fontFamily: 'var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif' }}>
+              <span className="flex items-center gap-2.5 text-gray-900">
+                <svg className="w-7 h-7 sm:w-8 sm:h-8" viewBox="0 0 32 32" fill="none" aria-hidden>
+                  <path d="M2 16h7l3-7 5 14 3-7h10" stroke="#5ba8b4" strokeOpacity="0.25" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                  <path className="hero-pulse-path" d="M2 16h7l3-7 5 14 3-7h10" stroke="url(#heroPulse)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                  <defs>
+                    <linearGradient id="heroPulse" x1="0" y1="0" x2="32" y2="0" gradientUnits="userSpaceOnUse">
+                      <stop stopColor="#5ba8b4" />
+                      <stop offset="1" stopColor="#7D6BA0" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+                FraudPulse
+              </span>
+              <span className="hidden sm:block h-6 lg:h-7 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent" aria-hidden />
+              <span className="sr-only"> - </span>
+              <span className="text-gradient-flow">AI Fraud Prevention Analyst</span>
+            </p>
 
-            {/* Headline */}
-            <h1 className="font-extrabold leading-[1.05] text-gray-900 mb-5 tracking-[-0.04em] text-[2.5rem] sm:text-[3.5rem] lg:text-[4.5rem]">
+            <h1 className="font-extrabold text-gray-900 mb-7 tracking-[-0.045em] leading-[1.02] text-[2.25rem] sm:text-[3.75rem] lg:text-[5rem]">
               <span className="block anim-fadeUp delay-75">Stop Losing Money to</span>
-              <span className="block anim-fadeUp delay-225" style={{
-                lineHeight: '1.4',
-                background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',
-                WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
-              }}>Fraud and False Declines.</span>
+              <span className="block pb-[0.08em] text-gradient-flow anim-fadeUp delay-225">Fraud and False Declines.</span>
             </h1>
 
-            <p className="text-[1.25rem] leading-[1.75] mb-3 max-w-[760px] mx-auto text-gray-900 font-semibold anim-fadeUp delay-300">
-              We analyze your transaction data and deliver concrete actions and rules to reduce chargebacks and false positive.
-            </p>
-
-            <p className="ai-answer text-[1.0625rem] leading-[1.75] mb-3 max-w-[680px] mx-auto text-gray-600 anim-fadeUp delay-350">
-              FraudPulse classifies chargebacks by type and ranks specific Stripe Radar, Shopify Flow, Blockify, or Adyen RevenueProtect rule changes with estimated fraud-capture and false-positive rates - so you know which rules to change without replacing the stack you already run.
-            </p>
-            <div className="mb-3 anim-fadeUp delay-350">
-              <PageUpdated date={PAGE_LAST_UPDATED.home} />
-            </div>
-
-            <p className="text-[1.0625rem] leading-[1.75] mb-8 max-w-[620px] mx-auto text-gray-500 anim-fadeUp delay-400">
-              Get actionable fraud insights in days - not analytics reports you never act on.
-            </p>
-
-            {/* CTA */}
-            <div className="anim-fadeUp delay-500">
-              <TrackedLink event="demo_cta_clicked" href="/book-a-demo/"
-                className="inline-flex items-center gap-2 rounded-full px-12 py-5 text-lg font-bold text-white transition-all hover:scale-[1.03]"
-                style={{
-                  background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',
-                  transition: 'transform 0.2s cubic-bezier(0.22,1,0.36,1)',
-                }}>
-                Book a Demo
-              </TrackedLink>
-            </div>
-
-            {/* Subheadline */}
-            <p className="mt-6 text-[1rem] leading-[1.7] max-w-[640px] mx-auto text-gray-500 anim-fadeUp delay-600">
-              Works with Shopify, Stripe, and Adyen - we analyze your transactions and disputes, then suggest the rules to change.
+            <p className="ai-answer text-[1.0625rem] sm:text-[1.25rem] leading-[1.7] max-w-[740px] mx-auto text-balance text-gray-500 anim-fadeUp delay-300">
+              Make{' '}
+              <strong className="hero-marker font-semibold text-gray-900">Stripe Radar, Shopify Flow, Blockify, and RevenueProtect</strong>{' '}
+              smarter. FraudPulse finds what&apos;s driving your chargebacks and tells you exactly which rules to change.
             </p>
 
             {/* Process Flow Animation */}
@@ -676,18 +638,22 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── FAQ link ── */}
+        {/* ── FAQ ── */}
         <section className="py-20 sm:py-28 bg-[#7D6BA0]/20">
           <div className="px-5 sm:px-10">
             <Reveal animation="anim-fadeUp">
-              <div className="text-center max-w-2xl mx-auto">
+              <div className="text-center max-w-2xl mx-auto mb-10">
                 <p className="text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-2 text-[#5ba8b4]">FAQ</p>
                 <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] text-[2.75rem] sm:text-[3.25rem] mb-4">
-                  Common questions, answered
+                  Frequently asked questions
                 </h2>
-                <p className="text-[1.0625rem] text-gray-500 mb-8">
-                  Does FraudPulse replace Radar, Flow, Blockify, or RevenueProtect? How do we reduce chargebacks and false declines? Alternatives to Signifyd for small shops?
-                </p>
+              </div>
+            </Reveal>
+            <Reveal animation="anim-fadeUp" delay={75}>
+              <FaqAccordion faqs={homeFaqs} className="max-w-3xl" />
+            </Reveal>
+            <Reveal animation="anim-fadeUp" delay={150}>
+              <div className="text-center mt-10">
                 <Link
                   href="/faq/"
                   className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-[1.0625rem] font-semibold bg-white border transition-colors"

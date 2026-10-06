@@ -6,8 +6,8 @@ import Link from 'next/link';
 import { Reveal } from '../components/Reveal';
 import { TrackedLink } from '../components/TrackedCta';
 import JsonLd from '../components/JsonLd';
-import { PageUpdated } from '../components/GeoBits';
-import { faqPageJsonLd, PAGE_LAST_UPDATED } from '../lib/geo';
+import ComparisonTable from '../components/ComparisonTable';
+import { ANALYST_VS_ENFORCEMENT_TABLE, PRICING_FACT, faqPageJsonLd } from '../lib/geo';
 import type { FaqItem } from '../lib/homeFaq';
 
 const STACK_ANSWER =
@@ -89,7 +89,6 @@ export default function StackPage() {
               <p className="ai-answer text-[1rem] sm:text-[1.0625rem] leading-[1.7] text-gray-600 mb-4">
                 {STACK_ANSWER}
               </p>
-              <PageUpdated date={PAGE_LAST_UPDATED.stack} />
             </Reveal>
           </div>
         </section>
@@ -121,7 +120,26 @@ export default function StackPage() {
           </div>
         </section>
 
-        <section className="py-16 sm:py-24 px-5 sm:px-10 bg-white">
+        <section className="py-16 sm:py-20 px-5 sm:px-10 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <Reveal animation="anim-fadeUp">
+              <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] text-center mb-3 text-[1.75rem] sm:text-[2.25rem]">
+                Enforcement tools vs the analyst layer
+              </h2>
+              <p className="text-center text-[1.0625rem] leading-[1.7] text-gray-500 max-w-2xl mx-auto mb-8">
+                Same stack, two jobs. Radar, Flow, Blockify, and RevenueProtect act on each order. FraudPulse decides what they should act on.
+              </p>
+            </Reveal>
+            <Reveal animation="anim-fadeUp" delay={75}>
+              <ComparisonTable table={ANALYST_VS_ENFORCEMENT_TABLE} />
+              <p className="mt-6 text-center text-[0.9375rem] leading-[1.7] text-gray-500 max-w-2xl mx-auto">
+                {PRICING_FACT}
+              </p>
+            </Reveal>
+          </div>
+        </section>
+
+        <section className="py-16 sm:py-24 px-5 sm:px-10 bg-[#f8f9fa]">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] mb-8 text-[1.75rem] sm:text-[2.25rem]">
               FAQ
@@ -148,7 +166,7 @@ export default function StackPage() {
                 vs NoFraud and SMB tools
               </Link>
               {' · '}
-              <Link href="/blog/fraudpulse-does-not-replace-stripe-radar-shopify-protect/" className="font-semibold text-[#4a96a3] hover:underline">
+              <Link href="/blog/fraudpulse-does-not-replace-stripe-radar-shopify-flow/" className="font-semibold text-[#4a96a3] hover:underline">
                 why we do not replace Radar, Flow, Blockify, or RevenueProtect
               </Link>
             </p>

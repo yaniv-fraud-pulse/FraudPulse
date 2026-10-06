@@ -17,7 +17,7 @@
 | Cross-subdomain cookie `*.fraud-pulse.com` | ✅ Done |
 | **Vercel env vars** | ⚠️ **You must add** (see below) |
 | **Calendly confirmation redirect** | ⚠️ **You must configure** (see below) |
-| App Phase B (`identify`, signup, data connect) | ⚠️ App not in this repo — use `app/lib/posthogAppPhaseB.ts` |
+| App Phase B (`identify`, signup, data connect) | ⚠️ App not in this repo — see Phase B below |
 
 ---
 
@@ -61,4 +61,11 @@ Event: `https://calendly.com/idan-apis-solutions/30min` (Idan Hayon, CEO)
 
 ## Phase B (product app)
 
-See `app/lib/posthogAppPhaseB.ts`. Same project token + host. App should live on `*.fraud-pulse.com` for cookie stitching.
+Same project token + host. App should live on `*.fraud-pulse.com` for cookie stitching.
+
+1. Init once on app boot (same options as the marketing site, including `cross_subdomain_cookie` + `cookie_domain: '.fraud-pulse.com'` in prod).
+2. After login / session restore: `posthog.identify(user.id, { email, name, company, plan })`
+3. On logout: `posthog.reset()`
+4. On successful signup (once): `posthog.capture('user_signed_up', { auth_method, plan })`
+5. On first successful Stripe/Shopify (or PSP) connection (once): `posthog.capture('data_connected', { provider, workspace_id })`
+6. Capture `$pageview` on in-app route changes (or enable `capture_pageview`).

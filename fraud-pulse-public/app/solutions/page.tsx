@@ -6,10 +6,10 @@ import Link from 'next/link';
 import { Reveal } from '../components/Reveal';
 import { TrackedLink } from '../components/TrackedCta';
 import JsonLd from '../components/JsonLd';
-import GeoStatStrip, { PageUpdated } from '../components/GeoBits';
+import GeoStatStrip from '../components/GeoBits';
 import ToolComparisonTable from '../components/ToolComparisonTable';
 import StackCategoryTable from '../components/StackCategoryTable';
-import { GEO_STATS, PAGE_LAST_UPDATED, faqPageJsonLd } from '../lib/geo';
+import { GEO_STATS, faqPageJsonLd } from '../lib/geo';
 import { siteFaqs } from '../lib/siteFaqs';
 
 const SOLUTIONS_ANSWER =
@@ -108,7 +108,7 @@ export default function Solutions() {
             style={{ background: 'radial-gradient(ellipse at center, rgba(165,208,216,0.15) 0%, transparent 60%)' }} />
 
           <div className="relative max-w-7xl mx-auto py-16 sm:py-24">
-            <div className="max-w-[900px] mx-auto text-center">
+            <div className="max-w-[1100px] mx-auto text-center">
               <Reveal animation="anim-fadeUp" delay={75}>
                 <h1 className="font-extrabold text-gray-900 tracking-[-0.04em] leading-[1.1] mb-5 text-[2.5rem] sm:text-[3.5rem] lg:text-[4rem]">
                   AI fraud analyst for{' '}
@@ -121,13 +121,12 @@ export default function Solutions() {
                 </h1>
               </Reveal>
               <Reveal animation="anim-fadeUp" delay={150}>
-                <p className="text-[1.25rem] leading-[1.75] max-w-[720px] mx-auto text-gray-600 font-semibold mb-3">
+                <p className="text-[1.25rem] leading-[1.75] max-w-[900px] mx-auto text-gray-600 font-semibold mb-3">
                   Ranked Radar, Flow, Blockify, and RevenueProtect changes from your chargebacks - without replacing the tools you already run.
                 </p>
-                <p className="ai-answer text-[1rem] sm:text-[1.0625rem] leading-[1.7] max-w-[720px] mx-auto text-gray-600 mb-4">
+                <p className="ai-answer text-[1rem] sm:text-[1.0625rem] leading-[1.7] max-w-[960px] mx-auto text-gray-600 mb-4">
                   {SOLUTIONS_ANSWER}
                 </p>
-                <PageUpdated date={PAGE_LAST_UPDATED.solutions} />
               </Reveal>
             </div>
           </div>
@@ -288,7 +287,7 @@ export default function Solutions() {
                   vs NoFraud
                 </Link>
                 {' · '}
-                <Link href="/blog/fraudpulse-does-not-replace-stripe-radar-shopify-protect/" className="font-semibold text-[#4a96a3] hover:underline">
+                <Link href="/blog/fraudpulse-does-not-replace-stripe-radar-shopify-flow/" className="font-semibold text-[#4a96a3] hover:underline">
                   how FraudPulse works alongside Flow and Blockify
                 </Link>
                 .

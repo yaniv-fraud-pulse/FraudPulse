@@ -1883,7 +1883,7 @@ ${toolComparisonTableHtml()}
     ],
   },
   {
-    slug: 'fraudpulse-does-not-replace-stripe-radar-shopify-protect',
+    slug: 'fraudpulse-does-not-replace-stripe-radar-shopify-flow',
     title: "FraudPulse Doesn't Replace Stripe Radar, Shopify Flow, Blockify, or RevenueProtect. Here's What It Does Instead.",
     excerpt:
       "One of the biggest misconceptions we hear is that FraudPulse replaces fraud consoles such as Stripe Radar, Shopify Flow, Blockify, or Adyen RevenueProtect. It doesn't - and here's why that distinction matters.",

@@ -31,26 +31,3 @@ export default function GeoStatStrip({
     </div>
   );
 }
-
-/**
- * Visible freshness signal for GEO / AI crawlers and humans.
- * Bump the date only when page copy actually changes.
- */
-export function PageUpdated({
-  date,
-  visible = true,
-}: {
-  date: string;
-  visible?: boolean;
-}) {
-  return (
-    <p className={visible ? 'text-[0.8125rem] text-gray-400' : 'sr-only'}>
-      <time dateTime={toIsoDate(date)}>Last updated {date}</time>
-    </p>
-  );
-}
-
-function toIsoDate(label: string): string {
-  const d = new Date(label);
-  return Number.isNaN(d.getTime()) ? label : d.toISOString().slice(0, 10);
-}

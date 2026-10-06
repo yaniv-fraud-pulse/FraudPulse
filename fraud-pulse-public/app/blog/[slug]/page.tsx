@@ -188,10 +188,15 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                   className="w-10 h-10 rounded-full flex items-center justify-center font-bold text-[0.75rem] text-white shrink-0"
                   style={{ background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)' }}
                 >
-                  IH
+                  {post.author.split(' ').map((part) => part[0]).join('').slice(0, 2)}
                 </div>
                 <div>
-                  <p className="text-[0.875rem] font-semibold text-gray-800">{post.author}</p>
+                  <p className="text-[0.875rem] font-semibold text-gray-800">
+                    By{' '}
+                    <a href="/about/" rel="author" className="hover:text-[#4a96a3]">
+                      {post.author}
+                    </a>
+                  </p>
                   <p className="text-[0.75rem] text-gray-400">{post.authorRole}</p>
                 </div>
               </div>

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Geist_Mono } from "next/font/google";
+import { Geist_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import JsonLd from "./components/JsonLd";
 import PostHogProvider from "./components/PostHogProvider";
@@ -11,6 +11,12 @@ const GA_MEASUREMENT_ID = "G-GL245KC3KN";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
+  weight: ["600", "700"],
   subsets: ["latin"],
 });
 
@@ -74,7 +80,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistMono.variable} h-full antialiased`}
+      className={`${geistMono.variable} ${spaceGrotesk.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-white pt-[84px] overflow-x-clip">
         <PostHogProvider>

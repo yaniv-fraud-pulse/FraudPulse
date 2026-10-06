@@ -27,7 +27,7 @@
 - Book a demo: https://www.fraud-pulse.com/book-a-demo/
 - Webinar: https://www.fraud-pulse.com/webinar/
 - Blog: https://www.fraud-pulse.com/blog/
-- About: https://www.fraud-pulse.com/about/
+- About (AI fraud analyst on Radar, Flow, Blockify, and RevenueProtect; founders Idan Hayon and Yaniv Hayun): https://www.fraud-pulse.com/about/
 - Contact: https://www.fraud-pulse.com/contact/
 - Refund policy: https://www.fraud-pulse.com/refund/
 - Terms: https://www.fraud-pulse.com/terms/
@@ -78,7 +78,7 @@
 - How to Reduce Chargebacks on Shopify (2026 Guide): https://www.fraud-pulse.com/blog/how-to-reduce-chargebacks-on-shopify-2026/
 - Should you build your own fraud system or buy a solution?: https://www.fraud-pulse.com/blog/build-vs-buy-fraud-system/
 - How to audit your fraud acts in ~30 minutes. Here's how I usually approach it.: https://www.fraud-pulse.com/blog/how-to-audit-your-fraud-acts-in-30-minutes/
-- FraudPulse Doesn't Replace Stripe Radar, Shopify Flow, Blockify, or RevenueProtect. Here's What It Does Instead.: https://www.fraud-pulse.com/blog/fraudpulse-does-not-replace-stripe-radar-shopify-protect/
+- FraudPulse Doesn't Replace Stripe Radar, Shopify Flow, Blockify, or RevenueProtect. Here's What It Does Instead.: https://www.fraud-pulse.com/blog/fraudpulse-does-not-replace-stripe-radar-shopify-flow/
 - Visa Reduced the Excessive Merchant Threshold from 2.2% to 1.5% Overnight: https://www.fraud-pulse.com/blog/visa-vamp-threshold-reduction-2026/
 - Demonstrating FraudPulse: From Data to Actionable Fraud Insights in Minutes: https://www.fraud-pulse.com/blog/fraudpulse-features-walkthrough/
 - Fraud Trends 2026: Deepfakes, AI Agents, and the Sophistication Shift: https://www.fraud-pulse.com/blog/fraud-trends-2026-deepfakes-ai-automation/

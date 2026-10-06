@@ -7,8 +7,8 @@ import { Reveal } from '../components/Reveal';
 import { TrackedLink } from '../components/TrackedCta';
 import FaqAccordion from '../components/FaqAccordion';
 import JsonLd from '../components/JsonLd';
-import { PageUpdated } from '../components/GeoBits';
-import { faqPageJsonLd, PAGE_LAST_UPDATED } from '../lib/geo';
+import ComparisonTable from '../components/ComparisonTable';
+import { ANALYST_VS_SCREENING_TABLE, faqPageJsonLd } from '../lib/geo';
 import { siteFaqs } from '../lib/siteFaqs';
 
 export default function FaqPage() {
@@ -43,7 +43,6 @@ export default function FaqPage() {
                 How FraudPulse works alongside Stripe Radar, Shopify Flow, Blockify, and Adyen RevenueProtect - ranked rule changes,
                 chargebacks, friendly vs real fraud, and prevention vs representment.
               </p>
-              <PageUpdated date={PAGE_LAST_UPDATED.faq} />
             </Reveal>
           </div>
         </section>
@@ -52,6 +51,22 @@ export default function FaqPage() {
           <div className="w-full md:w-[60%] mx-auto">
             <Reveal animation="anim-fadeUp">
               <FaqAccordion faqs={siteFaqs} className="!w-full" />
+            </Reveal>
+            <Reveal animation="anim-fadeUp" delay={75}>
+              <h2 className="mt-16 mb-3 font-extrabold text-gray-900 tracking-[-0.03em] text-center text-[1.75rem] sm:text-[2.25rem]">
+                FraudPulse vs screening and guarantee vendors
+              </h2>
+              <p className="mb-8 text-center text-[1.0625rem] leading-[1.7] text-gray-500">
+                Screening tools decide on each order. FraudPulse decides which rules your existing tools should run.
+              </p>
+              <ComparisonTable table={ANALYST_VS_SCREENING_TABLE} />
+              <p className="mt-6 text-center text-[0.9375rem] text-gray-500">
+                Dedicated comparison:{' '}
+                <Link href="/alternatives/nofraud/" className="font-semibold text-[#4a96a3] hover:underline">
+                  FraudPulse vs NoFraud, FraudLabs Pro, ClearSale, SEON, and Subuno
+                </Link>
+                .
+              </p>
             </Reveal>
             <Reveal animation="anim-fadeUp" delay={75}>
               <p className="mt-12 text-center text-[1rem] text-gray-500">

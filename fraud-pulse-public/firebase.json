@@ -8,6 +8,16 @@
     ],
     "cleanUrls": true,
     "trailingSlash": true,
+    "redirects": [
+      { "source": "/faqs{,/**}", "destination": "/faq/", "type": 301 },
+      { "source": "/support{,/**}", "destination": "/faq/", "type": 301 },
+      { "source": "/compare/nofraud{,/**}", "destination": "/alternatives/nofraud/", "type": 301 },
+      {
+        "source": "/blog/fraudpulse-does-not-replace-stripe-radar-shopify-protect{,/**}",
+        "destination": "/blog/fraudpulse-does-not-replace-stripe-radar-shopify-flow/",
+        "type": 301
+      }
+    ],
     "headers": [
       {
         "source": "**/*.@(js|css|svg|woff|woff2|ttf|eot)",

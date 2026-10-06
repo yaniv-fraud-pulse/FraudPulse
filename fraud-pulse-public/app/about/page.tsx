@@ -3,8 +3,30 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Reveal } from '../components/Reveal';
 import { TrackedLink } from '../components/TrackedCta';
+import JsonLd from '../components/JsonLd';
+import ComparisonTable from '../components/ComparisonTable';
+import { ANALYST_VS_SCREENING_TABLE, PRICING_FACT, faqPageJsonLd } from '../lib/geo';
+import { FAQ_REPLACE_STACK, pickSiteFaqs } from '../lib/siteFaqs';
+import type { FaqItem } from '../lib/homeFaq';
+
+const aboutFaqs: FaqItem[] = [
+  {
+    q: 'What does FraudPulse do?',
+    a: 'FraudPulse is an AI fraud analyst for Shopify, Stripe, and Adyen merchants. Connect transaction and chargeback data from those platforms. It classifies chargebacks by type and ranks specific Stripe Radar, Shopify Flow, Blockify, or Adyen RevenueProtect rule changes, each with an estimated fraud-capture rate and false-positive percentage. It does not replace those tools and does not take over checkout.',
+  },
+  ...pickSiteFaqs([FAQ_REPLACE_STACK]),
+  {
+    q: 'Who founded FraudPulse?',
+    a: 'FraudPulse (Fraud Pulse Ltd.) was co-founded in 2025 by Idan Hayon, CEO, and Yaniv Hayun, CTO. Idan led fraud analytics and risk operations at Riskified, Melio, and Creednz. Yaniv built real-time data infrastructure and engineering teams at Upstream Security and Creednz.',
+  },
+  {
+    q: 'How much does FraudPulse cost?',
+    a: PRICING_FACT,
+  },
+];
 
 const values = [
   {
@@ -25,19 +47,10 @@ const values = [
   },
 ];
 
-const milestones = [
-  { year: '2014', event: 'Idan joins Riskified as a Fraud & Data Analyst - his first deep dive into payment fraud patterns at scale.' },
-  { year: '2016', event: 'Idan is promoted to Senior Data Analyst, then Analytics Team Lead at Riskified. Meanwhile, Yaniv begins building distributed systems and engineering teams in the Israeli tech ecosystem.' },
-  { year: '2017', event: 'Yaniv joins Upstream Security as Director of Engineering, architecting real-time data pipelines and scalable backend infrastructure for connected vehicle cybersecurity.' },
-  { year: '2018', event: 'Idan becomes Head of Analytics Operations at Riskified, overseeing fraud analytics infrastructure serving global merchants.' },
-  { year: '2020', event: 'Idan joins Melio as Risk Research Manager, then Director of Risk Analytics - leading risk strategy for a fast-growing B2B payments platform.' },
-  { year: '2023', event: 'Both Idan and Yaniv join Creednz - Idan as Head of Analytics, Yaniv as VP R&D. Working side by side, they see first-hand how underserved merchants are for actionable fraud tooling.' },
-  { year: '2025', event: "FraudPulse is born. Idan and Yaniv co-found the platform with a shared mission: give every merchant the same fraud intelligence as the world's largest banks." },
-];
-
 export default function About() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
+      <JsonLd data={faqPageJsonLd(aboutFaqs)} />
       <Header />
 
       <main className="flex-grow">
@@ -53,6 +66,20 @@ export default function About() {
 
           <div className="relative max-w-7xl mx-auto py-16 sm:py-24">
             <div className="max-w-[880px]">
+              <Reveal animation="anim-fadeUp" delay={75}>
+                <h1 className="font-extrabold text-gray-900 tracking-[-0.04em] leading-[1.1] mb-6 text-[2.75rem] sm:text-[3.5rem]">
+                  About{' '}
+                  <span style={{
+                    background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 50%, #5ba8b4 100%)',
+                    WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
+                  }}>
+                    FraudPulse
+                  </span>
+                </h1>
+                <p className="ai-answer text-[1.125rem] leading-[1.75] text-gray-700 mb-6">
+                  {aboutFaqs[0].a}
+                </p>
+              </Reveal>
               <Reveal animation="anim-fadeUp" delay={150}>
               <p className="text-[1.25rem] leading-[1.8] text-gray-600">
                 FraudPulse was co-founded by <strong className="text-gray-900">Idan Hayon</strong> and{' '}
@@ -66,6 +93,32 @@ export default function About() {
               </p>
               </Reveal>
             </div>
+          </div>
+        </section>
+
+        {/* ── Where FraudPulse fits ── */}
+        <section className="py-12 sm:py-16 px-5 sm:px-10 bg-[#f8f9fa]">
+          <div className="max-w-5xl mx-auto">
+            <Reveal animation="anim-fadeUp">
+              <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] text-center mb-3 text-[1.75rem] sm:text-[2.25rem]">
+                Where FraudPulse fits in your stack
+              </h2>
+              <p className="text-center text-[1.0625rem] leading-[1.7] text-gray-500 max-w-2xl mx-auto mb-8">
+                FraudPulse is the analyst, not the screener. Stripe Radar, Shopify Flow, Blockify, and Adyen RevenueProtect keep enforcing at checkout; FraudPulse tells you which of their rules to change.
+              </p>
+            </Reveal>
+            <Reveal animation="anim-fadeUp" delay={75}>
+              <ComparisonTable table={ANALYST_VS_SCREENING_TABLE} />
+            </Reveal>
+            <Reveal animation="anim-fadeUp" delay={150}>
+              <p className="mt-8 text-center text-[1rem] leading-[1.7] text-gray-600 max-w-2xl mx-auto">
+                {PRICING_FACT}{' '}
+                <Link href="/pricing/" className="font-semibold text-[#4a96a3] hover:underline">
+                  See pricing
+                </Link>
+                .
+              </p>
+            </Reveal>
           </div>
         </section>
 
@@ -277,6 +330,37 @@ export default function About() {
                 );
               })}
             </div>
+          </div>
+        </section>
+
+        {/* ── FAQ ── */}
+        <section className="py-16 sm:py-24 px-5 sm:px-10 bg-white">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] mb-8 text-[1.75rem] sm:text-[2.25rem]">
+              FAQ about FraudPulse
+            </h2>
+            <dl className="flex flex-col gap-6">
+              {aboutFaqs.map((faq) => (
+                <div key={faq.q}>
+                  <dt className="font-semibold text-[1.0625rem] text-gray-900 mb-2">{faq.q}</dt>
+                  <dd className="text-[1.0625rem] leading-[1.75] text-gray-600">{faq.a}</dd>
+                </div>
+              ))}
+            </dl>
+            <p className="mt-10 text-[0.9375rem] text-gray-500">
+              More answers on the{' '}
+              <Link href="/faq/" className="font-semibold text-[#4a96a3] hover:underline">
+                full FAQ
+              </Link>
+              {' · '}
+              <Link href="/stack/" className="font-semibold text-[#4a96a3] hover:underline">
+                using FraudPulse with Radar, Flow, Blockify, and RevenueProtect
+              </Link>
+              {' · '}
+              <Link href="/alternatives/nofraud/" className="font-semibold text-[#4a96a3] hover:underline">
+                vs NoFraud and SMB tools
+              </Link>
+            </p>
           </div>
         </section>
 

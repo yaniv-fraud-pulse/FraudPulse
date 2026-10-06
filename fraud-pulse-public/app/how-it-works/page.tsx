@@ -6,13 +6,23 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Reveal } from '../components/Reveal';
 import { TrackedLink } from '../components/TrackedCta';
-import GeoStatStrip, { PageUpdated } from '../components/GeoBits';
+import GeoStatStrip from '../components/GeoBits';
 import PreventionVsRepresentmentTable from '../components/PreventionVsRepresentmentTable';
-import { GEO_STATS, PAGE_LAST_UPDATED } from '../lib/geo';
+import JsonLd from '../components/JsonLd';
+import { GEO_STATS, faqPageJsonLd } from '../lib/geo';
+import { howItWorksFaqs } from '../lib/pageFaqs';
+import { FAQ_PREVENTION_VS_REPRESENTMENT, FAQ_REPLACE_STACK, pickSiteFaqs } from '../lib/siteFaqs';
+
+const faqs = [
+  ...pickSiteFaqs([FAQ_REPLACE_STACK]),
+  ...howItWorksFaqs,
+  ...pickSiteFaqs([FAQ_PREVENTION_VS_REPRESENTMENT]),
+];
 
 export default function HowItWorks() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
+      <JsonLd data={faqPageJsonLd(faqs)} />
       <Header />
 
       <main className="flex-grow">
@@ -27,11 +37,11 @@ export default function HowItWorks() {
             style={{ background: 'radial-gradient(ellipse at center, rgba(125,107,160,0.12) 0%, transparent 60%)' }} />
 
           <div className="relative max-w-7xl mx-auto py-16 sm:py-24">
-            <div className="max-w-[860px] mx-auto text-center">
+            <div className="max-w-[1100px] mx-auto text-center">
               <Reveal animation="anim-fadeUp" delay={75}>
                 <h1 className="font-extrabold text-gray-900 tracking-[-0.04em] leading-[1.1] mb-5 text-[2.75rem] sm:text-[3.75rem] lg:text-[4.25rem]">
                   From Transaction Data to{' '}
-                  <span style={{
+                  <span className="sm:block" style={{
                     background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',
                     WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
                   }}>
@@ -40,16 +50,15 @@ export default function HowItWorks() {
                 </h1>
               </Reveal>
               <Reveal animation="anim-fadeUp" delay={150}>
-                <p className="text-[1.125rem] sm:text-[1.375rem] leading-[1.75] max-w-[680px] mx-auto text-gray-500 mb-2">
+                <p className="text-[1.125rem] sm:text-[1.375rem] leading-[1.75] max-w-[900px] mx-auto text-gray-500 mb-2">
                   Get actionable fraud insights in days - not analytics reports you never act on.
                 </p>
-                <p className="text-[1.0625rem] sm:text-[1.125rem] leading-[1.75] max-w-[620px] mx-auto text-gray-400 mb-4">
+                <p className="text-[1.0625rem] sm:text-[1.125rem] leading-[1.75] max-w-[900px] mx-auto text-gray-400 mb-4">
                   Connect data from <strong className="text-gray-600">Shopify</strong>, <strong className="text-gray-600">Stripe</strong>, or <strong className="text-gray-600">Adyen</strong>. We analyze transactions, chargebacks, and friendly fraud - then recommend the rules and actions to change.
                 </p>
-                <p className="ai-answer text-[1rem] sm:text-[1.0625rem] leading-[1.7] max-w-[680px] mx-auto text-gray-600 mb-4">
+                <p className="ai-answer text-[1rem] sm:text-[1.0625rem] leading-[1.7] max-w-[960px] mx-auto text-gray-600 mb-4">
                   To reduce chargebacks on Shopify, classify why they happen, then change Flow or Blockify (and Radar if you use Stripe, or RevenueProtect if you use Adyen) to match those types. FraudPulse classifies every chargeback and outputs a ranked list of specific rule changes with estimated fraud-capture and false-positive rates. Fighting cases after they file does not replace prevention - and FraudPulse is not a Chargeflow or Chargebacks911 replacement.
                 </p>
-                <PageUpdated date={PAGE_LAST_UPDATED.howItWorks} />
               </Reveal>
 
               {/* Data sources → FraudPulse → rule consoles */}
@@ -351,23 +360,30 @@ export default function HowItWorks() {
           </div>
         </section>
 
-        {/* ── More questions ── */}
-        <section className="py-16 sm:py-24 px-5 sm:px-10 bg-white">
-          <div className="max-w-3xl mx-auto text-center">
+        {/* ── FAQ ── */}
+        <section className="py-16 sm:py-24 px-5 sm:px-10 bg-[#f8f9fa]">
+          <div className="max-w-3xl mx-auto">
             <Reveal animation="anim-fadeUp">
-              <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] mb-3 text-[2.5rem] sm:text-[3rem]">
-                Questions?
+              <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] mb-8 text-center text-[2.5rem] sm:text-[3rem]">
+                Frequently asked questions
               </h2>
-              <p className="text-[1.0625rem] text-gray-500 max-w-xl mx-auto mb-8">
-                Answers on Radar, Flow, Blockify, RevenueProtect, chargebacks, false declines, and Signifyd alternatives.
-              </p>
-              <Link
-                href="/faq/"
-                className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-[1.0625rem] font-semibold border transition-colors"
-                style={{ borderColor: '#e5e7eb', color: '#4a96a3' }}
-              >
-                View FAQ
-              </Link>
+              <dl className="flex flex-col gap-6">
+                {faqs.map((faq) => (
+                  <div key={faq.q}>
+                    <dt className="font-semibold text-[1.0625rem] text-gray-900 mb-2">{faq.q}</dt>
+                    <dd className="text-[1.0625rem] leading-[1.75] text-gray-600">{faq.a}</dd>
+                  </div>
+                ))}
+              </dl>
+              <div className="text-center mt-10">
+                <Link
+                  href="/faq/"
+                  className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-[1.0625rem] font-semibold border bg-white transition-colors"
+                  style={{ borderColor: '#e5e7eb', color: '#4a96a3' }}
+                >
+                  View full FAQ
+                </Link>
+              </div>
             </Reveal>
           </div>
         </section>

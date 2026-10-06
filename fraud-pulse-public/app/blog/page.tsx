@@ -6,8 +6,10 @@ import Link from 'next/link';
 import { Reveal } from '../components/Reveal';
 import { TrackedLink } from '../components/TrackedCta';
 import { posts } from '../lib/blog';
-import { PageUpdated } from '../components/GeoBits';
-import { PAGE_LAST_UPDATED } from '../lib/geo';
+import JsonLd from '../components/JsonLd';
+import ComparisonTable from '../components/ComparisonTable';
+import { ANALYST_VS_ENFORCEMENT_TABLE, faqPageJsonLd } from '../lib/geo';
+import { blogIndexFaqs } from '../lib/pageFaqs';
 
 const sortedPosts = [...posts].sort(
   (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
@@ -22,6 +24,7 @@ const categoryColors: Record<string, { bg: string; text: string }> = {
 export default function Blog() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
+      <JsonLd data={faqPageJsonLd(blogIndexFaqs)} />
       <Header />
 
       <main className="flex-grow">
@@ -56,7 +59,6 @@ export default function Blog() {
               <p className="text-[1.25rem] sm:text-[1.375rem] leading-[1.75] max-w-[600px] mx-auto text-gray-500 mb-4">
                 Practical guides, product updates, and deep-dives on fraud prevention for modern merchants.
               </p>
-              <PageUpdated date={PAGE_LAST_UPDATED.blog} />
             </Reveal>
           </div>
         </section>
@@ -130,23 +132,47 @@ export default function Blog() {
           </div>
         </section>
 
-        {/* ── More questions ── */}
+        {/* ── Enforcement vs analyst ── */}
         <section className="py-16 sm:py-24 px-5 sm:px-10 bg-white">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto">
             <Reveal animation="anim-fadeUp">
-              <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] mb-3 text-[2.5rem] sm:text-[3rem]">
-                Questions?
+              <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] text-center mb-3 text-[2rem] sm:text-[2.5rem]">
+                The tools these guides tune
               </h2>
-              <p className="text-[1.0625rem] text-gray-500 max-w-xl mx-auto mb-8">
-                Product and buyer questions live on the FAQ page - Radar, Flow, Blockify, chargebacks, and more.
+              <p className="text-center text-[1.0625rem] leading-[1.7] text-gray-500 max-w-2xl mx-auto mb-8">
+                Most posts end in a rule change inside Stripe Radar, Shopify Flow, Blockify, or Adyen RevenueProtect. Here is how those tools and FraudPulse split the work.
               </p>
-              <Link
-                href="/faq/"
-                className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-[1.0625rem] font-semibold border transition-colors"
-                style={{ borderColor: '#e5e7eb', color: '#4a96a3' }}
-              >
-                View FAQ
-              </Link>
+            </Reveal>
+            <Reveal animation="anim-fadeUp" delay={75}>
+              <ComparisonTable table={ANALYST_VS_ENFORCEMENT_TABLE} />
+            </Reveal>
+          </div>
+        </section>
+
+        {/* ── FAQ ── */}
+        <section className="py-16 sm:py-24 px-5 sm:px-10 bg-[#f8f9fa]">
+          <div className="max-w-3xl mx-auto">
+            <Reveal animation="anim-fadeUp">
+              <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] mb-8 text-center text-[2.5rem] sm:text-[3rem]">
+                Frequently asked questions
+              </h2>
+              <dl className="flex flex-col gap-6">
+                {blogIndexFaqs.map((faq) => (
+                  <div key={faq.q}>
+                    <dt className="font-semibold text-[1.0625rem] text-gray-900 mb-2">{faq.q}</dt>
+                    <dd className="text-[1.0625rem] leading-[1.75] text-gray-600">{faq.a}</dd>
+                  </div>
+                ))}
+              </dl>
+              <div className="text-center mt-10">
+                <Link
+                  href="/faq/"
+                  className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-[1.0625rem] font-semibold border bg-white transition-colors"
+                  style={{ borderColor: '#e5e7eb', color: '#4a96a3' }}
+                >
+                  View full FAQ
+                </Link>
+              </div>
             </Reveal>
           </div>
         </section>

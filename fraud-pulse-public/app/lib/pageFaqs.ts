@@ -19,29 +19,14 @@ export const howItWorksFaqs: FaqItem[] = [
   },
 ];
 
-export const solutionsFaqs: FaqItem[] = [
-  {
-    q: 'Is FraudPulse analytics & reporting or a decision tool?',
-    a: 'FraudPulse is a decision tool, not an analytics and reporting product. Instead of only charting what happened, it delivers ranked fraud rule changes and actions with estimated chargeback and false-positive impact so merchants know exactly what to change next to reduce chargebacks and friendly fraud.',
-  },
-  {
-    q: 'Can FraudPulse reduce chargebacks and friendly fraud at the same time?',
-    a: 'Yes. FraudPulse separates patterns that drive real fraud and friendly fraud from rules that over-block legitimate buyers. Recommendations prioritize changes that reduce disputes while protecting approval rates, so you are not forced to trade conversion for risk blindly.',
-  },
-  {
-    q: 'What payment stacks does FraudPulse support?',
-    a: 'FraudPulse connects to transaction data from Shopify, Stripe, and Adyen. Merchants on other platforms can upload CSV exports. Custom integrations are available when your stack needs a dedicated connector.',
-  },
-  {
-    q: 'How is FraudPulse different from hiring more fraud analysts?',
-    a: 'Adding headcount does not fix unclear rules or fragmented data. FraudPulse structures your existing transaction signals into measurable recommendations - which rules prevent chargebacks and friendly fraud, which create false positives, and what to change - so small teams can operate with clarity instead of reactive rule piles.',
-  },
-];
-
 export const blogIndexFaqs: FaqItem[] = [
   {
     q: 'What topics does the FraudPulse blog cover?',
-    a: 'The FraudPulse blog covers chargeback reduction, friendly fraud, false positives, Visa VAMP thresholds, fraud rule design, and practical fraud-ops frameworks for online merchants who want clearer decisions from their transaction data.',
+    a: 'The FraudPulse blog covers how to tune Stripe Radar, Shopify Flow, Blockify, and Adyen RevenueProtect from your own chargeback mix: chargeback reduction, friendly fraud, false declines, card testing, Visa VAMP thresholds, and fraud rule audits. It is about prevention and rule decisions, not order screening or chargeback representment.',
+  },
+  {
+    q: 'Does FraudPulse replace the fraud tools covered on the blog?',
+    a: 'No. Stripe Radar, Shopify Flow, Blockify, and Adyen RevenueProtect stay the enforcement layer at checkout. FraudPulse is the AI analyst: it classifies chargebacks and ranks which of their rules to change, each with an estimated fraud-capture rate and false-positive percentage.',
   },
   {
     q: 'Who writes the FraudPulse fraud guides?',

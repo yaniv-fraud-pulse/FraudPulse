@@ -5,8 +5,7 @@ import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import JsonLd from '../../components/JsonLd';
 import { Reveal } from '../../components/Reveal';
-import { PageUpdated } from '../../components/GeoBits';
-import { ALTERNATIVE_LAST_UPDATED, faqPageJsonLd } from '../../lib/geo';
+import { faqPageJsonLd } from '../../lib/geo';
 import { pageMetadata } from '../../lib/seo';
 import { TrackedLink } from '../../components/TrackedCta';
 import { alternativePages, getAlternative } from '../../lib/alternatives';
@@ -85,9 +84,6 @@ export default async function AlternativePage({
               <p className="ai-answer text-[1rem] sm:text-[1.0625rem] leading-[1.7] text-gray-600 mb-4">
                 {page.answer}
               </p>
-              <PageUpdated
-                date={ALTERNATIVE_LAST_UPDATED[page.slug] ?? 'September 27, 2026'}
-              />
             </Reveal>
           </div>
         </section>

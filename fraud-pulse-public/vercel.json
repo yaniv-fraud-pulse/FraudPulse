@@ -42,6 +42,22 @@
       "destination": "/blog/hidden-cost-of-false-positives-in-fraud-systems/",
       "permanent": true
     },
+    { "source": "/faqs", "destination": "/faq/", "statusCode": 301 },
+    { "source": "/faqs/", "destination": "/faq/", "statusCode": 301 },
+    { "source": "/support", "destination": "/faq/", "statusCode": 301 },
+    { "source": "/support/", "destination": "/faq/", "statusCode": 301 },
+    { "source": "/compare/nofraud", "destination": "/alternatives/nofraud/", "statusCode": 301 },
+    { "source": "/compare/nofraud/", "destination": "/alternatives/nofraud/", "statusCode": 301 },
+    {
+      "source": "/blog/fraudpulse-does-not-replace-stripe-radar-shopify-protect",
+      "destination": "/blog/fraudpulse-does-not-replace-stripe-radar-shopify-flow/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/fraudpulse-does-not-replace-stripe-radar-shopify-protect/",
+      "destination": "/blog/fraudpulse-does-not-replace-stripe-radar-shopify-flow/",
+      "statusCode": 301
+    },
     {
       "source": "/:path*",
       "has": [{ "type": "host", "value": "fraud-pulse.com" }],
