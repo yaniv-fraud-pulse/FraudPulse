@@ -36,8 +36,22 @@ export const metadata: Metadata = {
   title: "FraudPulse - Reduce Chargebacks & Friendly Fraud with Smarter Rules",
   description: "FraudPulse connects to your transaction data from Shopify, Stripe, and Adyen - then recommends rules and actions that reduce chargebacks and friendly fraud. Actionable insights in days, not analytics reports you never act on.",
   keywords: "reduce chargebacks, friendly fraud, fraud rule recommendations, Shopify fraud, Stripe fraud, Adyen fraud, false decline reduction, fraud intelligence platform",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   alternates: {
     canonical: "/",
+    types: {
+      "text/plain": `${SITE_URL}/llms.txt`,
+    },
   },
   openGraph: {
     title: "FraudPulse - Reduce Chargebacks & Friendly Fraud with Smarter Rules",

@@ -8,6 +8,7 @@ import { useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
 import { Reveal } from '../../components/Reveal';
 import { captureEvent } from '../../components/PostHogProvider';
+import { HeroBackdrop, PulseMark } from '../../components/Brand';
 
 function DemoBookedTracker() {
   const searchParams = useSearchParams();
@@ -62,41 +63,14 @@ export default function BookADemoThanks() {
         <DemoBookedTracker />
       </Suspense>
 
-      <main className="flex-grow">
-        <section className="relative overflow-hidden pt-8 pb-20 px-5 sm:px-10 bg-white">
-          <div
-            className="pointer-events-none absolute inset-0 opacity-[0.06]"
-            style={{
-              backgroundImage:
-                'linear-gradient(rgba(165,208,216,0.8) 1px,transparent 1px),linear-gradient(90deg,rgba(165,208,216,0.8) 1px,transparent 1px)',
-              backgroundSize: '64px 64px',
-            }}
-          />
+      <main className="flex-grow overflow-x-clip">
+        <section className="relative overflow-x-clip pt-8 pb-20 px-5 sm:px-10">
+          <HeroBackdrop />
           <div className="relative max-w-xl mx-auto py-20 sm:py-28 text-center">
             <Reveal animation="anim-fadeUp">
-              <div
-                className="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-6"
-                style={{
-                  background: 'rgba(91,168,180,0.1)',
-                  border: '1px solid rgba(91,168,180,0.25)',
-                }}
-              >
-                <svg
-                  className="w-7 h-7 text-[#5ba8b4]"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-              </div>
-              <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-[-0.03em] mb-4">
-                You&apos;re booked
+              <PulseMark id="thanksPulse" className="w-12 h-12 mx-auto mb-6" />
+              <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-[-0.04em] mb-4">
+                You&apos;re <span className="text-gradient-flow">booked</span>
               </h1>
               <p className="text-lg text-gray-500 leading-relaxed mb-10">
                 Thanks for scheduling a FraudPulse demo. Check your email for the calendar invite
@@ -105,7 +79,7 @@ export default function BookADemoThanks() {
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
                 <Link
                   href="/"
-                  className="inline-flex h-12 items-center justify-center rounded-[10px] px-6 font-bold text-white"
+                  className="inline-flex h-12 items-center justify-center rounded-full px-6 font-bold text-white"
                   style={{
                     background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',
                   }}
@@ -114,8 +88,7 @@ export default function BookADemoThanks() {
                 </Link>
                 <Link
                   href="/pricing/"
-                  className="inline-flex h-12 items-center justify-center rounded-[10px] px-6 font-bold text-gray-700 border"
-                  style={{ borderColor: '#e5e7eb' }}
+                  className="inline-flex h-12 items-center justify-center rounded-full px-6 font-bold text-gray-700 border border-gray-200 bg-white/80 backdrop-blur"
                 >
                   View pricing
                 </Link>

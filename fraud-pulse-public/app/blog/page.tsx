@@ -4,11 +4,12 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Link from 'next/link';
 import { Reveal } from '../components/Reveal';
-import { TrackedLink } from '../components/TrackedCta';
 import { posts } from '../lib/blog';
 import JsonLd from '../components/JsonLd';
 import ComparisonTable from '../components/ComparisonTable';
-import { ANALYST_VS_ENFORCEMENT_TABLE, faqPageJsonLd } from '../lib/geo';
+import FaqAccordion from '../components/FaqAccordion';
+import { Eyebrow, FrostedBox, HeroBackdrop, PageCta, SoftWash } from '../components/Brand';
+import { ANALYST_VS_ENFORCEMENT_TABLE, articleJsonLd, faqPageJsonLd, softwareApplicationJsonLd } from '../lib/geo';
 import { blogIndexFaqs } from '../lib/pageFaqs';
 
 const sortedPosts = [...posts].sort(
@@ -23,48 +24,30 @@ const categoryColors: Record<string, { bg: string; text: string }> = {
 
 export default function Blog() {
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <div className="flex flex-col min-h-screen bg-white overflow-x-clip">
+      <JsonLd data={articleJsonLd('Fraud intelligence, explained', '/blog/')} />
+      <JsonLd data={softwareApplicationJsonLd()} />
       <JsonLd data={faqPageJsonLd(blogIndexFaqs)} />
       <Header />
 
-      <main className="flex-grow">
+      <main className="flex-grow overflow-x-clip">
 
-        {/* ── Hero ── */}
-        <section className="relative overflow-hidden pt-8 pb-12 sm:pb-16 px-5 sm:px-10 bg-white">
-          <div className="pointer-events-none absolute inset-0 opacity-[0.06]" style={{
-            backgroundImage: 'linear-gradient(rgba(165,208,216,0.8) 1px,transparent 1px),linear-gradient(90deg,rgba(165,208,216,0.8) 1px,transparent 1px)',
-            backgroundSize: '64px 64px',
-          }} />
-          <div className="pointer-events-none absolute top-[-20%] right-[-5%] w-[700px] h-[500px]"
-            style={{ background: 'radial-gradient(ellipse at center, rgba(91,168,180,0.1) 0%, transparent 60%)' }} />
-
-          <div className="relative max-w-7xl mx-auto py-16 sm:py-24 text-center">
-            <Reveal animation="anim-fadeUp" delay={0}>
-              <p className="text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-4 text-[#5ba8b4]">
-                FraudPulse Blog
-              </p>
-            </Reveal>
-            <Reveal animation="anim-fadeUp" delay={75}>
-              <h1 className="font-extrabold text-gray-900 tracking-[-0.04em] leading-[1.1] mb-5 text-[3rem] sm:text-[4rem] lg:text-[4.5rem]">
-                Fraud Intelligence,{' '}
-                <span style={{
-                  background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',
-                  WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
-                }}>
-                  Explained
-                </span>
-              </h1>
-            </Reveal>
-            <Reveal animation="anim-fadeUp" delay={150}>
-              <p className="text-[1.25rem] sm:text-[1.375rem] leading-[1.75] max-w-[600px] mx-auto text-gray-500 mb-4">
-                Practical guides, product updates, and deep-dives on fraud prevention for modern merchants.
-              </p>
-            </Reveal>
+        <section className="relative overflow-x-clip px-5 sm:px-10 text-center">
+          <HeroBackdrop />
+          <div className="relative max-w-4xl mx-auto pt-16 pb-16 sm:pt-20 sm:pb-20">
+            <Eyebrow>FraudPulse Blog</Eyebrow>
+            <h1 className="font-extrabold text-gray-900 mb-6 tracking-[-0.045em] leading-[1.05] text-[2.25rem] sm:text-[3.25rem] lg:text-[3.75rem]">
+              <span className="block anim-fadeUp delay-75">Fraud intelligence,</span>
+              <span className="block pb-[0.08em] text-gradient-flow anim-fadeUp delay-225">explained</span>
+            </h1>
+            <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.7] max-w-[640px] mx-auto text-balance text-gray-500 anim-fadeUp delay-300">
+              Practical guides, product updates, and deep-dives on fraud prevention for modern merchants.
+            </p>
           </div>
         </section>
 
         {/* ── Post grid ── */}
-        <section className="py-12 sm:py-16 px-5 sm:px-10 bg-[#f8f9fa]">
+        <section className="py-12 sm:py-16 px-5 sm:px-10 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {sortedPosts.map((post, i) => {
@@ -74,8 +57,7 @@ export default function Blog() {
                   <Reveal key={post.slug} animation="anim-fadeUp" delay={delay}>
                     <Link
                       href={`/blog/${post.slug}/`}
-                      className="group flex flex-col h-full rounded-[20px] bg-white border overflow-hidden card-hover"
-                      style={{ borderColor: '#e5e7eb', boxShadow: '0 2px 12px rgba(0,0,0,0.06)' }}
+                      className="group flex flex-col h-full rounded-3xl bg-white border border-gray-200/80 overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-gray-300 hover:shadow-[0_24px_48px_-24px_rgba(17,24,39,0.25)]"
                     >
                       <div
                         className="h-1.5 w-full shrink-0"
@@ -132,11 +114,11 @@ export default function Blog() {
           </div>
         </section>
 
-        {/* ── Enforcement vs analyst ── */}
-        <section className="py-16 sm:py-24 px-5 sm:px-10 bg-white">
+        <SoftWash>
           <div className="max-w-4xl mx-auto">
-            <Reveal animation="anim-fadeUp">
-              <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] text-center mb-3 text-[2rem] sm:text-[2.5rem]">
+            <Reveal animation="anim-fadeUp" className="text-center">
+              <Eyebrow>Compare</Eyebrow>
+              <h2 className="font-extrabold text-gray-900 tracking-[-0.04em] text-center mb-3 text-[2rem] sm:text-[2.5rem] leading-[1.05]">
                 The tools these guides tune
               </h2>
               <p className="text-center text-[1.0625rem] leading-[1.7] text-gray-500 max-w-2xl mx-auto mb-8">
@@ -144,67 +126,42 @@ export default function Blog() {
               </p>
             </Reveal>
             <Reveal animation="anim-fadeUp" delay={75}>
-              <ComparisonTable table={ANALYST_VS_ENFORCEMENT_TABLE} />
+              <FrostedBox>
+                <ComparisonTable table={ANALYST_VS_ENFORCEMENT_TABLE} />
+              </FrostedBox>
             </Reveal>
           </div>
-        </section>
+        </SoftWash>
 
-        {/* ── FAQ ── */}
-        <section className="py-16 sm:py-24 px-5 sm:px-10 bg-[#f8f9fa]">
-          <div className="max-w-3xl mx-auto">
-            <Reveal animation="anim-fadeUp">
-              <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] mb-8 text-center text-[2.5rem] sm:text-[3rem]">
+        <section className="py-20 sm:py-28 px-5 sm:px-10 bg-white">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-16 items-start">
+            <Reveal animation="anim-fadeUp" className="lg:sticky lg:top-28">
+              <Eyebrow>FAQ</Eyebrow>
+              <h2 className="font-extrabold text-gray-900 tracking-[-0.04em] leading-[1.05] text-[2.25rem] sm:text-[3rem] mb-5 text-balance">
                 Frequently asked questions
               </h2>
-              <dl className="flex flex-col gap-6">
-                {blogIndexFaqs.map((faq) => (
-                  <div key={faq.q}>
-                    <dt className="font-semibold text-[1.0625rem] text-gray-900 mb-2">{faq.q}</dt>
-                    <dd className="text-[1.0625rem] leading-[1.75] text-gray-600">{faq.a}</dd>
-                  </div>
-                ))}
-              </dl>
-              <div className="text-center mt-10">
-                <Link
-                  href="/faq/"
-                  className="inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-[1.0625rem] font-semibold border bg-white transition-colors"
-                  style={{ borderColor: '#e5e7eb', color: '#4a96a3' }}
-                >
-                  View full FAQ
-                </Link>
-              </div>
+              <Link
+                href="/faq/"
+                className="group inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white px-6 py-3 text-[1rem] font-semibold text-gray-900 transition-all duration-300 hover:border-[#5ba8b4]/50 hover:text-[#4a96a3]"
+              >
+                View full FAQ
+                <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M5 12h14m-6-6l6 6-6 6" />
+                </svg>
+              </Link>
+            </Reveal>
+            <Reveal animation="anim-fadeUp" delay={75}>
+              <FaqAccordion faqs={blogIndexFaqs} variant="light" />
             </Reveal>
           </div>
         </section>
 
-        {/* ── CTA ── */}
-        <section
-          className="py-20 sm:py-28 px-5 sm:px-10 text-white"
-          style={{ background: 'linear-gradient(135deg, #111827 0%, #1f2937 100%)' }}
-        >
-          <Reveal animation="anim-scaleIn">
-            <div className="max-w-7xl mx-auto text-center">
-              <h2 className="font-extrabold tracking-[-0.03em] mb-4 text-[2.75rem] sm:text-[3.25rem]">
-                See it on your own data
-              </h2>
-              <p className="text-[1.0625rem] leading-[1.7] max-w-[480px] mx-auto mb-10 text-gray-400">
-                Book a live walkthrough and see how FraudPulse turns your payment data into ready-to-apply fraud rules.
-              </p>
-              <TrackedLink
-                event="demo_cta_clicked"
-                href="/book-a-demo/"
-                className="inline-flex items-center gap-2 rounded-full px-12 py-4.5 text-[1.125rem] font-bold text-white hover:scale-[1.03]"
-                style={{
-                  background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',
-                  boxShadow: '0 4px 24px rgba(91,168,180,0.35)',
-                  transition: 'transform 0.2s cubic-bezier(0.22,1,0.36,1)',
-                }}
-              >
-                Book a Demo
-              </TrackedLink>
-            </div>
-          </Reveal>
-        </section>
+        <PageCta
+          pulseId="blogCtaPulse"
+          title="See it on your"
+          highlight="own data."
+          body="Book a live walkthrough and see how FraudPulse turns your payment data into ready-to-apply fraud rules."
+        />
 
       </main>
 

@@ -5,10 +5,10 @@ import Footer from '../components/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Reveal } from '../components/Reveal';
-import { TrackedLink } from '../components/TrackedCta';
 import JsonLd from '../components/JsonLd';
-import ComparisonTable from '../components/ComparisonTable';
-import { ANALYST_VS_SCREENING_TABLE, PRICING_FACT, faqPageJsonLd } from '../lib/geo';
+import FaqAccordion from '../components/FaqAccordion';
+import { DarkPanel, Eyebrow, HeroBackdrop, PageCta } from '../components/Brand';
+import { PRICING_FACT, articleJsonLd, faqPageJsonLd, softwareApplicationJsonLd } from '../lib/geo';
 import { FAQ_REPLACE_STACK, pickSiteFaqs } from '../lib/siteFaqs';
 import type { FaqItem } from '../lib/homeFaq';
 
@@ -49,39 +49,25 @@ const values = [
 
 export default function About() {
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <div className="flex flex-col min-h-screen bg-white overflow-x-clip">
+      <JsonLd data={articleJsonLd('About FraudPulse', '/about/')} />
+      <JsonLd data={softwareApplicationJsonLd()} />
       <JsonLd data={faqPageJsonLd(aboutFaqs)} />
       <Header />
 
-      <main className="flex-grow">
+      <main className="flex-grow overflow-x-clip">
 
-        {/* ── Page Header ── */}
-        <section className="relative overflow-hidden pt-8 px-5 sm:px-10 bg-white">
-          <div className="pointer-events-none absolute inset-0 opacity-[0.06]" style={{
-            backgroundImage: 'linear-gradient(rgba(165,208,216,0.8) 1px,transparent 1px),linear-gradient(90deg,rgba(165,208,216,0.8) 1px,transparent 1px)',
-            backgroundSize: '64px 64px',
-          }} />
-          <div className="pointer-events-none absolute top-[-10%] right-0 w-[600px] h-[500px]"
-            style={{ background: 'radial-gradient(ellipse at center, rgba(165,208,216,0.12) 0%, transparent 60%)' }} />
-
-          <div className="relative max-w-7xl mx-auto py-16 sm:py-24">
-            <div className="max-w-[880px]">
-              <Reveal animation="anim-fadeUp" delay={75}>
-                <h1 className="font-extrabold text-gray-900 tracking-[-0.04em] leading-[1.1] mb-6 text-[2.75rem] sm:text-[3.5rem]">
-                  About{' '}
-                  <span style={{
-                    background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 50%, #5ba8b4 100%)',
-                    WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
-                  }}>
-                    FraudPulse
-                  </span>
-                </h1>
-                <p className="ai-answer text-[1.125rem] leading-[1.75] text-gray-700 mb-6">
-                  {aboutFaqs[0].a}
-                </p>
-              </Reveal>
-              <Reveal animation="anim-fadeUp" delay={150}>
-              <p className="text-[1.25rem] leading-[1.8] text-gray-600">
+        <section className="relative overflow-x-clip px-5 sm:px-10">
+          <HeroBackdrop />
+          <div className="relative max-w-7xl mx-auto pt-16 pb-16 sm:pt-20 sm:pb-20">
+            <div className="max-w-[880px] text-left">
+              <h1 className="font-extrabold text-gray-900 mb-6 tracking-[-0.045em] leading-[1.1] text-[2.25rem] sm:text-[3.25rem] lg:text-[3.75rem] anim-fadeUp delay-75">
+                About <span className="text-gradient-flow">FraudPulse</span>
+              </h1>
+              <p className="ai-answer text-[1.125rem] leading-[1.75] text-gray-700 mb-6 anim-fadeUp delay-300">
+                {aboutFaqs[0].a}
+              </p>
+              <p className="text-[1.125rem] leading-[1.8] text-gray-600 anim-fadeUp delay-400">
                 FraudPulse was co-founded by <strong className="text-gray-900">Idan Hayon</strong> and{' '}
                 <strong className="text-gray-900">Yaniv Hayun</strong>{" "} after years working inside high-scale fraud,
                 payments, and risk systems. Idan led fraud analytics and risk operations roles at Riskified, Melio,
@@ -91,47 +77,14 @@ export default function About() {
                 change that, giving every merchant access to the same fraud intelligence tools used by the world&apos;s
                 largest payment processors, delivered simply and affordably.
               </p>
-              </Reveal>
             </div>
           </div>
         </section>
 
-        {/* ── Where FraudPulse fits ── */}
-        <section className="py-12 sm:py-16 px-5 sm:px-10 bg-[#f8f9fa]">
-          <div className="max-w-5xl mx-auto">
-            <Reveal animation="anim-fadeUp">
-              <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] text-center mb-3 text-[1.75rem] sm:text-[2.25rem]">
-                Where FraudPulse fits in your stack
-              </h2>
-              <p className="text-center text-[1.0625rem] leading-[1.7] text-gray-500 max-w-2xl mx-auto mb-8">
-                FraudPulse is the analyst, not the screener. Stripe Radar, Shopify Flow, Blockify, and Adyen RevenueProtect keep enforcing at checkout; FraudPulse tells you which of their rules to change.
-              </p>
-            </Reveal>
-            <Reveal animation="anim-fadeUp" delay={75}>
-              <ComparisonTable table={ANALYST_VS_SCREENING_TABLE} />
-            </Reveal>
-            <Reveal animation="anim-fadeUp" delay={150}>
-              <p className="mt-8 text-center text-[1rem] leading-[1.7] text-gray-600 max-w-2xl mx-auto">
-                {PRICING_FACT}{' '}
-                <Link href="/pricing/" className="font-semibold text-[#4a96a3] hover:underline">
-                  See pricing
-                </Link>
-                .
-              </p>
-            </Reveal>
-          </div>
-        </section>
-
-        {/* ── Founders title ── */}
-        <div className="py-6 text-center px-5 bg-white">
-          <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] text-[2.75rem] sm:text-[3.25rem]">
-            The People Behind{' '}
-            <span style={{
-              background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 50%, #5ba8b4 100%)',
-              WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
-            }}>
-              FraudPulse
-            </span>
+        <div className="py-10 text-center px-5 bg-white">
+          <Eyebrow>The team</Eyebrow>
+          <h2 className="font-extrabold text-gray-900 tracking-[-0.04em] text-[2.25rem] sm:text-[3.25rem] leading-[1.05]">
+            The people behind <span className="text-gradient-flow">FraudPulse</span>
           </h2>
         </div>
 
@@ -146,12 +99,10 @@ export default function About() {
                     src="/idan.jpeg"
                     alt="Idan Hayon - Co-Founder & CEO, FraudPulse"
                     fill
-                    className="rounded-[20px] object-cover object-top"
-                    style={{ border: '2px solid rgba(61,143,160,0.3)', boxShadow: '0 4px 20px rgba(61,143,160,0.15)' }}
+                    className="rounded-[20px] object-cover object-top border-2 border-[#5ba8b4]/30 shadow-[0_24px_48px_-24px_rgba(61,143,160,0.45)]"
                   />
                 </div>
-                <div className="rounded-[14px] p-6 w-full max-w-[280px] border bg-white"
-                  style={{ borderColor: 'rgba(61,143,160,0.25)' }}>
+                <div className="rounded-2xl p-6 w-full max-w-[280px] border border-[#5ba8b4]/25 bg-white/80 backdrop-blur">
                   <p className="text-gray-900 font-bold text-[1.125rem] mb-1">Idan Hayon</p>
                   <p className="mb-4 text-[0.8rem] font-mono" style={{ color: 'rgb(61,143,160)' }}>Co-Founder &amp; CEO</p>
                   <a
@@ -242,12 +193,10 @@ export default function About() {
                     src="/yaniv.jpeg"
                     alt="Yaniv Hayun - Co-Founder & CTO, FraudPulse"
                     fill
-                    className="rounded-[20px] object-cover object-top"
-                    style={{ border: '2px solid rgba(125,107,160,0.3)', boxShadow: '0 4px 20px rgba(125,107,160,0.15)' }}
+                    className="rounded-[20px] object-cover object-top border-2 border-[#7D6BA0]/30 shadow-[0_24px_48px_-24px_rgba(125,107,160,0.45)]"
                   />
                 </div>
-                <div className="rounded-[14px] p-6 w-full max-w-[280px] border bg-white"
-                  style={{ borderColor: 'rgba(125,107,160,0.25)' }}>
+                <div className="rounded-2xl p-6 w-full max-w-[280px] border border-[#7D6BA0]/25 bg-white/80 backdrop-blur">
                   <p className="text-gray-900 font-bold text-[1.125rem] mb-1">Yaniv Hayun</p>
                   <p className="mb-4 text-[0.8rem] font-mono" style={{ color: 'rgb(125,107,160)' }}>Co-Founder &amp; CTO</p>
                   <a
@@ -267,8 +216,7 @@ export default function About() {
           </div>
         </section>
 
-        {/* ── Mission & Approach ── */}
-        <section className="py-16 sm:py-20 px-5 sm:px-10 bg-[#f8f9fa]">
+        <DarkPanel>
           <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
             {[
               {
@@ -281,120 +229,84 @@ export default function About() {
               },
             ].map(({ label, text }, i) => (
               <Reveal key={label} animation="anim-scaleIn" delay={([0, 150] as const)[i] ?? 0}>
-              <div
-                className="rounded-[20px] p-10 sm:p-12 h-full"
-                style={{
-                  background: 'linear-gradient(135deg, #111827 0%, #1f2937 100%)',
-                  boxShadow: '0 8px 32px rgba(17,24,39,0.2)',
-                }}>
-                <p className="text-[0.8125rem] font-semibold tracking-[0.12em] uppercase mb-4 text-[#5ba8b4]">
-                  {label}
-                </p>
-                <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.75] text-white/90">{text}</p>
-              </div>
+                <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-10 sm:p-12 h-full backdrop-blur">
+                  <p className="text-[0.8125rem] font-semibold tracking-[0.12em] uppercase mb-4 text-[#8fd0da]">
+                    {label}
+                  </p>
+                  <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.75] text-white/90">{text}</p>
+                </div>
               </Reveal>
             ))}
           </div>
-        </section>
+        </DarkPanel>
 
-        {/* ── Values ── */}
-        <section className="py-16 sm:py-24 px-5 sm:px-10 bg-[#f8f9fa]">
+        <section className="py-16 sm:py-24 px-5 sm:px-10 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] text-[2.75rem] sm:text-[3.25rem]">
-                What Drives Us Every Day
+              <Eyebrow>Values</Eyebrow>
+              <h2 className="font-extrabold text-gray-900 tracking-[-0.04em] text-[2.25rem] sm:text-[3.25rem] leading-[1.05]">
+                What drives us every day
               </h2>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
-              {values.map(({ title, description }, i) => {
-                const isPrimary = i === 1 || i === 2;
-                const cardStyle = isPrimary
-                  ? {
-                      background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',
-                      boxShadow: '0 8px 32px rgba(91,168,180,0.25)',
-                    }
-                  : {
-                      background: 'linear-gradient(135deg, #7D6BA0 0%, #6a5890 100%)',
-                      boxShadow: '0 8px 32px rgba(125,107,160,0.25)',
-                    };
-
-                return (
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+              {values.map(({ title, description }, i) => (
                 <Reveal key={title} animation="anim-fadeUp" delay={([0, 150, 75, 225] as const)[i] ?? 0}>
-                <div
-                  className="rounded-[20px] p-10 sm:p-12 h-full"
-                  style={cardStyle}>
-                  <h3 className="font-bold text-white mb-3 text-[1.25rem] sm:text-[1.375rem]">{title}</h3>
-                  <p className="text-[1.0625rem] sm:text-[1.125rem] leading-[1.75] text-white/90">{description}</p>
-                </div>
+                  <article className="rounded-3xl border border-gray-200/80 bg-white p-8 sm:p-10 h-full transition-all duration-300 hover:-translate-y-1 hover:border-gray-300 hover:shadow-[0_24px_48px_-24px_rgba(17,24,39,0.25)]">
+                    <h3 className="font-bold text-gray-900 mb-3 text-[1.25rem] sm:text-[1.375rem]">{title}</h3>
+                    <p className="text-[1.0625rem] sm:text-[1.125rem] leading-[1.75] text-gray-600">{description}</p>
+                  </article>
                 </Reveal>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* ── FAQ ── */}
-        <section className="py-16 sm:py-24 px-5 sm:px-10 bg-white">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] mb-8 text-[1.75rem] sm:text-[2.25rem]">
-              FAQ about FraudPulse
-            </h2>
-            <dl className="flex flex-col gap-6">
-              {aboutFaqs.map((faq) => (
-                <div key={faq.q}>
-                  <dt className="font-semibold text-[1.0625rem] text-gray-900 mb-2">{faq.q}</dt>
-                  <dd className="text-[1.0625rem] leading-[1.75] text-gray-600">{faq.a}</dd>
-                </div>
               ))}
-            </dl>
-            <p className="mt-10 text-[0.9375rem] text-gray-500">
-              More answers on the{' '}
-              <Link href="/faq/" className="font-semibold text-[#4a96a3] hover:underline">
-                full FAQ
-              </Link>
-              {' · '}
-              <Link href="/stack/" className="font-semibold text-[#4a96a3] hover:underline">
-                using FraudPulse with Radar, Flow, Blockify, and RevenueProtect
-              </Link>
-              {' · '}
-              <Link href="/alternatives/nofraud/" className="font-semibold text-[#4a96a3] hover:underline">
-                vs NoFraud and SMB tools
-              </Link>
-            </p>
+            </div>
           </div>
         </section>
 
-        {/* ── CTA ── */}
-        <section className="py-16 sm:py-24 px-5 sm:px-10 bg-[#f8f9fa]">
-          <Reveal animation="anim-scaleIn">
-          <div className="max-w-7xl mx-auto text-center">
-            <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] mb-4 text-[2.75rem] sm:text-[3.25rem]">
-              Talk Directly With the Team Behind FraudPulse
-            </h2>
-            <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.75] max-w-[560px] mx-auto mb-12 text-gray-500">
-              Book a live walkthrough with Idan and see how FraudPulse identifies fraud patterns, approval loss,
-              and actionable opportunities inside your own payment data.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <TrackedLink event="demo_cta_clicked" href="/book-a-demo/"
-                className="inline-flex items-center gap-2 rounded-full px-12 py-4.5 text-[1.125rem] font-bold text-white transition-all hover:scale-[1.03]"
-                style={{ background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)', transition: 'transform 0.2s cubic-bezier(0.22,1,0.36,1)' }}>
-                Book a Demo
-              </TrackedLink>
-              <a
-                href="https://www.linkedin.com/company/fraudpulse-fraud-analytics"
-                target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full px-12 py-4.5 text-[1.125rem] font-semibold transition-all border hover:border-[#5ba8b4] hover:text-[#5ba8b4]"
-                style={{ borderColor: '#d1d5db', color: '#6b7280' }}>
-                <svg className="w-5 h-5 text-[#0A66C2]" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                </svg>
-                Connect on LinkedIn
-              </a>
-            </div>
+        <section className="py-20 sm:py-28 px-5 sm:px-10 bg-white">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-16 items-start">
+            <Reveal animation="anim-fadeUp" className="lg:sticky lg:top-28">
+              <Eyebrow>FAQ</Eyebrow>
+              <h2 className="font-extrabold text-gray-900 tracking-[-0.04em] leading-[1.05] text-[2.25rem] sm:text-[3rem] mb-5 text-balance">
+                FAQ about FraudPulse
+              </h2>
+              <p className="text-[0.9375rem] text-gray-500">
+                More answers on the{' '}
+                <Link href="/faq/" className="font-semibold text-[#4a96a3] hover:underline">
+                  full FAQ
+                </Link>
+                {' · '}
+                <Link href="/stack/" className="font-semibold text-[#4a96a3] hover:underline">
+                  using FraudPulse with Radar, Flow, Blockify, and RevenueProtect
+                </Link>
+                {' · '}
+                <Link href="/alternatives/nofraud/" className="font-semibold text-[#4a96a3] hover:underline">
+                  vs NoFraud and SMB tools
+                </Link>
+              </p>
+            </Reveal>
+            <Reveal animation="anim-fadeUp" delay={75}>
+              <FaqAccordion faqs={aboutFaqs} variant="light" />
+            </Reveal>
           </div>
-          </Reveal>
         </section>
+
+        <PageCta
+          pulseId="aboutCtaPulse"
+          title="Talk with the team"
+          highlight="behind FraudPulse."
+          body="Book a live walkthrough with Idan and see how FraudPulse identifies fraud patterns, approval loss, and actionable opportunities inside your own payment data."
+        >
+          <a
+            href="https://www.linkedin.com/company/fraudpulse-fraud-analytics"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/[0.06] px-8 py-4 text-[1.0625rem] font-semibold text-white backdrop-blur transition-all duration-300 hover:bg-white/[0.12] hover:border-white/30"
+          >
+            <svg className="w-5 h-5 text-[#0A66C2]" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+            Connect on LinkedIn
+          </a>
+        </PageCta>
 
       </main>
 

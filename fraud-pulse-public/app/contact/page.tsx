@@ -4,6 +4,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { useState } from 'react';
 import { Reveal } from '../components/Reveal';
+import { Eyebrow, FrostedBox, HeroBackdrop } from '../components/Brand';
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const API_ENDPOINT = 'https://fraudpulse-api-961740448824.us-central1.run.app/api/v1/contact/demo';
@@ -53,46 +54,30 @@ export default function Contact() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <div className="flex flex-col min-h-screen bg-white overflow-x-clip">
       <Header />
 
-      <main className="flex-grow">
+      <main className="flex-grow overflow-x-clip">
 
-        {/* ── Hero ── */}
-        <section className="relative overflow-hidden pt-8 pb-16 px-5 sm:px-10 bg-white">
-          <div className="pointer-events-none absolute inset-0 opacity-[0.06]" style={{
-            backgroundImage: 'linear-gradient(rgba(165,208,216,0.8) 1px,transparent 1px),linear-gradient(90deg,rgba(165,208,216,0.8) 1px,transparent 1px)',
-            backgroundSize: '64px 64px',
-          }} />
-          <div className="pointer-events-none absolute top-[-20%] left-1/2 -translate-x-1/2 w-[700px] h-[400px]"
-            style={{ background: 'radial-gradient(ellipse at center, rgba(165,208,216,0.15) 0%, transparent 60%)' }} />
-
-          <div className="relative max-w-4xl mx-auto text-center">
-            <Reveal animation="anim-fadeUp" delay={75}>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-[-0.04em] mb-5 mt-20">
-                Talk Directly With the Team{' '}
-                <span style={{
-                  background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 50%, #5ba8b4 100%)',
-                  WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
-                }}>
-                  Behind FraudPulse
-                </span>
-              </h1>
-            </Reveal>
-            <Reveal animation="anim-fadeUp" delay={150}>
-              <p className="text-lg max-w-xl mx-auto text-gray-500">
-                Send us a message - we respond to every inquiry personally.
-              </p>
-            </Reveal>
+        <section className="relative overflow-x-clip px-5 sm:px-10 text-center">
+          <HeroBackdrop />
+          <div className="relative max-w-4xl mx-auto pt-16 pb-12 sm:pt-20 sm:pb-16">
+            <h1 className="font-extrabold text-gray-900 mb-5 tracking-[-0.045em] leading-[1.05] text-[2.25rem] sm:text-[3.25rem] lg:text-[3.75rem]">
+              <span className="block anim-fadeUp delay-75">Talk directly with the team</span>
+              <span className="block pb-[0.08em] text-gradient-flow anim-fadeUp delay-225">behind FraudPulse</span>
+            </h1>
+            <p className="text-[1.125rem] max-w-xl mx-auto text-gray-500 anim-fadeUp delay-300">
+              Send us a message - we respond to every inquiry personally.
+            </p>
           </div>
         </section>
 
-        {/* ── Contact form ── */}
-        <section className="py-20 px-5 sm:px-10 bg-[#f8f9fa]">
+        <section className="py-10 sm:py-16 px-5 sm:px-10 bg-white">
           <div className="max-w-4xl mx-auto">
             <Reveal animation="anim-scaleIn" delay={0} className="flex flex-col">
-              <div className="rounded-2xl p-10 sm:p-12 bg-white border h-full flex flex-col" style={{ borderColor: '#e5e7eb' }}>
+              <FrostedBox padded={false} className="p-10 sm:p-12 h-full flex flex-col">
                 <div className="mb-8">
+                  <Eyebrow>Contact</Eyebrow>
                   <h2 className="text-[1.75rem] sm:text-[2.25rem] font-bold text-gray-900 tracking-[-0.03em]">Send Us a Message</h2>
                   <p className="text-base sm:text-lg text-gray-400 mt-2">We&apos;ll get back to you within 24 hours.</p>
                 </div>
@@ -144,13 +129,13 @@ export default function Contact() {
                       <p className="text-base text-red-500">Something went wrong. Please try again or email us directly.</p>
                     )}
                     <button type="submit" disabled={submitting}
-                      className="inline-flex h-14 w-full items-center justify-center rounded-[10px] text-base sm:text-lg font-bold transition-all hover:-translate-y-px text-white disabled:opacity-60"
+                      className="inline-flex h-14 w-full items-center justify-center rounded-full text-base sm:text-lg font-bold transition-all hover:-translate-y-px text-white disabled:opacity-60"
                       style={{ background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)', boxShadow: '0 4px 20px rgba(91,168,180,0.3)' }}>
                       {submitting ? 'Sending…' : 'Send Message'}
                     </button>
                   </form>
                 )}
-              </div>
+              </FrostedBox>
             </Reveal>
           </div>
         </section>

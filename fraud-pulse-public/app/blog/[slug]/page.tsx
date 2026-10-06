@@ -4,11 +4,12 @@ import Footer from '../../components/Footer';
 import JsonLd from '../../components/JsonLd';
 import Link from 'next/link';
 import { Reveal } from '../../components/Reveal';
-import { TrackedLink } from '../../components/TrackedCta';
+import FaqAccordion from '../../components/FaqAccordion';
 import { getPost, posts } from '../../lib/blog';
 import { faqPageJsonLd } from '../../lib/geo';
 import { SITE_URL } from '../../lib/site';
 import { SOCIAL_IMAGE } from '../../lib/seo';
+import { Eyebrow, HeroBackdrop, PageCta } from '../../components/Brand';
 
 export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));
@@ -113,19 +114,15 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <div className="flex flex-col min-h-screen bg-white overflow-x-clip">
       <JsonLd data={articleSchema} />
       {post.faqs && post.faqs.length > 0 && <JsonLd data={faqPageJsonLd(post.faqs)} />}
       <Header />
 
-      <main className="flex-grow">
+      <main className="flex-grow overflow-x-clip">
 
-        {/* ── Hero ── */}
-        <section className="relative overflow-hidden pt-8 pb-0 px-5 sm:px-10 bg-white">
-          <div className="pointer-events-none absolute inset-0 opacity-[0.05]" style={{
-            backgroundImage: 'linear-gradient(rgba(165,208,216,0.8) 1px,transparent 1px),linear-gradient(90deg,rgba(165,208,216,0.8) 1px,transparent 1px)',
-            backgroundSize: '64px 64px',
-          }} />
+        <section className="relative overflow-x-clip pt-8 pb-0 px-5 sm:px-10">
+          <HeroBackdrop />
 
           <div className="relative max-w-3xl mx-auto py-16 sm:py-24">
             {/* Back breadcrumb */}
@@ -169,7 +166,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
             {/* Title */}
             <Reveal animation="anim-fadeUp" delay={150}>
-              <h1 className="font-extrabold text-gray-900 tracking-[-0.03em] leading-[1.15] mb-6 text-[2.25rem] sm:text-[3rem]">
+              <h1 className="font-extrabold text-gray-900 tracking-[-0.04em] leading-[1.12] mb-6 text-[2.25rem] sm:text-[3rem]">
                 {post.title}
               </h1>
             </Reveal>
@@ -215,17 +212,11 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
           {post.faqs && post.faqs.length > 0 && (
             <div className="max-w-3xl mx-auto mt-12 pt-8 border-t" style={{ borderColor: '#e5e7eb' }}>
+              <Eyebrow>FAQ</Eyebrow>
               <h2 className="font-bold text-gray-900 text-[1.5rem] mb-6 tracking-[-0.02em]">
-                FAQ
+                Frequently asked questions
               </h2>
-              <dl className="flex flex-col gap-6">
-                {post.faqs.map((faq) => (
-                  <div key={faq.q}>
-                    <dt className="font-semibold text-[1.0625rem] text-gray-900 mb-2">{faq.q}</dt>
-                    <dd className="text-[1.0625rem] leading-[1.75] text-gray-600">{faq.a}</dd>
-                  </div>
-                ))}
-              </dl>
+              <FaqAccordion faqs={post.faqs} variant="light" />
             </div>
           )}
 
@@ -244,7 +235,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
         {/* ── Related posts ── */}
         {related.length > 0 && (
-          <section className="py-16 sm:py-20 px-5 sm:px-10 bg-[#f8f9fa]">
+          <section className="py-16 sm:py-20 px-5 sm:px-10 bg-[#fafbfc]">
             <div className="max-w-3xl mx-auto">
               <Reveal animation="anim-fadeUp">
                 <h2 className="font-bold text-gray-900 text-[1.5rem] mb-8 tracking-[-0.02em]">More from the blog</h2>
@@ -256,8 +247,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
                     <Reveal key={rel.slug} animation="anim-fadeUp" delay={([0, 75] as const)[i] ?? 0}>
                       <Link
                         href={`/blog/${rel.slug}/`}
-                        className="group flex flex-col h-full rounded-[16px] bg-white border p-6 card-hover"
-                        style={{ borderColor: '#e5e7eb', boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }}
+                        className="group flex flex-col h-full rounded-3xl bg-white border border-gray-200/80 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gray-300 hover:shadow-[0_24px_48px_-24px_rgba(17,24,39,0.25)]"
                       >
                         <div className="flex items-center gap-2 mb-3">
                           <span
@@ -287,34 +277,12 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
           </section>
         )}
 
-        {/* ── CTA ── */}
-        <section
-          className="py-20 sm:py-28 px-5 sm:px-10 text-white"
-          style={{ background: 'linear-gradient(135deg, #111827 0%, #1f2937 100%)' }}
-        >
-          <Reveal animation="anim-scaleIn">
-            <div className="max-w-7xl mx-auto text-center">
-              <h2 className="font-extrabold tracking-[-0.03em] mb-4 text-[2.75rem] sm:text-[3.25rem]">
-                Ready to See It on Your Data?
-              </h2>
-              <p className="text-[1.0625rem] leading-[1.7] max-w-[480px] mx-auto mb-10 text-gray-400">
-                Book a live walkthrough and see how FraudPulse turns your payment data into actionable fraud intelligence.
-              </p>
-              <TrackedLink
-                event="demo_cta_clicked"
-                href="/book-a-demo/"
-                className="inline-flex items-center gap-2 rounded-full px-12 py-4.5 text-[1.125rem] font-bold text-white hover:scale-[1.03]"
-                style={{
-                  background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',
-                  boxShadow: '0 4px 24px rgba(91,168,180,0.35)',
-                  transition: 'transform 0.2s cubic-bezier(0.22,1,0.36,1)',
-                }}
-              >
-                Book a Demo
-              </TrackedLink>
-            </div>
-          </Reveal>
-        </section>
+        <PageCta
+          pulseId="blogPostCtaPulse"
+          title="Ready to see it"
+          highlight="on your data?"
+          body="Book a live walkthrough and see how FraudPulse turns your payment data into actionable fraud intelligence."
+        />
 
       </main>
 

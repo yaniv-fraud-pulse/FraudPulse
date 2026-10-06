@@ -33,8 +33,22 @@ export function pageMetadata({
     title,
     description,
     ...(keywords ? { keywords } : {}),
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
     alternates: {
       canonical: normalized,
+      types: {
+        'text/plain': `${SITE_URL}/llms.txt`,
+      },
     },
     openGraph: {
       title,

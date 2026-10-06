@@ -3,6 +3,7 @@
 import { Reveal } from '../../components/Reveal';
 import { MetaLpFrame } from '../components/MetaLpFrame';
 import { LpTrialCta } from '../components/LpTrialCta';
+import { Eyebrow, HeroBackdrop } from '../../components/Brand';
 
 const outcomes = [
   { value: 'Fewer chargebacks', detail: 'Change the rules that let fraud through.' },
@@ -13,23 +14,14 @@ const outcomes = [
 export default function MetaShortLanding() {
   return (
     <MetaLpFrame stickyCta="Try FraudPulse free">
-      <section className="relative overflow-hidden pt-8 sm:pt-10 pb-10 sm:pb-14 px-5 sm:px-8">
-        <div
-          className="pointer-events-none absolute inset-0 opacity-[0.05]"
-          style={{
-            backgroundImage:
-              'linear-gradient(rgba(165,208,216,0.8) 1px,transparent 1px),linear-gradient(90deg,rgba(165,208,216,0.8) 1px,transparent 1px)',
-            backgroundSize: '64px 64px',
-          }}
-        />
+      <section className="relative overflow-x-clip pt-8 sm:pt-10 pb-10 sm:pb-14 px-5 sm:px-8">
+        <HeroBackdrop />
         <div className="relative max-w-3xl mx-auto text-center">
           <Reveal animation="anim-fadeUp" delay={0}>
-            <p className="text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-4 text-[#5ba8b4]">
-              Stripe Radar and Shopify fraud tools
-            </p>
+            <Eyebrow>Stripe Radar and Shopify fraud tools</Eyebrow>
           </Reveal>
           <Reveal animation="anim-fadeUp" delay={75}>
-            <h1 className="font-extrabold text-gray-900 tracking-[-0.04em] leading-[1.12] mb-5 text-[2.15rem] sm:text-[3.1rem]">
+            <h1 className="font-extrabold text-gray-900 tracking-[-0.045em] leading-[1.08] mb-5 text-[2.15rem] sm:text-[3.1rem]">
               Using Stripe Radar or Shopify&apos;s built-in fraud tools?
             </h1>
           </Reveal>
@@ -48,7 +40,7 @@ export default function MetaShortLanding() {
         </div>
       </section>
 
-      <section className="py-12 sm:py-16 px-5 sm:px-8 bg-[#f8f9fa]">
+      <section className="py-12 sm:py-16 px-5 sm:px-8 bg-white">
         <div className="max-w-3xl mx-auto">
           <Reveal animation="anim-fadeUp">
             <p className="text-[1.0625rem] sm:text-[1.125rem] leading-[1.8] text-gray-600 text-center mb-10">
@@ -60,10 +52,7 @@ export default function MetaShortLanding() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
             {outcomes.map((item, i) => (
               <Reveal key={item.value} animation="anim-fadeUp" delay={([0, 75, 150] as const)[i] ?? 0}>
-                <div
-                  className="rounded-[16px] border bg-white p-6 h-full text-center"
-                  style={{ borderColor: '#e5e7eb' }}
-                >
+                <div className="rounded-3xl border border-gray-200/80 bg-white p-6 h-full text-center">
                   <p className="font-bold text-gray-900 mb-2 text-[1.0625rem]">{item.value}</p>
                   <p className="text-[0.9375rem] leading-[1.6] text-gray-500">{item.detail}</p>
                 </div>

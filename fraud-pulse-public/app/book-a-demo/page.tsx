@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Script from 'next/script';
 import { Reveal } from '../components/Reveal';
 import { captureEvent } from '../components/PostHogProvider';
+import { Eyebrow, FrostedBox, HeroBackdrop } from '../components/Brand';
 import { CAL_DEMO_THANKS_PATH, CALENDLY_DEMO_URL } from '../lib/posthog';
 import { SITE_URL } from '../lib/site';
 
@@ -36,48 +37,32 @@ export default function BookADemo() {
           gtag('config', '${BOOK_A_DEMO_GA_ID}');
         `}
       </Script>
-    <div className="flex flex-col min-h-screen bg-white">
+    <div className="flex flex-col min-h-screen bg-white overflow-x-clip">
       <Header />
 
-      <main className="flex-grow">
+      <main className="flex-grow overflow-x-clip">
 
-        {/* ── Hero ── */}
-        <section className="relative overflow-hidden pt-8 pb-16 px-5 sm:px-10 bg-white">
-          <div className="pointer-events-none absolute inset-0 opacity-[0.06]" style={{
-            backgroundImage: 'linear-gradient(rgba(165,208,216,0.8) 1px,transparent 1px),linear-gradient(90deg,rgba(165,208,216,0.8) 1px,transparent 1px)',
-            backgroundSize: '64px 64px',
-          }} />
-          <div className="pointer-events-none absolute top-[-20%] left-1/2 -translate-x-1/2 w-[700px] h-[400px]"
-            style={{ background: 'radial-gradient(ellipse at center, rgba(165,208,216,0.15) 0%, transparent 60%)' }} />
-
-          <div className="relative max-w-4xl mx-auto text-center">
-            <Reveal animation="anim-fadeUp" delay={75}>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-[-0.04em] mb-5 mt-20">
-                See FraudPulse{' '}
-                <span style={{
-                  background: 'linear-gradient(135deg, #7d6ba0 0%, #6455a0 100%)',
-                  WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
-                }}>
-                  on Your Data
-                </span>
-              </h1>
-            </Reveal>
-            <Reveal animation="anim-fadeUp" delay={150}>
-              <p className="text-lg max-w-xl mx-auto text-gray-500">
-                Book a 30-minute live walkthrough with Idan Hayon, Co-Founder &amp; CEO
-                <span className="block font-bold text-gray-900 mt-1">{" "}No prep required.</span>
-              </p>
-            </Reveal>
+        <section className="relative overflow-x-clip px-5 sm:px-10 text-center">
+          <HeroBackdrop />
+          <div className="relative max-w-4xl mx-auto pt-16 pb-12 sm:pt-20 sm:pb-16">
+            <h1 className="font-extrabold text-gray-900 mb-5 tracking-[-0.045em] leading-[1.05] text-[2.25rem] sm:text-[3.25rem] lg:text-[3.75rem]">
+              <span className="block anim-fadeUp delay-75">See FraudPulse</span>
+              <span className="block pb-[0.08em] text-gradient-flow anim-fadeUp delay-225">on your data</span>
+            </h1>
+            <p className="text-[1.125rem] max-w-xl mx-auto text-gray-500 anim-fadeUp delay-300">
+              Book a 30-minute live walkthrough with Idan Hayon, Co-Founder &amp; CEO
+              <span className="block font-bold text-gray-900 mt-1">{" "}No prep required.</span>
+            </p>
           </div>
         </section>
 
-        {/* ── Book a Demo ── */}
-        <section className="py-20 px-5 sm:px-10 bg-[#f8f9fa]">
+        <section className="py-10 sm:py-16 px-5 sm:px-10 bg-white">
           <div className="max-w-4xl mx-auto">
             <Reveal animation="anim-scaleIn">
-              <div className="rounded-2xl p-10 sm:p-12 bg-white border flex flex-col" style={{ borderColor: '#e5e7eb' }}>
+              <FrostedBox padded={false} className="p-10 sm:p-12 flex flex-col">
                 <div className="mb-8">
-                  <h2 className="text-[1.75rem] sm:text-[2.25rem] font-bold text-gray-900 tracking-[-0.03em]">What to Expect</h2>
+                  <Eyebrow>What to expect</Eyebrow>
+                  <h2 className="text-[1.75rem] sm:text-[2.25rem] font-bold text-gray-900 tracking-[-0.03em]">A focused 30-minute session</h2>
                   <p className="text-base sm:text-lg text-gray-400 mt-2">A focused session tailored to your payment stack and fraud challenges.</p>
                 </div>
 
@@ -85,8 +70,8 @@ export default function BookADemo() {
                   <div className="space-y-6">
                     {demoSteps.map(({ n, text }) => (
                       <div key={n} className="flex items-start gap-4">
-                        <span className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold"
-                          style={{ background: 'rgba(125,107,160,0.08)', border: '1px solid rgba(125,107,160,0.25)', color: '#7d6ba0' }}>{n}</span>
+                        <span className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold text-white"
+                          style={{ background: 'linear-gradient(135deg, #6bb8c3, #4a96a3)' }}>{n}</span>
                         <p className="text-base sm:text-lg leading-relaxed text-gray-500">{text}</p>
                       </div>
                     ))}
@@ -103,8 +88,8 @@ export default function BookADemo() {
                           destination: CALENDLY_BOOKING_HREF,
                         })
                       }
-                      className="inline-flex h-14 w-full items-center justify-center gap-2 rounded-[10px] text-base sm:text-lg font-bold transition-all hover:-translate-y-px text-white"
-                      style={{ background: 'linear-gradient(135deg, #7d6ba0 0%, #6455a0 100%)', boxShadow: '0 4px 20px rgba(125,107,160,0.3)' }}>
+                      className="inline-flex h-14 w-full items-center justify-center gap-2 rounded-full text-base sm:text-lg font-bold transition-all hover:-translate-y-px text-white"
+                      style={{ background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)', boxShadow: '0 4px 20px rgba(91,168,180,0.3)' }}>
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                       </svg>
@@ -122,7 +107,7 @@ export default function BookADemo() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </FrostedBox>
             </Reveal>
           </div>
         </section>

@@ -3,6 +3,7 @@
 import { Reveal } from '../../components/Reveal';
 import { MetaLpFrame } from '../components/MetaLpFrame';
 import { LpTrialCta } from '../components/LpTrialCta';
+import { Eyebrow, HeroBackdrop } from '../../components/Brand';
 
 const gaps = [
   {
@@ -22,23 +23,14 @@ const gaps = [
 export default function MetaLongLanding() {
   return (
     <MetaLpFrame stickyCta="Start your free trial">
-      <section className="relative overflow-hidden pt-8 sm:pt-10 pb-12 sm:pb-16 px-5 sm:px-8">
-        <div
-          className="pointer-events-none absolute inset-0 opacity-[0.05]"
-          style={{
-            backgroundImage:
-              'linear-gradient(rgba(165,208,216,0.8) 1px,transparent 1px),linear-gradient(90deg,rgba(165,208,216,0.8) 1px,transparent 1px)',
-            backgroundSize: '64px 64px',
-          }}
-        />
+      <section className="relative overflow-x-clip pt-8 sm:pt-10 pb-12 sm:pb-16 px-5 sm:px-8">
+        <HeroBackdrop />
         <div className="relative max-w-3xl mx-auto text-center">
           <Reveal animation="anim-fadeUp" delay={0}>
-            <p className="text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-4 text-[#5ba8b4]">
-              For merchants on Stripe Radar and Shopify
-            </p>
+            <Eyebrow>For merchants on Stripe Radar and Shopify</Eyebrow>
           </Reveal>
           <Reveal animation="anim-fadeUp" delay={75}>
-            <h1 className="font-extrabold text-gray-900 tracking-[-0.04em] leading-[1.12] mb-5 text-[2.15rem] sm:text-[3.1rem]">
+            <h1 className="font-extrabold text-gray-900 tracking-[-0.045em] leading-[1.08] mb-5 text-[2.15rem] sm:text-[3.1rem]">
               Still relying only on Stripe Radar or your Shopify fraud app to catch fraud?
             </h1>
           </Reveal>
@@ -56,10 +48,10 @@ export default function MetaLongLanding() {
         </div>
       </section>
 
-      <section className="py-14 sm:py-20 px-5 sm:px-8 bg-[#f8f9fa]">
+      <section className="py-14 sm:py-20 px-5 sm:px-8 bg-white">
         <div className="max-w-3xl mx-auto">
           <Reveal animation="anim-fadeUp">
-            <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] text-center mb-4 text-[1.75rem] sm:text-[2.25rem]">
+            <h2 className="font-extrabold text-gray-900 tracking-[-0.04em] text-center mb-4 text-[1.75rem] sm:text-[2.25rem]">
               Built-in fraud tools leave three gaps
             </h2>
             <p className="text-center text-gray-500 mb-10 text-[1.0625rem] leading-[1.7]">
@@ -70,10 +62,7 @@ export default function MetaLongLanding() {
           <div className="flex flex-col gap-4">
             {gaps.map((gap, i) => (
               <Reveal key={gap.title} animation="anim-fadeUp" delay={([0, 75, 150] as const)[i] ?? 0}>
-                <div
-                  className="rounded-[16px] border bg-white p-6 sm:p-8"
-                  style={{ borderColor: '#e5e7eb', boxShadow: '0 1px 3px rgba(0,0,0,0.04)' }}
-                >
+                <div className="rounded-3xl border border-gray-200/80 bg-white p-6 sm:p-8">
                   <p className="font-bold text-gray-900 mb-2 text-[1.125rem]">{gap.title}</p>
                   <p className="text-[1rem] leading-[1.7] text-gray-500">{gap.body}</p>
                 </div>
@@ -127,14 +116,14 @@ export default function MetaLongLanding() {
               different angles - the data, the decisions, and the systems that run underneath it all.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left mb-10">
-              <div className="rounded-[16px] border bg-white p-6" style={{ borderColor: '#e5e7eb' }}>
+              <div className="rounded-3xl border border-gray-200/80 bg-white p-6">
                 <p className="font-bold text-gray-900">Idan Hayon</p>
                 <p className="text-[0.8125rem] text-[#4a96a3] mb-2">Co-Founder &amp; CEO</p>
                 <p className="text-[0.9375rem] leading-[1.65] text-gray-500">
                   Fraud and risk analytics. The decisions side of the problem.
                 </p>
               </div>
-              <div className="rounded-[16px] border bg-white p-6" style={{ borderColor: '#e5e7eb' }}>
+              <div className="rounded-3xl border border-gray-200/80 bg-white p-6">
                 <p className="font-bold text-gray-900">Yaniv Hayun</p>
                 <p className="text-[0.8125rem] text-[#4a96a3] mb-2">Co-Founder &amp; CTO</p>
                 <p className="text-[0.9375rem] leading-[1.65] text-gray-500">

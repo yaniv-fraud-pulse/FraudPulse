@@ -6,10 +6,11 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { Reveal } from '../components/Reveal';
 import { captureEvent } from '../components/PostHogProvider';
-import { TrackedAnchor, TrackedLink } from '../components/TrackedCta';
+import { TrackedAnchor } from '../components/TrackedCta';
 import FaqAccordion from '../components/FaqAccordion';
 import JsonLd from '../components/JsonLd';
-import { faqPageJsonLd } from '../lib/geo';
+import { Eyebrow, FrostedBox, HeroBackdrop, PageCta, SoftWash } from '../components/Brand';
+import { articleJsonLd, faqPageJsonLd, softwareApplicationJsonLd } from '../lib/geo';
 
 const plans = [
   {
@@ -120,66 +121,51 @@ export default function Pricing() {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <div className="flex flex-col min-h-screen bg-white overflow-x-clip">
+      <JsonLd data={articleJsonLd('Simple, transparent pricing', '/pricing/')} />
+      <JsonLd data={softwareApplicationJsonLd()} />
       <JsonLd data={faqPageJsonLd(faqs)} />
       <Header />
 
-      <main className="flex-grow">
+      <main className="flex-grow overflow-x-clip">
 
-        {/* ── Hero ── */}
-        <section className="relative overflow-hidden pt-8 px-5 sm:px-10 bg-white">
-          <div className="pointer-events-none absolute inset-0 opacity-[0.06]" style={{
-            backgroundImage: 'linear-gradient(rgba(165,208,216,0.8) 1px,transparent 1px),linear-gradient(90deg,rgba(165,208,216,0.8) 1px,transparent 1px)',
-            backgroundSize: '64px 64px',
-          }} />
-          <div className="pointer-events-none absolute top-[-10%] left-1/2 -translate-x-1/2 w-[800px] h-[500px]"
-            style={{ background: 'radial-gradient(ellipse at center, rgba(165,208,216,0.15) 0%, transparent 60%)' }} />
+        <section className="relative overflow-x-clip px-5 sm:px-10 text-center">
+          <HeroBackdrop />
+          <div className="relative max-w-4xl mx-auto pt-16 pb-12 sm:pt-20 sm:pb-16">
+            <h1 className="font-extrabold text-gray-900 mb-6 tracking-[-0.045em] leading-[1.05] text-[2.25rem] sm:text-[3.25rem] lg:text-[3.75rem]">
+              <span className="block anim-fadeUp delay-75">Simple, transparent</span>
+              <span className="block pb-[0.08em] text-gradient-flow anim-fadeUp delay-225">pricing</span>
+            </h1>
+            <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.7] max-w-[720px] mx-auto text-balance text-gray-700 font-semibold mb-3 anim-fadeUp delay-300">
+              No hidden fees. No per-seat surprises. Choose the plan that fits your transaction volume and grow with confidence.
+            </p>
+            <p className="text-[1rem] leading-[1.7] max-w-[640px] mx-auto mb-8 text-gray-500 anim-fadeUp delay-400">
+              Pay-as-you-go starts at $0.01 per transaction (up to 20K/month). Professional is $199/month or $159/month billed annually (20% savings). Every plan includes a 14-day free trial.
+            </p>
 
-          <div className="relative max-w-7xl mx-auto py-16 sm:py-24 text-center">
-            <Reveal animation="anim-fadeUp" delay={75}>
-              <h1 className="font-extrabold text-gray-900 tracking-[-0.04em] leading-[1.1] mb-4 text-[3rem] sm:text-[4rem] lg:text-[4.5rem]">
-                Simple, Transparent{' '}
-                <span style={{
-                  background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 50%, #5ba8b4 100%)',
-                  WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
-                }}>
-                  Pricing
-                </span>
-              </h1>
-            </Reveal>
-            <Reveal animation="anim-fadeUp" delay={150}>
-              <p className="text-[1.5rem] leading-[1.75] max-w-[680px] mx-auto mb-3 text-gray-500">
-                No hidden fees. No per-seat surprises. Choose the plan that fits your transaction volume and grow with confidence.
-              </p>
-              <p className="text-[1rem] leading-[1.7] max-w-[640px] mx-auto mb-8 text-gray-400">
-                Pay-as-you-go starts at $0.01 per transaction (up to 20K/month). Professional is $199/month or $159/month billed annually (20% savings). Every plan includes a 14-day free trial.
-              </p>
-            </Reveal>
-
-            {/* Billing toggle */}
             <Reveal animation="anim-fadeIn" delay={225}>
-            <div className="inline-flex items-center rounded-[12px] p-1 border bg-[#f8f9fa]" style={{ borderColor: '#e5e7eb' }}>
-              {(['Monthly', 'Annual'] as const).map((period) => {
-                const active = (period === 'Annual') === annual;
-                return (
-                  <button key={period} onClick={() => setAnnual(period === 'Annual')}
-                    className="rounded-[9px] px-7 py-2.5 text-[1rem] font-medium transition-all"
-                    style={{
-                      background: active ? '#5ba8b4' : 'transparent',
-                      color: active ? 'white' : '#6b7280',
-                      fontWeight: active ? 600 : 500,
-                    }}>
-                    {period}
-                    {period === 'Annual' && (
-                      <span className="ml-1.5 text-[0.8125rem] font-semibold"
-                        style={{ color: active ? 'rgba(255,255,255,0.8)' : '#5ba8b4' }}>
-                        Save 20%
-                      </span>
-                    )}
-                  </button>
-                );
-              })}
-            </div>
+              <div className="inline-flex items-center rounded-full p-1 border border-gray-200/80 bg-white/80 backdrop-blur">
+                {(['Monthly', 'Annual'] as const).map((period) => {
+                  const active = (period === 'Annual') === annual;
+                  return (
+                    <button key={period} onClick={() => setAnnual(period === 'Annual')}
+                      className="rounded-full px-7 py-2.5 text-[1rem] font-medium transition-all"
+                      style={{
+                        background: active ? 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)' : 'transparent',
+                        color: active ? 'white' : '#6b7280',
+                        fontWeight: active ? 600 : 500,
+                      }}>
+                      {period}
+                      {period === 'Annual' && (
+                        <span className="ml-1.5 text-[0.8125rem] font-semibold"
+                          style={{ color: active ? 'rgba(255,255,255,0.8)' : '#5ba8b4' }}>
+                          Save 20%
+                        </span>
+                      )}
+                    </button>
+                  );
+                })}
+              </div>
             </Reveal>
           </div>
         </section>
@@ -314,11 +300,11 @@ export default function Pricing() {
           </div>
         </section>
 
-        {/* ── Plan comparison ── */}
-        <section className="pb-16 sm:pb-24 px-5 sm:px-10 bg-white">
+        <SoftWash>
           <div className="max-w-5xl mx-auto">
-            <Reveal animation="anim-fadeUp">
-              <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] text-center mb-3 text-[2.5rem] sm:text-[3rem]">
+            <Reveal animation="anim-fadeUp" className="text-center">
+              <Eyebrow>Compare</Eyebrow>
+              <h2 className="font-extrabold text-gray-900 tracking-[-0.04em] text-center mb-3 text-[2.25rem] sm:text-[3rem] leading-[1.05]">
                 Compare plans
               </h2>
               <p className="text-center text-[1.0625rem] text-gray-500 max-w-2xl mx-auto mb-10">
@@ -326,10 +312,10 @@ export default function Pricing() {
               </p>
             </Reveal>
             <Reveal animation="anim-fadeUp" delay={75}>
-              <div className="overflow-x-auto rounded-[16px] border" style={{ borderColor: '#e5e7eb' }}>
+              <FrostedBox padded={false} className="overflow-x-auto">
                 <table className="w-full min-w-[640px] text-left text-[0.9375rem]">
                   <thead>
-                    <tr className="bg-[#f8f9fa] border-b" style={{ borderColor: '#e5e7eb' }}>
+                    <tr className="bg-white/60 border-b" style={{ borderColor: '#e5e7eb' }}>
                       <th className="px-4 py-3.5 font-semibold text-gray-700">Feature</th>
                       <th className="px-4 py-3.5 font-semibold text-gray-700">Pay as you go</th>
                       <th className="px-4 py-3.5 font-semibold text-[#4a96a3]">Professional</th>
@@ -347,51 +333,34 @@ export default function Pricing() {
                     ))}
                   </tbody>
                 </table>
-              </div>
+              </FrostedBox>
             </Reveal>
           </div>
-        </section>
+        </SoftWash>
 
-        {/* ── FAQ ── */}
-        <section className="py-20 sm:py-28 bg-[#7D6BA0]/20">
-          <div className="px-5 sm:px-10">
-            <Reveal animation="anim-fadeUp">
-              <div className="text-center mb-12">
-                <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] text-[2.75rem] sm:text-[3.25rem]">
-                  Frequently Asked Questions
-                </h2>
-                <p className="text-[1.0625rem] text-gray-600 max-w-xl mx-auto mt-3">
-                  Clear answers on trials, transaction limits, billing, and integrations - written so you can cite them when comparing fraud tools.
-                </p>
-              </div>
-              <FaqAccordion faqs={faqs} />
-            </Reveal>
-          </div>
-        </section>
-
-        {/* ── CTA ── */}
         <section className="py-20 sm:py-28 px-5 sm:px-10 bg-white">
-          <div className="max-w-7xl mx-auto">
-            <Reveal animation="anim-scaleIn">
-            <div className="relative rounded-[20px] overflow-hidden p-12 sm:p-20 text-center border"
-              style={{ background: 'rgba(125,107,160,0.09)', borderColor: '#e5e7eb' }}>
-              <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-px h-16"
-                style={{ background: 'linear-gradient(to bottom, rgba(91,168,180,0.5), transparent)' }} />
-              <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] mb-3 text-[3rem] sm:text-[4rem]">
-                Start Your Free Trial Today
+          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-16 items-start">
+            <Reveal animation="anim-fadeUp" className="lg:sticky lg:top-28">
+              <Eyebrow>FAQ</Eyebrow>
+              <h2 className="font-extrabold text-gray-900 tracking-[-0.04em] leading-[1.05] text-[2.25rem] sm:text-[3rem] mb-5 text-balance">
+                Frequently asked questions
               </h2>
-              <p className="text-[1.25rem] leading-[1.7] max-w-[680px] mx-auto mb-10 text-gray-500">
-                14 days free, no credit card required. See FraudPulse working on your own data before you commit.
+              <p className="text-[1.0625rem] leading-relaxed text-gray-500 mb-8 max-w-md">
+                Clear answers on trials, transaction limits, billing, and integrations - written so you can cite them when comparing fraud tools.
               </p>
-              <TrackedLink event="demo_cta_clicked" href="/book-a-demo/"
-                className="inline-flex items-center gap-2 rounded-full px-12 py-4.5 text-[1.125rem] font-bold text-white transition-all hover:scale-[1.03]"
-                style={{ background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)', transition: 'transform 0.2s cubic-bezier(0.22,1,0.36,1)' }}>
-                Book a Demo
-              </TrackedLink>
-            </div>
+            </Reveal>
+            <Reveal animation="anim-fadeUp" delay={75}>
+              <FaqAccordion faqs={faqs} variant="light" />
             </Reveal>
           </div>
         </section>
+
+        <PageCta
+          pulseId="pricingCtaPulse"
+          title="Start your free"
+          highlight="trial today."
+          body="14 days free, no credit card required. See FraudPulse working on your own data before you commit."
+        />
 
       </main>
 

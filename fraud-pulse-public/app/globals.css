@@ -313,9 +313,51 @@ html {
   45%  { stroke-dashoffset: 0; }
   100% { stroke-dashoffset: -60; }
 }
+.progress-fill {
+  transform-origin: left center;
+  animation: progressFill var(--progress-duration, 4s) linear forwards;
+}
+@keyframes progressFill {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+.flow-line {
+  background: linear-gradient(90deg, rgba(91,168,180,0) 0%, rgba(91,168,180,0.9) 50%, rgba(125,107,160,0) 100%);
+  background-size: 200% 100%;
+  animation: flowLine 2.4s linear infinite;
+}
+.flow-line-vertical {
+  background: linear-gradient(180deg, rgba(91,168,180,0) 0%, rgba(91,168,180,0.9) 50%, rgba(125,107,160,0) 100%);
+  background-size: 100% 200%;
+  animation: flowLineVertical 2.4s linear infinite;
+}
+@keyframes flowLine {
+  from { background-position: 200% 0; }
+  to   { background-position: 0 0; }
+}
+@keyframes flowLineVertical {
+  from { background-position: 0 200%; }
+  to   { background-position: 0 0; }
+}
+.product-tray {
+  border-radius: 28px;
+  padding: 10px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.75), rgba(255,255,255,0.45));
+  border: 1px solid rgba(17,24,39,0.06);
+  box-shadow: 0 30px 60px -30px rgba(74,150,163,0.35), 0 18px 36px -18px rgba(125,107,160,0.25), inset 0 1px 0 rgba(255,255,255,0.9);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+.dark-dot-grid {
+  background-image: radial-gradient(rgba(255,255,255,0.09) 1px, transparent 1px);
+  background-size: 22px 22px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, #000 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, #000 30%, transparent 80%);
+}
 @media (prefers-reduced-motion: reduce) {
-  .hero-aurora, .text-gradient-flow, .hero-pulse-path { animation: none; }
+  .hero-aurora, .text-gradient-flow, .hero-pulse-path, .flow-line, .flow-line-vertical { animation: none; }
   .hero-pulse-path { stroke-dashoffset: 0; }
+  .progress-fill { animation: none; transform: scaleX(1); }
 }
 
 /* ── Gradient hero ── */

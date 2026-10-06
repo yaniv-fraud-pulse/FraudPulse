@@ -1,4 +1,5 @@
 import type { FaqItem } from './homeFaq';
+import { SITE_URL } from './site';
 
 export function faqPageJsonLd(faqs: FaqItem[]) {
   return {
@@ -12,6 +13,47 @@ export function faqPageJsonLd(faqs: FaqItem[]) {
         text: faq.a,
       },
     })),
+  };
+}
+
+/** Marketing pages only: headline from the live H1, publisher org. No person author, no dates. */
+export function articleJsonLd(headline: string, path: string) {
+  const normalized = path.endsWith('/') || path === '/' ? path : `${path}/`;
+  const url = normalized === '/' ? SITE_URL : `${SITE_URL}${normalized}`;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline,
+    url,
+    publisher: {
+      '@type': 'Organization',
+      name: 'FraudPulse',
+      url: SITE_URL,
+    },
+  };
+}
+
+export function softwareApplicationJsonLd() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'FraudPulse',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Web',
+    url: SITE_URL,
+    description:
+      'Fraud intelligence for online merchants. Connects to Shopify, Stripe, and Adyen transaction data, analyzes chargebacks and friendly fraud, and recommends ranked rules and actions.',
+    offers: {
+      '@type': 'Offer',
+      url: `${SITE_URL}/pricing/`,
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'FraudPulse',
+      url: SITE_URL,
+    },
   };
 }
 

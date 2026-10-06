@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Script from 'next/script';
 import { useEffect, useState } from 'react';
 import { Reveal } from '../components/Reveal';
+import { Eyebrow, FrostedBox, HeroBackdrop } from '../components/Brand';
 import { WEBINAR, formatWebinarLocalWhen, type WebinarLocalWhen } from '../lib/webinar';
 
 export default function WebinarPage() {
@@ -16,37 +17,19 @@ export default function WebinarPage() {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <div className="flex flex-col min-h-screen bg-white overflow-x-clip">
       <Header />
 
-      <main className="flex-grow">
-        {/* ── Hero ── */}
-        <section className="relative overflow-hidden pt-8 pb-12 sm:pb-16 px-5 sm:px-10 bg-white">
-          <div
-            className="pointer-events-none absolute inset-0 opacity-[0.06]"
-            style={{
-              backgroundImage:
-                'linear-gradient(rgba(165,208,216,0.8) 1px,transparent 1px),linear-gradient(90deg,rgba(165,208,216,0.8) 1px,transparent 1px)',
-              backgroundSize: '64px 64px',
-            }}
-          />
-          <div
-            className="pointer-events-none absolute top-[-15%] left-1/2 -translate-x-1/2 w-[700px] h-[400px]"
-            style={{
-              background:
-                'radial-gradient(ellipse at center, rgba(165,208,216,0.18) 0%, transparent 60%)',
-            }}
-          />
+      <main className="flex-grow overflow-x-clip">
+        <section className="relative overflow-x-clip pt-8 pb-12 sm:pb-16 px-5 sm:px-10">
+          <HeroBackdrop />
 
           <div className="relative max-w-6xl mx-auto pt-12 sm:pt-16">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
-              {/* Left: details */}
               <div>
                 <Reveal animation="anim-fadeUp" delay={75}>
-                  <p className="text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-4 text-[#5ba8b4]">
-                    Free live webinar
-                  </p>
-                  <h1 className="font-extrabold text-gray-900 tracking-[-0.04em] leading-[1.1] mb-5 text-[2.25rem] sm:text-[3rem]">
+                  <Eyebrow>Free live webinar</Eyebrow>
+                  <h1 className="font-extrabold text-gray-900 tracking-[-0.045em] leading-[1.08] mb-5 text-[2.25rem] sm:text-[3rem]">
                     {WEBINAR.title}
                   </h1>
                   <p className="text-[1.125rem] leading-[1.75] text-gray-500 mb-8">
@@ -72,8 +55,7 @@ export default function WebinarPage() {
                     ].map(({ label, value }) => (
                       <div
                         key={label}
-                        className="flex items-start gap-3 rounded-[12px] border bg-[#f8f9fa] px-4 py-3"
-                        style={{ borderColor: '#e5e7eb' }}
+                        className="flex items-start gap-3 rounded-2xl border border-gray-200/80 bg-white/80 backdrop-blur px-4 py-3"
                       >
                         <span className="text-[0.75rem] font-semibold uppercase tracking-wider text-gray-400 w-20 shrink-0 pt-0.5">
                           {label}
@@ -151,21 +133,16 @@ export default function WebinarPage() {
 
               {/* Right: HubSpot form */}
               <Reveal animation="anim-scaleIn" delay={150}>
-                <div
-                  id="register"
-                  className="rounded-2xl bg-white border sticky top-28"
-                  style={{
-                    borderColor: '#e5e7eb',
-                    boxShadow: '0 8px 40px rgba(0,0,0,0.08)',
-                  }}
-                >
-                  <Script src={WEBINAR.hubspot.scriptSrc} strategy="lazyOnload" />
-                  <div
-                    className="hs-form-frame"
-                    data-region={WEBINAR.hubspot.region}
-                    data-form-id={WEBINAR.hubspot.formId}
-                    data-portal-id={WEBINAR.hubspot.portalId}
-                  />
+                <div id="register" className="sticky top-28">
+                  <FrostedBox padded={false} className="overflow-hidden p-4">
+                    <Script src={WEBINAR.hubspot.scriptSrc} strategy="lazyOnload" />
+                    <div
+                      className="hs-form-frame"
+                      data-region={WEBINAR.hubspot.region}
+                      data-form-id={WEBINAR.hubspot.formId}
+                      data-portal-id={WEBINAR.hubspot.portalId}
+                    />
+                  </FrostedBox>
                 </div>
               </Reveal>
             </div>

@@ -12,6 +12,8 @@ This project uses **Next.js 16.2.6 with React 19** (see `AGENTS.md` above). APIs
 
 The **public marketing site** for FraudPulse (`fraud-pulse-public`). FraudPulse connects to transaction data (Shopify, Stripe, Adyen) and recommends rules/actions that reduce chargebacks and friendly fraud. The **product app is a separate codebase** — see `POSTHOG_PLAN.md` "Phase B". Note: the git root is one level up (`../`), where planning `.md` files live; run all `npm` commands from this directory.
 
+**Do not write "Shopify Protect".** The stack is Stripe Radar, Shopify Flow, Blockify, and Adyen RevenueProtect. FraudPulse is the AI analyst that ranks which of those rules to change — it does not replace them and does not take over checkout.
+
 ## Commands
 
 ```bash
@@ -21,7 +23,7 @@ npm run lint     # eslint (next core-web-vitals + typescript configs)
 npm start        # serve a production build
 ```
 
-There is **no test suite**. TypeScript is `strict`; `npm run build` type-checks.
+There is **no test suite**. TypeScript is `strict`; `npm run build` type-checks. Use `./node_modules/.bin/tsc --noEmit` (do not run `npx tsc` — that can install the wrong `tsc` package).
 
 ## Static export architecture
 
@@ -41,6 +43,8 @@ Two deploy targets both exist:
 
 Canonical host is `https://www.fraud-pulse.com` (defined once in `app/lib/site.ts` as `SITE_URL`).
 
+Crawler headers for `llms.txt`, `robots.txt`, `sitemap.xml`, and pricing machine files live in both `vercel.json` and `firebase.json`. HTML pages also send `Link: </llms.txt>; rel="alternate"`.
+
 ## Analytics (PostHog)
 
 - `app/lib/posthog.ts` — config constants; `isPostHogEnabled` gates everything on `POSTHOG_PROJECT_TOKEN` being present. The token is public by design (like a GA measurement ID) and inlined at build.
@@ -53,7 +57,31 @@ Canonical host is `https://www.fraud-pulse.com` (defined once in `app/lib/site.t
 ## Conventions
 
 - **App Router**, all under `app/`. Path alias `@/*` → this directory.
-- **SEO-first.** Use `pageMetadata()` from `app/lib/seo.ts` for per-page `Metadata` (handles trailing-slash canonical + og:url). Structured data via the `JsonLd` component. Marketing pages typically have their own `layout.tsx` for metadata plus a `page.tsx`.
-- **Styling** is Tailwind CSS v4 (via `@tailwindcss/postcss`; config in `app/globals.css`, no `tailwind.config`). Font is Geist Mono via `next/font`.
-- Shared UI in `app/components/` (`Header`, `Footer`, `FaqAccordion`, `Reveal` for scroll animations). Page-specific data/copy lives in `app/lib/` (`blog.ts`, `homeFaq.ts`, `webinar.ts`).
+- **Styling** is Tailwind CSS v4 (via `@tailwindcss/postcss`; config in `app/globals.css`, no `tailwind.config`). Body font is Gilroy (`--font-sans` from `/public/fonts`). Display accent is Space Grotesk (`--font-space-grotesk` via `next/font`). Geist Mono is still loaded for mono. Shared 2026 UI primitives live in `app/components/Brand.tsx` (`PulseMark`, `Eyebrow`, `HeroBackdrop`, `StatGrid`, `DarkPanel`, `FrostedBox`, `SoftWash`, `PageCta`).
+- The homepage-only brand line **"FraudPulse | AI Fraud Prevention Analyst"** lives inline in `app/page.tsx`. Do not put it on other pages.
+- Shared UI in `app/components/` (`Header`, `Footer`, `FaqAccordion` with `variant: 'dark' | 'light'`, `Reveal` for scroll animations, comparison tables). Page-specific data/copy lives in `app/lib/` (`blog.ts`, `homeFaq.ts`, `siteFaqs.ts`, `pageFaqs.ts`, `geo.ts`, `webinar.ts`, `alternatives.ts`, `toolComparison.ts`).
 - Client interactivity requires the `'use client'` directive (see the PostHog and Reveal components).
+- Recheck prices against live `/pricing/` before changing `PRICING_FACT` or plan copy.
+
+## SEO / GEO
+
+Use `pageMetadata()` from `app/lib/seo.ts` for per-page `Metadata` (trailing-slash canonical, matching `og:url`, large-image social, robots `index,follow` with `max-image-preview:large`, and `llms.txt` as `text/plain` alternate). Structured data via the `JsonLd` component. Marketing pages typically have their own `layout.tsx` for metadata plus a `page.tsx`.
+
+Helpers in `app/lib/geo.ts`:
+
+- `faqPageJsonLd(faqs)` — `FAQPage`. Must match visible accordion copy.
+- `articleJsonLd(headline, path)` — `"@type": "Article"` on the 12 GEO marketing URLs (`/`, `/faq/`, `/how-it-works/`, `/solutions/`, `/pricing/`, `/about/`, `/blog/`, `/stack/`, four `/alternatives/` pages). **`headline` must be the live `<h1>`.** No person author and no dates on these blocks.
+- `softwareApplicationJsonLd()` — product schema (home plus the same 11 marketing pages). Keep existing FAQPage blocks; one graph per type is fine.
+
+Blog posts keep `BlogPosting` with author + `datePublished` / `dateModified` in `app/blog/[slug]/page.tsx`. Do not add person author or dates to marketing Article blocks.
+
+Machine files crawlers should find:
+
+- `public/llms.txt` → `https://www.fraud-pulse.com/llms.txt`
+- `public/robots.txt` (AI bots explicitly allowed)
+- `public/sitemap.xml` (www host only, trailing slashes)
+- `public/pricing.md` and `public/pricing.txt`
+
+`/book-a-demo/thanks/` and `/lp/*` stay `noindex`. LP pages override `pageMetadata` robots after spreading it.
+
+Do not overwrite live `/how-it-works/`, `/solutions/`, `/faq/`, or `/stack/` with old draft copy. The stack diagram (Shopify / Stripe / Adyen → FraudPulse → Radar / Flow / Blockify / RevenueProtect) lives on How It Works. "Where FraudPulse fits in your stack" (analyst vs screener table) lives on Solutions.

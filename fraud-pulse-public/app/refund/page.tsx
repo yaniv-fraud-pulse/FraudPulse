@@ -2,6 +2,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import type { Metadata } from 'next';
 import { pageMetadata } from '../lib/seo';
+import { HeroBackdrop } from '../components/Brand';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Refund Policy | FraudPulse',
@@ -14,11 +15,18 @@ export default function Refund() {
     <div className="flex flex-col min-h-screen bg-white">
       <Header />
       
-      <main className="flex-grow">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">Refund Policy</h1>
-          <div className="prose prose-lg text-gray-600 space-y-6">
+      <main className="flex-grow overflow-x-clip">
+        <section className="relative overflow-x-clip px-5 sm:px-10">
+          <HeroBackdrop />
+          <div className="relative max-w-4xl mx-auto pt-16 pb-4">
+            <h1 className="font-extrabold text-gray-900 tracking-[-0.04em] leading-[1.08] mb-3 text-[2.5rem] sm:text-[3.25rem]">
+              Refund <span className="text-gradient-flow">Policy</span>
+            </h1>
             <p className="text-sm text-gray-500">Last updated: July 21, 2026</p>
+          </div>
+        </section>
+        <div className="relative max-w-4xl mx-auto px-5 sm:px-10 lg:px-8 pb-16">
+          <div className="prose prose-lg text-gray-600 space-y-6">
             
             <section>
               <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">30-Day Money-Back Guarantee</h2>

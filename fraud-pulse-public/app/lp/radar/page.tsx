@@ -8,6 +8,7 @@ import { captureEvent } from '../../components/PostHogProvider';
 import { CALENDLY_DEMO_URL } from '../../lib/posthog';
 import { trackMetaEvent } from '../../lib/metaPixel';
 import type { FaqItem } from '../../lib/homeFaq';
+import { Eyebrow, HeroBackdrop } from '../../components/Brand';
 
 const PAGE_PATH = '/lp/radar/';
 
@@ -78,34 +79,16 @@ export default function RadarFacebookLanding() {
       </header>
 
       <main className="flex-grow pb-24 md:pb-0">
-        <section className="relative overflow-hidden pt-12 sm:pt-20 pb-12 sm:pb-16 px-5 sm:px-8">
-          <div
-            className="pointer-events-none absolute inset-0 opacity-[0.05]"
-            style={{
-              backgroundImage:
-                'linear-gradient(rgba(165,208,216,0.8) 1px,transparent 1px),linear-gradient(90deg,rgba(165,208,216,0.8) 1px,transparent 1px)',
-              backgroundSize: '64px 64px',
-            }}
-          />
+        <section className="relative overflow-x-clip pt-12 sm:pt-20 pb-12 sm:pb-16 px-5 sm:px-8">
+          <HeroBackdrop />
           <div className="relative max-w-3xl mx-auto text-center">
             <Reveal animation="anim-fadeUp" delay={0}>
-              <p className="text-[0.7rem] font-semibold tracking-[0.12em] uppercase mb-4 text-[#5ba8b4]">
-                For merchants on Stripe Radar
-              </p>
+              <Eyebrow>For merchants on Stripe Radar</Eyebrow>
             </Reveal>
             <Reveal animation="anim-fadeUp" delay={75}>
-              <h1 className="font-extrabold text-gray-900 tracking-[-0.04em] leading-[1.12] mb-5 text-[2.25rem] sm:text-[3.25rem]">
+              <h1 className="font-extrabold text-gray-900 tracking-[-0.045em] leading-[1.08] mb-5 text-[2.25rem] sm:text-[3.25rem]">
                 Stripe Radar is blocking{' '}
-                <span
-                  style={{
-                    background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text',
-                  }}
-                >
-                  legitimate customers
-                </span>
+                <span className="text-gradient-flow">legitimate customers</span>
               </h1>
             </Reveal>
             <Reveal animation="anim-fadeUp" delay={150}>
@@ -137,20 +120,17 @@ export default function RadarFacebookLanding() {
           </div>
         </section>
 
-        <section className="py-14 sm:py-20 px-5 sm:px-8 bg-[#f8f9fa]">
+        <section className="py-14 sm:py-20 px-5 sm:px-8 bg-white">
           <div className="max-w-3xl mx-auto">
             <Reveal animation="anim-fadeUp">
-              <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] text-center mb-10 text-[1.75rem] sm:text-[2.25rem]">
+              <h2 className="font-extrabold text-gray-900 tracking-[-0.04em] text-center mb-10 text-[1.75rem] sm:text-[2.25rem]">
                 Why good customers get declined
               </h2>
             </Reveal>
             <div className="flex flex-col gap-4">
               {points.map((point, i) => (
                 <Reveal key={point.title} animation="anim-fadeUp" delay={([0, 75, 150] as const)[i] ?? 0}>
-                  <div
-                    className="rounded-[16px] border bg-white p-6 sm:p-8"
-                    style={{ borderColor: '#e5e7eb', boxShadow: '0 1px 3px rgba(0,0,0,0.04)' }}
-                  >
+                  <div className="rounded-3xl border border-gray-200/80 bg-white p-6 sm:p-8">
                     <p className="font-bold text-gray-900 mb-2 text-[1.125rem]">{point.title}</p>
                     <p className="text-[1rem] leading-[1.7] text-gray-500">{point.body}</p>
                   </div>
@@ -177,7 +157,7 @@ export default function RadarFacebookLanding() {
                 { n: '3', t: 'Start a 14-day trial', d: 'If it fits, go straight to a trial. No credit card required.' },
               ].map((step, i) => (
                 <Reveal key={step.n} animation="anim-fadeUp" delay={([0, 75, 150] as const)[i] ?? 0}>
-                  <div className="rounded-[16px] border p-5 h-full" style={{ borderColor: '#e5e7eb' }}>
+                  <div className="rounded-3xl border border-gray-200/80 p-5 h-full bg-white">
                     <span
                       className="inline-flex w-8 h-8 items-center justify-center rounded-full text-sm font-bold mb-3"
                       style={{ background: 'rgba(91,168,180,0.12)', color: '#4a96a3' }}
@@ -205,12 +185,12 @@ export default function RadarFacebookLanding() {
           </div>
         </section>
 
-        <section className="py-14 sm:py-16 px-5 sm:px-8 bg-gray-950">
+        <section className="py-14 sm:py-16 px-5 sm:px-8 bg-white">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-extrabold text-white tracking-[-0.03em] text-center mb-8 text-[1.75rem]">
-              Questions
+            <h2 className="font-extrabold text-gray-900 tracking-[-0.04em] text-center mb-8 text-[1.75rem]">
+              Frequently asked questions
             </h2>
-            <FaqAccordion faqs={lpFaqs} className="!w-full" />
+            <FaqAccordion faqs={lpFaqs} variant="light" className="!w-full" />
           </div>
         </section>
       </main>
