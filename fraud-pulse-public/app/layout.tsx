@@ -4,7 +4,7 @@ import { Geist_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import JsonLd from "./components/JsonLd";
 import PostHogProvider from "./components/PostHogProvider";
-import { SITE_URL } from "./lib/site";
+import { ORGANIZATION_SAME_AS, SITE_URL } from "./lib/site";
 import { SOCIAL_IMAGE } from "./lib/seo";
 
 const GA_MEASUREMENT_ID = "G-GL245KC3KN";
@@ -28,7 +28,7 @@ const organizationSchema = {
   logo: `${SITE_URL}/icon-512.png`,
   description:
     "FraudPulse connects to your transaction data and recommends rules and actions that reduce chargebacks and friendly fraud.",
-  sameAs: [],
+  sameAs: [...ORGANIZATION_SAME_AS],
 };
 
 export const metadata: Metadata = {
