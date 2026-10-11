@@ -63,7 +63,7 @@ export default function ToolComparisonTable({
               <th className="px-3 sm:px-4 py-3.5 text-center font-semibold text-gray-700">
                 SMB Fraud Prevention
                 <span className="block text-[0.7rem] font-normal text-gray-400 mt-0.5">
-                  NoFraud · ClearSale
+                  NoFraud · KeepSafe · Beacon · MaxMind
                 </span>
               </th>
               <th className="px-3 sm:px-4 py-3.5 text-center font-semibold text-gray-700">

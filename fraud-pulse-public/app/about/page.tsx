@@ -279,7 +279,7 @@ export default function About() {
                 </Link>
                 {' · '}
                 <Link href="/alternatives/nofraud/" className="font-semibold text-[#4a96a3] hover:underline">
-                  vs NoFraud and SMB tools
+                  vs NoFraud, KeepSafe, Beacon, MaxMind, and SMB tools
                 </Link>
               </p>
             </Reveal>

@@ -147,7 +147,7 @@ export default function StackPage() {
                 </Link>
                 {' · '}
                 <Link href="/alternatives/nofraud/" className="font-semibold text-[#4a96a3] hover:underline">
-                  vs NoFraud and SMB tools
+                  vs NoFraud, KeepSafe, Beacon, MaxMind, and SMB tools
                 </Link>
                 {' · '}
                 <Link href="/blog/fraudpulse-does-not-replace-stripe-radar-shopify-flow/" className="font-semibold text-[#4a96a3] hover:underline">

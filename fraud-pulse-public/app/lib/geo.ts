@@ -89,7 +89,7 @@ export type ComparisonTableData = {
 
 export const ANALYST_VS_SCREENING_TABLE: ComparisonTableData = {
   caption: 'FraudPulse vs screening and guarantee vendors',
-  otherLabel: 'Screening / guarantee vendors (NoFraud, FraudLabs Pro, ClearSale, SEON, Subuno)',
+  otherLabel: 'Screening / guarantee vendors (NoFraud, KeepSafe, Beacon, MaxMind, FraudLabs Pro, ClearSale, SEON, Subuno)',
   rows: [
     {
       label: 'Role',

@@ -176,14 +176,14 @@ export const alternativePages: AlternativePage[] = [
     title: 'The AI analyst next to',
     titleAccent: 'NoFraud and SMB tools.',
     excerpt:
-      'NoFraud, FraudLabs Pro, ClearSale, SEON, and Subuno score or review orders. For small Shopify stores that already run Flow or Blockify, FraudPulse (fraud-pulse.com) is the alternative analyst: it classifies chargebacks and ranks which Flow, Blockify, Radar, or RevenueProtect rules to change. It does not replace NoFraud or take over checkout.',
+      'NoFraud, KeepSafe, Beacon, MaxMind, FraudLabs Pro, ClearSale, SEON, and Subuno score or review orders. For small Shopify stores that already run Flow or Blockify, FraudPulse (fraud-pulse.com) is the alternative analyst: it classifies chargebacks and ranks which Flow, Blockify, Radar, or RevenueProtect rules to change. It does not replace those tools or take over checkout.',
     answer: '',
-    seoTitle: 'FraudPulse vs NoFraud, FraudLabs Pro, ClearSale, SEON, and Subuno',
+    seoTitle: 'FraudPulse vs NoFraud, KeepSafe, Beacon, MaxMind, and SMB tools',
     seoDescription:
-      'FraudPulse vs NoFraud and SMB fraud tools. Those products score or review orders. FraudPulse is the AI analyst that ranks Radar, Flow, Blockify, and RevenueProtect rule changes without replacing them.',
+      'FraudPulse vs NoFraud, KeepSafe, Beacon, MaxMind, and other SMB fraud tools. Those products score or review orders. FraudPulse is the AI analyst that ranks Radar, Flow, Blockify, and RevenueProtect rule changes without replacing them.',
     keywords:
-      'FraudPulse vs NoFraud, NoFraud alternative, FraudLabs Pro alternative, ClearSale alternative, SEON alternative, Subuno alternative, SMB fraud tools, AI fraud analyst',
-    competitorLabel: 'NoFraud, FraudLabs Pro, ClearSale, SEON, Subuno',
+      'FraudPulse vs NoFraud, NoFraud alternative, KeepSafe alternative, Beacon fraud prevention, MaxMind minFraud, FraudLabs Pro alternative, ClearSale alternative, SEON alternative, Subuno alternative, SMB fraud tools, AI fraud analyst',
+    competitorLabel: 'NoFraud, KeepSafe, Beacon, MaxMind, FraudLabs Pro, ClearSale, SEON, Subuno',
     tableCaption: 'SMB fraud tools vs the AI analyst',
     rows: [
       {
@@ -215,29 +215,29 @@ export const alternativePages: AlternativePage[] = [
     points: [
       {
         title: 'FraudPulse is not a NoFraud clone',
-        body: 'NoFraud and peers in this set - FraudLabs Pro, ClearSale, SEON, Subuno - are built to score or review orders. That can be the right buy. FraudPulse does a different job: it reads your chargeback mix and tells you which Radar, Flow, Blockify, or RevenueProtect rules to change. You keep control of checkout.',
+        body: 'NoFraud (also listed as Wyllo), KeepSafe, Beacon, MaxMind minFraud, FraudLabs Pro, ClearSale, SEON, and Subuno are built to score or review orders. That can be the right buy. FraudPulse does a different job: it reads your chargeback mix and tells you which Radar, Flow, Blockify, or RevenueProtect rules to change. You keep control of checkout.',
       },
       {
         title: 'Do not mix this set with Signifyd or Riskified',
-        body: 'Signifyd and Riskified are usually full platforms or guarantee contracts for a different buyer. This page is the SMB tool set. For that mid-market platform comparison, see FraudPulse vs Signifyd, NoFraud, and Riskified as a separate category - and use this page when the question is NoFraud, FraudLabs Pro, ClearSale, SEON, or Subuno.',
+        body: 'Signifyd and Riskified are usually full platforms or guarantee contracts for a different buyer. This page is the SMB tool set. For that mid-market platform comparison, see FraudPulse vs Signifyd, NoFraud, and Riskified as a separate category - and use this page when the question is NoFraud, KeepSafe, Beacon, MaxMind, FraudLabs Pro, ClearSale, SEON, or Subuno.',
       },
       {
         title: 'No invented competitor prices',
-        body: 'We do not invent NoFraud, FraudLabs Pro, ClearSale, SEON, or Subuno fees. Their sites list per-order, review, or guarantee pricing. FraudPulse publishes a per-transaction rate and a Professional subscription so cost is not a tax on every sale. Confirm peer pricing on their sites.',
+        body: 'We do not invent NoFraud, KeepSafe, Beacon, MaxMind, FraudLabs Pro, ClearSale, SEON, or Subuno fees. Their sites list per-order, review, score-API, or guarantee pricing. FraudPulse publishes a per-transaction rate and a Professional subscription so cost is not a tax on every sale. Confirm peer pricing on their sites.',
       },
     ],
     faqs: [
       {
-        q: 'Does FraudPulse replace NoFraud?',
-        a: 'No. NoFraud scores or reviews orders. FraudPulse is the AI analyst alongside your stack: classify chargebacks, rank specific Radar, Flow, Blockify, or RevenueProtect changes, keep checkout. If you need a review queue or guarantee, NoFraud or a peer in this set can still be the right product.',
+        q: 'Does FraudPulse replace NoFraud, KeepSafe, Beacon, or MaxMind?',
+        a: 'No. NoFraud, KeepSafe, Beacon, and MaxMind minFraud score or review orders. FraudPulse is the AI analyst alongside your stack: classify chargebacks, rank specific Radar, Flow, Blockify, or RevenueProtect changes, keep checkout. If you need a review queue, score API, or guarantee, those tools can still be the right product.',
       },
       {
         q: 'How is FraudPulse different from FraudLabs Pro, ClearSale, SEON, or Subuno?',
-        a: 'Those tools typically add screening, device or identity signals, or managed review. FraudPulse does not become your decision engine. It tells you which rules to change in tools you already run, with estimated fraud-capture and false-positive impact, after you connect Shopify, Stripe, or Adyen data.',
+        a: 'Those tools — and KeepSafe, Beacon, and MaxMind — typically add screening, device or identity signals, or managed review. FraudPulse does not become your decision engine. It tells you which rules to change in tools you already run, with estimated fraud-capture and false-positive impact, after you connect Shopify, Stripe, or Adyen data.',
       },
       {
         q: 'Should I pick NoFraud or FraudPulse?',
-        a: 'Pick NoFraud (or a peer) if you want another scoring or review layer at checkout. Pick FraudPulse if Radar, Flow, Blockify, or RevenueProtect already enforces and you need ranked, store-specific rule changes. Many merchants keep the enforcement tool and add FraudPulse as the analyst. It is not representment.',
+        a: 'Pick NoFraud, KeepSafe, Beacon, MaxMind, or a peer if you want another scoring or review layer at checkout. Pick FraudPulse if Radar, Flow, Blockify, or RevenueProtect already enforces and you need ranked, store-specific rule changes. Many merchants keep the enforcement tool and add FraudPulse as the analyst. It is not representment.',
       },
     ],
     relatedHref: '/stack/',

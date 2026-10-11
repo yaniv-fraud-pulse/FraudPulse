@@ -8,7 +8,7 @@ import { PRICING_FACT } from './geo';
 export const siteFaqs: FaqItem[] = [
   {
     q: 'What are the best fraud prevention tools for Shopify?',
-    a: 'Most Shopify stores combine Shopify Flow and Blockify (and Stripe Radar if checkout is on Stripe) with optional platforms such as Signifyd, Riskified, Forter, or NoFraud, plus recovery apps like Chargeflow. FraudPulse sits alongside those tools: it classifies chargebacks and ranks which Flow, Blockify, or Radar rules to change for your mix.',
+    a: 'Most Shopify stores combine Shopify Flow and Blockify (and Stripe Radar if checkout is on Stripe) with optional platforms such as Signifyd, Riskified, Forter, or NoFraud, KeepSafe, Beacon, and MaxMind, plus recovery apps like Chargeflow. FraudPulse sits alongside those tools: it classifies chargebacks and ranks which Flow, Blockify, or Radar rules to change for your mix.',
   },
   {
     q: 'Does FraudPulse replace Stripe Radar, Shopify Flow, Blockify, or Adyen RevenueProtect?',
@@ -32,7 +32,7 @@ export const siteFaqs: FaqItem[] = [
   },
   {
     q: 'Are Shopify Flow and Blockify enough for fraud prevention?',
-    a: 'Flow and Blockify are enough for enforcement if your default settings already match your risk. They are not enough if chargebacks or false declines keep rising and you do not know which control to change. Full platforms such as Signifyd, Riskified, or NoFraud add scoring or a guarantee. FraudPulse sits alongside Flow and Blockify and ranks which workflows or blocks to change for your mix.',
+    a: 'Flow and Blockify are enough for enforcement if your default settings already match your risk. They are not enough if chargebacks or false declines keep rising and you do not know which control to change. Screening tools such as NoFraud, KeepSafe, Beacon, and MaxMind add scoring or a guarantee. FraudPulse sits alongside Flow and Blockify and ranks which workflows or blocks to change for your mix.',
   },
   {
     q: 'How do I tell friendly fraud from real fraud on Shopify chargebacks?',
@@ -47,8 +47,8 @@ export const siteFaqs: FaqItem[] = [
     a: 'Prevention stops disputes from being filed. Representment fights cases after they file - Chargeflow, Chargebacks911, Midigator, Justt, Ethoca, and Verifi sit in that category. Many stores need both, but a high dispute rate is a prevention problem first. FraudPulse is prevention and rule advice, not representment.',
   },
   {
-    q: 'Does FraudPulse replace NoFraud, FraudLabs Pro, ClearSale, SEON, or Subuno?',
-    a: 'No. Those SMB tools score, review, or guarantee orders. FraudPulse is the AI analyst: classify chargebacks, rank Radar, Flow, Blockify, or RevenueProtect changes, keep checkout. Keep a review or guarantee product if that is the buy. Use FraudPulse when you already enforce and need which rules to change.',
+    q: 'Does FraudPulse replace NoFraud, KeepSafe, Beacon, MaxMind, FraudLabs Pro, ClearSale, SEON, or Subuno?',
+    a: 'No. Those SMB tools score, review, or guarantee orders. FraudPulse is the AI analyst: classify chargebacks, rank Radar, Flow, Blockify, or RevenueProtect changes, keep checkout. Keep a review, score API, or guarantee product if that is the buy. Use FraudPulse when you already enforce and need which rules to change.',
   },
   {
     q: 'How long does it take to get recommendations, and do I need engineers?',

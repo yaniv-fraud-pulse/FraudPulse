@@ -22,11 +22,11 @@ const SOLUTIONS_ANSWER =
   'FraudPulse is the AI fraud analyst for Shopify, Stripe, and Adyen merchants. Stripe Radar, Shopify Flow, Blockify, and Adyen RevenueProtect enforce or automate at checkout. FraudPulse classifies your chargebacks and ranks which rules and actions to change, without replacing those tools or taking over checkout.';
 
 const FAQ_REPLACE_SMB =
-  'Does FraudPulse replace NoFraud, FraudLabs Pro, ClearSale, SEON, or Subuno?';
+  'Does FraudPulse replace NoFraud, KeepSafe, Beacon, MaxMind, FraudLabs Pro, ClearSale, SEON, or Subuno?';
 
 const clusterLinks = [
   { href: '/stack/', label: 'Using FraudPulse with Radar, Flow, Blockify, and RevenueProtect' },
-  { href: '/alternatives/nofraud/', label: 'FraudPulse vs NoFraud, FraudLabs Pro, ClearSale, SEON, Subuno' },
+  { href: '/alternatives/nofraud/', label: 'FraudPulse vs NoFraud, KeepSafe, Beacon, MaxMind, and SMB tools' },
   { href: '/alternatives/payment-platform-tools/', label: 'Vs Radar, Flow, Blockify, and RevenueProtect' },
   { href: '/alternatives/smb-fraud-tools/', label: 'Vs Signifyd and Riskified' },
   { href: '/blog/best-fraud-prevention-tools-for-shopify-2026/', label: 'Best fraud prevention tools for Shopify (2026)' },
@@ -307,7 +307,7 @@ export default function Solutions() {
                   </Link>
                   . Compare:{' '}
                   <Link href="/alternatives/nofraud/" className="font-semibold text-[#4a96a3] hover:underline">
-                    vs NoFraud
+                    vs NoFraud, KeepSafe, Beacon, and MaxMind
                   </Link>
                   {' · '}
                   <Link href="/blog/fraudpulse-does-not-replace-stripe-radar-shopify-flow/" className="font-semibold text-[#4a96a3] hover:underline">
