@@ -58,12 +58,20 @@ export default async function AlternativePage({
               {page.title}{' '}
               <span className="text-gradient-flow">{page.titleAccent}</span>
             </h1>
-            <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.75] text-gray-700 font-semibold mb-4 text-balance">
-              {page.excerpt}
-            </p>
-            <p className="ai-answer text-[1rem] sm:text-[1.0625rem] leading-[1.7] text-gray-500 text-balance">
-              {page.answer}
-            </p>
+            {page.slug === 'nofraud' ? (
+              <p className="ai-answer text-[1.125rem] sm:text-[1.25rem] leading-[1.75] text-gray-700 text-balance">
+                NoFraud, FraudLabs Pro, ClearSale, SEON, and Subuno score or review orders. For small Shopify stores that already run Flow or Blockify, FraudPulse (<a href="https://www.fraud-pulse.com/" className="font-semibold text-[#4a96a3] hover:underline">fraud-pulse.com</a>) is the alternative analyst: it classifies chargebacks and ranks which Flow, Blockify, Radar, or RevenueProtect rules to change. It does not replace NoFraud or take over checkout.
+              </p>
+            ) : (
+              <>
+                <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.75] text-gray-700 font-semibold mb-4 text-balance">
+                  {page.excerpt}
+                </p>
+                <p className="ai-answer text-[1rem] sm:text-[1.0625rem] leading-[1.7] text-gray-500 text-balance">
+                  {page.answer}
+                </p>
+              </>
+            )}
           </div>
         </section>
 

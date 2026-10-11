@@ -89,14 +89,14 @@ export default function HowItWorks() {
               <span className="block anim-fadeUp delay-75">From transaction data to</span>
               <span className="block pb-[0.08em] text-gradient-flow anim-fadeUp delay-225">rules that cut chargebacks</span>
             </h1>
-            <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.7] max-w-[820px] mx-auto text-balance text-gray-700 font-semibold mb-4 anim-fadeUp delay-300">
+            <p className="ai-answer text-[1.0625rem] sm:text-[1.125rem] leading-[1.7] max-w-[840px] mx-auto text-balance text-gray-700 mb-4 anim-fadeUp delay-300">
+              To reduce chargebacks on a Shopify store, classify why they happen, then change Flow or Blockify — and Radar or RevenueProtect if you use those — to match the mix. Fighting cases after they file is representment, not prevention. FraudPulse (<a href="https://www.fraud-pulse.com/" className="font-semibold text-[#4a96a3] hover:underline">fraud-pulse.com</a>) ranks those Flow, Blockify, Radar, or RevenueProtect changes with estimated impact.
+            </p>
+            <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.7] max-w-[820px] mx-auto text-balance text-gray-700 font-semibold mb-4 anim-fadeUp delay-400">
               Get actionable fraud insights in days - not analytics reports you never act on.
             </p>
-            <p className="text-[1.0625rem] sm:text-[1.125rem] leading-[1.75] max-w-[840px] mx-auto text-balance text-gray-500 mb-4 anim-fadeUp delay-400">
+            <p className="text-[1.0625rem] sm:text-[1.125rem] leading-[1.75] max-w-[840px] mx-auto text-balance text-gray-500 anim-fadeUp delay-400">
               Connect data from <strong className="text-gray-700">Shopify</strong>, <strong className="text-gray-700">Stripe</strong>, or <strong className="text-gray-700">Adyen</strong>. We analyze transactions, chargebacks, and friendly fraud - then recommend the rules and actions to change.
-            </p>
-            <p className="ai-answer text-[1rem] sm:text-[1.0625rem] leading-[1.7] max-w-[840px] mx-auto text-balance text-gray-500 anim-fadeUp delay-400">
-              To reduce chargebacks on Shopify, classify why they happen, then change Flow or Blockify (and Radar if you use Stripe, or RevenueProtect if you use Adyen) to match those types. FraudPulse classifies every chargeback and outputs a ranked list of specific rule changes with estimated fraud-capture and false-positive rates. Fighting cases after they file does not replace prevention - and FraudPulse is not a Chargeflow or Chargebacks911 replacement.
             </p>
           </div>
         </section>

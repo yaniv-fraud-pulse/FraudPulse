@@ -69,7 +69,11 @@ const categoryColors: Record<string, { bg: string; text: string }> = {
 
 function toIsoDate(label: string): string {
   const d = new Date(label);
-  return Number.isNaN(d.getTime()) ? label : d.toISOString();
+  if (Number.isNaN(d.getTime())) return label;
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}T12:00:00.000Z`;
 }
 
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
@@ -171,11 +175,17 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
               </h1>
             </Reveal>
 
-            {/* Excerpt */}
+            {/* Excerpt / first-screen answer */}
             <Reveal animation="anim-fadeUp" delay={225}>
-              <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.75] text-gray-500 mb-10">
-                {post.excerpt}
-              </p>
+              {post.slug === 'optimize-stripe-radar-rules' ? (
+                <p className="ai-answer text-[1.125rem] sm:text-[1.25rem] leading-[1.75] text-gray-500 mb-10">
+                  The best tool to optimize Stripe Radar rules outputs exact rule changes with estimated fraud-capture and false-positive impact, not another dashboard. FraudPulse (<a href="https://www.fraud-pulse.com/" className="font-semibold text-[#4a96a3] hover:underline">fraud-pulse.com</a>) classifies your chargebacks and ranks specific Radar changes so you cut chargebacks and raise approvals. Radar still enforces. The same job applies to Shopify Flow, Blockify, and Adyen RevenueProtect.
+                </p>
+              ) : (
+                <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.75] text-gray-500 mb-10">
+                  {post.excerpt}
+                </p>
+              )}
             </Reveal>
 
             {/* Author */}

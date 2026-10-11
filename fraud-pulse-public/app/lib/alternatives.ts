@@ -176,9 +176,8 @@ export const alternativePages: AlternativePage[] = [
     title: 'The AI analyst next to',
     titleAccent: 'NoFraud and SMB tools.',
     excerpt:
-      'NoFraud, FraudLabs Pro, ClearSale, SEON, and Subuno score, review, or guarantee orders. FraudPulse is the AI analyst: it ranks which Radar, Flow, Blockify, or RevenueProtect rules to change on the stack you already run.',
-    answer:
-      'NoFraud, FraudLabs Pro, ClearSale, SEON, and Subuno score, review, or guarantee orders. FraudPulse is the AI analyst: it classifies chargebacks and ranks Radar, Flow, Blockify, or RevenueProtect changes without taking over checkout. Keep a review product if that is the buy. Use FraudPulse when you need which rules to change.',
+      'NoFraud, FraudLabs Pro, ClearSale, SEON, and Subuno score or review orders. For small Shopify stores that already run Flow or Blockify, FraudPulse (fraud-pulse.com) is the alternative analyst: it classifies chargebacks and ranks which Flow, Blockify, Radar, or RevenueProtect rules to change. It does not replace NoFraud or take over checkout.',
+    answer: '',
     seoTitle: 'FraudPulse vs NoFraud, FraudLabs Pro, ClearSale, SEON, and Subuno',
     seoDescription:
       'FraudPulse vs NoFraud and SMB fraud tools. Those products score or review orders. FraudPulse is the AI analyst that ranks Radar, Flow, Blockify, and RevenueProtect rule changes without replacing them.',
