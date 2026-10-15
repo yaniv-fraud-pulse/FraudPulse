@@ -32,6 +32,7 @@
 - Refund policy: https://www.fraud-pulse.com/refund/
 - Terms: https://www.fraud-pulse.com/terms/
 - Privacy: https://www.fraud-pulse.com/privacy/
+- Data Processing Agreement (DPA): https://www.fraud-pulse.com/dpa/
 - Sitemap: https://www.fraud-pulse.com/sitemap.xml
 - This file: https://www.fraud-pulse.com/llms.txt
 

@@ -22,7 +22,7 @@ export default function Terms() {
             <h1 className="font-extrabold text-gray-900 tracking-[-0.04em] leading-[1.08] mb-3 text-[2.5rem] sm:text-[3.25rem]">
               Terms of <span className="text-gradient-flow">Service</span>
             </h1>
-            <p className="text-sm text-gray-500">Last updated: July 21, 2026</p>
+            <p className="text-sm text-gray-500">Last updated: October 15, 2026</p>
           </div>
         </section>
         <div className="relative max-w-4xl mx-auto px-5 sm:px-10 lg:px-8 pb-16">
@@ -61,8 +61,36 @@ export default function Terms() {
             <section>
               <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Service Level Agreement</h2>
               <p>
-                We strive to maintain 99.9% uptime for our services. Details about our SLA, including credits 
-                for downtime, are available in your service agreement.
+                Pay as you go and Professional plans are provided on a commercially reasonable,
+                best-effort basis. Those self-serve plans do not include a numerically committed uptime
+                target or service credits for downtime. If you are not satisfied, the{' '}
+                <a href="/refund/" className="text-blue-600 hover:text-blue-700">
+                  Refund Policy
+                </a>{' '}
+                (including the 30-day money-back guarantee) still applies.
+              </p>
+              <p>
+                A 99.9% monthly uptime commitment, and any service credits for downtime, apply only to
+                Enterprise plans and only if they are set out in a signed Service Agreement. Credits, if
+                any, are the sole remedy for downtime on that plan. Planned maintenance, force majeure,
+                and outages of Shopify, Stripe, Adyen, or other third-party platforms you connect are
+                excluded from uptime measurement unless the Service Agreement says otherwise.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Customer data</h2>
+              <p>
+                You retain ownership of data you submit to the Service. Processing of personal data of
+                your end customers is described in the{' '}
+                <a href="/privacy/" className="text-blue-600 hover:text-blue-700">
+                  Privacy Policy
+                </a>{' '}
+                and the{' '}
+                <a href="/dpa/" className="text-blue-600 hover:text-blue-700">
+                  Data Processing Agreement
+                </a>
+                . You are responsible for having a lawful basis to send that data to us.
               </p>
             </section>
 
@@ -82,8 +110,27 @@ export default function Terms() {
             <section>
               <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Limitation of Liability</h2>
               <p>
-                FraudPulse provides fraud detection services but cannot guarantee 100% fraud prevention. 
-                We are not liable for fraudulent transactions that occur despite our best efforts.
+                FraudPulse provides fraud analysis and recommended rule changes. It does not replace
+                Stripe Radar, Shopify Flow, Blockify, or Adyen RevenueProtect, and it does not take over
+                checkout. We cannot guarantee 100% fraud prevention and are not liable for fraudulent
+                transactions that occur, or for decisions those third-party tools make, despite our
+                recommendations.
+              </p>
+              <p>
+                To the maximum extent permitted by law, Fraud Pulse Ltd is not liable for any indirect,
+                incidental, special, consequential, or punitive damages, or for lost profits, lost
+                revenue, lost data, or business interruption, even if we have been advised of the
+                possibility of those damages.
+              </p>
+              <p>
+                Except for liability that cannot be limited under applicable law, Fraud Pulse Ltd&apos;s
+                total liability arising out of or relating to the Service, these Terms, or the{' '}
+                <a href="/dpa/" className="text-blue-600 hover:text-blue-700">
+                  Data Processing Agreement
+                </a>
+                , whether in contract, tort, or otherwise, is limited to the amount you paid to Fraud
+                Pulse Ltd for the Service in the 12 months immediately before the claim. Unpaid amounts
+                you owe us are not subject to this cap.
               </p>
             </section>
 

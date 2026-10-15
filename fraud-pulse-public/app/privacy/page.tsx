@@ -22,7 +22,7 @@ export default function Privacy() {
             <h1 className="font-extrabold text-gray-900 tracking-[-0.04em] leading-[1.08] mb-3 text-[2.5rem] sm:text-[3.25rem]">
               Privacy <span className="text-gradient-flow">Policy</span>
             </h1>
-            <p className="text-sm text-gray-500">Last updated: May 31, 2026</p>
+            <p className="text-sm text-gray-500">Last updated: October 15, 2026</p>
           </div>
         </section>
         <div className="relative max-w-4xl mx-auto px-5 sm:px-10 lg:px-8 pb-16">
@@ -41,10 +41,35 @@ export default function Privacy() {
               <p>We collect information that you provide directly to us, including:</p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Account information (name, email, company details)</li>
-                <li>Transaction data for fraud analysis</li>
+                <li>Transaction and dispute data you connect for fraud analysis</li>
                 <li>Usage data and analytics</li>
                 <li>Communications with our support team</li>
               </ul>
+              <p>
+                When you connect Shopify, Stripe, or Adyen (or upload CSV files), we receive transaction,
+                order, and chargeback records. Those records may include personal data of your buyers
+                (for example email, IP address, and order identifiers). We do not collect or store full
+                payment card numbers.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Data processing for merchants</h2>
+              <p>
+                For your company account and website use, Fraud Pulse Ltd is a controller. For personal
+                data of your end customers that you send to FraudPulse so we can analyse fraud and
+                disputes, you are the controller and FraudPulse is the processor. That processing is
+                governed by our{' '}
+                <a href="/dpa/" className="text-blue-600 hover:text-blue-700">
+                  Data Processing Agreement (DPA)
+                </a>
+                , which applies when you use the Service. Merchants who need a countersigned DPA for
+                GDPR or CCPA can request one at{' '}
+                <a href="mailto:support@fraud-pulse.com" className="text-blue-600 hover:text-blue-700">
+                  support@fraud-pulse.com
+                </a>
+                .
+              </p>
             </section>
 
             <section>
