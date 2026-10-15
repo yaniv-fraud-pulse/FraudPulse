@@ -6,6 +6,7 @@ export const SITE_URL = 'https://www.fraud-pulse.com';
  */
 export const ORGANIZATION_SAME_AS = [
   'https://www.crunchbase.com/organization/fraudpulse',
+  'https://www.capterra.com/p/10187102/Fraud-Pulse/',
   'https://www.saashub.com/fraudpulse',
   'https://www.youtube.com/@FraudPulse',
   'https://x.com/FraudPulse',
@@ -21,6 +22,10 @@ export const FOOTER_PROFILES = [
   {
     name: 'Crunchbase',
     href: 'https://www.crunchbase.com/organization/fraudpulse',
+  },
+  {
+    name: 'Capterra',
+    href: 'https://www.capterra.com/p/10187102/Fraud-Pulse/',
   },
   {
     name: 'SaaSHub',
