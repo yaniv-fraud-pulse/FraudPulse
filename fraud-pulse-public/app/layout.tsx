@@ -3,6 +3,7 @@ import Script from "next/script";
 import { Geist_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import JsonLd from "./components/JsonLd";
+import MetaPixel from "./components/MetaPixel";
 import PostHogProvider from "./components/PostHogProvider";
 import { ORGANIZATION_SAME_AS, SITE_URL } from "./lib/site";
 import { SOCIAL_IMAGE } from "./lib/seo";
@@ -98,6 +99,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-white pt-[84px] overflow-x-clip">
         <PostHogProvider>
+          <MetaPixel />
           <JsonLd data={organizationSchema} />
           {children}
           <Script

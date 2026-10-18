@@ -9,6 +9,7 @@ import { Suspense } from 'react';
 import { Reveal } from '../../components/Reveal';
 import { captureEvent } from '../../components/PostHogProvider';
 import { HeroBackdrop, PulseMark } from '../../components/Brand';
+import { trackMetaEvent } from '../../lib/metaPixel';
 
 function DemoBookedTracker() {
   const searchParams = useSearchParams();
@@ -50,6 +51,7 @@ function DemoBookedTracker() {
       booking_uid: uid || undefined,
       event_title: title || undefined,
     });
+    trackMetaEvent('Schedule', { content_name: 'book_demo' });
   }, [searchParams]);
 
   return null;

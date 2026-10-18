@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import type { ComponentProps, MouseEvent } from 'react';
+import { trackMetaEvent } from '../lib/metaPixel';
 import { captureEvent } from './PostHogProvider';
 
 export type CtaEvent = 'signup_cta_clicked' | 'demo_cta_clicked';
@@ -11,6 +12,9 @@ function trackCta(event: CtaEvent, destination: string) {
     page: typeof window !== 'undefined' ? window.location.pathname : '',
     destination,
   });
+  if (event === 'signup_cta_clicked') {
+    trackMetaEvent('Lead', { content_name: 'free_trial' });
+  }
 }
 
 type TrackedLinkProps = ComponentProps<typeof Link> & {

@@ -22,7 +22,7 @@ export default function Privacy() {
             <h1 className="font-extrabold text-gray-900 tracking-[-0.04em] leading-[1.08] mb-3 text-[2.5rem] sm:text-[3.25rem]">
               Privacy <span className="text-gradient-flow">Policy</span>
             </h1>
-            <p className="text-sm text-gray-500">Last updated: October 15, 2026</p>
+            <p className="text-sm text-gray-500">Last updated: October 18, 2026</p>
           </div>
         </section>
         <div className="relative max-w-4xl mx-auto px-5 sm:px-10 lg:px-8 pb-16">
@@ -81,6 +81,10 @@ export default function Privacy() {
                 <li>Communicate with you about our services</li>
                 <li>Comply with legal obligations</li>
               </ul>
+              <p>
+                We use the Meta (Facebook) Pixel to measure ads and completed actions on this site,
+                such as demo bookings and contact form submissions.
+              </p>
             </section>
 
             <section>

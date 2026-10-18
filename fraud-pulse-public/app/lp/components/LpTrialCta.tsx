@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import { TrackedAnchor } from '../../components/TrackedCta';
-import { trackMetaEvent } from '../../lib/metaPixel';
 
 const SIGNUP_URL = 'https://app.fraud-pulse.com/signup';
 
@@ -34,7 +33,6 @@ export function LpTrialCta({ children, className }: LpTrialCtaProps) {
       href={href}
       className={className}
       style={ctaStyle}
-      onClick={() => trackMetaEvent('Lead', { content_name: 'free_trial' })}
     >
       {children}
     </TrackedAnchor>

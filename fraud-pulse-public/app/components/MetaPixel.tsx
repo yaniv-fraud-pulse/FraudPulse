@@ -3,7 +3,7 @@
 import Script from 'next/script';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef } from 'react';
-import { META_PIXEL_ID, isMetaPixelEnabled, trackMetaEvent } from '../../lib/metaPixel';
+import { META_PIXEL_ID, isMetaPixelEnabled, trackMetaEvent } from '../lib/metaPixel';
 
 export default function MetaPixel() {
   const pathname = usePathname();

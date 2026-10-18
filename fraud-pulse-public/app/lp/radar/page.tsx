@@ -6,7 +6,6 @@ import { Reveal } from '../../components/Reveal';
 import FaqAccordion from '../../components/FaqAccordion';
 import { captureEvent } from '../../components/PostHogProvider';
 import { CALENDLY_DEMO_URL } from '../../lib/posthog';
-import { trackMetaEvent } from '../../lib/metaPixel';
 import type { FaqItem } from '../../lib/homeFaq';
 import { Eyebrow, HeroBackdrop } from '../../components/Brand';
 
@@ -47,7 +46,6 @@ function trackDemo() {
     page: PAGE_PATH,
     destination: CALENDLY_DEMO_URL,
   });
-  trackMetaEvent('Schedule', { content_name: 'book_demo' });
 }
 
 export default function RadarFacebookLanding() {

@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import { useState } from 'react';
 import { Reveal } from '../components/Reveal';
 import { Eyebrow, FrostedBox, HeroBackdrop } from '../components/Brand';
+import { trackMetaEvent } from '../lib/metaPixel';
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const API_ENDPOINT = 'https://fraudpulse-api-961740448824.us-central1.run.app/api/v1/contact/demo';
@@ -32,6 +33,7 @@ export default function Contact() {
         body: JSON.stringify(form),
       });
       if (!res.ok) throw new Error('Failed');
+      trackMetaEvent('Contact', { content_name: 'enquiry' });
       setResult('success');
       setForm({ name: '', email: '', company_website: '', enquiry: '' });
       setEmailError('');
