@@ -74,9 +74,33 @@
   </url>
   <url>
     <loc>https://www.fraud-pulse.com/blog/</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.fraud-pulse.com/blog/anthropic-ai-shopping-agents-visa-mastercard-trust-layer/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.fraud-pulse.com/blog/fraud-model-testing-is-not-production-performance/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.fraud-pulse.com/blog/vamp-visibility-problem-not-awareness/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.fraud-pulse.com/blog/friendly-fraud-rarely-looks-like-the-viral-video/</loc>
+    <lastmod>2026-10-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
   </url>
   <url>
     <loc>https://www.fraud-pulse.com/blog/declining-more-transactions-loses-good-customers/</loc>
@@ -351,7 +375,7 @@
   </url>
   <url>
     <loc>https://www.fraud-pulse.com/llms.txt</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

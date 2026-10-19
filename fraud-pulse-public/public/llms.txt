@@ -50,8 +50,12 @@
 - Do I need to replace my fraud prevention tools? No - FraudPulse works alongside them; no migration required.
 - Full FAQ: https://www.fraud-pulse.com/faq/
 
-## All blog guides (36)
+## All blog guides (40)
 
+- Anthropic's AI Shopping Agents Add a New Trust Layer on Payments: https://www.fraud-pulse.com/blog/anthropic-ai-shopping-agents-visa-mastercard-trust-layer/
+- Good Test Metrics Do Not Mean a Fraud Model Will Work in Production: https://www.fraud-pulse.com/blog/fraud-model-testing-is-not-production-performance/
+- Nearly 1 in 3 Merchants Do Not Know If Visa's Tighter VAMP Threshold Affects Them: https://www.fraud-pulse.com/blog/vamp-visibility-problem-not-awareness/
+- Friendly Fraud Rarely Looks Like Someone Disputing a Purchase Outside the Store: https://www.fraud-pulse.com/blog/friendly-fraud-rarely-looks-like-the-viral-video/
 - Declining More Transactions Reduces Fraud - and Loses Good Customers: https://www.fraud-pulse.com/blog/declining-more-transactions-loses-good-customers/
 - If Checkout Pages Go Away, Fraud Systems Have to Change What They Ask: https://www.fraud-pulse.com/blog/agentic-commerce-and-the-end-of-checkout-pages/
 - One of the Biggest Mistakes in Fraud Prevention Is Assuming Every Decline Is a Win: https://www.fraud-pulse.com/blog/every-decline-is-not-a-win/

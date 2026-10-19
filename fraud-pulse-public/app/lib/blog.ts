@@ -22,6 +22,247 @@ export type BlogPost = {
 
 export const posts: BlogPost[] = [
   {
+    slug: 'anthropic-ai-shopping-agents-visa-mastercard-trust-layer',
+    title:
+      'Anthropic\'s AI Shopping Agents Add a New Trust Layer on Payments',
+    excerpt:
+      'Anthropic launched a retailer blueprint for Claude shopping and merchant agents, with Visa and Mastercard support. The AI can build the basket; payment still sits on the merchant\'s checkout - until that last step changes.',
+    category: 'News',
+    date: 'October 19, 2026',
+    readTime: '5 min read',
+    author: 'Idan Hayon',
+    authorRole: 'Co-Founder & CEO',
+    content: `
+<p class="ai-answer">Anthropic has launched a blueprint for retailers to build AI shopping and merchant agents with Claude, with support from Visa and Mastercard. For now the agent can search, recommend, and build the basket, but the final payment still goes through the merchant's existing checkout. When an AI can transact on someone's behalf, fraud questions go beyond "is this person authorised to use this card" to whether the agent, the mandate, and the purchase are authorised too.</p>
+
+<p>Anthropic has launched AI shopping agents with support from Visa and Mastercard. They launched a blueprint for retailers to build AI-powered shopping and merchant agents using Claude. This is one of the biggest developments in agentic commerce.</p>
+
+<p>The shopping agent can search a retailer's catalogue, remember customer preferences, answer questions, recommend products, and build the customer's basket.</p>
+
+<p>There's an important distinction. For now, the AI can take the customer right up to the point of payment, but the final transaction still happens through the merchant's existing checkout or payment provider.</p>
+
+<p>From a fraud perspective, I think what happens when that final step changes is where things get particularly interesting. Once an AI agent can transact on someone's behalf, determining whether a transaction is legitimate becomes more complicated.</p>
+
+<p>Today, we're largely trying to establish whether the person making a payment is who they claim to be and whether they're authorised to use that payment method. With agentic commerce, another layer gets introduced. Now we potentially need to establish:</p>
+
+<ul>
+  <li>Is this a legitimate AI agent?</li>
+  <li>Has the customer authorised this agent to transact?</li>
+  <li>Does this specific purchase fall within that authorisation?</li>
+  <li>Are the payment credentials being presented securely?</li>
+  <li>What happens if that authority is revoked?</li>
+  <li>Who is responsible if the agent makes the wrong purchase?</li>
+</ul>
+
+<p>This is why I think Visa and Mastercard's involvement is particularly significant. AI might increasingly control the interface where products are discovered, compared, and selected, but payments infrastructure will still need to determine whether the resulting transaction is authorised, secure, and accountable.</p>
+
+<p>Agentic commerce is adding an entirely new trust layer on the existing payments stack. As AI moves from recommending what we buy to buying it for us, that trust layer is going to become increasingly important.</p>
+
+<p>Related: <a href="/blog/agentic-commerce-and-the-end-of-checkout-pages/">if checkout pages go away, fraud systems have to change what they ask</a>, <a href="/how-it-works/">how it works</a>, and the <a href="/faq/">FAQ</a>.</p>
+
+<p>If you want ranked rule changes on the stack you already run - Stripe Radar, Shopify Flow, Blockify, or Adyen RevenueProtect - <a href="/book-a-demo/">book a demo</a>.</p>
+
+<p><em>Originally shared on <a href="https://www.linkedin.com/feed/update/urn:li:activity:7517820135689134080/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</em></p>
+    `.trim(),
+    faqs: [
+      {
+        q: 'What did Anthropic launch for AI shopping agents?',
+        a: 'A blueprint for retailers to build AI-powered shopping and merchant agents using Claude, with support from Visa and Mastercard. The agent can search a catalogue, remember preferences, answer questions, recommend products, and build the basket. It is one of the bigger moves in agentic commerce so far.',
+      },
+      {
+        q: 'Can the Anthropic shopping agent complete the payment today?',
+        a: 'Not as described. For now the AI can take the customer up to the point of payment, but the final transaction still happens through the merchant\'s existing checkout or payment provider. The fraud picture gets harder if that last step also moves onto the agent.',
+      },
+      {
+        q: 'What new fraud questions does agentic commerce add?',
+        a: 'Today we mainly ask whether the person is who they claim to be and whether they may use that payment method. With an agent, you also need to ask whether the agent is legitimate, whether the customer authorised it to transact, whether this purchase sits inside that authority, whether credentials are presented securely, what happens if authority is revoked, and who is responsible if the agent buys the wrong thing. Visa and Mastercard still have to decide whether the resulting payment is authorised, secure, and accountable.',
+      },
+    ],
+  },
+  {
+    slug: 'fraud-model-testing-is-not-production-performance',
+    title:
+      'Good Test Metrics Do Not Mean a Fraud Model Will Work in Production',
+    excerpt:
+      'A fraud model can look strong on precision and recall before launch and still cause problems on live traffic. Production is a changing business, delayed labels, and operational trade-offs - not a test set.',
+    category: 'Education',
+    date: 'October 14, 2026',
+    readTime: '5 min read',
+    author: 'Idan Hayon',
+    authorRole: 'Co-Founder & CEO',
+    content: `
+<p class="ai-answer">One of the biggest mistakes with fraud models is assuming that good performance during testing means good performance in production. Strong precision and recall before launch can still create problems on live transactions, because the model no longer sits in the environment it was trained in. Customer behaviour, markets, products, fraudsters, and delayed labels all change. Watch what the decisions do operationally - not only the model metrics.</p>
+
+<p>One of the biggest mistakes with fraud models is assuming that good performance during testing means good performance in production.</p>
+
+<p>A model can have strong precision, recall, and other performance metrics before launch and still create problems once it starts making decisions on real transactions.</p>
+
+<p>The reason is that a fraud model doesn't operate in the controlled environment it was trained and tested in. It operates inside a constantly changing business. Customer behaviour changes, new markets launch, transaction values shift, new products get introduced, fraudsters adapt, and the labels being fed back into the model can be delayed, incomplete, or inconsistent.</p>
+
+<p>Suddenly, a model that looked very good six months ago is operating in a very different environment, and the signs don't always appear as an obvious increase in fraud. They might look like:</p>
+
+<ul>
+  <li>Legitimate customers being blocked more often</li>
+  <li>Analysts overriding more model decisions</li>
+  <li>Manual review queues getting larger</li>
+  <li>New fraud patterns slipping through</li>
+  <li>Performance deteriorating in a particular market, channel, or customer segment</li>
+  <li>Alerts increasing without a corresponding increase in confirmed fraud</li>
+</ul>
+
+<p>This is why I don't think fraud teams should evaluate models purely through model metrics. You also need to understand what those decisions are doing operationally.</p>
+
+<p>If fraud capture improves but false positives increase significantly, that's a trade-off. If the model generates more alerts but analysts have to manually dismiss most of them, that's a trade-off. If aggregate performance looks stable but one customer segment is deteriorating, the headline metric can hide the problem entirely.</p>
+
+<h2>The feedback loop is delayed and imperfect</h2>
+
+<p>Then there's the feedback loop. Fraud labels can arrive weeks after the original transaction. Different teams may classify cases differently, smaller fraud cases may never be labelled at all, and the model then learns from an imperfect version of what happened.</p>
+
+<p>A good fraud model is the one that continues to make useful decisions as the environment around it changes. That's why production monitoring is part of model development.</p>
+
+<p>Related: <a href="/blog/hidden-cost-of-false-positives-in-fraud-systems/">the hidden cost of false positives</a>, <a href="/blog/how-to-reduce-false-declines-in-stripe/">how to reduce false declines in Stripe</a>, <a href="/how-it-works/">how it works</a>, and the <a href="/faq/">FAQ</a>.</p>
+
+<p>If you want ranked rule changes from what is actually happening on your transactions - not a model score in isolation - <a href="/book-a-demo/">book a demo</a>.</p>
+
+<p><em>Originally shared on <a href="https://www.linkedin.com/feed/update/urn:li:activity:7516007550199169024/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</em></p>
+    `.trim(),
+    faqs: [
+      {
+        q: 'Why can a fraud model look good in testing and still fail in production?',
+        a: 'Testing is a controlled snapshot. Production is a changing business: customer behaviour, new markets, product mix, transaction values, and adaptive fraudsters. Labels that come back into the model can be delayed, incomplete, or inconsistent. A model that looked strong six months ago can be deciding in a different environment without an obvious spike in fraud.',
+      },
+      {
+        q: 'What operational signs show a fraud model is degrading?',
+        a: 'It may not show up as more fraud. Watch for more legitimate customers blocked, more analyst overrides, larger manual review queues, new patterns slipping through, worse performance in one market or segment, and more alerts without more confirmed fraud. Headline metrics can stay stable while one cohort deteriorates.',
+      },
+      {
+        q: 'Should fraud teams judge models only on precision and recall?',
+        a: 'No. You also need to see what the decisions do operationally. Better fraud capture with a large rise in false positives is a trade-off. More alerts that analysts dismiss is a trade-off. Production monitoring is part of model development, because a useful model is one that keeps making useful decisions as the environment changes.',
+      },
+    ],
+  },
+  {
+    slug: 'vamp-visibility-problem-not-awareness',
+    title:
+      'Nearly 1 in 3 Merchants Do Not Know If Visa\'s Tighter VAMP Threshold Affects Them',
+    excerpt:
+      'Visa cut the excessive merchant threshold from 2.20% to 1.50%. Among 250 merchants surveyed, nearly one in three could not say whether that change affects them. The gap is visibility, not just awareness.',
+    category: 'News',
+    date: 'October 12, 2026',
+    readTime: '5 min read',
+    author: 'Idan Hayon',
+    authorRole: 'Co-Founder & CEO',
+    content: `
+<p class="ai-answer">Visa reduced the VAMP excessive merchant threshold from 2.20% to 1.50% - a 32% cut. Yet nearly 1 in 3 of 250 merchants surveyed do not know whether that change is affecting their business, and only 26.8% said they actively monitor the TC40 fraud records that feed the ratio. You cannot manage a threshold if you do not know how close you are to it. That is a visibility problem.</p>
+
+<p>One of the biggest VAMP-related changes this year was a 32% reduction in Visa's excessive merchant threshold. Yet nearly 1 in 3 merchants don't know whether the changes are affecting their business.</p>
+
+<p>More than half of the 250 merchants said they had little to no knowledge of card network rules overall, while only 26.8% said they actively monitored the TC40 fraud records that feed into their VAMP chargeback ratio.</p>
+
+<p>This might sound like an awareness problem, but I think it's a visibility problem. You can't manage a threshold if you don't know how close you are to it.</p>
+
+<p>Earlier this year, Visa reduced the VAMP excessive merchant threshold from 2.20% to 1.50%. That already reduced the margin for error, but a smaller margin for error becomes much more dangerous when merchants don't know how much margin they have left.</p>
+
+<p>A merchant might feel perfectly comfortable today. Until fraud increases, a fulfilment issue creates more disputes, or a peak trading period introduces a very different transaction profile. Suddenly the ratio moves and the merchant only becomes aware of the problem once somebody else flags it.</p>
+
+<p>Historically, some merchants have relied on their acquirer, processor or fraud provider to surface these issues. There may well be monitoring happening elsewhere in the payment chain. But I don't think that replaces having visibility yourself.</p>
+
+<h2>What merchants need to see</h2>
+
+<p>To me, the biggest takeaway from this research is that merchants need to understand:</p>
+
+<ul>
+  <li>Where their VAMP ratio currently sits</li>
+  <li>How that ratio is trending over time</li>
+  <li>Where fraud and disputes are originating</li>
+  <li>Which products, markets or customer segments are driving changes</li>
+  <li>How much room exists before the threshold becomes a problem</li>
+  <li>What they'll do if performance starts deteriorating</li>
+</ul>
+
+<p>The VAMP threshold getting tighter was one problem. Not knowing how close you are to it may be an even bigger one.</p>
+
+<p>Related: <a href="/blog/visa-vamp-threshold-reduction-2026/">Visa's VAMP threshold reduction</a>, <a href="/blog/stripe-dispute-rate-too-high/">what to do if Stripe warns your dispute rate is too high</a>, <a href="/how-it-works/">how it works</a>, and the <a href="/faq/">FAQ</a>.</p>
+
+<p>If you want a clearer picture of where disputes and fraud are originating on your data, <a href="/book-a-demo/">book a demo</a>.</p>
+
+<p><em>Originally shared on <a href="https://www.linkedin.com/feed/update/urn:li:activity:7515282852888961024/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</em></p>
+    `.trim(),
+    faqs: [
+      {
+        q: 'What is the Visa VAMP excessive merchant threshold now?',
+        a: 'Visa reduced it from 2.20% to 1.50% - a 32% cut - which shrinks the margin for error. Fraud did not have to jump by the same amount for merchants to sit closer to elevated-risk territory. Our earlier post covers the threshold change itself; this one is about whether you can see your own ratio.',
+      },
+      {
+        q: 'Why do so few merchants know if the VAMP change affects them?',
+        a: 'In a survey of 250 merchants, nearly 1 in 3 could not say whether the changes affect their business. More than half had little to no knowledge of card network rules, and only 26.8% said they actively monitor the TC40 fraud records that feed the VAMP ratio. That is visibility, not only awareness: you cannot manage a threshold you cannot see.',
+      },
+      {
+        q: 'What should I monitor so VAMP does not surprise me?',
+        a: 'Know where the ratio sits, how it is trending, where fraud and disputes originate, which products, markets, or segments drive changes, how much room you have before the threshold, and what you will do if performance deteriorates. Relying only on an acquirer or processor to flag it is not the same as seeing it yourself.',
+      },
+    ],
+  },
+  {
+    slug: 'friendly-fraud-rarely-looks-like-the-viral-video',
+    title: 'Friendly Fraud Rarely Looks Like Someone Disputing a Purchase Outside the Store',
+    excerpt:
+      'A viral video of a shopper disputing a purchase while still outside the store is an extreme version of first-party misuse. Most friendly fraud looks like a clean order - until the dispute arrives weeks later.',
+    category: 'Education',
+    date: 'October 11, 2026',
+    readTime: '5 min read',
+    author: 'Idan Hayon',
+    authorRole: 'Co-Founder & CEO',
+    content: `
+<p class="ai-answer">A circulating video of a shopper calling to dispute a purchase while still sitting outside the store is an extreme version of a problem merchants see every day: friendly fraud, or first-party misuse. Most cases are not filmed. The order looks legitimate, the payment is authorised, the goods go out - then weeks later the cardholder claims they do not recognise it. Traditional fraud tools ask whether to allow the payment. This problem shows up afterwards.</p>
+
+<p>A video has been circulating of a man sitting outside Louis Vuitton, apparently calling his credit card company to dispute the $4,000 purchase he'd just made. He's still sitting outside the store, claiming he didn't make the transaction.</p>
+
+<p>I'll admit, the video is pretty funny, but the problem is what we should be talking about. The video appears to show an extreme version of a problem merchants deal with all the time. A customer makes a legitimate purchase and later disputes the transaction as if they didn't. In the industry, you'll often hear this described as friendly fraud or first-party misuse.</p>
+
+<p>Most cases aren't anywhere near as obvious as someone filming themselves outside the store. A merchant might see a perfectly legitimate-looking order. The payment is authorised, the product is delivered, and nothing particularly unusual happens during the transaction. Then weeks later, the dispute arrives.</p>
+
+<p>The customer might claim they don't recognise the transaction, never received the product, cancelled the subscription, or weren't responsible for the purchase. Now the merchant has to work backwards to prove what happened.</p>
+
+<h2>The question is different from stolen-card fraud</h2>
+
+<p>That's what makes this type of fraud particularly difficult. Traditional fraud prevention is largely trying to answer a question before the transaction - should we allow this payment? But with first-party misuse, the person making the purchase may be the legitimate cardholder. The problem appears afterwards.</p>
+
+<p>That means merchants need to think beyond simply detecting stolen cards or suspicious transactions and ask:</p>
+
+<ul>
+  <li>Can we clearly prove the customer made the purchase?</li>
+  <li>Do we have strong delivery and fulfilment evidence?</li>
+  <li>Are our billing descriptors recognisable?</li>
+  <li>Are refund and cancellation processes clear?</li>
+  <li>Can we distinguish genuine customer disputes from deliberate misuse?</li>
+  <li>Are there customers repeatedly exhibiting the same behaviour?</li>
+</ul>
+
+<p>The guy sitting outside Louis Vuitton apparently disputing the purchase he just made makes for a funny video, but remove the camera, the Louis Vuitton bag, and the absurd timing, and you have a problem merchants deal with every day. Usually, it's nowhere near this easy to spot.</p>
+
+<p>Related: <a href="/blog/why-30-90-percent-of-fraud-is-friendly-fraud/">why so much fraud is classified as friendly fraud</a>, <a href="/how-it-works/">how it works</a>, <a href="/pricing/">pricing</a>, and the <a href="/faq/">FAQ</a>.</p>
+
+<p>If you want chargebacks classified by type - including friendly fraud versus stolen-card patterns - and ranked rule changes in Radar, Flow, Blockify, or RevenueProtect, <a href="/book-a-demo/">book a demo</a>.</p>
+
+<p><em>Originally shared on <a href="https://www.linkedin.com/feed/update/urn:li:activity:7513847221906198528/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</em></p>
+    `.trim(),
+    faqs: [
+      {
+        q: 'What is friendly fraud or first-party misuse?',
+        a: 'A legitimate cardholder makes a purchase, then later disputes it as if they did not - claiming they do not recognise the charge, never received the product, cancelled a subscription, or were not responsible. The order often looked clean at checkout. That is different from a stolen card used by someone else.',
+      },
+      {
+        q: 'Why is first-party misuse harder to catch than stolen-card fraud?',
+        a: 'Traditional fraud prevention asks whether to allow the payment before it goes through. With first-party misuse, the person at checkout may be the real cardholder, so there is nothing obviously suspicious to block. The problem arrives weeks later, and the merchant has to prove what already happened.',
+      },
+      {
+        q: 'What should merchants do beyond blocking suspicious transactions?',
+        a: 'Ask whether you can prove the customer made the purchase, whether delivery evidence is strong, whether billing descriptors are recognisable, whether refund and cancellation are clear, whether you can tell genuine disputes from deliberate misuse, and whether the same customers repeat the pattern. FraudPulse classifies chargebacks by type and ranks Radar, Flow, Blockify, or RevenueProtect changes so fewer of those disputes keep happening - it does not submit representment packets.',
+      },
+    ],
+  },
+  {
     slug: 'declining-more-transactions-loses-good-customers',
     title: 'Declining More Transactions Reduces Fraud - and Loses Good Customers',
     excerpt:
@@ -699,6 +940,8 @@ export const posts: BlogPost[] = [
 <p>Related reading: <a href="/blog/stripe-radar-blocking-legitimate-customers/">when Radar blocks legitimate customers</a>, <a href="/blog/hidden-cost-of-false-positives-in-fraud-systems/">the hidden cost of false positives</a>, <a href="/how-it-works/">how it works</a>, <a href="/pricing/">pricing</a>, and the <a href="/faq/">FAQ</a>.</p>
 
 <p>If you want help measuring which Radar acts drive false declines on your data, <a href="/book-a-demo/">book a demo</a>.</p>
+
+<p><em>Originally shared on <a href="https://www.linkedin.com/feed/update/urn:li:activity:7513108386259836928/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</em></p>
     `.trim(),
     faqs: [
       {
@@ -894,6 +1137,8 @@ ${toolComparisonTableHtml()}
 <p>For review-specific guidance, see <a href="/blog/stripe-account-review-after-chargebacks/">how to pass a Stripe account review after chargebacks</a>. Also read <a href="/how-it-works/">how it works</a>, <a href="/pricing/">pricing</a>, and the <a href="/faq/">FAQ</a>.</p>
 
 <p>If you want help classifying what's driving disputes on your data, <a href="/book-a-demo/">book a demo</a>.</p>
+
+<p><em>Originally shared on <a href="https://www.linkedin.com/feed/update/urn:li:activity:7511659742457696256/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</em></p>
     `.trim(),
     faqs: [
       {
