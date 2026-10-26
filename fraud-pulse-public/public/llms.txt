@@ -50,8 +50,10 @@
 - Do I need to replace my fraud prevention tools? No - FraudPulse works alongside them; no migration required.
 - Full FAQ: https://www.fraud-pulse.com/faq/
 
-## All blog guides (40)
+## All blog guides (42)
 
+- Most Shopify and Stripe Merchants Already Have Fraud Protection. So Why Do Chargebacks Still Increase?: https://www.fraud-pulse.com/blog/why-chargebacks-still-rise-with-shopify-and-stripe-radar/
+- The Best Place to Optimise Stripe Radar Is Your Chargebacks: https://www.fraud-pulse.com/blog/use-chargebacks-to-optimise-stripe-radar/
 - Anthropic's AI Shopping Agents Add a New Trust Layer on Payments: https://www.fraud-pulse.com/blog/anthropic-ai-shopping-agents-visa-mastercard-trust-layer/
 - Good Test Metrics Do Not Mean a Fraud Model Will Work in Production: https://www.fraud-pulse.com/blog/fraud-model-testing-is-not-production-performance/
 - Nearly 1 in 3 Merchants Do Not Know If Visa's Tighter VAMP Threshold Affects Them: https://www.fraud-pulse.com/blog/vamp-visibility-problem-not-awareness/

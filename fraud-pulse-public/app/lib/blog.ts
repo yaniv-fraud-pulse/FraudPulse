@@ -22,6 +22,128 @@ export type BlogPost = {
 
 export const posts: BlogPost[] = [
   {
+    slug: 'why-chargebacks-still-rise-with-shopify-and-stripe-radar',
+    title: 'Most Shopify and Stripe Merchants Already Have Fraud Protection. So Why Do Chargebacks Still Increase?',
+    excerpt:
+      'Shopify Flow, Blockify, and Stripe Radar answer whether to approve a payment. After thousands of those decisions, merchants need different answers: which patterns got through, which acts block good customers, and what to change.',
+    category: 'Education',
+    date: 'October 23, 2026',
+    readTime: '5 min read',
+    author: 'Idan Hayon',
+    authorRole: 'Co-Founder & CEO',
+    content: `
+<p class="ai-answer">Most Shopify and Stripe merchants already have fraud protection. Tools like Shopify Flow, Blockify, and Stripe Radar are built to answer whether to approve a transaction - and they do that well. Chargebacks still rise because the next questions are about optimisation: which patterns got through, which acts block good customers, and what happens if you tighten a setting. FraudPulse (<a href="https://www.fraud-pulse.com/" class="font-semibold text-[#4a96a3] hover:underline">fraud-pulse.com</a>) ranks which of those acts to change. It does not replace them.</p>
+
+<p>Most Shopify and Stripe merchants already have fraud protection. So why do chargebacks still increase?</p>
+
+<p>Tools like Shopify Flow, Blockify, and Stripe Radar are designed to answer: should I approve this transaction? They do that extremely well. But after thousands of those decisions have been made, merchants are left asking completely different questions.</p>
+
+<ul>
+  <li>Why did chargebacks increase last month?</li>
+  <li>Which fraud patterns are getting through?</li>
+  <li>Which acts are blocking legitimate customers?</li>
+  <li>Which settings should I change?</li>
+  <li>What happens if I tighten this act?</li>
+  <li>Will I reduce fraud, or simply create more false positives?</li>
+</ul>
+
+<p>Those questions are around optimisation. That's the problem we built FraudPulse to solve.</p>
+
+<p>It won't replace Shopify Flow, Blockify, or Stripe Radar. FraudPulse works alongside them. It analyzes your transactions, chargebacks, and customer behaviour, then tells you which fraud acts are worth changing. For example: this act could capture more fraud with almost no increase in false positives, or this act is protecting you, but it's also declining too many legitimate customers.</p>
+
+<p>The goal with FraudPulse is to give merchants clear, prioritised actions they can implement directly inside the tools they already use.</p>
+
+<p>If you're running Shopify Flow, Blockify, or Stripe Radar and want to know what they're missing, <a href="/book-a-demo/">book a demo</a>.</p>
+
+<p>Related: <a href="/blog/fraudpulse-does-not-replace-stripe-radar-shopify-flow/">FraudPulse does not replace Radar, Flow, Blockify, or RevenueProtect</a>, <a href="/blog/optimize-stripe-radar-rules/">best tools to optimize Stripe Radar rules</a>, <a href="/how-it-works/">how it works</a>, and the <a href="/faq/">FAQ</a>.</p>
+
+<p><em>Originally shared on <a href="https://www.linkedin.com/feed/update/urn:li:activity:7519270254246785024/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</em></p>
+    `.trim(),
+    faqs: [
+      {
+        q: 'Why do chargebacks still increase if I already use Shopify Flow, Blockify, or Stripe Radar?',
+        a: 'Those tools decide whether to approve a payment, and they do that well. After thousands of decisions, the open questions are different: which patterns got through, which acts block good customers, and what a tighter setting would do to false positives. That is optimisation, not a missing checkout blocker.',
+      },
+      {
+        q: 'Does FraudPulse replace Shopify Flow, Blockify, or Stripe Radar?',
+        a: 'No. It works alongside them. FraudPulse analyzes transactions, chargebacks, and behaviour, then ranks which fraud acts are worth changing so you implement the change in the console you already run. It does not take over checkout.',
+      },
+      {
+        q: 'What kind of recommendation does FraudPulse give?',
+        a: 'Clear, prioritised actions for the tools you already use - for example that an act could capture more fraud with little extra false-positive cost, or that an act is protecting you but declining too many legitimate customers. You apply the change in Flow, Blockify, or Radar yourself.',
+      },
+    ],
+  },
+  {
+    slug: 'use-chargebacks-to-optimise-stripe-radar',
+    title: 'The Best Place to Optimise Stripe Radar Is Your Chargebacks',
+    excerpt:
+      'Chargebacks are not only lost revenue. Together they show where Radar failed and which patterns it is not accounting for. Classify the types, then evaluate every new action on fraud caught and good customers blocked.',
+    category: 'Education',
+    date: 'October 21, 2026',
+    readTime: '5 min read',
+    author: 'Idan Hayon',
+    authorRole: 'Co-Founder & CEO',
+    content: `
+<p class="ai-answer">One of the best places to look when optimising Stripe Radar is the place merchants least want to look: chargebacks. They are the end result of fraud, but they are also feedback - where existing controls failed, and which patterns the current setup is missing. Do not treat every chargeback as the same problem. Card testing, stolen-card fraud, and friendly fraud should not automatically get the same Radar action.</p>
+
+<p>One of the best places to look when optimising your Stripe Radar setup is probably the place you least want to look: your chargebacks.</p>
+
+<p>Most merchants understandably see chargebacks as the end result of fraud. A transaction got through, it became a dispute, revenue was lost. But chargebacks are also feedback. They show you where your existing fraud controls failed and, when you look at enough of them together, can reveal patterns your current setup isn't accounting for.</p>
+
+<p>The important part is not treating every chargeback as the same problem.</p>
+
+<ul>
+  <li>A spike in card testing might show repeated attempts across different cards from the same IP or device.</li>
+  <li>Stolen-card fraud might cluster around particular order values, customer profiles, geographies, or fulfilment patterns.</li>
+  <li>Friendly fraud can look completely legitimate at the point of purchase and require a very different response again.</li>
+</ul>
+
+<p>These shouldn't necessarily lead to the same Stripe Radar action, and this is where I think merchants can get into trouble with generic fraud advice. An action that works brilliantly for one business could create unnecessary false positives for another. A SaaS business, a marketplace, and an ecommerce merchant selling high-value electronics have completely different definitions of unusual customer behaviour.</p>
+
+<p>Your own chargebacks give you evidence of what your fraud looks like. So before adding another Radar action, I'd be asking:</p>
+
+<ul>
+  <li>What types of chargebacks are we seeing?</li>
+  <li>What do those transactions have in common?</li>
+  <li>Which signals could have identified them earlier?</li>
+  <li>Does an existing action already account for those signals?</li>
+  <li>What legitimate transactions also share those characteristics?</li>
+</ul>
+
+<p>Identifying a fraud pattern is only half the job. You could build an action that catches considerably more of it, but if that same action blocks a large number of legitimate customers, you've created a different problem.</p>
+
+<p>That's why every change needs to be evaluated against both sides:</p>
+
+<ol>
+  <li>How much additional fraud could this catch?</li>
+  <li>How many legitimate customers could it affect?</li>
+</ol>
+
+<p>Then monitor what happens and continue adjusting as the patterns change. Your chargebacks should help you decide how your fraud strategy needs to change tomorrow.</p>
+
+<p>Related: <a href="/blog/optimize-stripe-radar-rules/">best tools to optimize Stripe Radar rules</a>, <a href="/blog/how-to-reduce-false-declines-in-stripe/">how to reduce false declines in Stripe</a>, <a href="/how-it-works/">how it works</a>, and the <a href="/faq/">FAQ</a>.</p>
+
+<p>If you want chargebacks classified by type and ranked Radar changes with estimated fraud-capture and false-positive impact, <a href="/book-a-demo/">book a demo</a>.</p>
+
+<p><em>Originally shared on <a href="https://www.linkedin.com/feed/update/urn:li:activity:7518544889924440064/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</em></p>
+    `.trim(),
+    faqs: [
+      {
+        q: 'Why look at chargebacks when optimising Stripe Radar?',
+        a: 'Chargebacks are lost revenue, but together they are also feedback: where existing controls failed and which patterns the current setup is not accounting for. Before adding another Radar action, use that evidence to see what your fraud actually looks like.',
+      },
+      {
+        q: 'Should every chargeback type get the same Radar action?',
+        a: 'No. Card testing, stolen-card fraud, and friendly fraud show up differently and need different responses. Generic advice fails here: an action that works for one business can create unnecessary false positives for another. A SaaS company, a marketplace, and a high-value electronics shop do not share the same definition of unusual behaviour.',
+      },
+      {
+        q: 'What should I ask before adding a new Stripe Radar action?',
+        a: 'What chargeback types you are seeing, what those transactions have in common, which signals could have caught them earlier, whether an existing action already covers those signals, and which legitimate orders share the same traits. Then score the change on extra fraud caught versus good customers affected, and keep adjusting as patterns change.',
+      },
+    ],
+  },
+  {
     slug: 'anthropic-ai-shopping-agents-visa-mastercard-trust-layer',
     title:
       'Anthropic\'s AI Shopping Agents Add a New Trust Layer on Payments',
