@@ -21,6 +21,7 @@ import {
 import { articleJsonLd, faqPageJsonLd, softwareApplicationJsonLd } from '../lib/geo';
 import { howItWorksFaqs } from '../lib/pageFaqs';
 import { FAQ_PREVENTION_VS_REPRESENTMENT, FAQ_REPLACE_STACK, pickSiteFaqs } from '../lib/siteFaqs';
+import ProductVideo, { RULES_VIDEO_ID, RULES_VIDEO_TITLE } from '../components/ProductVideo';
 
 const faqs = [
   ...pickSiteFaqs([FAQ_REPLACE_STACK]),
@@ -111,26 +112,21 @@ export default function HowItWorks() {
 
         <section className="py-12 sm:py-20 px-5 sm:px-10 bg-white">
           <div className="max-w-5xl mx-auto">
-            <Reveal animation="anim-fadeUp" delay={150} className="text-center mb-8">
+            <Reveal animation="anim-fadeUp" delay={150} className="text-center mb-8 sm:mb-10">
               <Eyebrow>Watch it run</Eyebrow>
-              <p className="text-[1.25rem] sm:text-[1.5rem] leading-[1.75] max-w-[680px] mx-auto text-gray-500">
-                Watch how FraudPulse connects to your payment data, runs AI analysis, and delivers ready-to-implement fraud rules in minutes.
+              <h2 className="font-extrabold text-gray-900 tracking-[-0.035em] text-[1.75rem] sm:text-[2.5rem] leading-[1.12] mb-4 text-balance">
+                From payment data to ranked rules, on screen.
+              </h2>
+              <p className="text-[1.0625rem] sm:text-[1.25rem] leading-[1.7] max-w-[680px] mx-auto text-gray-500">
+                Watch how FraudPulse connects to your payment data, runs AI analysis, and delivers ready-to-implement fraud rules.
               </p>
             </Reveal>
-            <Reveal animation="anim-scaleIn" delay={0}>
-              <div
-                className="w-full rounded-[28px] overflow-hidden border border-gray-200/80 shadow-[0_30px_80px_-40px_rgba(17,24,39,0.45)]"
-                style={{ aspectRatio: '16 / 9' }}
-              >
-                <iframe
-                  src="https://www.youtube-nocookie.com/embed/7R01645JR1I?si=Ka8mJ3Q1LI0SGj54&autoplay=1&mute=1&playsinline=1&rel=0&modestbranding=1&iv_load_policy=3&cc_load_policy=0&controls=1"
-                  title="How FraudPulse Works"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                  className="w-full h-full border-0"
-                />
-              </div>
+            <Reveal animation="anim-scaleIn" delay={150}>
+              <ProductVideo
+                page="/how-it-works/"
+                videoId={RULES_VIDEO_ID}
+                title={RULES_VIDEO_TITLE}
+              />
             </Reveal>
           </div>
         </section>

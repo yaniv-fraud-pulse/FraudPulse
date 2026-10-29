@@ -12,7 +12,7 @@ export const ORGANIZATION_SAME_AS = [
   'https://x.com/FraudPulse',
   'https://www.producthunt.com/products/fraudpulse',
   'https://www.linkedin.com/company/fraudpulse-fraud-analytics',
-  'https://www.facebook.com/people/FraudPulse/61594130112237/',
+  'https://www.facebook.com/people/FraudPulse/61595549870990/',
   'https://www.g2.com/products/fraud-pulse/reviews',
   // add AlternativeTo to sameAs when https://alternativeto.net/software/fraudpulse/ returns 200
 ] as const;
@@ -48,7 +48,7 @@ export const FOOTER_SOCIALS = [
   },
   {
     name: 'Facebook',
-    href: 'https://www.facebook.com/people/FraudPulse/61594130112237/',
+    href: 'https://www.facebook.com/people/FraudPulse/61595549870990/',
   },
   {
     name: 'X',

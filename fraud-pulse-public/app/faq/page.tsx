@@ -11,6 +11,7 @@ import ComparisonTable from '../components/ComparisonTable';
 import { Eyebrow, FrostedBox, HeroBackdrop, PageCta, SoftWash } from '../components/Brand';
 import { ANALYST_VS_SCREENING_TABLE, articleJsonLd, faqPageJsonLd, softwareApplicationJsonLd } from '../lib/geo';
 import { siteFaqs } from '../lib/siteFaqs';
+import PhoneShortsVideo from '../components/PhoneShortsVideo';
 
 export default function FaqPage() {
   return (
@@ -32,6 +33,23 @@ export default function FaqPage() {
             <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.7] max-w-[720px] mx-auto text-balance text-gray-500 anim-fadeUp delay-300">
               How FraudPulse works alongside Stripe Radar, Shopify Flow, Blockify, and Adyen RevenueProtect - ranked rule changes, chargebacks, friendly vs real fraud, and prevention vs representment.
             </p>
+          </div>
+        </section>
+
+        <section className="relative px-5 sm:px-10 pb-12 sm:pb-16">
+          <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 lg:gap-16 items-center">
+            <Reveal animation="anim-fadeUp" className="text-center lg:text-left">
+              <Eyebrow>Short answer</Eyebrow>
+              <h2 className="font-extrabold text-gray-900 tracking-[-0.04em] text-[1.75rem] sm:text-[2.25rem] leading-[1.12] mb-4 text-balance">
+                First chargebacks. Use FraudPulse.
+              </h2>
+              <p className="text-[1.0625rem] sm:text-[1.125rem] leading-[1.7] text-gray-500 max-w-md mx-auto lg:mx-0">
+                A short take on what to do when the first disputes show up - then the full FAQ below.
+              </p>
+            </Reveal>
+            <Reveal animation="anim-scaleIn" delay={150}>
+              <PhoneShortsVideo page="/faq/" />
+            </Reveal>
           </div>
         </section>
 

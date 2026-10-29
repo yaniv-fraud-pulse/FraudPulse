@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
 import { TrackedLink } from './components/TrackedCta';
+import ProductVideo from './components/ProductVideo';
 import { useState, useEffect } from 'react';
 import { useInView } from './hooks/useInView';
 import JsonLd from './components/JsonLd';
@@ -489,6 +490,24 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <section className="relative px-5 sm:px-10 pb-8 sm:pb-14">
+          <div className="max-w-5xl mx-auto">
+            <Reveal animation="anim-fadeUp" className="text-center mb-8 sm:mb-10">
+              <Eyebrow>Watch it run</Eyebrow>
+              <h2 className="font-extrabold text-gray-900 tracking-[-0.035em] text-[1.75rem] sm:text-[2.5rem] leading-[1.12] mb-4 text-balance">
+                From payment data to ranked rules, on screen.
+              </h2>
+              <p className="text-[1.0625rem] sm:text-[1.25rem] leading-[1.7] max-w-[680px] mx-auto text-gray-500">
+                Watch how FraudPulse connects to your payment data, runs AI analysis, and delivers ready-to-implement fraud rules.
+              </p>
+            </Reveal>
+            <Reveal animation="anim-scaleIn" delay={150}>
+              <ProductVideo page="/" autoPlayOnScroll />
+            </Reveal>
+          </div>
+        </section>
+
         {/* ── Works with your stack ── */}
         <section className="px-3 sm:px-6 py-6 sm:py-10">
           <div className="relative overflow-hidden rounded-[28px] sm:rounded-[36px] max-w-7xl mx-auto px-5 sm:px-12 py-20 sm:py-24 text-white"

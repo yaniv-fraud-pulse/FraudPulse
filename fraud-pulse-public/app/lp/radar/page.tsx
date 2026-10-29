@@ -8,6 +8,7 @@ import { captureEvent } from '../../components/PostHogProvider';
 import { CALENDLY_DEMO_URL } from '../../lib/posthog';
 import type { FaqItem } from '../../lib/homeFaq';
 import { Eyebrow, HeroBackdrop } from '../../components/Brand';
+import ProductVideo from '../../components/ProductVideo';
 
 const PAGE_PATH = '/lp/radar/';
 
@@ -114,6 +115,20 @@ export default function RadarFacebookLanding() {
               <p className="mt-4 text-[0.875rem] text-gray-400">
                 14-day free trial after. No credit card. No Radar migration.
               </p>
+            </Reveal>
+          </div>
+        </section>
+
+        <section className="py-10 sm:py-14 px-5 sm:px-8 bg-white">
+          <div className="max-w-3xl mx-auto">
+            <Reveal animation="anim-fadeUp" className="text-center mb-8">
+              <Eyebrow>Watch it run</Eyebrow>
+              <p className="text-[1.0625rem] sm:text-[1.125rem] leading-[1.7] text-gray-500">
+                See how FraudPulse ranks Stripe Radar rule changes from your chargeback data.
+              </p>
+            </Reveal>
+            <Reveal animation="anim-scaleIn" delay={75}>
+              <ProductVideo page={PAGE_PATH} />
             </Reveal>
           </div>
         </section>
