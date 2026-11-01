@@ -42,7 +42,7 @@ Event: `https://calendly.com/idan-apis-solutions/30min` (Idan Hayon, CEO)
 
 1. Open the event in Calendly → **Confirmation page**
 2. Choose **Redirect to an external site**
-3. Redirect URL: `https://www.fraud-pulse.com/book-a-demo/thanks/`
+3. Redirect URL: `https://fraud-pulse.com/book-a-demo/thanks/`
 4. Turn on **Pass event details to your redirect URL**
 
 ---

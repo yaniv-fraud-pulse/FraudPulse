@@ -29,7 +29,7 @@
         "source": "**/*.html",
         "headers": [
           { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" },
-          { "key": "Link", "value": "<https://www.fraud-pulse.com/llms.txt>; rel=\"alternate\"; type=\"text/plain\"; title=\"llms.txt\"" }
+          { "key": "Link", "value": "<https://fraud-pulse.com/llms.txt>; rel=\"alternate\"; type=\"text/plain\"; title=\"llms.txt\"" }
         ]
       },
       {
@@ -68,6 +68,24 @@
           { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
           { "key": "Cache-Control", "value": "public, max-age=3600" },
           { "key": "X-Robots-Tag", "value": "all" }
+        ]
+      },
+      {
+        "source": "/lp/**",
+        "headers": [
+          { "key": "X-Robots-Tag", "value": "noindex, follow" }
+        ]
+      },
+      {
+        "source": "/book-a-demo/thanks{,/**}",
+        "headers": [
+          { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
+        ]
+      },
+      {
+        "source": "/webinar{,/**}",
+        "headers": [
+          { "key": "X-Robots-Tag", "value": "noindex, follow" }
         ]
       }
     ]

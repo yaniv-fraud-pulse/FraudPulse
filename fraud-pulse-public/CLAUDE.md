@@ -39,9 +39,9 @@ There is **no test suite**. TypeScript is `strict`; `npm run build` type-checks.
 Two deploy targets both exist:
 
 - **Firebase Hosting** (primary): `.github/workflows/deploy.yml` runs `npm ci && npm run build` on push to `main`, then deploys `out/` to Firebase project `fruadpulse` (note the typo in the project id). Config in `firebase.json`.
-- **Vercel**: `vercel.json` handles redirects (`/features` → `/solutions`, and apex `fraud-pulse.com` → `www.fraud-pulse.com`). PostHog env vars are set in the Vercel dashboard.
+- **Vercel**: `vercel.json` handles redirects (`/features` → `/solutions`, and `www.fraud-pulse.com` → apex `https://fraud-pulse.com`). PostHog env vars are set in the Vercel dashboard.
 
-Canonical host is `https://www.fraud-pulse.com` (defined once in `app/lib/site.ts` as `SITE_URL`).
+Canonical host is `https://fraud-pulse.com` (defined once in `app/lib/site.ts` as `SITE_URL`).
 
 Crawler headers for `llms.txt`, `robots.txt`, `sitemap.xml`, and pricing machine files live in both `vercel.json` and `firebase.json`. HTML pages also send `Link: </llms.txt>; rel="alternate"`.
 
@@ -77,11 +77,11 @@ Blog posts keep `BlogPosting` with author + `datePublished` / `dateModified` in 
 
 Machine files crawlers should find:
 
-- `public/llms.txt` → `https://www.fraud-pulse.com/llms.txt`
+- `public/llms.txt` → `https://fraud-pulse.com/llms.txt`
 - `public/robots.txt` (AI bots explicitly allowed)
-- `public/sitemap.xml` (www host only, trailing slashes)
+- `public/sitemap.xml` (apex `https://fraud-pulse.com` only, trailing slashes)
 - `public/pricing.md` and `public/pricing.txt`
 
-`/book-a-demo/thanks/` and `/lp/*` stay `noindex`. LP pages override `pageMetadata` robots after spreading it.
+`/book-a-demo/thanks/`, `/lp/*`, and `/webinar/` stay `noindex`. LP pages override `pageMetadata` robots after spreading it.
 
 Do not overwrite live `/how-it-works/`, `/solutions/`, `/faq/`, or `/stack/` with old draft copy. The stack diagram (Shopify / Stripe / Adyen → FraudPulse → Radar / Flow / Blockify / RevenueProtect) lives on How It Works. "Where FraudPulse fits in your stack" (analyst vs screener table) lives on Solutions.

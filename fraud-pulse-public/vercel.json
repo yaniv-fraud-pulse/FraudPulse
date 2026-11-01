@@ -3,6 +3,12 @@
   "framework": "nextjs",
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.fraud-pulse.com" }],
+      "destination": "https://fraud-pulse.com/:path*",
+      "statusCode": 301
+    },
+    {
       "source": "/features",
       "destination": "/solutions",
       "permanent": true
@@ -57,12 +63,6 @@
       "source": "/blog/fraudpulse-does-not-replace-stripe-radar-shopify-protect/",
       "destination": "/blog/fraudpulse-does-not-replace-stripe-radar-shopify-flow/",
       "statusCode": 301
-    },
-    {
-      "source": "/:path*",
-      "has": [{ "type": "host", "value": "fraud-pulse.com" }],
-      "destination": "https://www.fraud-pulse.com/:path*",
-      "permanent": true
     }
   ],
   "headers": [
@@ -123,8 +123,38 @@
       "headers": [
         {
           "key": "Link",
-          "value": "<https://www.fraud-pulse.com/llms.txt>; rel=\"alternate\"; type=\"text/plain\"; title=\"llms.txt\""
+          "value": "<https://fraud-pulse.com/llms.txt>; rel=\"alternate\"; type=\"text/plain\"; title=\"llms.txt\""
         }
+      ]
+    },
+    {
+      "source": "/lp/:path*",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, follow" }
+      ]
+    },
+    {
+      "source": "/book-a-demo/thanks",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
+      ]
+    },
+    {
+      "source": "/book-a-demo/thanks/",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
+      ]
+    },
+    {
+      "source": "/webinar",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, follow" }
+      ]
+    },
+    {
+      "source": "/webinar/",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, follow" }
       ]
     }
   ]
