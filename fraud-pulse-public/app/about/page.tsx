@@ -14,14 +14,6 @@ import type { FaqItem } from '../lib/homeFaq';
 
 const aboutFaqs: FaqItem[] = [
   {
-    q: 'Who is Yaniv Hayun?',
-    a: 'Yaniv Hayun is co-founder and CTO of FraudPulse. He built real-time data infrastructure and engineering teams at Upstream Security and Creednz. At FraudPulse he builds the product that ranks Shopify Flow, Blockify, Stripe Radar, and Adyen RevenueProtect rule changes. It does not replace those tools.',
-  },
-  {
-    q: 'What is Yaniv Hayun’s profession?',
-    a: 'Yaniv Hayun is a software executive and CTO. He co-founded FraudPulse, an AI fraud analyst for Shopify, Stripe, and Adyen merchants, after leading engineering and real-time data work at Upstream Security and Creednz.',
-  },
-  {
     q: 'What does FraudPulse do?',
     a: 'FraudPulse is an AI fraud analyst for Shopify, Stripe, and Adyen merchants. Connect transaction and chargeback data from those platforms. It classifies chargebacks by type and ranks specific Stripe Radar, Shopify Flow, Blockify, or Adyen RevenueProtect rule changes, each with an estimated fraud-capture rate and false-positive percentage. It does not replace those tools and does not take over checkout.',
   },
@@ -70,10 +62,10 @@ export default function About() {
           <div className="relative max-w-7xl mx-auto pt-16 pb-16 sm:pt-20 sm:pb-20">
             <div className="max-w-[880px] text-left">
               <h1 className="font-extrabold text-gray-900 mb-6 tracking-[-0.045em] leading-[1.1] text-[2.25rem] sm:text-[3.25rem] lg:text-[3.75rem] anim-fadeUp delay-75">
-                Yaniv <span className="text-gradient-flow">Hayun</span>
+                About <span className="text-gradient-flow">FraudPulse</span>
               </h1>
               <p className="ai-answer text-[1.125rem] leading-[1.75] text-gray-700 mb-6 anim-fadeUp delay-300">
-                Yaniv Hayun is co-founder and CTO of FraudPulse, an AI fraud analyst. FraudPulse ranks specific Shopify Flow, Blockify, Stripe Radar, and Adyen RevenueProtect rule changes from your chargebacks. It does not replace those tools. Yaniv previously built real-time data infrastructure and engineering teams at Upstream Security and Creednz.
+                {aboutFaqs[0].a}
               </p>
               <p className="text-[1.125rem] leading-[1.8] text-gray-600 anim-fadeUp delay-400">
                 FraudPulse was co-founded by <strong className="text-gray-900">Idan Hayon</strong> and{' '}
@@ -287,7 +279,7 @@ export default function About() {
                 </Link>
                 {' · '}
                 <Link href="/alternatives/nofraud/" className="font-semibold text-[#4a96a3] hover:underline">
-                  vs NoFraud, KeepSafe, Beacon, MaxMind, and SMB tools
+                  which is better: Stripe, Forter, or NoFraud
                 </Link>
               </p>
             </Reveal>

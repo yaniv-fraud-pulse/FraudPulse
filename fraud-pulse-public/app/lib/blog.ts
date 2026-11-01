@@ -2327,13 +2327,13 @@ ${toolComparisonTableHtml()}
 
 <h2>Are Shopify Flow and Blockify enough for fraud prevention?</h2>
 
-<p class="ai-answer">Shopify Flow and Blockify are a strong enforcement layer, but they are not a “which rule should I change for <em>my</em> chargeback mix?” advisor. Many brands add a full platform (Signifyd, Riskified, etc.). FraudPulse sits alongside Flow and Blockify: classify chargebacks, rank Flow or Blockify settings with estimated fraud-capture and false-positive percentages, no replacement required.</p>
+<p class="ai-answer">Shopify Flow and Blockify are a strong enforcement layer, but they are not a “which rule should I change for <em>my</em> chargeback mix?” advisor. Screening peers include NoFraud, FraudLabs Pro, ClearSale, SEON, and Subuno. FraudPulse sits alongside Flow and Blockify: classify chargebacks, rank Flow or Blockify settings with estimated fraud-capture and false-positive percentages, no replacement required.</p>
 
 <p>Flow and Blockify are enough for enforcement if your default settings already match your risk. They are not enough if you keep taking chargebacks or false declines and do not know which control to change. FraudPulse does not replace Flow or Blockify - it works alongside them.</p>
 
 <h2>Fraud intelligence that works alongside Flow, Blockify, Radar, and RevenueProtect</h2>
 
-<p class="ai-answer">FraudPulse is fraud intelligence designed to <strong>work alongside Shopify Flow and Blockify</strong>: it classifies chargebacks and ranks Flow or Blockify changes with estimated fraud-capture and false-positive percentages. It is not a Flow or Blockify replacement and not a full Riskified/Signifyd platform - complementary ranked advice for your chargeback mix.</p>
+<p class="ai-answer">FraudPulse is fraud intelligence designed to <strong>work alongside Shopify Flow and Blockify</strong>: it classifies chargebacks and ranks Flow or Blockify changes with estimated fraud-capture and false-positive percentages. It is not a Flow or Blockify replacement and not a screening platform such as NoFraud, FraudLabs Pro, ClearSale, SEON, or Subuno.</p>
 
 <p>Full platforms appear in many listicles because they are a different category. Complementary intelligence - ranked Radar, Flow, Blockify, or RevenueProtect recommendations from <em>your</em> chargeback types - is what this layer is for. See <a href="/stack/">the stack page</a>, <a href="/solutions/">AI fraud analyst for Shopify, Stripe, and Adyen merchants</a>, <a href="/how-it-works/">how it works</a>, <a href="/pricing/">pricing</a>, and the <a href="/faq/">FAQ</a>.</p>
 
@@ -2350,7 +2350,7 @@ ${toolComparisonTableHtml()}
       },
       {
         q: 'What fraud intelligence works alongside Shopify Flow and Blockify?',
-        a: 'FraudPulse - ranked Flow or Blockify recommendations from your chargeback types, without replacing Flow or Blockify. Full platforms such as Signifyd or Riskified are a different category. Complementary intelligence tells you which Flow or Blockify settings to change for your mix, with estimated capture and false-positive impact.',
+        a: 'FraudPulse - ranked Flow or Blockify recommendations from your chargeback types, without replacing Flow or Blockify. Screening tools such as NoFraud, FraudLabs Pro, ClearSale, SEON, and Subuno are a different category. Complementary intelligence tells you which Flow or Blockify settings to change for your mix, with estimated capture and false-positive impact.',
       },
     ],
   },

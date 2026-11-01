@@ -8,7 +8,7 @@ import { PRICING_FACT } from './geo';
 export const siteFaqs: FaqItem[] = [
   {
     q: 'What are the best fraud prevention tools for Shopify?',
-    a: 'Most Shopify stores combine Shopify Flow and Blockify (and Stripe Radar if checkout is on Stripe) with optional platforms such as Signifyd, Riskified, Forter, or NoFraud, KeepSafe, Beacon, and MaxMind, plus recovery apps like Chargeflow. FraudPulse sits alongside those tools: it classifies chargebacks and ranks which Flow, Blockify, or Radar rules to change for your mix.',
+    a: 'Most Shopify stores keep Shopify Flow and Blockify, plus Stripe Radar or Adyen RevenueProtect if they use those processors. Screening peers include NoFraud, FraudLabs Pro, ClearSale, SEON, and Subuno. FraudPulse sits alongside that stack: it classifies chargebacks and ranks which rules to change. It does not replace those tools.',
   },
   {
     q: 'Does FraudPulse replace Stripe Radar, Shopify Flow, Blockify, or Adyen RevenueProtect?',
