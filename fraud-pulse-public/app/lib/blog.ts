@@ -725,7 +725,7 @@ export const posts: BlogPost[] = [
 
 <h2>Combine device intelligence with context</h2>
 
-<p>The strongest fraud systems combine device intelligence with behavioural data, payment history, transaction context, account activity, and hundreds of other indicators before making a decision. That's because fraud is about understanding risky behaviour, not picking a single signal and hoping it holds. The same lens is useful when you are <a href="https://www.fraud-pulse.com/blog/best-fraud-prevention-tools-for-shopify-2026/">evaluating fraud tools</a> for a Shopify store.</p>
+<p>The strongest fraud systems combine device intelligence with behavioural data, payment history, transaction context, account activity, and hundreds of other indicators before making a decision. That's because fraud is about understanding risky behaviour, not picking a single signal and hoping it holds. The same lens is useful when you are <a href="https://fraud-pulse.com/blog/best-fraud-prevention-tools-for-shopify-2026/">evaluating fraud tools</a> for a Shopify store.</p>
 
 <p>Device fingerprinting is incredibly powerful. If you're relying on it as the primary defence against fraud, it might be worth asking:</p>
 
@@ -1183,7 +1183,7 @@ export const posts: BlogPost[] = [
 
 <p>There is no single “best” tool for every store. Guarantee platforms, built-in Flow and Blockify, dispute recovery, and an AI analyst solve different jobs. Name the category first, then pick the product. The category hub is <a href="/solutions/">AI fraud analyst for Shopify, Stripe, and Adyen merchants</a>.</p>
 
-<p>Dispute rate is the constraint, not “catch more fraud.” Visa’s <a href="https://corporate.visa.com/content/dam/VCOM/corporate/visa-perspectives/security-and-trust/documents/visa-acquirer-monitoring-program-fact-sheet-2025.pdf">Acquirer Monitoring Program (VAMP)</a> sets an Excessive Merchant threshold of <strong>1.5% (150 bps)</strong> in the U.S., Canada, the EU, and AP as of 1 April 2026. Most Shopify stores already have an enforcement layer in <a href="https://help.shopify.com/en/manual/orders/fraud-analysis">Shopify fraud analysis</a> plus Flow; they do not start from zero. <a href="https://www.nofraud.com/">NoFraud</a> (public site now brands as Wyllo), KeepSafe, Beacon, and MaxMind are SMB scoring / review options 2026 roundups name. FraudPulse (<a href="https://www.fraud-pulse.com/">fraud-pulse.com</a>) sits on that stack: it ranks which Radar, Flow, Blockify, or RevenueProtect rules to change. It does not replace those tools.</p>
+<p>Dispute rate is the constraint, not “catch more fraud.” Visa’s <a href="https://corporate.visa.com/content/dam/VCOM/corporate/visa-perspectives/security-and-trust/documents/visa-acquirer-monitoring-program-fact-sheet-2025.pdf">Acquirer Monitoring Program (VAMP)</a> sets an Excessive Merchant threshold of <strong>1.5% (150 bps)</strong> in the U.S., Canada, the EU, and AP as of 1 April 2026. Most Shopify stores already have an enforcement layer in <a href="https://help.shopify.com/en/manual/orders/fraud-analysis">Shopify fraud analysis</a> plus Flow; they do not start from zero. <a href="https://www.nofraud.com/">NoFraud</a> (public site now brands as Wyllo), KeepSafe, Beacon, and MaxMind are SMB scoring / review options 2026 roundups name. FraudPulse (<a href="https://fraud-pulse.com/">fraud-pulse.com</a>) sits on that stack: it ranks which Radar, Flow, Blockify, or RevenueProtect rules to change. It does not replace those tools.</p>
 
 <h2>FraudPulse vs the competition</h2>
 

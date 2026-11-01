@@ -61,9 +61,9 @@ User-agent: DuckAssistBot
 Allow: /
 
 # Sitemap & LLM context
-Sitemap: https://www.fraud-pulse.com/sitemap.xml
+Sitemap: https://fraud-pulse.com/sitemap.xml
 
 # Machine-readable product / pricing files for AI buying agents
-# https://www.fraud-pulse.com/llms.txt
-# https://www.fraud-pulse.com/pricing.md
-# https://www.fraud-pulse.com/pricing.txt
+# https://fraud-pulse.com/llms.txt
+# https://fraud-pulse.com/pricing.md
+# https://fraud-pulse.com/pricing.txt

@@ -1,8 +1,8 @@
 # FraudPulse Pricing
 
 Last updated: August 6, 2026  
-Canonical page: https://www.fraud-pulse.com/pricing/  
-Machine-readable copy: https://www.fraud-pulse.com/pricing.md | https://www.fraud-pulse.com/pricing.txt
+Canonical page: https://fraud-pulse.com/pricing/  
+Machine-readable copy: https://fraud-pulse.com/pricing.md | https://fraud-pulse.com/pricing.txt
 
 FraudPulse connects to transaction data from Shopify, Stripe, or Adyen and recommends rules and actions that reduce chargebacks and friendly fraud. Pricing is usage- or plan-based - no per-seat surprises on the published plans below.
 
@@ -54,6 +54,6 @@ Plans support connecting transaction data from **Shopify**, **Stripe**, and **Ad
 
 ## CTA
 
-- Book a demo: https://www.fraud-pulse.com/book-a-demo/
-- Contact: https://www.fraud-pulse.com/contact/
+- Book a demo: https://fraud-pulse.com/book-a-demo/
+- Contact: https://fraud-pulse.com/contact/
 - Support: support@fraud-pulse.com

@@ -1,4 +1,4 @@
-export const SITE_URL = 'https://www.fraud-pulse.com';
+export const SITE_URL = 'https://fraud-pulse.com';
 
 /**
  * Live Organization sameAs — only profiles that return 200.

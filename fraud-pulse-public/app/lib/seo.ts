@@ -18,7 +18,7 @@ type PageSeoInput = {
   keywords?: string;
 };
 
-/** Absolute www canonical + matching og:url for public pages. */
+/** Absolute apex canonical + matching og:url for public pages. */
 export function pageMetadata({
   title,
   description,
