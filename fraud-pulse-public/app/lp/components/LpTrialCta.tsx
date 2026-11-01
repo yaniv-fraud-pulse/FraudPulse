@@ -31,6 +31,7 @@ export function LpTrialCta({ children, className }: LpTrialCtaProps) {
     <TrackedAnchor
       event="signup_cta_clicked"
       href={href}
+      target="_self"
       className={className}
       style={ctaStyle}
     >

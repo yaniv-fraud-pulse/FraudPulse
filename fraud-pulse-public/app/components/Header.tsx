@@ -66,6 +66,7 @@ export default function Header() {
             <TrackedAnchor
               event="signup_cta_clicked"
               href="https://app.fraud-pulse.com/signup"
+              target="_self"
               className="px-5 py-2 text-base font-bold rounded-full text-white transition-all hover:scale-[1.03]"
               style={{
                 background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',
@@ -119,6 +120,7 @@ export default function Header() {
                 <TrackedAnchor
                   event="signup_cta_clicked"
                   href="https://app.fraud-pulse.com/signup"
+                  target="_self"
                   className="flex w-full items-center justify-center rounded-full px-5 py-2.5 text-sm font-bold text-white transition-all"
                   style={{ background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)' }}
                   onClick={() => setMobileMenuOpen(false)}

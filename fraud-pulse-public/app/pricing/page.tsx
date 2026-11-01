@@ -288,6 +288,7 @@ export default function Pricing() {
                   <TrackedAnchor
                     event="signup_cta_clicked"
                     href="https://app.fraud-pulse.com/signup"
+                    target="_self"
                     className={`block w-full text-center rounded-[10px] py-3 text-[0.9375rem] font-bold transition-all ${
                       plan.popular
                         ? 'text-white shadow-[0_4px_20px_rgba(91,168,180,0.3)] [background:linear-gradient(135deg,#5ba8b4_0%,#4a96a3_100%)]'

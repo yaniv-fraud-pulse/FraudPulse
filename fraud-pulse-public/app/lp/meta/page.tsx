@@ -5,6 +5,7 @@ import { MetaLpFrame } from '../components/MetaLpFrame';
 import { LpTrialCta } from '../components/LpTrialCta';
 import { Eyebrow, HeroBackdrop } from '../../components/Brand';
 import ProductVideo, { RULES_VIDEO_ID, RULES_VIDEO_TITLE } from '../../components/ProductVideo';
+import { SampleRule } from '../components/SampleRule';
 
 const gaps = [
   {
@@ -32,19 +33,20 @@ export default function MetaLongLanding() {
           </Reveal>
           <Reveal animation="anim-fadeUp" delay={75}>
             <h1 className="font-extrabold text-gray-900 tracking-[-0.045em] leading-[1.08] mb-5 text-[2.15rem] sm:text-[3.1rem]">
-              Still relying only on Stripe Radar or your Shopify fraud app to catch fraud?
+              Connect Stripe or Shopify. See which rule to change.
             </h1>
           </Reveal>
           <Reveal animation="anim-fadeUp" delay={150}>
             <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.75] text-gray-500 mb-8">
-              You are probably losing money - in both directions.
+              Your 14-day trial includes connecting Stripe or Shopify and seeing which rule to change. No credit card. FraudPulse does not replace Stripe Radar, Shopify Flow, Blockify, or Adyen RevenueProtect.
             </p>
           </Reveal>
           <Reveal animation="anim-fadeUp" delay={225}>
+            <SampleRule />
             <LpTrialCta className="inline-flex items-center justify-center gap-2 rounded-full px-10 py-4 text-lg font-bold text-white hover:scale-[1.03] transition-transform">
               Start your free trial
             </LpTrialCta>
-            <p className="mt-4 text-[0.875rem] text-gray-400">14-day free trial. No credit card required.</p>
+            <p className="mt-4 text-[0.875rem] text-gray-400">The trial asks for an account after you see the kind of result above.</p>
           </Reveal>
         </div>
       </section>
