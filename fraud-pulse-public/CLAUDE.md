@@ -39,7 +39,7 @@ There is **no test suite**. TypeScript is `strict`; `npm run build` type-checks.
 Two deploy targets both exist:
 
 - **Firebase Hosting** (primary): `.github/workflows/deploy.yml` runs `npm ci && npm run build` on push to `main`, then deploys `out/` to Firebase project `fruadpulse` (note the typo in the project id). Config in `firebase.json`.
-- **Vercel**: `vercel.json` handles redirects (`/features` → `/solutions`, and `www.fraud-pulse.com` → apex `https://fraud-pulse.com`). PostHog env vars are set in the Vercel dashboard.
+- **Vercel**: `vercel.json` handles path redirects (`/features` → `/solutions`). The www/apex redirect is set only in Vercel project domain settings; a host redirect in `vercel.json` that disagrees with those settings causes a redirect loop. PostHog env vars are set in the Vercel dashboard.
 
 Canonical host is `https://fraud-pulse.com` (defined once in `app/lib/site.ts` as `SITE_URL`).
 

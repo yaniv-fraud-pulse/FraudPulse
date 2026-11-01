@@ -3,12 +3,6 @@
   "framework": "nextjs",
   "redirects": [
     {
-      "source": "/:path*",
-      "has": [{ "type": "host", "value": "www.fraud-pulse.com" }],
-      "destination": "https://fraud-pulse.com/:path*",
-      "statusCode": 301
-    },
-    {
       "source": "/features",
       "destination": "/solutions",
       "permanent": true
