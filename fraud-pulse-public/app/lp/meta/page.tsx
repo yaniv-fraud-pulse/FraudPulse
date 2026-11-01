@@ -5,6 +5,7 @@ import { MetaLpFrame } from '../components/MetaLpFrame';
 import { LpTrialCta } from '../components/LpTrialCta';
 import { Eyebrow, HeroBackdrop } from '../../components/Brand';
 import ProductVideo, { RULES_VIDEO_ID, RULES_VIDEO_TITLE } from '../../components/ProductVideo';
+import { SampleReportLink } from '../components/SampleReportLink';
 import { SampleRule } from '../components/SampleRule';
 
 const gaps = [
@@ -46,7 +47,7 @@ export default function MetaLongLanding() {
             <LpTrialCta className="inline-flex items-center justify-center gap-2 rounded-full px-10 py-4 text-lg font-bold text-white hover:scale-[1.03] transition-transform">
               Start your free trial
             </LpTrialCta>
-            <p className="mt-4 text-[0.875rem] text-gray-400">The trial asks for an account after you see the kind of result above.</p>
+            <SampleReportLink />
           </Reveal>
         </div>
       </section>

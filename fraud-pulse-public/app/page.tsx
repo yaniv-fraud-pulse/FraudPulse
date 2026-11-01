@@ -423,7 +423,6 @@ export default function Home() {
               <TrackedAnchor
                 event="signup_cta_clicked"
                 href="https://app.fraud-pulse.com/signup"
-                target="_self"
                 className="inline-flex items-center justify-center rounded-full px-8 py-4 text-[1.0625rem] font-bold text-white transition-transform hover:scale-[1.03]"
                 style={{ background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)', boxShadow: '0 4px 20px rgba(91,168,180,0.35)' }}
               >

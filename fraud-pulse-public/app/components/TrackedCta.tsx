@@ -5,7 +5,7 @@ import type { ComponentProps, MouseEvent } from 'react';
 import { trackMetaEvent } from '../lib/metaPixel';
 import { captureEvent } from './PostHogProvider';
 
-export type CtaEvent = 'signup_cta_clicked' | 'demo_cta_clicked';
+export type CtaEvent = 'signup_cta_clicked' | 'demo_cta_clicked' | 'sample_report_cta_clicked';
 
 function trackCta(event: CtaEvent, destination: string) {
   captureEvent(event, {

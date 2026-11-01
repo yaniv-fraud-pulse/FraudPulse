@@ -4,11 +4,21 @@ export function SampleRule() {
       <p className="text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-[#4a96a3] mb-3">
         Example, not your data
       </p>
-      <p className="font-bold text-gray-900 text-[1.0625rem] mb-2">
-        Rule to change: first-time buyers shipping to a new address
+      <p className="font-bold text-gray-900 text-[1.0625rem] mb-4">
+        Rule to change: review first-time buyers shipping to a new address over $300
       </p>
+      <div className="grid grid-cols-2 gap-3 mb-4">
+        <div className="rounded-2xl bg-[#f8f9fa] px-4 py-3">
+          <p className="text-[1.375rem] font-extrabold text-[#4a96a3]">22%</p>
+          <p className="text-[0.8125rem] leading-[1.4] text-gray-500">of fraud chargebacks caught</p>
+        </div>
+        <div className="rounded-2xl bg-[#f8f9fa] px-4 py-3">
+          <p className="text-[1.375rem] font-extrabold text-gray-900">96</p>
+          <p className="text-[0.8125rem] leading-[1.4] text-gray-500">good orders sent to review</p>
+        </div>
+      </div>
       <p className="text-[0.9375rem] leading-[1.65] text-gray-600">
-        FraudPulse ranks a specific Stripe Radar, Shopify Flow, Blockify, or Adyen RevenueProtect change and shows the estimated fraud-capture and false-positive impact before you touch the rule. Your 14-day trial does this on your own Shopify or Stripe chargebacks.
+        Your 14-day trial ranks changes like this from your own Shopify or Stripe data.
       </p>
     </div>
   );
