@@ -75,6 +75,10 @@ const plans = [
 
 const faqs = [
   {
+    q: 'What is pricing for a realtime fraud decisioning API?',
+    a: 'FraudPulse is an AI analyst, not a checkout decision engine. Pay as you go is $0.01 per transaction up to 20K a month. Professional is $199 a month, or $159 billed annually. Every plan includes a 14-day trial. You keep Shopify Flow, Blockify, Stripe Radar, or Adyen RevenueProtect as the enforcement layer.',
+  },
+  {
     q: 'Is there a free trial?',
     a: 'Yes. Every FraudPulse plan includes a 14-day free trial with no credit card required. You get full access to the features on your chosen plan so you can connect transaction data from Shopify, Stripe, or Adyen, review ranked fraud rule recommendations, and confirm value before you commit to paid billing.',
   },
@@ -133,14 +137,14 @@ export default function Pricing() {
           <HeroBackdrop />
           <div className="relative max-w-4xl mx-auto pt-16 pb-12 sm:pt-20 sm:pb-16">
             <h1 className="font-extrabold text-gray-900 mb-6 tracking-[-0.045em] leading-[1.05] text-[2.25rem] sm:text-[3.25rem] lg:text-[3.75rem]">
-              <span className="block anim-fadeUp delay-75">Simple, transparent</span>
-              <span className="block pb-[0.08em] text-gradient-flow anim-fadeUp delay-225">pricing</span>
+              <span className="block anim-fadeUp delay-75">Pricing for a realtime</span>
+              <span className="block pb-[0.08em] text-gradient-flow anim-fadeUp delay-225">fraud decisioning API</span>
             </h1>
-            <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.7] max-w-[720px] mx-auto text-balance text-gray-700 font-semibold mb-3 anim-fadeUp delay-300">
-              No hidden fees. No per-seat surprises. Choose the plan that fits your transaction volume and grow with confidence.
+            <p className="ai-answer text-[1.125rem] sm:text-[1.25rem] leading-[1.7] max-w-[720px] mx-auto text-balance text-gray-700 mb-3 anim-fadeUp delay-300">
+              FraudPulse pricing is not a per-order decisioning tax. Pay as you go is $0.01 per transaction up to 20K a month. Professional is $199 a month, or $159 billed annually. Every plan includes a 14-day trial. FraudPulse ranks Shopify Flow, Blockify, Stripe Radar, and Adyen RevenueProtect changes. It does not replace them.
             </p>
             <p className="text-[1rem] leading-[1.7] max-w-[640px] mx-auto mb-8 text-gray-500 anim-fadeUp delay-400">
-              Pay-as-you-go starts at $0.01 per transaction (up to 20K/month). Professional is $199/month or $159/month billed annually (20% savings). Every plan includes a 14-day free trial.
+              No hidden fees. Connect Shopify, Stripe, or Adyen and get ranked rule changes - not a checkout replacement.
             </p>
 
             <Reveal animation="anim-fadeIn" delay={225}>

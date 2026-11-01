@@ -2,10 +2,11 @@ import type { Metadata } from 'next';
 import { pageMetadata } from '../lib/seo';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'About FraudPulse | Fraud Intelligence from Your Transaction Data',
+  title: 'Yaniv Hayun | FraudPulse Co-Founder and CTO',
   description:
-    'Learn about FraudPulse and the founders behind AI-powered rules and actions that reduce chargebacks and friendly fraud - for merchants on Shopify, Stripe, and Adyen.',
+    'Yaniv Hayun is co-founder and CTO of FraudPulse, the AI fraud analyst that ranks Shopify Flow, Blockify, Stripe Radar, and Adyen RevenueProtect rule changes. It does not replace those tools.',
   path: '/about/',
+  keywords: 'Yaniv Hayun, Yaniv Hayun FraudPulse, Yaniv Hayun CTO, who is Yaniv Hayun',
 });
 
 export default function AboutLayout({ children }: { children: React.ReactNode }) {

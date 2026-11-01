@@ -70,8 +70,8 @@ export default function StackPage() {
           <div className="relative max-w-4xl mx-auto pt-16 pb-16 sm:pt-20 sm:pb-20">
             <Eyebrow>Your stack</Eyebrow>
             <h1 className="font-extrabold text-gray-900 mb-6 tracking-[-0.045em] leading-[1.05] text-[2.25rem] sm:text-[3.25rem] lg:text-[3.75rem]">
-              <span className="block anim-fadeUp delay-75">Using FraudPulse with Radar, Flow,</span>
-              <span className="block pb-[0.08em] text-gradient-flow anim-fadeUp delay-225">Blockify, and RevenueProtect</span>
+              <span className="block anim-fadeUp delay-75">Adyen RevenueProtect, Stripe Radar,</span>
+              <span className="block pb-[0.08em] text-gradient-flow anim-fadeUp delay-225">Shopify Flow, and Blockify</span>
             </h1>
             <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.7] max-w-[820px] mx-auto text-balance text-gray-700 font-semibold mb-4 anim-fadeUp delay-300">
               Keep the tools that enforce or automate at checkout. FraudPulse is the AI analyst that ranks which rules and actions to change for your chargeback mix.

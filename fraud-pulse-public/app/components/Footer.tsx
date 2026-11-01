@@ -94,7 +94,7 @@ export default function Footer() {
               {[
                 { href: '/alternatives/manual-fraud-analyst/', label: 'Vs. In-House Analyst' },
                 { href: '/alternatives/nofraud/', label: 'Vs. NoFraud & SMB Tools' },
-                { href: '/alternatives/smb-fraud-tools/', label: 'Vs. Signifyd & Riskified' },
+                { href: '/alternatives/smb-fraud-tools/', label: 'Vs. ClearSale & SMB Tools' },
                 { href: '/alternatives/payment-platform-tools/', label: 'Vs. Radar, Flow, Blockify, RevenueProtect' },
               ].map(({ href, label }) => (
                 <li key={href}>

@@ -65,11 +65,11 @@ export default function Contact() {
           <HeroBackdrop />
           <div className="relative max-w-4xl mx-auto pt-16 pb-12 sm:pt-20 sm:pb-16">
             <h1 className="font-extrabold text-gray-900 mb-5 tracking-[-0.045em] leading-[1.05] text-[2.25rem] sm:text-[3.25rem] lg:text-[3.75rem]">
-              <span className="block anim-fadeUp delay-75">Talk directly with the team</span>
-              <span className="block pb-[0.08em] text-gradient-flow anim-fadeUp delay-225">behind FraudPulse</span>
+              <span className="block anim-fadeUp delay-75">Contact</span>
+              <span className="block pb-[0.08em] text-gradient-flow anim-fadeUp delay-225">FraudPulse</span>
             </h1>
-            <p className="text-[1.125rem] max-w-xl mx-auto text-gray-500 anim-fadeUp delay-300">
-              Send us a message - we respond to every inquiry personally.
+            <p className="ai-answer text-[1.125rem] max-w-2xl mx-auto text-gray-700 anim-fadeUp delay-300">
+              Contact FraudPulse to ask how the AI analyst ranks Shopify Flow, Blockify, Stripe Radar, and Adyen RevenueProtect rule changes from your chargebacks. It does not replace those tools or take over checkout. Send a message and the team replies personally, usually within one business day.
             </p>
           </div>
         </section>
