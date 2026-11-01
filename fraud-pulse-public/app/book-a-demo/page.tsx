@@ -46,12 +46,11 @@ export default function BookADemo() {
           <HeroBackdrop />
           <div className="relative max-w-4xl mx-auto pt-16 pb-12 sm:pt-20 sm:pb-16">
             <h1 className="font-extrabold text-gray-900 mb-5 tracking-[-0.045em] leading-[1.05] text-[2.25rem] sm:text-[3.25rem] lg:text-[3.75rem]">
-              <span className="block anim-fadeUp delay-75">See FraudPulse</span>
+              <span className="block anim-fadeUp delay-75">Book a FraudPulse demo</span>
               <span className="block pb-[0.08em] text-gradient-flow anim-fadeUp delay-225">on your data</span>
             </h1>
-            <p className="text-[1.125rem] max-w-xl mx-auto text-gray-500 anim-fadeUp delay-300">
-              Book a 30-minute live walkthrough with Idan Hayon, Co-Founder &amp; CEO
-              <span className="block font-bold text-gray-900 mt-1">{" "}No prep required.</span>
+            <p className="ai-answer text-[1.125rem] max-w-2xl mx-auto text-gray-700 anim-fadeUp delay-300">
+              Book a FraudPulse demo to see ranked Shopify Flow, Blockify, Stripe Radar, or Adyen RevenueProtect rule changes from your chargebacks. It does not replace those tools. A 30-minute walkthrough with Idan Hayon, Co-Founder and CEO. No prep. 14-day trial, no card.
             </p>
           </div>
         </section>

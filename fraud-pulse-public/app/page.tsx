@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
-import { TrackedLink } from './components/TrackedCta';
+import { TrackedAnchor, TrackedLink } from './components/TrackedCta';
 import ProductVideo from './components/ProductVideo';
 import { useState, useEffect } from 'react';
 import { useInView } from './hooks/useInView';
@@ -418,6 +418,20 @@ export default function Home() {
               <strong className=" font-semibold text-gray-900">Stripe Radar, Shopify Flow, Blockify, and RevenueProtect</strong>{' '}
               smarter. FraudPulse finds what&apos;s driving your chargebacks and tells you exactly which rules to change.
             </p>
+
+            <div className="mt-8 flex flex-col items-center gap-3 anim-fadeUp delay-400">
+              <TrackedAnchor
+                event="signup_cta_clicked"
+                href="https://app.fraud-pulse.com/signup"
+                className="inline-flex items-center justify-center rounded-full px-8 py-4 text-[1.0625rem] font-bold text-white transition-transform hover:scale-[1.03]"
+                style={{ background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)', boxShadow: '0 4px 20px rgba(91,168,180,0.35)' }}
+              >
+                Start 14-day trial
+              </TrackedAnchor>
+              <p className="max-w-xl text-[0.9375rem] leading-[1.6] text-gray-500">
+                14 days includes connecting Stripe or Shopify and seeing which rule to change. No credit card.
+              </p>
+            </div>
 
             {/* Process flow */}
             <div className="mt-14 sm:mt-20 anim-fadeUp delay-500 w-full min-w-0">

@@ -82,7 +82,7 @@ export const STACK_CATEGORIES = [
   },
   {
     category: 'Full fraud platforms',
-    examples: 'Signifyd, Riskified, Forter, NoFraud, KeepSafe, Beacon, MaxMind, ClearSale, Sift, Kount, SEON, FraudLabs Pro',
+    examples: 'NoFraud, FraudLabs Pro, ClearSale, SEON, Subuno, Forter',
     job: 'Guarantee, full scoring, or managed review',
     fraudPulse: 'Complements the stack you already have - not a replacement',
   },
@@ -98,7 +98,7 @@ export const PREVENTION_VS_REPRESENTMENT = [
   {
     need: 'Chargeback prevention',
     does: 'Stop disputes from being filed',
-    tools: `${PLATFORM_RULE_TOOLS}, Signifyd, Riskified, NoFraud, KeepSafe, Beacon, MaxMind, Sift`,
+    tools: `${PLATFORM_RULE_TOOLS}, NoFraud, FraudLabs Pro, ClearSale, SEON, Subuno`,
     fraudPulse: 'Core job: classify the mix and rank rule changes',
   },
   {

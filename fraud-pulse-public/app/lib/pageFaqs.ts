@@ -2,6 +2,18 @@ import type { FaqItem } from './homeFaq';
 
 export const howItWorksFaqs: FaqItem[] = [
   {
+    q: 'What tools help tune fraud rules so I stop rejecting legitimate buyers?',
+    a: 'Keep Shopify Flow, Blockify, Stripe Radar, or Adyen RevenueProtect on, then change the rules that over-fire on good customers. FraudPulse classifies chargebacks and ranks those specific settings with estimated fraud-capture and false-positive impact. It does not replace the enforcement tools.',
+  },
+  {
+    q: 'How do I choose between chargeback prevention versus representment tools?',
+    a: 'Prevention stops disputes from being filed by changing Flow, Blockify, Radar, or RevenueProtect rules. Representment fights cases after they file. Many stores need both. FraudPulse is prevention: ranked rule changes from classified chargebacks. It does not submit representment packets.',
+  },
+  {
+    q: 'What is representment?',
+    a: 'Representment is fighting a chargeback after the customer files it, with evidence and a response to the issuer. That is a different job from prevention. FraudPulse ranks rule changes so fewer disputes are filed. It does not run representment.',
+  },
+  {
     q: 'How does FraudPulse use my transaction data?',
     a: 'FraudPulse connects to transaction data from Shopify, Stripe, or Adyen, then analyzes chargebacks, friendly fraud, and false declines. You get ranked rule changes and actions to apply in your existing payment stack - not a replacement for the tools that approve or decline at checkout.',
   },

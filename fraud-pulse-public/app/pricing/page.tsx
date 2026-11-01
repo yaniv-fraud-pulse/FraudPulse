@@ -136,11 +136,11 @@ export default function Pricing() {
               <span className="block anim-fadeUp delay-75">Simple, transparent</span>
               <span className="block pb-[0.08em] text-gradient-flow anim-fadeUp delay-225">pricing</span>
             </h1>
-            <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.7] max-w-[720px] mx-auto text-balance text-gray-700 font-semibold mb-3 anim-fadeUp delay-300">
-              No hidden fees. No per-seat surprises. Choose the plan that fits your transaction volume and grow with confidence.
+            <p className="ai-answer text-[1.125rem] sm:text-[1.25rem] leading-[1.7] max-w-[720px] mx-auto text-balance text-gray-700 mb-3 anim-fadeUp delay-300">
+              Pay as you go is $0.01 per transaction up to 20K a month. Professional is $199 a month, or $159 billed annually. Every plan includes a 14-day trial. FraudPulse ranks Shopify Flow, Blockify, Stripe Radar, and Adyen RevenueProtect changes. It does not replace them.
             </p>
             <p className="text-[1rem] leading-[1.7] max-w-[640px] mx-auto mb-8 text-gray-500 anim-fadeUp delay-400">
-              Pay-as-you-go starts at $0.01 per transaction (up to 20K/month). Professional is $199/month or $159/month billed annually (20% savings). Every plan includes a 14-day free trial.
+              No hidden fees. Connect Shopify, Stripe, or Adyen and get ranked rule changes - not a checkout replacement.
             </p>
 
             <Reveal animation="anim-fadeIn" delay={225}>

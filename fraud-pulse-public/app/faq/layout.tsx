@@ -7,7 +7,7 @@ export const metadata: Metadata = pageMetadata({
     'Answers to common questions: best Shopify fraud tools, reducing chargebacks, Flow and Blockify vs platforms, friendly vs real fraud, and prevention vs representment.',
   path: '/faq/',
   keywords:
-    'FraudPulse FAQ, Stripe Radar rules, Shopify Flow, Blockify, Adyen RevenueProtect, reduce chargebacks, false declines, Signifyd alternative',
+    'FraudPulse FAQ, Stripe Radar rules, Shopify Flow, Blockify, Adyen RevenueProtect, reduce chargebacks, false declines, ClearSale alternatives',
 });
 
 export default function FaqLayout({ children }: { children: React.ReactNode }) {

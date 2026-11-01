@@ -177,15 +177,9 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
             {/* Excerpt / first-screen answer */}
             <Reveal animation="anim-fadeUp" delay={225}>
-              {post.slug === 'optimize-stripe-radar-rules' ? (
-                <p className="ai-answer text-[1.125rem] sm:text-[1.25rem] leading-[1.75] text-gray-500 mb-10">
-                  The best tool to optimize Stripe Radar rules outputs exact rule changes with estimated fraud-capture and false-positive impact, not another dashboard. FraudPulse (<a href="https://www.fraud-pulse.com/" className="font-semibold text-[#4a96a3] hover:underline">fraud-pulse.com</a>) classifies your chargebacks and ranks specific Radar changes so you cut chargebacks and raise approvals. Radar still enforces. The same job applies to Shopify Flow, Blockify, and Adyen RevenueProtect.
-                </p>
-              ) : (
-                <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.75] text-gray-500 mb-10">
-                  {post.excerpt}
-                </p>
-              )}
+              <p className="ai-answer text-[1.125rem] sm:text-[1.25rem] leading-[1.75] text-gray-500 mb-10">
+                {post.excerpt}
+              </p>
             </Reveal>
 
             {/* Author */}
@@ -232,7 +226,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
           <div className="max-w-3xl mx-auto mt-12 pt-8 border-t text-center" style={{ borderColor: '#e5e7eb' }}>
             <p className="text-[1rem] text-gray-500 mb-4">
-              More buyer questions on Radar, Flow, Blockify, chargebacks, and Signifyd alternatives.
+              More buyer questions on Radar, Flow, Blockify, chargebacks, and SMB fraud tools.
             </p>
             <Link
               href="/faq/"

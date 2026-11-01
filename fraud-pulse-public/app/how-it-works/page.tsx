@@ -87,11 +87,11 @@ export default function HowItWorks() {
           <HeroBackdrop />
           <div className="relative max-w-6xl mx-auto pt-16 pb-12 sm:pt-20 sm:pb-16 w-full min-w-0">
             <h1 className="font-extrabold text-gray-900 mb-6 tracking-[-0.045em] leading-[1.05] text-[2.25rem] sm:text-[3.25rem] lg:text-[3.75rem]">
-              <span className="block anim-fadeUp delay-75">From transaction data to</span>
-              <span className="block pb-[0.08em] text-gradient-flow anim-fadeUp delay-225">rules that cut chargebacks</span>
+              <span className="block anim-fadeUp delay-75">Tools to tune fraud rules</span>
+              <span className="block pb-[0.08em] text-gradient-flow anim-fadeUp delay-225">without rejecting legitimate buyers</span>
             </h1>
             <p className="ai-answer text-[1.0625rem] sm:text-[1.125rem] leading-[1.7] max-w-[840px] mx-auto text-balance text-gray-700 mb-4 anim-fadeUp delay-300">
-              To reduce chargebacks on a Shopify store, classify why they happen, then change Flow or Blockify — and Radar or RevenueProtect if you use those — to match the mix. Fighting cases after they file is representment, not prevention. FraudPulse (<a href="https://www.fraud-pulse.com/" className="font-semibold text-[#4a96a3] hover:underline">fraud-pulse.com</a>) ranks those Flow, Blockify, Radar, or RevenueProtect changes with estimated impact.
+              Tools that tune fraud rules should stop rejecting legitimate buyers by changing settings that over-fire, not by turning Shopify Flow, Blockify, Stripe Radar, or Adyen RevenueProtect off. FraudPulse ranks those rule changes with estimated impact. It does not replace those tools. Fighting cases after they file is representment, not prevention.
             </p>
             <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.7] max-w-[820px] mx-auto text-balance text-gray-700 font-semibold mb-4 anim-fadeUp delay-400">
               Get actionable fraud insights in days - not analytics reports you never act on.

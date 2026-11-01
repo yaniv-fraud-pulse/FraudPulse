@@ -5,6 +5,8 @@ import { MetaLpFrame } from '../components/MetaLpFrame';
 import { LpTrialCta } from '../components/LpTrialCta';
 import { Eyebrow, HeroBackdrop } from '../../components/Brand';
 import ProductVideo from '../../components/ProductVideo';
+import { SampleReportLink } from '../components/SampleReportLink';
+import { SampleRule } from '../components/SampleRule';
 
 const outcomes = [
   { value: 'Fewer chargebacks', detail: 'Change the rules that let fraud through.' },
@@ -23,20 +25,20 @@ export default function MetaShortLanding() {
           </Reveal>
           <Reveal animation="anim-fadeUp" delay={75}>
             <h1 className="font-extrabold text-gray-900 tracking-[-0.045em] leading-[1.08] mb-5 text-[2.15rem] sm:text-[3.1rem]">
-              Using Stripe Radar or Shopify&apos;s built-in fraud tools?
+              Connect Stripe or Shopify. See which rule to change.
             </h1>
           </Reveal>
           <Reveal animation="anim-fadeUp" delay={150}>
             <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.75] text-gray-500 mb-8">
-              They are a solid foundation, but they cannot tell you why your rules behave the way they do, or which one
-              to change to stop losing good customers - or catching more fraud.
+              Your 14-day trial includes connecting Stripe or Shopify and seeing which rule to change. No credit card. FraudPulse does not replace Stripe Radar, Shopify Flow, Blockify, or Adyen RevenueProtect.
             </p>
           </Reveal>
           <Reveal animation="anim-fadeUp" delay={225}>
+            <SampleRule />
             <LpTrialCta className="inline-flex items-center justify-center gap-2 rounded-full px-10 py-4 text-lg font-bold text-white hover:scale-[1.03] transition-transform">
               Try FraudPulse free
             </LpTrialCta>
-            <p className="mt-4 text-[0.875rem] text-gray-400">14-day free trial. No credit card required.</p>
+            <SampleReportLink />
           </Reveal>
         </div>
       </section>

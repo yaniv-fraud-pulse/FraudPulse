@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import { pageMetadata } from '../lib/seo';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Using FraudPulse with Radar, Flow, Blockify, and RevenueProtect',
+  title: 'Adyen RevenueProtect, Stripe Radar, Shopify Flow, and Blockify',
   description:
-    'FraudPulse is the AI analyst on the stack you already run. Stripe Radar, Shopify Flow, Blockify, and Adyen RevenueProtect enforce or automate at checkout. Ranked rule and action changes - not a replacement.',
+    'Adyen RevenueProtect, Stripe Radar, Shopify Flow, and Blockify enforce at checkout. FraudPulse ranks which of those rules to change from your chargebacks. It does not replace them.',
   path: '/stack/',
   keywords:
     'FraudPulse Stripe Radar, Shopify Flow, Blockify, Adyen RevenueProtect, AI fraud analyst, complementary fraud tools',
