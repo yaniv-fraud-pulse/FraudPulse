@@ -4,7 +4,8 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Link from 'next/link';
 import { Reveal } from '../components/Reveal';
-import { TrackedLink } from '../components/TrackedCta';
+import { TrackedAnchor } from '../components/TrackedCta';
+import { CALENDLY_DEMO_URL } from '../lib/posthog';
 import JsonLd from '../components/JsonLd';
 import FaqAccordion from '../components/FaqAccordion';
 import ComparisonTable from '../components/ComparisonTable';
@@ -368,14 +369,14 @@ export default function Solutions() {
                 <p className="text-[1.125rem] sm:text-[1.25rem] leading-[1.7] text-gray-400 max-w-[680px] mx-auto mb-10 text-balance">
                   Book a walkthrough and see the exact rules and actions FraudPulse would recommend - reduce chargebacks and friendly fraud without replacing your fraud prevention tools.
                 </p>
-                <TrackedLink event="demo_cta_clicked" href="/book-a-demo/"
+                <TrackedAnchor event="demo_cta_clicked" href={CALENDLY_DEMO_URL} target="_blank" rel="noopener noreferrer"
                   className="group inline-flex items-center gap-2 rounded-full px-8 py-4 text-[1.0625rem] font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_36px_-10px_rgba(91,168,180,0.8)]"
                   style={{ background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)' }}>
                   Book a Demo
                   <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M5 12h14m-6-6l6 6-6 6" />
                   </svg>
-                </TrackedLink>
+                </TrackedAnchor>
               </div>
             </div>
           </Reveal>

@@ -218,9 +218,9 @@ export default function RadarFacebookLanding() {
             <Link href="/terms/" className="hover:text-gray-900">
               Terms
             </Link>
-            <Link href="/book-a-demo/" className="hover:text-gray-900">
+            <a href={CALENDLY_DEMO_URL} target="_blank" rel="noopener noreferrer" onClick={trackDemo} className="hover:text-gray-900">
               Book a demo
-            </Link>
+            </a>
           </div>
         </div>
       </footer>

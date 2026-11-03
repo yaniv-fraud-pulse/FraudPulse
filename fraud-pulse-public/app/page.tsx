@@ -4,7 +4,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
-import { TrackedAnchor, TrackedLink } from './components/TrackedCta';
+import { TrackedAnchor } from './components/TrackedCta';
+import { CALENDLY_DEMO_URL } from './lib/posthog';
 import ProductVideo from './components/ProductVideo';
 import { useState, useEffect } from 'react';
 import { useInView } from './hooks/useInView';
@@ -152,7 +153,7 @@ const tabs = [
     visual: (
       <div className="rounded-2xl border bg-[#f8f9fa] p-4 sm:p-5 w-full max-w-full min-w-0 overflow-hidden text-left" style={{ borderColor: '#e5e7eb', boxShadow: '0 8px 32px rgba(0,0,0,0.08)' }}>
         {/* Top KPI row */}
-        <div className="grid grid-cols-3 gap-2 mb-2">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-2">
           <div className="rounded-xl bg-white p-2.5 border border-gray-100 anim-scaleIn" style={{ animationDelay: '0ms' }}>
             <div className="flex items-center gap-1 mb-1">
               <div className="w-4 h-4 rounded-md flex items-center justify-center" style={{ background: 'rgba(34,197,94,0.15)' }}>
@@ -160,8 +161,8 @@ const tabs = [
               </div>
               <span className="text-[0.55rem] font-medium text-gray-500">Potential Savings</span>
             </div>
-            <div className="text-sm font-bold text-emerald-600">$54,872</div>
-            <div className="text-[0.5rem] text-gray-400 mt-0.5">47.8% coverage</div>
+            <div className="text-sm font-bold text-emerald-600">$63,402</div>
+            <div className="text-[0.5rem] text-emerald-600 mt-0.5">50.3% coverage</div>
           </div>
           <div className="rounded-xl bg-white p-2.5 border border-gray-100 anim-scaleIn" style={{ animationDelay: '80ms' }}>
             <div className="flex items-center gap-1 mb-1">
@@ -170,8 +171,9 @@ const tabs = [
               </div>
               <span className="text-[0.55rem] font-medium text-gray-500">Fraud Loss</span>
             </div>
-            <div className="text-sm font-bold text-red-500">$114,699</div>
-            <div className="text-[0.5rem] text-gray-400 mt-0.5">343 fraud chargebacks</div>
+            <div className="text-sm font-bold text-red-500">$126,174</div>
+            <div className="text-[0.5rem] text-gray-400 mt-0.5">293 fraud chargebacks</div>
+            <div className="text-[0.5rem] text-red-500 mt-0.5">26.6% of total chargebacks</div>
           </div>
           <div className="rounded-xl bg-white p-2.5 border border-gray-100 anim-scaleIn" style={{ animationDelay: '160ms' }}>
             <div className="flex items-center gap-1 mb-1">
@@ -180,18 +182,30 @@ const tabs = [
               </div>
               <span className="text-[0.55rem] font-medium text-gray-500">Actions</span>
             </div>
-            <div className="text-sm font-bold text-[#5ba8b4]">5</div>
+            <div className="text-sm font-bold text-[#5ba8b4]">10</div>
             <div className="text-[0.5rem] text-[#5ba8b4] mt-0.5">Rules to implement</div>
+            <div className="grid grid-cols-3 gap-1 mt-1">
+              {[
+                { value: '6.42%', label: 'Caught', color: 'text-emerald-600' },
+                { value: '0.07%', label: 'Legit blocked', color: 'text-red-500' },
+                { value: '43.83%', label: 'To review', color: 'text-amber-600' },
+              ].map((s) => (
+                <div key={s.label} className="min-w-0">
+                  <div className={`text-[0.5rem] font-bold ${s.color}`}>{s.value}</div>
+                  <div className="text-[0.4rem] text-gray-400 leading-tight">{s.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
         {/* Volume metrics row */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5 mb-2">
           {[
-            { label: 'Total Volume', value: '$27.1M', sub: '281K transactions' },
-            { label: 'Total Approved', value: '$22.05K', sub: '84.9%' },
-            { label: 'Chargebacks', value: '$464K', sub: '483 CBs', accent: true },
-            { label: 'Declined', value: '$4.09M', sub: '3,327' },
+            { label: 'Total Volume', value: '$25,910,612', sub: '65,552 transactions' },
+            { label: 'Total Approved', value: '$25,910,612', sub: '59,217 approvals · 90.3%' },
+            { label: 'Total Chargebacks', value: '$482,231', sub: '1,101 CBs · 1.7% rate', accent: true },
+            { label: 'Declined', value: '$2,765,668', sub: '6,335 declined' },
           ].map((m, i) => (
             <div key={m.label} className="rounded-lg bg-white px-2 py-1.5 border border-gray-100 anim-scaleIn"
               style={{ animationDelay: `${i * 60 + 200}ms`, borderTop: m.accent ? '2px solid #374151' : undefined }}>
@@ -203,31 +217,42 @@ const tabs = [
         </div>
 
         {/* Charts row */}
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
           {/* Quadrant chart */}
           <div className="rounded-xl bg-white p-2.5 border border-gray-100 anim-fadeUp" style={{ animationDelay: '400ms' }}>
-            <div className="text-[0.5rem] font-semibold text-gray-700 mb-2 leading-tight">Fraud Rate vs False Positive</div>
-            <div className="relative h-16 border-l border-b border-gray-200">
-              <div className="absolute bottom-[45%] left-[55%] w-2 h-2 rounded-full bg-[#5ba8b4]" />
-              <div className="absolute bottom-1/3 left-1/5 -translate-x-1/2 w-2 h-2 rounded-full bg-[#7D6BA0]" />
-              <div className="absolute bottom-0 left-0 text-[0.35rem] text-gray-400">0</div>
-              <div className="absolute -left-3 top-0 text-[0.35rem] text-gray-400 -rotate-90 origin-center">FP%</div>
+            <div className="text-[0.5rem] font-semibold text-gray-700 mb-1 leading-tight">Fraud Rate vs False Positive Rate</div>
+            <div className="flex flex-wrap items-center gap-x-2 mb-1.5 text-[0.4rem] text-gray-500">
+              <span className="flex items-center gap-0.5"><span className="w-1.5 h-1.5 rounded-full bg-[#5ba8b4]" />Industry Benchmark</span>
+              <span className="flex items-center gap-0.5"><span className="w-1.5 h-1.5 rounded-full bg-[#7D6BA0]" />You Are Here</span>
             </div>
+            <div className="relative h-20 border-l border-b border-gray-300">
+              {[25, 50, 75].map((p) => (
+                <div key={p} className="absolute left-0 right-0 border-t border-gray-100" style={{ bottom: `${p}%` }} />
+              ))}
+              <div className="absolute bottom-[58%] left-[54%] w-1.5 h-1.5 rounded-full bg-[#5ba8b4]" />
+              <div className="absolute bottom-[58%] left-[54%] -translate-x-1/2 mb-2 ml-1 whitespace-nowrap text-[0.35rem] text-[#5ba8b4]">1%, 0.8%</div>
+              <div className="absolute bottom-[43%] left-[45%] w-1.5 h-1.5 rounded-full bg-[#7D6BA0]" />
+              <div className="absolute bottom-[43%] left-[45%] -translate-x-1/2 -mb-2.5 ml-1 whitespace-nowrap text-[0.35rem] text-[#7D6BA0]">0.6%, 0.5%</div>
+            </div>
+            <div className="mt-0.5 text-center text-[0.4rem] text-gray-500">Fraud rate (%)</div>
           </div>
           {/* Bar chart */}
           <div className="rounded-xl bg-white p-2.5 border border-gray-100 anim-fadeUp" style={{ animationDelay: '480ms' }}>
             <div className="text-[0.5rem] font-semibold text-gray-700 mb-2 leading-tight">Chargeback Reason Breakdown</div>
-            <div className="flex items-end gap-0.5 h-16">
+            <div className="flex items-end gap-1 h-20 border-b border-gray-300">
               {[
-                { h: 85, color: '#5ba8b4' },
-                { h: 80, color: '#7D6BA0' },
-                { h: 35, color: '#5ba8b4' },
-                { h: 30, color: '#7D6BA0' },
-                { h: 25, color: '#5ba8b4' },
-                { h: 20, color: '#7D6BA0' },
+                { label: 'Fraudulent', count: 293, color: '#a5d0d9' },
+                { label: 'Subscription Canceled', count: 281, color: '#c8b8d9' },
+                { label: 'Credit Not Processed', count: 270, color: '#a5d0d9' },
+                { label: 'Product Not Received', count: 257, color: '#a5d0d9' },
               ].map((b, i) => (
-                <div key={i} className="flex-1 rounded-t-sm bar-grow"
-                  style={{ height: `${b.h}%`, background: b.color, animationDelay: `${i * 40 + 500}ms` }} />
+                <div key={b.label} className="flex-1 bar-grow"
+                  style={{ height: `${(b.count / 300) * 100}%`, background: b.color, animationDelay: `${i * 40 + 500}ms` }} />
+              ))}
+            </div>
+            <div className="flex gap-1 mt-0.5">
+              {['Fraudulent', 'Subscription Canceled', 'Credit Not Processed', 'Product Not Received'].map((label) => (
+                <div key={label} className="flex-1 min-w-0 text-center text-[0.35rem] text-gray-500 leading-tight">{label}</div>
               ))}
             </div>
           </div>
@@ -247,22 +272,49 @@ const tabs = [
     bullets: ['Reason code & dispute status', 'Won / Lost / Needs Response tracking', 'Pattern severity scoring', 'Fraud category classification'],
     visual: (
       <div className="rounded-2xl border bg-white p-4 sm:p-5 w-full max-w-full min-w-0 overflow-hidden text-left" style={{ borderColor: '#e5e7eb', boxShadow: '0 8px 32px rgba(0,0,0,0.08)' }}>
-        <div className="flex items-start sm:items-center gap-2 mb-4">
-          <span className="text-xs font-semibold text-gray-400 uppercase tracking-widest mt-0.5 sm:mt-0">Chargebacks</span>
-          <span className="text-[0.65rem] font-semibold px-2 py-0.5 rounded-full bg-red-50 text-red-500 sm:ml-auto">3 need response</span>
+        {/* Category counts */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5 mb-3">
+          {[
+            { label: 'Non Fraud', value: '1,009', color: '#6b7280' },
+            { label: 'Friendly Fraud', value: '193', color: '#3b8fe8' },
+            { label: 'BIN Attack', value: '151', color: '#8e24aa' },
+            { label: 'Geo-Mismatch', value: '30', color: '#f59a23' },
+          ].map((s, i) => (
+            <div key={s.label} className="rounded-lg bg-white px-2 py-1.5 border border-gray-100 anim-scaleIn"
+              style={{ animationDelay: `${i * 60}ms`, borderTop: `2px solid ${s.color}` }}>
+              <div className="text-[0.45rem] font-medium text-gray-500 uppercase tracking-wide leading-tight mb-0.5">{s.label}</div>
+              <div className="text-sm font-bold" style={{ color: s.color }}>{s.value}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* Table */}
+        <div className="grid grid-cols-[0.8fr_1.3fr_1fr_0.9fr] sm:grid-cols-[1fr_0.8fr_1.3fr_1fr_0.5fr_0.9fr] gap-1.5 pb-1.5 border-b border-gray-200 text-[0.5rem] font-medium text-gray-700">
+          <span className="hidden sm:block">Payment</span>
+          <span className="text-right">Amount</span>
+          <span>Reason Code</span>
+          <span>Dispute Status</span>
+          <span className="hidden sm:block text-right">Severity</span>
+          <span>Fraud Category</span>
         </div>
         {[
-          { id: 'CB-1041', reason: '10.4 Card Absent Fraud', status: 'Needs Response', color: 'text-red-500 bg-red-50', delay: 0 },
-          { id: 'CB-1040', reason: '13.1 Merchandise Not Received', status: 'Under Review', color: 'text-amber-600 bg-amber-50', delay: 100 },
-          { id: 'CB-1039', reason: '10.5 Visa Fraud Monitoring', status: 'Won', color: 'text-emerald-600 bg-emerald-50', delay: 200 },
+          { id: 'ch_kaUKczB...', amount: 'EUR 482.43', reason: 'Subscription Canceled', status: 'Warning Needs Response', statusColor: 'text-orange-600 border-orange-300', severity: 'N/A', category: 'Non Fraud', dot: '#6b7280', delay: 0 },
+          { id: 'ch_ypF5AnR...', amount: 'GBP 548.24', reason: 'Fraudulent', status: 'Won', statusColor: 'text-emerald-700 border-emerald-300', severity: '20%', category: 'Friendly Fraud', dot: '#3b8fe8', delay: 60 },
+          { id: 'ch_WhXarFO...', amount: 'USD 891.26', reason: 'Product Not Received', status: 'Won', statusColor: 'text-emerald-700 border-emerald-300', severity: 'N/A', category: 'Non Fraud', dot: '#6b7280', delay: 120 },
+          { id: 'ch_Dojiq4tn...', amount: 'CAD 357.57', reason: 'Fraudulent', status: 'Under Review', statusColor: 'text-orange-600 border-orange-300', severity: '82%', category: 'BIN Attack', dot: '#8e24aa', delay: 180 },
+          { id: 'ch_FwrZk6J...', amount: 'ILS 762.13', reason: 'Fraudulent', status: 'Lost', statusColor: 'text-red-600 border-red-300', severity: '82%', category: 'Friendly Fraud', dot: '#3b8fe8', delay: 240 },
         ].map((c) => (
-          <div key={c.id} className="py-2.5 border-b last:border-0 anim-fadeUp"
+          <div key={c.id} className="grid grid-cols-[0.8fr_1.3fr_1fr_0.9fr] sm:grid-cols-[1fr_0.8fr_1.3fr_1fr_0.5fr_0.9fr] gap-1.5 items-center py-2 border-b last:border-0 anim-fadeUp text-[0.5rem] leading-tight"
             style={{ borderColor: '#f3f4f6', animationDelay: `${c.delay}ms` }}>
-            <div className="flex items-start sm:items-center gap-2">
-              <span className="text-xs font-mono text-gray-400 flex-shrink-0 mt-0.5 sm:mt-0">{c.id}</span>
-              <span className="text-xs text-gray-700 flex-1 min-w-0 leading-snug">{c.reason}</span>
-              <span className={`text-[0.65rem] font-semibold px-2 py-0.5 rounded-full flex-shrink-0 ${c.color}`}>{c.status}</span>
-            </div>
+            <span className="hidden sm:block truncate text-[#9483b8] underline">{c.id}</span>
+            <span className="text-right font-medium text-gray-900">{c.amount}</span>
+            <span className="text-gray-700">{c.reason}</span>
+            <span><span className={`inline-block px-1 py-0.5 rounded border font-semibold text-[0.45rem] ${c.statusColor}`}>{c.status}</span></span>
+            <span className="hidden sm:block text-right text-gray-700">{c.severity}</span>
+            <span className="flex items-center gap-1 text-gray-700">
+              <span className="w-1 h-1 rounded-full flex-shrink-0" style={{ background: c.dot }} />
+              {c.category}
+            </span>
           </div>
         ))}
       </div>
@@ -280,23 +332,71 @@ const tabs = [
     bullets: ['Automatic fraud categorization', 'Rule pattern extraction', 'Risk feature radar chart', 'Email & country fraud breakdown'],
     visual: (
       <div className="rounded-2xl border bg-white p-4 sm:p-5 w-full max-w-full min-w-0 overflow-hidden text-left" style={{ borderColor: '#e5e7eb', boxShadow: '0 8px 32px rgba(0,0,0,0.08)' }}>
-        <div className="flex items-center gap-2 mb-4">
-          <span className="text-xs font-semibold text-gray-400 uppercase tracking-widest">Fraud Classifier</span>
+        {/* KPI row */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-1.5 mb-3">
+          {[
+            { label: 'Payments', value: '65,552' },
+            { label: 'Approval rate', value: '90.3%' },
+            { label: 'Chargeback rate', value: '1.68%' },
+            { label: 'Fraud rate', value: '0.45%' },
+            { label: 'Volume', value: '$25,910,612' },
+            { label: 'Chargeback amount', value: '$482,231' },
+          ].map((k, i) => (
+            <div key={k.label} className="rounded-lg border border-gray-100 px-2 py-1.5 anim-scaleIn" style={{ animationDelay: `${i * 40}ms` }}>
+              <div className="text-[0.45rem] text-gray-500 leading-tight mb-0.5">{k.label}</div>
+              <div className="text-[0.65rem] font-bold text-gray-900">{k.value}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* By fraud category */}
+        <div className="text-[0.6rem] font-semibold text-gray-900">By fraud category</div>
+        <div className="text-[0.45rem] text-gray-500 mb-2">Chargebacks on payments created in the selected range</div>
+        {[
+          { category: 'Non Fraud', pct: 81, delay: 0 },
+          { category: 'Friendly Fraud', pct: 14.5, delay: 100 },
+          { category: 'BIN Attack', pct: 12.4, delay: 200 },
+          { category: 'Geo-Mismatch', pct: 2.5, delay: 300 },
+        ].map((p) => (
+          <div key={p.category} className="flex items-center gap-2 mb-1 anim-fadeUp" style={{ animationDelay: `${p.delay}ms` }}>
+            <span className="w-16 flex-shrink-0 text-right text-[0.5rem] text-gray-600">{p.category}</span>
+            <div className="flex-1 h-3 border-l border-gray-400">
+              <div className="h-full bg-[#a5d0d9] bar-grow" style={{ width: `${p.pct}%`, animationDelay: `${p.delay + 150}ms` }} />
+            </div>
+          </div>
+        ))}
+        <div className="flex gap-1 mt-2 mb-3">
+          {['Low: 873', 'Medium: 211', 'High: 17'].map((chip) => (
+            <span key={chip} className="rounded border border-gray-200 px-1.5 py-0.5 text-[0.45rem] font-medium text-gray-700">{chip}</span>
+          ))}
+        </div>
+
+        {/* Risk breakdown */}
+        <div className="text-[0.6rem] font-semibold text-gray-900">Risk breakdown</div>
+        <div className="text-[0.45rem] text-gray-500 mb-1.5">Where chargebacks concentrate</div>
+        <div className="grid grid-cols-[1fr_1.4fr_1.4fr_0.5fr] gap-2 pb-1 border-b border-gray-200 text-[0.45rem] font-medium text-gray-700">
+          <span>Card brand</span>
+          <span className="text-right">Chargeback rate</span>
+          <span className="text-right">Fraud rate</span>
+          <span className="text-right">vs avg</span>
         </div>
         {[
-          { category: 'Card Testing', pct: 78, count: 34, delay: 0 },
-          { category: 'Account Takeover', pct: 55, count: 22, delay: 100 },
-          { category: 'Friendly Fraud', pct: 38, count: 15, delay: 200 },
-          { category: 'Identity Theft', pct: 20, count: 8, delay: 300 },
-        ].map((p) => (
-          <div key={p.category} className="mb-3 last:mb-0 anim-fadeUp" style={{ animationDelay: `${p.delay}ms` }}>
-            <div className="flex justify-between items-center mb-1">
-              <span className="text-xs text-gray-600">{p.category}</span>
-              <span className="text-xs font-semibold text-gray-900">{p.count} cases</span>
-            </div>
-            <div className="h-1.5 rounded-full bg-gray-100 overflow-hidden">
-              <div className="h-full rounded-full bg-[#5ba8b4] bar-grow" style={{ width: `${p.pct}%`, animationDelay: `${p.delay + 150}ms` }} />
-            </div>
+          { brand: 'Visa', cb: 1.67, fraud: 0.52, vs: '1.0×' },
+          { brand: 'Discover', cb: 1.75, fraud: 0.38, vs: '1.0×' },
+          { brand: 'Amex', cb: 1.88, fraud: 0.48, vs: '1.1×' },
+          { brand: 'JCB', cb: 1.5, fraud: 0.5, vs: '0.9×' },
+        ].map((r) => (
+          <div key={r.brand} className="grid grid-cols-[1fr_1.4fr_1.4fr_0.5fr] gap-2 items-center py-1 border-b last:border-0 text-[0.5rem]" style={{ borderColor: '#f3f4f6' }}>
+            <span className="text-gray-700">{r.brand}</span>
+            <span className="flex items-center gap-1">
+              <span className="flex-1 h-1 rounded-full bg-gray-100 overflow-hidden"><span className="block h-full bg-[#d97706]" style={{ width: `${(r.cb / 1.88) * 100}%` }} /></span>
+              <span className="w-5 text-right text-gray-700">{r.cb}%</span>
+            </span>
+            <span className="flex items-center gap-1">
+              <span className="flex-1 h-1 rounded-full bg-gray-100 overflow-hidden"><span className="block h-full bg-[#e53e3e]" style={{ width: `${(r.fraud / 0.52) * 100}%` }} /></span>
+              <span className="w-5 text-right text-gray-700">{r.fraud}%</span>
+            </span>
+            <span className="text-right font-semibold text-gray-900">{r.vs}</span>
           </div>
         ))}
       </div>
@@ -868,14 +968,14 @@ export default function Home() {
                   Book a walkthrough and see the exact rules and actions FraudPulse would recommend to reduce chargebacks and friendly fraud.
                 </p>
                 <div className="flex flex-wrap gap-3 justify-center">
-                  <TrackedLink event="demo_cta_clicked" href="/book-a-demo/"
+                  <TrackedAnchor event="demo_cta_clicked" href={CALENDLY_DEMO_URL} target="_blank" rel="noopener noreferrer"
                     className="group inline-flex items-center gap-2 rounded-full px-8 py-4 text-[1.0625rem] font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_36px_-10px_rgba(91,168,180,0.8)]"
                     style={{ background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)' }}>
                     Book a Demo
                     <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M5 12h14m-6-6l6 6-6 6" />
                     </svg>
-                  </TrackedLink>
+                  </TrackedAnchor>
                   <Link href="/pricing/"
                     className="inline-flex items-center rounded-full border border-white/15 bg-white/[0.06] px-8 py-4 text-[1.0625rem] font-semibold text-white backdrop-blur transition-all duration-300 hover:bg-white/[0.12] hover:border-white/30">
                     View Pricing
