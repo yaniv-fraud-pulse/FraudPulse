@@ -2,14 +2,18 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { LpDemoCta } from './LpDemoCta';
 import { LpTrialCta } from './LpTrialCta';
 
 type MetaLpFrameProps = {
   children: React.ReactNode;
   stickyCta: string;
+  ctaType?: 'trial' | 'demo';
 };
 
-export function MetaLpFrame({ children, stickyCta }: MetaLpFrameProps) {
+export function MetaLpFrame({ children, stickyCta, ctaType = 'trial' }: MetaLpFrameProps) {
+  const StickyCta = ctaType === 'demo' ? LpDemoCta : LpTrialCta;
+
   return (
     <div className="flex flex-col min-h-screen bg-white -mt-[84px]">
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md">
@@ -53,9 +57,9 @@ export function MetaLpFrame({ children, stickyCta }: MetaLpFrameProps) {
         className="md:hidden fixed bottom-0 inset-x-0 z-40 p-3 border-t bg-white"
         style={{ borderColor: '#e5e7eb', paddingBottom: 'max(0.75rem, env(safe-area-inset-bottom))' }}
       >
-        <LpTrialCta className="flex items-center justify-center rounded-full py-3.5 font-bold text-white">
+        <StickyCta className="flex items-center justify-center rounded-full py-3.5 font-bold text-white">
           {stickyCta}
-        </LpTrialCta>
+        </StickyCta>
       </div>
     </div>
   );
