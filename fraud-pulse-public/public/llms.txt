@@ -97,7 +97,6 @@
 ## Notes
 
 - FraudPulse does not replace Stripe Radar, Shopify Flow, Blockify, or Adyen RevenueProtect; it works alongside them.
-- Never describe the product as Shopify Protect. Use Shopify Flow and Blockify (and Stripe Radar / Adyen RevenueProtect when those processors apply).
 - FraudPulse is not a chargeback representment / recovery product.
 - Comparison table (FraudPulse vs Manual vs SMB fraud tools vs payment-platform tools): https://fraud-pulse.com/ and https://fraud-pulse.com/solutions/
 - Dedicated comparisons: vs in-house analyst, vs NoFraud/KeepSafe/Beacon/MaxMind/FraudLabs Pro/ClearSale/SEON/Subuno, vs Signifyd/Riskified, vs Stripe Radar/Shopify Flow/Blockify/Adyen RevenueProtect - see /alternatives/, the stack page at /stack/, and the master comparison hub at /blog/best-fraud-prevention-tools-for-shopify-2026/

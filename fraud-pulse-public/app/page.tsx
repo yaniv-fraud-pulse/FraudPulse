@@ -123,7 +123,7 @@ const tabs = [
           <span className="text-xs font-semibold text-gray-400 uppercase tracking-widest">AI Recommendations</span>
         </div>
         {[
-          { rule: 'Block cards with prior chargeback history', fraud: '87%', fp: '0%', rank: 1, delay: 100 },
+          { rule: 'Block cards with prior chargeback history', fraud: '72%', fp: '0.4%', rank: 1, delay: 100 },
           { rule: 'Flag orders from high-risk email domains', fraud: '63%', fp: '2.1%', rank: 2, delay: 200 },
           { rule: 'Review orders over $500 from high-risk countries', fraud: '41%', fp: '4.3%', rank: 3, delay: 300 },
         ].map((r) => (
@@ -203,7 +203,7 @@ const tabs = [
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5 mb-2">
           {[
             { label: 'Total Volume', value: '$25,910,612', sub: '65,552 transactions' },
-            { label: 'Total Approved', value: '$25,910,612', sub: '59,217 approvals · 90.3%' },
+            { label: 'Total Approved', value: '$23,144,944', sub: '59,217 approvals · 90.3%' },
             { label: 'Total Chargebacks', value: '$482,231', sub: '1,101 CBs · 1.7% rate', accent: true },
             { label: 'Declined', value: '$2,765,668', sub: '6,335 declined' },
           ].map((m, i) => (
@@ -596,6 +596,7 @@ export default function Home() {
                         }}
                         aria-hidden={i !== heroStep}>
                         {step.visual}
+                        <p className="mt-2 text-center text-xs text-gray-400">Sample data</p>
                       </div>
                     ))}
                   </div>
@@ -893,6 +894,7 @@ export default function Home() {
                 <div className="anim-slideRight delay-75 w-full min-w-0">
                   <div className="product-tray">
                     {tabs[activeTab].visual}
+                    <p className="mt-2 text-center text-xs text-gray-400">Sample data</p>
                   </div>
                 </div>
               </div>

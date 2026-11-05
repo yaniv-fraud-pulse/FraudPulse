@@ -60,13 +60,6 @@ export const COMPARISON_FEATURES: ComparisonFeature[] = [
     smb: 'yes',
     platform: 'yes',
   },
-  {
-    feature: 'Works with any payment process',
-    fraudPulse: 'yes',
-    manual: 'yes',
-    smb: 'yes',
-    platform: 'no',
-  },
 ];
 
 export const TOOL_COMPARISON_FOOTNOTE =
