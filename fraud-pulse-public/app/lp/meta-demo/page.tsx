@@ -7,6 +7,7 @@ import { Eyebrow, HeroBackdrop } from '../../components/Brand';
 import ProductVideo, { RULES_VIDEO_ID, RULES_VIDEO_TITLE } from '../../components/ProductVideo';
 import { SampleReportLink } from '../components/SampleReportLink';
 import { SampleRule } from '../components/SampleRule';
+import { LpContactForm, LP_CONTACT_FORM_ID } from '../components/LpContactForm';
 
 const gaps = [
   {
@@ -161,6 +162,18 @@ export default function MetaDemoLanding() {
               Book a demo
             </LpDemoCta>
             <p className="mt-4 text-[0.875rem] text-gray-400">See it on your own data. No stack rebuild.</p>
+            <p className="mt-2 text-[0.875rem] text-gray-400">
+              Prefer to send a message?{' '}
+              <a href={`#${LP_CONTACT_FORM_ID}`} className="text-[#5ba8b4] hover:underline">Fill out the form</a>
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="py-14 sm:py-20 px-5 sm:px-8 bg-[#f8f9fa]">
+        <div className="max-w-2xl mx-auto">
+          <Reveal animation="anim-scaleIn">
+            <LpContactForm />
           </Reveal>
         </div>
       </section>
