@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 import { TrackedAnchor } from './TrackedCta';
+import { APP_SIGNUP_URL } from '../lib/adParams';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -65,7 +66,8 @@ export default function Header() {
             </a>
             <TrackedAnchor
               event="signup_cta_clicked"
-              href="https://app.fraud-pulse.com/signup"
+              href={APP_SIGNUP_URL}
+              pendingLabel="Opening…"
               className="px-5 py-2 text-base font-bold rounded-full text-white transition-all hover:scale-[1.03]"
               style={{
                 background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)',
@@ -118,7 +120,8 @@ export default function Header() {
               <div className="px-4 py-3">
                 <TrackedAnchor
                   event="signup_cta_clicked"
-                  href="https://app.fraud-pulse.com/signup"
+                  href={APP_SIGNUP_URL}
+                  pendingLabel="Opening…"
                   className="flex w-full items-center justify-center rounded-full px-5 py-2.5 text-sm font-bold text-white transition-all"
                   style={{ background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)' }}
                   onClick={() => setMobileMenuOpen(false)}
