@@ -2,6 +2,7 @@
 
 import { Reveal } from '../../components/Reveal';
 import { MetaLpFrame } from '../components/MetaLpFrame';
+import { LpGoogleCta } from '../components/LpGoogleCta';
 import { LpTrialCta } from '../components/LpTrialCta';
 import { Eyebrow, HeroBackdrop } from '../../components/Brand';
 import ProductVideo from '../../components/ProductVideo';
@@ -38,6 +39,7 @@ export default function MetaShortLanding() {
             <LpTrialCta className="inline-flex items-center justify-center gap-2 rounded-full px-10 py-4 text-lg font-bold text-white hover:scale-[1.03] transition-transform">
               Try FraudPulse free
             </LpTrialCta>
+            <LpGoogleCta />
             <SampleReportLink />
           </Reveal>
         </div>

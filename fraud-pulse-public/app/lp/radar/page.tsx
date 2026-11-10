@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Reveal } from '../../components/Reveal';
 import FaqAccordion from '../../components/FaqAccordion';
 import { captureEvent } from '../../components/PostHogProvider';
+import { useAdHref } from '../../components/TrackedCta';
 import { CALENDLY_DEMO_URL } from '../../lib/posthog';
 import type { FaqItem } from '../../lib/homeFaq';
 import { Eyebrow, HeroBackdrop } from '../../components/Brand';
@@ -50,6 +51,8 @@ function trackDemo() {
 }
 
 export default function RadarFacebookLanding() {
+  const demoHref = useAdHref(CALENDLY_DEMO_URL);
+
   return (
     <div className="flex flex-col min-h-screen bg-white -mt-[84px]">
       <header className="sticky top-0 z-50 border-b bg-white/95 backdrop-blur-md" style={{ borderColor: '#e5e7eb' }}>
@@ -65,7 +68,7 @@ export default function RadarFacebookLanding() {
             />
           </Link>
           <a
-            href={CALENDLY_DEMO_URL}
+            href={demoHref}
             target="_blank"
             rel="noopener noreferrer"
             onClick={trackDemo}
@@ -100,7 +103,7 @@ export default function RadarFacebookLanding() {
             </Reveal>
             <Reveal animation="anim-fadeUp" delay={225}>
               <a
-                href={CALENDLY_DEMO_URL}
+                href={demoHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={trackDemo}
@@ -185,7 +188,7 @@ export default function RadarFacebookLanding() {
             </div>
             <Reveal animation="anim-fadeUp" delay={225}>
               <a
-                href={CALENDLY_DEMO_URL}
+                href={demoHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={trackDemo}
@@ -218,7 +221,7 @@ export default function RadarFacebookLanding() {
             <Link href="/terms/" className="hover:text-gray-900">
               Terms
             </Link>
-            <a href={CALENDLY_DEMO_URL} target="_blank" rel="noopener noreferrer" onClick={trackDemo} className="hover:text-gray-900">
+            <a href={demoHref} target="_blank" rel="noopener noreferrer" onClick={trackDemo} className="hover:text-gray-900">
               Book a demo
             </a>
           </div>
@@ -230,7 +233,7 @@ export default function RadarFacebookLanding() {
         style={{ borderColor: '#e5e7eb', paddingBottom: 'max(0.75rem, env(safe-area-inset-bottom))' }}
       >
         <a
-          href={CALENDLY_DEMO_URL}
+          href={demoHref}
           target="_blank"
           rel="noopener noreferrer"
           onClick={trackDemo}

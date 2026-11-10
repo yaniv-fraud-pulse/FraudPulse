@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { TrackedAnchor } from './components/TrackedCta';
 import { CALENDLY_DEMO_URL } from './lib/posthog';
+import { APP_SIGNUP_URL } from './lib/adParams';
 import ProductVideo from './components/ProductVideo';
 import { useState, useEffect } from 'react';
 import { useInView } from './hooks/useInView';
@@ -522,7 +523,8 @@ export default function Home() {
             <div className="mt-8 flex flex-col items-center gap-3 anim-fadeUp delay-400">
               <TrackedAnchor
                 event="signup_cta_clicked"
-                href="https://app.fraud-pulse.com/signup"
+                href={APP_SIGNUP_URL}
+                pendingLabel="Opening…"
                 className="inline-flex items-center justify-center rounded-full px-8 py-4 text-[1.0625rem] font-bold text-white transition-transform hover:scale-[1.03]"
                 style={{ background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)', boxShadow: '0 4px 20px rgba(91,168,180,0.35)' }}
               >

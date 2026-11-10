@@ -8,5 +8,5 @@ export const POSTHOG_HOST =
 export const isPostHogEnabled = Boolean(POSTHOG_PROJECT_TOKEN);
 
 /** Calendly event for Idan Hayon (CEO) on /book-a-demo. Set confirmation redirect in Calendly to THANKS_URL. */
-export const CALENDLY_DEMO_URL = 'https://calendly.com/idan-fraud-pulse/30min?month=2026-11';
+export const CALENDLY_DEMO_URL = 'https://calendly.com/idan-fraud-pulse/30min';
 export const CAL_DEMO_THANKS_PATH = '/book-a-demo/thanks/';

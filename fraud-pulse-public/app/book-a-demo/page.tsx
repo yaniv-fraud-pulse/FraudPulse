@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Script from 'next/script';
 import { Reveal } from '../components/Reveal';
 import { captureEvent } from '../components/PostHogProvider';
+import { useAdHref } from '../components/TrackedCta';
 import { Eyebrow, FrostedBox, HeroBackdrop } from '../components/Brand';
 import { CAL_DEMO_THANKS_PATH, CALENDLY_DEMO_URL } from '../lib/posthog';
 import { SITE_URL } from '../lib/site';
@@ -23,6 +24,8 @@ const demoSteps = [
 ];
 
 export default function BookADemo() {
+  const bookingHref = useAdHref(CALENDLY_BOOKING_HREF);
+
   return (
     <>
       <Script
@@ -78,7 +81,7 @@ export default function BookADemo() {
 
                   <div className="mt-auto pt-8 flex flex-col gap-4">
                     <a
-                      href={CALENDLY_BOOKING_HREF}
+                      href={bookingHref}
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() =>

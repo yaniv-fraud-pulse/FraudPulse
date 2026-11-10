@@ -19,6 +19,7 @@ export function LpDemoCta({ children, className }: LpDemoCtaProps) {
       href={CALENDLY_DEMO_URL}
       target="_blank"
       rel="noopener noreferrer"
+      pendingLabel="Opening…"
       className={className}
       style={ctaStyle}
     >
