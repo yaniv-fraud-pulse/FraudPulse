@@ -27,7 +27,7 @@ const FAQ_REPLACE_SMB =
 
 const clusterLinks = [
   { href: '/stack/', label: 'Using FraudPulse with Radar, Flow, Blockify, and RevenueProtect' },
-  { href: '/alternatives/nofraud/', label: 'Which is better: Stripe, Forter, or NoFraud?' },
+  { href: '/alternatives/nofraud/', label: 'FraudPulse vs Wyllo (formerly NoFraud)' },
   { href: '/alternatives/payment-platform-tools/', label: 'Vs Radar, Flow, Blockify, and RevenueProtect' },
   { href: '/alternatives/smb-fraud-tools/', label: 'Vs ClearSale and SMB tools' },
   { href: '/blog/best-fraud-prevention-tools-for-shopify-2026/', label: 'Best fraud prevention tools for Shopify (2026)' },
@@ -308,7 +308,7 @@ export default function Solutions() {
                   </Link>
                   . Compare:{' '}
                   <Link href="/alternatives/nofraud/" className="font-semibold text-[#4a96a3] hover:underline">
-                    which is better: Stripe, Forter, or NoFraud
+                    FraudPulse vs Wyllo (formerly NoFraud)
                   </Link>
                   {' · '}
                   <Link href="/blog/fraudpulse-does-not-replace-stripe-radar-shopify-flow/" className="font-semibold text-[#4a96a3] hover:underline">

@@ -279,7 +279,7 @@ export default function About() {
                 </Link>
                 {' · '}
                 <Link href="/alternatives/nofraud/" className="font-semibold text-[#4a96a3] hover:underline">
-                  which is better: Stripe, Forter, or NoFraud
+                  FraudPulse vs Wyllo (formerly NoFraud)
                 </Link>
               </p>
             </Reveal>

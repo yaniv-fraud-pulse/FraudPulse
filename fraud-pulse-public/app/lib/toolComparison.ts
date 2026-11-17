@@ -40,7 +40,7 @@ export const COMPARISON_FEATURES: ComparisonFeature[] = [
     platform: 'partial',
   },
   {
-    feature: 'ML & AI empowered action items',
+    feature: 'Rules Ranked by Revenue Impact',
     fraudPulse: 'yes',
     manual: 'no',
     smb: 'partial',

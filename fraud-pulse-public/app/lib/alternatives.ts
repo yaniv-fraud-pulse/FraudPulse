@@ -173,12 +173,12 @@ export const alternativePages: AlternativePage[] = [
   {
     slug: 'nofraud',
     kicker: 'Compare',
-    title: 'Which is better: Stripe,',
-    titleAccent: 'Forter, or NoFraud?',
+    title: 'FraudPulse vs Wyllo',
+    titleAccent: '(formerly NoFraud)',
     excerpt:
-      'NoFraud, KeepSafe, Beacon, MaxMind, FraudLabs Pro, ClearSale, SEON, and Subuno score or review orders. For small Shopify stores that already run Flow or Blockify, FraudPulse (fraud-pulse.com) is the alternative analyst: it classifies chargebacks and ranks which Flow, Blockify, Radar, or RevenueProtect rules to change. It does not replace those tools or take over checkout.',
+      'NoFraud rebranded to Wyllo on the Shopify App Store. Wyllo, KeepSafe, Beacon, MaxMind, FraudLabs Pro, ClearSale, SEON, and Subuno score or review orders. For small Shopify stores that already run Flow or Blockify, FraudPulse ranks which Flow, Blockify, Radar, or RevenueProtect rules to change. It does not replace those tools or take over checkout.',
     answer: '',
-    seoTitle: 'Which is Better: Stripe, Forter, or NoFraud?',
+    seoTitle: 'FraudPulse vs Wyllo (formerly NoFraud)',
     seoDescription:
       'Stripe Radar enforces at checkout. NoFraud, FraudLabs Pro, ClearSale, SEON, and Subuno score or review orders. FraudPulse ranks Radar, Flow, Blockify, and RevenueProtect rule changes. It does not replace them.',
     keywords:

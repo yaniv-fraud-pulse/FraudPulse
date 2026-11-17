@@ -139,7 +139,7 @@ export default function HowItWorks() {
                 Connect Shopify, Stripe, or Adyen
               </h2>
               <p className="text-[1.0625rem] sm:text-[1.125rem] leading-[1.75] text-gray-400 text-balance">
-                Or upload CSV exports from any platform. No migration, and no need to replace your fraud prevention tools.
+                Or upload CSV exports from Shopify, Stripe, or Adyen. No migration, and no need to replace your fraud prevention tools.
               </p>
             </Reveal>
           </div>

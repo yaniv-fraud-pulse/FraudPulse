@@ -390,6 +390,12 @@ html {
 .blog-body p {
   margin-bottom: 1.5em;
 }
+.blog-body img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  margin: 0 0 1.75em;
+}
 .blog-body h2 {
   font-size: 1.625rem;
   font-weight: 800;

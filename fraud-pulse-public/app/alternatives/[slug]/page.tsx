@@ -60,7 +60,7 @@ export default async function AlternativePage({
             </h1>
             {page.slug === 'nofraud' ? (
               <p className="ai-answer text-[1.125rem] sm:text-[1.25rem] leading-[1.75] text-gray-700 text-balance">
-                Stripe Radar, NoFraud, and screening platforms do different jobs. Radar enforces at checkout. NoFraud, FraudLabs Pro, ClearSale, SEON, and Subuno score or review orders. FraudPulse ranks Stripe Radar, Shopify Flow, Blockify, or Adyen RevenueProtect rule changes. It does not replace those tools.
+                NoFraud rebranded to Wyllo on the Shopify App Store. Stripe Radar, Wyllo, and other screening platforms do different jobs. Radar enforces at checkout. Wyllo, FraudLabs Pro, ClearSale, SEON, and Subuno score or review orders. FraudPulse ranks Stripe Radar, Shopify Flow, Blockify, or Adyen RevenueProtect rule changes. It does not replace those tools.
               </p>
             ) : (
               <>

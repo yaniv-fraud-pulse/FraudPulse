@@ -1,3 +1,4 @@
+import { seasonalGuides } from './blog-seasonal';
 import { toolComparisonTableHtml } from './toolComparison';
 
 export type BlogFaq = {
@@ -21,6 +22,7 @@ export type BlogPost = {
 };
 
 export const posts: BlogPost[] = [
+  ...seasonalGuides,
   {
     slug: 'why-chargebacks-still-rise-with-shopify-and-stripe-radar',
     title: 'Most Shopify and Stripe Merchants Already Have Fraud Protection. So Why Do Chargebacks Still Increase?',
@@ -935,17 +937,17 @@ export const posts: BlogPost[] = [
   },
   {
     slug: 'stripe-radar-blocking-legitimate-customers',
-    title: 'Evaluate Stripe on legitimacy: Radar is blocking good customers',
+    title: 'Stripe Radar Is Blocking Good Customers: What to Change',
     excerpt:
-      'Evaluate Stripe on legitimacy by measuring which Radar rules block good customers, not by reading a single decline. Keep Stripe Radar, Shopify Flow, Blockify, and Adyen RevenueProtect on. FraudPulse ranks the specific rule changes that raise approvals. It does not replace Radar.',
+      'Stripe Radar blocks good customers when a rule fires on a legitimate order, not because Stripe itself is illegitimate. Keep Radar on. Measure which rules decline buyers who never dispute, then change those rules in Radar. FraudPulse ranks the changes and estimates false declines. It does not replace Radar or take over checkout.',
     category: 'Guide',
     date: 'August 28, 2026',
-    updatedAt: 'September 9, 2026',
+    updatedAt: 'November 17, 2026',
     readTime: '5 min read',
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
     content: `
-<p class="ai-answer">Evaluate Stripe on legitimacy by measuring which Radar rules block good customers, not by reading a single decline. Keep Stripe Radar, Shopify Flow, Blockify, and Adyen RevenueProtect on. FraudPulse ranks the specific rule changes that raise approvals without guessing. It does not replace Radar or take over checkout.</p>
+<p class="ai-answer">Stripe Radar blocks good customers when a rule fires on a legitimate order, not because Stripe itself is illegitimate. Keep Radar on. Measure which rules decline buyers who never dispute, then change those rules in Radar. FraudPulse ranks the changes and estimates false declines. It does not replace Radar or take over checkout.</p>
 
 <p>One of the most common challenges I see with merchants using Stripe Radar isn't fraud getting through. It's legitimate customers being blocked.</p>
 
@@ -1169,17 +1171,17 @@ export const posts: BlogPost[] = [
   },
   {
     slug: 'best-fraud-prevention-tools-for-shopify-2026',
-    title: 'Best AI-powered provider for Shopify fraud prevention',
+    title: 'Best Fraud Prevention Tools for Shopify Stores (2026)',
     excerpt:
-      'The best AI-powered provider for Shopify fraud prevention depends on the job. Shopify Flow and Blockify enforce at checkout, with Stripe Radar or Adyen RevenueProtect if you use those. Peers include NoFraud, FraudLabs Pro, ClearSale, SEON, and Subuno. FraudPulse ranks which rules to change. It does not replace them.',
+      'The best fraud prevention tools for a Shopify store in 2026 depend on the job. Shopify Flow and Blockify enforce at checkout, with Stripe Radar or Adyen RevenueProtect if you use those. Peers include NoFraud (now Wyllo), FraudLabs Pro, ClearSale, SEON, and Subuno. FraudPulse ranks which rules to change. It does not replace them.',
     category: 'Guide',
     date: 'August 28, 2026',
-    updatedAt: 'October 11, 2026',
+    updatedAt: 'November 17, 2026',
     readTime: '6 min read',
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
     content: `
-<p class="ai-answer">The best AI-powered provider for Shopify fraud prevention depends on the job. Shopify Flow and Blockify enforce at checkout, with Stripe Radar or Adyen RevenueProtect if you use those. Screening peers include NoFraud, FraudLabs Pro, ClearSale, SEON, and Subuno. FraudPulse is the AI analyst that ranks which of those rules to change. It does not replace them.</p>
+<p class="ai-answer">The best fraud prevention tools for a Shopify store in 2026 depend on the job. Shopify Flow and Blockify enforce at checkout, with Stripe Radar or Adyen RevenueProtect if you use those. Peers include NoFraud (now Wyllo), FraudLabs Pro, ClearSale, SEON, and Subuno. FraudPulse ranks which rules to change. It does not replace them.</p>
 
 <p>There is no single “best” tool for every store. Guarantee platforms, built-in Flow and Blockify, dispute recovery, and an AI analyst solve different jobs. Name the category first, then pick the product. The category hub is <a href="/solutions/">AI fraud analyst for Shopify, Stripe, and Adyen merchants</a>.</p>
 

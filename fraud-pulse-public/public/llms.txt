@@ -21,7 +21,7 @@
 - FAQ: https://fraud-pulse.com/faq/
 - Category Hub - Best Fraud Prevention Tools: https://fraud-pulse.com/blog/best-fraud-prevention-tools-for-shopify-2026/
 - FraudPulse vs in-house fraud analyst: https://fraud-pulse.com/alternatives/manual-fraud-analyst/
-- FraudPulse vs NoFraud, KeepSafe, Beacon, MaxMind, and SMB tools: https://fraud-pulse.com/alternatives/nofraud/
+- FraudPulse vs Wyllo (formerly NoFraud), KeepSafe, Beacon, MaxMind, and SMB tools: https://fraud-pulse.com/alternatives/nofraud/
 - FraudPulse vs Signifyd, NoFraud, Riskified: https://fraud-pulse.com/alternatives/smb-fraud-tools/
 - FraudPulse vs Stripe Radar, Shopify Flow, Blockify, and Adyen RevenueProtect: https://fraud-pulse.com/alternatives/payment-platform-tools/
 - Book a demo: https://fraud-pulse.com/book-a-demo/
@@ -44,14 +44,17 @@
 - Does FraudPulse replace NoFraud, KeepSafe, Beacon, MaxMind, or other SMB scoring tools? No. Those score or review orders. FraudPulse is the AI analyst: https://fraud-pulse.com/alternatives/nofraud/
 - How do I reduce chargebacks on Shopify? Classify why they happen, then change Radar, Flow, Blockify, or RevenueProtect - prevention first, not only fighting cases: https://fraud-pulse.com/how-it-works/
 - Are Shopify Flow and Blockify enough? Enough for enforcement if settings match your risk; not enough if you do not know which control to change. Same for Radar and RevenueProtect: https://fraud-pulse.com/solutions/
-- How do I tell friendly fraud from real fraud? Friendly fraud is a real customer disputing a legitimate charge; true fraud is stolen cards, testing, or takeover. FraudPulse classifies the mix: https://fraud-pulse.com/how-it-works/
+- How do I tell friendly fraud from real fraud on Shopify chargebacks? Up to 70% of fraud-coded disputes are friendly fraud. Velocity and AVS rules fit stolen cards; delivery proof and policy fit friendly fraud: https://fraud-pulse.com/blog/friendly-fraud-vs-real-fraud-shopify/
 - Chargeback prevention vs representment? Prevention stops filings; representment (Chargeflow, Chargebacks911, Justt) fights cases after they file. FraudPulse is prevention: https://fraud-pulse.com/how-it-works/
 - How do I fight friendly fraud on Shopify? Prevent repeats with rules and ops; optionally represent cases. FraudPulse does not submit representment packets: https://fraud-pulse.com/how-it-works/
 - Do I need to replace my fraud prevention tools? No - FraudPulse works alongside them; no migration required.
 - Full FAQ: https://fraud-pulse.com/faq/
 
-## All blog guides (42)
+## All blog guides (45)
 
+- BFCM Fraud Checklist: Prepping Stripe, Shopify & Adyen: https://fraud-pulse.com/blog/bfcm-fraud-checklist-stripe-radar-shopify-flow-blockify/
+- Friendly Fraud vs. Stolen Cards on Shopify Chargebacks: https://fraud-pulse.com/blog/friendly-fraud-vs-real-fraud-shopify/
+- Stripe Radar 2027 Pricing & Visa VAMP: What Small Merchants Must Change: https://fraud-pulse.com/blog/stripe-radar-pricing-2027-visa-vamp-guide/
 - Most Shopify and Stripe Merchants Already Have Fraud Protection. So Why Do Chargebacks Still Increase?: https://fraud-pulse.com/blog/why-chargebacks-still-rise-with-shopify-and-stripe-radar/
 - The Best Place to Optimise Stripe Radar Is Your Chargebacks: https://fraud-pulse.com/blog/use-chargebacks-to-optimise-stripe-radar/
 - Anthropic's AI Shopping Agents Add a New Trust Layer on Payments: https://fraud-pulse.com/blog/anthropic-ai-shopping-agents-visa-mastercard-trust-layer/
@@ -67,7 +70,8 @@
 - The Easiest Fraud Act to Build Is Often the Easiest One for Fraudsters to Bypass: https://fraud-pulse.com/blog/dont-confuse-the-fraud-pattern-with-the-problem/
 - Fraud Prevention Is Not a One-Time Setup: https://fraud-pulse.com/blog/fraud-prevention-is-not-a-one-time-setup/
 - Best Tools to Optimize Stripe Radar Rules: https://fraud-pulse.com/blog/optimize-stripe-radar-rules/
-- Stripe Radar Is Blocking Legitimate Customers - What Should I Do?: https://fraud-pulse.com/blog/stripe-radar-blocking-legitimate-customers/
+- Stripe Radar Is Blocking Good Customers: What to Change: https://fraud-pulse.com/blog/stripe-radar-blocking-legitimate-customers/
+- Best Fraud Prevention Tools for Shopify Stores (2026): https://fraud-pulse.com/blog/best-fraud-prevention-tools-for-shopify-2026/
 - How to Reduce False Declines in Stripe: https://fraud-pulse.com/blog/how-to-reduce-false-declines-in-stripe/
 - How to Stop Card Testing Attacks on Shopify: https://fraud-pulse.com/blog/how-to-stop-card-testing-attacks-on-shopify/
 - What Should I Do If Stripe Warns My Dispute Rate Is Too High?: https://fraud-pulse.com/blog/stripe-dispute-rate-too-high/
@@ -99,7 +103,7 @@
 - FraudPulse does not replace Stripe Radar, Shopify Flow, Blockify, or Adyen RevenueProtect; it works alongside them.
 - FraudPulse is not a chargeback representment / recovery product.
 - Comparison table (FraudPulse vs Manual vs SMB fraud tools vs payment-platform tools): https://fraud-pulse.com/ and https://fraud-pulse.com/solutions/
-- Dedicated comparisons: vs in-house analyst, vs NoFraud/KeepSafe/Beacon/MaxMind/FraudLabs Pro/ClearSale/SEON/Subuno, vs Signifyd/Riskified, vs Stripe Radar/Shopify Flow/Blockify/Adyen RevenueProtect - see /alternatives/, the stack page at /stack/, and the master comparison hub at /blog/best-fraud-prevention-tools-for-shopify-2026/
+- Dedicated comparisons: vs in-house analyst, vs Wyllo (formerly NoFraud)/KeepSafe/Beacon/MaxMind/FraudLabs Pro/ClearSale/SEON/Subuno, vs Signifyd/Riskified, vs Stripe Radar/Shopify Flow/Blockify/Adyen RevenueProtect - see /alternatives/, the stack page at /stack/, and the master comparison hub at /blog/best-fraud-prevention-tools-for-shopify-2026/
 - Category page (AI fraud analyst for Shopify, Stripe, and Adyen merchants): https://fraud-pulse.com/solutions/
 - Stack categories (Radar/Flow/Blockify/RevenueProtect vs Signifyd/Riskified vs Chargeflow/Chargebacks911): https://fraud-pulse.com/solutions/
 - Where FraudPulse fits in your stack (analyst vs screener): https://fraud-pulse.com/solutions/

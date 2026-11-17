@@ -108,20 +108,23 @@ function CapabilityIcon({ name, tone = 'teal' }: { name: keyof typeof CAPABILITY
 
 const tabs = [
   {
-    label: 'AI Actions',
+    label: 'Rule Recommendations',
     icon: (
       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
       </svg>
     ),
     title: 'Get ranked actions, not just charts.',
-    body: 'The AI Actions module generates specific fraud rules ranked by impact each one showing estimated fraud capture rate and false positive percentage so your team acts with confidence, not guesswork.',
-    bullets: ['AI Summary with risk level badge', 'Designated rules with fraud rate & FP%', 'Key insights on blind spots', 'Full PDF report for your risk committee'],
+    body: 'Recommended rules are specific fraud rules ranked by revenue impact, each one showing estimated fraud capture and the share of good customers it would decline.',
+    bullets: ['Summary with risk level badge', 'Designated rules with fraud rate & FP%', 'Key insights on blind spots', 'Full PDF report for your risk committee'],
     visual: (
       <div className="rounded-2xl border bg-white p-4 sm:p-5 w-full max-w-full min-w-0 overflow-hidden text-left" style={{ borderColor: '#e5e7eb', boxShadow: '0 8px 32px rgba(0,0,0,0.08)' }}>
-        <div className="flex items-center gap-2 mb-4">
-          <div className="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0" style={{ boxShadow: '0 0 6px #34d399' }} />
-          <span className="text-xs font-semibold text-gray-400 uppercase tracking-widest">AI Recommendations</span>
+        <div className="flex items-center justify-between gap-2 mb-4">
+          <div className="flex items-center gap-2 min-w-0">
+            <div className="w-2 h-2 rounded-full bg-emerald-400 flex-shrink-0" style={{ boxShadow: '0 0 6px #34d399' }} />
+            <span className="text-xs font-semibold text-gray-400 uppercase tracking-widest">Recommended Rules</span>
+          </div>
+          <span className="text-[0.65rem] font-semibold uppercase tracking-wider text-gray-400 border border-gray-200 rounded-full px-2 py-0.5 shrink-0">Sample data</span>
         </div>
         {[
           { rule: 'Block cards with prior chargeback history', fraud: '72%', fp: '0.4%', rank: 1, delay: 100 },
@@ -506,7 +509,7 @@ export default function Home() {
               </span>
               <span className="hidden sm:block h-6 lg:h-7 w-px bg-gradient-to-b from-transparent via-gray-300 to-transparent" aria-hidden />
               <span className="sr-only"> - </span>
-              <span className="text-gradient-flow">AI Fraud Prevention Analyst</span>
+              <span className="text-gradient-flow">Fraud Prevention Analyst</span>
             </p>
 
             <h1 className="font-extrabold text-gray-900 mb-7 tracking-[-0.045em] leading-[1.02] text-[2.25rem] sm:text-[3.75rem] lg:text-[5rem]">
@@ -520,19 +523,35 @@ export default function Home() {
               smarter. FraudPulse finds what&apos;s driving your chargebacks and tells you exactly which rules to change.
             </p>
 
-            <div className="mt-8 flex flex-col items-center gap-3 anim-fadeUp delay-400">
-              <TrackedAnchor
-                event="signup_cta_clicked"
-                href={APP_SIGNUP_URL}
-                pendingLabel="Opening…"
-                className="inline-flex items-center justify-center rounded-full px-8 py-4 text-[1.0625rem] font-bold text-white transition-transform hover:scale-[1.03]"
-                style={{ background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)', boxShadow: '0 4px 20px rgba(91,168,180,0.35)' }}
-              >
-                Start 14-day trial
-              </TrackedAnchor>
-              <p className="max-w-xl text-[0.9375rem] leading-[1.6] text-gray-500">
-                14 days includes connecting Stripe or Shopify and seeing which rule to change. No credit card.
-              </p>
+            <div className="mt-8 flex flex-col items-center gap-4 anim-fadeUp delay-400">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center gap-3">
+                <div className="flex flex-col items-center gap-2">
+                  <TrackedAnchor
+                    event="signup_cta_clicked"
+                    href={APP_SIGNUP_URL}
+                    pendingLabel="Opening…"
+                    className="inline-flex items-center justify-center rounded-full px-8 py-4 text-[1.0625rem] font-bold text-white transition-transform hover:scale-[1.03]"
+                    style={{ background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 100%)', boxShadow: '0 4px 20px rgba(91,168,180,0.35)' }}
+                  >
+                    Free False-Decline Check
+                  </TrackedAnchor>
+                  <p className="max-w-xs text-center text-[0.8125rem] leading-[1.5] text-gray-500">
+                    Upload a CSV, see the good customers your rules declined last month.
+                  </p>
+                  <Link href="/pricing/" className="text-[0.9375rem] font-semibold text-[#4a96a3] hover:underline">
+                    14 days free · then $159/mo · or pay as you go
+                  </Link>
+                </div>
+                <TrackedAnchor
+                  event="demo_cta_clicked"
+                  href="https://calendly.com/idan-fraud-pulse/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-full border border-gray-200 bg-white px-8 py-4 text-[1.0625rem] font-bold text-gray-900 transition-colors hover:border-[#5ba8b4]/50 hover:text-[#4a96a3]"
+                >
+                  Book a Demo
+                </TrackedAnchor>
+              </div>
             </div>
 
             {/* Process flow */}
@@ -682,7 +701,7 @@ export default function Home() {
                       <PulseMark id="stackPulse" className="w-11 h-11" />
                     </div>
                     <span className="relative text-[0.8125rem] font-semibold text-white">FraudPulse</span>
-                    <span className="relative text-[0.6875rem] text-gray-500 -mt-1.5">AI analyst</span>
+                    <span className="relative text-[0.6875rem] text-gray-500 -mt-1.5">Fraud analyst</span>
                   </div>
                   <span className="flow-line hidden lg:block h-[2px] w-14 rounded-full" aria-hidden />
                   <span className="flow-line-vertical lg:hidden h-8 w-[2px] rounded-full" aria-hidden />
@@ -946,6 +965,25 @@ export default function Home() {
             </Reveal>
             <Reveal animation="anim-fadeUp" delay={75}>
               <FaqAccordion faqs={homeFaqs} variant="light" />
+            </Reveal>
+          </div>
+        </section>
+
+        <section className="py-16 sm:py-20 px-5 sm:px-10 bg-[#fafbfc]">
+          <div className="max-w-3xl mx-auto text-center">
+            <Reveal animation="anim-fadeUp">
+              <h2 className="font-extrabold text-gray-900 tracking-[-0.04em] leading-[1.08] text-[2rem] sm:text-[2.75rem] mb-5 text-balance">
+                Built by Fraud &amp; Payments Operators
+              </h2>
+              <p className="text-[1.0625rem] sm:text-[1.125rem] leading-[1.75] text-gray-600 mb-6 text-balance">
+                Founded by Idan Hayon (12+ years leading fintech fraud and payments infrastructure). We built FraudPulse after seeing $1B+ companies try to protect margins with 2-person fraud teams. You shouldn&apos;t need a team of data scientists to stop chargebacks without declining your best customers.
+              </p>
+              <Link href="/about/" className="inline-flex items-center gap-2 text-[1rem] font-semibold text-[#4a96a3] hover:underline">
+                About FraudPulse
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.2} d="M5 12h14m-6-6l6 6-6 6" />
+                </svg>
+              </Link>
             </Reveal>
           </div>
         </section>
