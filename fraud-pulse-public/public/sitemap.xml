@@ -74,9 +74,45 @@
   </url>
   <url>
     <loc>https://fraud-pulse.com/blog/</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://fraud-pulse.com/blog/ai-impersonation-fraud-trust-the-instruments/</loc>
+    <lastmod>2026-11-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://fraud-pulse.com/blog/fraudsters-learn-from-your-fraud-rules/</loc>
+    <lastmod>2026-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://fraud-pulse.com/blog/protected-orders-still-have-something-to-teach/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://fraud-pulse.com/blog/no-fraud-incident-does-not-mean-optimised/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://fraud-pulse.com/blog/fraud-exposure-is-more-than-chargebacks/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://fraud-pulse.com/blog/how-exposed-is-your-business-to-fraud/</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
   </url>
   <url>
     <loc>https://fraud-pulse.com/blog/bfcm-fraud-checklist-stripe-radar-shopify-flow-blockify/</loc>

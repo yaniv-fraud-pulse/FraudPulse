@@ -50,8 +50,14 @@
 - Do I need to replace my fraud prevention tools? No - FraudPulse works alongside them; no migration required.
 - Full FAQ: https://fraud-pulse.com/faq/
 
-## All blog guides (45)
+## All blog guides (51)
 
+- AI Impersonation Fraud: Trust the Instruments, Not What You See and Hear: https://fraud-pulse.com/blog/ai-impersonation-fraud-trust-the-instruments/
+- The Better Your Fraud Rules Get, the More Fraudsters Learn From Them: https://fraud-pulse.com/blog/fraudsters-learn-from-your-fraud-rules/
+- A Protected Order Still Has Something to Teach You: https://fraud-pulse.com/blog/protected-orders-still-have-something-to-teach/
+- Nothing Going Wrong Recently Does Not Mean Your Fraud Setup Is Working: https://fraud-pulse.com/blog/no-fraud-incident-does-not-mean-optimised/
+- You Cannot Measure Fraud Exposure Through Chargebacks Alone: https://fraud-pulse.com/blog/fraud-exposure-is-more-than-chargebacks/
+- How Exposed Is Your Business to Fraud Today?: https://fraud-pulse.com/blog/how-exposed-is-your-business-to-fraud/
 - BFCM Fraud Checklist: Prepping Stripe, Shopify & Adyen: https://fraud-pulse.com/blog/bfcm-fraud-checklist-stripe-radar-shopify-flow-blockify/
 - Friendly Fraud vs. Stolen Cards on Shopify Chargebacks: https://fraud-pulse.com/blog/friendly-fraud-vs-real-fraud-shopify/
 - Stripe Radar 2027 Pricing & Visa VAMP: What Small Merchants Must Change: https://fraud-pulse.com/blog/stripe-radar-pricing-2027-visa-vamp-guide/
