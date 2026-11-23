@@ -33,7 +33,7 @@ export function LpContactForm() {
         <div className="text-center mb-6">
           <Eyebrow>Send a message</Eyebrow>
           <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] text-[1.75rem] sm:text-[2.25rem]">
-            Not ready for a call?
+            Have a question first?
           </h2>
           <p className="text-[1.0625rem] leading-[1.7] text-gray-500 mt-2">
             Leave your details and our team will get back to you.

@@ -17,17 +17,28 @@ declare global {
   }
 }
 
-/** Standard Meta events: PageView, Lead (trial click), Contact (enquiry), Schedule (demo booked). */
+/** Standard Meta events: PageView, Contact (enquiry), Schedule (demo booked). Lead is not fired on this site. */
 export function trackMetaEvent(
-  event: 'PageView' | 'Lead' | 'Contact' | 'Schedule',
+  event: 'PageView' | 'Contact' | 'Schedule',
   params?: Record<string, string>,
 ) {
   if (typeof window === 'undefined' || !isMetaPixelEnabled) return;
 
+  fireWhenReady('track', event, params);
+}
+
+/** Custom Meta events: TrialCtaClick (trial button tap). Not used for ad optimization. */
+export function trackMetaCustomEvent(event: 'TrialCtaClick', params?: Record<string, string>) {
+  if (typeof window === 'undefined' || !isMetaPixelEnabled) return;
+  fireWhenReady('trackCustom', event, params);
+}
+
+/** Fires now, or retries for up to 5s while the pixel script loads. */
+function fireWhenReady(method: 'track' | 'trackCustom', event: string, params?: Record<string, string>) {
   const fire = () => {
     if (typeof window.fbq !== 'function') return false;
-    if (params) window.fbq('track', event, params);
-    else window.fbq('track', event);
+    if (params) window.fbq(method, event, params);
+    else window.fbq(method, event);
     return true;
   };
 

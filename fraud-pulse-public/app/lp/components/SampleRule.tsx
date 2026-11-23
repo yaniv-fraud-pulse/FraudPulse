@@ -9,11 +9,11 @@ export function SampleRule() {
       </p>
       <div className="grid grid-cols-2 gap-3 mb-4">
         <div className="rounded-2xl bg-[#f8f9fa] px-4 py-3">
-          <p className="text-[1.375rem] font-extrabold text-[#4a96a3]">22%</p>
-          <p className="text-[0.8125rem] leading-[1.4] text-gray-500">of fraud chargebacks caught</p>
+          <p className="text-[1.375rem] font-extrabold text-[#4a96a3]">14.9%</p>
+          <p className="text-[0.8125rem] leading-[1.4] text-gray-500">of fraud loss caught</p>
         </div>
         <div className="rounded-2xl bg-[#f8f9fa] px-4 py-3">
-          <p className="text-[1.375rem] font-extrabold text-gray-900">96</p>
+          <p className="text-[1.375rem] font-extrabold text-gray-900">93</p>
           <p className="text-[0.8125rem] leading-[1.4] text-gray-500">good orders sent to review</p>
         </div>
       </div>

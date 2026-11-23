@@ -4,11 +4,18 @@ import { MetaLpFrame } from '../components/MetaLpFrame';
 import { LpGoogleCta } from '../components/LpGoogleCta';
 import { LpTrialCta } from '../components/LpTrialCta';
 import { Eyebrow, HeroBackdrop } from '../../components/Brand';
+import { DashboardSummary } from '../components/DashboardSummary';
 
-const summary = [
-  { label: 'Orders reviewed', value: '48,200' },
-  { label: 'Fraud chargebacks', value: '212' },
-  { label: 'Fraud chargeback cost', value: '$31,800' },
+// Made-up store. Each action's share is of the fraud loss in dollars, so the three add up to the savings and coverage.
+const fraudLoss = { label: 'Fraud loss', value: '$31,847', note: '213 fraud chargebacks' };
+const savings = { label: 'Potential savings', value: '$15,344', note: 'By implementing recommended actions' };
+const coverage = { label: 'Coverage of fraud loss', value: '48.2%', note: 'Share of the fraud loss covered by the actions' };
+
+const store = [
+  { label: 'Transactions', value: '48,317' },
+  { label: 'Payment volume', value: '$6,284,519' },
+  { label: 'Chargebacks', value: '643', note: '1.3% rate · $83,412' },
+  { label: 'Good orders blocked', value: '0.16%' },
 ];
 
 const rules = [
@@ -16,28 +23,28 @@ const rules = [
     rank: 1,
     rule: 'Block cards with prior chargeback history',
     tool: 'Stripe Radar',
-    caught: '34%',
-    chargebacks: '72 chargebacks',
-    saved: '$10,800',
-    goodOrders: '12 good orders blocked',
+    caught: '24.8%',
+    chargebacks: '53 chargebacks',
+    saved: '$7,912',
+    goodOrders: '11 good orders blocked',
   },
   {
     rank: 2,
     rule: 'Review first-time buyers shipping to a new address over $300',
     tool: 'Shopify Flow',
-    caught: '22%',
-    chargebacks: '47 chargebacks',
-    saved: '$7,050',
-    goodOrders: '96 good orders sent to review',
+    caught: '14.9%',
+    chargebacks: '31 chargebacks',
+    saved: '$4,738',
+    goodOrders: '93 good orders sent to review',
   },
   {
     rank: 3,
     rule: 'Block orders from high-risk email domains',
     tool: 'Blockify',
-    caught: '14%',
-    chargebacks: '30 chargebacks',
-    saved: '$4,500',
-    goodOrders: '64 good orders blocked',
+    caught: '8.5%',
+    chargebacks: '19 chargebacks',
+    saved: '$2,694',
+    goodOrders: '67 good orders blocked',
   },
 ];
 
@@ -49,7 +56,7 @@ export default function SampleReport() {
         <div className="relative max-w-3xl mx-auto text-center">
           <Eyebrow>Sample report</Eyebrow>
           <h1 className="font-extrabold text-gray-900 tracking-[-0.045em] leading-[1.08] mb-5 text-[2.15rem] sm:text-[3.1rem]">
-            Which rule should this store change first?
+            $15,344 in potential savings for this example store
           </h1>
           <p className="text-[1.125rem] leading-[1.7] text-gray-500">
             This example uses a made-up store and 90 days of made-up data. It is not a customer or a promised result.
@@ -59,17 +66,18 @@ export default function SampleReport() {
 
       <section className="px-5 sm:px-8 pb-10">
         <div className="max-w-3xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-10">
-            {summary.map((item) => (
-              <div key={item.label} className="rounded-2xl border border-gray-200/80 bg-white px-5 py-4 text-center">
-                <p className="text-[1.5rem] font-extrabold tracking-[-0.03em] text-gray-900">{item.value}</p>
-                <p className="text-[0.875rem] text-gray-500">{item.label}</p>
-              </div>
-            ))}
+          <div className="mb-10">
+            <DashboardSummary
+              title="Example dashboard, made-up data"
+              fraudLoss={fraudLoss}
+              savings={savings}
+              coverage={coverage}
+              store={store}
+            />
           </div>
 
           <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] mb-5 text-[1.5rem] sm:text-[1.875rem]">
-            Ranked rule changes
+            Top recommended actions
           </h2>
           <ol className="flex flex-col gap-4">
             {rules.map((item) => (
@@ -85,7 +93,7 @@ export default function SampleReport() {
                 </div>
                 <dl className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                   <div className="rounded-2xl bg-[#f8f9fa] px-4 py-3">
-                    <dt className="text-[0.8125rem] text-gray-500">Fraud chargebacks caught</dt>
+                    <dt className="text-[0.8125rem] text-gray-500">Fraud loss caught</dt>
                     <dd className="font-extrabold text-[#4a96a3] text-[1.25rem]">{item.caught}</dd>
                     <dd className="text-[0.8125rem] text-gray-500">{item.chargebacks}</dd>
                   </div>
@@ -102,7 +110,7 @@ export default function SampleReport() {
             ))}
           </ol>
           <p className="mt-4 text-[0.875rem] leading-[1.6] text-gray-500">
-            Each estimate stands alone. Rules can catch some of the same orders, so the results do not add up.
+            Together, these three actions add up to the $15,344 in potential savings (48.2% of the fraud loss).
           </p>
         </div>
       </section>
@@ -110,15 +118,17 @@ export default function SampleReport() {
       <section className="py-12 sm:py-16 px-5 sm:px-8 bg-[#f8f9fa]">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="font-extrabold text-gray-900 tracking-[-0.03em] mb-4 text-[1.75rem] sm:text-[2.25rem]">
-            See this for your own store
+            What are your potential savings?
           </h2>
           <p className="text-[1.0625rem] leading-[1.7] text-gray-600 mb-8">
             Connect Stripe or Shopify during a 14-day trial. No credit card. You keep your current fraud tools.
           </p>
-          <LpTrialCta className="inline-flex items-center justify-center rounded-full px-10 py-4 text-lg font-bold text-white hover:scale-[1.03] transition-transform">
-            Run this on my data
-          </LpTrialCta>
-          <LpGoogleCta />
+          <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:items-stretch">
+            <LpTrialCta className="inline-flex items-center justify-center rounded-full px-10 py-4 text-lg font-bold text-white hover:scale-[1.03] transition-transform">
+              Run this on my data
+            </LpTrialCta>
+            <LpGoogleCta className="flex" />
+          </div>
         </div>
       </section>
     </MetaLpFrame>

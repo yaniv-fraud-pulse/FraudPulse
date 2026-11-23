@@ -15,14 +15,14 @@ function GoogleMark() {
 }
 
 /** Secondary trial CTA: goes straight to Google sign-in through app signup. */
-export function LpGoogleCta() {
+export function LpGoogleCta({ className = 'mt-3' }: { className?: string }) {
   return (
-    <div className="mt-3">
+    <div className={className}>
       <TrackedAnchor
         event="signup_cta_clicked"
         href={APP_GOOGLE_SIGNUP_URL}
         pendingLabel="Opening Google…"
-        className="inline-flex items-center justify-center gap-3 rounded-full border border-gray-300 bg-white px-8 py-3 text-base font-semibold text-gray-800 hover:bg-gray-50 transition-colors"
+        className="inline-flex h-full items-center justify-center gap-3 rounded-full border border-gray-300 bg-white px-8 py-3 text-base font-semibold text-gray-800 hover:bg-gray-50 transition-colors"
       >
         <GoogleMark />
         Continue with Google

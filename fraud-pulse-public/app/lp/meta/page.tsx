@@ -45,10 +45,12 @@ export default function MetaLongLanding() {
           </Reveal>
           <Reveal animation="anim-fadeUp" delay={225}>
             <SampleRule />
-            <LpTrialCta className="inline-flex items-center justify-center gap-2 rounded-full px-10 py-4 text-lg font-bold text-white hover:scale-[1.03] transition-transform">
-              Start your free trial
-            </LpTrialCta>
-            <LpGoogleCta />
+            <div className="flex flex-col items-center justify-center gap-3 sm:flex-row sm:items-stretch">
+              <LpTrialCta className="inline-flex items-center justify-center gap-2 rounded-full px-10 py-4 text-lg font-bold text-white hover:scale-[1.03] transition-transform">
+                Start your free trial
+              </LpTrialCta>
+              <LpGoogleCta className="flex" />
+            </div>
             <SampleReportLink />
           </Reveal>
         </div>

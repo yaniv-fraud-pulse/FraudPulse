@@ -4,17 +4,17 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Image from 'next/image';
 import Script from 'next/script';
-import { useEffect, useState } from 'react';
 import { Reveal } from '../components/Reveal';
 import { Eyebrow, FrostedBox, HeroBackdrop } from '../components/Brand';
+import { useClientValue } from '../hooks/useClientValue';
 import { WEBINAR, formatWebinarLocalWhen, type WebinarLocalWhen } from '../lib/webinar';
 
-export default function WebinarPage() {
-  const [localWhen, setLocalWhen] = useState<WebinarLocalWhen | null>(null);
+// Cached so every read returns the same object, as useClientValue requires.
+let cachedLocalWhen: WebinarLocalWhen | null = null;
+const getLocalWhen = () => (cachedLocalWhen ??= formatWebinarLocalWhen());
 
-  useEffect(() => {
-    setLocalWhen(formatWebinarLocalWhen());
-  }, []);
+export default function WebinarPage() {
+  const localWhen = useClientValue<WebinarLocalWhen | null>(getLocalWhen, null);
 
   return (
     <div className="flex flex-col min-h-screen bg-white overflow-x-clip">

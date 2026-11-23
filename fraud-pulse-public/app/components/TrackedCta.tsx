@@ -4,7 +4,8 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import type { ComponentProps, MouseEvent } from 'react';
 import { withAdParams } from '../lib/adParams';
-import { trackMetaEvent } from '../lib/metaPixel';
+import { trackMetaCustomEvent } from '../lib/metaPixel';
+import { useClientValue } from '../hooks/useClientValue';
 import { captureEvent } from './PostHogProvider';
 
 export type CtaEvent = 'signup_cta_clicked' | 'demo_cta_clicked' | 'sample_report_cta_clicked';
@@ -17,8 +18,9 @@ function trackCta(event: CtaEvent, destination: string) {
     page: typeof window !== 'undefined' ? window.location.pathname : '',
     destination,
   });
+  // A tap is not a lead: many taps never reach the signup form. Lead belongs to the app, on signup.
   if (event === 'signup_cta_clicked') {
-    trackMetaEvent('Lead', { content_name: 'free_trial' });
+    trackMetaCustomEvent('TrialCtaClick', { content_name: 'free_trial' });
   }
 }
 
@@ -27,21 +29,19 @@ function trackCta(event: CtaEvent, destination: string) {
  * Calendly (UTM tags only). Other links are returned unchanged.
  */
 export function useAdHref(href: string): string {
-  const [resolved, setResolved] = useState(href);
+  return useClientValue(() => resolveAdHref(href), href);
+}
 
-  useEffect(() => {
-    let host = '';
-    try {
-      host = new URL(href).hostname;
-    } catch {
-      // Relative link: nothing to forward.
-    }
-    if (host === 'app.fraud-pulse.com') setResolved(withAdParams(href, 'all'));
-    else if (host === 'calendly.com') setResolved(withAdParams(href, 'utm'));
-    else setResolved(href);
-  }, [href]);
-
-  return resolved;
+function resolveAdHref(href: string): string {
+  let host = '';
+  try {
+    host = new URL(href).hostname;
+  } catch {
+    // Relative link: nothing to forward.
+  }
+  if (host === 'app.fraud-pulse.com') return withAdParams(href, 'all');
+  if (host === 'calendly.com') return withAdParams(href, 'utm');
+  return href;
 }
 
 type TrackedLinkProps = ComponentProps<typeof Link> & {

@@ -137,7 +137,7 @@ export default function Terms() {
             <section>
               <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Termination</h2>
               <p>
-                Either party may terminate the service agreement with 30 days' notice. Upon termination, 
+                Either party may terminate the service agreement with 30 days&apos; notice. Upon termination, 
                 you will retain access to your data for 90 days for export purposes.
               </p>
             </section>
