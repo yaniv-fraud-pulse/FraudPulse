@@ -220,8 +220,7 @@ function Slider({ label, value, onChange }: { label: string; value: number; onCh
   );
 }
 
-const cardClass = 'rounded-3xl border border-gray-200/80 bg-white p-6 sm:p-8';
-const kickerClass = 'text-[0.7rem] font-semibold tracking-[0.1em] uppercase text-[#5ba8b4] mb-2';
+const cardClass = 'rounded-3xl border border-gray-200/80 bg-white p-6';
 const linkClass = 'font-semibold text-[#4a96a3] hover:underline';
 
 /* ---------- Page ---------- */
@@ -316,12 +315,12 @@ export default function ChargebackRatioPage() {
         </section>
 
         <section className="pb-12 sm:pb-20 px-5 sm:px-10 bg-white">
-          <div className="max-w-4xl mx-auto flex flex-col gap-6">
+          <div className="max-w-7xl mx-auto flex flex-col gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
             {/* 1) Chargeback ratio */}
             <article className={cardClass}>
-              <p className={kickerClass}>Calculator 1</p>
               <h2 className="font-bold text-gray-900 text-[1.5rem] mb-5 tracking-[-0.02em]">Chargeback ratio</h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+              <div className="grid grid-cols-1 gap-4 mb-5">
                 <NumberField label="Disputes (count)" value={vals.d} onChange={(v) => set('d', v)} />
                 <NumberField label="Payments (count)" value={vals.p} onChange={(v) => set('p', v)} />
               </div>
@@ -333,12 +332,11 @@ export default function ChargebackRatioPage() {
 
             {/* 2) Visa VAMP worksheet */}
             <article className={cardClass}>
-              <p className={kickerClass}>Calculator 2</p>
               <h2 className="font-bold text-gray-900 text-[1.5rem] mb-2 tracking-[-0.02em]">Visa VAMP worksheet</h2>
               <p className="text-[1rem] leading-[1.7] text-gray-600 mb-5">
                 Visa counts transactions, not amounts: (TC40 fraud reports + TC15 disputes) ÷ settled transactions (TC05). Card-not-present Visa transactions only, for one month.
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-5">
+              <div className="grid grid-cols-1 gap-4 mb-5">
                 <NumberField label="TC40 fraud reports (count)" value={vals.f} onChange={(v) => set('f', v)} />
                 <NumberField label="TC15 disputes (count)" value={vals.ds} onChange={(v) => set('ds', v)} />
                 <NumberField label="Settled transactions, TC05 (count)" value={vals.s} onChange={(v) => set('s', v)} />
@@ -351,7 +349,7 @@ export default function ChargebackRatioPage() {
                   id={processorId}
                   value={vals.proc}
                   onChange={(e) => set('proc', e.target.value as Processor)}
-                  className="w-full sm:w-auto rounded-2xl border border-gray-200 bg-white px-4 py-3 text-[1.0625rem] text-gray-900 outline-none focus:border-[#5ba8b4] focus:ring-2 focus:ring-[#5ba8b4]/20"
+                  className="w-full rounded-2xl border border-gray-200 bg-white px-4 py-3 text-[1.0625rem] text-gray-900 outline-none focus:border-[#5ba8b4] focus:ring-2 focus:ring-[#5ba8b4]/20"
                 >
                   <option value="shopify">Shopify</option>
                   <option value="stripe">Stripe</option>
@@ -396,7 +394,7 @@ export default function ChargebackRatioPage() {
                   {/* What-if */}
                   <div className="mt-3 rounded-2xl border border-gray-200/80 p-5 sm:p-6">
                     <h3 className="font-bold text-gray-900 text-[1.125rem] mb-4 tracking-[-0.02em]">What if</h3>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+                    <div className="grid grid-cols-1 gap-5 mb-5">
                       <Slider
                         label="Disputes resolved before the dispute stage (RDR or Order Insight)"
                         value={vals.rdr}
@@ -428,12 +426,11 @@ export default function ChargebackRatioPage() {
 
             {/* 3) Mastercard */}
             <article className={cardClass}>
-              <p className={kickerClass}>Calculator 3</p>
               <h2 className="font-bold text-gray-900 text-[1.5rem] mb-2 tracking-[-0.02em]">Mastercard Excessive Chargeback Program</h2>
               <p className="text-[1rem] leading-[1.7] text-gray-600 mb-5">
                 Mastercard divides this month&apos;s chargebacks by last month&apos;s Mastercard transactions. The Excessive Chargeback Merchant (ECM) tier starts at 1.50% with 100 or more chargebacks. The High Excessive (HECM) tier starts at 3.00% with 300 or more.
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+              <div className="grid grid-cols-1 gap-4 mb-5">
                 <NumberField label="Mastercard chargebacks this month (count)" value={vals.mc} onChange={(v) => set('mc', v)} />
                 <NumberField label="Mastercard transactions last month (count)" value={vals.mt} onChange={(v) => set('mt', v)} />
               </div>
@@ -445,6 +442,7 @@ export default function ChargebackRatioPage() {
                 </p>
               ) : null}
             </article>
+            </div>
 
             {/* Share */}
             <div className="flex flex-col items-center gap-2 text-center">
