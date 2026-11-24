@@ -78,7 +78,8 @@ export default function Footer() {
                 { href: '/stack/', label: 'Stack' },
                 { href: '/pricing/', label: 'Pricing' },
                 { href: '/faq/', label: 'FAQ' },
-                { href: '/webinar/', label: 'Webinar' },
+                { href: '/webinars/', label: 'Webinars' },
+                { href: '/tools/chargeback-ratio/', label: 'VAMP calculator' },
               ].map(({ href, label }) => (
                 <li key={href}>
                   <Link href={href} className="text-sm text-gray-500 hover:text-gray-900 transition-colors">{label}</Link>

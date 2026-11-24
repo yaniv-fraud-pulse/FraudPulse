@@ -42,6 +42,8 @@
       "destination": "/blog/hidden-cost-of-false-positives-in-fraud-systems/",
       "permanent": true
     },
+    { "source": "/webinar", "destination": "/webinars/chargebacks-friendly-fraud-fraud-rules/", "statusCode": 301 },
+    { "source": "/webinar/", "destination": "/webinars/chargebacks-friendly-fraud-fraud-rules/", "statusCode": 301 },
     { "source": "/faqs", "destination": "/faq/", "statusCode": 301 },
     { "source": "/faqs/", "destination": "/faq/", "statusCode": 301 },
     { "source": "/support", "destination": "/faq/", "statusCode": 301 },
@@ -137,18 +139,6 @@
       "source": "/book-a-demo/thanks/",
       "headers": [
         { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
-      ]
-    },
-    {
-      "source": "/webinar",
-      "headers": [
-        { "key": "X-Robots-Tag", "value": "noindex, follow" }
-      ]
-    },
-    {
-      "source": "/webinar/",
-      "headers": [
-        { "key": "X-Robots-Tag", "value": "noindex, follow" }
       ]
     }
   ]

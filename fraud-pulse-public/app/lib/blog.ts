@@ -2092,7 +2092,7 @@ ${toolComparisonTableHtml()}
 
 <p>If Stripe Radar is declining good buyers, start with rule tuning - see <a href="/blog/stripe-radar-blocking-legitimate-customers/">Stripe Radar is blocking legitimate customers - what should I do?</a></p>
 
-<p>If you want a clearer view of how your rules are performing - and where false positives may be costing you - <a href="/book-a-demo/">Book a Demo</a> or <a href="/webinar/">join our free webinar</a>.</p>
+<p>If you want a clearer view of how your rules are performing - and where false positives may be costing you - <a href="/book-a-demo/">Book a Demo</a> or <a href="/webinars/">watch our free webinars</a>.</p>
     `.trim(),
     faqs: [
       {
@@ -2875,7 +2875,7 @@ ${toolComparisonTableHtml()}
 
 <p>That balance is the real challenge.</p>
 
-<p>Related: <a href="/blog/how-to-reduce-false-declines-in-stripe/">how to reduce false declines in Stripe</a>, <a href="/blog/every-decline-is-not-a-win/">why every decline is not a win</a>, <a href="/webinar/">Stripe Radar webinar</a>, and the <a href="/faq/">FAQ</a>.</p>
+<p>Related: <a href="/blog/how-to-reduce-false-declines-in-stripe/">how to reduce false declines in Stripe</a>, <a href="/blog/every-decline-is-not-a-win/">why every decline is not a win</a>, <a href="/webinars/chargebacks-friendly-fraud-fraud-rules/">Stripe Radar webinar recording</a>, and the <a href="/faq/">FAQ</a>.</p>
 
 <p>If you want to see which rules may be blocking good customers in your Stripe or Shopify data, <a href="/book-a-demo/">book a demo</a>.</p>
     `.trim(),

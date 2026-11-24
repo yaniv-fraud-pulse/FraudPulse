@@ -9,6 +9,7 @@
     "cleanUrls": true,
     "trailingSlash": true,
     "redirects": [
+      { "source": "/webinar{,/}", "destination": "/webinars/chargebacks-friendly-fraud-fraud-rules/", "type": 301 },
       { "source": "/faqs{,/**}", "destination": "/faq/", "type": 301 },
       { "source": "/support{,/**}", "destination": "/faq/", "type": 301 },
       { "source": "/compare/nofraud{,/**}", "destination": "/alternatives/nofraud/", "type": 301 },
@@ -80,12 +81,6 @@
         "source": "/book-a-demo/thanks{,/**}",
         "headers": [
           { "key": "X-Robots-Tag", "value": "noindex, nofollow" }
-        ]
-      },
-      {
-        "source": "/webinar{,/**}",
-        "headers": [
-          { "key": "X-Robots-Tag", "value": "noindex, follow" }
         ]
       }
     ]
