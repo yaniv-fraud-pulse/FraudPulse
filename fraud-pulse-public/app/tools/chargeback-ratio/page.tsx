@@ -257,19 +257,10 @@ function ResultPanel({
   );
 }
 
-function CardHeader({ icon, title, formula }: { icon: React.ReactNode; title: string; formula: string }) {
+function CardHeader({ title, formula }: { title: string; formula: string }) {
   return (
     <div className="mb-5">
-      <div className="flex items-center gap-3 mb-3">
-        <span
-          className="grid h-10 w-10 shrink-0 place-items-center rounded-xl text-white shadow-[0_8px_20px_-8px_rgba(74,150,163,0.7)]"
-          style={{ background: 'linear-gradient(135deg, #5ba8b4 0%, #4a96a3 55%, #7D6BA0 100%)' }}
-          aria-hidden
-        >
-          {icon}
-        </span>
-        <h2 className="font-bold text-gray-900 text-[1.1875rem] leading-tight tracking-[-0.02em]">{title}</h2>
-      </div>
+      <h2 className="font-bold text-gray-900 text-[1.1875rem] leading-tight tracking-[-0.02em] mb-3">{title}</h2>
       <p className="font-mono text-[0.75rem] leading-[1.6] text-gray-500 rounded-lg bg-gray-50 border border-gray-100 px-3 py-2">{formula}</p>
     </div>
   );
@@ -319,27 +310,6 @@ function Check({ ok, children }: { ok: boolean; children: React.ReactNode }) {
   );
 }
 
-const ICONS = {
-  ratio: (
-    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
-      <path strokeLinecap="round" d="M19 5L5 19" />
-      <circle cx="7" cy="7" r="2.5" />
-      <circle cx="17" cy="17" r="2.5" />
-    </svg>
-  ),
-  card: (
-    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
-      <rect x="3" y="5" width="18" height="14" rx="2.5" />
-      <path strokeLinecap="round" d="M3 10h18M7 15h4" />
-    </svg>
-  ),
-  shield: (
-    <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
-      <path strokeLinejoin="round" d="M12 3l7 3v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6l7-3z" />
-      <path strokeLinecap="round" d="M12 8v5M12 16v.01" />
-    </svg>
-  ),
-};
 
 const cardClass =
   'flex h-full flex-col rounded-3xl border border-gray-200/80 bg-white p-6 shadow-[0_24px_60px_-40px_rgba(17,24,39,0.35)] transition-shadow duration-300 hover:shadow-[0_30px_70px_-36px_rgba(17,24,39,0.4)]';
@@ -454,7 +424,7 @@ export default function ChargebackRatioPage() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 items-stretch">
               {/* 1) Chargeback ratio */}
               <article className={cardClass}>
-                <CardHeader icon={ICONS.ratio} title="Chargeback ratio" formula="disputes ÷ payments" />
+                <CardHeader title="Chargeback ratio" formula="disputes ÷ payments" />
                 <div className="grid grid-cols-1 gap-4 mb-5">
                   <NumberField label="Disputes (count)" value={vals.d} onChange={(v) => set('d', v)} />
                   <NumberField label="Payments (count)" value={vals.p} onChange={(v) => set('p', v)} />
@@ -465,7 +435,7 @@ export default function ChargebackRatioPage() {
 
               {/* 2) Visa VAMP */}
               <article className={`${cardClass} ring-1 ring-[#5ba8b4]/25`}>
-                <CardHeader icon={ICONS.card} title="Visa VAMP worksheet" formula="(TC40 + TC15) ÷ TC05 · counts, not amounts" />
+                <CardHeader title="Visa VAMP worksheet" formula="(TC40 + TC15) ÷ TC05 · counts, not amounts" />
                 <div className="grid grid-cols-1 gap-4 mb-4">
                   <NumberField label="TC40 fraud reports (count)" value={vals.f} onChange={(v) => set('f', v)} />
                   <NumberField label="TC15 disputes (count)" value={vals.ds} onChange={(v) => set('ds', v)} />
@@ -492,7 +462,6 @@ export default function ChargebackRatioPage() {
               {/* 3) Mastercard */}
               <article className={cardClass}>
                 <CardHeader
-                  icon={ICONS.shield}
                   title="Mastercard Excessive Chargeback Program"
                   formula="chargebacks this month ÷ transactions last month"
                 />
