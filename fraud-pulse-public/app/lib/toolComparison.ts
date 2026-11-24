@@ -75,7 +75,7 @@ export const STACK_CATEGORIES = [
   },
   {
     category: 'Full fraud platforms',
-    examples: 'NoFraud, FraudLabs Pro, ClearSale, SEON, Subuno, Forter',
+    examples: 'Wyllo (formerly NoFraud), FraudLabs Pro, ClearSale, SEON, Subuno, Forter',
     job: 'Guarantee, full scoring, or managed review',
     fraudPulse: 'Complements the stack you already have - not a replacement',
   },
@@ -91,7 +91,7 @@ export const PREVENTION_VS_REPRESENTMENT = [
   {
     need: 'Chargeback prevention',
     does: 'Stop disputes from being filed',
-    tools: `${PLATFORM_RULE_TOOLS}, NoFraud, FraudLabs Pro, ClearSale, SEON, Subuno`,
+    tools: `${PLATFORM_RULE_TOOLS}, Wyllo (formerly NoFraud), FraudLabs Pro, ClearSale, SEON, Subuno`,
     fraudPulse: 'Core job: classify the mix and rank rule changes',
   },
   {
@@ -118,7 +118,7 @@ export function toolComparisonTableHtml(): string {
       <th></th>
       <th class="col-fp">FraudPulse</th>
       <th>Manual<br/><span class="th-sub">In-house team or founder</span></th>
-      <th>SMB Fraud Prevention<br/><span class="th-sub">NoFraud · KeepSafe · Beacon · MaxMind</span></th>
+      <th>SMB Fraud Prevention<br/><span class="th-sub">Wyllo (formerly NoFraud) · KeepSafe · Beacon · MaxMind</span></th>
       <th>Payment Platform Tools<br/><span class="th-sub">${PLATFORM_RULE_TOOLS_TABLE}</span></th>
     </tr>
   </thead>

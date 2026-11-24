@@ -23,7 +23,7 @@ const SOLUTIONS_ANSWER =
   'FraudPulse is the AI fraud analyst for Shopify, Stripe, and Adyen merchants. Stripe Radar, Shopify Flow, Blockify, and Adyen RevenueProtect enforce or automate at checkout. FraudPulse classifies your chargebacks and ranks which rules and actions to change, without replacing those tools or taking over checkout.';
 
 const FAQ_REPLACE_SMB =
-  'Does FraudPulse replace NoFraud, KeepSafe, Beacon, MaxMind, FraudLabs Pro, ClearSale, SEON, or Subuno?';
+  'Does FraudPulse replace Wyllo (formerly NoFraud), KeepSafe, Beacon, MaxMind, FraudLabs Pro, ClearSale, SEON, or Subuno?';
 
 const clusterLinks = [
   { href: '/stack/', label: 'Using FraudPulse with Radar, Flow, Blockify, and RevenueProtect' },

@@ -97,6 +97,9 @@ export default function Footer() {
                 { href: '/alternatives/nofraud/', label: 'Vs. Wyllo (formerly NoFraud)' },
                 { href: '/alternatives/smb-fraud-tools/', label: 'Vs. ClearSale & SMB Tools' },
                 { href: '/alternatives/payment-platform-tools/', label: 'Vs. Radar, Flow, Blockify, RevenueProtect' },
+                { href: '/alternatives/shopify-fraud-control/', label: 'Vs. Shopify Fraud Control' },
+                { href: '/alternatives/stripe-radar-assistant/', label: 'Vs. Stripe Radar Assistant' },
+                { href: '/alternatives/chargeflow/', label: 'Vs. Chargeflow' },
               ].map(({ href, label }) => (
                 <li key={href}>
                   <Link href={href} className="text-sm text-gray-500 hover:text-gray-900 transition-colors">{label}</Link>

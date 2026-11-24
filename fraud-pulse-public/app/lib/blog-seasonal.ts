@@ -111,7 +111,7 @@ export const seasonalGuides: BlogPost[] = [
 
 <p>Stolen cards and card testing are checkout problems. Use velocity and AVS in Stripe Radar or Adyen RevenueProtect, and use Blockify to block the pattern before capture. A rule that stops ten cards tried in a minute does not belong on a loyal customer who reordered the same product.</p>
 
-<p>Do not copy a screening tool’s decline into your own rules just because a chargeback later arrived with a fraud code. <a href="/alternatives/nofraud/">NoFraud (now Wyllo on the Shopify App Store), FraudLabs Pro, and SEON</a> score or review orders. They are a different job from ranking which Radar, Flow, or Blockify rule to edit.</p>
+<p>Do not copy a screening tool’s decline into your own rules just because a chargeback later arrived with a fraud code. <a href="/alternatives/nofraud/">Wyllo (formerly NoFraud), FraudLabs Pro, and SEON</a> score or review orders. They are a different job from ranking which Radar, Flow, or Blockify rule to edit.</p>
 
 <h2>What to change for friendly fraud</h2>
 

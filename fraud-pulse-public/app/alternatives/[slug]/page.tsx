@@ -81,7 +81,7 @@ export default async function AlternativePage({
               <Reveal animation="anim-fadeUp" className="text-center mb-10">
                 <Eyebrow>How it fits</Eyebrow>
                 <h2 className="font-extrabold text-gray-900 tracking-[-0.04em] text-[1.75rem] sm:text-[2.25rem]">
-                  Engine, brain, navigation
+                  {page.diagramTitle ?? 'Engine, brain, navigation'}
                 </h2>
               </Reveal>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -155,6 +155,14 @@ export default async function AlternativePage({
                 Related:{' '}
                 <Link href={page.relatedHref} className="font-semibold text-[#4a96a3] hover:underline">
                   {page.relatedLabel}
+                </Link>
+                {' · '}
+                <Link href="/how-it-works/" className="font-semibold text-[#4a96a3] hover:underline">
+                  how it works
+                </Link>
+                {' · '}
+                <Link href="/book-a-demo/" className="font-semibold text-[#4a96a3] hover:underline">
+                  book a demo
                 </Link>
                 {' · '}
                 <Link href="/pricing/" className="font-semibold text-[#4a96a3] hover:underline">

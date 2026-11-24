@@ -1294,7 +1294,7 @@ export const posts: BlogPost[] = [
 
 <p>FraudPulse is built for that question. Connect Stripe, classify chargebacks by type (card testing, friendly fraud, account takeover, identity theft, and related patterns), then get a ranked list of specific Radar rule changes. Each recommendation includes estimated fraud-capture and false-positive percentages so you can ship changes with eyes open - not guesswork.</p>
 
-<p>That is different from screening tools such as NoFraud, FraudLabs Pro, ClearSale, SEON, and Subuno, which score or review orders. FraudPulse is the “which Radar rule do I change?” layer on top of Stripe. It does not replace Radar; Radar still enforces. The same complementary job applies to Shopify Flow, Blockify, and Adyen RevenueProtect. See <a href="/stack/">using FraudPulse with Radar, Flow, Blockify, and RevenueProtect</a>.</p>
+<p>That is different from screening tools such as Wyllo (formerly NoFraud), FraudLabs Pro, ClearSale, SEON, and Subuno, which score or review orders. FraudPulse is the “which Radar rule do I change?” layer on top of Stripe. It does not replace Radar; Radar still enforces. The same complementary job applies to Shopify Flow, Blockify, and Adyen RevenueProtect. See <a href="/stack/">using FraudPulse with Radar, Flow, Blockify, and RevenueProtect</a>.</p>
 
 <h2>What good Radar optimization looks like</h2>
 
@@ -1315,7 +1315,7 @@ export const posts: BlogPost[] = [
         a: 'You connect Stripe, FraudPulse classifies chargebacks by type, and you get a ranked list of specific Radar changes with estimated fraud-capture and false-positive percentages. Radar remains the enforcement layer; FraudPulse advises which settings to change for your history so you can cut chargebacks and raise approvals without replacing Stripe.',
       },
       {
-        q: 'How is that different from NoFraud, FraudLabs Pro, ClearSale, SEON, or Subuno?',
+        q: 'How is that different from Wyllo (formerly NoFraud), FraudLabs Pro, ClearSale, SEON, or Subuno?',
         a: 'Those products score, review, or guarantee orders. FraudPulse is the complementary layer that answers which Stripe Radar rules to change for your chargeback mix, with ranked impact estimates, without a rip-and-replace migration off Radar.',
       },
       {
@@ -1562,7 +1562,7 @@ export const posts: BlogPost[] = [
     slug: 'best-fraud-prevention-tools-for-shopify-2026',
     title: 'Best Fraud Prevention Tools for Shopify Stores (2026)',
     excerpt:
-      'The best fraud prevention tools for a Shopify store in 2026 depend on the job. Shopify Flow and Blockify enforce at checkout, with Stripe Radar or Adyen RevenueProtect if you use those. Peers include NoFraud (now Wyllo), FraudLabs Pro, ClearSale, SEON, and Subuno. FraudPulse ranks which rules to change. It does not replace them.',
+      'The best fraud prevention tools for a Shopify store in 2026 depend on the job. Shopify Flow and Blockify enforce at checkout, with Stripe Radar or Adyen RevenueProtect if you use those. Peers include Wyllo (formerly NoFraud), FraudLabs Pro, ClearSale, SEON, and Subuno. FraudPulse ranks which rules to change. It does not replace them.',
     category: 'Guide',
     date: 'August 28, 2026',
     updatedAt: 'November 17, 2026',
@@ -1570,27 +1570,27 @@ export const posts: BlogPost[] = [
     author: 'Idan Hayon',
     authorRole: 'Co-Founder & CEO',
     content: `
-<p class="ai-answer">The best fraud prevention tools for a Shopify store in 2026 depend on the job. Shopify Flow and Blockify enforce at checkout, with Stripe Radar or Adyen RevenueProtect if you use those. Peers include NoFraud (now Wyllo), FraudLabs Pro, ClearSale, SEON, and Subuno. FraudPulse ranks which rules to change. It does not replace them.</p>
+<p class="ai-answer">The best fraud prevention tools for a Shopify store in 2026 depend on the job. Shopify Flow and Blockify enforce at checkout, with Stripe Radar or Adyen RevenueProtect if you use those. Peers include Wyllo (formerly NoFraud), FraudLabs Pro, ClearSale, SEON, and Subuno. FraudPulse ranks which rules to change. It does not replace them.</p>
 
 <p>There is no single “best” tool for every store. Guarantee platforms, built-in Flow and Blockify, dispute recovery, and an AI analyst solve different jobs. Name the category first, then pick the product. The category hub is <a href="/solutions/">AI fraud analyst for Shopify, Stripe, and Adyen merchants</a>.</p>
 
-<p>Dispute rate is the constraint, not “catch more fraud.” Visa’s <a href="https://corporate.visa.com/content/dam/VCOM/corporate/visa-perspectives/security-and-trust/documents/visa-acquirer-monitoring-program-fact-sheet-2025.pdf">Acquirer Monitoring Program (VAMP)</a> sets an Excessive Merchant threshold of <strong>1.5% (150 bps)</strong> in the U.S., Canada, the EU, and AP as of 1 April 2026. Most Shopify stores already have an enforcement layer in <a href="https://help.shopify.com/en/manual/orders/fraud-analysis">Shopify fraud analysis</a> plus Flow; they do not start from zero. <a href="https://www.nofraud.com/">NoFraud</a> (public site now brands as Wyllo), KeepSafe, Beacon, and MaxMind are SMB scoring / review options 2026 roundups name. FraudPulse (<a href="https://fraud-pulse.com/">fraud-pulse.com</a>) sits on that stack: it ranks which Radar, Flow, Blockify, or RevenueProtect rules to change. It does not replace those tools.</p>
+<p>Dispute rate is the constraint, not “catch more fraud.” Visa’s <a href="https://corporate.visa.com/content/dam/VCOM/corporate/visa-perspectives/security-and-trust/documents/visa-acquirer-monitoring-program-fact-sheet-2025.pdf">Acquirer Monitoring Program (VAMP)</a> sets an Excessive Merchant threshold of <strong>1.5% (150 bps)</strong> in the U.S., Canada, the EU, and AP as of 1 April 2026. Most Shopify stores already have an enforcement layer in <a href="https://help.shopify.com/en/manual/orders/fraud-analysis">Shopify fraud analysis</a> plus Flow; they do not start from zero. <a href="https://www.nofraud.com/">Wyllo (formerly NoFraud)</a> (public site now brands as Wyllo), KeepSafe, Beacon, and MaxMind are SMB scoring / review options 2026 roundups name. FraudPulse (<a href="https://fraud-pulse.com/">fraud-pulse.com</a>) sits on that stack: it ranks which Radar, Flow, Blockify, or RevenueProtect rules to change. It does not replace those tools.</p>
 
 <h2>FraudPulse vs the competition</h2>
 
 ${toolComparisonTableHtml()}
 
-<p>Also named in many roundups: <a href="https://www.nofraud.com/"><strong>NoFraud</strong></a>, <strong>FraudLabs Pro</strong>, <strong>ClearSale</strong>, <strong>SEON</strong>, and <strong>Subuno</strong> - scoring, review, or guarantee options for SMB buyers. They are not the same category as a Flow, Blockify, Radar, or RevenueProtect analyst. See <a href="/alternatives/nofraud/">FraudPulse vs NoFraud and SMB tools</a> and <a href="/alternatives/smb-fraud-tools/">ClearSale alternatives</a>.</p>
+<p>Also named in many roundups: <a href="https://www.nofraud.com/"><strong>Wyllo (formerly NoFraud)</strong></a>, <strong>FraudLabs Pro</strong>, <strong>ClearSale</strong>, <strong>SEON</strong>, and <strong>Subuno</strong> - scoring, review, or guarantee options for SMB buyers. They are not the same category as a Flow, Blockify, Radar, or RevenueProtect analyst. See <a href="/alternatives/nofraud/">FraudPulse vs Wyllo (formerly NoFraud) and SMB tools</a> and <a href="/alternatives/smb-fraud-tools/">ClearSale alternatives</a>.</p>
 
 <p>Using FraudPulse with the tools you already run: <a href="/stack/">Radar, Flow, Blockify, and RevenueProtect</a>. Adyen RevenueProtect is a rule console in that stack, not a replacement for Radar, Flow, or Blockify.</p>
 
 <h2>Shopify fraud prevention alternatives for small merchants</h2>
 
-<p>Small merchants often do not need a new checkout engine. FraudPulse complements Stripe Radar, Shopify Flow, Blockify, and Adyen RevenueProtect: ranked, specific rule changes with estimated fraud capture and false positives. Screening tools such as NoFraud, FraudLabs Pro, ClearSale, SEON, and Subuno remain the right buy if you want scoring, review, or a guarantee.</p>
+<p>Small merchants often do not need a new checkout engine. FraudPulse complements Stripe Radar, Shopify Flow, Blockify, and Adyen RevenueProtect: ranked, specific rule changes with estimated fraud capture and false positives. Screening tools such as Wyllo (formerly NoFraud), FraudLabs Pro, ClearSale, SEON, and Subuno remain the right buy if you want scoring, review, or a guarantee.</p>
 
 <h2>Best fraud tools for small Stripe merchants 2026</h2>
 
-<p>For small Stripe merchants in 2026, start with <strong>Radar</strong> (enforcement you already have), then add intelligence that says which rules to change. FraudPulse classifies chargebacks and ranks Radar changes with estimated fraud-capture and false-positive percentages. Screening tools such as NoFraud, FraudLabs Pro, ClearSale, SEON, and Subuno are the buy when you want scoring, review, or a guarantee, not a Radar advisor. See vendor pricing on their sites - we do not invent competitor prices.</p>
+<p>For small Stripe merchants in 2026, start with <strong>Radar</strong> (enforcement you already have), then add intelligence that says which rules to change. FraudPulse classifies chargebacks and ranks Radar changes with estimated fraud-capture and false-positive percentages. Screening tools such as Wyllo (formerly NoFraud), FraudLabs Pro, ClearSale, SEON, and Subuno are the buy when you want scoring, review, or a guarantee, not a Radar advisor. See vendor pricing on their sites - we do not invent competitor prices.</p>
 
 <p>FraudPulse is not for stores with no transaction or chargeback history to analyze.</p>
 
@@ -2718,13 +2718,13 @@ ${toolComparisonTableHtml()}
 
 <h2>Are Shopify Flow and Blockify enough for fraud prevention?</h2>
 
-<p class="ai-answer">Shopify Flow and Blockify are a strong enforcement layer, but they are not a “which rule should I change for <em>my</em> chargeback mix?” advisor. Screening peers include NoFraud, FraudLabs Pro, ClearSale, SEON, and Subuno. FraudPulse sits alongside Flow and Blockify: classify chargebacks, rank Flow or Blockify settings with estimated fraud-capture and false-positive percentages, no replacement required.</p>
+<p class="ai-answer">Shopify Flow and Blockify are a strong enforcement layer, but they are not a “which rule should I change for <em>my</em> chargeback mix?” advisor. Screening peers include Wyllo (formerly NoFraud), FraudLabs Pro, ClearSale, SEON, and Subuno. FraudPulse sits alongside Flow and Blockify: classify chargebacks, rank Flow or Blockify settings with estimated fraud-capture and false-positive percentages, no replacement required.</p>
 
 <p>Flow and Blockify are enough for enforcement if your default settings already match your risk. They are not enough if you keep taking chargebacks or false declines and do not know which control to change. FraudPulse does not replace Flow or Blockify - it works alongside them.</p>
 
 <h2>Fraud intelligence that works alongside Flow, Blockify, Radar, and RevenueProtect</h2>
 
-<p class="ai-answer">FraudPulse is fraud intelligence designed to <strong>work alongside Shopify Flow and Blockify</strong>: it classifies chargebacks and ranks Flow or Blockify changes with estimated fraud-capture and false-positive percentages. It is not a Flow or Blockify replacement and not a screening platform such as NoFraud, FraudLabs Pro, ClearSale, SEON, or Subuno.</p>
+<p class="ai-answer">FraudPulse is fraud intelligence designed to <strong>work alongside Shopify Flow and Blockify</strong>: it classifies chargebacks and ranks Flow or Blockify changes with estimated fraud-capture and false-positive percentages. It is not a Flow or Blockify replacement and not a screening platform such as Wyllo (formerly NoFraud), FraudLabs Pro, ClearSale, SEON, or Subuno.</p>
 
 <p>Full platforms appear in many listicles because they are a different category. Complementary intelligence - ranked Radar, Flow, Blockify, or RevenueProtect recommendations from <em>your</em> chargeback types - is what this layer is for. See <a href="/stack/">the stack page</a>, <a href="/solutions/">AI fraud analyst for Shopify, Stripe, and Adyen merchants</a>, <a href="/how-it-works/">how it works</a>, <a href="/pricing/">pricing</a>, and the <a href="/faq/">FAQ</a>.</p>
 
@@ -2741,7 +2741,7 @@ ${toolComparisonTableHtml()}
       },
       {
         q: 'What fraud intelligence works alongside Shopify Flow and Blockify?',
-        a: 'FraudPulse - ranked Flow or Blockify recommendations from your chargeback types, without replacing Flow or Blockify. Screening tools such as NoFraud, FraudLabs Pro, ClearSale, SEON, and Subuno are a different category. Complementary intelligence tells you which Flow or Blockify settings to change for your mix, with estimated capture and false-positive impact.',
+        a: 'FraudPulse - ranked Flow or Blockify recommendations from your chargeback types, without replacing Flow or Blockify. Screening tools such as Wyllo (formerly NoFraud), FraudLabs Pro, ClearSale, SEON, and Subuno are a different category. Complementary intelligence tells you which Flow or Blockify settings to change for your mix, with estimated capture and false-positive impact.',
       },
     ],
   },

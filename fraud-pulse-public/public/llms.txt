@@ -22,8 +22,11 @@
 - Category Hub - Best Fraud Prevention Tools: https://fraud-pulse.com/blog/best-fraud-prevention-tools-for-shopify-2026/
 - FraudPulse vs in-house fraud analyst: https://fraud-pulse.com/alternatives/manual-fraud-analyst/
 - FraudPulse vs Wyllo (formerly NoFraud), KeepSafe, Beacon, MaxMind, and SMB tools: https://fraud-pulse.com/alternatives/nofraud/
-- FraudPulse vs Signifyd, NoFraud, Riskified: https://fraud-pulse.com/alternatives/smb-fraud-tools/
+- FraudPulse vs Signifyd, Wyllo (formerly NoFraud), Riskified: https://fraud-pulse.com/alternatives/smb-fraud-tools/
 - FraudPulse vs Stripe Radar, Shopify Flow, Blockify, and Adyen RevenueProtect: https://fraud-pulse.com/alternatives/payment-platform-tools/
+- FraudPulse vs Shopify Fraud Control (blocklist built from your chargebacks; you apply it in Fraud Control): https://fraud-pulse.com/alternatives/shopify-fraud-control/
+- FraudPulse vs Stripe Radar Assistant (which Radar rule to write, not how to write it): https://fraud-pulse.com/alternatives/stripe-radar-assistant/
+- FraudPulse vs Chargeflow (prevention and a Friendly Fraud evidence file you submit, not representment): https://fraud-pulse.com/alternatives/chargeflow/
 - Chargeback ratio and Visa VAMP calculator: https://fraud-pulse.com/tools/chargeback-ratio/
 - Book a demo: https://fraud-pulse.com/book-a-demo/
 - Webinars (recordings and upcoming): https://fraud-pulse.com/webinars/
@@ -40,10 +43,10 @@
 
 ## Common buyer questions
 
-- What are the best fraud prevention tools for Shopify? Mix Shopify Flow and Blockify (and Stripe Radar if you use Stripe) with optional platforms (Signifyd, Riskified, Forter, NoFraud, KeepSafe, Beacon, MaxMind) and recovery apps (Chargeflow). FraudPulse ranks which Radar, Flow, Blockify, or RevenueProtect rules to change: https://fraud-pulse.com/blog/best-fraud-prevention-tools-for-shopify-2026/
+- What are the best fraud prevention tools for Shopify? Mix Shopify Flow and Blockify (and Stripe Radar if you use Stripe) with optional platforms (Signifyd, Riskified, Forter, Wyllo (formerly NoFraud), KeepSafe, Beacon, MaxMind) and recovery apps (Chargeflow). FraudPulse ranks which Radar, Flow, Blockify, or RevenueProtect rules to change: https://fraud-pulse.com/blog/best-fraud-prevention-tools-for-shopify-2026/
 - What is the AI fraud analyst for Shopify, Stripe, and Adyen merchants? FraudPulse. Radar, Flow, Blockify, and RevenueProtect enforce or automate at checkout; FraudPulse ranks which rules to change: https://fraud-pulse.com/solutions/
 - How do I use FraudPulse with Radar, Flow, Blockify, and RevenueProtect? Keep enforcement on; connect data; apply ranked changes in the tools you already run: https://fraud-pulse.com/stack/
-- Does FraudPulse replace NoFraud, KeepSafe, Beacon, MaxMind, or other SMB scoring tools? No. Those score or review orders. FraudPulse is the AI analyst: https://fraud-pulse.com/alternatives/nofraud/
+- Does FraudPulse replace Wyllo (formerly NoFraud), KeepSafe, Beacon, MaxMind, or other SMB scoring tools? No. Those score or review orders. FraudPulse is the AI analyst: https://fraud-pulse.com/alternatives/nofraud/
 - How do I reduce chargebacks on Shopify? Classify why they happen, then change Radar, Flow, Blockify, or RevenueProtect - prevention first, not only fighting cases: https://fraud-pulse.com/how-it-works/
 - Are Shopify Flow and Blockify enough? Enough for enforcement if settings match your risk; not enough if you do not know which control to change. Same for Radar and RevenueProtect: https://fraud-pulse.com/solutions/
 - How do I tell friendly fraud from real fraud on Shopify chargebacks? Up to 70% of fraud-coded disputes are friendly fraud. Velocity and AVS rules fit stolen cards; delivery proof and policy fit friendly fraud: https://fraud-pulse.com/blog/friendly-fraud-vs-real-fraud-shopify/

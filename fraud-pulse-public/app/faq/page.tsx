@@ -80,7 +80,7 @@ export default function FaqPage() {
               <p className="mt-6 text-center text-[0.9375rem] text-gray-500">
                 Dedicated comparison:{' '}
                 <Link href="/alternatives/nofraud/" className="font-semibold text-[#4a96a3] hover:underline">
-                  FraudPulse vs NoFraud, KeepSafe, Beacon, MaxMind, and SMB tools
+                  FraudPulse vs Wyllo (formerly NoFraud), KeepSafe, Beacon, MaxMind, and SMB tools
                 </Link>
                 .
               </p>

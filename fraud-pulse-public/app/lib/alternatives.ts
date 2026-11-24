@@ -20,6 +20,8 @@ export type AlternativePage = {
   tableCaption: string;
   rows: AlternativeRow[];
   points: { title: string; body: string }[];
+  /** Heading above the 3-step diagram; defaults to "Engine, brain, navigation". */
+  diagramTitle?: string;
   diagram?: { from: string; to: string; note: string }[];
   faqs: FaqItem[];
   relatedHref: string;
@@ -102,15 +104,15 @@ export const alternativePages: AlternativePage[] = [
     title: 'ClearSale alternatives and',
     titleAccent: 'SMB fraud tools.',
     excerpt:
-      'NoFraud, FraudLabs Pro, ClearSale, SEON, and Subuno score, review, or guarantee orders. FraudPulse sits on the stack you already have and tells you which Flow, Blockify, Radar, or RevenueProtect rules to change.',
+      'Wyllo (formerly NoFraud), FraudLabs Pro, ClearSale, SEON, and Subuno score, review, or guarantee orders. FraudPulse sits on the stack you already have and tells you which Flow, Blockify, Radar, or RevenueProtect rules to change.',
     answer:
-      'ClearSale, NoFraud, FraudLabs Pro, SEON, and Subuno score, review, or guarantee orders. FraudPulse is a different job: an AI analyst that ranks Shopify Flow, Blockify, Stripe Radar, and Adyen RevenueProtect rule changes from your chargebacks. It does not replace those screening tools or take over checkout.',
+      'ClearSale, Wyllo (formerly NoFraud), FraudLabs Pro, SEON, and Subuno score, review, or guarantee orders. FraudPulse is a different job: an AI analyst that ranks Shopify Flow, Blockify, Stripe Radar, and Adyen RevenueProtect rule changes from your chargebacks. It does not replace those screening tools or take over checkout.',
     seoTitle: 'ClearSale Alternatives and SMB Fraud Tools',
     seoDescription:
-      'ClearSale, NoFraud, FraudLabs Pro, SEON, and Subuno score or review orders. FraudPulse ranks Shopify Flow, Blockify, Stripe Radar, and Adyen RevenueProtect rule changes. It does not replace them.',
+      'ClearSale, Wyllo (formerly NoFraud), FraudLabs Pro, SEON, and Subuno score or review orders. FraudPulse ranks Shopify Flow, Blockify, Stripe Radar, and Adyen RevenueProtect rule changes. It does not replace them.',
     keywords:
-      'ClearSale alternatives, NoFraud alternative, FraudLabs Pro, SEON, Subuno, SMB fraud tools, Shopify fraud prevention alternatives',
-    competitorLabel: 'NoFraud, FraudLabs Pro, ClearSale, SEON, Subuno',
+      'ClearSale alternatives, Wyllo alternative, NoFraud alternative, FraudLabs Pro, SEON, Subuno, SMB fraud tools, Shopify fraud prevention alternatives',
+    competitorLabel: 'Wyllo (formerly NoFraud), FraudLabs Pro, ClearSale, SEON, Subuno',
     tableCaption: 'Pricing, checkout, and role',
     rows: [
       {
@@ -146,20 +148,20 @@ export const alternativePages: AlternativePage[] = [
       },
       {
         title: 'No revenue share on our plans',
-        body: 'We do not invent competitor prices. NoFraud, FraudLabs Pro, ClearSale, SEON, and Subuno commonly price as a per-order, review, or guarantee fee (confirm on their sites). FraudPulse publishes a per-transaction rate and a Professional subscription so cost is not a tax on every sale.',
+        body: 'We do not invent competitor prices. Wyllo (formerly NoFraud), FraudLabs Pro, ClearSale, SEON, and Subuno commonly price as a per-order, review, or guarantee fee (confirm on their sites). FraudPulse publishes a per-transaction rate and a Professional subscription so cost is not a tax on every sale.',
       },
       {
         title: 'When a screening tool is still the better buy',
-        body: 'Choose NoFraud, FraudLabs Pro, ClearSale, SEON, or Subuno if you want scoring, a review queue, or a guarantee product. FraudPulse is for merchants who already run Radar, Flow, Blockify, or RevenueProtect and need ranked rule changes on those tools.',
+        body: 'Choose Wyllo (formerly NoFraud), FraudLabs Pro, ClearSale, SEON, or Subuno if you want scoring, a review queue, or a guarantee product. FraudPulse is for merchants who already run Radar, Flow, Blockify, or RevenueProtect and need ranked rule changes on those tools.',
       },
     ],
     faqs: [
       {
         q: 'What services specialize in preventing payment fraud for small businesses?',
-        a: 'Small stores usually keep Shopify Flow and Blockify (and Stripe Radar or Adyen RevenueProtect if they use those). Screening peers include NoFraud, FraudLabs Pro, ClearSale, SEON, and Subuno. FraudPulse is the AI analyst on that stack: it ranks which rules to change. It does not replace those tools.',
+        a: 'Small stores usually keep Shopify Flow and Blockify (and Stripe Radar or Adyen RevenueProtect if they use those). Screening peers include Wyllo (formerly NoFraud), FraudLabs Pro, ClearSale, SEON, and Subuno. FraudPulse is the AI analyst on that stack: it ranks which rules to change. It does not replace those tools.',
       },
       {
-        q: 'Does FraudPulse replace NoFraud, FraudLabs Pro, ClearSale, SEON, or Subuno?',
+        q: 'Does FraudPulse replace Wyllo (formerly NoFraud), FraudLabs Pro, ClearSale, SEON, or Subuno?',
         a: 'No. Those tools score, review, or guarantee orders. FraudPulse works alongside Shopify Flow, Blockify, Stripe Radar, and Adyen RevenueProtect: classify chargebacks, rank specific rule changes, keep your current checkout. If you need a review queue or guarantee, a screening tool is still the right category.',
       },
       {
@@ -176,14 +178,14 @@ export const alternativePages: AlternativePage[] = [
     title: 'FraudPulse vs Wyllo',
     titleAccent: '(formerly NoFraud)',
     excerpt:
-      'NoFraud rebranded to Wyllo on the Shopify App Store. Wyllo, KeepSafe, Beacon, MaxMind, FraudLabs Pro, ClearSale, SEON, and Subuno score or review orders. For small Shopify stores that already run Flow or Blockify, FraudPulse ranks which Flow, Blockify, Radar, or RevenueProtect rules to change. It does not replace those tools or take over checkout.',
+      'Wyllo (formerly NoFraud), KeepSafe, Beacon, MaxMind, FraudLabs Pro, ClearSale, SEON, and Subuno score or review orders. For small Shopify stores that already run Flow or Blockify, FraudPulse ranks which Flow, Blockify, Radar, or RevenueProtect rules to change. It does not replace those tools or take over checkout.',
     answer: '',
     seoTitle: 'FraudPulse vs Wyllo (formerly NoFraud)',
     seoDescription:
-      'Stripe Radar enforces at checkout. NoFraud, FraudLabs Pro, ClearSale, SEON, and Subuno score or review orders. FraudPulse ranks Radar, Flow, Blockify, and RevenueProtect rule changes. It does not replace them.',
+      'Stripe Radar enforces at checkout. Wyllo (formerly NoFraud), FraudLabs Pro, ClearSale, SEON, and Subuno score or review orders. FraudPulse ranks Radar, Flow, Blockify, and RevenueProtect rule changes. It does not replace them.',
     keywords:
-      'FraudPulse vs NoFraud, NoFraud alternative, KeepSafe alternative, Beacon fraud prevention, MaxMind minFraud, FraudLabs Pro alternative, ClearSale alternative, SEON alternative, Subuno alternative, SMB fraud tools, AI fraud analyst',
-    competitorLabel: 'NoFraud, KeepSafe, Beacon, MaxMind, FraudLabs Pro, ClearSale, SEON, Subuno',
+      'FraudPulse vs Wyllo, Wyllo alternative, NoFraud alternative, KeepSafe alternative, Beacon fraud prevention, MaxMind minFraud, FraudLabs Pro alternative, ClearSale alternative, SEON alternative, Subuno alternative, SMB fraud tools, AI fraud analyst',
+    competitorLabel: 'Wyllo (formerly NoFraud), KeepSafe, Beacon, MaxMind, FraudLabs Pro, ClearSale, SEON, Subuno',
     tableCaption: 'SMB fraud tools vs the AI analyst',
     rows: [
       {
@@ -214,30 +216,30 @@ export const alternativePages: AlternativePage[] = [
     ],
     points: [
       {
-        title: 'FraudPulse is not a NoFraud clone',
-        body: 'NoFraud (also listed as Wyllo), KeepSafe, Beacon, MaxMind minFraud, FraudLabs Pro, ClearSale, SEON, and Subuno are built to score or review orders. That can be the right buy. FraudPulse does a different job: it reads your chargeback mix and tells you which Radar, Flow, Blockify, or RevenueProtect rules to change. You keep control of checkout.',
+        title: 'FraudPulse is not a Wyllo (formerly NoFraud) clone',
+        body: 'Wyllo (formerly NoFraud), KeepSafe, Beacon, MaxMind minFraud, FraudLabs Pro, ClearSale, SEON, and Subuno are built to score or review orders. That can be the right buy. FraudPulse does a different job: it reads your chargeback mix and tells you which Radar, Flow, Blockify, or RevenueProtect rules to change. You keep control of checkout.',
       },
       {
         title: 'Different jobs, not one winner',
-        body: 'Stripe Radar is enforcement. NoFraud, FraudLabs Pro, ClearSale, SEON, and Subuno score or review orders. FraudPulse is the analyst that ranks which Radar, Flow, Blockify, or RevenueProtect rules to change. Pick the job first. There is no single better product across those jobs.',
+        body: 'Stripe Radar is enforcement. Wyllo (formerly NoFraud), FraudLabs Pro, ClearSale, SEON, and Subuno score or review orders. FraudPulse is the analyst that ranks which Radar, Flow, Blockify, or RevenueProtect rules to change. Pick the job first. There is no single better product across those jobs.',
       },
       {
         title: 'No invented competitor prices',
-        body: 'We do not invent NoFraud, KeepSafe, Beacon, MaxMind, FraudLabs Pro, ClearSale, SEON, or Subuno fees. Their sites list per-order, review, score-API, or guarantee pricing. FraudPulse publishes a per-transaction rate and a Professional subscription so cost is not a tax on every sale. Confirm peer pricing on their sites.',
+        body: 'We do not invent Wyllo (formerly NoFraud), KeepSafe, Beacon, MaxMind, FraudLabs Pro, ClearSale, SEON, or Subuno fees. Their sites list per-order, review, score-API, or guarantee pricing. FraudPulse publishes a per-transaction rate and a Professional subscription so cost is not a tax on every sale. Confirm peer pricing on their sites.',
       },
     ],
     faqs: [
       {
-        q: 'Does FraudPulse replace NoFraud, KeepSafe, Beacon, or MaxMind?',
-        a: 'No. NoFraud, KeepSafe, Beacon, and MaxMind minFraud score or review orders. FraudPulse is the AI analyst alongside your stack: classify chargebacks, rank specific Radar, Flow, Blockify, or RevenueProtect changes, keep checkout. If you need a review queue, score API, or guarantee, those tools can still be the right product.',
+        q: 'Does FraudPulse replace Wyllo (formerly NoFraud), KeepSafe, Beacon, or MaxMind?',
+        a: 'No. Wyllo (formerly NoFraud), KeepSafe, Beacon, and MaxMind minFraud score or review orders. FraudPulse is the AI analyst alongside your stack: classify chargebacks, rank specific Radar, Flow, Blockify, or RevenueProtect changes, keep checkout. If you need a review queue, score API, or guarantee, those tools can still be the right product.',
       },
       {
         q: 'How is FraudPulse different from FraudLabs Pro, ClearSale, SEON, or Subuno?',
         a: 'Those tools — and KeepSafe, Beacon, and MaxMind — typically add screening, device or identity signals, or managed review. FraudPulse does not become your decision engine. It tells you which rules to change in tools you already run, with estimated fraud-capture and false-positive impact, after you connect Shopify, Stripe, or Adyen data.',
       },
       {
-        q: 'Should I pick NoFraud or FraudPulse?',
-        a: 'Pick NoFraud, KeepSafe, Beacon, MaxMind, or a peer if you want another scoring or review layer at checkout. Pick FraudPulse if Radar, Flow, Blockify, or RevenueProtect already enforces and you need ranked, store-specific rule changes. Many merchants keep the enforcement tool and add FraudPulse as the analyst. It is not representment.',
+        q: 'Should I pick Wyllo (formerly NoFraud) or FraudPulse?',
+        a: 'Pick Wyllo (formerly NoFraud), KeepSafe, Beacon, MaxMind, or a peer if you want another scoring or review layer at checkout. Pick FraudPulse if Radar, Flow, Blockify, or RevenueProtect already enforces and you need ranked, store-specific rule changes. Many merchants keep the enforcement tool and add FraudPulse as the analyst. It is not representment.',
       },
     ],
     relatedHref: '/stack/',
@@ -325,6 +327,231 @@ export const alternativePages: AlternativePage[] = [
     ],
     relatedHref: '/stack/',
     relatedLabel: 'Using FraudPulse with Radar, Flow, Blockify, and RevenueProtect',
+  },
+  {
+    slug: 'shopify-fraud-control',
+    kicker: 'Compare',
+    title: 'Shopify Fraud Control blocks what you list.',
+    titleAccent: 'FraudPulse builds the list from your chargebacks.',
+    excerpt:
+      'Shopify Fraud Control is a free Shopify app that blocks checkout when an order matches a value on your list. FraudPulse reads your store’s chargebacks and turns the billing emails, billing streets, shipping streets, and IP addresses behind them into a blocklist you add to Fraud Control.',
+    answer:
+      'Shopify Fraud Control blocks an order at checkout when it matches an email, street, or IP address you have listed, while FraudPulse decides what belongs on that list by reading your own chargebacks and counting the good customers each block would also decline. You still add the Block rules in Fraud Control yourself.',
+    seoTitle: 'FraudPulse vs Shopify Fraud Control',
+    seoDescription:
+      'Shopify Fraud Control blocks checkout from a list of emails, streets, and IPs. FraudPulse builds that list from your chargebacks and counts declined good customers first. You apply the rules in Fraud Control.',
+    keywords:
+      'Shopify Fraud Control, Shopify Fraud Control blocklist, block email at Shopify checkout, block IP address Shopify, Shopify blocklist from chargebacks, FraudPulse vs Shopify Fraud Control',
+    competitorLabel: 'Shopify Fraud Control',
+    tableCaption: 'The blocklist: who writes it, who enforces it',
+    rows: [
+      {
+        label: 'Job',
+        competitor: 'Blocks checkout when an order matches a value on your list',
+        fraudPulse: 'Decides which values belong on that list',
+      },
+      {
+        label: 'Where the list comes from',
+        competitor: 'Values you type in yourself',
+        fraudPulse: 'Billing email, billing street, shipping street, and IP linked to your own chargebacks',
+      },
+      {
+        label: 'Good customers',
+        competitor: 'Blocks every match, whoever else shares the value',
+        fraudPulse: 'Counts the declined good customers a block would hit before you add it',
+      },
+      {
+        label: 'Who applies the block',
+        competitor: 'Fraud Control enforces it at checkout',
+        fraudPulse: 'You add it in Fraud Control. FraudPulse does not touch checkout',
+      },
+    ],
+    points: [
+      {
+        title: 'Use Fraud Control alone when you already know the value',
+        body: 'If a chargeback came from one email or one street and you know which, add it to Fraud Control and you are done. The app is free and blocks at checkout. You do not need an analyst to type in one address.',
+      },
+      {
+        title: 'Use FraudPulse when the list should come from your chargebacks',
+        body: 'When disputes are spread across many orders, the pattern is hard to see by hand. FraudPulse links each chargeback to its billing email, billing street, shipping street, and IP, then ranks which values to block. It also counts the good customers who share each value, so a shared office street or a busy IP does not turn into lost orders.',
+      },
+      {
+        title: 'Fraud Control still does the blocking',
+        body: 'FraudPulse does not replace Fraud Control and does not sit in checkout. It hands you Block rules, and you add them in Fraud Control. Shopify Flow and Blockify are the other Shopify tools FraudPulse ranks changes for.',
+      },
+    ],
+    diagramTitle: 'Chargebacks in, blocklist out',
+    diagram: [
+      { from: 'Your Shopify chargebacks', to: 'Linked to billing email, billing street, shipping street, and IP', note: 'Read' },
+      { from: 'A ranked blocklist', to: 'Each value with the good customers a block would also decline', note: 'Rank' },
+      { from: 'Shopify Fraud Control', to: 'You add the Block rules and the app enforces them at checkout', note: 'Block' },
+    ],
+    faqs: [
+      {
+        q: 'Is Shopify Fraud Control enough on its own?',
+        a: 'Yes, when you already know which email, street, or IP address to block. Fraud Control is free and blocks those values at checkout. It does not tell you which values your chargebacks point to, or how many good customers share them.',
+      },
+      {
+        q: 'Does FraudPulse add rules to Shopify Fraud Control for me?',
+        a: 'No. FraudPulse gives you the list: billing emails, billing streets, shipping streets, and IP addresses linked to your chargebacks, ranked, with the good customers each block would decline. You add the Block rules in Fraud Control yourself.',
+      },
+      {
+        q: 'Why count declined good customers before blocking a value?',
+        a: 'A value can be shared. An office street, a forwarding address, or a busy IP can belong to good buyers as well as to the person behind a chargeback. Counting them first shows what a block would cost before it goes live.',
+      },
+    ],
+    relatedHref: '/stack/',
+    relatedLabel: 'Where FraudPulse sits in your fraud stack',
+  },
+  {
+    slug: 'stripe-radar-assistant',
+    kicker: 'Compare',
+    title: 'Stripe Radar Assistant writes the rule.',
+    titleAccent: 'FraudPulse tells you which rule to write.',
+    excerpt:
+      'Radar Assistant turns a plain-English request into a Stripe Radar rule. It writes what you ask for. FraudPulse reads your chargebacks and the good customers Radar declined, then tells you which Radar rule is worth asking for, with estimated fraud capture and false-positive impact.',
+    answer:
+      'Stripe Radar Assistant converts a rule you describe in plain English into a Radar rule, but it does not read your chargeback mix to decide which rule you need. FraudPulse does that part and hands you the rule to describe.',
+    seoTitle: 'FraudPulse vs Stripe Radar Assistant',
+    seoDescription:
+      'Stripe Radar Assistant writes a Radar rule from plain English. FraudPulse reads your chargebacks and declined good customers to say which rule to write, with estimated fraud capture and false-positive impact.',
+    keywords:
+      'Stripe Radar Assistant, Radar Assistant rules, which Stripe Radar rule to write, Stripe Radar custom rules, Radar rules from chargebacks, FraudPulse vs Stripe Radar Assistant',
+    competitorLabel: 'Stripe Radar Assistant',
+    tableCaption: 'Writing a Radar rule vs choosing one',
+    rows: [
+      {
+        label: 'Starts from',
+        competitor: 'Your description of the rule you want',
+        fraudPulse: 'Your chargebacks and the good customers Radar declined',
+      },
+      {
+        label: 'Answers',
+        competitor: 'How do I write this rule in Radar?',
+        fraudPulse: 'Which Radar rule should I write next?',
+      },
+      {
+        label: 'Impact before launch',
+        competitor: 'Not part of writing the rule',
+        fraudPulse: 'Estimated fraud capture and false-positive impact for each ranked rule',
+      },
+      {
+        label: 'Who turns it on',
+        competitor: 'You, in Radar',
+        fraudPulse: 'You, in Radar. FraudPulse does not change Radar or sit in checkout',
+      },
+    ],
+    points: [
+      {
+        title: 'Already know the rule? Use Radar Assistant.',
+        body: 'If you already know you want to block a card country, review a high-value first order, or limit attempts per card, describe it to Radar Assistant and it writes the rule. That is the fastest path, and FraudPulse adds nothing to it.',
+      },
+      {
+        title: 'Not sure which rule? Start with the chargebacks.',
+        body: 'Most Stripe merchants do not lack rule syntax. They lack a clear answer on which pattern is costing them. FraudPulse classifies your Stripe chargebacks, checks which good customers Radar already declined, and ranks the Radar rules worth adding, tightening, or removing.',
+      },
+      {
+        title: 'Then give the wording to Radar Assistant',
+        body: 'Each FraudPulse recommendation comes as a plain description of the rule. You can hand that wording to Radar Assistant to get the Radar rule, then decide whether it blocks or sends to review. Radar stays the enforcement layer.',
+      },
+    ],
+    diagramTitle: 'Choose the rule, then write it',
+    diagram: [
+      { from: 'Your Stripe chargebacks', to: 'Plus the good customers Radar declined', note: 'Diagnose' },
+      { from: 'FraudPulse ranking', to: 'Which Radar rule to write, with estimated fraud capture and false positives', note: 'Choose' },
+      { from: 'Stripe Radar Assistant', to: 'Writes that rule from your words, and you turn it on', note: 'Write' },
+    ],
+    faqs: [
+      {
+        q: 'What does Stripe Radar Assistant do?',
+        a: 'It writes a Stripe Radar rule from a plain-English description. It does not look at your dispute history to tell you which rule you should describe.',
+      },
+      {
+        q: 'Can I use FraudPulse with Radar Assistant?',
+        a: 'Yes. FraudPulse names the rule and its estimated impact. Radar Assistant writes it as a Radar rule. You decide whether it blocks or sends the payment to review.',
+      },
+      {
+        q: 'Does FraudPulse change my Radar rules?',
+        a: 'No. FraudPulse reads your data and recommends. You add, edit, or remove rules in Radar. FraudPulse is not in the payment path.',
+      },
+    ],
+    relatedHref: '/alternatives/shopify-fraud-control/',
+    relatedLabel: 'FraudPulse vs Shopify Fraud Control',
+  },
+  {
+    slug: 'chargeflow',
+    kicker: 'Compare',
+    title: 'Chargeflow fights the dispute.',
+    titleAccent: 'FraudPulse works on the next one.',
+    excerpt:
+      'Chargeflow is a representment vendor: once a customer files a dispute, it builds and submits the response. FraudPulse works earlier. It classifies each dispute, ranks the rule changes for the fraud types behind them, and for Friendly Fraud gives you an evidence file to submit yourself.',
+    answer:
+      'Chargeflow fights a dispute after the customer has filed it, while FraudPulse classifies the dispute, ranks the fraud-rule changes aimed at fewer disputes next month, and offers a compelling-evidence file only when the dispute is Friendly Fraud.',
+    seoTitle: 'FraudPulse vs Chargeflow',
+    seoDescription:
+      'Chargeflow fights disputes after they are filed. FraudPulse classifies disputes, ranks rule changes so fewer are filed, and gives a Friendly Fraud evidence file you submit yourself. It does not file representment.',
+    keywords:
+      'Chargeflow alternative, FraudPulse vs Chargeflow, chargeback representment vs prevention, friendly fraud evidence file, compelling evidence chargeback, prevent chargebacks before they are filed',
+    competitorLabel: 'Chargeflow',
+    tableCaption: 'After the dispute vs before the next one',
+    rows: [
+      {
+        label: 'When it works',
+        competitor: 'After the customer files the dispute',
+        fraudPulse: 'Before the next dispute, through ranked rule changes, plus a Friendly Fraud evidence file for one already filed',
+      },
+      {
+        label: 'Representment',
+        competitor: 'Builds and submits the response for you',
+        fraudPulse: 'Does not file representment. You download the Friendly Fraud file and submit it yourself',
+      },
+      {
+        label: 'By dispute type',
+        competitor: 'Fights the disputes you send it',
+        fraudPulse: 'Friendly Fraud: evidence file. BIN Attack: recommends against representment. ATO, Geo-Mismatch, Identity Fraud: no evidence file. Non Fraud: a consumer dispute, not a fraud-rule problem',
+      },
+      {
+        label: 'Pricing',
+        competitor: 'Confirm the fee on Chargeflow’s site',
+        fraudPulse: 'Listed on the FraudPulse pricing page',
+      },
+    ],
+    points: [
+      {
+        title: 'Chargeflow is the buy when the dispute is already filed',
+        body: 'If disputes are open and you want a vendor to build and submit the responses, that is Chargeflow’s job. FraudPulse does not file representment and does not win disputes for you. Confirm Chargeflow’s fee on its own site.',
+      },
+      {
+        title: 'FraudPulse sorts the dispute before anyone fights it',
+        body: 'Not every dispute is worth fighting. FraudPulse classifies each one first. A BIN Attack comes from card testing, and the product recommends against representment. ATO, Geo-Mismatch, and Identity Fraud get no evidence file, because the fix is a rule change. Non Fraud is a consumer dispute about the order, not a fraud-rule problem.',
+      },
+      {
+        title: 'A Friendly Fraud file you submit yourself',
+        body: 'When the dispute is Friendly Fraud, FraudPulse can produce a compelling-evidence file as a PDF or Word document. It can include up to 5 earlier good payments from the same buyer. You download it and submit it yourself. FraudPulse does not send it to the issuer.',
+      },
+    ],
+    diagramTitle: 'Classify, then decide',
+    diagram: [
+      { from: 'Each dispute', to: 'Friendly Fraud, BIN Attack, ATO, Geo-Mismatch, Identity Fraud, or Non Fraud', note: 'Classify' },
+      { from: 'Ranked rule changes', to: 'For the fraud types behind your disputes, applied in your own tools', note: 'Prevent' },
+      { from: 'Friendly Fraud evidence file', to: 'PDF or Word, with up to 5 earlier good payments; you submit it', note: 'Evidence' },
+    ],
+    faqs: [
+      {
+        q: 'Does FraudPulse replace Chargeflow?',
+        a: 'No. Chargeflow fights disputes that are already filed. FraudPulse works on why disputes happen and ranks rule changes so fewer get filed. If you want a vendor to submit responses for you, that is Chargeflow.',
+      },
+      {
+        q: 'Does FraudPulse submit evidence to the issuer?',
+        a: 'No. For Friendly Fraud disputes, FraudPulse gives you a PDF or Word evidence file that can include up to 5 earlier good payments from the same buyer. You download it and submit it yourself.',
+      },
+      {
+        q: 'Why does FraudPulse advise against fighting some disputes?',
+        a: 'A BIN Attack dispute comes from card testing, so the product recommends against representment. ATO, Geo-Mismatch, and Identity Fraud disputes get no evidence file. The useful step there is a rule change that stops the next one.',
+      },
+    ],
+    relatedHref: '/blog/friendly-fraud-vs-real-fraud-shopify/',
+    relatedLabel: 'Friendly fraud vs stolen cards',
   },
 ];
 
