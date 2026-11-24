@@ -153,6 +153,10 @@ export default function StackPage() {
                 <Link href="/blog/fraudpulse-does-not-replace-stripe-radar-shopify-flow/" className="font-semibold text-[#4a96a3] hover:underline">
                   why we do not replace Radar, Flow, Blockify, or RevenueProtect
                 </Link>
+                {' · '}
+                <Link href="/tools/chargeback-ratio/" className="font-semibold text-[#4a96a3] hover:underline">
+                  chargeback ratio and Visa VAMP calculator
+                </Link>
               </p>
             </Reveal>
             <Reveal animation="anim-fadeUp" delay={75}>

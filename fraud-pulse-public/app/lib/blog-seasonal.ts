@@ -187,6 +187,8 @@ export const seasonalGuides: BlogPost[] = [
 </ol>
 
 <p>FraudPulse does not replace Stripe Radar, Shopify Flow, Blockify, or Adyen RevenueProtect, and it does not sit in the authorization path. It ranks which of those rules are worth keeping once screening is no longer cheap and once a late refund no longer fixes the Visa ratio. The fit is described on <a href="/stack/">the stack page</a>.</p>
+
+<p>To check your own count-based VAMP ratio and how much room is left under 1.50%, use the free <a href="/tools/chargeback-ratio/">chargeback ratio and Visa VAMP calculator</a>. The math runs in your browser.</p>
 `.trim(),
     faqs: [
       {

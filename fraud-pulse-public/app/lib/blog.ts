@@ -696,6 +696,8 @@ export const posts: BlogPost[] = [
 
 <p>The VAMP threshold getting tighter was one problem. Not knowing how close you are to it may be an even bigger one.</p>
 
+<p>To see how close you are, use the free <a href="/tools/chargeback-ratio/">chargeback ratio and Visa VAMP calculator</a>. It shows your ratio and how many more fraud reports or disputes fit under 1.50% this month.</p>
+
 <p>Related: <a href="/blog/visa-vamp-threshold-reduction-2026/">Visa's VAMP threshold reduction</a>, <a href="/blog/stripe-dispute-rate-too-high/">what to do if Stripe warns your dispute rate is too high</a>, <a href="/how-it-works/">how it works</a>, and the <a href="/faq/">FAQ</a>.</p>
 
 <p>If you want a clearer picture of where disputes and fraud are originating on your data, <a href="/book-a-demo/">book a demo</a>.</p>
@@ -2796,6 +2798,8 @@ ${toolComparisonTableHtml()}
 <p>The threshold changed by 32% - and the margin for error changed with it.</p>
 
 <p><strong>That may end up being the most important part of the entire update.</strong></p>
+
+<p>Check where you stand with the free <a href="/tools/chargeback-ratio/">chargeback ratio and Visa VAMP calculator</a>: type your fraud report, dispute, and settled transaction counts and compare them with the 1.50% line.</p>
     `.trim(),
     faqs: [
       {

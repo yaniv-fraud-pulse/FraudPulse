@@ -19,7 +19,8 @@ function PostHogPageviewTracker() {
   useEffect(() => {
     if (!ensurePostHog() || !pathname) return;
 
-    const url = window.location.href;
+    // Never record calculator numbers shared in the URL fragment (/tools/chargeback-ratio/#v=...).
+    const url = window.location.href.replace(/#v=.*$/, '');
     if (lastUrl.current === url) return;
     lastUrl.current = url;
 
